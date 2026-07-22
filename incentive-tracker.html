@@ -1806,7 +1806,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
   </style>
   <section class="blk" id="concession-index" aria-label="Austin concession index and buyer leverage">
     <div class="wrap">
-      <div class="blk-head"><h2>The number builders don&rsquo;t put on the sign</h2><span class="n">Concession Index &middot; updated twice daily &middot; as of Jul 20, 2026</span></div>
+      <div class="blk-head"><h2>The number builders don&rsquo;t put on the sign</h2><span class="n">Concession Index &middot; latest verified reading &middot; Jul 20, 2026</span></div>
       <div class="ci-top">
         <div class="ci-big">$20,000</div>
         <div class="ci-cap">The <b>median incentive</b> across the builder offers we track right now. Half are $20,000 or more; the largest is $35,000, the smallest $5,000. We call it the <b>Concession Index</b> &mdash; the higher it runs, the harder builders are working to move homes, and the more leverage you have at the table.</div>
@@ -1825,7 +1825,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
           <span class="ci-chart-updated" id="ci-updated">Last verified &mdash;</span>
         </div>
         <svg id="ci-svg" viewBox="0 0 720 150" preserveAspectRatio="none" role="img" aria-label="Concession Index over time"></svg>
-        <div class="ci-chart-note" id="ci-chart-note">Verified twice daily &mdash; a new point every morning &amp; evening.</div>
+        <div class="ci-chart-note" id="ci-chart-note">Latest verified reading shown &mdash; a new point is added each time we re-verify.</div>
       </div>
       <script>
       (function(){
@@ -1853,11 +1853,11 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
             f+='<text x="'+X(i)+'" y="'+(Y(p.index)-12)+'" text-anchor="middle" font-size="12" font-weight="700" fill="#0A0A0A" font-family="Inter,sans-serif">$'+Math.round(p.index/1000)+'k</text>';
             f+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="10.5" fill="#666666" font-family="monospace">'+(p.label||"")+'</text>';});
           if(n<=1){var note=document.getElementById('ci-chart-note');
-            if(note) note.textContent="Tracking began "+((pts[0]&&pts[0].label)||"")+" — the line grows with each morning & evening sweep.";}
+            if(note) note.textContent="Tracking began "+((pts[0]&&pts[0].label)||"")+" — the line grows as each new verified reading is published.";}
           svg.innerHTML=f;
         }
         render(SEED);
-        fetch('/.netlify/functions/get-index',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){if(d&&d.points&&d.points.length)render(d);}).catch(function(){});
+        fetch('/concession-index.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){if(d&&d.points&&d.points.length)render(d);}).catch(function(){});
       })();
       </script>
       <div class="ci-stats">

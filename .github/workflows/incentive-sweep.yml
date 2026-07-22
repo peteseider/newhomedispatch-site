@@ -1,0 +1,54 @@
+name: Concession Index sweep
+
+# Runs twice daily on GitHub's servers (NOT the authoring sandbox, which is
+# firewalled from pushing). Recomputes the Concession Index from the verified
+# incentives.json, stamps the exact run time, commits, and lets Netlify
+# auto-deploy. Times are UTC; GitHub cron does not observe DST, so during
+# US Central Daylight Time (Mar–Nov) these fire ~6:30 AM / 6:30 PM CT, and an
+# hour earlier in winter. Adjust the two cron lines if you want them pinned.
+
+on:
+  schedule:
+    - cron: '30 11 * * *'   # ~6:30 AM CT (CDT)
+    - cron: '30 23 * * *'   # ~6:30 PM CT (CDT)
+  workflow_dispatch:         # lets you run it on demand from the Actions tab
+
+permissions:
+  contents: write            # allows the workflow to commit the updated JSON
+
+concurrency:
+  group: incentive-sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run sweep (recompute index + timestamp)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optional detection layer
+          SWEEP_MODEL: ${{ vars.SWEEP_MODEL }}                  # optional model override
+        run: node scripts/sweep.mjs
+
+      - name: Consistency gate (must pass before publish)
+        run: node check_consistency.cjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "nhd-sweep-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add concession-index.json reporting/sweep-latest.json
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Concession Index sweep: republish index + timestamp [skip ci]"
+            git push
+          fi
