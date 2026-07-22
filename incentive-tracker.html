@@ -1803,78 +1803,118 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
     .trk .ci-foot{font-size:0.82rem;color:#666;margin-top:16px;}
     .trk .ci-share{margin-top:16px;}
     .trk .ci-share a{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:#fff;background:var(--blueprint,#2B4FE0);border-radius:2px;padding:10px 16px;text-decoration:none;}
+    .trk .ci-gap{background:#fff;border:1px solid var(--line,#E0E0E0);border-radius:3px;padding:22px 24px;margin:8px 0 22px;}
+    .trk .ci-gap-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
+    .trk .ci-gap-title{font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:1.02rem;}
+    .trk .ci-gap-sub{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted,#666);}
+    .trk .ci-gap-row{display:grid;grid-template-columns:132px 1fr;align-items:center;gap:16px;margin-bottom:12px;}
+    .trk .ci-gap-lab{font-size:.8rem;font-weight:600;color:var(--text-muted,#666);text-align:right;}
+    .trk .ci-gap-track{background:#F1F1EE;border-radius:3px;height:44px;position:relative;overflow:hidden;}
+    .trk .ci-gap-fill{height:100%;display:flex;align-items:center;justify-content:flex-end;padding-right:15px;border-radius:3px;color:#fff;font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:1.12rem;}
+    .trk .ci-gap-fill.adv{background:var(--ink,#0A0A0A);width:100%;}
+    .trk .ci-gap-fill.cap{background:var(--blueprint,#2B4FE0);width:80%;}
+    .trk .ci-gap-note{font-size:.92rem;line-height:1.6;color:#333;margin:16px 0 0;}
+    .trk .ci-gap-note b{color:var(--ink,#0A0A0A);}
+    .trk .ci-analogy{font-size:.92rem;line-height:1.6;color:#333;margin:14px 0 0;padding-left:14px;border-left:3px solid var(--blueprint,#2B4FE0);}
+    .trk .ci-analogy b{color:var(--ink,#0A0A0A);}
+    @media(max-width:560px){.trk .ci-gap-row{grid-template-columns:1fr;gap:5px;}.trk .ci-gap-lab{text-align:left;}}
+    .trk .ci-uses{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:2px;}
+    @media(max-width:760px){.trk .ci-uses{grid-template-columns:1fr;}}
+    .trk .ci-use{border:1px solid var(--line,#E0E0E0);border-top:3px solid var(--blueprint,#2B4FE0);border-radius:3px;padding:18px 18px 20px;background:#fff;}
+    .trk .ci-use-goal{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--blueprint,#2B4FE0);font-weight:600;margin-bottom:11px;}
+    .trk .ci-use-amt{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:1.55rem;line-height:1;margin-bottom:11px;letter-spacing:-.5px;}
+    .trk .ci-use-txt{font-size:.88rem;color:#444;line-height:1.55;}
+    .trk .ci-catch{background:var(--warn-bg,#FFFBEE);border:1px solid #E7C948;border-left:3px solid #C9A400;border-radius:3px;padding:15px 18px;margin:20px 0 4px;font-size:.92rem;line-height:1.6;}
+    .trk .ci-catch b{color:var(--ink,#0A0A0A);}
+    .trk .ci-chart{border:1px solid var(--line,#E0E0E0);border-radius:2px;padding:16px 18px 12px;margin:22px 0 0;background:#fff;}
+    .trk .ci-chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
+    .trk .ci-chart-title{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:.98rem;}
+    .trk .ci-chart-updated{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--text-muted,#666);text-transform:uppercase;}
+    .trk #ci-svg{width:100%;height:150px;display:block;}
+    .trk .ci-chart-note{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;color:var(--text-muted,#666);text-transform:uppercase;margin-top:6px;}
   </style>
   <section class="blk" id="concession-index" aria-label="Austin concession index and buyer leverage">
     <div class="wrap">
-      <div class="blk-head"><h2>The number builders don&rsquo;t put on the sign</h2><span class="n">Concession Index &middot; latest verified reading &middot; Jul 20, 2026</span></div>
+      <div class="blk-head"><h2>The number builders don&rsquo;t put on the sign</h2><span class="n" id="ci-eyebrow">Concession Index &middot; latest verified reading &middot; Jul 20, 2026</span></div>
       <div class="ci-top">
         <div class="ci-big">$20,000</div>
-        <div class="ci-cap">The <b>median incentive</b> across the builder offers we track right now. Half are $20,000 or more; the largest is $35,000, the smallest $5,000. We call it the <b>Concession Index</b> &mdash; the higher it runs, the harder builders are working to move homes, and the more leverage you have at the table.</div>
+        <div class="ci-cap">The <b>median advertised incentive</b> across the offers we track &mdash; half the Central Texas market is dangling $20,000 or more to move a home. We call it the <b>Concession Index</b>. But the number on the sign is not the number that reaches you.</div>
       </div>
-      <div class="ci-chart" id="ci-chart">
-        <style>
-          .trk .ci-chart{border:1px solid var(--line,#E0E0E0);border-radius:2px;padding:16px 18px 12px;margin-bottom:18px;background:#fff;}
-          .trk .ci-chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
-          .trk .ci-chart-title{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:.98rem;}
-          .trk .ci-chart-updated{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--text-muted,#666);text-transform:uppercase;}
-          .trk #ci-svg{width:100%;height:150px;display:block;}
-          .trk .ci-chart-note{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;color:var(--text-muted,#666);text-transform:uppercase;margin-top:6px;}
-        </style>
-        <div class="ci-chart-head">
-          <span class="ci-chart-title">The Concession Index over time</span>
-          <span class="ci-chart-updated" id="ci-updated">Last verified &mdash;</span>
+      <div class="ci-gap">
+        <div class="ci-gap-head">
+          <span class="ci-gap-title">What the sign says vs. what actually reaches you</span>
+          <span class="ci-gap-sub">median across tracked offers</span>
         </div>
-        <svg id="ci-svg" viewBox="0 0 720 150" preserveAspectRatio="none" role="img" aria-label="Concession Index over time"></svg>
-        <div class="ci-chart-note" id="ci-chart-note">Latest verified reading shown &mdash; a new point is added each time we re-verify.</div>
+        <div class="ci-gap-row"><span class="ci-gap-lab">Advertised</span><div class="ci-gap-track"><div class="ci-gap-fill adv"><span>$20,000</span></div></div></div>
+        <div class="ci-gap-row"><span class="ci-gap-lab">Reaches the buyer</span><div class="ci-gap-track"><div class="ci-gap-fill cap"><span>~$16,000</span></div></div></div>
+        <p class="ci-gap-note">Across the offers we track, about <b>$1 in every $5</b> of the advertised figure never reaches the buyer &mdash; lost to lender strings and how the credit is structured. Our buyer-value estimate weighs the incentive type and whether it&rsquo;s locked to the builder&rsquo;s own lender.</p>
+        <p class="ci-analogy"><b>Think of it like a store gift card.</b> The sign says $20,000 &mdash; but a lender-tied credit only spends at full value if you use the builder&rsquo;s own lender. Step outside for a better rate and part of it evaporates. The offers with <b>no strings</b> are the ones worth real cash.</p>
       </div>
-      <script>
-      (function(){
-        var SEED={points:[{t:"2026-07-20T17:05:00-05:00",label:"Jul 20",index:20000}],lastUpdatedLabel:"Jul 20, 2026 · 5:05 PM CT"};
-        function render(d){
-          var pts=((d&&d.points)||[]).slice().sort(function(a,b){return a.t<b.t?-1:1;});
-          if(!pts.length) return;
-          var upd=(d&&d.lastUpdatedLabel)||"";
-          var u=document.getElementById('ci-updated'); if(u&&upd) u.textContent="Last verified "+upd;
-          var svg=document.getElementById('ci-svg'); if(!svg) return;
-          var W=720,H=150,pad=28,xL=54,n=pts.length;
-          var vals=pts.map(function(p){return p.index;});
-          var min=Math.min.apply(null,vals),max=Math.max.apply(null,vals);
-          if(min===max){min=min-5000;max=max+5000;}
-          function X(i){return n<=1?W/2:xL+i*(W-xL-pad)/(n-1);}
-          function Y(v){return pad+(H-2*pad)*(1-(v-min)/(max-min));}
-          var f="";
-          [max,(max+min)/2,min].forEach(function(v){var y=Y(v);
-            f+='<line x1="'+xL+'" y1="'+y+'" x2="'+(W-pad)+'" y2="'+y+'" stroke="#EEEEEE"/>';
-            f+='<text x="'+(xL-8)+'" y="'+(y+4)+'" text-anchor="end" font-size="11" fill="#999999" font-family="Inter,sans-serif">$'+Math.round(v/1000)+'k</text>';});
-          if(n>1){var dp=pts.map(function(p,i){return (i?'L':'M')+X(i)+' '+Y(p.index);}).join(' ');
-            f+='<path d="'+dp+'" fill="none" stroke="#2B4FE0" stroke-width="2.5"/>';}
-          pts.forEach(function(p,i){
-            f+='<circle cx="'+X(i)+'" cy="'+Y(p.index)+'" r="4.5" fill="#2B4FE0"/>';
-            f+='<text x="'+X(i)+'" y="'+(Y(p.index)-12)+'" text-anchor="middle" font-size="12" font-weight="700" fill="#0A0A0A" font-family="Inter,sans-serif">$'+Math.round(p.index/1000)+'k</text>';
-            f+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="10.5" fill="#666666" font-family="monospace">'+(p.label||"")+'</text>';});
-          if(n<=1){var note=document.getElementById('ci-chart-note');
-            if(note) note.textContent="Tracking began "+((pts[0]&&pts[0].label)||"")+" — the line grows as each new verified reading is published.";}
-          svg.innerHTML=f;
-        }
-        render(SEED);
-        fetch('/concession-index.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){if(d&&d.points&&d.points.length)render(d);}).catch(function(){});
-      })();
-      </script>
+
+      <h3 class="ci-h3">What $20,000 can actually do for you</h3>
+      <p class="ci-sub">A dollar figure means nothing until it&rsquo;s pointed at a goal. On a ~$450,000 new home, here&rsquo;s what a $20,000 credit does depending on what you&rsquo;re trying to win &mdash; pick the one that fits your situation (figures illustrative).</p>
+      <div class="ci-uses">
+        <div class="ci-use"><div class="ci-use-goal">Lower the monthly payment</div><div class="ci-use-amt">&asymp; $300 / mo</div><div class="ci-use-txt">Applied as a permanent rate buydown &mdash; roughly 1% off the rate for the life of the loan. The biggest win if you&rsquo;ll keep the home many years.</div></div>
+        <div class="ci-use"><div class="ci-use-goal">Cover the cash to close</div><div class="ci-use-amt">All of it + cushion</div><div class="ci-use-txt">Closing costs on a new build run ~$10&ndash;14k. $20,000 covers them with room for prepaids and a rate lock &mdash; the win when cash on hand is the constraint.</div></div>
+        <div class="ci-use"><div class="ci-use-goal">Cut the price &amp; your taxes</div><div class="ci-use-amt">~$125/mo + ~$500/yr</div><div class="ci-use-txt">Taken off the price, it shrinks your loan, lowers your property-tax basis, and helps you clear PMI sooner. The safest capture when the offer is lender-tied.</div></div>
+      </div>
+      <div class="ci-catch"><b>The catch that decides which one to pick:</b> if the offer requires the builder&rsquo;s lender &mdash; most do &mdash; the rate-buydown value can be quietly clawed back through a higher rate or fees. On a lender-tied offer, steering the money to <b>price or closing costs</b> and getting one outside rate quote is how you keep it.</div>
       <div class="ci-stats">
-        <div class="tile"><div class="ci-n">9</div><div class="ci-l">offers tracked across 8 builders and 8 Central Texas cities, re-verified twice daily</div></div>
+        <div class="tile"><div class="ci-n">9</div><div class="ci-l">offers tracked across 8 builders and 8 Central Texas cities, verified on each builder&rsquo;s own site</div></div>
         <div class="tile" style="border-top-color:var(--bad,#B32020);"><div class="ci-n" style="color:var(--bad,#B32020);">11</div><div class="ci-l">builders across the metro are still advertising offers <b>past their own deadline</b> &mdash; the countdown is fake</div></div>
         <div class="tile" style="border-top-color:var(--good,#1F7A3D);"><div class="ci-n" style="color:var(--good,#1F7A3D);">3 of 9</div><div class="ci-l">offers come with <b>no lender strings</b> (Ashton, Brookfield, AHA) &mdash; where the full credit actually reaches you</div></div>
       </div>
 
       <h3 class="ci-h3">Where buyers have the most leverage right now</h3>
-      <p class="ci-sub">The offers with the strongest hand for the buyer today &mdash; weighing how big the credit is and whether it&rsquo;s locked to the builder&rsquo;s own lender. Ranked from the verified offers in the table below.</p>
+      <p class="ci-sub">The offers with the strongest hand for the buyer today &mdash; weighing how big the credit is <em>and</em> whether it&rsquo;s locked to the builder&rsquo;s own lender. Ranked from the verified offers in the table below.</p>
       <ol class="ci-board">
-        <li><span class="ci-rank">1</span><div><b>Perry Homes &mdash; Wolf Ranch &amp; Bryson</b> &middot; up to $35,000<span class="ci-why">The largest single offer we track. It runs through Perry&rsquo;s lender, so get one outside rate quote to make sure the full value actually reaches you.</span></div></li>
-        <li><span class="ci-rank">2</span><div><b>Ashton Woods &mdash; Headwaters</b> &middot; up to $30,000 <span class="ci-tag-up">no lender strings</span><span class="ci-why">Nearly as large as Perry&rsquo;s and <b>not</b> tied to the builder&rsquo;s lender &mdash; the strongest real value on the board, because the whole credit is yours to keep.</span></div></li>
-        <li><span class="ci-rank">3</span><div><b>D.R. Horton &mdash; Anthem</b> &middot; up to $25,000<span class="ci-why">Flex cash you can steer toward the rate, closing costs, or upgrades &mdash; whichever moves your monthly payment most.</span></div></li>
-        <li><span class="ci-rank">4</span><div><b>AHA Dream Homes &mdash; Whisper Valley</b> &middot; up to $20,000 <span class="ci-tag-up">no lender strings</span><span class="ci-why">Your choice of cash or a lower rate, with no lender requirement &mdash; take whichever is worth more over the years you&rsquo;ll keep the loan.</span></div></li>
+        <li><span class="ci-rank">1</span><div><b>Ashton Woods &mdash; Headwaters</b> &middot; up to $30,000 <span class="ci-tag-up">no lender strings</span><span class="ci-why">The strongest real value on the board: nearly the largest credit <b>and</b> not tied to the builder&rsquo;s lender, so the whole amount is yours to keep or steer.</span></div></li>
+        <li><span class="ci-rank">2</span><div><b>Perry Homes &mdash; Wolf Ranch &amp; Bryson</b> &middot; up to $35,000<span class="ci-why">The largest single offer we track. It runs through Perry&rsquo;s lender, so get one outside rate quote &mdash; the value holds only if the rate beats the open market.</span></div></li>
+        <li><span class="ci-rank">3</span><div><b>D.R. Horton &mdash; Anthem</b> &middot; up to $25,000<span class="ci-why">Flex cash you can steer toward the rate, closing costs, or price &mdash; whichever moves your monthly payment most for how long you&rsquo;ll hold the loan.</span></div></li>
+        <li><span class="ci-rank">4</span><div><b>AHA Dream Homes &mdash; Whisper Valley</b> &middot; up to $20,000 <span class="ci-tag-up">no lender strings</span><span class="ci-why">Cash or a lower rate, your choice, with no lender requirement &mdash; take whichever is worth more over the years you&rsquo;ll actually keep the home.</span></div></li>
       </ol>
-      <p class="ci-foot"><a href="#methodology" style="color:var(--blueprint,#2B4FE0);text-decoration:underline;">How we compute the Index and leverage &darr;</a> &middot; Every figure is builder-advertised and verified live on the builder&rsquo;s own site twice a day &mdash; not field-verified, not an endorsement. The full list of expired-but-still-displayed offers is flagged in the table below.</p>
+      <div class="ci-chart" id="ci-chart" style="display:none;">
+        <div class="ci-chart-head">
+          <span class="ci-chart-title">The Concession Index over time</span>
+          <span class="ci-chart-updated" id="ci-updated">Last verified &mdash;</span>
+        </div>
+        <svg id="ci-svg" viewBox="0 0 720 150" preserveAspectRatio="none" role="img" aria-label="Concession Index over time"></svg>
+        <div class="ci-chart-note" id="ci-chart-note">A new point is plotted each time we re-verify, morning and evening.</div>
+      </div>
+      <script>
+      (function(){
+        function render(d){
+          if(!d) return;
+          var upd=(d&&d.lastUpdatedLabel)||"";
+          var eb=document.getElementById('ci-eyebrow'); if(eb&&upd) eb.textContent="Concession Index · verified "+upd;
+          var u=document.getElementById('ci-updated'); if(u&&upd) u.textContent="Last verified "+upd;
+          var pts=((d&&d.points)||[]).slice().sort(function(a,b){return a.t<b.t?-1:1;});
+          if(pts.length<3) return;            /* only show the line once it has something to say */
+          var box=document.getElementById('ci-chart'); if(box) box.style.display='';
+          var svg=document.getElementById('ci-svg'); if(!svg) return;
+          var W=720,H=150,pad=28,xL=54,n=pts.length;
+          var vals=pts.map(function(p){return p.index;});
+          var min=Math.min.apply(null,vals),max=Math.max.apply(null,vals);
+          if(min===max){min=min-5000;max=max+5000;}
+          function X(i){return xL+i*(W-xL-pad)/(n-1);}
+          function Y(v){return pad+(H-2*pad)*(1-(v-min)/(max-min));}
+          var f="";
+          [max,(max+min)/2,min].forEach(function(v){var y=Y(v);
+            f+='<line x1="'+xL+'" y1="'+y+'" x2="'+(W-pad)+'" y2="'+y+'" stroke="#EEEEEE"/>';
+            f+='<text x="'+(xL-8)+'" y="'+(y+4)+'" text-anchor="end" font-size="11" fill="#999999" font-family="Inter,sans-serif">$'+Math.round(v/1000)+'k</text>';});
+          var dp=pts.map(function(p,i){return (i?'L':'M')+X(i)+' '+Y(p.index);}).join(' ');
+          f+='<path d="'+dp+'" fill="none" stroke="#2B4FE0" stroke-width="2.5"/>';
+          pts.forEach(function(p,i){
+            f+='<circle cx="'+X(i)+'" cy="'+Y(p.index)+'" r="4" fill="#2B4FE0"/>';
+            f+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="10.5" fill="#666666" font-family="monospace">'+(p.label||"")+'</text>';});
+          svg.innerHTML=f;
+        }
+        var SEED={lastUpdatedLabel:"Jul 20, 2026 · 5:05 PM CT",points:[{t:"2026-07-20T17:05:00-05:00",label:"Jul 20",index:20000}]};
+        render(SEED);
+        fetch('/concession-index.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){if(d)render(d);}).catch(function(){});
+      })();
+      </script>
+      <p class="ci-foot"><a href="#methodology" style="color:var(--blueprint,#2B4FE0);text-decoration:underline;">How we compute the Index and buyer-value &darr;</a> &middot; Every figure is builder-advertised and verified live on the builder&rsquo;s own site &mdash; not field-verified, not an endorsement. The full list of expired-but-still-displayed offers is flagged in the table below.</p>
     </div>
   </section>
   <!-- CI-END -->
@@ -1885,21 +1925,8 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
     <div class="tiles" id="trk-tiles"></div>
   </div></section>
 
-  <!-- TREND -->
-  <section class="blk"><div class="wrap">
-    <div class="blk-head"><h2>Which way incentives are moving</h2><span class="n">6-week trend</span></div>
-    <div class="chart-card">
-      <div class="cc-top">
-        <h3>Median advertised incentive</h3>
-        <span class="cc-sub">Across all tracked communities · weekly</span>
-      </div>
-      <div class="chart-wrap" id="trend-wrap">
-        <svg class="trend" id="trend-svg" viewBox="0 0 720 240" preserveAspectRatio="none" role="img" aria-label="Line chart of the median advertised builder incentive across tracked Central Texas communities over the last six weeks."></svg>
-        <div class="cc-tooltip" id="trend-tip"></div>
-      </div>
-      <details class="numbers"><summary>See the numbers</summary><div id="trend-table"></div></details>
-    </div>
-  </div></section>
+  <!-- TREND section retired: the Concession Index above is the canonical median-advertised-incentive-over-time metric. Its time-series appears in the CI module once there are 3+ verified readings. -->
+
 
   <!-- BEST RIGHT NOW -->
   <section class="blk"><div class="wrap">
@@ -2200,6 +2227,7 @@ window.NHD_INCENTIVES = {"dates": ["2026-07-20"], "updated": "2026-07-20", "samp
     var dots = vals.map(function (v, i) { return '<circle class="dot" cx="' + x(i).toFixed(1) + '" cy="' + y(v).toFixed(1) + '" r="3.5"/>'; }).join('');
 
     var svg = $('trend-svg');
+    if (!svg) return;   /* trend section retired — Concession Index owns the median-over-time story */
     svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
     svg.innerHTML =
       '<g class="grid">' + grid + '</g>' +
