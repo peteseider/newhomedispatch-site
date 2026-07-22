@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incentive Watch — We Watch the Builders So You Don't Have To | New Home Dispatch</title>
+<meta name="description" content="Tell us which Austin builders and communities you're weighing. We verify their incentives twice a day and alert you the moment your number moves — a rise, a new offer, or a fake deadline exposed. Independent. Free. No builder pays to be here.">
+<link rel="canonical" href="https://newhomedispatch.com/incentive-watch.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Incentive Watch — New Home Dispatch">
+<meta property="og:description" content="We watch Austin builder incentives twice a day and tell you the moment your leverage moves. Independent, free, marketing stripped out.">
+<meta property="og:url" content="https://newhomedispatch.com/incentive-watch.html">
+<meta property="og:image" content="https://newhomedispatch.com/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0A0A0A;--blueprint:#2B4FE0;--blueprint-lt:#4E7AFF;--navy:#0F2942;--paper:#fff;--alt:#F4F4F4;--line:#E0E0E0;--muted:#666;--radius:2px;--maxw:1000px;
+    --up:#1F7A3D;--up-bg:#EAF3EC;--red:#B32020;--red-bg:#FBEBEB;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  a{color:var(--blueprint);text-decoration:none;} a:hover{text-decoration:underline;}
+  h1,h2,h3{font-family:'Archivo Expanded',sans-serif;font-weight:800;line-height:1.1;letter-spacing:-.01em;margin:0;}
+  .mono{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:600;}
+
+  header.site{background:#fff;border-bottom:1px solid var(--line);}
+  .site-in{display:flex;justify-content:space-between;align-items:center;padding:14px 0;flex-wrap:wrap;gap:10px;}
+  .site-in img{height:24px;width:auto;display:block;}
+  .site-nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14.5px;font-weight:600;}
+  .site-nav a{color:var(--ink);}
+  .site-nav a.cta{color:var(--blueprint);}
+
+  .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;border-bottom:3px solid var(--blueprint);}
+  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(78,122,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(78,122,255,.09) 1px,transparent 1px);background-size:26px 26px;}
+  .hero-in{position:relative;padding:52px 0 48px;}
+  .eyebrow{color:var(--blueprint-lt);margin-bottom:14px;}
+  .eyebrow::before{content:"— ";}
+  .hero h1{color:#fff;font-size:clamp(30px,5.6vw,50px);max-width:17ch;}
+  .hero .dek{margin-top:16px;font-size:clamp(17px,2.2vw,20px);color:#DDE4F5;max-width:60ch;line-height:1.5;}
+  .hero-note{margin-top:22px;color:#AFC0E8;font-size:14px;}
+
+  section{padding:40px 0;}
+  .lead{font-size:19px;max-width:66ch;}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px;}
+  @media(max-width:760px){.steps{grid-template-columns:1fr;}}
+  .step{border:1px solid var(--line);border-top:3px solid var(--blueprint);border-radius:var(--radius);padding:20px 20px 18px;}
+  .step .n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blueprint);font-weight:600;}
+  .step h3{font-size:1.15rem;margin:8px 0 6px;}
+  .step p{margin:0;font-size:15px;color:#333;}
+
+  .example-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:22px;flex-wrap:wrap;}
+  .alert{border:1px solid var(--line);border-left:4px solid var(--up);border-radius:var(--radius);background:#fff;padding:22px 24px;margin-bottom:16px;box-shadow:0 8px 24px rgba(15,41,66,.06);}
+  .alert.red{border-left-color:var(--red);}
+  .alert .tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;padding:3px 8px;border-radius:var(--radius);background:var(--up-bg);color:var(--up);margin-bottom:12px;}
+  .alert.red .tag{background:var(--red-bg);color:var(--red);}
+  .alert .who{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+  .alert h3{font-size:1.35rem;margin:6px 0 2px;}
+  .alert .chg{font-size:1.05rem;margin:12px 0 0;}
+  .alert .chg .big{font-family:'Archivo Expanded',sans-serif;font-weight:800;}
+  .alert .chg .arrow{color:var(--muted);}
+  .alert .chg .delta{color:var(--up);font-weight:800;font-family:'IBM Plex Mono',monospace;font-size:.9em;}
+  .alert.red .delta{color:var(--red);}
+  .alert dl{margin:14px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;}
+  .alert dt{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px;}
+  .alert dd{margin:0;font-size:15px;}
+
+  .capture{background:var(--ink);color:#fff;border-radius:var(--radius);padding:34px 30px;}
+  .capture h2{color:#fff;font-size:clamp(22px,3vw,28px);}
+  .capture p{color:#C9D2E6;max-width:58ch;}
+  .cap-form{margin-top:22px;display:grid;gap:16px;}
+  .cap-form label.fld{display:block;font-size:13px;color:#AFC0E8;margin-bottom:7px;font-weight:600;}
+  .cap-form input[type=email]{width:100%;max-width:420px;padding:13px 14px;border:1px solid #33465f;border-radius:var(--radius);background:#0b1f33;color:#fff;font:inherit;font-size:16px;}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;}
+  .chips label{display:inline-flex;align-items:center;gap:7px;border:1px solid #33465f;border-radius:var(--radius);padding:8px 12px;font-size:14px;color:#DDE4F5;cursor:pointer;}
+  .chips input{accent-color:var(--blueprint-lt);}
+  .cap-btn{justify-self:start;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:700;background:var(--blueprint);color:#fff;border:none;border-radius:var(--radius);padding:14px 22px;cursor:pointer;}
+  .cap-note{font-size:12.5px;color:#8ea2c4;margin-top:4px;}
+
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:760px){.why{grid-template-columns:1fr;}}
+  .why .c{border-top:2px solid var(--blueprint);padding-top:12px;}
+  .why .c b{display:block;font-family:'Archivo Expanded',sans-serif;font-size:1.05rem;margin-bottom:4px;}
+  .why .c p{margin:0;font-size:14.5px;color:#333;}
+
+  .signoff{border-top:2px solid var(--ink);text-align:center;padding:48px 0 20px;}
+  .look{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(28px,6vw,44px);}
+  .look .dot{color:var(--blueprint);}
+  .signoff p{max-width:58ch;margin:14px auto 0;color:#333;font-size:15px;}
+  .signoff .ind{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-top:14px;}
+  footer{background:var(--navy);color:#9db4e6;font-size:13px;line-height:1.7;padding:24px 0 34px;}
+  footer img{height:22px;margin-bottom:10px;display:block;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap site-in">
+    <a href="index.html" aria-label="New Home Dispatch home"><img src="assets/wordmark-dark.png" alt="New Home Dispatch"></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="communities.html">Explorer</a>
+      <a href="reports.html">Reports</a>
+      <a href="incentive-tracker.html">Incentive Tracker</a>
+      <a href="scoreboard.html">Scoreboard</a>
+      <a href="buyer-guides.html" class="cta">Get the Playbook</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-in">
+    <div class="eyebrow mono">Incentive Watch</div>
+    <h1>We watch the builders. You get the one alert that matters.</h1>
+    <p class="dek">Builders change their incentives constantly and quietly — a credit rises, a new offer appears, a "limited-time" deal quietly lapses but stays on the page. Tell us which builders and communities you're weighing. We verify them twice a day and message you the moment your number actually moves.</p>
+    <p class="hero-note mono">Independent · Free · No builder pays to appear here</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <p class="lead">You can't check twenty builder websites twice a day. We do — and we throw out the marketing, the ceilings, and the fake countdowns, so what reaches you is only the change that affects your decision.</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h3>Pick what you're weighing</h3><p>Choose the builders or communities you're actually considering. One, or a dozen — whatever's on your list.</p></div>
+      <div class="step"><div class="n">02</div><h3>We verify twice a day</h3><p>Every morning and evening we check each one live on the builder's own site and log it to our record — the same feed behind the Incentive Tracker.</p></div>
+      <div class="step"><div class="n">03</div><h3>You hear only what changed</h3><p>A credit rose. A new offer landed. A deadline you were told to rush is already expired. One change, what it means, what to do next.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="example-head"><h2>What an alert looks like</h2><span class="mono" style="color:var(--muted);">Real changes · July 20, 2026</span></div>
+
+    <div class="alert">
+      <span class="tag">▲ Offer increased</span>
+      <div class="who">Your watch · Tri Pointe Homes — Park Central, Austin</div>
+      <h3>The closing credit just went up.</h3>
+      <p class="chg"><span class="big">$15,000</span> <span class="arrow">→</span> <span class="big">$25,000</span> closing credit <span class="delta">▲ +$10,000</span> <span style="color:var(--muted);">between this morning and this evening</span></p>
+      <dl>
+        <dt>What it means</dt><dd>A builder raising its offer mid-day is a builder working harder to move homes — your negotiating leverage just went up, not down.</dd>
+        <dt>What to do</dt><dd>Ask for the $25,000 in writing for your specific home and lot before you commit — "up to" is a ceiling, not a promise.</dd>
+      </dl>
+    </div>
+
+    <div class="alert red">
+      <span class="tag">✕ Fake deadline exposed</span>
+      <div class="who">Your watch · a builder on your list</div>
+      <h3>The "limited-time" offer you were rushed on already expired.</h3>
+      <p class="chg">Advertised deadline: <span class="big">passed</span> <span class="delta">still displayed on the page</span></p>
+      <dl>
+        <dt>What it means</dt><dd>The countdown is manufactured. We've verified the builder's own printed deadline has passed while the offer stays up — one of 11 doing this across the metro right now.</dd>
+        <dt>What to do</dt><dd>Don't let the clock pressure you. Ask for current terms in writing, dated today, before it shapes your decision.</dd>
+      </dl>
+    </div>
+    <p class="mono" style="color:var(--muted);font-size:12px;">These are examples built from real July 20 tracking. Your alerts cover only the builders and communities you choose.</p>
+  </section>
+
+  <section>
+    <div class="capture">
+      <h2>Put your builders on watch</h2>
+      <p>Free. We'll email you only when something on your list actually changes — never a newsletter, never a builder's marketing, never your information sold.</p>
+      <form class="cap-form" name="incentive-watch" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/incentive-watch-thanks.html">
+        <input type="hidden" name="form-name" value="incentive-watch">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div>
+          <label class="fld" for="w-email">Where should we send your alerts?</label>
+          <input id="w-email" type="email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div>
+          <label class="fld">Which builders do you want watched? (pick any)</label>
+          <div class="chips">
+            <label><input type="checkbox" name="builders" value="Perry Homes"> Perry Homes</label>
+            <label><input type="checkbox" name="builders" value="Ashton Woods"> Ashton Woods</label>
+            <label><input type="checkbox" name="builders" value="Tri Pointe Homes"> Tri Pointe</label>
+            <label><input type="checkbox" name="builders" value="D.R. Horton"> D.R. Horton</label>
+            <label><input type="checkbox" name="builders" value="AHA Dream Homes"> AHA Dream Homes</label>
+            <label><input type="checkbox" name="builders" value="Brookfield"> Brookfield</label>
+            <label><input type="checkbox" name="builders" value="Pacesetter Homes"> Pacesetter</label>
+            <label><input type="checkbox" name="builders" value="KB Home"> KB Home</label>
+            <label><input type="checkbox" name="builders" value="Other"> Other / not sure yet</label>
+          </div>
+        </div>
+        <div>
+          <label class="fld" for="w-comm">Any specific communities? (optional)</label>
+          <input id="w-comm" type="text" name="communities" placeholder="e.g. Wolf Ranch, Easton Park, Whisper Valley" style="width:100%;max-width:520px;padding:13px 14px;border:1px solid #33465f;border-radius:2px;background:#0b1f33;color:#fff;font:inherit;font-size:16px;">
+        </div>
+        <button class="cap-btn" type="submit">Start watching for me →</button>
+        <p class="cap-note">One message per real change. Unsubscribe in one click, anytime.</p>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="example-head"><h2>Why this is different</h2></div>
+    <div class="why">
+      <div class="c"><b>Twice a day, not once</b><p>A single scrape is a screenshot. We keep the record over time — which is the only way to tell you something <em>changed</em>, or that a deadline is a bluff.</p></div>
+      <div class="c"><b>Marketing stripped out</b><p>We flag lender-tied credits, "up to" ceilings, and adjustable "teaser" rates for what they are. You get the real number, not the headline.</p></div>
+      <div class="c"><b>Independent, always</b><p>No builder pays to be watched or to look good here. Coverage is not for sale — that's the whole point of New Home Dispatch.</p></div>
+    </div>
+  </section>
+
+  <div class="signoff">
+    <p class="look">Look Closer<span class="dot">.</span></p>
+    <p>The best time to know your incentive moved is the moment it moves — not after you've signed. Put your list on watch, and let the builders come to you.</p>
+    <p class="ind">Independent — editorial coverage is not for sale · newhomedispatch.com</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><img src="assets/wordmark-light.png" alt="New Home Dispatch">© 2026 New Home Dispatch. All rights reserved. New Home Dispatch is an independent education and research platform. Incentive Watch is a free consumer service; we verify builders' publicly advertised offers and never sell your information.</div>
+</footer>
+
+</body>
+</html>

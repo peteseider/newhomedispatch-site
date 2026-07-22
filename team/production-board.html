@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NHD Board">
+<title>New Home Dispatch — Production Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A0A0A; --blueprint:#2B4FE0; --blueprint-lt:#4E7AFF; --navy:#0F2942;
+    --paper:#fff; --alt:#F4F5F7; --line:#E0E0E0; --muted:#5C6270; --radius:2px; --maxw:1380px;
+    --ready:#1E8E4E; --prog:#2B4FE0; --block:#C0392B; --backlog:#6A7180;
+    --ready-bg:#F0F8F3; --prog-bg:#EFF3FE; --block-bg:#FBF1EF; --backlog-bg:#F3F4F6;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--alt);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.5}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+  button{font-family:Inter,system-ui,sans-serif}
+
+  header{background:var(--navy);color:#fff;border-bottom:3px solid var(--blueprint);
+    background-image:linear-gradient(rgba(15,41,66,.93),rgba(15,41,66,.93)),
+    repeating-linear-gradient(0deg,transparent,transparent 23px,rgba(78,122,255,.15) 24px),
+    repeating-linear-gradient(90deg,transparent,transparent 23px,rgba(78,122,255,.15) 24px)}
+  .head-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:18px 0}
+  .mark{font-family:'Archivo Expanded',Inter,sans-serif;font-weight:800;font-size:22px;line-height:1}
+  .mark .hl{color:var(--blueprint-lt)} .mark .div{color:#3a5578;margin:0 7px;font-weight:400}
+  .tag{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:2px;font-size:10px;color:#9db4e6;margin-top:7px}
+  .head-date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9db4e6;text-align:right;line-height:1.7}
+  .head-date b{color:#fff;font-size:13px;letter-spacing:.5px}
+
+  /* site status alert */
+  .alert{background:#8E1F12;color:#fff}
+  .alert-in{padding:13px 0;display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5}
+  .alert .dot{flex:0 0 auto;font-size:18px;margin-top:1px}
+  .alert b{letter-spacing:.2px}
+  .alert .fix{color:#FFD9D2}
+
+  /* morning briefing */
+  .brief{background:var(--ink);color:#fff}
+  .brief-in{padding:22px 0 24px}
+  .brief h1{font-family:'Archivo Expanded',sans-serif;font-size:19px;margin:0 0 4px;letter-spacing:.2px}
+  .brief .sub{color:#c9cdd6;font-size:14.5px;margin:0 0 18px}
+  .brief-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:820px){.brief-cols{grid-template-columns:1fr}}
+  .brief-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-top:3px solid var(--blueprint-lt);border-radius:var(--radius);padding:16px 18px}
+  .brief-card .who{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--blueprint-lt);margin-bottom:10px}
+  .brief-card ol{margin:0;padding:0;list-style:none;counter-reset:n}
+  .brief-card li{counter-increment:n;display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-top:1px solid rgba(255,255,255,.1);font-size:15.5px;line-height:1.45}
+  .brief-card li:first-child{border-top:none;padding-top:0}
+  .brief-card li::before{content:counter(n);flex:0 0 26px;height:26px;border-radius:50%;background:var(--blueprint);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .brief-card li b{color:#fff}
+  .brief-card li .t{color:#e6e8ee}
+  .brief-card li .fx{display:block;font-size:12.5px;color:#9aa3b5;margin-top:2px}
+
+  /* decisions strip */
+  .decide{background:#FFF8ED;border-bottom:1px solid #EAD9B8}
+  .decide-in{padding:16px 0 18px}
+  .decide .kick{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#A3620E;margin-bottom:10px}
+  .decide-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:820px){.decide-grid{grid-template-columns:1fr}}
+  .d-card{background:#fff;border:1px solid #EAD9B8;border-left:4px solid #E8A33D;border-radius:var(--radius);padding:14px 16px;font-size:14.5px;line-height:1.5}
+  .d-card b{font-size:15px}
+  .d-card .rec{margin-top:8px;padding:8px 10px;background:#FDF4E3;border-radius:var(--radius);font-size:13.5px}
+  .d-card .rec .r{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#A3620E;display:block;margin-bottom:3px}
+
+  /* toolbar */
+  .bar{position:sticky;top:0;z-index:30;background:var(--alt);border-bottom:1px solid var(--line);padding:10px 0}
+  .bar-in{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .prog-wrap{flex:1 1 240px;min-width:200px}
+  .prog-lbl{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .prog-lbl #progNum{color:var(--ink);font-weight:600}
+  .prog-track{height:8px;background:#E3E5EA;border-radius:4px;overflow:hidden}
+  .prog-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--blueprint),var(--ready));transition:width .35s ease}
+  .filters{display:flex;gap:8px}
+  .chip{border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600;cursor:pointer}
+  .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .copybtn{border:1.5px solid var(--blueprint);background:#fff;color:var(--blueprint);border-radius:var(--radius);padding:8px 14px;font-size:13.5px;font-weight:700;cursor:pointer;white-space:nowrap}
+  .copybtn:active{background:var(--blueprint);color:#fff}
+
+  .tabs{display:none;gap:6px;margin-top:10px}
+  .tab{flex:1;border:none;border-bottom:3px solid transparent;background:#fff;border-radius:var(--radius) var(--radius) 0 0;padding:10px 4px;font-size:13px;font-weight:800;cursor:pointer;letter-spacing:.3px}
+  .tab .n{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;color:var(--muted);margin-top:2px}
+  .tab.t-ready{color:var(--ready)} .tab.t-prog{color:var(--prog)} .tab.t-block{color:var(--block)} .tab.t-backlog{color:var(--backlog)}
+  .tab.on.t-ready{border-color:var(--ready);background:var(--ready-bg)}
+  .tab.on.t-prog{border-color:var(--prog);background:var(--prog-bg)}
+  .tab.on.t-block{border-color:var(--block);background:var(--block-bg)}
+  .tab.on.t-backlog{border-color:var(--backlog);background:var(--backlog-bg)}
+
+  /* board */
+  .board{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:18px 0 44px;align-items:start}
+  .col{border-radius:var(--radius);border:1px solid var(--line);overflow:hidden}
+  .col.ready{background:var(--ready-bg)} .col.prog{background:var(--prog-bg)}
+  .col.block{background:var(--block-bg)} .col.backlog{background:var(--backlog-bg)}
+  .col-h{padding:14px 16px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px solid}
+  .col-h h3{margin:0;font-family:'Archivo Expanded',sans-serif;font-size:15px;letter-spacing:.5px}
+  .col-h .sub{font-size:12px;color:var(--muted);font-weight:500}
+  .col.ready .col-h{border-color:var(--ready)} .col.ready h3{color:var(--ready)}
+  .col.prog .col-h{border-color:var(--prog)} .col.prog h3{color:var(--prog)}
+  .col.block .col-h{border-color:var(--block)} .col.block h3{color:var(--block)}
+  .col.backlog .col-h{border-color:var(--backlog)} .col.backlog h3{color:var(--backlog)}
+  .col-b{padding:12px}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;margin-bottom:11px;box-shadow:0 1px 2px rgba(10,10,10,.04)}
+  .card:last-child{margin-bottom:0}
+  .card.done{opacity:.55}
+  .card.done .title{text-decoration:line-through}
+  .card-top{display:flex;gap:11px;align-items:flex-start}
+  .ck{flex:0 0 24px;height:24px;margin-top:1px;border:2px solid var(--line);border-radius:var(--radius);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;padding:0}
+  .card.done .ck{background:var(--ready);border-color:var(--ready)}
+  .title{font-size:15.5px;font-weight:700;line-height:1.35;margin:0}
+  .why{font-size:14px;color:#3a3f4a;line-height:1.5;margin:8px 0 0}
+  .donewhen{font-size:13px;color:var(--muted);line-height:1.45;margin:7px 0 0;padding-left:10px;border-left:3px solid var(--line)}
+  .donewhen b{color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase}
+  .blkline{font-size:13.5px;color:var(--block);font-weight:600;margin:8px 0 0}
+  .meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+  .m{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:var(--radius);border:1px solid var(--line);color:var(--muted);background:#fff}
+  .m.pete{background:#FDF2E9;border-color:#F0C9A0;color:#A35A12;font-weight:600}
+  .m.team{background:#EEF3FF;border-color:#C3D4FF;color:#2B4FE0;font-weight:600}
+  .m.both{background:#F3EDFB;border-color:#D6C3F0;color:#6B3FB0;font-weight:600}
+  .m.eff{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .empty{font-size:13.5px;color:var(--muted);padding:10px;font-style:italic;display:none}
+
+  footer{background:var(--navy);color:#9db4e6;font-size:12.5px;line-height:1.7;padding:22px 0 28px}
+  footer .lc{color:#fff;font-family:'Archivo Expanded',sans-serif;font-size:14px;margin:0 0 6px}
+  footer .lc .dot{color:var(--blueprint-lt)}
+  footer p{margin:4px 0}
+
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:4px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:all .25s;z-index:99}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  @media(max-width:900px){
+    .board{grid-template-columns:1fr;gap:0;padding-top:12px}
+    .tabs{display:flex}
+    .col{display:none}
+    .col.active{display:block}
+    .col-h{display:none}
+    .title{font-size:16.5px}
+    .why{font-size:15px}
+    .brief-card li{font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap head-in">
+    <div>
+      <img src="../assets/wordmark-light.png" alt="New Home Dispatch" style="height:22px;width:auto;display:block">
+      <div class="tag">Production Board</div>
+    </div>
+    <div class="head-date"><b>EXECUTION MODE</b><br>Mon Jul 20, 2026 · Owner: Pete Seider</div>
+  </div>
+</header>
+
+<!-- LIVE SITE STATUS -->
+<div class="alert" style="background:#1E8E4E">
+  <div class="wrap alert-in">
+    <span class="dot">✅</span>
+    <div><b>Site is LIVE and confirmed working, 6:57 AM CDT: newhomedispatch.com resolves correctly, no password wall, v85 deployed and gate-passed (10/10).</b>
+    <span class="fix" style="color:#DFF5E7"> Root cause of last night's 401 was DNS — the domain's nameservers were pointed at NS1 instead of GoDaddy, and the imported www CNAME pointed at an old locked Netlify project. Both fixed and verified directly in a real logged-in browser (not just a synthetic check) at newhomedispatch.com. If it still looks wrong on any one device, that's local DNS cache on that device/network catching up — try a hard refresh or a different network.</span></div>
+  </div>
+</div>
+
+<!-- MORNING BRIEFING -->
+<div class="brief">
+  <div class="wrap brief-in">
+    <h1>Overnight recap — what shipped while you were out, and what's actually left.</h1>
+    <p class="sub">Everything below is v85, live now, gate-passed. Nothing here needs a re-explanation call — the card has the answer.</p>
+    <div class="brief-cols">
+      <div class="brief-card">
+        <div class="who">Shipped overnight — verified live</div>
+        <ol>
+          <li><div><span class="t"><b>Site 401 fixed at the root cause</b> (DNS/nameserver + wrong CNAME), not just patched.</span><span class="fx">Confirmed live in a real browser: desktop, and the site's own mobile layout.</span></div></li>
+          <li><div><span class="t"><b>"Fuzzy text" bug fixed sitewide</b> — 28 pages were missing the IBM Plex Mono font import and silently falling back to a system font.</span><span class="fx">This was the actual cause of the About page and label text looking off, not a rendering fluke.</span></div></li>
+          <li><div><span class="t"><b>About page rebuilt on the standard site header/nav</b>, your real Facebook photo added, Scoreboard added to the Reports menu on all 38 pages that have it.</span><span class="fx">About no longer looks like a different site.</span></div></li>
+          <li><div><span class="t"><b>Explorer map mobile bug fixed:</b> the whole map+filters+results block was gated behind a scroll-reveal animation sized for the entire (very tall) section, so it stayed invisible until you scrolled well past it.</span><span class="fx">Removed the reveal gate from that functional block; verified with a real mobile-viewport scroll test before and after deploy.</span></div></li>
+          <li><div><span class="t"><b>Homepage Affordability Desk card is now fully clickable</b>, not just the small side link.</span><span class="fx">Verified by clicking it end-to-end.</span></div></li>
+          <li><div><span class="t"><b>Twice-daily automated sweep is running</b> (~6am / ~5pm CDT): builder websites for promos/incentives + the Facebook new-home-builders group, diffed day over day, written to the project.</span><span class="fx">Feeds the Scoreboard automatically — no page-specific work needed, it already reads the same dataset.</span></div></li>
+        </ol>
+      </div>
+      <div class="brief-card">
+        <div class="who">Still needs Pete — can't be done for you</div>
+        <ol>
+          <li><div><span class="t"><b>MailerLite (or Mailchimp) login.</b></span><span class="fx">Both were checked tonight — neither had an active session, and credentials are never entered on your behalf. Everything downstream (forms, runbook) is ready the moment you sign in.</span></div></li>
+          <li><div><span class="t"><b>New builder lead from the Facebook scrub: Stylecraft Homes at Rancho San Gabriel</b> — not a tracked builder yet.</span><span class="fx">Full writeup with sourcing is in the project (facebook-group-scrub-2026-07-20.md). Worth a field visit to verify before adding.</span></div></li>
+          <li><div><span class="t"><b>Field week</b> is still what converts "researched" pins to "verified" and gets the incentive tracker off sample data.</span><span class="fx">The automated sweep captures what builders advertise, not field-verified ground truth — those stay two different confidence tiers on purpose.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DECISIONS -->
+<div class="decide" style="background:#EFF8F2;border-bottom-color:#C8E6D3">
+  <div class="wrap decide-in">
+    <div class="kick" style="color:#1E8E4E">⚖ No decisions blocking the team right now</div>
+    <div class="decide-grid">
+      <div class="d-card" style="border-left-color:#1E8E4E">
+        <b>Hosting — RESOLVED:</b> Netlify. Confirmed in production; this is no longer an open question.
+        <div class="rec" style="background:#EFF8F2"><span class="r" style="color:#1E8E4E">Status</span>DNS on Netlify DNS for both the apex and www, SSL certificate active (Let's Encrypt, auto-renews), all six site forms on Netlify Forms.</div>
+      </div>
+      <div class="d-card" style="border-left-color:#1E8E4E">
+        <b>Brand line — RESOLVED:</b> "<b>Seider Realty Team powered by The Ascend Group at LPT Realty</b>" is the canonical wording sitewide.
+        <div class="rec" style="background:#EFF8F2"><span class="r" style="color:#1E8E4E">Status</span>Correct everywhere checked tonight, including the new About page and footer.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOOLBAR -->
+<div class="bar">
+  <div class="wrap">
+    <div class="bar-in">
+      <div class="prog-wrap">
+        <div class="prog-lbl"><span>Today's progress</span><span id="progNum">0 / 0</span></div>
+        <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+      </div>
+      <div class="filters">
+        <button class="chip on" data-f="all">All</button>
+        <button class="chip" data-f="pete">Pete</button>
+        <button class="chip" data-f="team">Team</button>
+      </div>
+      <button class="copybtn" id="copyStatus">⧉ Copy end-of-day status</button>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab t-ready on" data-col="ready">READY<span class="n" data-tabct="ready"></span></button>
+      <button class="tab t-prog" data-col="prog">IN&nbsp;PROG<span class="n" data-tabct="prog"></span></button>
+      <button class="tab t-block" data-col="block">BLOCKED<span class="n" data-tabct="block"></span></button>
+      <button class="tab t-backlog" data-col="backlog">BACKLOG<span class="n" data-tabct="backlog"></span></button>
+    </div>
+  </div>
+</div>
+
+<!-- BOARD -->
+<div class="wrap">
+  <div class="board" id="board">
+    <div class="col ready active" data-col="ready">
+      <div class="col-h"><h3>READY</h3><span class="sub">start any time</span></div>
+      <div class="col-b" data-cards></div><div class="empty">Nothing here for this filter.</div>
+    </div>
+    <div class="col prog" data-col="prog">
+      <div class="col-h"><h3>IN PROGRESS</h3><span class="sub">keep moving</span></div>
+      <div class="col-b" data-cards></div><div class="empty">Nothing here for this filter.</div>
+    </div>
+    <div class="col block" data-col="block">
+      <div class="col-h"><h3>BLOCKED</h3><span class="sub">switch-flips, mostly Pete</span></div>
+      <div class="col-b" data-cards></div><div class="empty">Nothing here for this filter.</div>
+    </div>
+    <div class="col backlog" data-col="backlog">
+      <div class="col-h"><h3>BACKLOG</h3><span class="sub">not yet — protect focus</span></div>
+      <div class="col-b" data-cards></div><div class="empty">Nothing here for this filter.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="lc">Look Closer<span class="dot">.</span></p>
+    <p>The blockers are switch-flips and one input — not more building. Execute what exists, verify ground truth, protect the cadence.</p>
+    <p>© 2026 New Home Dispatch · Independent — editorial coverage is not for sale · Buyer representation available through the Seider Realty Team powered by The Ascend Group at LPT Realty · newhomedispatch.com</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Status copied — paste it to Claude tonight.</div>
+
+<script>
+// ---------- task data (single source for cards + status export) ----------
+var TASKS = [
+ // READY
+ {id:'stylecraft', col:'ready', owner:'team', eff:'half-day', title:'Field-verify and add Stylecraft Homes / Rancho San Gabriel',
+  why:'Surfaced tonight in the Facebook group scrub — not yet a tracked builder. Highest-value new-builder candidate found so far.',
+  done:'Builder profile + community page live, sourced, confidence-tagged — not published as Verified until field-checked.'},
+ {id:'lennarcheck', col:'ready', owner:'team', eff:'1 hr', title:'Check Lennar\'s 2 untracked Jarrell communities against lennar.com',
+  why:'Cool Water at Sonterra and Rancho Del Cielo came up in the Facebook scrub but aren\'t in the tracker yet.',
+  done:'Both either added with sourced data or logged as not-yet-relevant with a reason.'},
+ {id:'fieldnotes', col:'ready', owner:'both', eff:'this week', title:'Start executing the Field Notes ideas — real content, real traffic',
+  why:'Pete\'s explicit priority for this week: stop planning, start publishing dated field reporting that drives visits and conversion.',
+  done:'First new Field Note published from this week\'s list, linked from the homepage Dispatch Reports strip.'},
+ {id:'jsonld',  col:'ready', owner:'team', eff:'1 hr',     title:'Site-wide JSON-LD (Organization + WebSite)',
+  why:'The About page carries Person + FAQ already. Add the two site-wide blocks to every page head per the SEO pack.',
+  done:'Rich Results Test passes with zero errors on homepage + About.'},
+ {id:'retro',   col:'ready', owner:'team', eff:'half-day', title:'Retrofit sourcing on the 5 legacy builder profiles',
+  why:'Lennar, Perry, Highland etc. currently look less credible than newer pages. Use the new Builder Profile template as the frame.',
+  done:'All 5 carry "what we verify / what we haven’t" + a last-verified date.'},
+ {id:'share',   col:'ready', owner:'team', eff:'2 hrs',    title:'"Copy my results" + Leverage Report links',
+  why:'Shareable tool outputs are free distribution. Wiring, not building.',
+  done:'Calculator + Leverage Report have copy buttons; tracked-builder profiles link the Leverage Report.'},
+ {id:'kit',     col:'ready', owner:'pete', eff:'in field', title:'Run the Field Kit + Visit Summary tool today',
+  why:'The Visit Summary is now a working phone tool — fill it on site, tap Copy, text it to the team.',
+  done:'One Visit Summary captured + photo named per the standard.'},
+
+ // IN PROGRESS
+ {id:'incmerge', col:'prog', owner:'team', eff:'done', title:'Merged this morning’s AM sweep into the live Incentive Tracker',
+  why:'The 6:50am sweep (58 builders, cross-checked) had produced a rich result — 25 confirmed offers — that never made it past the project docs. Refreshed 6 existing tracked records with today’s re-verification, flagged 1 that couldn’t be reconfirmed (Ashton Woods/Headwaters — different offers now showing on their site) and 1 blocked by the builder’s server (Brohn Homes, HTTP 429), and added 23 new sourced promotions (up from 4) for builders not yet tied to a specific tracked community. Also promoted the Incentive Tracker in the Free Tools menu (was 4th of 7, now 2nd) since it’s now the most frequently-updating asset on the site.',
+  done:'Live — v89, gate-passed 10/10.'},
+ {id:'fieldwk', col:'prog',  owner:'pete', eff:'this week', title:'Field week: researched pins → verified',
+  why:'Convert researched communities + archive rate sheets. Every product downstream needs this ground truth, including taking the incentive tracker off sample data.',
+  done:'Registry entries flip to verified with dated sources.'},
+ {id:'friday',  col:'prog',  owner:'both', eff:'Fri',     title:'Next Friday Dispatch cycle',
+  why:'Data Console → real numbers → Field Note → send. The automated AM/PM sweep now feeds the Scoreboard directly — Friday prep is lighter than before.',
+  done:'Issue sent; Scoreboard row logged to the database.'},
+
+ // BLOCKED
+ {id:'mailer',  col:'block', owner:'pete', eff:'30 min',  title:'MailerLite: create account, authenticate domain, generate API token + group IDs',
+  why:'',
+  blocked:'Platform decision made — MailerLite. The Netlify Function that pushes signups into MailerLite is built and deployed (netlify/functions/mailerlite-subscribe.js) — it just needs a real account, an API token, and group IDs to talk to. Full steps: dispatch/mailerlite-netlify-function-integration.md. DNS records for domain auth can be added by Claude via GoDaddy once MailerLite shows them — the token itself is the one value that has to be typed in by hand.',
+  done:'MAILERLITE_API_TOKEN + group ID env vars set in Netlify, outgoing webhook wired, a real subscribe test lands in the MailerLite group and the welcome email arrives.'},
+ {id:'notif',   col:'block', owner:'pete', eff:'10 min',  title:'Confirm form email notifications are ON (6 forms)',
+  why:'',
+  blocked:'Not verified tonight — worth a quick check. Until confirmed, the 24-hour reply promise and story capture can\'t be guaranteed.',
+  done:'Test submission on each form arrives in an inbox you check daily.'},
+ {id:'sample',  col:'block', owner:'pete', eff:'field',   title:'Real incentive data → sample:false',
+  why:'',
+  blocked:'Blocked on field week. The automated sweep captures what builders advertise (a claim), not field-verified fact — tracker stays sample-labeled until rows are field-checked.',
+  done:'All rows real → sample:false set → yellow banners removed.'},
+ {id:'social',  col:'block', owner:'pete', eff:'20 min',  title:'One post per social channel (or pull the icons)',
+  why:'',
+  blocked:'Not verified tonight whether this is still open — empty linked channels are a standing trust leak if so.',
+  done:'Each linked channel has ≥1 real post.'},
+ {id:'stores',  col:'block', owner:'pete', eff:'30 min + fees', title:'App store accounts (Google / Apple)',
+  why:'',
+  blocked:'Google $25 once, Apple $99/yr. Only blocks native store apps — the PWA is already installable and working on mobile. Low priority.',
+  done:'Accounts exist; PWABuilder packaging can start.'},
+
+ // BACKLOG
+ {id:'expir',   col:'backlog', owner:'team', eff:'T1',   title:'Promote "Expiring this weekend"',
+  why:'The Scoreboard is live and now auto-updates from the twice-daily sweep — surface the franchise as the check-before-you-visit habit hook.', done:''},
+ {id:'mud',     col:'backlog', owner:'team', eff:'T2',   title:'MUD/PID + field-observation tables',
+  why:'Structure the sheets field week collects. Powers history charts and the future Trust Index.', done:''},
+ {id:'taxmerge',col:'backlog', owner:'team', eff:'T2',   title:'Merge overlapping tax content by reference',
+  why:'Tax guide ↔ Look Closer checklist overlap ~30%. Reference, don’t restate — one source per fact.', done:''},
+ {id:'market',  col:'backlog', owner:'team', eff:'T2',   title:'market.json extraction — defer',
+  why:'Only if Dallas gets real. Cheap when the time comes; distraction now.', done:''},
+ {id:'native',  col:'backlog', owner:'team', eff:'T2',   title:'Package native apps via PWABuilder',
+  why:'After store accounts exist. The PWA already covers the app front for a weekly product.', done:''},
+ {id:'netlifytoken', col:'backlog', owner:'pete', eff:'10 min', title:'Add a Netlify Personal Access Token so scheduled deploys can go fully hands-off',
+  why:'The AM/PM sweep can update data automatically, but deploying a new build still needs a browser session open. A token lets future automation deploy without you.', done:''},
+ {id:'gitrepo', col:'backlog', owner:'pete', eff:'15 min', title:'Put the site source in a GitHub repo, connect it to Netlify for continuous deployment',
+  why:'Found tonight: the AM/PM sweep’s automation is genuinely strong (58 builders, 8 parallel agents, Zillow/Facebook cross-checks, expired-offer detection) but it runs in a brand-new session each time with no access to the site’s files — they only exist in this session’s workspace. So it correctly captures and diffs data but can’t update the live site or deploy on its own; that step silently no-ops. A GitHub repo the sweep can check out at the start of each run, wired to Netlify’s own GitHub auto-deploy, replaces the manual zip-upload process entirely — this is the single biggest lever for making the scrub “as robust as possible.” Needs Pete’s GitHub account (or a new one) to set up the remote.', done:'Site source lives in GitHub; Netlify deploys automatically on push; the AM/PM sweep updates incentives.json via a commit instead of a manual zip.'},
+ {id:'longterm',col:'backlog', owner:'team', eff:'T3',   title:'Parked: Trust Index · rate-sheet archive · history charts · Dallas · hosted Dot',
+  why:'All need months of data that only the cadence creates. Keep feeding the datasets; do not start these.', done:''}
+];
+
+var state = {}; // in-memory; resets on reload — use Copy Status before closing
+var filter = 'all';
+
+function ownerTag(o){
+  if(o==='pete') return '<span class="m pete">Pete</span>';
+  if(o==='team') return '<span class="m team">Team</span>';
+  return '<span class="m both">Pete + Team</span>';
+}
+function cardHTML(t){
+  var h = '<div class="card" data-id="'+t.id+'" data-owner="'+t.owner+'">';
+  h += '<div class="card-top"><button class="ck" aria-label="mark done">✓</button><div style="flex:1">';
+  h += '<p class="title">'+t.title+'</p>';
+  if(t.why) h += '<p class="why">'+t.why+'</p>';
+  if(t.blocked) h += '<p class="blkline">⛔ '+t.blocked+'</p>';
+  if(t.done) h += '<p class="donewhen"><b>Done when</b> · '+t.done+'</p>';
+  h += '<div class="meta">'+ownerTag(t.owner)+'<span class="m eff">'+t.eff+'</span></div>';
+  h += '</div></div></div>';
+  return h;
+}
+function render(){
+  document.querySelectorAll('.col').forEach(function(col){
+    var c = col.getAttribute('data-col');
+    var list = TASKS.filter(function(t){return t.col===c && (filter==='all' || t.owner===filter || t.owner==='both');});
+    col.querySelector('[data-cards]').innerHTML = list.map(cardHTML).join('');
+    col.querySelector('.empty').style.display = list.length ? 'none':'block';
+    var tab = document.querySelector('[data-tabct="'+c+'"]');
+    if(tab) tab.textContent = list.length + (c==='backlog' ? ' parked' : ' items');
+  });
+  document.querySelectorAll('.card').forEach(function(el){
+    if(state[el.getAttribute('data-id')]) el.classList.add('done');
+    el.querySelector('.ck').addEventListener('click', function(){
+      var id = el.getAttribute('data-id');
+      state[id] = !state[id];
+      el.classList.toggle('done', !!state[id]);
+      progress();
+    });
+  });
+  progress();
+}
+function progress(){
+  var active = TASKS.filter(function(t){return t.col!=='backlog';});
+  var done = active.filter(function(t){return state[t.id];}).length;
+  document.getElementById('progNum').textContent = done+' / '+active.length;
+  document.getElementById('progFill').style.width = active.length? (100*done/active.length)+'%' : '0%';
+}
+document.querySelectorAll('.chip').forEach(function(ch){
+  ch.addEventListener('click',function(){
+    document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});
+    ch.classList.add('on'); filter = ch.getAttribute('data-f'); render();
+  });
+});
+document.querySelectorAll('.tab').forEach(function(tb){
+  tb.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+    tb.classList.add('on');
+    var c = tb.getAttribute('data-col');
+    document.querySelectorAll('.col').forEach(function(col){
+      col.classList.toggle('active', col.getAttribute('data-col')===c);
+    });
+  });
+});
+document.getElementById('copyStatus').addEventListener('click', function(){
+  var lines = ['NHD Production Board — end-of-day status ('+new Date().toLocaleDateString()+')',''];
+  ['ready','prog','block'].forEach(function(c){
+    var label = c==='ready'?'READY':(c==='prog'?'IN PROGRESS':'BLOCKED');
+    lines.push('— '+label+' —');
+    TASKS.filter(function(t){return t.col===c;}).forEach(function(t){
+      lines.push((state[t.id]?'[DONE] ':'[open] ')+t.title+'  ('+(t.owner==='both'?'Pete+Team':t.owner)+')');
+    });
+    lines.push('');
+  });
+  lines.push('Paste this to Claude to update tomorrow’s board.');
+  var txt = lines.join('\n');
+  function toast(){var t=document.getElementById('toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2200);}
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(toast, function(){window.prompt('Copy your status:',txt);});
+  } else { window.prompt('Copy your status:',txt); }
+});
+render();
+</script>
+</body>
+</html>

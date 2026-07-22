@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>Dare to Compare — New Home Dispatch</title>
+<meta name="description" content="The Dare to Compare Workbook — capture the real price, incentives, taxes, included features, and important terms for up to 3 new-construction homes, then compare them side by side. Free, on your phone, no email.">
+<link rel="canonical" href="https://newhomedispatch.com/dare-to-compare.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dare to Compare — the field comparison tool | New Home Dispatch">
+<meta property="og:description" content="Take it into every model home. Capture up to 3 homes and compare them side by side before you decide. Free, no email.">
+<meta property="og:url" content="https://newhomedispatch.com/dare-to-compare.html">
+<meta property="og:site_name" content="New Home Dispatch">
+<meta property="og:image" content="https://newhomedispatch.com/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Dare to Compare Workbook","url":"https://newhomedispatch.com/dare-to-compare.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"New Home Dispatch","url":"https://newhomedispatch.com"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000000;--ink-2:#0A0A0A;--muted:#666666;
+  --blueprint:#2B4FE0;--blueprint-light:#4E7AFF;--blueprint-navy:#0F2942;
+  --paper:#FFFFFF;--paper-alt:#F4F4F4;--line:#E0E0E0;--radius:2px;
+  --amber:#B07A12;--amber-bg:#FBF4E2;--ok:#1B7A46;
+  --shell:#EDEDED;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+html,body{height:100%;}
+body{font-family:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--shell);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+.app{max-width:560px;margin:0 auto;min-height:100%;background:var(--paper);display:flex;flex-direction:column;position:relative;}
+button{font-family:inherit;cursor:pointer;}
+input,select,textarea{font-family:inherit;font-size:16px;color:var(--ink);}
+.mono{font-family:'IBM Plex Mono',monospace;}
+.disp{font-family:'Archivo Expanded',sans-serif;font-weight:800;letter-spacing:-.01em;}
+
+/* ---------- wordmark ---------- */
+.wm{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:15px;letter-spacing:-.02em;display:inline-flex;align-items:baseline;}
+.wm .lo{font-weight:700;}
+.wm .h{color:var(--blueprint);}
+.wm .d{color:var(--line);margin:0 6px;font-weight:400;}
+.wm .g{font-weight:700;}
+.wm.light .lo,.wm.light .g{color:#fff;} .wm.light .d{color:rgba(255,255,255,.4);}
+.wmimg{height:20px;width:auto;display:block;} .wmimg.light{height:22px;margin-bottom:2px;}
+
+/* ---------- app header ---------- */
+.hdr{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.hdr .home-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.hdr .htx{font-size:12px;font-weight:600;}
+.iconbtn{border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:7px 11px;font-size:12px;font-weight:600;color:var(--ink);display:inline-flex;gap:6px;align-items:center;}
+.iconbtn:active{background:var(--paper-alt);}
+
+/* progress bar */
+.pbar{height:3px;background:var(--line);position:relative;}
+.pbar .fill{position:absolute;left:0;top:0;height:3px;background:var(--blueprint);transition:width .25s ease;}
+
+/* ---------- screens ---------- */
+.screen{flex:1;padding:22px 18px 130px;animation:fade .2s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blueprint);
+  display:flex;align-items:center;gap:9px;margin-bottom:14px;}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--blueprint);}
+h1.big{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:30px;line-height:1.04;letter-spacing:-.02em;}
+h1.big .dot{color:var(--blueprint);}
+.sub{color:var(--ink-2);font-size:15.5px;line-height:1.5;margin-top:14px;}
+.sect-title{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.01em;line-height:1.1;}
+.sect-count{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.06em;margin-top:4px;}
+
+/* ---------- fields ---------- */
+.field{margin-top:16px;}
+.field > label{display:block;font-weight:600;font-size:14.5px;margin-bottom:6px;}
+.field .hint{font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:-2px;margin-bottom:7px;}
+.inp,textarea.inp,select.inp{width:100%;border:1px solid var(--line);border-radius:var(--radius);background:#fff;
+  padding:12px 13px;font-size:16px;line-height:1.3;transition:border-color .15s,box-shadow .15s;}
+.inp:focus,textarea.inp:focus,select.inp:focus{outline:none;border-color:var(--blueprint);box-shadow:0 0 0 3px rgba(43,79,224,.12);}
+textarea.inp{resize:vertical;min-height:76px;}
+.money-wrap,.pct-wrap{position:relative;}
+.money-wrap::before{content:"$";position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px;}
+.money-wrap .inp{padding-left:24px;}
+.pct-wrap::after{content:"%";position:absolute;right:13px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px;}
+.pct-wrap .inp{padding-right:28px;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.grid2 .field{margin-top:0;}
+.row-mt{margin-top:16px;}
+
+/* segmented / chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:9px 13px;font-size:14px;font-weight:600;color:var(--ink-2);}
+.chip[aria-pressed="true"]{background:var(--blueprint);border-color:var(--blueprint);color:#fff;}
+.yn{display:inline-flex;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+.yn button{border:none;background:#fff;padding:9px 16px;font-size:14px;font-weight:600;color:var(--ink-2);border-left:1px solid var(--line);}
+.yn button:first-child{border-left:none;}
+.yn button[aria-pressed="true"]{background:var(--blueprint);color:#fff;}
+.yn button.uk[aria-pressed="true"]{background:var(--amber);}
+
+/* source selector */
+.srcsel{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap;}
+.srcsel button{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:5px 9px;color:var(--muted);text-transform:uppercase;}
+.srcsel button[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);background:var(--paper-alt);}
+
+/* score */
+.score5{display:flex;gap:8px;}
+.score5 button{flex:1;border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:14px 0;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:18px;color:var(--ink-2);}
+.score5 button[aria-pressed="true"]{background:var(--blueprint);border-color:var(--blueprint);color:#fff;}
+.scoretot{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);margin-top:14px;text-align:right;}
+.scoretot b{font-family:'Archivo Expanded',sans-serif;color:var(--ink);font-size:16px;}
+
+/* computed line */
+.computed{margin-top:16px;border:1px solid var(--blueprint);border-radius:var(--radius);background:#F3F6FE;padding:12px 14px;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.computed .cl{font-weight:700;font-size:14.5px;}
+.computed .cl small{display:block;font-weight:500;color:var(--muted);font-size:11.5px;margin-top:2px;}
+.computed .cv{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:20px;letter-spacing:-.01em;}
+.usechip{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--blueprint);border:1px solid var(--blueprint);background:#fff;border-radius:var(--radius);padding:5px 8px;margin-left:8px;}
+
+/* callouts */
+.callout{border-left:3px solid var(--blueprint);background:var(--paper-alt);border-radius:0 var(--radius) var(--radius) 0;padding:11px 14px;margin-top:16px;font-size:13.5px;line-height:1.45;}
+.callout b{color:var(--ink);}
+.callout.verify{border-left-color:var(--amber);background:var(--amber-bg);}
+
+/* photos */
+.photos{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+.photo{position:relative;width:78px;height:78px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.photo button{position:absolute;top:2px;right:2px;background:rgba(0,0,0,.7);color:#fff;border:none;border-radius:50%;width:20px;height:20px;font-size:12px;line-height:1;}
+.addphoto{width:78px;height:78px;border:1.5px dashed var(--line);border-radius:var(--radius);background:#fff;color:var(--muted);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:10.5px;font-weight:600;}
+.addphoto span{font-size:22px;line-height:1;font-weight:400;}
+
+/* ---------- action bar ---------- */
+.actionbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);padding:12px 18px calc(12px + env(safe-area-inset-bottom));}
+.actionbar .inner{max-width:560px;margin:0 auto;display:flex;gap:10px;align-items:center;}
+.btn{border:none;border-radius:var(--radius);font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;letter-spacing:.04em;
+  text-transform:uppercase;padding:14px 18px;text-decoration:none;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:8px;}
+.btn.primary{background:var(--blueprint);color:#fff;flex:1;}
+.btn.primary:active{background:#2340c0;}
+.btn.dark{background:#000;color:#fff;flex:1;}
+.btn.ghost{background:#fff;border:1px solid var(--ink);color:var(--ink);}
+.btn.ghost:active{background:var(--paper-alt);}
+.btn.wide{width:100%;}
+.btn.sm{padding:11px 14px;font-size:12px;}
+.btn:disabled{opacity:.4;}
+.linkbtn{background:none;border:none;color:var(--blueprint);font-weight:600;font-size:14px;text-decoration:underline;padding:6px;}
+
+/* intro extras */
+.introcard{background:#000;color:#fff;border-radius:var(--radius);padding:24px 20px 26px;position:relative;overflow:hidden;margin-bottom:20px;}
+.introcard .bp{position:absolute;inset:0;background-image:linear-gradient(rgba(78,122,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(78,122,255,.14) 1px,transparent 1px);background-size:30px 30px;}
+.introcard>*{position:relative;}
+.introcard h1{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:34px;line-height:1;letter-spacing:-.02em;margin-top:16px;}
+.introcard h1 .dot{color:var(--blueprint-light);}
+.introcard .ky{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blueprint-light);margin-top:14px;display:flex;align-items:center;gap:9px;}
+.introcard .ky::before{content:"";width:22px;height:2px;background:var(--blueprint-light);}
+.howto{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:4px;}
+.howto .hi{display:flex;gap:13px;padding:13px 15px;border-top:1px solid var(--line);align-items:flex-start;}
+.howto .hi:first-child{border-top:none;}
+.howto .hn{font-family:'Archivo Expanded',sans-serif;font-weight:800;color:var(--blueprint);font-size:15px;min-width:20px;}
+.howto .ht b{font-size:14.5px;} .howto .ht span{font-size:13px;color:var(--muted);display:block;}
+.privacy{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:18px;display:flex;gap:9px;align-items:flex-start;}
+.privacy::before{content:"\1F512";font-size:13px;filter:grayscale(1);opacity:.6;}
+
+/* home list on add-another */
+.homecards{display:flex;flex-direction:column;gap:12px;margin-top:6px;}
+.hcard{border:1px solid var(--line);border-radius:var(--radius);padding:15px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.hcard .hl{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--blueprint);}
+.hcard .hn{font-weight:700;font-size:16px;margin-top:2px;}
+.hcard .hm{font-size:12.5px;color:var(--muted);margin-top:2px;}
+.hcard .hedit{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink);border:1px solid var(--line);border-radius:var(--radius);padding:8px 11px;}
+.hcard .pct{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);}
+
+/* section nav pills */
+.secnav{display:flex;gap:6px;overflow-x:auto;padding:12px 18px;border-bottom:1px solid var(--line);position:sticky;top:53px;background:#fff;z-index:15;-ms-overflow-style:none;scrollbar-width:none;}
+.secnav::-webkit-scrollbar{display:none;}
+.secnav button{white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:7px 11px;color:var(--muted);text-transform:uppercase;}
+.secnav button.active{border-color:var(--ink);color:var(--ink);font-weight:600;}
+.secnav button.done{color:var(--blueprint);border-color:var(--blueprint);}
+.secnav button .tick{color:var(--blueprint);}
+
+/* ---------- comparison ---------- */
+.cmp-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);-webkit-overflow-scrolling:touch;}
+table.cmp{border-collapse:collapse;width:100%;min-width:440px;}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;font-size:13px;}
+table.cmp thead th{background:var(--blueprint-navy);color:#fff;font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:12.5px;position:sticky;top:0;}
+table.cmp thead th:first-child{background:#000;}
+table.cmp tr.grp td{background:var(--blueprint);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;}
+table.cmp td.lab{background:var(--paper-alt);font-weight:600;font-size:12px;width:38%;position:sticky;left:0;}
+table.cmp td .best{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.06em;color:var(--ok);border:1px solid var(--ok);border-radius:2px;padding:0 4px;margin-left:5px;vertical-align:1px;}
+table.cmp td .missing{color:var(--amber);font-weight:600;}
+
+.verifybox{border:1px solid var(--amber);border-radius:var(--radius);overflow:hidden;margin-top:22px;}
+.verifybox .vh{background:var(--amber);color:#fff;font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:14px;padding:11px 15px;}
+.verifybox .vhome{padding:13px 15px;border-top:1px solid var(--line);}
+.verifybox .vhome:first-of-type{border-top:none;}
+.verifybox .vname{font-weight:700;font-size:14px;margin-bottom:6px;}
+.verifybox .vitem{font-size:13px;color:var(--ink-2);padding:3px 0 3px 18px;position:relative;line-height:1.35;}
+.verifybox .vitem::before{content:"!";position:absolute;left:0;top:3px;color:var(--amber);font-weight:800;font-family:'Archivo Expanded',sans-serif;}
+.verifybox .vclear{font-size:13px;color:var(--ok);padding-left:18px;position:relative;}
+.verifybox .vclear::before{content:"\2713";position:absolute;left:0;color:var(--ok);font-weight:700;}
+.readout{border-left:3px solid var(--ink);background:var(--paper-alt);padding:13px 15px;margin-top:20px;font-size:14px;line-height:1.5;border-radius:0 var(--radius) var(--radius) 0;}
+.readout b{font-family:'Archivo Expanded',sans-serif;}
+
+.ctablock{margin-top:24px;background:#000;color:#fff;border-radius:var(--radius);padding:20px;position:relative;overflow:hidden;}
+.ctablock .bp{position:absolute;inset:0;background-image:linear-gradient(rgba(78,122,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(78,122,255,.12) 1px,transparent 1px);background-size:28px 28px;}
+.ctablock>*{position:relative;}
+.ctablock h3{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:18px;}
+.ctablock p{font-size:13.5px;color:#d3dcec;margin-top:7px;line-height:1.5;}
+.ctablock .cbtns{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
+.looks{text-align:center;margin:26px 0 6px;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:17px;}
+.looks .dot{color:var(--blueprint);}
+.independence{text-align:center;font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:8px;}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);background:#000;color:#fff;
+  font-size:13px;padding:10px 16px;border-radius:var(--radius);opacity:0;pointer-events:none;transition:.25s;z-index:60;max-width:90%;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+.footnote{text-align:center;font-size:11px;color:var(--muted);padding:20px;line-height:1.6;}
+.skiplink{font-size:13px;color:var(--muted);text-decoration:underline;background:none;border:none;}
+
+@media print{
+  body{background:#fff;}
+  .hdr,.actionbar,.secnav,.addphoto,.iconbtn,.photo button{display:none !important;}
+  .app{max-width:none;}
+  .screen{padding:0;}
+}
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0F2942">
+<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js").catch(function(){});</script>
+</head>
+<body>
+<div class="app" id="app"><!-- rendered by JS --></div>
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+/* ============================================================
+   NEW HOME DISPATCH — DARE TO COMPARE
+   Mobile-first field comparison tool. MVP, local-only, no account.
+   ============================================================ */
+const STORE_KEY = "nhd_dtc_v1";
+const MAX_HOMES = 3;
+const CALC_URL = "true-cost-calculator.html";
+const INCENTIVE_URL = "incentive-calculator.html";
+const SECOND_LOOK_URL = "buyer-strategy-call.html";
+const FILLABLE_PDF = "downloads/dare-to-compare-fillable.pdf";
+const PRINT_PDF = "downloads/dare-to-compare-workbook.pdf";
+
+/* ---------- schema: single source of truth for terminology ---------- */
+const SECTIONS = [
+  { key:"details", title:"Home details", fields:[
+    {k:"community",label:"Community",type:"text",ph:"e.g. Sweetwater"},
+    {k:"builder",label:"Builder",type:"text"},
+    {k:"plan",label:"Plan name",type:"text"},
+    {k:"address",label:"Address or homesite",type:"text",ph:"Lot / block / street"},
+    {k:"homeType",label:"Home type",type:"choice",opts:["Spec / quick move-in","To-be-built"]},
+    {k:"sqft",label:"Square feet",type:"num",half:true},
+    {k:"stories",label:"Stories",type:"num",half:true},
+    {k:"beds",label:"Bedrooms",type:"num",half:true},
+    {k:"baths",label:"Bathrooms",type:"num",half:true},
+    {k:"garage",label:"Garage spaces",type:"num",half:true},
+    {k:"completion",label:"Est. completion / move-in",type:"text",half:true,ph:"MM/YYYY"},
+    {k:"dateQuoted",label:"Date quoted",type:"date",half:true},
+    {k:"salesRep",label:"Sales representative",type:"text",half:true},
+    {k:"photos",label:"Photos — flyer, price sheet, or home",type:"photos"},
+  ]},
+  { key:"price", title:"Price", intro:"Use the written price for this specific home when you have it. Don’t rely only on the advertised “from” price.", fields:[
+    {k:"base",label:"Listed or base price",type:"money"},
+    {k:"lot",label:"Lot premium",type:"money"},
+    {k:"structural",label:"Structural options",type:"money",hint:"Layout, elevation, extra bay — hard to change later."},
+    {k:"design",label:"Design / finish options",type:"money",hint:"Selections bought from the builder — part of your contract."},
+    {k:"other",label:"Other required builder charges",type:"money"},
+    {k:"contract",label:"Estimated contract price",type:"money",computedFrom:["base","lot","structural","design","other"]},
+  ]},
+  { key:"included", title:"What’s included", intro:"Capture the differences that matter — not every feature.", fields:[
+    {k:"inc1",label:"Included feature 1",type:"text"},
+    {k:"inc2",label:"Included feature 2",type:"text"},
+    {k:"inc3",label:"Included feature 3",type:"text"},
+    {k:"extra1",label:"Shown in model, costs extra 1",type:"text"},
+    {k:"extra2",label:"Shown in model, costs extra 2",type:"text"},
+    {k:"extra3",label:"Shown in model, costs extra 3",type:"text"},
+    {k:"appliances",label:"Appliances included?",type:"yn"},
+    {k:"landscaping",label:"Landscaping / irrigation included?",type:"yn"},
+    {k:"blinds",label:"Blinds / window coverings included?",type:"yn"},
+    {k:"opener",label:"Garage-door opener included?",type:"yn"},
+    {k:"otherInc",label:"Other meaningful inclusion",type:"text"},
+  ]},
+  { key:"incentive", title:"Incentive & financing", intro:"A temporary buydown may lower early payments without changing the permanent note rate. Compare the later payment, cash to close, lender fees, and any alternatives.", fields:[
+    {k:"amount",label:"Advertised incentive",type:"money"},
+    {k:"types",label:"Incentive type",type:"multi",opts:["Closing costs","Price reduction","Temporary rate buydown","Permanent rate buydown","Design-center credit","Other"]},
+    {k:"lenderReq",label:"Builder lender required?",type:"yn"},
+    {k:"titleReq",label:"Builder title company required?",type:"yn"},
+    {k:"cashToClose",label:"Cash needed at closing",type:"money"},
+    {k:"payY1",label:"Payment in Year 1 (if quoted)",type:"money"},
+    {k:"payAfter",label:"Payment after temporary terms expire",type:"money"},
+    {k:"permRate",label:"Permanent note rate (if quoted)",type:"pct"},
+    {k:"priceRedAlt",label:"Price-reduction alternative offered?",type:"yn"},
+    {k:"closingAlt",label:"Closing-cost alternative offered?",type:"yn"},
+    {k:"expiration",label:"Offer expiration",type:"text",ph:"Date / terms"},
+    {k:"written",label:"Written documentation received?",type:"yn"},
+  ]},
+  { key:"taxes", title:"Taxes & ongoing costs", intro:"Don’t treat any single figure as the full cost of owning. Tag where each number came from.", fields:[
+    {k:"effRate",label:"Effective property-tax rate",type:"pct"},
+    {k:"mud",label:"In a MUD?",type:"yn",half:true},
+    {k:"pid",label:"In a PID?",type:"yn",half:true},
+    {k:"pidAssess",label:"Separate recurring PID / community assessment",type:"money"},
+    {k:"hoaAmt",label:"HOA amount",type:"money",half:true},
+    {k:"hoaFreq",label:"HOA frequency",type:"choice",opts:["Monthly","Quarterly","Annual"],half:true},
+    {k:"insurance",label:"Homeowners insurance estimate",type:"money"},
+    {k:"mi",label:"Mortgage insurance (if applicable)",type:"money"},
+    {k:"payEst",label:"Estimated payment quoted",type:"money",source:true},
+    {k:"payAfterTemp",label:"Payment after temporary terms expire",type:"money",source:true},
+  ]},
+  { key:"process", title:"Process & protection", fields:[
+    {k:"deposit",label:"Deposit / earnest-money amount",type:"money"},
+    {k:"depositNonref",label:"When does it become nonrefundable?",type:"text"},
+    {k:"inspAllowed",label:"Independent inspections allowed?",type:"yn"},
+    {k:"inspStages",label:"Inspection stages allowed",type:"text",ph:"e.g. pre-drywall, final"},
+    {k:"warWork",label:"Warranty — workmanship",type:"text",half:true,ph:"e.g. 1 yr"},
+    {k:"warSys",label:"Warranty — systems",type:"text",half:true,ph:"e.g. 2 yr"},
+    {k:"warStruct",label:"Warranty — structural",type:"text",half:true,ph:"e.g. 10 yr"},
+    {k:"warAdmin",label:"Warranty administrator",type:"text",half:true},
+    {k:"concern",label:"Important contract or cancellation concern",type:"textarea"},
+    {k:"docs",label:"Written documents received?",type:"yn"},
+  ]},
+  { key:"notes", title:"Field notes", fields:[
+    {k:"liked",label:"What did you like most?",type:"textarea"},
+    {k:"concerned",label:"What concerned you?",type:"textarea"},
+    {k:"change",label:"What would you change?",type:"textarea"},
+    {k:"unresolved",label:"Biggest unresolved question",type:"textarea"},
+    {k:"followup",label:"Follow-up needed",type:"text"},
+    {k:"typed",label:"Additional notes",type:"textarea"},
+    {k:"photos",label:"Additional photos",type:"photos"},
+  ]},
+  { key:"score", title:"Score this home", intro:"Your score reflects this specific home and offer — not every home the builder builds. Confidence means confidence in the written numbers and process, not an accusation about honesty.", fields:[
+    {k:"fit",label:"Fit",type:"score",hint:"How well it matches what you actually need."},
+    {k:"value",label:"Value",type:"score",hint:"What you get for the all-in price."},
+    {k:"confidence",label:"Confidence",type:"score",hint:"Confidence in the written numbers, process, and unresolved risk."},
+  ]},
+];
+
+/* ---------- state ---------- */
+let state = load() || { homes:[], view:"intro", hi:0, si:0 };
+
+function load(){ try{ return JSON.parse(localStorage.getItem(STORE_KEY)); }catch(e){ return null; } }
+function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){ toast("Storage full — remove some photos"); } }
+function newHome(){ return { details:{}, price:{}, included:{}, incentive:{}, taxes:{}, process:{}, notes:{}, score:{}, _src:{} }; }
+
+/* ---------- helpers ---------- */
+const $=(s,r=document)=>r.querySelector(s);
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
+function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));}
+function num(v){ if(v==null||v==="")return null; const n=parseFloat(String(v).replace(/[^0-9.\-]/g,"")); return isNaN(n)?null:n; }
+function money(n){ if(n==null)return "—"; return "$"+Math.round(n).toLocaleString(); }
+function homeName(h,i){ const d=h.details||{}; return d.plan||d.builder||d.community||("Home "+String.fromCharCode(65+i)); }
+function homeLetter(i){ return String.fromCharCode(65+i); }
+let toastT;
+function toast(m){ const t=$("#toast"); t.textContent=m; t.classList.add("show"); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove("show"),1900); }
+
+function sectionProgress(h){ let done=0; SECTIONS.forEach(s=>{ const d=h[s.key]||{}; if(Object.values(d).some(v=>v!=null&&v!==""&&!(Array.isArray(v)&&v.length===0))) done++; }); return done; }
+function contractTotal(h){ const p=h.price||{}; const parts=["base","lot","structural","design","other"].map(k=>num(p[k])).filter(v=>v!=null); return parts.length?parts.reduce((a,b)=>a+b,0):null; }
+
+/* ---------- render root ---------- */
+function render(){
+  const app=$("#app"); app.innerHTML="";
+  if(state.view==="intro") return renderIntro(app);
+  if(state.view==="home") return renderHome(app);
+  if(state.view==="list") return renderList(app);
+  if(state.view==="compare") return renderCompare(app);
+}
+
+/* ---------- INTRO ---------- */
+function renderIntro(app){
+  const resume = state.homes.length>0;
+  app.appendChild(hdr(null));
+  const s=el("div","screen");
+  s.innerHTML=`
+    <div class="introcard">
+      <div class="bp"></div>
+      <img class="wmimg light" src="assets/wordmark-light.png" alt="New Home Dispatch">
+      <div class="ky">The Field Workbook</div>
+      <h1>Dare to Compare<span class="dot">.</span></h1>
+    </div>
+    <h1 class="big">Compare the homes<span class="dot">—</span>not just the advertised prices.</h1>
+    <p class="sub">Add up to 3 homes as you visit builders. Capture the price, incentives, taxes, included features, and important terms. We’ll organize the information side by side before you decide.</p>
+    <div class="howto" style="margin-top:22px;">
+      <div class="hi"><div class="hn">1</div><div class="ht"><b>Add a home</b><span>A few minutes during or right after the visit.</span></div></div>
+      <div class="hi"><div class="hn">2</div><div class="ht"><b>Repeat for up to 3</b><span>Same questions at every builder.</span></div></div>
+      <div class="hi"><div class="hn">3</div><div class="ht"><b>Compare & spot the gaps</b><span>See them side by side and what still needs verifying.</span></div></div>
+    </div>
+    <div class="privacy">Your comparison stays on this device unless you choose to send or save it elsewhere.</div>
+    <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+      <button class="btn ghost sm" id="dlFill">Download Fillable PDF</button>
+      <button class="btn ghost sm" id="dlPrint">Print Workbook</button>
+      ${resume?'<button class="btn ghost sm" id="clearAll">Clear saved</button>':''}
+    </div>
+  `;
+  app.appendChild(s);
+  app.appendChild(actionbar(`<button class="btn primary wide" id="startBtn">${resume?"Continue — "+state.homes.length+" home"+(state.homes.length>1?"s":"")+" saved":"Add Your First Home"}</button>`));
+  $("#startBtn").onclick=()=>{ if(resume){ state.view="list"; } else { state.homes.push(newHome()); state.hi=0; state.si=0; state.view="home"; } save(); render(); };
+  $("#dlFill").onclick=()=>{ window.open(FILLABLE_PDF,"_blank"); };
+  $("#dlPrint").onclick=()=>{ window.open(PRINT_PDF,"_blank"); };
+  const c=$("#clearAll"); if(c) c.onclick=()=>{ if(confirm("Clear all saved homes from this device?")){ state={homes:[],view:"intro",hi:0,si:0}; save(); render(); } };
+}
+
+/* ---------- header ---------- */
+function hdr(homeLabel){
+  const h=el("div","");
+  const bar=el("div","hdr");
+  bar.innerHTML=`<a href="index.html" aria-label="New Home Dispatch home" style="display:inline-flex;align-items:center;"><img class="wmimg" src="assets/wordmark-dark.png" alt="New Home Dispatch"></a>`;
+  const right=el("div","");right.style.cssText="display:flex;gap:8px;align-items:center;";
+  if(homeLabel){ const tag=el("div","");tag.innerHTML=`<div class="home-tag">Home ${homeLabel.letter}</div><div class="htx">${esc(homeLabel.name)}</div>`;tag.style.textAlign="right";right.appendChild(tag); }
+  const toolsLink=el("a","iconbtn","All tools"); toolsLink.href="free-tools.html"; toolsLink.style.textDecoration="none"; right.appendChild(toolsLink);
+  const compBtn=el("button","iconbtn",state.homes.length>0?("Compare ("+state.homes.length+")"):"Compare");
+  compBtn.onclick=()=>{ if(state.homes.length===0){toast("Add a home first");return;} state.view="compare"; save(); render(); };
+  right.appendChild(compBtn);
+  bar.appendChild(right); h.appendChild(bar);
+  return h;
+}
+function actionbar(inner){ const a=el("div","actionbar"); a.innerHTML=`<div class="inner">${inner}</div>`; return a; }
+
+/* ---------- HOME WIZARD ---------- */
+function renderHome(app){
+  const h=state.homes[state.hi]; const sec=SECTIONS[state.si];
+  app.appendChild(hdr({letter:homeLetter(state.hi),name:homeName(h,state.hi)}));
+  // progress
+  const pb=el("div","pbar");pb.innerHTML=`<div class="fill" style="width:${Math.round((state.si+1)/SECTIONS.length*100)}%"></div>`;app.appendChild(pb);
+  // section nav
+  const nav=el("div","secnav");
+  SECTIONS.forEach((s,i)=>{ const filled=Object.values(h[s.key]||{}).some(v=>v!=null&&v!==""&&!(Array.isArray(v)&&v.length===0));
+    const b=el("button",(i===state.si?"active":"")+(filled?" done":""), (filled?'<span class="tick">✓</span> ':'')+esc(shortTitle(s))); b.onclick=()=>{ state.si=i; save(); render(); scrollTop(); }; nav.appendChild(b); });
+  app.appendChild(nav);
+  // screen
+  const s=el("div","screen");
+  s.appendChild(el("div","eyebrow","Home "+homeLetter(state.hi)+" · Step "+(state.si+1)+" of "+SECTIONS.length));
+  s.appendChild(el("div","sect-title",esc(sec.title)));
+  if(sec.intro) s.appendChild(el("div","callout","<b>Tip.</b> "+esc(sec.intro)));
+  const form=el("div","");
+  renderFields(form,sec,h);
+  if(sec.key==="score"){ const st=el("div","scoretot");st.id="scoretot";st.innerHTML=scoreTotHTML(h);form.appendChild(st); }
+  s.appendChild(form);
+  app.appendChild(s);
+  // actions
+  const first=state.si===0, last=state.si===SECTIONS.length-1;
+  app.appendChild(actionbar(`
+    ${first?'':'<button class="btn ghost sm" id="prevBtn">Back</button>'}
+    <button class="btn primary" id="nextBtn">${last?"Save this home":"Save & continue"}</button>
+  `));
+  const pv=$("#prevBtn"); if(pv) pv.onclick=()=>{ state.si--; save(); render(); scrollTop(); };
+  $("#nextBtn").onclick=()=>{ save(); if(last){ state.view="list"; } else { state.si++; } save(); render(); scrollTop(); };
+}
+function shortTitle(s){ return {details:"Details",price:"Price",included:"Included",incentive:"Incentive",taxes:"Taxes",process:"Process",notes:"Notes",score:"Score"}[s.key]; }
+function scrollTop(){ window.scrollTo(0,0); }
+
+/* ---------- field rendering ---------- */
+function renderFields(form,sec,h){
+  const data=h[sec.key]; let pendingHalf=null;
+  sec.fields.forEach(f=>{
+    const node=renderField(f,sec,h,data);
+    if(f.half){ if(pendingHalf){ const g=el("div","grid2 row-mt"); g.appendChild(pendingHalf); g.appendChild(node); form.appendChild(g); pendingHalf=null; } else { pendingHalf=node; } }
+    else { if(pendingHalf){ form.appendChild(wrapHalf(pendingHalf)); pendingHalf=null; } form.appendChild(node); }
+  });
+  if(pendingHalf) form.appendChild(wrapHalf(pendingHalf));
+}
+function wrapHalf(n){ const g=el("div","grid2 row-mt"); g.appendChild(n); return g; }
+
+function renderField(f,sec,h,data){
+  const wrap=el("div","field"+(f.half?"":" "));
+  const lab=el("label",null,esc(f.label)); wrap.appendChild(lab);
+  if(f.hint) wrap.appendChild(el("div","hint",esc(f.hint)));
+  const set=(v)=>{ data[f.k]=v; save(); };
+  if(f.type==="text"||f.type==="num"||f.type==="date"){
+    const inp=el("input","inp"); inp.type=f.type==="date"?"date":(f.type==="num"?"text":"text"); if(f.type==="num")inp.inputMode="numeric";
+    if(f.ph)inp.placeholder=f.ph; inp.value=data[f.k]||""; inp.oninput=()=>set(inp.value); wrap.appendChild(inp);
+  } else if(f.type==="money"||f.type==="pct"){
+    const box=el("div",f.type==="money"?"money-wrap":"pct-wrap");
+    const inp=el("input","inp"); inp.inputMode="decimal"; if(f.ph)inp.placeholder=f.ph; inp.value=data[f.k]||"";
+    inp.oninput=()=>{ set(inp.value); if(f.computedFrom) refreshComputed(sec,h); if(sec.key==="price") refreshComputed(sec,h); };
+    box.appendChild(inp); wrap.appendChild(box);
+    if(f.computedFrom){ wrap.classList.add("computed-field"); wrap.dataset.computed=f.k; }
+    if(f.source){ wrap.appendChild(srcSelector(h,f.k)); }
+  } else if(f.type==="textarea"){
+    const inp=el("textarea","inp"); if(f.ph)inp.placeholder=f.ph; inp.value=data[f.k]||""; inp.oninput=()=>set(inp.value); wrap.appendChild(inp);
+  } else if(f.type==="choice"){
+    const chips=el("div","chips"); f.opts.forEach(o=>{ const b=el("button","chip",esc(o)); b.type="button"; b.setAttribute("aria-pressed",data[f.k]===o); b.onclick=()=>{ data[f.k]=(data[f.k]===o?"":o); save(); chips.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x.textContent===data[f.k])); }; chips.appendChild(b); }); wrap.appendChild(chips);
+  } else if(f.type==="multi"){
+    const chips=el("div","chips"); const arr=()=>data[f.k]||(data[f.k]=[]); f.opts.forEach(o=>{ const b=el("button","chip",esc(o)); b.type="button"; b.setAttribute("aria-pressed",(data[f.k]||[]).includes(o)); b.onclick=()=>{ const a=arr(); const idx=a.indexOf(o); if(idx>=0)a.splice(idx,1); else a.push(o); save(); b.setAttribute("aria-pressed",a.includes(o)); }; chips.appendChild(b); }); wrap.appendChild(chips);
+  } else if(f.type==="yn"){
+    const yn=el("div","yn"); [["Yes","yes"],["No","no"],["Unknown","unknown"]].forEach(([t,v])=>{ const b=el("button",(v==="unknown"?"uk":""),t); b.type="button"; b.setAttribute("aria-pressed",data[f.k]===v); b.onclick=()=>{ data[f.k]=(data[f.k]===v?"":v); save(); yn.querySelectorAll("button").forEach((x,ix)=>x.setAttribute("aria-pressed",["yes","no","unknown"][ix]===data[f.k])); }; yn.appendChild(b); }); wrap.appendChild(yn);
+  } else if(f.type==="score"){
+    const s5=el("div","score5"); for(let n=1;n<=5;n++){ const b=el("button",null,n); b.type="button"; b.setAttribute("aria-pressed",data[f.k]==n); b.onclick=()=>{ data[f.k]=(data[f.k]==n?"":n); save(); s5.querySelectorAll("button").forEach((x,ix)=>x.setAttribute("aria-pressed",(ix+1)==data[f.k])); updateScoreTot(h); }; s5.appendChild(b); } wrap.appendChild(s5);
+  } else if(f.type==="photos"){
+    wrap.appendChild(photoField(data,f.k));
+  }
+  if(f.computedFrom){ // computed display
+    const c=el("div","computed"); c.id="computed-"+f.k;
+    const t=contractTotal(h);
+    c.innerHTML=`<div class="cl">Sum of entered amounts <small>base + lot + structural + design + other</small></div><div style="display:flex;align-items:center;"><span class="cv">${money(t)}</span></div>`;
+    wrap.appendChild(c);
+  }
+  return wrap;
+}
+function refreshComputed(sec,h){ const c=document.getElementById("computed-contract"); if(c){ const t=contractTotal(h); c.querySelector(".cv").textContent=money(t); } }
+function srcSelector(h,k){ const box=el("div","srcsel"); const cur=()=> (h._src=h._src||{}, h._src[k]||""); [["Builder est.","builder"],["My entry","buyer"],["NHD calc","nhd"]].forEach(([t,v])=>{ const b=el("button",null,t); b.type="button"; b.setAttribute("aria-pressed",cur()===v); b.onclick=()=>{ h._src=h._src||{}; h._src[k]=(h._src[k]===v?"":v); save(); box.querySelectorAll("button").forEach((x,ix)=>x.setAttribute("aria-pressed",[["builder"],["buyer"],["nhd"]][ix][0]===h._src[k])); }; box.appendChild(b); }); return box; }
+function updateScoreTot(h){ /* score total shown live under section */ const holder=document.getElementById("scoretot"); if(holder){ holder.innerHTML=scoreTotHTML(h); } }
+function scoreTotHTML(h){ const s=h.score||{}; const vals=["fit","value","confidence"].map(k=>num(s[k])); const filled=vals.filter(v=>v!=null); const tot=filled.reduce((a,b)=>a+b,0); return `Total <b>${filled.length?tot:"—"}</b> / 15`; }
+
+/* photos with downscale */
+function photoField(data,k){
+  const wrap=el("div","");
+  const grid=el("div","photos");
+  const arr=data[k]||(data[k]=[]);
+  function draw(){ grid.innerHTML=""; arr.forEach((src,i)=>{ const p=el("div","photo"); p.innerHTML=`<img src="${src}" alt="">`; const del=el("button",null,"×"); del.onclick=()=>{ arr.splice(i,1); save(); draw(); }; p.appendChild(del); grid.appendChild(p); });
+    const add=el("label","addphoto"); add.innerHTML='<span>+</span>Add photo';
+    const inp=el("input",null); inp.type="file"; inp.accept="image/*"; inp.capture="environment"; inp.style.display="none";
+    inp.onchange=e=>{ const file=e.target.files[0]; if(!file)return; downscale(file,700,0.6,(url)=>{ arr.push(url); try{save();}catch(err){} draw(); }); };
+    add.appendChild(inp); grid.appendChild(add);
+  }
+  draw(); wrap.appendChild(grid); return wrap;
+}
+function downscale(file,maxW,q,cb){ const img=new Image(); const rd=new FileReader(); rd.onload=()=>{ img.onload=()=>{ const sc=Math.min(1,maxW/img.width); const c=document.createElement("canvas"); c.width=Math.round(img.width*sc); c.height=Math.round(img.height*sc); c.getContext("2d").drawImage(img,0,0,c.width,c.height); cb(c.toDataURL("image/jpeg",q)); }; img.src=rd.result; }; rd.readAsDataURL(file); }
+
+/* ---------- HOME LIST / ADD ANOTHER ---------- */
+function renderList(app){
+  app.appendChild(hdr(null));
+  const s=el("div","screen");
+  s.appendChild(el("div","eyebrow","Your homes · "+state.homes.length+" of "+MAX_HOMES));
+  s.appendChild(el("div","sect-title","Homes you’re comparing"));
+  const cards=el("div","homecards");
+  state.homes.forEach((h,i)=>{ const c=el("div","hcard");
+    const done=sectionProgress(h);
+    c.innerHTML=`<div><div class="hl">Home ${homeLetter(i)}</div><div class="hn">${esc(homeName(h,i))}</div><div class="hm">${esc([h.details&&h.details.community,contractTotal(h)!=null?money(contractTotal(h)):null].filter(Boolean).join(" · ")||"No details yet")}</div></div>
+      <div style="text-align:right;"><button class="hedit" data-i="${i}">Edit</button><div class="pct">${done}/${SECTIONS.length} sections</div></div>`;
+    cards.appendChild(c);
+  });
+  s.appendChild(cards);
+  const btns=el("div","");btns.style.cssText="margin-top:20px;display:flex;flex-direction:column;gap:10px;";
+  if(state.homes.length<MAX_HOMES) btns.innerHTML+=`<button class="btn ghost wide" id="addHome">Add Home ${homeLetter(state.homes.length)}</button>`;
+  btns.innerHTML+=`<button class="btn primary wide" id="compareNow">Compare Now</button>`;
+  s.appendChild(btns);
+  s.appendChild(el("div","footnote","You can return and add or edit any home later — everything is saved on this device."));
+  app.appendChild(s);
+  s.querySelectorAll(".hedit").forEach(b=>b.onclick=()=>{ state.hi=+b.dataset.i; state.si=0; state.view="home"; save(); render(); scrollTop(); });
+  const ah=$("#addHome"); if(ah) ah.onclick=()=>{ state.homes.push(newHome()); state.hi=state.homes.length-1; state.si=0; state.view="home"; save(); render(); scrollTop(); };
+  $("#compareNow").onclick=()=>{ state.view="compare"; save(); render(); scrollTop(); };
+}
+
+/* ---------- verification logic ---------- */
+function verifyFlags(h){
+  const f=[], d=h.details||{},p=h.price||{},inc=h.incentive||{},t=h.taxes||{},pr=h.process||{},included=h.included||{};
+  if(!t.effRate) f.push("Exact tax rate missing");
+  if(inc.amount && inc.written!=="yes") f.push("Incentive not received in writing");
+  const temp=(inc.types||[]).includes("Temporary rate buydown");
+  if((temp||inc.payY1) && !inc.payAfter && !t.payAfterTemp) f.push("Payment shown only during the temporary buydown period");
+  if(!p.lot) f.push("Lot premium not confirmed");
+  if(!pr.depositNonref) f.push("Deposit refundability unknown");
+  if(!pr.inspAllowed || pr.inspAllowed==="unknown") f.push("Inspection rights unknown");
+  if(!included.extra1 && !included.extra2 && !included.extra3) f.push("Model-home features not priced");
+  if(!d.dateQuoted) f.push("Quote is missing a verification date");
+  return f;
+}
+
+/* ---------- COMPARISON ---------- */
+function renderCompare(app){
+  app.appendChild(hdr(null));
+  const s=el("div","screen");
+  if(state.homes.length===0){ s.innerHTML='<div class="sect-title">Nothing to compare yet</div><p class="sub">Add a home to get started.</p>'; app.appendChild(s); app.appendChild(actionbar('<button class="btn primary wide" id="back">Add a home</button>')); $("#back").onclick=()=>{state.homes.push(newHome());state.hi=0;state.si=0;state.view="home";save();render();}; return; }
+  s.appendChild(el("div","eyebrow","Side by side"));
+  s.appendChild(el("div","sect-title","Your comparison"));
+
+  // best-value hints (not a declared winner)
+  const contracts=state.homes.map(contractTotal);
+  const payAfters=state.homes.map(h=>num((h.incentive&&h.incentive.payAfter)||(h.taxes&&h.taxes.payAfterTemp)));
+  const scores=state.homes.map(scoreTotal);
+  const minIdx=(arr)=>{ let bi=-1,bv=Infinity; arr.forEach((v,i)=>{ if(v!=null&&v<bv){bv=v;bi=i;} }); return bi; };
+  const maxIdx=(arr)=>{ let bi=-1,bv=-Infinity; arr.forEach((v,i)=>{ if(v!=null&&v>bv){bv=v;bi=i;} }); return bi; };
+  const bestContract=minIdx(contracts), bestPay=minIdx(payAfters), bestScore=maxIdx(scores);
+
+  const rows=[
+    ["grp","The home"],
+    ["Community",h=>esc(h.details.community)],
+    ["Builder & plan",h=>esc([h.details.builder,h.details.plan].filter(Boolean).join(" — "))],
+    ["Sq ft · bd · ba",h=>esc([h.details.sqft,h.details.beds,h.details.baths].filter(v=>v!=null&&v!=="").join(" · "))],
+    ["grp","Price"],
+    ["Estimated contract price",(h,i)=>fmtBest(money(contracts[i]),i===bestContract,"lowest")],
+    ["grp","Offer"],
+    ["Incentive",h=>h.incentive.amount?money(num(h.incentive.amount)):"—"],
+    ["Type",h=>esc((h.incentive.types||[]).join(", "))],
+    ["Builder lender / title required",h=>ynPair(h.incentive.lenderReq,h.incentive.titleReq)],
+    ["Written?",h=>ynTxt(h.incentive.written)],
+    ["grp","Ongoing"],
+    ["Effective tax rate",h=>h.taxes.effRate?esc(h.taxes.effRate)+"%":miss("missing")],
+    ["MUD / PID",h=>ynPair(h.taxes.mud,h.taxes.pid)],
+    ["HOA",h=>h.taxes.hoaAmt?money(num(h.taxes.hoaAmt))+(h.taxes.hoaFreq?" / "+esc(h.taxes.hoaFreq.toLowerCase()):""):"—"],
+    ["Est. payment quoted",h=>h.taxes.payEst?money(num(h.taxes.payEst)):"—"],
+    ["Payment after temp terms",(h,i)=>fmtBest(payAfters[i]!=null?money(payAfters[i]):miss("only temp shown"),i===bestPay&&payAfters[i]!=null,"lowest")],
+    ["grp","Protection"],
+    ["Deposit · refundable?",h=>[h.process.deposit?money(num(h.process.deposit)):"—",esc(h.process.depositNonref)||miss("unknown")].join(" · ")],
+    ["Inspections allowed",h=>ynTxt(h.process.inspAllowed)],
+    ["Warranty (w/s/struct)",h=>esc([h.process.warWork,h.process.warSys,h.process.warStruct].filter(Boolean).join(" / "))||"—"],
+    ["grp","Score"],
+    ["Fit · Value · Confidence",h=>esc([h.score.fit,h.score.value,h.score.confidence].map(v=>v||"–").join(" · "))],
+    ["Total",(h,i)=>fmtBest((scores[i]!=null?scores[i]:"—")+" / 15",i===bestScore&&scores[i]!=null,"highest")],
+    ["Biggest unresolved question",h=>esc(h.notes.unresolved)||"—"],
+  ];
+  const scroll=el("div","cmp-scroll");
+  const tbl=el("table","cmp");
+  let thead="<thead><tr><th>Field</th>"+state.homes.map((h,i)=>`<th>Home ${homeLetter(i)}<br><span style="font-weight:400;font-size:11px;opacity:.85">${esc(homeName(h,i))}</span></th>`).join("")+"</tr></thead>";
+  let tb="<tbody>";
+  rows.forEach(r=>{ if(r[0]==="grp"){ tb+=`<tr class="grp"><td colspan="${1+state.homes.length}">${esc(r[1])}</td></tr>`; }
+    else { tb+=`<tr><td class="lab">${esc(r[0])}</td>`+state.homes.map((h,i)=>{ let v=r[1](h,i); if(v==null||v==="")v="—"; return `<td>${v}</td>`; }).join("")+"</tr>"; } });
+  tb+="</tbody>";
+  tbl.innerHTML=thead+tb; scroll.appendChild(tbl); s.appendChild(scroll);
+  s.appendChild(el("div","footnote","Best-value markers flag the lowest price, lowest post-buydown payment, and highest score. They are hints — not a verdict."));
+
+  // readout (no winner by score alone)
+  const anyScore=scores.some(v=>v!=null);
+  if(anyScore){ const bi=bestScore; const unresolved=verifyFlags(state.homes[bi]).length;
+    s.appendChild(el("div","readout",`<b>Home ${homeLetter(bi)}</b> currently has the strongest score${unresolved?`, but ${unresolved} important item${unresolved>1?"s":""} remain${unresolved>1?"":"s"} unverified below`:""}. Resolve the open items before you treat any score as final.`));
+  }
+
+  // verification section
+  const vb=el("div","verifybox");
+  vb.innerHTML=`<div class="vh">What still needs verification</div>`;
+  state.homes.forEach((h,i)=>{ const flags=verifyFlags(h); const box=el("div","vhome");
+    box.innerHTML=`<div class="vname">Home ${homeLetter(i)} — ${esc(homeName(h,i))}</div>`+
+      (flags.length?flags.map(f=>`<div class="vitem">${esc(f)}</div>`).join(""):`<div class="vclear">Nothing flagged — the key items are captured.</div>`);
+    vb.appendChild(box);
+  });
+  s.appendChild(vb);
+
+  // CTA
+  const cta=el("div","ctablock");
+  cta.innerHTML=`<div class="bp"></div>
+    <h3>Before you sign</h3>
+    <p>Send these numbers straight into the True-Cost Calculator — your price, tax rate, and HOA carry over — to test the full monthly picture. Or ask us for an independent second look.</p>
+    <div class="cbtns">
+      <a class="btn primary wide" href="${buildCalcUrl()}" rel="noopener">Run these numbers through the True-Cost Calculator</a>
+      <a class="btn ghost wide" style="background:#fff;" href="${SECOND_LOOK_URL}" rel="noopener">Want an independent second look before you sign?</a>
+      <a class="btn ghost wide" style="background:#fff;" href="leverage-report.html" rel="noopener">Have one offer in hand? Get your Leverage Report</a>
+    </div>
+    ${state.homes.length>2?'<div style="font-size:12px;color:#aab6cc;margin-top:12px;line-height:1.4;">The calculator compares two homes at a time — your first two carry over automatically. Add the third there if you need it.</div>':''}`;
+  s.appendChild(cta);
+
+  s.appendChild(el("div","looks",'Look Closer<span class="dot">.</span>'));
+  s.appendChild(el("div","independence","Independent — editorial coverage is not for sale. · newhomedispatch.com"));
+
+  app.appendChild(s);
+  app.appendChild(actionbar(`
+    <button class="btn ghost sm" id="editHomes">Homes</button>
+    <button class="btn dark" id="download">Print / Save</button>
+    <button class="btn ghost sm" id="emailBtn">Email</button>
+  `));
+  $("#editHomes").onclick=()=>{ state.view="list"; save(); render(); scrollTop(); };
+  $("#download").onclick=()=>window.print();
+  $("#emailBtn").onclick=()=>{ const subj=encodeURIComponent("My Dare to Compare comparison — New Home Dispatch"); const body=encodeURIComponent(emailSummary()); location.href=`mailto:?subject=${subj}&body=${body}`; };
+}
+function scoreTotal(h){ const s=h.score||{}; const vals=["fit","value","confidence"].map(k=>num(s[k])); if(vals.every(v=>v==null))return null; return vals.map(v=>v||0).reduce((a,b)=>a+b,0); }
+function monthlyHOA(h){ const a=num(h.taxes&&h.taxes.hoaAmt); if(a==null)return null; const fr=(h.taxes&&h.taxes.hoaFreq)||"Monthly"; return fr==="Annual"?a/12:(fr==="Quarterly"?a/3:a); }
+function buildCalcUrl(){
+  const q=new URLSearchParams(); const homes=state.homes.slice(0,2);
+  homes.forEach((h,i)=>{ const p=i===0?"a":"b";
+    const nm=homeName(h,i); if(nm) q.set(p+"_label", nm.slice(0,34));
+    const cp=contractTotal(h); if(cp!=null) q.set(p+"_price", Math.round(cp));
+    const tr=num(h.taxes&&h.taxes.effRate); if(tr!=null) q.set(p+"_taxRate", tr);
+    const hoa=monthlyHOA(h); if(hoa!=null) q.set(p+"_hoa", Math.round(hoa));
+  });
+  if(homes.length>1) q.set("mode","c");
+  const qs=q.toString(); return CALC_URL+(qs?("?"+qs):"");
+}
+function fmtBest(txt,isBest,word){ return txt+(isBest?` <span class="best">${word}</span>`:""); }
+function miss(t){ return `<span class="missing">${esc(t)}</span>`; }
+function ynTxt(v){ return v==="yes"?"Yes":v==="no"?"No":v==="unknown"?miss("unknown"):"—"; }
+function ynPair(a,b){ const f=v=>v==="yes"?"Y":v==="no"?"N":v==="unknown"?"?":"–"; return f(a)+" / "+f(b); }
+function emailSummary(){ let out="DARE TO COMPARE — New Home Dispatch\n\n"; state.homes.forEach((h,i)=>{ out+=`HOME ${homeLetter(i)}: ${homeName(h,i)}\n`; out+=`  Contract price: ${money(contractTotal(h))}\n`; out+=`  Incentive: ${h.incentive.amount?money(num(h.incentive.amount)):"—"} (${(h.incentive.types||[]).join(", ")||"—"})\n`; out+=`  Tax rate: ${h.taxes.effRate?h.taxes.effRate+"%":"—"}  HOA: ${h.taxes.hoaAmt?money(num(h.taxes.hoaAmt)):"—"}\n`; out+=`  Score: ${scoreTotal(h)!=null?scoreTotal(h)+"/15":"—"}\n`; const fl=verifyFlags(h); if(fl.length)out+="  Needs verification: "+fl.join("; ")+"\n"; out+="\n"; }); out+="Run these numbers through the True-Cost Calculator: "+CALC_URL+"\n"; return out; }
+
+/* boot */
+render();
+</script>
+<script src="assistant-launcher.js" defer></script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('input[type=number],input[type=text]').forEach(function(i){var id=(i.id||'')+(i.name||'');if(/price|rate|down|tax|hoa|value|amount|cost|income|insurance|pmi|term/i.test(id)){i.setAttribute('inputmode','decimal');i.setAttribute('enterkeyhint','done');}});});</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[functions]
+  directory = "netlify/functions"
+
+# Runs daily. Netlify scheduled-function cron is UTC — 13:00 UTC is
+# 8:00am America/Chicago (7:00am during CDT... adjust if this drifts;
+# Netlify does not do timezone-aware cron). Checks rep-contacts for anyone
+# due for a check-in and sends via Twilio, IF TWILIO_LIVE_SEND=true.
+# See netlify/functions/twilio-checkin-send.js and
+# dispatch/twilio-autonomous-checkin-integration.md.
+[functions."twilio-checkin-send"]
+  schedule = "0 13 * * *"

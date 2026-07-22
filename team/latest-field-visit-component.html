@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ================================================================
+  "LATEST FIELD VISIT" SECTION — New Home Dispatch · v1 · 2026-07-20
+  A standard, reusable block for Community Profiles and Builder Profiles.
+  Purpose: show, at a glance, that our coverage is dated firsthand
+  reporting — not builder marketing. Evidence, not decoration.
+
+  DESIGN RULES (do not violate):
+  · Max 4 photos on a profile page. If you have more, they live in the
+    full Field Report, not here.
+  · Every image: original NHD reporting photo, dated caption, loading="lazy".
+  · No builder marketing photos anywhere in this block, ever.
+  · Drone line only appears when drone footage actually exists.
+  · The block degrades gracefully with 1 photo, or zero (map/annotated only).
+
+  HOW TO USE: copy the <section class="lfv"> block into the Community
+  Profile template, directly under the "On the ground" heading. Replace
+  every [[TOKEN]]. Delete the .lfv-shots figures you don't need.
+  This file is a rendered PREVIEW showing the block in three states.
+================================================================ -->
+<meta name="robots" content="noindex">
+<title>Latest Field Visit — Component Preview | New Home Dispatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* --- brand tokens, identical to community-profile-template.html --- */
+  :root{--ink:#0A0A0A;--blueprint:#2B4FE0;--blueprint-lt:#4E7AFF;--navy:#0F2942;
+        --paper:#fff;--alt:#F4F4F4;--line:#E0E0E0;--muted:#666;--radius:2px;--maxw:860px;
+        --v:#1E8E4E;--c:#C99A17;--n:#C0392B}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);
+       font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:40px 22px 60px}
+  .demo-note{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;
+             color:var(--muted);border:1px dashed var(--line);border-radius:var(--radius);padding:10px 14px;margin:0 0 30px}
+  h2{font-family:'Archivo Expanded',sans-serif;font-size:21px;margin:40px 0 12px}
+
+  /* ===================== THE COMPONENT ===================== */
+  .lfv{border:1px solid var(--line);border-top:3px solid var(--blueprint);border-radius:var(--radius);
+       overflow:hidden;margin:18px 0 8px;background:var(--paper)}
+  .lfv-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+            padding:14px 18px;background:var(--alt);border-bottom:1px solid var(--line)}
+  .lfv-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
+             color:var(--blueprint);font-weight:600}
+  .lfv-date{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.5px;color:var(--ink);font-weight:600}
+  .lfv-facts{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+  .lfv-fact{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;
+            border:1px solid var(--line);border-radius:var(--radius);padding:3px 8px;color:var(--muted);background:var(--paper)}
+  .lfv-fact.drone{border-color:var(--blueprint);color:var(--blueprint)}
+  .lfv-body{padding:16px 18px 18px}
+  .lfv-obs{font-size:15.5px;margin:0 0 14px;color:#26303c}
+  .lfv-obs strong{font-weight:600}
+
+  /* photo strip — max 4, lazy, dated captions. Uses <figure>, not a lightbox gallery. */
+  .lfv-shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 16px}
+  .lfv-shots figure{margin:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--alt)}
+  .lfv-shots img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--alt)}
+  .lfv-shots figcaption{font-size:12px;line-height:1.4;color:var(--muted);padding:7px 9px 9px}
+  .lfv-shots figcaption b{display:block;color:var(--ink);font-weight:600;font-family:'IBM Plex Mono',monospace;
+                          font-size:10.5px;letter-spacing:.5px;margin-bottom:2px}
+  /* placeholder look for this preview only — real pages use real photos */
+  .ph{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;background:
+      repeating-linear-gradient(45deg,#e9edf6,#e9edf6 10px,#eff3fb 10px,#eff3fb 20px);
+      color:#93a4c4;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;text-align:center;padding:8px}
+
+  .lfv-foot{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+            padding-top:14px;border-top:1px solid var(--line)}
+  .lfv-link{display:inline-block;text-decoration:none;background:var(--blueprint);color:#fff;
+            border-radius:var(--radius);padding:10px 16px;font-size:14px;font-weight:700}
+  .lfv-meth{font-size:13px;color:var(--muted)}
+  .lfv-meth a{color:var(--blueprint);font-weight:600;text-decoration:none}
+
+  /* zero-photo variant: map/annotated-only. Same shell, no photo strip. */
+  .lfv-mapnote{font-size:13.5px;color:var(--muted);font-style:italic;margin:0 0 14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="demo-note">Preview only — three states of the "Latest Field Visit" block. Placeholders stand in for real, dated NHD reporting photos. Copy the &lt;section class="lfv"&gt; markup into a profile page.</div>
+
+  <!-- ============================================================
+       STATE A — full: 4 photos + drone. Verified community, recent visit.
+  ============================================================ -->
+  <h2>On the ground</h2>
+
+  <section class="lfv" aria-label="Latest field visit">
+    <div class="lfv-head">
+      <span class="lfv-label">Latest Field Visit</span>
+      <span class="lfv-date">Visited 2026-07-21</span>
+      <span class="lfv-facts">
+        <span class="lfv-fact">4 photos</span>
+        <span class="lfv-fact drone">Drone footage ✓</span>
+        <span class="lfv-fact">Visit 02</span>
+      </span>
+    </div>
+    <div class="lfv-body">
+      <p class="lfv-obs"><strong>What we saw, 2026-07-21:</strong> Phase 3 pads are graded but the promised amenity center is still a sign, not a structure. Two of the six model homes we logged in January are now sold and closed to tours. The rear lots along the east perimeter back directly to the arterial — audible road noise on a weekday morning. Advertised "from" price held; the posted incentive changed.</p>
+
+      <div class="lfv-shots">
+        <figure>
+          <div class="ph">real photo:<br>approach road</div>
+          <figcaption><b>2026-07-21 · Approach</b>The real drive in from FM-XXXX — two-lane, no median yet.</figcaption>
+        </figure>
+        <figure>
+          <div class="ph">real photo:<br>lot spacing</div>
+          <figcaption><b>2026-07-21 · East perimeter</b>Rear lots back to the arterial; ~10 ft side spacing.</figcaption>
+        </figure>
+        <figure>
+          <div class="ph">real photo:<br>amenity site</div>
+          <figcaption><b>2026-07-21 · Phase 3</b>Amenity site — graded pad and a sign, no structure.</figcaption>
+        </figure>
+        <figure>
+          <div class="ph">real photo:<br>incentive sign</div>
+          <figcaption><b>2026-07-21 · Sales office</b>Posted incentive, dated. Evidence for the offer we cite.</figcaption>
+        </figure>
+      </div>
+
+      <div class="lfv-foot">
+        <a class="lfv-link" href="../reports/[[report-slug]].html">Read the full Field Report →</a>
+        <span class="lfv-meth">Original reporting photos. <a href="../how-we-evaluate.html">How we evaluate ↗</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATE B — minimal: 1 photo, no drone. Small community, one visit.
+  ============================================================ -->
+  <h2 style="margin-top:56px">On the ground <span style="font-weight:400;font-size:14px;color:var(--muted)">(minimal — one reporting image)</span></h2>
+
+  <section class="lfv" aria-label="Latest field visit">
+    <div class="lfv-head">
+      <span class="lfv-label">Latest Field Visit</span>
+      <span class="lfv-date">Visited 2026-06-14</span>
+      <span class="lfv-facts">
+        <span class="lfv-fact">1 photo</span>
+        <span class="lfv-fact">Visit 01</span>
+      </span>
+    </div>
+    <div class="lfv-body">
+      <p class="lfv-obs"><strong>What we saw, 2026-06-14:</strong> First visit. Entrance monument is up; interior streets are paved through Phase 1 only. No amenities observed on site. Written tax rate not available at the sales office — flagged for verification against the county CAD.</p>
+
+      <div class="lfv-shots" style="grid-template-columns:minmax(150px,320px)">
+        <figure>
+          <div class="ph">real photo:<br>entrance monument</div>
+          <figcaption><b>2026-06-14 · Entrance</b>Monument sign and gateway, as found on the first visit.</figcaption>
+        </figure>
+      </div>
+
+      <div class="lfv-foot">
+        <a class="lfv-link" href="../reports/[[report-slug]].html">Read the full Field Report →</a>
+        <span class="lfv-meth">Original reporting photo. <a href="../how-we-evaluate.html">How we evaluate ↗</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATE C — zero photos: annotated map / not-yet-visited.
+       Researched (unvisited) pages use this instead of a photo block.
+  ============================================================ -->
+  <h2 style="margin-top:56px">On the ground <span style="font-weight:400;font-size:14px;color:var(--muted)">(researched — not yet visited)</span></h2>
+
+  <section class="lfv" aria-label="Field visit status" style="border-top-color:var(--c)">
+    <div class="lfv-head" style="background:#FBF7EC">
+      <span class="lfv-label" style="color:var(--c)">Field Visit</span>
+      <span class="lfv-date">First visit pending</span>
+      <span class="lfv-facts">
+        <span class="lfv-fact">Map only</span>
+      </span>
+    </div>
+    <div class="lfv-body">
+      <p class="lfv-mapnote">We haven't visited yet. No reporting photos are published for this community — we don't run builder marketing images in their place. The annotated location map below comes from public data; firsthand photos arrive with our first field visit.</p>
+      <div class="lfv-shots" style="grid-template-columns:minmax(150px,1fr)">
+        <figure>
+          <div class="ph" style="aspect-ratio:16/7">annotated map:<br>location · access roads · noise sources · school boundary</div>
+          <figcaption><b>Public data · not a photo</b>Approach roads, arterial noise sources, and assigned school boundary. Labeled as map data, not observation.</figcaption>
+        </figure>
+      </div>
+      <div class="lfv-foot">
+        <span class="lfv-meth">Want us here sooner? <a href="../communities.html">See the communities we've verified ↗</a></span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

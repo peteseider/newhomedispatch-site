@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare Communities | New Home Dispatch</title>
+<meta name="description" content="Compare every tracked Central Texas new-home community side by side — property taxes, HOA dues, builders, school district, and estimated monthly cost. Independent and free.">
+<link rel="canonical" href="https://newhomedispatch.com/communities.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compare Communities | New Home Dispatch">
+<meta property="og:description" content="Compare every tracked Central Texas new-home community side by side.">
+<meta property="og:url" content="https://newhomedispatch.com/communities.html">
+<meta property="og:site_name" content="New Home Dispatch">
+<meta property="og:image" content="https://newhomedispatch.com/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="analytics.js" defer></script>
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png">
+<link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+
+  .skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background:#000000;
+    color:#FFFFFF;
+    padding:12px 20px;
+    z-index:1000;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.85rem;
+    text-decoration:none;
+  }
+  .skip-link:focus{left:12px; top:12px;}
+  :root{
+    --ink:#000000;
+    --ink-2:#0A0A0A;
+    --blueprint:#2B4FE0;
+    --blueprint-light:#4E7AFF;
+    --blueprint-navy:#0F2942;
+    --amber:#000000;
+    --amber-dark:#333333;
+    --paper:#FFFFFF;
+    --paper-alt:#F4F4F4;
+    --line:#E0E0E0;
+    --text-muted:#666666;
+    --radius:2px;
+    --maxw:1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  body{
+    margin:0;
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Inter', sans-serif;
+    font-weight:800;
+    margin:0;
+    letter-spacing:-0.02em;
+  }
+
+  .mono{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  :focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:3px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 28px;
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+  .logo{
+    display:flex; flex-shrink:0;
+    align-items:baseline;
+    gap:8px;
+    font-family:'Archivo Expanded', sans-serif;
+    font-weight:800;
+    font-size:1.05rem;
+    letter-spacing:-0.01em;
+  }
+  .logo img{flex-shrink:0}
+  .logo .dot{color:var(--amber);}
+  .logo-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.6rem;
+    letter-spacing:0.12em;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    border-left:1px solid var(--line);
+    padding-left:8px;
+    margin-left:2px;
+  }
+  nav{display:flex; align-items:center; gap:28px;}
+  nav a{
+    font-size:0.85rem;
+    font-weight:500;
+    text-decoration:none;
+    color:var(--ink);
+    opacity:0.75;
+    transition:opacity 0.2s;
+  }
+  nav a:hover{opacity:1;}
+  .nav-links{display:flex; gap:24px;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:transform 0.15s ease, background 0.2s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-amber{background:#000000; color:#FFFFFF;}
+  .btn-amber:hover{background:#333333;}
+  .hero .btn-amber, .guide .btn-amber, .article-hero .btn-amber{background:#FFFFFF; color:#000000;}
+  .hero .btn-amber:hover, .guide .btn-amber:hover, .article-hero .btn-amber:hover{background:#DADADA;}
+  .btn-outline{border-color:var(--ink); color:var(--ink); background:transparent;}
+  .btn-outline:hover{background:var(--ink); color:var(--paper);}
+  .btn-outline-light{border-color:rgba(255,255,255,0.4); color:var(--paper); background:transparent;}
+  .btn-outline-light:hover{background:rgba(255,255,255,0.12);}
+  .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:4px;}
+  .menu-toggle span{display:block; width:22px; height:2px; background:var(--ink); margin:5px 0; transition:transform 0.2s ease, opacity 0.15s ease;} body.nav-open .menu-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);} body.nav-open .menu-toggle span:nth-child(2){opacity:0;} body.nav-open .menu-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:flex;
+    min-height:520px;
+  }
+  .hero-text-zone{flex:1.5 1 0;}
+  .hero-blueprint-zone{flex:0.6 1 0; min-width:280px;}
+  .hero-text-zone{
+    position:relative;
+    background:var(--ink);
+    color:var(--paper);
+    overflow:hidden;
+    padding:96px 56px 72px 0;
+    display:flex;
+    align-items:center;
+  }
+  .hero-text-zone .wrap{margin:0 0 0 auto; padding-left:64px; padding-right:0; max-width:none;}
+  .blueprint-grid{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.14) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.14) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(ellipse 90% 80% at 30% 40%, black 40%, transparent 90%);
+    opacity:0.8;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    max-width:600px;
+  }
+  .kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:0.7rem;
+    color:var(--blueprint-light);
+    margin-bottom:28px;
+  }
+  .kicker::before{
+    content:'';
+    width:7px; height:7px;
+    background:var(--blueprint-light);
+    border-radius:50%;
+    display:inline-block;
+    animation:pulse 2.2s infinite;
+  }
+  @keyframes pulse{
+    0%,100%{opacity:1; box-shadow:0 0 0 0 rgba(78,122,255,0.5);}
+    50%{opacity:0.6; box-shadow:0 0 0 6px rgba(78,122,255,0);}
+  }
+  .hero h1{
+    font-size:clamp(2.2rem, 3.6vw, 3.3rem);
+    line-height:1.05;
+    font-weight:800;
+    letter-spacing:-0.01em;
+    color:var(--paper);
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:#FFFFFF;
+    text-decoration:underline;
+    text-decoration-color:var(--blueprint-light);
+    text-decoration-thickness:3px;
+    text-underline-offset:6px;
+  }
+  .hero p.sub{
+    font-size:1.05rem;
+    line-height:1.6;
+    color:#D4D4D4;
+    max-width:520px;
+    margin:22px 0 34px;
+  }
+  .hero-tagline{
+    font-family:'Inter', sans-serif;
+    font-weight:800;
+    font-size:1.5rem;
+    letter-spacing:-0.01em;
+    color:#FFFFFF;
+    margin:22px 0 28px;
+  }
+  .hero-tagline-dot{color:var(--blueprint-light);}
+
+  .always-free{background:var(--blueprint-navy); padding:18px 0;}
+  .af-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px 32px;
+    flex-wrap:wrap;
+  }
+  .af-statement{color:var(--paper); font-size:0.98rem;}
+  .af-statement strong{color:var(--paper);}
+  .af-list{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.78rem;
+  }
+  .af-list span{color:#8C9BAE;}
+  .af-list a{color:var(--blueprint-light); text-decoration:none; border-bottom:1px solid rgba(78,122,255,0.4);}
+  .af-list a:hover{border-color:var(--blueprint-light);}
+  @media (max-width:760px){
+    .af-inner{flex-direction:column; align-items:flex-start;}
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+  .hero-trustline{margin-top:32px; font-size:0.8rem; color:#B8C0D0; letter-spacing:0.01em;}
+  .navigator{background:var(--paper); border-bottom:1px solid var(--line); padding:64px 0;}
+  .nav-cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:32px;}
+  .nav-card{
+    display:flex; flex-direction:column; gap:8px;
+    border:1px solid var(--line); border-radius:2px; padding:24px 22px;
+    text-decoration:none; background:var(--paper); transition:border-color 0.15s, transform 0.15s;
+  }
+  .nav-card:hover{border-color:var(--blueprint); transform:translateY(-2px);}
+  .nav-card-icon{font-size:0.72rem; color:var(--blueprint); font-weight:700; letter-spacing:0.08em;}
+  .nav-card h3{font-size:1.05rem; margin:0; color:var(--ink); line-height:1.3;}
+  .nav-card p{font-size:0.9rem; color:#293244; margin:0; line-height:1.55; flex:1;}
+  .nav-card .read-link{font-size:0.72rem; color:var(--blueprint); margin-top:4px;}
+  @media (max-width:900px){ .nav-cards{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:560px){ .nav-cards{grid-template-columns:1fr;} .navigator{padding:44px 0;} }
+  .hero-stats{
+    display:flex;
+    gap:0;
+    margin-top:44px;
+    max-width:600px;
+    border-top:1px solid rgba(255,255,255,0.16);
+  }
+  .hero-stats > div{
+    display:flex; flex-direction:column; gap:5px;
+    padding:20px 22px 0 0;
+    margin-right:22px;
+    border-right:1px solid rgba(255,255,255,0.12);
+  }
+  .hero-stats > div:last-child{border-right:none; margin-right:0;}
+  .hero-stat-num{font-family:'Archivo Expanded', sans-serif; font-size:1.6rem; font-weight:800; color:var(--paper); line-height:1;}
+  .hero-stat-label{font-size:0.58rem; color:#767676; letter-spacing:0.04em; text-transform:uppercase;}
+  @media (max-width:640px){
+    .hero-stats{flex-wrap:wrap; gap:20px 0;}
+    .hero-stats > div{padding-right:0; margin-right:20px;}
+  }
+
+  .hero-blueprint-zone{
+    position:relative;
+    background:#12205C;
+    overflow:hidden;
+  }
+  .hero-blueprint-grid{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+    background-size:38px 38px;
+  }
+  .stamp{
+    position:absolute;
+    left:24px;
+    top:24px;
+    width:104px; height:104px;
+    background:var(--paper);
+    border-radius:50%;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    transform:rotate(-8deg);
+    z-index:3;
+    padding:8px;
+    box-shadow:0 12px 28px rgba(0,0,0,0.3);
+  }
+  .stamp img{width:44px !important;}
+  .stamp-inner{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:0.46rem;
+    letter-spacing:0.06em;
+    text-align:center;
+    color:var(--ink);
+    line-height:1.35;
+    text-transform:uppercase;
+    margin-top:2px;
+  }
+  @media (max-width: 860px){ .stamp{display:none;} }
+
+  .hero-blueprint{
+    position:absolute;
+    right:8%;
+    bottom:6%;
+    width:58%;
+    max-width:280px;
+    z-index:1;
+    pointer-events:none;
+  }
+  .hero-blueprint svg{width:100%; height:auto; display:block;}
+  @media (prefers-reduced-motion: no-preference){
+    .hb-marks, .hb-roof, .hb-walls, .hb-openings, .hb-foundation, .hb-dims{
+      stroke-dasharray:1400;
+      stroke-dashoffset:1400;
+      animation:hb-draw 1.6s ease forwards;
+    }
+    .hb-marks{animation-delay:0s;}
+    .hb-roof{animation-delay:0.3s;}
+    .hb-walls{animation-delay:0.7s;}
+    .hb-openings{animation-delay:1.1s;}
+    .hb-foundation{animation-delay:1.5s;}
+    .hb-dims{animation-delay:1.7s;}
+    @keyframes hb-draw{ to{ stroke-dashoffset:0; } }
+  }
+  @media (max-width:1180px){ .hero-text-zone .wrap{padding-left:40px;} }
+  @media (max-width:960px){
+    .hero-grid{flex-direction:column;}
+    .hero-text-zone{flex:1 1 auto; padding:56px 24px 40px;}
+    .hero-text-zone .wrap{margin:0; padding-left:0; max-width:none;}
+    .hero-blueprint-zone{display:none;}
+    .hero h1{font-size:clamp(1.7rem, 7vw, 2.3rem);}
+    .hero p.sub{font-size:0.98rem; max-width:none;}
+    .hero-stats{max-width:none;}
+  }
+  @media (max-width:480px){
+    .hero-stats{flex-wrap:wrap; row-gap:20px;}
+    .hero-stats > div{flex:1 1 40%; padding-right:0; border-right:none; margin-right:0;}
+  }
+
+  section{padding:88px 0;}
+  .eyebrow{
+    font-size:0.7rem;
+    color:var(--blueprint);
+    margin-bottom:14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:22px; height:1px;
+    background:var(--blueprint);
+    display:inline-block;
+  }
+  .section-title{
+    font-size:clamp(1.85rem, 3.8vw, 2.65rem);
+    line-height:1.08;
+    max-width:640px;
+  }
+
+  /* ---------- START HERE ---------- */
+  /* ---------- JOURNEY NAVIGATOR (signature element) ---------- */
+  .journey{background:var(--paper); border-bottom:1px solid var(--line); padding-top:8px;}
+  .journey .directory-sub{margin-top:10px; max-width:640px;}
+
+  .journey-route{
+    display:flex;
+    align-items:flex-start;
+    margin:48px 0 0;
+    position:relative;
+  }
+  .journey-node{
+    background:none;
+    border:none;
+    padding:0 18px 0 0;
+    text-align:left;
+    cursor:pointer;
+    font-family:'Inter', sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    flex-shrink:0;
+    width:auto;
+    max-width:220px;
+  }
+  .journey-marker{
+    width:15px;
+    height:15px;
+    border:2px solid var(--ink);
+    background:var(--paper);
+    display:block;
+    margin-bottom:14px;
+    transition:background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+  }
+  .journey-node.is-active .journey-marker{
+    background:var(--blueprint);
+    border-color:var(--blueprint);
+    transform:scale(1.15);
+  }
+  .journey-node-label{
+    font-size:0.64rem;
+    letter-spacing:0.08em;
+    color:#767676;
+    margin-bottom:6px;
+    display:block;
+  }
+  .journey-node.is-active .journey-node-label{color:var(--blueprint);}
+  .journey-node-title{
+    font-size:0.92rem;
+    font-weight:700;
+    color:#B8B8B8;
+    line-height:1.35;
+    transition:color 0.15s ease;
+  }
+  .journey-node.is-active .journey-node-title{color:var(--ink);}
+  .journey-node:hover .journey-node-title{color:var(--ink);}
+  .journey-connector{
+    flex:1;
+    height:2px;
+    background-image:linear-gradient(to right, var(--line) 0, var(--line) 6px, transparent 6px, transparent 12px);
+    background-size:12px 2px;
+    margin:6px 0 0;
+    min-width:24px;
+    align-self:flex-start;
+    transform:translateY(1px);
+  }
+
+  .journey-panel{
+    margin-top:36px;
+    border-top:2px solid var(--blueprint);
+    padding-top:28px;
+    padding-bottom:8px;
+  }
+  .journey-why{
+    font-size:1.05rem;
+    line-height:1.6;
+    color:#293244;
+    max-width:640px;
+    margin:0 0 24px;
+  }
+  .journey-chapters{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-bottom:26px;
+  }
+  .journey-ch{
+    background:var(--paper);
+    padding:14px 16px;
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    text-decoration:none;
+    color:var(--ink);
+    font-size:0.86rem;
+    font-weight:600;
+    transition:background 0.15s ease;
+  }
+  .journey-ch:hover{background:var(--paper-alt);}
+  .journey-ch .mono{font-size:0.66rem; color:#767676; flex-shrink:0;}
+  .journey-actions{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+  .journey-pdf-link{
+    font-size:0.72rem;
+    color:#666666;
+    text-decoration:none;
+    border-bottom:1px solid var(--line);
+    padding-bottom:2px;
+  }
+  .journey-pdf-link:hover{color:var(--ink); border-color:var(--ink);}
+
+  @media (max-width:760px){
+    .journey-route{flex-direction:column; gap:22px;}
+    .journey-connector{display:none;}
+    .journey-node{max-width:none; padding-right:0;}
+  }
+
+  .start-here{background:var(--paper-alt); border-bottom:1px solid var(--line);}
+  .start-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+    margin-top:44px;
+  }
+  .start-grid-4{grid-template-columns:repeat(4, 1fr);}
+  .start-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-top:3px solid var(--ink);
+    padding:28px 26px;
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    transition:background 0.15s ease;
+  }
+  .start-card:hover{background:var(--paper-alt);}
+  .start-icon{
+    width:34px;
+    height:34px;
+    color:var(--blueprint);
+    margin-bottom:16px;
+    display:block;
+  }
+  .start-card-primary{
+    background:var(--blueprint-navy);
+    border-top:3px solid var(--blueprint-light);
+    border-color:var(--blueprint-navy);
+    color:var(--paper);
+  }
+  .start-card-primary .start-icon{color:var(--blueprint-light);}
+  .start-card-primary .start-num{color:var(--blueprint-light);}
+  .start-card-primary:hover{background:#152F4D;}
+  .start-card-cta{
+    display:block;
+    margin-top:14px;
+    font-size:0.7rem;
+    color:var(--paper);
+  }
+  .start-num{
+    font-size:0.72rem;
+    color:var(--blueprint);
+    display:block;
+    margin-bottom:12px;
+  }
+  .start-card h3{
+    font-size:1.05rem;
+    margin-bottom:10px;
+    line-height:1.3;
+  }
+  .start-card p{
+    font-size:0.9rem;
+    line-height:1.6;
+    color:var(--text-muted);
+    margin:0;
+  }
+  .start-card-primary h3{color:var(--paper);}
+  .start-card-primary p{color:#B8C4D4;}
+  @media (max-width:980px){
+    .start-grid-4{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:820px){
+    .start-grid{grid-template-columns:1fr; gap:18px;}
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--blueprint-navy); position:relative; overflow:hidden;}
+  .about::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(ellipse 70% 60% at 15% 20%, black 20%, transparent 85%);
+  }
+  .about .eyebrow{color:var(--blueprint-light);}
+  .about .section-title{color:var(--paper);}
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:64px;
+    align-items:start;
+    margin-top:40px;
+    position:relative;
+    z-index:2;
+  }
+  .about-grid p{
+    font-size:1.02rem;
+    line-height:1.75;
+    color:#B8C4D4;
+    margin:0 0 18px;
+  }
+  .about-grid p strong{color:var(--paper);}
+  .about-grid p a{color:var(--paper) !important;}
+  .credibility{
+    border-left:2px solid rgba(255,255,255,0.18);
+    padding-left:28px;
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+  }
+  .stat-num{
+    font-family:'Archivo Expanded', sans-serif;
+    font-weight:800;
+    font-size:2.3rem;
+    color:var(--paper);
+    letter-spacing:-0.01em;
+  }
+  .stat-label{
+    font-size:0.82rem;
+    color:#9AACC0;
+    margin-top:2px;
+  }
+  @media (max-width:820px){
+    .about-grid{grid-template-columns:1fr; gap:36px;}
+    .credibility{border-left:none; border-top:2px solid rgba(255,255,255,0.18); padding-left:0; padding-top:24px; flex-direction:row; flex-wrap:wrap; gap:32px;}
+  }
+
+  /* ---------- BRIEFINGS ---------- */
+  .briefings{background:var(--paper-alt);}
+  .level-group{margin-top:48px;}
+  .level-group:first-of-type{margin-top:40px;}
+  .level-header{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    color:var(--ink);
+    padding-bottom:14px;
+    border-bottom:2px solid var(--ink);
+    margin-bottom:0;
+  }
+  .level-header .mono{
+    font-size:0.66rem;
+    color:var(--text-muted);
+    font-weight:600;
+    margin-right:10px;
+  }
+  .briefing-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    margin-top:0;
+    border:1px solid var(--line);
+    border-top:none;
+  }
+  .briefing-card{
+    background:var(--paper-alt);
+    padding:34px 28px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    transition:background 0.25s ease;
+    text-decoration:none;
+    color:inherit;
+  }
+  .briefing-card:hover{background:var(--paper);}
+  .read-link{
+    font-size:0.68rem;
+    color:#000000;
+    margin-top:auto;
+    opacity:0;
+    transform:translateX(-4px);
+    transition:opacity 0.2s ease, transform 0.2s ease;
+  }
+  .briefing-card:hover .read-link{opacity:1; transform:translateX(0);}
+  .b-num{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.72rem;
+    color:#000000;
+    letter-spacing:0.08em;
+  }
+  .briefing-card h3{
+    font-size:1.12rem;
+    line-height:1.35;
+  }
+  .briefing-card p{
+    font-size:0.92rem;
+    line-height:1.6;
+    color:var(--text-muted);
+    margin:0;
+  }
+  @media (max-width:900px){
+    .briefing-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- REPORTS / FIELD REPORTING ---------- */
+  .reports{background:var(--paper); border-top:1px solid var(--line);}
+  .reports .eyebrow{color:var(--blueprint);}
+  .reports .briefing-grid{background:transparent; border:none;}
+  .reports .briefing-card{
+    background:var(--paper);
+    border:1px dashed #B8C4D4;
+    padding:28px 24px;
+  }
+  .reports .briefing-card:hover{background:var(--paper-alt); border-color:var(--blueprint);}
+  .reports .briefing-card-live{border:1px solid var(--blueprint-navy); border-top:3px solid var(--blueprint);}
+  .reports .briefing-card-live .read-link{opacity:1; transform:none;}
+  .reports .briefing-card-live:hover{background:var(--paper-alt); border-color:var(--blueprint);}
+  .reports .b-num{color:var(--blueprint);}
+  .reports .read-link{color:var(--blueprint) !important;}
+  .field-reporting{background:var(--paper);}
+  .social-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    margin-top:36px;
+    border:1px solid var(--line);
+  }
+  .social-card{
+    background:var(--paper);
+    padding:30px 26px;
+  }
+  .social-card span{
+    font-size:0.66rem;
+    color:var(--ink);
+    display:block;
+    margin-bottom:10px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  .social-card p{
+    font-size:0.88rem;
+    color:var(--text-muted);
+    line-height:1.6;
+    margin:0;
+  }
+  .hook-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .hook-list li{
+    font-size:0.84rem;
+    color:var(--text-muted);
+    line-height:1.55;
+    padding-left:14px;
+    border-left:2px solid var(--line);
+  }
+  @media (max-width:820px){
+    .social-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- PLAYBOOK POINTER STRIPS ---------- */
+  .pb-pointer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:36px;
+    padding:20px 24px;
+    border:1px solid var(--line);
+    background:var(--paper);
+  }
+  .pb-pointer span{
+    font-size:0.92rem;
+    color:var(--text-muted);
+  }
+  @media (max-width:640px){
+    .pb-pointer{flex-direction:column; align-items:flex-start;}
+  }
+
+  /* ---------- RESOURCE DESK TEASER ---------- */
+  .res-teaser{background:var(--ink);}
+  .res-teaser-box{
+    padding:44px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:36px;
+    flex-wrap:wrap;
+  }
+  .res-teaser-copy h2{font-size:1.5rem; color:var(--paper); margin:8px 0 12px;}
+  .res-teaser-copy p{font-size:0.92rem; color:#D4D4D4; line-height:1.65; max-width:560px; margin:0;}
+  @media (max-width:760px){
+    .res-teaser-box{padding:36px 0;}
+  }
+
+  /* ---------- WORKBOOK (standalone offer) ---------- */
+  .workbook{background:var(--paper-alt);}
+  .workbook-box{
+    background:var(--ink);
+    color:var(--paper);
+    padding:44px 40px;
+    display:grid;
+    grid-template-columns:1.3fr 0.9fr;
+    gap:48px;
+    align-items:center;
+  }
+  .workbook-copy h2{font-size:1.6rem; color:var(--paper); margin:10px 0 14px;}
+  .workbook-copy > p{font-size:0.96rem; color:#D4D4D4; line-height:1.65; margin:0 0 22px; max-width:480px;}
+  .workbook-fields span.mono{font-size:0.62rem; color:#9A9A9A; display:block; margin-bottom:10px;}
+  .workbook-field-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:8px;
+  }
+  .workbook-field-grid span{
+    font-size:0.72rem;
+    color:#E4E4E4;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    padding:8px 10px;
+    text-align:center;
+  }
+  .workbook-form-box form.sub-form{gap:10px;}
+  @media (max-width:900px){
+    .workbook-box{grid-template-columns:1fr; padding:36px 26px;}
+    .workbook-field-grid{grid-template-columns:repeat(3, 1fr);}
+  }
+  @media (max-width:560px){
+    .workbook-field-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+
+  /* ---------- EXPLORER ---------- */
+  .explorer{background:var(--paper);}
+  .austin-skyline{
+    width:100%;
+    height:auto;
+    display:block;
+    margin-bottom:8px;
+  }
+  @media (max-width:700px){ .austin-skyline{display:none;} }
+  .explorer-builders{background:var(--paper-alt);}
+  .explorer-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    margin-top:32px;
+    flex-wrap:wrap;
+  }
+  .explorer-toolbar-regions{margin-top:32px;}
+  .explorer-toolbar-regions + .explorer-toolbar{margin-top:12px;}
+  .chip-label{
+    font-size:0.62rem;
+    color:#767676;
+    align-self:center;
+    margin-right:4px;
+    min-width:52px;
+  }
+  .community-preview{background:var(--paper); padding:64px 0; border-bottom:1px solid var(--line);}
+  .cp-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:32px;}
+  .cp-card{display:flex; flex-direction:column; gap:12px; border:1px solid var(--line); border-radius:2px; padding:24px 22px; text-decoration:none; transition:border-color 0.15s, transform 0.15s;}
+  .cp-card:hover{border-color:var(--blueprint); transform:translateY(-2px);}
+  .cp-region{font-size:0.68rem; color:var(--text-muted); letter-spacing:0.04em;}
+  .cp-card h3{font-size:1.15rem; margin:0; color:var(--ink);}
+  .cp-facts{display:grid; grid-template-columns:1fr 1fr; gap:10px 16px; flex:1;}
+  .cp-facts > div{display:flex; flex-direction:column; gap:2px;}
+  .cp-label{font-size:0.6rem; color:var(--text-muted); letter-spacing:0.06em; text-transform:uppercase;}
+  .cp-val{font-size:0.94rem; color:var(--ink); font-weight:600;}
+  .cp-card .read-link{font-size:0.72rem; color:var(--blueprint);}
+  .cp-cta{margin-top:28px; text-align:center;}
+  @media (max-width:820px){ .cp-grid{grid-template-columns:1fr;} }
+  .builder-chips{display:flex; flex-wrap:wrap; gap:8px; align-items:center;}
+  .chip{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.72rem;
+    letter-spacing:0.02em;
+    padding:8px 14px;
+    border:1px solid var(--line);
+    background:var(--paper);
+    color:var(--text-muted);
+    border-radius:20px;
+    cursor:pointer;
+    transition:all 0.15s ease;
+  }
+  .chip:hover{border-color:var(--ink); color:var(--ink);}
+  .chip.is-active{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .chip-reset{color:var(--text-muted); border-style:dashed;}
+
+  .explorer-layout{
+    display:grid;
+    grid-template-columns:1.5fr 1fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:24px;
+  }
+  .explorer-map-wrap{background:var(--paper); padding:12px;}
+  @media (max-width:640px){
+    .explorer-map-wrap{overflow:visible;}
+    .explorer-map{min-width:0;}
+    .pin-label{display:none;}
+    .map-pin.is-active .pin-label{display:block;font-size:15px;font-weight:800;}
+    circle.pin-hit{r:24px;}
+    .pin-dot{stroke-width:3;}
+  }
+  .explorer-map{width:100%; height:auto; display:block;}
+  .map-pin{transition:opacity 0.2s ease;}
+  .map-pin .pin-line{pointer-events:none;}
+  .map-pin.is-dim{opacity:0.25;}
+  .pin-dot{fill:#000000; stroke:#FFFFFF; stroke-width:2; transition:r 0.15s ease;}
+  .map-pin.is-researched .pin-dot{fill:#FFFFFF; stroke:#2B4FE0; stroke-width:2.5;}
+  .map-pin.is-researched .pin-label{fill:#2B4FE0;}
+  .map-pin.is-active .pin-dot{fill:#000000;}
+  .pin-label{
+    font-family:'Inter', sans-serif;
+    font-size:10px;
+    font-weight:600;
+    fill:#333333;
+  }
+  .map-pin.is-dim .pin-label{fill:#AAAAAA;}
+  .map-pin:hover .pin-dot{r:9;}
+
+  .explorer-panel{
+    background:var(--paper-alt);
+    padding:26px 24px;
+    min-height:280px;
+    display:flex;
+    flex-direction:column;
+  }
+  .panel-empty span{
+    font-size:0.66rem;
+    color:#767676;
+    display:block;
+    margin-bottom:10px;
+  }
+  .panel-empty p{
+    font-size:0.9rem;
+    color:var(--text-muted);
+    line-height:1.6;
+    margin:0;
+  }
+  .panel-region{font-size:0.66rem; color:var(--text-muted); display:block; margin-bottom:8px;}
+  .panel-detail h3{font-size:1.3rem; margin-bottom:10px;}
+  .panel-note{font-size:0.9rem; line-height:1.6; color:var(--text-muted); margin:0 0 18px;}
+  .panel-row{
+    display:flex;
+    justify-content:space-between;
+    font-size:0.86rem;
+    padding:10px 0;
+    border-top:1px solid var(--line);
+  }
+  .panel-row span:first-child{font-size:0.64rem; color:#767676;}
+  .panel-tracker span:last-child{color:#767676; font-style:italic;}
+  .panel-builders-label{
+    font-size:0.62rem;
+    color:#767676;
+    display:block;
+    margin:18px 0 10px;
+  }
+  .panel-builders{display:flex; flex-wrap:wrap; gap:8px;}
+  .panel-disclaimer{font-size:0.68rem; color:#767676; line-height:1.5; margin-top:16px; padding-top:14px; border-top:1px solid var(--line);}
+  .tag-btn{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.68rem;
+    padding:6px 12px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    cursor:pointer;
+    color:var(--ink);
+  }
+  .tag-btn:hover{border-color:var(--ink);}
+
+  .explorer-grid, .builder-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    margin-top:24px;
+    border:1px solid var(--line);
+  }
+  .explorer-grid .directory-card, .builder-grid .directory-card{transition:background 0.15s ease;}
+  .explorer-grid .directory-card:hover, .builder-grid .directory-card:hover{background:var(--paper-alt);}
+  .explorer-grid .directory-card.is-active{background:var(--blueprint-navy); color:var(--paper);}
+  .explorer-grid .directory-card.is-active p{color:#B8C4D4;}
+  .explorer-grid .directory-card.is-active .directory-tag,
+  .explorer-grid .directory-card.is-active .directory-status{color:var(--blueprint-light);}
+  .builder-grid{margin-top:40px;}
+  @media (max-width:980px){
+    .explorer-layout{grid-template-columns:1fr;}
+    .explorer-grid, .builder-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:620px){
+    .explorer-grid, .builder-grid{grid-template-columns:1fr;}
+  }
+
+  .compare-check{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:0.62rem;
+    color:var(--text-muted);
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px solid var(--line);
+    cursor:pointer;
+  }
+  .compare-check input{cursor:pointer;}
+  .explorer-grid .directory-card.is-active .compare-check{color:#CCCCCC; border-top-color:#333333;}
+.directory-card.is-active .read-link{color:#FFFFFF;}
+.directory-card.is-active .directory-tag{color:#B8C4D4;}
+
+  .compare-bar{
+    display:none;
+    align-items:center;
+    justify-content:space-between;
+    background:var(--blueprint-navy);
+    color:var(--paper);
+    padding:16px 22px;
+    margin-top:24px;
+  }
+  .compare-bar-actions{display:flex; gap:10px; align-items:center;}
+  .compare-bar .chip-reset{border-color:rgba(255,255,255,0.3); color:#CCCCCC;}
+
+
+  /* ---- v75 mobile compare fix: the bar was in-flow BELOW all 28 cards, so on
+     phones selecting a community produced no visible feedback; tap targets were
+     ~13px. Fixed bottom bar + real touch targets. ---- */
+  @media (max-width: 899px){
+    .compare-bar{
+      position:fixed; left:0; right:0; bottom:0; z-index:80;
+      margin:0; padding:14px 16px calc(14px + env(safe-area-inset-bottom));
+      box-shadow:0 -8px 24px rgba(15,41,66,0.35);
+    }
+    body.compare-active{ padding-bottom:96px; }
+    /* the Dot launcher (#nhd-asst-launch, fixed bottom:18px, z-index:9000) sat on
+       top of the Compare button and swallowed the tap — lift it above the bar */
+    body.compare-active #nhd-asst-launch{ bottom:104px !important; }
+    .compare-check{ font-size:0.78rem; gap:10px; padding-top:12px; min-height:44px; align-items:center; }
+    .compare-check input{ width:22px; height:22px; flex:0 0 22px; }
+    .compare-bar .btn{ min-height:44px; }
+  }
+
+  /* ---- Filters ---- */
+  .explorer-filters{display:flex; flex-wrap:wrap; gap:12px; align-items:flex-end; margin-top:14px;}
+  .xf{display:flex; flex-direction:column; gap:5px;}
+  .xf-label{font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted);}
+  .xf select{border:1px solid var(--line); border-radius:2px; padding:9px 11px; font:inherit; font-size:0.86rem; background:#fff; color:var(--ink); min-width:150px;}
+  .xf select:focus-visible, .xf-toggle:focus-visible{outline:2px solid var(--blueprint); outline-offset:2px;}
+  .xf-toggle{align-self:flex-end;}
+  .xf-toggle[data-on="true"]{background:var(--blueprint); color:#fff; border-color:var(--blueprint);}
+  .explorer-resultbar{display:flex; flex-wrap:wrap; gap:8px 18px; align-items:baseline; margin-top:12px;}
+  #result-count{font-size:0.72rem; font-weight:600; color:var(--ink);}
+  .xf-note{font-size:0.62rem; color:var(--text-muted); letter-spacing:0.02em;}
+  .directory-card.is-hidden{display:none;}
+
+  /* ---- Compare controls ---- */
+  .compare-controls{display:flex; flex-wrap:wrap; gap:12px 18px; align-items:center; justify-content:space-between; margin-top:22px;}
+  .cmp-diff{display:inline-flex; align-items:center; gap:8px; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink); cursor:pointer;}
+  .compare-controls-right{display:flex; gap:10px;}
+  .compare-controls .chip{cursor:pointer;}
+  #cmp-copy.is-copied{background:var(--blueprint); color:#fff; border-color:var(--blueprint);}
+
+  /* ---- Comparison matrix (sticky label col + swipeable community cols) ---- */
+  .compare-table-wrap{margin-top:16px; overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--line);}
+  .compare-matrix{--cols:3; display:grid; grid-template-columns:minmax(140px,190px) repeat(var(--cols), minmax(200px,1fr)); min-width:max-content;}
+  .cm-cell{padding:13px 16px; border-bottom:1px solid var(--line); border-right:1px solid var(--line); font-size:0.86rem; line-height:1.5; background:#fff;}
+  .cm-cell:last-child{border-right:none;}
+  .cm-label{position:sticky; left:0; z-index:2; background:var(--paper-alt); font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); display:flex; align-items:center;}
+  .cm-head{position:sticky; top:0; z-index:3; background:var(--ink); color:#fff; font-family:'Archivo Expanded',sans-serif; font-weight:700; font-size:0.92rem; border-bottom:none;}
+  .cm-head.cm-label{z-index:4; background:var(--ink); color:#fff;}
+  .cm-row-diff .cm-cell{background:rgba(43,79,224,0.045);}
+  .cm-row-diff .cm-label{background:rgba(43,79,224,0.09); color:var(--blueprint);}
+  .cm-est{display:inline-block; margin-left:6px; font-family:'IBM Plex Mono',monospace; font-size:0.54rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--blueprint); border:1px solid var(--blueprint); border-radius:2px; padding:1px 5px; vertical-align:middle;}
+  .cm-unknown{color:var(--text-muted); font-style:italic;}
+  .compare-legend{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:12px; font-size:0.64rem; color:var(--text-muted);}
+  .compare-legend b{color:var(--ink); font-weight:600;}
+  .compare-legend .lg-est{color:var(--blueprint); font-weight:600;}
+  .compare-matrix.diff-only .cm-row:not(.cm-row-diff):not(.cm-row-head){display:none;}
+  /* keep matrix as contents so grid rows work */
+  .cm-row{display:contents;}
+  @media (max-width:640px){
+    .compare-matrix{grid-template-columns:minmax(116px,132px) repeat(var(--cols), 78vw); scroll-snap-type:x proximity;}
+    .cm-head:not(.cm-label){scroll-snap-align:start;}
+  }
+  .compare-disclaimer{
+    font-size:0.7rem;
+    color:#767676;
+    line-height:1.6;
+    margin-top:14px;
+  }
+  .compare-cta{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-top:18px;
+    padding:14px 18px;
+    border:1px solid var(--line);
+    border-left:2px solid var(--blueprint-light);
+    background:var(--paper-alt);
+  }
+  .compare-cta span{font-size:0.82rem; color:var(--text-muted); max-width:520px;}
+  .compare-cta-link{font-size:0.72rem; color:var(--ink); text-decoration:none; white-space:nowrap; border-bottom:1px solid var(--line);}
+  .compare-cta-link:hover{border-color:var(--ink);}
+
+  /* ---------- DIRECTORY (shared card styles) ---------- */
+  .directory-sub{
+    font-size:1.02rem;
+    color:var(--text-muted);
+    max-width:640px;
+    line-height:1.7;
+    margin-top:16px;
+  }
+  .directory-card{
+    background:var(--paper);
+    padding:26px 22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .directory-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .directory-card h3{
+    font-size:1rem;
+    line-height:1.3;
+  }
+  .directory-tag{
+    font-size:0.6rem;
+    color:var(--text-muted);
+    white-space:nowrap;
+    padding-top:3px;
+  }
+  .directory-card p{
+    font-size:0.86rem;
+    line-height:1.55;
+    color:var(--text-muted);
+    margin:0;
+  }
+  .directory-status{
+    font-size:0.62rem;
+    color:#767676;
+    margin-top:auto;
+    padding-top:8px;
+  }
+
+  /* ---------- GUIDE (flagship offer) ---------- */
+  .guide{
+    background:var(--ink);
+    color:var(--paper);
+    position:relative;
+    overflow:hidden;
+  }
+  .guide .blueprint-grid{mask-image:radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 90%);}
+  .guide-inner{position:relative; z-index:2;}
+  .guide-title{
+    font-size:clamp(2rem, 4vw, 2.9rem);
+    color:var(--paper);
+    margin-top:14px;
+    max-width:680px;
+  }
+  .guide-intro{
+    color:#D4D4D4;
+    font-size:1.04rem;
+    line-height:1.7;
+    margin:20px 0 44px;
+    max-width:640px;
+  }
+  .guide-grid{
+    display:grid;
+    grid-template-columns:1.3fr 0.8fr;
+    gap:56px;
+    align-items:start;
+  }
+  .guide-copy{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:rgba(255,255,255,0.14);
+    border:1px solid rgba(255,255,255,0.14);
+  }
+  .level-block{
+    background:var(--ink);
+    padding:26px 22px;
+  }
+  .level-tag{
+    font-size:0.62rem;
+    color:#9A9A9A;
+    display:block;
+    margin-bottom:8px;
+  }
+  .level-block h3{
+    font-size:1.02rem;
+    color:var(--paper);
+    margin-bottom:18px;
+    line-height:1.3;
+  }
+  .chapter-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .chapter-list li{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    font-size:0.84rem;
+    color:#D4D4D4;
+    padding:10px 0;
+    border-top:1px solid rgba(255,255,255,0.12);
+    line-height:1.4;
+  }
+  .chapter-list li:first-child{border-top:none;}
+  .chapter-list li a{
+    color:#D4D4D4;
+    text-decoration:none;
+  }
+  .chapter-list li a:hover{color:var(--paper); text-decoration:underline;}
+  .volume-dl{
+    display:inline-block;
+    margin-top:16px;
+    font-size:0.66rem;
+    color:var(--paper);
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,0.35);
+    padding:9px 14px;
+    transition:border-color 0.15s ease;
+  }
+  .volume-dl:hover{border-color:var(--paper);}
+  .guide-form-divider{
+    font-size:0.62rem;
+    color:#9A9A9A;
+    margin:24px 0 10px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.14);
+  }
+  .chapter-num{
+    font-size:0.64rem;
+    color:#8C8C8C;
+    flex-shrink:0;
+  }
+  .guide-form-col{position:sticky; top:100px;}
+  .guide-form-box{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.16);
+    padding:30px 28px;
+  }
+  .guide-form-label{
+    font-size:0.64rem;
+    color:#9A9A9A;
+    display:block;
+    margin-bottom:14px;
+  }
+  .guide-form-box > p{
+    color:#D4D4D4;
+    font-size:0.94rem;
+    line-height:1.6;
+    margin:0 0 22px;
+  }
+  form.sub-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .sub-form input[type=email]{
+    padding:14px 16px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.28);
+    border-radius:var(--radius);
+    color:var(--paper);
+    font-family:'Inter', sans-serif;
+    font-size:0.95rem;
+    width:100%;
+  }
+  .sub-form input[type=email]::placeholder{color:#8C8C8C;}
+  .sub-form input[type=email]:focus{outline:2px solid #FFFFFF; outline-offset:2px; border-color:transparent;}
+  .sub-form .btn{width:100%; justify-content:center;}
+  .sub-fine{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.66rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:#7A7A7A;
+    margin-top:16px;
+  }
+  .sub-success{
+    display:none;
+    align-items:center;
+    gap:10px;
+    padding:14px 16px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.4);
+    border-radius:var(--radius);
+    color:#FFFFFF;
+    font-size:0.88rem;
+  }
+  .sub-error{
+    display:none;
+    padding:12px 16px;
+    background:rgba(200,60,60,0.12);
+    border:1px solid rgba(220,120,120,0.5);
+    border-radius:var(--radius);
+    color:#FFD9D9;
+    font-size:0.82rem;
+    margin-top:8px;
+  }
+  @media (max-width:980px){
+    .guide-grid{grid-template-columns:1fr; gap:32px;}
+    .guide-copy{grid-template-columns:1fr;}
+    .guide-form-col{position:static;}
+  }
+  /* ---------- EXPANSION ---------- */
+  .expansion{background:var(--paper);}
+  .expansion-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    align-items:center;
+    margin-top:44px;
+  }
+  .expansion-copy p{
+    font-size:1.02rem;
+    line-height:1.75;
+    color:var(--text-muted);
+    margin:0 0 18px;
+  }
+  .expansion-copy p strong{color:var(--ink);}
+  @media (max-width:900px){
+    .expansion-grid{grid-template-columns:1fr; gap:36px;}
+  }
+  .node-map{width:100%; height:auto;}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--paper);}
+  .faq-list{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+  }
+  .faq-item{
+    padding:26px 0;
+    border-top:1px solid var(--line);
+    max-width:760px;
+  }
+  .faq-list .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-item h3{
+    font-size:1.02rem;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .faq-item p{
+    font-size:0.92rem;
+    line-height:1.65;
+    color:var(--text-muted);
+    margin:0;
+  }
+
+  /* ---------- HIGH INTENT CTA ---------- */
+  .high-intent{background:var(--paper-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:44px 0;}
+  .high-intent-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:32px;
+    flex-wrap:wrap;
+    padding:8px 0;
+  }
+  @media (max-width:700px){
+    .high-intent-box{flex-direction:column; align-items:flex-start;}
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink-2);
+    color:#B8B8B8;
+    padding:52px 0 36px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:28px;
+    padding-bottom:32px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-logo{
+    font-family:'Archivo Expanded', sans-serif;
+    font-weight:800;
+    font-size:1.15rem;
+    color:var(--paper);
+  }
+  .footer-logo .dot{color:var(--amber);}
+  .footer-tagline{
+    font-family:'Inter', sans-serif;
+    font-weight:800;
+    font-size:1.15rem;
+    color:#FFFFFF;
+    letter-spacing:-0.01em;
+  }
+  .footer-tagline-dot{color:#4E7AFF;}
+  .footer-tag{
+    font-size:0.85rem;
+    color:#8C8C8C;
+    margin-top:8px;
+    max-width:320px;
+    line-height:1.6;
+  }
+  .footer-social{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:22px;
+    flex-wrap:wrap;
+  }
+  .footer-social-label{font-size:0.6rem; color:#6B7280; letter-spacing:0.06em;}
+  .footer-social-icons{display:flex; gap:10px;}
+  .social-icon{
+    width:30px; height:30px;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid rgba(255,255,255,0.16);
+    border-radius:50%;
+    color:#6B7280;
+    cursor:default;
+  }
+  .social-icon svg{width:15px; height:15px;}
+  .social-icon-live{
+    color:var(--paper);
+    border-color:rgba(255,255,255,0.4);
+    cursor:pointer;
+    text-decoration:none;
+    transition:border-color 0.15s ease, color 0.15s ease;
+  }
+  .social-icon-live:hover{border-color:var(--blueprint-light); color:var(--blueprint-light);}
+  .footer-links{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+  }
+  .footer-col h3{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:#8C8C8C;
+    margin-bottom:12px;
+  }
+  .footer-col a{
+    display:block;
+    font-size:0.88rem;
+    color:#DCDCDC;
+    text-decoration:none;
+    margin-bottom:8px;
+    opacity:0.9;
+  }
+  .footer-col a:hover{opacity:1; color:var(--amber);}
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    padding-top:24px;
+    font-size:0.76rem;
+    color:#7A7A7A;
+  }
+
+  /* ---------- MOBILE NAV ---------- */
+  @media (max-width:760px){
+    .nav-links{
+      position:fixed;
+      top:64px; left:0; right:0;
+      background:var(--paper);
+      flex-direction:column;
+      align-items:flex-start;
+      gap:0;
+      border-bottom:1px solid var(--line);
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.3s ease;
+    }
+    .nav-links.open{max-height:280px;}
+    .nav-links a{
+      padding:16px 28px;
+      width:100%;
+      border-bottom:1px solid var(--line);
+    }
+    nav .btn{display:none;}
+    .nav-links .btn{display:inline-flex; margin:16px 28px;}
+    .menu-toggle{display:block;}
+  }
+
+  /* Reveal on scroll */
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  .comm-hero{background:var(--ink); color:var(--paper); padding:52px 0 40px;}
+  .comm-hero h1{font-size:clamp(1.9rem,3.8vw,2.6rem); color:var(--paper); max-width:720px; margin-top:12px;}
+  .comm-hero p{color:#D4D4D4; font-size:1.02rem; line-height:1.7; max-width:640px; margin-top:14px;}
+  @media print{
+    header, footer, .comm-hero, .explorer-toolbar, .explorer-toolbar-regions,
+    .explorer-filters, .explorer-resultbar, .explorer-layout, .explorer-grid,
+    .explorer-builders, .compare-bar, .compare-controls, .pb-pointer, .compare-cta,
+    .menu-toggle{ display:none !important; }
+    .compare-output{ display:block !important; }
+    .compare-table-wrap{ overflow:visible !important; border:none !important; }
+    .compare-matrix{ grid-template-columns:minmax(120px,150px) repeat(var(--cols),1fr) !important; min-width:0 !important; }
+    .cm-cell{ border-color:#ccc !important; font-size:10px !important; padding:7px 9px !important; }
+    .cm-head{ background:#000 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .cm-label{ position:static !important; }
+    body::before{ content:"New Home Dispatch — Community Comparison · newhomedispatch.com"; display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.1em; padding:0 0 10px; }
+    a[href]::after{ content:""; }
+  }
+</style>
+<style id="gnav-css">
+  .site-nav{display:flex; align-items:center;}
+  .nav-desktop{display:flex; align-items:center; gap:4px; list-style:none; margin:0; padding:0;}
+  .nav-desktop > li{position:relative;}
+  .nav-grp-btn, .nav-desktop .nav-link{font:inherit; font-size:0.92rem; font-weight:500; color:var(--ink); background:none; border:none; cursor:pointer; padding:10px 12px; display:inline-flex; align-items:center; gap:7px; border-radius:2px; text-decoration:none; white-space:nowrap; min-height:40px;}
+  .nav-caret{width:6px; height:6px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-1px); transition:transform .18s ease;}
+  .nav-grp-btn[aria-expanded="true"] .nav-caret{transform:rotate(-135deg) translateY(1px);}
+  .nav-grp-btn:hover, .nav-desktop .nav-link:hover, .nav-grp-btn:focus-visible, .nav-desktop .nav-link:focus-visible{color:var(--blueprint);}
+  .nav-grp-btn:focus-visible, .nav-desktop .nav-link:focus-visible{outline:2px solid var(--blueprint); outline-offset:2px;}
+  .nav-desktop .nav-cta{margin-left:8px;}
+  .nav-drop{position:absolute; top:100%; left:0; min-width:214px; background:var(--paper); border:1px solid var(--line); border-radius:2px; box-shadow:0 12px 32px rgba(15,41,66,.14); padding:6px; list-style:none; margin:4px 0 0; opacity:0; visibility:hidden; transform:translateY(-6px); transition:opacity .16s ease, transform .16s ease, visibility .16s; z-index:60;}
+  .nav-grp:hover .nav-drop, .nav-grp:focus-within .nav-drop, .nav-grp-btn[aria-expanded="true"] + .nav-drop{opacity:1; visibility:visible; transform:translateY(0);}
+  .nav-drop li{margin:0;}
+  .nav-drop a{display:block; padding:10px 12px; font-size:0.9rem; color:var(--ink); text-decoration:none; border-radius:2px; line-height:1.3;}
+  .nav-drop a:hover, .nav-drop a:focus-visible{background:var(--paper-alt); color:var(--blueprint); outline:none;}
+  .nav-mobile{display:none;}
+  @media (max-width:760px){
+    .nav-desktop{display:none;}
+    .menu-toggle{display:block;}
+    .nav-mobile{position:fixed; top:72px; left:0; right:0; bottom:0; background:var(--paper); flex-direction:column; align-items:stretch; list-style:none; margin:0; padding:0; overflow-y:auto; z-index:55; border-top:1px solid var(--line);}
+    
+    body.nav-open .nav-mobile{display:flex;}
+    .nav-mobile li{margin:0;}
+    .nav-mobile a{display:block; padding:17px 28px; font-size:1.05rem; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); min-height:44px;}
+    .nav-mobile a:hover, .nav-mobile a:focus-visible{background:var(--paper-alt);}
+    .nav-mobile .nav-mobile-cta{color:var(--blueprint); font-weight:600;}
+  }
+  @media (prefers-reduced-motion: reduce){ .nav-drop{transition:none;} .nav-caret{transition:none;} }
+</style>
+
+<style id="explorer-a11y-css">
+  .explorer-directory{max-width:1120px; margin:8px auto 0; padding:26px 24px 40px;}
+  .explorer-directory .sr-only-heading{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}
+  .explorer-directory-lead{font-size:0.78rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-muted); margin:0 0 8px;}
+  .explorer-directory-links{font-size:0.95rem; line-height:2; color:var(--text-muted);}
+  .explorer-directory-links a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line);}
+  .explorer-directory-links a:hover, .explorer-directory-links a:focus-visible{border-color:var(--blueprint); color:var(--blueprint);}
+  .explorer-noscript{max-width:1120px; margin:20px auto; padding:20px 24px; border:1px solid var(--line); border-left:3px solid var(--blueprint); border-radius:2px; background:var(--paper-alt);}
+  .explorer-noscript a{color:var(--ink);}
+</style>
+<style id="comm-mobile-fix">
+@media (max-width:760px){
+  .explorer-filters{width:100%; box-sizing:border-box;}
+  .xf{max-width:100%; min-width:0; box-sizing:border-box;}
+  .xf select{max-width:100%; width:100%; box-sizing:border-box;}
+}
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0F2942">
+<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js").catch(function(){});</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><img src="assets/wordmark-dark.png" alt="New Home Dispatch" style="height:26px; width:auto;"></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile" onclick="var b=document.body;var o=b.classList.toggle('nav-open');this.setAttribute('aria-expanded',o?'true':'false');if(o){b.dataset.scrollY=window.scrollY;b.style.position='fixed';b.style.top='-'+window.scrollY+'px';b.style.width='100%';b.style.overflow='hidden';}else{b.style.position='';b.style.top='';b.style.width='';b.style.overflow='';window.scrollTo({top:parseInt(b.dataset.scrollY||'0',10),left:0,behavior:'instant'});}">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="nav-desktop">
+        <li class="nav-grp">
+          <button type="button" class="nav-grp-btn" aria-expanded="false" aria-haspopup="true">Compare<span class="nav-caret" aria-hidden="true"></span></button>
+          <ul class="nav-drop">
+            <li><a href="communities.html">Community Explorer</a></li>
+            <li><a href="builders.html">Builders</a></li>
+            <li><a href="communities.html#compare">Compare Tool</a></li>
+          </ul>
+        </li>
+        <li class="nav-grp">
+          <button type="button" class="nav-grp-btn" aria-expanded="false" aria-haspopup="true">Learn<span class="nav-caret" aria-hidden="true"></span></button>
+          <ul class="nav-drop">
+            <li><a href="start-here.html">Start Here</a></li>
+            <li><a href="buyer-guides.html">Buyer Guides</a></li>
+            <li><a href="buyer-guides.html#before-you-visit">Buying Stages</a></li>
+            <li><a href="buyer-guides.html#essays">Deep Dives</a></li>
+            <li><a href="zero-out-of-pocket.html">Zero-Out-of-Pocket</a></li>
+            <li><a href="texas-tax-reality-guide.html">Tax Reality Guide</a></li>
+          </ul>
+        </li>
+        <li class="nav-grp">
+          <button type="button" class="nav-grp-btn" aria-expanded="false" aria-haspopup="true">Reports<span class="nav-caret" aria-hidden="true"></span></button>
+          <ul class="nav-drop">
+            <li><a href="reports.html">Dispatch Reports</a></li>
+            <li><a href="scoreboard.html">Scoreboard</a></li>
+            <li><a href="reports/standing-inventory.html">Standing Inventory Report</a></li>
+            <li><a href="weekly-dispatch.html">Weekly Dispatch</a></li>
+            <li><a href="field-notes.html">Field Notes</a></li>
+          </ul>
+        </li>
+        <li class="nav-grp">
+          <button type="button" class="nav-grp-btn" aria-expanded="false" aria-haspopup="true">Free Tools<span class="nav-caret" aria-hidden="true"></span></button>
+          <ul class="nav-drop">
+            <li><a href="buyer-guides.html">Buyer Playbook</a></li>
+            <li><a href="incentive-tracker.html">Incentive Tracker</a></li>
+            <li><a href="true-cost-calculator.html">True-Cost Calculator</a></li>
+            <li><a href="incentive-calculator.html">Incentive Calculator</a></li>
+            <li><a href="free-tools.html">Checklists</a></li>
+            <li><a href="assistant.html">Ask the Dispatch Assistant</a></li>
+            <li><a href="resources.html">Resource Desk</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" style="color:#2B4FE0;font-weight:800;" href="weekly-dispatch.html">Weekly Dispatch</a></li><li><a class="nav-link" style="color:#2B4FE0;font-weight:800;" href="incentive-tracker.html">Incentive Tracker</a></li><li><a class="nav-link" href="methodology.html">How We Research</a></li>
+        <li><a class="nav-cta btn btn-amber" href="buyer-strategy-call.html">Get Buyer Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<ul class="nav-mobile" id="nav-mobile">
+        <li><a href="weekly-dispatch.html" style="font-weight:800;color:#2B4FE0;">Weekly Dispatch <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">FREE · FRIDAY</span></a></li>
+        <li><a href="incentive-tracker.html" style="font-weight:800;color:#2B4FE0;">Incentive Tracker <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">DAILY</span></a></li>
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="communities.html">Community Explorer</a></li>
+        <li><a href="buyer-guides.html">Buyer Guides</a></li>
+        <li><a href="free-tools.html">Free Tools</a></li>
+        <li><a href="reports.html">Latest Reports</a></li>
+        <li><a href="buyer-strategy-call.html" class="nav-mobile-cta">Get Buyer Help</a></li>
+        <li><a href="methodology.html">About &amp; Methodology</a></li>
+      </ul>
+<main id="main-content">
+<noscript>
+<div class="explorer-noscript">
+  <p><strong>The interactive Explorer needs JavaScript.</strong> You can still open any community profile directly:</p>
+  <p><a href="communities/bar-w-ranch.html">Bar W Ranch</a> · <a href="communities/belterra.html">Belterra</a> · <a href="communities/bryson.html">Bryson</a> · <a href="communities/easton-park.html">Easton Park</a> · <a href="communities/headwaters.html">Headwaters</a> · <a href="communities/kissing-tree.html">Kissing Tree</a> · <a href="communities/santa-rita-ranch.html">Santa Rita Ranch</a> · <a href="communities/sunfield.html">Sunfield</a> · <a href="communities/travisso.html">Travisso</a> · <a href="communities/whisper-valley.html">Whisper Valley</a> · <a href="communities/wolf-ranch.html">Wolf Ranch</a></p>
+</div>
+</noscript>
+<section class="comm-hero">
+  <div class="wrap">
+    <div class="kicker mono">Compare Communities</div>
+    <h1>Every tracked community, compared on what actually differs.</h1>
+    <p>Property taxes, HOA dues, builder rosters, school districts, and an estimated monthly cost — the same way for every community, not just the ones a builder wants you touring. Select up to three to compare side by side.</p>
+  </div>
+</section>
+<section class="explorer" id="communities">
+  <div class="wrap">
+    <svg class="austin-skyline" viewBox="0 0 1160 175" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line illustration of the Austin skyline">
+      <line x1="0" y1="148" x2="1160" y2="148" stroke="#5B8FBF" stroke-width="1" opacity="0.35"/>
+      <g fill="none" stroke="#1B4B7A" stroke-width="1.5" opacity="0.75" stroke-linejoin="round">
+        <!-- generic low buildings, left -->
+        <rect x="20" y="118" width="26" height="30"/>
+        <rect x="50" y="100" width="22" height="48"/>
+        <rect x="76" y="126" width="30" height="22"/>
+        <!-- Texas State Capitol -->
+        <g>
+          <rect x="150" y="112" width="70" height="36"/>
+          <path d="M164,112 L164,96 L236,96 L236,112" transform="translate(-14,0)"/>
+          <path d="M172,96 L172,76 Q185,56 198,76 L198,96"/>
+          <line x1="185" y1="56" x2="185" y2="44"/>
+          <circle cx="185" cy="41" r="2.5"/>
+        </g>
+        <rect x="228" y="104" width="20" height="44"/>
+        <rect x="252" y="122" width="24" height="26"/>
+        <rect x="284" y="94" width="18" height="54"/>
+        <!-- UT Tower -->
+        <g>
+          <rect x="330" y="70" width="30" height="78"/>
+          <rect x="336" y="58" width="18" height="14"/>
+          <path d="M338,58 L345,46 L352,58"/>
+        </g>
+        <rect x="368" y="110" width="24" height="38"/>
+        <rect x="398" y="90" width="20" height="58"/>
+        <rect x="424" y="116" width="28" height="32"/>
+        <rect x="460" y="98" width="22" height="50"/>
+        <rect x="488" y="120" width="26" height="28"/>
+        <rect x="520" y="86" width="20" height="62"/>
+        <rect x="546" y="108" width="24" height="40"/>
+        <!-- Frost Bank Tower -->
+        <g>
+          <path d="M590,148 L590,66 L602,50 L614,66 L614,148"/>
+          <circle cx="598" cy="62" r="3.2"/>
+          <circle cx="606" cy="62" r="3.2"/>
+        </g>
+        <rect x="622" y="100" width="22" height="48"/>
+        <!-- The Independent (Jenga tower), stepped massing -->
+        <g>
+          <rect x="656" y="80" width="34" height="68"/>
+          <rect x="662" y="60" width="22" height="20"/>
+          <rect x="668" y="44" width="12" height="16"/>
+        </g>
+        <rect x="700" y="112" width="24" height="36"/>
+        <rect x="730" y="92" width="20" height="56"/>
+        <rect x="756" y="118" width="28" height="30"/>
+        <rect x="792" y="100" width="22" height="48"/>
+        <rect x="820" y="124" width="26" height="24"/>
+        <rect x="852" y="106" width="20" height="42"/>
+        <rect x="878" y="128" width="24" height="20"/>
+        <rect x="908" y="112" width="22" height="36"/>
+        <rect x="936" y="130" width="28" height="18"/>
+        <rect x="970" y="120" width="20" height="28"/>
+        <rect x="996" y="132" width="24" height="16"/>
+        <rect x="1026" y="124" width="20" height="24"/>
+        <rect x="1052" y="134" width="26" height="14"/>
+        <rect x="1084" y="122" width="18" height="26"/>
+        <rect x="1108" y="132" width="22" height="16"/>
+      </g>
+      <g font-family="monospace" font-size="8.5" letter-spacing="1.5" fill="#5B8FBF" opacity="0.7">
+        <text x="185" y="163" text-anchor="middle">STATE CAPITOL</text>
+        <text x="345" y="163" text-anchor="middle">UT TOWER</text>
+        <text x="602" y="163" text-anchor="middle">FROST TOWER</text>
+        <text x="1120" y="20" text-anchor="end">AUSTIN, TX \u2014 SKYLINE REFERENCE</text>
+      </g>
+    </svg>
+    <div class="eyebrow mono">The Explorer</div>
+    <h2 class="section-title">Eleven communities, verified and cross-linked.</h2>
+    <p class="directory-sub">Austin-area coverage — 28 communities on the map: 11 fully verified and tracked, 17 researched with field verification pending (blue pins), expanding on a rolling basis. Filter by what matters to you, then select up to three to compare side by side. Builder rosters, pricing, school districts, and commute notes are pulled from public sources and re-checked on an ongoing basis — every page shows its own verification date, see the <a href="methodology.html" style="color:var(--ink); text-decoration:underline;">full methodology</a>.</p>
+
+    <div class="explorer-toolbar explorer-toolbar-regions">
+      <div class="builder-chips" id="region-chips">
+        <span class="chip-label mono">Region</span>
+        <button class="chip is-active" data-region="all">All</button>
+      </div>
+    </div>
+    <div class="explorer-toolbar">
+      <div class="builder-chips" id="builder-chips">
+        <span class="chip-label mono">Builder</span>
+        <button class="chip is-active" data-builder="all">All Builders</button>
+      </div>
+      <button class="chip chip-reset" id="explorer-reset">Reset all</button>
+    </div>
+
+    <div class="explorer-filters" id="explorer-filters">
+      <label class="xf"><span class="xf-label mono">Starting price</span>
+        <select id="f-price">
+          <option value="all">Any price</option>
+          <option value="0-350">Under $350k</option>
+          <option value="350-450">$350k–$450k</option>
+          <option value="450-9999">$450k+</option>
+        </select>
+      </label>
+      <label class="xf"><span class="xf-label mono">Property tax</span>
+        <select id="f-tax">
+          <option value="all">Any tax rate</option>
+          <option value="0-2.3">Under 2.3%</option>
+          <option value="2.3-2.6">2.3%–2.6%</option>
+          <option value="2.6-9">2.6%+</option>
+        </select>
+      </label>
+      <label class="xf"><span class="xf-label mono">HOA dues</span>
+        <select id="f-hoa">
+          <option value="all">Any HOA</option>
+          <option value="0-75">Under $75/mo</option>
+          <option value="75-125">$75–$125/mo</option>
+          <option value="125-9999">$125+/mo</option>
+        </select>
+      </label>
+      <label class="xf"><span class="xf-label mono">School district</span>
+        <select id="f-school"><option value="all">Any district</option></select>
+      </label>
+      <button class="chip xf-toggle" id="f-55" data-on="false">55+ only</button>
+    </div>
+    <div class="explorer-resultbar">
+      <span class="mono" id="result-count" aria-live="polite" aria-atomic="true">Showing all 11</span>
+      <span class="mono xf-note">Filters use verified figures; ranges that vary by section are matched on their typical value. Researched communities (blue pins) match on advertised price only until field-verified.</span>
+    </div>
+
+    <div class="explorer-layout" id="compare">
+      <div class="explorer-map-wrap">
+        <svg class="explorer-map" id="explorer-map" viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Austin-area new home communities">
+          <defs>
+            <pattern id="mapGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+              <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#E5E5E5" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="600" height="460" fill="url(#mapGrid)"/>
+          <circle cx="300" cy="230" r="5" fill="#000000"/>
+          <text x="300" y="216" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#000000">AUSTIN</text>
+          <!-- pins injected by JS -->
+          <g id="map-pins"></g>
+        </svg>
+        <div class="mono" style="display:flex;gap:16px;flex-wrap:wrap;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#666;padding:8px 4px 0;">
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#000;border:2px solid #fff;box-shadow:0 0 0 1px #ccc;"></span> Tracked &middot; verified</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid #2B4FE0;"></span> Researched &middot; field visit pending</span>
+        </div>
+      </div>
+
+      <div class="explorer-panel" id="explorer-panel">
+        <div class="panel-empty" id="panel-empty">
+          <span class="mono">No Community Selected</span>
+          <p>Click a pin on the map, or a card below, to see verified builder and pricing detail.</p>
+        </div>
+        <div class="panel-detail" id="panel-detail" style="display:none;"></div>
+      </div>
+    </div>
+
+    <div class="explorer-grid" id="explorer-grid"></div>
+
+    <div class="compare-bar" id="compare-bar" style="display:none;">
+      <span class="mono" id="compare-count">0 selected</span>
+      <div class="compare-bar-actions">
+        <button class="chip chip-reset" id="compare-clear">Clear</button>
+        <button class="btn btn-amber" id="compare-run" style="padding:8px 18px;">Compare Selected</button>
+      </div>
+    </div>
+    <div class="compare-output" id="compare-output" style="display:none;">
+      <div class="compare-controls">
+        <label class="cmp-diff mono"><input type="checkbox" id="cmp-diff"> Show only differences</label>
+        <div class="compare-controls-right">
+          <button class="chip" id="cmp-copy" type="button">Copy share link</button>
+          <button class="chip" id="cmp-print" type="button">Print / Save PDF</button>
+        </div>
+      </div>
+      <div class="compare-table-wrap" id="compare-table-wrap"></div>
+    </div>
+    <div class="pb-pointer">
+      <span>Everything on this page, organized into one free download.</span>
+      <a href="get-guides.html" class="btn btn-amber">Get the New Home Playbook</a>
+    </div>
+  </div>
+</section>
+
+<section class="explorer-builders" id="builders">
+  <div class="wrap">
+    <div class="eyebrow mono">Builders</div>
+    <h2 class="section-title">Builders active across these communities.</h2>
+    <p class="directory-sub">Independent profiles — which communities each builder is verified active in, cross-linked back to the Explorer above.</p>
+    <div class="builder-grid" id="builder-grid"></div>
+  </div>
+</section>
+
+
+<section class="explorer-directory" aria-label="All tracked communities">
+  <h2 class="sr-only-heading">All tracked communities</h2>
+  <p class="explorer-directory-lead">Every community profile, also reachable without the interactive Explorer:</p>
+  <p class="explorer-directory-links"><a href="communities/bar-w-ranch.html">Bar W Ranch</a> · <a href="communities/belterra.html">Belterra</a> · <a href="communities/bryson.html">Bryson</a> · <a href="communities/easton-park.html">Easton Park</a> · <a href="communities/headwaters.html">Headwaters</a> · <a href="communities/kissing-tree.html">Kissing Tree</a> · <a href="communities/santa-rita-ranch.html">Santa Rita Ranch</a> · <a href="communities/sunfield.html">Sunfield</a> · <a href="communities/travisso.html">Travisso</a> · <a href="communities/whisper-valley.html">Whisper Valley</a> · <a href="communities/wolf-ranch.html">Wolf Ranch</a></p>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <img src="assets/wordmark-light.png" alt="New Home Dispatch" style="height:24px; width:auto; margin-bottom:12px;">
+        <div class="footer-tagline">Look Closer<span class="footer-tagline-dot">.</span></div>
+        <div class="footer-tag">Free, plain-language intel for new-construction buyers. Independent education — not affiliated with any builder.</div>
+        <div class="footer-social">
+          <span class="footer-social-label mono">Follow along</span>
+          <div class="footer-social-icons">
+            <a class="social-icon social-icon-live" href="https://www.youtube.com/@NewHomeDispatch" target="_blank" rel="noopener" title="Subscribe on YouTube" aria-label="Subscribe to New Home Dispatch on YouTube" onclick="if(window.NHD) NHD.trackEvent('social_click', {platform:'youtube'});"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M10 9l6 3-6 3V9z" fill="currentColor"/></svg></a>
+            <a class="social-icon social-icon-live" href="https://x.com/newhomedispatch" target="_blank" rel="noopener" title="Follow on X" aria-label="Follow New Home Dispatch on X" onclick="if(window.NHD) NHD.trackEvent('social_click', {platform:'x'});"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4l14 16M19 4L5 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+            <a class="social-icon social-icon-live" href="https://www.instagram.com/newhomedispatch/" target="_blank" rel="noopener" title="Follow on Instagram" aria-label="Follow New Home Dispatch on Instagram" onclick="if(window.NHD) NHD.trackEvent('social_click', {platform:'instagram'});"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h3>Compare</h3>
+          <a href="communities.html">Community Explorer</a>
+          <a href="builders.html">Builders</a>
+          <a href="downloads/dare-to-compare-workbook.pdf" download>Compare Workbook</a>
+        </div>
+        <div class="footer-col">
+          <h3>Learn</h3>
+          <a href="start-here.html">Start Here</a>
+          <a href="buyer-guides.html">Buyer Guides</a>
+          <a href="methodology.html">How We Research</a>
+          <a href="how-we-evaluate.html">How We Evaluate</a>
+          <a href="look-closer-checklist.html">Look Closer Checklist</a>
+          <a href="reports/community-field-report-example.html">Field Report (Example)</a>
+        </div>
+        <div class="footer-col">
+          <h3>More</h3>
+          <a href="reports.html">Reports</a>
+          <a href="resources.html">Resource Desk</a>
+          <a href="field-notes.html">Field Notes</a>
+          <a href="buyer-strategy-call.html">Get Buyer Help</a>
+          <a href="buyer-story.html">Share Your Story (anonymous OK)</a>
+          <a href="about.html">About</a>
+          <a href="iabs.html">TREC: Info About Brokerage Services</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 New Home Dispatch. All rights reserved. New Home Dispatch is an independent education and research platform — buyer representation is available through Seider Realty Team powered by The Ascend Group at LPT Realty for buyers who want hands-on help.</span>
+      <a href="mailto:hello@newhomedispatch.com?subject=Correction%20request">Report a correction</a> <span style="opacity:.5;">&middot;</span> <a href="corrections.html">Corrections log</a>
+    </div>
+  </div>
+</footer>
+<script>
+const NHD_DATA = {
+  communities: [
+    {
+      id: 'santa-rita-ranch', name: 'Santa Rita Ranch', area: 'Liberty Hill', region: 'Northwest',
+      x: 150, y: 90,
+      builders: ['highland', 'toll-brothers', 'coventry'],
+      price: 'From the $350s', note: '3,100-acre Hill Country master plan. Multiple builder-specific villages, including a 55+ section.',
+      schoolDistrict: 'Liberty Hill ISD', commute: 'Short drive to Austin, Georgetown, Round Rock, and Cedar Park \u2014 exact commute time varies by employer.',
+      taxRate: '~2.46\u20132.49% combined', hoa: '~$95/mo (varies by section \u2014 some older sections bill ~$540/yr)', lotSizes: 'Varies by builder section',
+    },
+    {
+      id: 'wolf-ranch', name: 'Wolf Ranch', area: 'Georgetown', region: 'North',
+      x: 330, y: 60,
+      builders: ['lennar', 'drees', 'highland'],
+      price: 'From the $400s', note: 'Nine builders on-site along the San Gabriel River. Hilltop and riverfront sections priced separately.',
+      schoolDistrict: 'Georgetown ISD', commute: '~25\u201335 min to downtown Austin off-peak; ~15 min to Round Rock/Dell; ~25 min to The Domain.',
+      taxRate: '~2.47% combined (incl. MUD)', hoa: '~$75\u2013120/mo', lotSizes: 'Multiple widths across sections',
+    },
+    {
+      id: 'whisper-valley', name: 'Whisper Valley', area: 'Manor', region: 'East',
+      x: 430, y: 210,
+      builders: ['pacesetter'],
+      price: 'From the $290s', note: 'Geothermal and solar on every home. Closest new-construction community to Tesla\u2019s Gigafactory.',
+      schoolDistrict: 'Del Valle ISD', commute: '~20 min to downtown Austin; ~7 min to the Tesla Gigafactory; ~10 min to the airport.',
+      taxRate: 'No standard city tax \u2014 PID assessment instead (~$1,480\u2013$2,000/yr by lot size)', hoa: '~$216/quarter, plus a unique ~$55\u201370/mo geothermal system assessment', lotSizes: '35, 40, and 50 ft wide home sites',
+    },
+    {
+      id: 'belterra', name: 'Belterra', area: 'Dripping Springs', region: 'Southwest',
+      x: 140, y: 340,
+      builders: ['highland', 'taylor-morrison', 'david-weekley', 'drees'],
+      price: 'From the $500s', note: '1,600-acre community in Dripping Springs ISD. One of the Austin metro\u2019s largest and longest-running master plans.',
+      schoolDistrict: 'Dripping Springs ISD (A-rated)', commute: '~20\u201325 min / 25 mi west of downtown Austin via US-290.',
+      taxRate: '~2.0\u20132.26% (varies by section \u2014 newer phases may carry a temporary MUD premium)', hoa: '~$520\u2013$2,000/yr depending on section and amenity package', lotSizes: '50\u201380 ft wide lots, varies by section',
+    },
+    {
+      id: 'easton-park', name: 'Easton Park', area: 'Southeast Austin', region: 'Southeast',
+      x: 370, y: 320,
+      builders: ['david-weekley', 'highland', 'pacesetter', 'perry', 'taylor-morrison'],
+      price: 'From the $310s', note: '2,300+ acres just 12 miles from downtown. Seven builders on-site, the most of any community tracked here.',
+      schoolDistrict: 'Del Valle ISD', commute: '~12 miles / 12 min to downtown Austin \u2014 closest tracked community to the urban core.',
+      taxRate: '~2.53\u20132.70% (varies by MUD district within the community)', hoa: '~$75/mo master HOA, plus section-specific dues that vary widely \u2014 confirm the exact combination for any address', lotSizes: '40, 50, 60, and 70 ft wide lots',
+    },
+    {
+      id: 'sunfield', name: 'Sunfield', area: 'Buda', region: 'South',
+      x: 300, y: 382,
+      builders: ['david-weekley', 'centex', 'drb'],
+      price: 'From the $330s', note: 'Signature 1,000-foot lazy river amenity center. Just 15 miles south of Austin off I-35, near SH-130 and SH-45.',
+      schoolDistrict: 'Hays CISD', commute: '~15 miles south of Austin via I-35; quick access to SH-130 and SH-45 toll routes.',
+      taxRate: 'MUD community \u2014 Sunfield MUD adds ~0.90% on top of county/school rates; confirm the current combined rate by section', hoa: '~$66/mo (billed ~$200/quarter by some builders)', lotSizes: 'Multiple widths across sections',
+    },
+    {
+      id: 'kissing-tree', name: 'Kissing Tree', area: 'San Marcos \u00b7 55+', region: 'South',
+      x: 310, y: 440,
+      builders: ['brookfield', 'david-weekley'],
+      price: 'From the $340s', note: 'The largest 55+ community of its kind planned in Texas \u2014 3,200 homes at build-out, with a semi-private golf course and 18 pickleball courts.',
+      schoolDistrict: 'San Marcos CISD (age-restricted 55+ community)', commute: 'Between Austin and San Antonio on I-35 \u2014 roughly 35\u201345 min to either downtown.',
+      taxRate: '~2.47% combined (City of San Marcos + Hays County + San Marcos ISD)', hoa: '~$250/mo base (Traditional homes); Cottages and Villas ~$424/mo total incl. lawn care', lotSizes: 'Traditional, Cottage, and Villa collections',
+    },
+    {
+      id: 'bryson', name: 'Bryson', area: 'Leander', region: 'Northwest',
+      x: 200, y: 130,
+      builders: ['lennar', 'perry', 'highland', 'tri-pointe'],
+      price: 'From the $400s', note: 'Five-time master-planned community of the year, just east of 183A. Employs a full-time "Director of Fun."',
+      schoolDistrict: 'Leander ISD', commute: 'Just east of 183A toll; near Capital Metro\u2019s Leander rail station for a downtown Austin transit option.',
+      taxRate: '~2.72% (2025 reported rate \u2014 has ranged 2.35\u20132.72% across recent tax years)', hoa: 'Quarterly master assessment \u2014 confirm current rate with the association', lotSizes: 'Lots from ~0.08 to ~0.58 acres',
+    },
+    {
+      id: 'headwaters', name: 'Headwaters', area: 'Dripping Springs', region: 'Southwest',
+      x: 110, y: 300,
+      builders: ['david-weekley', 'toll-brothers', 'taylor-morrison', 'drees'],
+      price: 'From the $600s', note: 'Conservation-focused Hill Country master plan in a Dark Sky community, with a stargazing amphitheater and 1,000+ acres of open space.',
+      schoolDistrict: 'Dripping Springs ISD (A-rated) \u2014 on-site elementary', commute: '~21 miles / ~35\u201345 min to downtown Austin via US-290.',
+      taxRate: '~2.4\u20132.7% (MUD community \u2014 reported figures vary; confirm by section)', hoa: '~$450\u2013459/quarter \u2014 includes internet service', lotSizes: '50\u201360+ ft home sites',
+    },
+    {
+      id: 'travisso', name: 'Travisso', area: 'Leander', region: 'Northwest',
+      x: 130, y: 170,
+      builders: ['taylor-morrison', 'toll-brothers'],
+      price: 'From the mid $400s', note: 'Rare hilly terrain for a master plan \u2014 dramatic Hill Country views, with homes ranging to $2.6M+. Palazzo Clubhouse won Best Community Clubhouse in Texas.',
+      schoolDistrict: 'Leander ISD', commute: '~35\u201340 min to downtown Austin via US-183 / 183A.',
+      taxRate: '~2.48% (2025 reported rate)', hoa: '~$1,080/yr, billed in two installments', lotSizes: 'Lots from ~0.08 to over 1 acre',
+    },
+    {
+      id: 'bar-w-ranch', name: 'Bar W Ranch', area: 'Leander', region: 'Northwest',
+      x: 175, y: 155,
+      builders: ['dr-horton', 'gehan-homes', 'brohn-homes', 'tri-pointe'],
+      price: 'From the $440s', note: '500-acre community along the South San Gabriel River, ~1,400\u20131,500 homes at build-out. Widest builder roster tracked \u2014 D.R. Horton, Gehan, Brohn, Tri Pointe \u2014 with quick move-in inventory.',
+      schoolDistrict: 'Liberty Hill ISD', commute: 'Off Ronald Reagan Blvd at the Leander/Liberty Hill/Georgetown line \u2014 ~25 mi north of downtown Austin.',
+      taxRate: '~2.79% combined (itemized by Community Impact)', hoa: '~$125/quarter', lotSizes: 'Confirm per lot with the specific builder',
+    },
+    {
+      id: 'waterstone', name: 'Waterstone', area: 'Kyle', region: 'South',
+      x: 185, y: 430, researched: true,
+      collections: [['Waterstone Village','$199,990'],['Waterstone Crossing','$259,990']],
+      builders: ['meritage'],
+      price: 'From $199,990', note: 'The lowest advertised new-construction start in the metro (Waterstone Village). A second collection, Waterstone Crossing, starts at $259,990 \u2014 same entrance, $60,000 apart.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Kyle \u2014 I-35 corridor south of Austin, north of San Marcos.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'sonterra', name: 'Sonterra', area: 'Jarrell', region: 'North',
+      x: 255, y: 25, researched: true,
+      collections: [['Starlight — Sonterra','$250,990'],['LGI — Cool Water at Sonterra','$259,900']],
+      builders: ['starlight-homes', 'lgi-homes'],
+      price: 'From $250,990', note: 'Two entry-level spec builders head-to-head: Starlight from $250,990 and LGI (\u201cCool Water at Sonterra\u201d) from $259,900. Not the tracked Cool Water in Kyle.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Jarrell \u2014 I-35, roughly 40 mi / 40\u201350+ min north of downtown Austin.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'sunset-oaks', name: 'Sunset Oaks', area: 'Maxwell', region: 'South',
+      x: 430, y: 430, researched: true,
+      collections: [['Starlight Homes','$250,990'],['LGI Homes','$272,900']],
+      builders: ['starlight-homes', 'lgi-homes'],
+      price: 'From $250,990', note: 'Second live head-to-head: Starlight from $250,990 vs. LGI from $272,900 \u2014 the same category of finished home, $22,000 apart at the entry point.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Maxwell \u2014 east of San Marcos; roughly 35\u201345 min to Austin or San Antonio ends of the corridor.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'eastern-wells', name: 'Eastern Wells', area: 'Jarrell', region: 'North',
+      x: 385, y: 30, researched: true,
+      collections: [['Meritage','$239,990']],
+      builders: ['meritage'],
+      price: 'From $239,990', note: 'Meritage\u2019s far-north entry community \u2014 second-lowest advertised start in our research; flagged recently reduced on the pull date.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Jarrell \u2014 I-35, roughly 40 mi north of downtown Austin.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'cloverleaf', name: 'Cloverleaf', area: 'South Austin (78747)', region: 'Southeast',
+      x: 335, y: 350, researched: true,
+      collections: [['Haven Collection','from the $300s'],['Vista Collection','from the $300s']],
+      builders: ['century-communities'],
+      price: 'From the $300s', note: 'One of the few sub-$400K new-construction footholds inside Austin city limits \u2014 opened June 6, 2026. In-city cheap always has a mechanism; the field visit finds it.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Inside Austin city limits at 78747 (11312 Comano Dr) \u2014 far South Austin.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'evelyn', name: 'Evelyn', area: 'Northeast Austin', region: 'East',
+      x: 415, y: 150, researched: true,
+      collections: [['Aire Collection','from the $300s'],['Vue Collection','$300s–$400s'],['Lux Collection','to the $500s']],
+      builders: ['century-communities'],
+      price: 'From the $300s', note: '25 floor plans across three collections spanning the $300s to the $500s \u2014 opened June 13, 2026 near the tech corridor. The spread inside this one community beats most builder-to-builder gaps.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Northeast Austin near the tech corridor \u2014 verify your specific drive.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'colony-at-cole-springs', name: 'Colony at Cole Springs', area: 'Buda', region: 'South',
+      x: 185, y: 398, researched: true,
+      collections: [['Meritage — Arbor','$341,990'],['M/I Homes','$354,990'],['Meritage — Boulevard','$417,990']],
+      builders: ['meritage', 'mi-homes'],
+      price: 'From $341,990', note: 'Third live head-to-head: Meritage collections from $341,990/$417,990 and M/I from $354,990, side by side \u2014 every listing here carried a price-cut flag on our pull date.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Buda \u2014 south metro off I-35.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'butler-farms', name: 'Butler Farms', area: 'Liberty Hill', region: 'Northwest',
+      x: 95, y: 62, researched: true,
+      collections: [['Americana Collection','$283,990'],['Reserve Collection','$334,990'],['Boulevard Collection','$382,990']],
+      builders: ['meritage'],
+      price: 'From $283,990', note: 'Three Meritage collections priced up to $99,000 apart at the entry point \u2014 the clearest illustration of why a community-level \u201cfrom\u201d price can mislead. Minutes from tracked Santa Rita Ranch and Bar W Ranch.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Liberty Hill \u2014 northwest metro, near Santa Rita Ranch and Bar W Ranch.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'elm-park', name: 'Elm Park', area: 'East Austin (78725)', region: 'East',
+      x: 490, y: 235, researched: true,
+      collections: [['Starlight Homes','$295,990']],
+      builders: ['starlight-homes'],
+      price: 'From $295,990', note: 'One of two verified sub-$300K entries inside Austin city limits \u2014 finished Starlight specs in far East Austin, recently reduced on the pull date.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'East Austin, 78725 \u2014 east of US-183; an Austin address is not a central location; drive your commute.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'willow-springs', name: 'Willow Springs', area: 'Buda', region: 'South',
+      x: 330, y: 408, researched: true,
+      collections: [['M/I — Smart Series','$268,990'],['Starlight Homes','$286,990']],
+      builders: ['mi-homes','starlight-homes'],
+      price: 'From $268,990', note: 'Two builders advertise a Buda \u201cWillow Springs\u201d $18,000 apart (M/I $268,990, Starlight $286,990) \u2014 possibly one development; field check pending. Aggregator city label was corrected per the builder&rsquo;s own site.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Buda 78610 (12725 Short Grasshopper Dr per M/I) \u2014 south metro off I-35.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'marble-creek-crossing', name: 'Marble Creek Crossing', area: 'Austin (SE)', region: 'Southeast',
+      x: 430, y: 345, researched: true,
+      collections: [['M/I Homes','$307,990']],
+      builders: ['mi-homes'],
+      price: 'From $307,990', note: 'M/I&rsquo;s in-city entry \u2014 just above the sub-$300K line, recently reduced on the pull date.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Southeast Austin per builder listings \u2014 verify the specific site.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'cascades-at-onion-creek', name: 'Cascades at Onion Creek', area: 'South Austin', region: 'Southeast',
+      x: 280, y: 338, researched: true,
+      collections: [['M/I Homes','$332,990']],
+      builders: ['mi-homes'],
+      price: 'From $332,990', note: 'In-city M/I community in the established Onion Creek corridor. Ask the flood-zone question about the specific lot \u2014 get the map, not a verbal.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'South Austin, Onion Creek area.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'turners-crossing', name: 'Turner\u2019s Crossing', area: 'Buda', region: 'South',
+      x: 250, y: 362, researched: true,
+      collections: [['Americana Collection','$294,990'],['Reserve Collection','$334,990'],["Turner's Village (nearby)",'$269,990']],
+      builders: ['meritage'],
+      price: 'From $294,990', note: 'Meritage cluster: Americana $294,990 / Reserve $334,990, with Turner\u2019s Village nearby from $269,990 \u2014 a $65K spread under one brand in one corner of Buda.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Buda \u2014 south metro; I-35, SH-45 and toll access.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'travena', name: 'Travena', area: 'Georgetown', region: 'North',
+      x: 440, y: 55, researched: true,
+      collections: [['Americana Collection','$299,990'],['Reserve Collection','$349,990']],
+      builders: ['meritage'],
+      price: 'From $299,990', note: 'Two Meritage collections $50K apart. Benchmark against fully tracked Wolf Ranch (verified 2.47%) before crediting the sticker gap.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Georgetown \u2014 north I-35 corridor.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'prairie-winds', name: 'Prairie Winds', area: 'Hutto', region: 'North',
+      x: 455, y: 110, researched: true,
+      collections: [['Reserve Collection','$309,990'],['Boulevard Collection','$389,990'],['Executive Collection','$399,990']],
+      builders: ['meritage'],
+      price: 'From $309,990', note: 'Four Meritage collections spanning $90K between entry points \u2014 the Butler Farms lesson, northeast edition.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Hutto \u2014 northeast metro near SH-130; the Samsung/Taylor corridor is the growth story; buy today&rsquo;s commute.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'lexington-parke', name: 'Lexington Parke', area: 'Del Valle', region: 'Southeast',
+      x: 465, y: 290, researched: true,
+      collections: [['Meritage','$314,990']],
+      builders: ['meritage'],
+      price: 'From $314,990', note: 'Meritage&rsquo;s southeast entry \u2014 closest of its value communities to the airport/Tesla corridor. Benchmark against verified Easton Park and Whisper Valley.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Del Valle \u2014 near ABIA and SH-130.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'briarwood', name: 'Briarwood', area: 'Elgin', region: 'East',
+      x: 505, y: 195, researched: true,
+      builders: ['chesmar-homes'],
+      collections: [['Chesmar Homes','$249,990']],
+      price: 'From $249,990', note: 'Chesmar\u2019s entry community \u2014 their lowest start across 19 Central Texas communities, in the competitive Elgin value cluster with Eagles Landing and Homestead Estates.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Elgin \u2014 east of Austin on US-290; east-side jobs corridor math.',
+      taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+  ],
+  builders: [
+    { id: 'highland', name: 'Highland Homes', type: 'Regional \u00b7 Dallas-based', note: 'The most widely active builder across the communities tracked here \u2014 present in four of five.' },
+    { id: 'david-weekley', name: 'David Weekley Homes', type: 'National', note: 'Longtime Austin presence, known for buyer service.' },
+    { id: 'taylor-morrison', name: 'Taylor Morrison', type: 'National', note: 'Mid-to-upper price band, design-forward floor plans.' },
+    { id: 'pacesetter', name: 'Pacesetter Homes', type: 'Regional \u00b7 Austin-founded', note: 'Austin-based since 2007, active in entry-to-mid price bands.' },
+    { id: 'lennar', name: 'Lennar', type: 'National', note: 'Volume builder, "Everything\u2019s Included" pricing model.' },
+    { id: 'toll-brothers', name: 'Toll Brothers', type: 'National \u00b7 Luxury', note: 'Upper price band, including active-adult (55+) sections.' },
+    { id: 'drees', name: 'Drees Custom Homes', type: 'Regional', note: 'Semi-custom builder, buyer-personalized floor plans.' },
+    { id: 'coventry', name: 'Coventry Homes', type: 'Regional', note: 'Part of the Wilshire Homes family of Central Texas builders.' },
+    { id: 'perry', name: 'Perry Homes', type: 'Regional \u00b7 Houston-based', note: 'Long-established Texas builder, active in South and Southeast Austin.' },
+    { id: 'centex', name: 'Centex', type: 'National \u00b7 Entry-level', note: 'Pulte Group\u2019s value-focused brand, active in entry price bands south of Austin.' },
+    { id: 'drb', name: 'DRB Homes', type: 'National', note: 'Builds on some of the larger home sites in the communities it\u2019s active in.' },
+    { id: 'brookfield', name: 'Brookfield Residential', type: 'National \u00b7 Developer-builder', note: 'Master-plan developer that also builds \u2014 developed both Easton Park and Kissing Tree.' },
+    { id: 'tri-pointe', name: 'Tri Pointe Homes', type: 'National', note: 'Design-forward national builder, active in Leander-area master plans.' },
+    { id: 'dr-horton', name: 'D.R. Horton', type: 'National', note: 'Largest U.S. homebuilder by volume since 2002. High-volume production model \u2014 more standing and quick move-in inventory at any given time.' },
+    { id: 'gehan-homes', name: 'Brightland Homes (formerly Gehan Homes)', type: 'Regional \u00b7 Texas', note: 'Privately held Texas builder active across Austin, DFW, and San Antonio.' },
+    { id: 'brohn-homes', name: 'Brohn Homes', type: 'Regional \u00b7 Texas', note: 'Texas-based builder, named Developer of the Year by the HBA of Greater Austin.' },
+    { id: 'meritage', name: 'Meritage Homes', type: 'National \u00b7 Entry-level', researched: true, note: '26 selling communities and collections across the metro from $199,990 \u2014 one of the largest entry-level footprints in Central Texas. Researched profile; field verification pending.' },
+    { id: 'lgi-homes', name: 'LGI Homes', type: 'National \u00b7 Entry-level', researched: true, note: 'Finished move-in-ready spec homes from $242,900, concentrated in the outer ring (Jarrell, Elgin, Maxwell). Researched profile; field verification pending.' },
+    { id: 'century-communities', name: 'Century Communities', type: 'National \u00b7 Entry-level', researched: true, note: 'Opened two Austin communities in June 2026 \u2014 including a rare sub-$400K price point inside the city limits. Researched profile; field verification pending.' },
+    { id: 'starlight-homes', name: 'Starlight Homes', type: 'National \u00b7 Entry-level', researched: true, note: 'Ashton Woods\u2019 entry brand \u2014 finished move-in-ready homes from $232,990 across 9 communities, including one inside Austin city limits. Researched profile; field verification pending.' },
+    { id: 'chesmar-homes', name: 'Chesmar Homes', type: 'Regional \u00b7 Texas \u00b7 Volume', researched: true, note: '19 Central Texas communities from $249,990 to $869,990 \u2014 four inside our tracked system. Researched profile; on-site roster verification pending, so no map filter yet.' },
+    { id: 'mi-homes', name: 'M/I Homes', type: 'National', researched: true, note: '11 communities spanning $268,990 to $567,990 under one brand, including three inside Austin. Researched profile; field verification pending.' },
+  ]
+};
+
+(function(){
+  const byId = (arr,id) => arr.find(x => x.id === id);
+
+  // Rough payment estimator: illustrative only, not a lending quote.
+  // Assumes 20% down, 30-year fixed at an illustrative 6.5%, plus estimated tax and a typical HOA midpoint.
+  function estimatePayment(c){
+    if(c.researched) return 'Not yet estimable \u2014 tax rate unverified';
+    const priceMatch = c.price.match(/\$?([\d]+)/);
+    if(!priceMatch) return 'Not available';
+    const priceThousands = parseInt(priceMatch[1], 10);
+    const price = priceThousands * 1000;
+    const loanAmt = price * 0.8;
+    const rate = 0.065 / 12;
+    const n = 360;
+    const pAndI = loanAmt * (rate * Math.pow(1+rate, n)) / (Math.pow(1+rate, n) - 1);
+    const taxMatch = c.taxRate.match(/([\d.]+)%/);
+    // If a community has no percentage tax rate (e.g. a flat PID assessment),
+    // don't invent one — show P&I only and flag that tax is assessed differently.
+    if(!taxMatch){
+      const partial = pAndI + 120;
+      return '~$' + Math.round(partial/50)*50 + '/mo + PID';
+    }
+    const taxRatePct = parseFloat(taxMatch[1]);
+    const monthlyTax = (price * (taxRatePct/100)) / 12;
+    const monthlyHoa = 120; // rough blended estimate used only for the illustrative total
+    const total = pAndI + monthlyTax + monthlyHoa;
+    return '~$' + Math.round(total/50)*50 + '/mo';
+  }
+  const pinsG = document.getElementById('map-pins');
+  const grid = document.getElementById('explorer-grid');
+  const builderGrid = document.getElementById('builder-grid');
+  const chipsWrap = document.getElementById('builder-chips');
+  const regionChipsWrap = document.getElementById('region-chips');
+  const panelEmpty = document.getElementById('panel-empty');
+  const panelDetail = document.getElementById('panel-detail');
+  let activeBuilder = 'all';
+  let activeRegion = 'all';
+  let activeCommunity = null;
+  let compareList = new Set();
+  let fPrice = 'all', fTax = 'all', fHoa = 'all', fSchool = 'all', f55 = false;
+  let diffOnly = false;
+
+  // ---- honest parsers: derive numbers ONLY from the verified strings already shown ----
+  function priceK(c){ const m = c.price.match(/\$?([\d]+)/); return m ? parseInt(m[1],10) : null; }
+  function taxPct(c){ const m = c.taxRate.match(/([\d.]+)%/); return m ? parseFloat(m[1]) : null; } // null = flat/PID, not a rate
+  function hoaMonthly(c){
+    const s = c.hoa || '';
+    let m = s.match(/\$([\d]+)(?:\u2013|-)?([\d]+)?\s*\/?\s*mo/i);
+    if(m){ const lo=parseInt(m[1],10); const hi=m[2]?parseInt(m[2],10):lo; return (lo+hi)/2; }
+    m = s.match(/\$([\d]+)\s*\/?\s*(?:yr|year)/i); // annual -> monthly
+    if(m) return parseInt(m[1],10)/12;
+    m = s.match(/\$([\d]+)\s*\/?\s*qtr/i); // quarterly -> monthly
+    if(m) return parseInt(m[1],10)/3;
+    return null;
+  }
+  function is55(c){ return /55\+|55 ?plus|active adult|age[- ]restricted/i.test((c.note||'')+' '+(c.name||'')); }
+  function inBand(v, band){
+    if(band==='all') return true;
+    if(v===null||v===undefined) return false;
+    const [lo,hi] = band.split('-').map(parseFloat);
+    return v>=lo && v<hi;
+  }
+
+  // build builder filter chips — any builder active in at least one mapped community
+  NHD_DATA.builders.forEach(b=>{
+    if(!NHD_DATA.communities.some(c=>c.builders.includes(b.id))) return;
+    const btn = document.createElement('button');
+    btn.className = 'chip';
+    btn.dataset.builder = b.id;
+    btn.textContent = b.name;
+    chipsWrap.appendChild(btn);
+  });
+
+  // build region filter chips from unique regions in the data
+  Array.from(new Set(NHD_DATA.communities.map(c=>c.region))).forEach(r=>{
+    const btn = document.createElement('button');
+    btn.className = 'chip';
+    btn.dataset.region = r;
+    btn.textContent = r;
+    regionChipsWrap.appendChild(btn);
+  });
+
+  // populate school-district dropdown from the data
+  (function(){
+    const sel = document.getElementById('f-school');
+    Array.from(new Set(NHD_DATA.communities.filter(c=>!c.researched).map(c=>c.schoolDistrict))).sort().forEach(d=>{
+      const o = document.createElement('option'); o.value=d; o.textContent=d; sel.appendChild(o);
+    });
+  })();
+
+  function communityMatchesFilter(c){
+    const builderOk = activeBuilder === 'all' || c.builders.includes(activeBuilder);
+    const regionOk = activeRegion === 'all' || c.region === activeRegion;
+    const priceOk = inBand(priceK(c), fPrice);
+    const taxOk = fTax === 'all' || inBand(taxPct(c), fTax);
+    const hoaOk = inBand(hoaMonthly(c), fHoa);
+    const schoolOk = fSchool === 'all' || c.schoolDistrict === fSchool;
+    const ageOk = !f55 || is55(c);
+    return builderOk && regionOk && priceOk && taxOk && hoaOk && schoolOk && ageOk;
+  }
+
+  function renderPins(){
+    pinsG.innerHTML = '';
+    NHD_DATA.communities.forEach(c=>{
+      const match = communityMatchesFilter(c);
+      const isActive = activeCommunity === c.id;
+      const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+      g.setAttribute('class','map-pin' + (match ? '' : ' is-dim') + (isActive ? ' is-active' : '') + (c.researched ? ' is-researched' : ''));
+      g.setAttribute('data-community', c.id);
+      g.style.cursor = 'pointer';
+      g.innerHTML = `
+        <line x1="300" y1="230" x2="${c.x}" y2="${c.y}" class="pin-line" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+        <circle cx="${c.x}" cy="${c.y}" r="17" fill="transparent" class="pin-hit"/>
+        <circle cx="${c.x}" cy="${c.y}" r="${isActive ? 9 : 6}" class="pin-dot"/>
+        <text x="${c.x}" y="${c.y - 12}" text-anchor="middle" class="pin-label">${c.name}</text>
+      `;
+      g.addEventListener('click', ()=>{ selectCommunity(c.id);
+        if(window.innerWidth<900){ const d=document.getElementById('panel-detail'); if(d&&d.style.display!=='none') d.scrollIntoView({behavior:'smooth',block:'nearest'}); } });
+      pinsG.appendChild(g);
+    });
+  }
+
+  function renderGrid(){
+    grid.innerHTML = '';
+    const matches = NHD_DATA.communities.filter(communityMatchesFilter);
+    const rc = document.getElementById('result-count');
+    if(rc){
+      const total = NHD_DATA.communities.length;
+      rc.textContent = matches.length === total ? ('Showing all ' + total) : ('Showing ' + matches.length + ' of ' + total);
+    }
+    if(matches.length === 0){
+      grid.innerHTML = '<div class="explorer-noresults"><span class="mono">No communities match these filters.</span><button class="chip" id="noresults-reset">Clear filters</button></div>';
+      const nr = document.getElementById('noresults-reset');
+      if(nr) nr.addEventListener('click', resetAllFilters);
+      return;
+    }
+    matches.forEach(c=>{
+      const card = document.createElement('div');
+      card.className = 'directory-card' + (activeCommunity === c.id ? ' is-active' : '');
+      card.dataset.community = c.id;
+      card.style.cursor = 'pointer';
+      const checked = compareList.has(c.id) ? 'checked' : '';
+      card.innerHTML = `
+        <div class="directory-card-top">
+          <h3>${c.name}</h3>
+          <span class="directory-tag mono">${c.area}</span>
+        </div>
+        <p>${c.note}</p>
+        <span class="directory-status mono">${c.price} \u00b7 ${c.researched ? 'Researched \u00b7 Jul 2026' : 'Verified July 2026'}</span>
+        <a href="communities/${c.id}.html" class="read-link mono" style="opacity:1;" onclick="event.stopPropagation()">View full profile &rarr;</a>
+        <label class="compare-check mono" onclick="event.stopPropagation()">
+          <input type="checkbox" data-compare="${c.id}" ${checked}> Add to Compare
+        </label>
+      `;
+      card.addEventListener('click', ()=> selectCommunity(c.id));
+      card.querySelector('input[data-compare]').addEventListener('change', (e)=> toggleCompare(c.id, e.target.checked));
+      grid.appendChild(card);
+    });
+  }
+
+  function renderBuilderGrid(){
+    builderGrid.innerHTML = '';
+    NHD_DATA.builders.forEach(b=>{
+      const communities = NHD_DATA.communities.filter(c=>c.builders.includes(b.id));
+      const card = document.createElement('div');
+      card.className = 'directory-card';
+      card.style.cursor = 'pointer';
+      const status = b.researched
+        ? 'Researched \u00b7 field verification pending \u00b7 Jul 2026'
+        : `Active in ${communities.length} tracked ${communities.length === 1 ? 'community' : 'communities'} \u00b7 Verified July 2026`;
+      card.innerHTML = `
+        <div class="directory-card-top">
+          <h3>${b.name}</h3>
+          <span class="directory-tag mono">${b.type}</span>
+        </div>
+        <p>${b.note}</p>
+        <span class="directory-status mono">${status}</span>
+        <a href="builders/${b.id}.html" class="read-link mono" style="opacity:1;" onclick="event.stopPropagation()">View full profile &rarr;</a>
+      `;
+      card.addEventListener('click', ()=>{
+        if(!communities.length){ location.href = 'builders/' + b.id + '.html'; return; }
+        setBuilderFilter(b.id);
+        document.getElementById('communities').scrollIntoView({behavior:'smooth', block:'start'});
+      });
+      builderGrid.appendChild(card);
+    });
+  }
+
+  function selectCommunity(id){
+    activeCommunity = (activeCommunity === id) ? null : id;
+    if(activeCommunity){
+      const c = byId(NHD_DATA.communities, activeCommunity);
+      if(window.NHD) NHD.trackEvent('community_view', {community: activeCommunity, source: 'explorer_panel'});
+      const builderTags = c.builders.map(bid=>{
+        const b = byId(NHD_DATA.builders, bid);
+        return `<button class="tag-btn mono" data-builder="${bid}">${b.name}</button>`;
+      }).join('');
+      panelDetail.innerHTML = `
+        <span class="mono panel-region">${c.region} \u00b7 ${c.area} \u00b7 ${c.researched ? 'Researched \u00b7 field verification pending' : 'Verified July 2026'}</span>
+        <h3>${c.name}</h3>
+        <p class="panel-note">${c.note}</p>
+        <div class="panel-row"><span class="mono">Starting Price</span><span>${c.price}</span></div>
+        ${c.collections ? '<div class="panel-row" style="align-items:flex-start;"><span class="mono">Advertised listings</span><span>'+c.collections.map(x=>x[0]+' — '+x[1]).join('<br>')+'<span style="display:block;font-size:.68rem;color:#767676;margin-top:3px;">Advertised collection entry prices, observed Jul 20, 2026 — confirm on the current sheet</span></span></div>' : ''}
+        <div class="panel-row"><span class="mono">Est. Monthly Payment</span><span>${estimatePayment(c)}</span></div>
+        <div class="panel-row"><span class="mono">Property Tax Rate</span><span>${c.taxRate}</span></div>
+        <div class="panel-row"><span class="mono">HOA Dues</span><span>${c.hoa}</span></div>
+        <div class="panel-row"><span class="mono">Lot Sizes</span><span>${c.lotSizes}</span></div>
+        <div class="panel-row"><span class="mono">School District</span><span>${c.schoolDistrict}</span></div>
+        <div class="panel-row"><span class="mono">Commute Notes</span><span>${c.commute}</span></div>
+        <div class="panel-row panel-tracker"><span class="mono">Incentive Tracker</span><span>Not yet tracked</span></div>
+        <span class="mono panel-builders-label">${c.researched ? 'Builders Advertising Here (researched)' : 'Verified Builders'}</span>
+        <div class="panel-builders">${builderTags}</div>
+        <div class="panel-disclaimer">Estimated payment is illustrative only (20% down, 30-yr fixed at 6.5%, plus tax and a blended HOA estimate) \u2014 not a lending quote. Confirm exact figures with a lender.</div>
+        <a href="communities/${c.id}.html" class="btn btn-outline" style="margin-top:14px; width:100%; justify-content:center;">View Full Profile &rarr;</a>
+      `;
+      panelDetail.querySelectorAll('.tag-btn').forEach(btn=>{
+        btn.addEventListener('click', (e)=>{ e.stopPropagation(); setBuilderFilter(btn.dataset.builder); });
+      });
+      panelEmpty.style.display = 'none';
+      panelDetail.style.display = 'block';
+    } else {
+      panelEmpty.style.display = 'block';
+      panelDetail.style.display = 'none';
+    }
+    renderPins();
+    renderGrid();
+  }
+
+  function setBuilderFilter(id){
+    activeBuilder = id;
+    chipsWrap.querySelectorAll('.chip').forEach(c=>{
+      c.classList.toggle('is-active', c.dataset.builder === id);
+    });
+    if(activeCommunity && !byId(NHD_DATA.communities, activeCommunity).builders.includes(id) && id !== 'all'){
+      activeCommunity = null;
+      panelEmpty.style.display = 'block';
+      panelDetail.style.display = 'none';
+    }
+    renderPins();
+    renderGrid();
+  }
+
+  chipsWrap.addEventListener('click', (e)=>{
+    if(e.target.classList.contains('chip')) setBuilderFilter(e.target.dataset.builder);
+  });
+  regionChipsWrap.addEventListener('click', (e)=>{
+    if(!e.target.classList.contains('chip')) return;
+    activeRegion = e.target.dataset.region;
+    regionChipsWrap.querySelectorAll('.chip').forEach(c=>{
+      c.classList.toggle('is-active', c.dataset.region === activeRegion);
+    });
+    if(activeCommunity && !communityMatchesFilter(byId(NHD_DATA.communities, activeCommunity))){
+      activeCommunity = null;
+      panelEmpty.style.display = 'block';
+      panelDetail.style.display = 'none';
+    }
+    renderPins();
+    renderGrid();
+  });
+  document.getElementById('explorer-reset').addEventListener('click', resetAllFilters);
+
+  // ---- new derivable filters ----
+  function syncGridAfterFilter(){
+    if(activeCommunity && !communityMatchesFilter(byId(NHD_DATA.communities, activeCommunity))){
+      activeCommunity = null;
+      panelEmpty.style.display = 'block';
+      panelDetail.style.display = 'none';
+    }
+    renderPins();
+    renderGrid();
+  }
+  document.getElementById('f-price').addEventListener('change', e=>{ fPrice=e.target.value; syncGridAfterFilter(); });
+  document.getElementById('f-tax').addEventListener('change', e=>{ fTax=e.target.value; syncGridAfterFilter(); });
+  document.getElementById('f-hoa').addEventListener('change', e=>{ fHoa=e.target.value; syncGridAfterFilter(); });
+  document.getElementById('f-school').addEventListener('change', e=>{ fSchool=e.target.value; syncGridAfterFilter(); });
+  document.getElementById('f-55').addEventListener('click', e=>{
+    f55 = !f55; e.currentTarget.dataset.on = String(f55);
+    e.currentTarget.classList.toggle('is-active', f55);
+    syncGridAfterFilter();
+  });
+
+  function resetAllFilters(){
+    activeCommunity = null;
+    activeRegion = 'all';
+    fPrice='all'; fTax='all'; fHoa='all'; fSchool='all'; f55=false;
+    ['f-price','f-tax','f-hoa','f-school'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value='all'; });
+    const t55=document.getElementById('f-55'); if(t55){ t55.dataset.on='false'; t55.classList.remove('is-active'); }
+    regionChipsWrap.querySelectorAll('.chip').forEach(c=> c.classList.toggle('is-active', c.dataset.region==='all'));
+    setBuilderFilter('all'); // also re-renders pins + grid
+  }
+
+  function toggleCompare(id, checked){
+    if(checked){
+      if(compareList.size >= 3){
+        checked = false;
+        renderGrid();
+        return;
+      }
+      if(compareList.size === 0 && window.NHD) NHD.trackEvent('comparison_started', {first_community: id});
+      compareList.add(id);
+    } else {
+      compareList.delete(id);
+    }
+    updateCompareBar();
+  }
+
+  // v75: the .wrap.reveal ancestor keeps a transform after its scroll-reveal
+  // animation, which makes it the containing block for position:fixed — so the
+  // mobile fixed bar was still rendering in-flow. Reparent the bar to <body>
+  // on phones so fixed positioning works against the real viewport.
+  if (window.matchMedia('(max-width: 899px)').matches) {
+    const _bar = document.getElementById('compare-bar');
+    if (_bar && _bar.parentElement !== document.body) document.body.appendChild(_bar);
+  }
+  function updateCompareBar(){
+    const bar = document.getElementById('compare-bar');
+    const count = document.getElementById('compare-count');
+    const runBtn = document.getElementById('compare-run');
+    // v75: show the bar from the FIRST selection (instant feedback — critical on
+    // mobile where the bar is fixed at the bottom); enable Compare at 2+.
+    if(compareList.size >= 1){
+      bar.style.display = 'flex';
+      count.textContent = compareList.size >= 2
+        ? compareList.size + ' selected (max 3)'
+        : '1 selected — pick at least one more to compare';
+      runBtn.disabled = compareList.size < 2;
+      runBtn.style.opacity = compareList.size < 2 ? '0.55' : '1';
+    } else {
+      bar.style.display = 'none';
+      document.getElementById('compare-output').style.display = 'none';
+    }
+    document.body.classList.toggle('compare-active', compareList.size >= 1);
+    syncHash();
+  }
+
+  // matrix rows: [label, valueFn, kind]  kind: 'fact' | 'est' | 'unknown'
+  const COMPARE_ROWS = [
+    ['Area', c => c.area, 'fact'],
+    ['Region', c => c.region, 'fact'],
+    ['Starting price', c => c.price, 'fact'],
+    ['Est. monthly payment', c => estimatePayment(c), 'est'],
+    ['Property tax rate', c => c.taxRate, 'fact'],
+    ['HOA dues', c => c.hoa, 'fact'],
+    ['Lot sizes', c => c.lotSizes, 'fact'],
+    ['School district', c => c.schoolDistrict, 'fact'],
+    ['Commute', c => c.commute, 'fact'],
+    ['Builders on-site', c => String(c.builders.length), 'fact'],
+    ['Verified builders', c => c.builders.map(bid => byId(NHD_DATA.builders,bid).name).join(', '), 'fact'],
+    ['Incentives', () => 'Not yet tracked', 'unknown'],
+  ];
+
+  function renderCompare(){
+    if(window.NHD) NHD.trackEvent('comparison_completed', {communities: Array.from(compareList), count: compareList.size});
+    const out = document.getElementById('compare-output');
+    const wrap = document.getElementById('compare-table-wrap');
+    const items = Array.from(compareList).map(id => byId(NHD_DATA.communities, id)).filter(Boolean);
+    if(items.length < 2){ out.style.display='none'; return; }
+
+    let html = '<div class="compare-matrix' + (diffOnly ? ' diff-only' : '') + '" style="--cols:' + items.length + '">';
+    // header row
+    html += '<div class="cm-row cm-row-head">';
+    html += '<div class="cm-cell cm-label cm-head">Compare</div>';
+    items.forEach(c => html += '<div class="cm-cell cm-head">' + c.name + '</div>');
+    html += '</div>';
+    // data rows
+    COMPARE_ROWS.forEach(([label, fn, kind])=>{
+      const vals = items.map(c => fn(c));
+      const allSame = vals.every(v => v === vals[0]);
+      const rowCls = 'cm-row' + (allSame ? '' : ' cm-row-diff');
+      html += '<div class="' + rowCls + '">';
+      html += '<div class="cm-cell cm-label">' + label + '</div>';
+      vals.forEach(v=>{
+        if(kind === 'unknown'){
+          html += '<div class="cm-cell"><span class="cm-unknown">' + v + '</span></div>';
+        } else if(kind === 'est'){
+          html += '<div class="cm-cell">' + v + '<span class="cm-est">Est.</span></div>';
+        } else {
+          html += '<div class="cm-cell">' + v + '</div>';
+        }
+      });
+      html += '</div>';
+    });
+    html += '</div>';
+
+    html += '<div class="compare-legend"><span><b>Legend:</b></span><span><b>Verified</b> — from public records / builder-provided, dated on each profile.</span><span class="lg-est">Est. — illustrative estimate, not a quote.</span><span><em>Not yet tracked</em> — we don\'t have it verified yet, so we don\'t show a number.</span></div>';
+    html += '<p class="compare-disclaimer">Estimated payment is illustrative only (20% down, 30-yr fixed at 6.5%, plus tax and a blended HOA estimate) \u2014 not a lending quote. HOA and tax figures vary by section; confirm exact numbers for any specific address before writing an offer.</p>';
+    html += '<div class="compare-cta"><span>Comparing these ' + items.length + ' on paper? An independent side-by-side review is available through Seider Realty Team powered by The Ascend Group at LPT Realty \u2014 separate from this editorial comparison.</span><a href="buyer-strategy-call.html" class="compare-cta-link mono" onclick="if(window.NHD) NHD.trackEvent(\'consultation_cta_click\', {context:\'comparison_completed\'});">Request a review &rarr;</a></div>';
+
+    wrap.innerHTML = html;
+    out.style.display = 'block';
+    out.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  // ---- share via URL hash (#compare=id,id) ----
+  function syncHash(){
+    if(compareList.size >= 2){
+      history.replaceState(null, '', '#compare=' + Array.from(compareList).join(','));
+    } else if(location.hash.indexOf('compare=') !== -1){
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  }
+  function restoreFromHash(){
+    const m = location.hash.match(/compare=([a-z0-9,\-]+)/i);
+    if(!m) return;
+    m[1].split(',').forEach(id=>{
+      if(byId(NHD_DATA.communities, id) && compareList.size < 3) compareList.add(id);
+    });
+    if(compareList.size >= 1){
+      renderGrid(); updateCompareBar();
+      if(compareList.size >= 2){ renderCompare(); }
+      // bring the pre-selected community into view so it's obviously added
+      const first = Array.from(compareList)[0];
+      const card = document.querySelector('.directory-card[data-community="' + first + '"]');
+      if(card) card.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  }
+
+
+  document.getElementById('compare-clear').addEventListener('click', ()=>{
+    compareList.clear();
+    updateCompareBar();
+    document.getElementById('compare-output').style.display = 'none';
+    renderGrid();
+  });
+  document.getElementById('compare-run').addEventListener('click', renderCompare);
+
+  // show only differences
+  document.getElementById('cmp-diff').addEventListener('change', (e)=>{
+    diffOnly = e.target.checked;
+    if(compareList.size >= 2) renderCompare();
+  });
+  // copy share link
+  document.getElementById('cmp-copy').addEventListener('click', (e)=>{
+    const btn = e.currentTarget;
+    syncHash();
+    const url = location.href;
+    const done = ()=>{ btn.classList.add('is-copied'); const t = 'Copy share link'; btn.textContent = 'Link copied'; setTimeout(()=>{ btn.classList.remove('is-copied'); btn.textContent = t; }, 1600); };
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(done).catch(done); }
+    else { const ta=document.createElement('textarea'); ta.value=url; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');}catch(_){} document.body.removeChild(ta); done(); }
+  });
+  // print / save PDF
+  document.getElementById('cmp-print').addEventListener('click', ()=>{
+    if(compareList.size >= 2){ renderCompare(); setTimeout(()=>window.print(), 120); }
+  });
+
+  renderPins();
+  renderGrid();
+  renderBuilderGrid();
+  selectCommunity(NHD_DATA.communities[0].id); // instant value on first paint, not an empty state
+  restoreFromHash(); // if arriving from a shared comparison link
+})();
+
+</script>
+<script>
+  /* Scroll reveal — reveals .reveal sections (incl. the Explorer map & compare).
+     Was missing on this page, which left those sections stuck at opacity:0. */
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(el){ el.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); } });
+    }, {threshold:0.15});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+<script src="nav.js" defer></script>
+<script src="dispatch-cta.js" defer></script>
+<script src="assistant-launcher.js" defer></script>
+<!-- v73 nav fix: click-to-toggle + hover bridge (dropdowns were hover-only with dead 4px gap) -->
+<style>.nav-grp{position:relative}.nav-grp::after{content:"";position:absolute;left:0;right:0;top:100%;height:10px}.site-header,.nav-wrap{overflow:visible !important}.site-header{position:sticky;top:0;z-index:300}body>header:not(.hero){position:sticky;top:0;z-index:300}header:has(.site-nav){position:sticky;top:0;z-index:300}.nav-grp .nav-drop{z-index:400}</style>
+
+</body>
+</html>

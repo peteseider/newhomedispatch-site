@@ -1,0 +1,80 @@
+# Clean URL redirects — only for pages that exist as real dedicated destinations.
+# /explorer, /playbook, and /library (as hub pages) are NOT yet split out from the
+# homepage — do not add redirects for them until those pages exist. NOTE: /reports
+# DOES exist (reports.html) and is mapped below.
+
+/reports                /reports.html                200
+/buyer-strategy-call    /buyer-strategy-call.html   200
+/methodology            /methodology.html            200
+/true-cost-calculator   /true-cost-calculator.html   200
+/incentive-calculator   /incentive-calculator.html   200
+/incentive-tracker   /incentive-tracker.html   200
+/weekly-dispatch   /weekly-dispatch.html   200
+/zero-out-of-pocket   /zero-out-of-pocket.html   200
+/tax-reality-guide   /texas-tax-reality-guide.html   200
+/share   /share-your-story.html   200
+/share-your-story   /share-your-story.html   200
+/buyer-story   /buyer-story.html   200
+/share-anonymously   /buyer-story.html   200
+/my-story   /buyer-story.html   200
+/standing-inventory   /reports/standing-inventory.html   200
+/resources              /resources.html              200
+/field-notes             /field-notes.html            200
+
+# Chapter renumbering (v43) — old topic-number URLs -> reading-order URLs
+/library/ch16-selecting-build-type.html   /library/ch02-selecting-build-type.html   301
+/downloads/ch16-selecting-build-type.pdf   /downloads/ch02-selecting-build-type.pdf   301
+/library/ch15-new-construction-reality-gap.html   /library/ch03-new-construction-reality-gap.html   301
+/downloads/ch15-new-construction-reality-gap.pdf   /downloads/ch03-new-construction-reality-gap.pdf   301
+/library/ch02-financing-explained.html   /library/ch04-financing-explained.html   301
+/downloads/ch02-financing-explained.pdf   /downloads/ch04-financing-explained.pdf   301
+/library/ch03-understanding-builder-incentives.html   /library/ch05-understanding-builder-incentives.html   301
+/downloads/ch03-understanding-builder-incentives.pdf   /downloads/ch05-understanding-builder-incentives.pdf   301
+/library/ch04-50-questions.html   /library/ch06-50-questions.html   301
+/downloads/ch04-50-questions.pdf   /downloads/ch06-50-questions.pdf   301
+/library/ch05-community-scorecard.html   /library/ch07-community-scorecard.html   301
+/downloads/ch05-community-scorecard.pdf   /downloads/ch07-community-scorecard.pdf   301
+/library/ch06-construction-timeline.html   /library/ch08-construction-timeline.html   301
+/downloads/ch06-construction-timeline.pdf   /downloads/ch08-construction-timeline.pdf   301
+/library/ch07-design-center-guide.html   /library/ch09-design-center-guide.html   301
+/downloads/ch07-design-center-guide.pdf   /downloads/ch09-design-center-guide.pdf   301
+/library/ch08-hidden-costs.html   /library/ch10-hidden-costs.html   301
+/downloads/ch08-hidden-costs.pdf   /downloads/ch10-hidden-costs.pdf   301
+/library/ch09-inspection-guide.html   /library/ch11-inspection-guide.html   301
+/downloads/ch09-inspection-guide.pdf   /downloads/ch11-inspection-guide.pdf   301
+/library/ch10-understanding-warranties.html   /library/ch12-understanding-warranties.html   301
+/downloads/ch10-understanding-warranties.pdf   /downloads/ch12-understanding-warranties.pdf   301
+/library/ch11-closing-process.html   /library/ch13-closing-process.html   301
+/downloads/ch11-closing-process.pdf   /downloads/ch13-closing-process.pdf   301
+/library/ch12-first-year.html   /library/ch14-first-year.html   301
+/downloads/ch12-first-year.pdf   /downloads/ch14-first-year.pdf   301
+/library/ch13-resale-in-mind.html   /library/ch15-resale-in-mind.html   301
+/downloads/ch13-resale-in-mind.pdf   /downloads/ch15-resale-in-mind.pdf   301
+/library/ch14-new-home-commandments.html   /library/ch16-new-home-commandments.html   301
+/downloads/ch14-new-home-commandments.pdf   /downloads/ch16-new-home-commandments.pdf   301
+/dispatch-001.html   /weekly-dispatch-01.html   301
+/how-we-evaluate   /how-we-evaluate.html   200
+/look-closer   /look-closer-checklist.html   200
+/look-closer-checklist   /look-closer-checklist.html   200
+/community-field-report-example   /reports/community-field-report-example.html   200
+/dare-to-compare   /dare-to-compare.html   200
+/leverage-report   /leverage-report.html   200
+/leverage   /leverage-report.html   200
+/meritage  /builders/meritage.html  200
+/lgi  /builders/lgi-homes.html  200
+/century  /builders/century-communities.html  200
+/price-floor  /reports/entry-level-price-floor.html  200
+/starlight  /builders/starlight-homes.html  200
+/mi-homes  /builders/mi-homes.html  200
+/affordability  /affordability.html  200
+/price-floor-report  /reports/entry-level-price-floor.html  200
+/assistant  /assistant.html  200
+/ask  /assistant.html  200
+/first-time  /first-time-buyers.html  200
+/dpa  /down-payment-assistance.html  200
+/under-3000  /reports/under-3000-payment.html  200
+/corrections  /corrections.html  200
+/chesmar  /builders/chesmar-homes.html  200
+/scoreboard  /scoreboard.html  200
+/one-sheet  /dispatch-one-sheet.html  200
+/cards  /cards.html  200

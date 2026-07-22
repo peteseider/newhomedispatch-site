@@ -1,0 +1,8 @@
+{
+  "name": "nhd-netlify-functions",
+  "private": true,
+  "description": "Dependencies for New Home Dispatch's Netlify Functions. Netlify's build step (zip-it-and-ship-it) resolves and bundles these automatically on deploy — nothing to npm install by hand.",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

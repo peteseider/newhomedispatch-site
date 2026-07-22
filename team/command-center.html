@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0F2942">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NHD Sprint">
+<title>New Home Dispatch — Sprint Command Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#000; --ink-2:#0A0A0A; --blue:#2B4FE0; --blue-light:#4E7AFF; --navy:#0F2942;
+    --paper:#fff; --paper-alt:#F4F4F4; --line:#E0E0E0; --muted:#666; --radius:2px; --maxw:1180px;
+    --green:#0B7A3B; --amber:#B26A00; --red:#C0392B;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink-2);background:var(--paper-alt);line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue);text-decoration:none}
+  .mono{font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:500}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{background:var(--ink);color:#fff;border-bottom:3px solid var(--blue)}
+  .hbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto}
+  .wordmark{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
+  .wordmark .home{color:var(--blue-light)}
+  .wordmark .divider{width:1px;height:20px;background:#555;display:inline-block}
+  .hmeta{text-align:right}
+  .hmeta .title{font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:13px;letter-spacing:.02em}
+  .hmeta .date{color:#9fb0d8}
+  .tagline{color:#9fb0d8;font-size:12px;margin-top:2px}
+
+  /* Nav */
+  nav.sticky{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.03)}
+  .navrow{display:flex;gap:2px;overflow-x:auto;max-width:var(--maxw);margin:0 auto;padding:0 12px}
+  .navrow a{padding:12px 14px;font-weight:600;font-size:13px;color:var(--ink-2);white-space:nowrap;border-bottom:2px solid transparent}
+  .navrow a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+
+  section{padding:34px 0 6px}
+  .eyebrow{color:var(--blue);font-weight:600}
+  .eyebrow::before{content:"— "}
+  h2{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:26px;margin:6px 0 4px;letter-spacing:-.01em}
+  h3{font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:17px;margin:24px 0 8px}
+  .lead{color:var(--muted);max-width:820px;margin:0 0 18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:0 0 14px}
+  .card.accent{border-left:3px solid var(--blue)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+
+  /* Critical path banner */
+  .cp{background:var(--navy);color:#fff;border-radius:var(--radius);padding:20px 22px;margin-bottom:16px;
+      background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:22px 22px}
+  .cp h2{color:#fff;margin-top:0}
+  .cp .sub{color:#9fb0d8;margin-bottom:14px}
+  .unlock{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid rgba(255,255,255,.12)}
+  .unlock:first-of-type{border-top:none}
+  .unlock .u-num{font-family:'Archivo Expanded',sans-serif;font-weight:800;color:var(--blue-light);font-size:15px;min-width:20px}
+  .unlock .u-body{flex:1}
+  .unlock .u-title{font-weight:700}
+  .unlock .u-note{color:#9fb0d8;font-size:13px;margin-top:2px}
+
+  /* Checkable items */
+  .chk{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line)}
+  .chk:first-child{border-top:none}
+  .chk input{margin-top:3px;width:17px;height:17px;accent-color:var(--blue);flex-shrink:0;cursor:pointer}
+  .chk .c-body{flex:1}
+  .chk .c-title{font-weight:600}
+  .chk.done .c-title{text-decoration:line-through;color:var(--muted)}
+  .chk .c-meta{font-size:12.5px;color:var(--muted);margin-top:3px}
+  .chk .c-meta b{color:var(--ink-2)}
+  .cp .chk{border-top-color:rgba(255,255,255,.12)}
+  .cp .chk .c-meta{color:#9fb0d8}
+  .cp .chk .c-meta b{color:#fff}
+  .cp .chk.done .c-title{color:#7f8db0}
+
+  .pill{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:2px 7px;border-radius:2px;vertical-align:middle}
+  .p-owner{background:#eef2ff;color:var(--blue)}
+  .p-team{background:#f0f0f0;color:#444}
+  .p-now{background:#e7f6ee;color:var(--green)}
+  .p-test{background:#fdf3e2;color:var(--amber)}
+  .p-reject{background:#fbeae8;color:var(--red)}
+  .p-week{background:#eef2ff;color:var(--blue)}
+
+  .prog{display:flex;align-items:center;gap:10px;margin:8px 0 2px}
+  .prog .bar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+  .prog .bar > i{display:block;height:100%;background:var(--blue);width:0;transition:width .25s}
+  .prog .lab{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0 14px;background:#fff}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--paper-alt);font-family:'IBM Plex Mono',monospace;text-transform:uppercase;font-size:10.5px;letter-spacing:.05em;color:#444}
+  td b{color:var(--ink-2)}
+  .num{font-family:'Archivo Expanded',sans-serif;font-weight:800}
+
+  details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;margin:8px 0}
+  details summary{font-weight:600;cursor:pointer;list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:"▸ ";color:var(--blue)}
+  details[open] summary::before{content:"▾ "}
+  details .d-body{padding-top:10px;font-size:14px}
+  blockquote{margin:8px 0;padding:8px 14px;border-left:3px solid var(--blue);background:var(--paper-alt);color:var(--ink-2);font-size:14px}
+
+  ul.tight{margin:6px 0;padding-left:18px}
+  ul.tight li{margin:4px 0}
+  .kpi{display:flex;gap:14px;flex-wrap:wrap;margin:4px 0 12px}
+  .kpi .k{flex:1;min-width:150px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--blue);padding:12px 14px;border-radius:var(--radius)}
+  .kpi .k .n{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:22px}
+  .kpi .k .l{font-size:12px;color:var(--muted);margin-top:2px}
+
+  .warnbox{border-left:3px solid var(--red);background:#fdf6f5}
+  .goodbox{border-left:3px solid var(--green);background:#f4fbf7}
+  .signoff{background:var(--ink);color:#fff;text-align:center;padding:34px 20px;margin-top:30px;
+      background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:22px 22px}
+  .signoff .lc{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:24px}
+  .signoff .lc .dot{color:var(--blue-light)}
+  .signoff .msg{color:#9fb0d8;font-size:13px;max-width:620px;margin:10px auto 0}
+  .btn{display:inline-block;background:var(--blue);color:#fff;font-weight:600;font-size:13px;padding:9px 16px;border-radius:var(--radius);border:none;cursor:pointer}
+  .btn:hover{background:#233fb8}
+  .footnote{font-size:12px;color:var(--muted);margin-top:6px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbar">
+    <img src="../assets/wordmark-light.png" alt="New Home Dispatch" style="height:22px;width:auto;display:block">
+    <div class="hmeta">
+      <div class="title">SPRINT COMMAND CENTER</div>
+      <div class="date mono" id="today">—</div>
+    </div>
+  </div>
+  <div class="wrap"><div class="tagline" style="padding-bottom:12px">One surface, every morning. The mission below the mission: <b style="color:#fff">turn the built product on, feed it real data, and convert trust into signed buyer representation.</b></div></div>
+</header>
+
+<nav class="sticky">
+  <div class="navrow">
+    <a href="#critical">Critical Path</a>
+    <a href="#today-plan">Today</a>
+    <a href="#sprint">The Sprint</a>
+    <a href="#money">Money Engine</a>
+    <a href="#scoreboard">Scoreboard</a>
+    <a href="#guardrails">Guardrails</a>
+    <a href="#machine">The Machine</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- CRITICAL PATH -->
+<section id="critical">
+  <div class="cp">
+    <div class="mono" style="color:var(--blue-light)">THE UNLOCK · nothing else counts until these are true</div>
+    <h2>Critical Path — 4 switch-flips</h2>
+    <div class="sub">The business does not have a production problem. It has a <b style="color:#fff">shipping-and-validating</b> problem. Status Jul 20: the site IS live (401 killed, v73/v74 deployed — verified) and the entity fix is shipped awaiting indexing. Current build: <b style="color:#fff">v75 — deploy it</b>, then finish 3 and 4.</div>
+    <div class="prog"><span class="lab" id="cp-lab">0/4</span><div class="bar"><i id="cp-bar"></i></div></div>
+
+    <label class="chk" data-grp="cp">
+      <input type="checkbox">
+      <div class="c-body">
+        <div class="c-title">1 · Deploy publicly &amp; kill the 401</div>
+        <div class="c-meta"><b>Owner:</b> Pete (confirm host: Netlify vs Fly.io — docs conflict) + team deploy · <b>Update:</b> DONE for v74 (live, verified). Remaining: deploy <b>v75</b> (compare fix + Send-to-HQ tool + team hub + 33 builders).</div>
+      </div>
+    </label>
+    <label class="chk" data-grp="cp">
+      <input type="checkbox">
+      <div class="c-body">
+        <div class="c-title">2 · Fix the search entity</div>
+        <div class="c-meta"><b>Owner:</b> team (About page + JSON-LD) + Pete (Search Console) · <b>Update:</b> About page + JSON-LD LIVE. Remaining: Search Console indexing requests + display-name renames; then monitor the AI Overview.</div>
+      </div>
+    </label>
+    <label class="chk" data-grp="cp">
+      <input type="checkbox">
+      <div class="c-body">
+        <div class="c-title">3 · Wire the conversion plumbing</div>
+        <div class="c-meta"><b>Owner:</b> Pete · MailerLite + domain auth (SPF/DKIM) + connect every form + turn on instant notifications. <b>Done when:</b> a test submit produces a real notification and the 24-hr human reply promise is real. <b>No drip sequences.</b></div>
+      </div>
+    </label>
+    <label class="chk" data-grp="cp">
+      <input type="checkbox">
+      <div class="c-body">
+        <div class="c-title">4 · First real field capture → first real Friday</div>
+        <div class="c-meta"><b>Owner:</b> Pete (field) + team (Console) · One dated observation + photo becomes Field Note #1 &amp; dataset row #1; first Dispatch with <code>sample:false</code>. <b>This starts the clock on the moat.</b></div>
+      </div>
+    </label>
+  </div>
+</section>
+
+<!-- TODAY -->
+<section id="today-plan">
+  <div class="eyebrow mono">TODAY</div>
+  <h2>The daily shape</h2>
+  <p class="lead">Trade the morning · outreach the middle · one field stop · always ready for a live conversation. The one non-negotiable is at the bottom.</p>
+
+  <div class="grid2">
+    <div class="card accent">
+      <h3 style="margin-top:0">Time blocks</h3>
+      <ul class="tight">
+        <li><b>6:45–8:20a</b> — Pre-market + 10-min prep. Read the scripts once. Visit-Summary tool on your phone's home row.</li>
+        <li><b>8:30–11:00a</b> — <b>TRADE. Protected.</b> No outreach. If someone calls you, the 30-sec narrative handles it; offer a callback after 11.</li>
+        <li><b>11:00a–12:30p</b> — Outreach block 1: 8–12 database calls. Always a real reason (menu below).</li>
+        <li><b>12:30–2:00p</b> — Lunch + one field stop near where you already are.</li>
+        <li><b>2:00–3:30p</b> — Outreach block 2: follow-up texts + promised tool links.</li>
+        <li><b>3:30p</b> — 5-min close: text team the Visit Summary; copy end-of-day status.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Reasons to call (pick one — you always have one)</h3>
+      <ul class="tight">
+        <li><b>Buyer-story ask</b> (past clients): "I'm building something I want your voice in."</li>
+        <li><b>Launch reason:</b> "The site goes fully live this week — free tools, and you're one of the first I want to show."</li>
+        <li><b>Market reason:</b> "Builder incentives are moving right now — we track them weekly. The free Friday email is worth reading before touring."</li>
+        <li><b>Referral (soft, last):</b> "Who do you know looking at new builds? I'd rather your people walk in prepared than get played."</li>
+      </ul>
+      <div class="footnote">Free tools first, representation second. Always.</div>
+    </div>
+  </div>
+
+  <div class="card warnbox" style="margin-top:4px">
+    <b>The one thing that must not slip today:</b> capture <b>one real field observation with a dated photo.</b> It becomes Field Note #1 and the first real dataset row — the start of the series that is the entire moat. One good capture beats five rushed ones.
+  </div>
+
+  <details>
+    <summary>Scripts — the three narratives + the follow-up text (tap to open)</summary>
+    <div class="d-body">
+      <p><b>10 seconds (the shirt answer):</b></p>
+      <blockquote>"It's called New Home Dispatch — an independent guide for new-construction buyers. Free tools, real field reporting, no builder spin. I'm Pete Seider — I built it because buyers deserve someone doing the homework on their side."</blockquote>
+      <p><b>30 seconds (the phone answer):</b></p>
+      <blockquote>"New Home Dispatch is a consumer publication for people buying new-construction homes in Central Texas. We visit the communities, track builder incentives week over week, verify the tax rates builders gloss over, and publish free tools — a true-cost calculator, an offer checker, a 25-point tour checklist. It's independent — coverage isn't for sale. If someone wants hands-on help beyond the research, that's the Seider Realty Team powered by The Ascend Group at LPT Realty — but the tools are free for everybody, no strings."</blockquote>
+      <p><b>The same-day follow-up text:</b></p>
+      <blockquote>Hey [name] — Pete Seider with New Home Dispatch. The free buyer tools I mentioned: newhomedispatch.com — the true-cost calculator, the offer checker, and the Friday email tracking builder incentives. No spam, no builder spin. Great talking to you. — Pete</blockquote>
+      <p><b>"Are you selling something?"</b> → "The publication is free and independent. If someone wants representation, my team does that separately — but the point of NHD is you don't need to hire anyone to get the truth."</p>
+      <p><b>"Why should I trust you?"</b> → "Don't — verify. Every fact is dated and sourced, unverified ones are labeled, and the corrections log is public. That's the whole model."</p>
+    </div>
+  </details>
+  <div class="footnote">Full detail: <code>production/field-day-plan-2026-07-21.md</code> · daily team board: <code>production/production-dashboard.html</code></div>
+</section>
+
+<!-- THE SPRINT -->
+<section id="sprint">
+  <div class="eyebrow mono">THE SPRINT · execute-now, in order</div>
+  <h2>The 10 highest-value actions</h2>
+  <p class="lead">Ordered by return-for-effort. "Owner" = only Pete can do it; "Team" = production. Each has a success condition and a "don't overbuild" line — because over-building is the failure mode, not under-building.</p>
+  <div class="prog"><span class="lab" id="sp-lab">0/10</span><div class="bar"><i id="sp-bar"></i></div></div>
+
+  <h3>Tier 0 — this week (unblock launch)</h3>
+  <div class="card">
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">1 · Deploy the site publicly, kill the 401 <span class="pill p-owner">Pete</span></div><div class="c-meta"><b>Success:</b> logged-out person + Googlebot reach every page. <b>Don't overbuild:</b> deploy v75 as-is, no redesign beyond it.</div></div></label>
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">2 · Search-entity fix: About page + JSON-LD + "Pete Seider" byline + request indexing <span class="pill p-team">Team</span> <span class="pill p-owner">Pete</span></div><div class="c-meta"><b>Success:</b> Google/AI describes NHD accurately, attributed to Pete Seider. <b>Don't overbuild:</b> one clean entity page, not a brand campaign.</div></div></label>
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">3 · Wire MailerLite + forms + 24-hr reply notifications <span class="pill p-owner">Pete</span></div><div class="c-meta"><b>Success:</b> a test submit → real notification → real reply. <b>Don't overbuild:</b> no drip sequences — a personal human reply is the whole mechanism.</div></div></label>
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">4 · Field week — archive real artifacts <span class="pill p-owner">Pete</span></div><div class="c-meta"><b>Success:</b> ≥5 researched→verified conversions with dated rate-sheet / MUD-PID photos archived. <b>Don't overbuild:</b> structured rows first, prose second; no field-essays.</div></div></label>
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">5 · First real Friday Dispatch — start the unbroken series <span class="pill p-owner">Pete</span></div><div class="c-meta"><b>Success:</b> real numbers, <code>sample:false</code>, Field Note #1, Scoreboard row logged. <b>Don't overbuild:</b> use the locked template; don't redesign the Dispatch.</div></div></label>
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">6 · Close the social trust leak <span class="pill p-owner">Pete</span></div><div class="c-meta"><b>Success:</b> ≥1 real post on each linked channel, or remove the footer icons. <b>Don't overbuild:</b> one post each from the existing library — no content calendar.</div></div></label>
+  </div>
+
+  <h3>Tier 1 — high impact (2–4 weeks)</h3>
+  <div class="card">
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">7 · Ship the named advisory menu at decision moments <span class="pill p-team">Team</span></div><div class="c-meta"><b>Success:</b> 5 decision-specific offers (afford review · incentive second opinion · shortlist review · pre-signing look · community second opinion) on one calendar, each at its trigger surface. <b>Don't overbuild:</b> same call, different doors — not five funnels.</div></div></label>
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">8 · Instrument the decision metrics + minimal dashboard <span class="pill p-team">Team</span></div><div class="c-meta"><b>Success:</b> by wk 3 you can read consult-submits + cadence. <b>Don't overbuild:</b> track the metrics that change decisions; exclude vanity metrics on purpose.</div></div></label>
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">9 · Start two zero-cost revenue lines: outbound referrals + a paid pre-signing review test <span class="pill p-owner">Pete</span></div><div class="c-meta"><b>Success:</b> 2–3 vetted out-of-market referral agreements logged; first paid review booked (or a clear market "no"). <b>Don't overbuild:</b> a spreadsheet + a handshake, not a partner program.</div></div></label>
+    <label class="chk" data-grp="sp"><input type="checkbox"><div class="c-body"><div class="c-title">10 · Protect the cadence with an honest weekly time log <span class="pill p-owner">Pete</span></div><div class="c-meta"><b>Success:</b> Friday cadence sustained without burnout across the 90 days. <b>Don't overbuild:</b> it's a note, not a system — but it's the existential early-warning gauge. If underwater → <b>freeze more surface, don't hire.</b></div></div></label>
+  </div>
+</section>
+
+<!-- MONEY ENGINE -->
+<section id="money">
+  <div class="eyebrow mono">MONEY ENGINE · how this actually pays</div>
+  <h2>How we make money — and the levers we&rsquo;d missed</h2>
+  <p class="lead">Read this honestly: for the next 12 months NHD is not a media company that sells things. It is a <b>trust engine whose P&amp;L is measured in incremental Seider Realty buyer-side closings.</b> Everything else is a test or a rounding error. Below is the real math, the levers ranked, and four money angles the plan hadn&rsquo;t made explicit.</p>
+
+  <div class="card accent">
+    <h3 style="margin-top:0">The only Year-1 math that matters</h3>
+    <p style="margin:6px 0"><b>Year-1 revenue ≈ (incremental new-construction buyer closings attributable to NHD) × (avg buyer-side commission per new-build deal) + outbound referral fees.</b></p>
+    <p style="margin:6px 0">You do not need thousands of readers or a viral tool. You need a modest, high-intent local audience and a single-digit-to-low-double-digit number of closings you can trace to the platform. That is the whole asymmetry that makes this viable: the content is customer acquisition for a transaction you already do — not a product that must monetize on its own. <b>So the one number to instrument from day one is attribution:</b> for every consult and every closing, log "how did this person find me?" If you can't point to NHD-sourced deals by day 90, the engine isn't running yet.</p>
+  </div>
+
+  <h3>Four money levers we hadn&rsquo;t made explicit</h3>
+  <div class="grid2">
+    <div class="card goodbox">
+      <div class="mono" style="color:var(--green)">LEVER A · highest-intent, do now</div>
+      <div class="c-title" style="font-weight:700;margin:4px 0">"Get represented before you tour"</div>
+      <p style="font-size:14px;margin:6px 0">New construction is the one purchase where a buyer's agent is <b>commonly builder-paid</b> (no direct cost to the buyer) — <i>and</i> most builder programs only credit the agent if they <b>register / accompany the buyer on the first visit.</b> Miss the first visit, lose the representation. That single rule is the cleanest editorial→representation bridge that exists. Turn it into an explicit path: <b>"Touring this weekend? Have someone on your side before you walk in — it usually costs you nothing."</b></p>
+      <p class="footnote">Caveat to state honestly on-site: post-NAR-settlement, builder co-op is now a <b>patchwork</b> — some pay fairly, some cut to flat fees, a few now push unrepresented buyers. Verify per builder. (That fragmentation is Lever D.)</p>
+    </div>
+    <div class="card goodbox">
+      <div class="mono" style="color:var(--green)">LEVER B · fastest revenue, do now</div>
+      <div class="c-title" style="font-weight:700;margin:4px 0">Reactivate your existing sphere with the Dispatch</div>
+      <p style="font-size:14px;margin:6px 0">Your fastest dollars are not a new audience — they're your <b>past clients and database</b>, kept top-of-mind by a genuinely useful Friday email and warmed by real reporting. Path 6 (referral/past-client → NHD proof → representation) is the lowest-risk, highest-conversion path and will likely produce the <b>first</b> closing. The field-day call plan already does this; the Dispatch makes it recurring and scalable without more of your time.</p>
+    </div>
+    <div class="card goodbox">
+      <div class="mono" style="color:var(--green)">LEVER C · defensible niche, build now</div>
+      <div class="c-title" style="font-weight:700;margin:4px 0">Be "the new-construction buyer's agent"</div>
+      <p style="font-size:14px;margin:6px 0">Most agents avoid or fumble new construction — the builder reps out-know them and they fear being cut out. NHD is proof you are the specialist. Two revenue effects: (1) buyers self-select to the person who obviously does this homework; (2) <b>other agents refer you their new-build buyers</b> they don't want to handle (inbound referral, or a referral fee). A niche personal brand backed by a public body of work is the durable version of "generate leads."</p>
+    </div>
+    <div class="card goodbox">
+      <div class="mono" style="color:var(--green)">LEVER D · new data asset + money wedge</div>
+      <div class="c-title" style="font-weight:700;margin:4px 0">Track builder buyer-agent policy</div>
+      <p style="font-size:14px;margin:6px 0">Because co-op is now a per-builder patchwork, <b>which builders still treat represented buyers fairly</b> is (a) genuinely useful consumer intelligence nobody publishes, (b) a structured dataset that fits the database philosophy, and (c) directly relevant to your own deal economics. It's a field-collectable data point (you're already reading rate sheets). Editorial and revenue point the same direction: steer buyers — and yourself — toward the builders that play fair, warn them off the ones that don't.</p>
+    </div>
+  </div>
+
+  <h3>Revenue models, ranked</h3>
+  <table>
+    <tr><th>Model</th><th>Time to $</th><th>Trust risk</th><th>Verdict</th></tr>
+    <tr><td><b>Buyer representation (Seider Realty, Central TX)</b></td><td>Now</td><td>Low*</td><td><span class="pill p-now">Pursue now — the business</span></td></tr>
+    <tr><td><b>Outbound referral fees</b> (relocation / out-of-market buyers)</td><td>Now</td><td>Low</td><td><span class="pill p-now">Pursue now — money walking past</span></td></tr>
+    <tr><td><b>Paid independence service</b> (flat-fee pre-signing / contract / incentive review)</td><td>1–3 mo</td><td>Low</td><td><span class="pill p-test">Test now — proves willingness to pay</span></td></tr>
+    <tr><td><b>Inbound agent referrals</b> (agents send you their new-build buyers)</td><td>3–6 mo</td><td>Low</td><td><span class="pill p-test">Test after proof of competence</span></td></tr>
+    <tr><td>Relocation / employer channel · local media cross-promo</td><td>6–12 mo</td><td>Low</td><td><span class="pill p-test">Test at ~90 days</span></td></tr>
+    <tr><td>Non-conflicted sponsors (post-close services), pro/consumer subscriptions, market reports</td><td>12+ mo</td><td>Med</td><td><span class="pill p-test">Defer — audience/data too small</span></td></tr>
+    <tr><td>Lender / title / insurance / warranty partnerships</td><td>6–12 mo</td><td>High</td><td><span class="pill p-reject">Extreme caution — RESPA + independence</span></td></tr>
+    <tr><td><b>Advertising · builder-paid placement</b></td><td>Any</td><td>Fatal</td><td><span class="pill p-reject">Reject — kills the moat</span></td></tr>
+    <tr><td>Data licensing · franchise / license the OS · employed-agent expansion</td><td>24+ mo</td><td>High</td><td><span class="pill p-reject">Reject near-term — no proof yet</span></td></tr>
+  </table>
+  <div class="card warnbox">
+    <b>The disqualifying line:</b> the entire value proposition is independence. Advertising, builder sponsorship, and preferred-vendor kickbacks monetize by destroying it. The day a builder pays for placement, the Corrections Log and adversarial incentive analysis become non-credible and the moat is gone. *Buyer representation is low-risk <b>only</b> while editorial stays visibly independent — that tension is permanent and must be managed on every page.
+  </div>
+</section>
+
+<!-- SCOREBOARD -->
+<section id="scoreboard">
+  <div class="eyebrow mono">SCOREBOARD · only metrics that change a decision</div>
+  <h2>The numbers to watch</h2>
+  <p class="lead">Follower counts and page views are <b>diagnostics, not goals.</b> Two metrics decide the business; the rest explain why they move. Fill the "current" column weekly once the site is live.</p>
+
+  <div class="kpi">
+    <div class="k"><div class="n" style="color:var(--blue)">#1</div><div class="l">Consult-form submits from real traffic — <b>does the trust engine produce opportunities at all?</b></div></div>
+    <div class="k"><div class="n" style="color:var(--blue)">#2</div><div class="l">Consult → representation → closing — <b>do those opportunities become revenue?</b></div></div>
+    <div class="k"><div class="n" style="color:var(--green)">Σ</div><div class="l">Consecutive Fridays published — <b>the moat, in one number. Protect it.</b></div></div>
+  </div>
+
+  <table>
+    <tr><th>Assumption under test</th><th>Metric</th><th>Success</th><th>Failure → decision</th></tr>
+    <tr><td>Buyers read the Dispatch</td><td>Open rate (real subs)</td><td>≥40%, list growing</td><td>&lt;25% or flat @ 8wk → rework format or question the audience</td></tr>
+    <tr><td>Buyers return</td><td>4-wk repeat visits to Scoreboard</td><td>Meaningful repeats</td><td>~0 → "habit" thesis wrong; Dispatch is a one-read</td></tr>
+    <tr><td>Buyers use the calculator</td><td>Completions / wk</td><td>Steady weekly</td><td>~0 after traffic → lean on reporting, not tools</td></tr>
+    <tr><td>Field beats generic education</td><td>Engagement: field reports vs Playbook</td><td>Field clearly higher</td><td>No diff → re-examine field format</td></tr>
+    <tr><td><b>Buyers submit contact info</b></td><td>Consult submits / wk</td><td>A handful/wk w/ traffic</td><td>0 over 4wk of real traffic → <b>highest-priority fix</b></td></tr>
+    <tr><td><b>Consults convert</b></td><td>Consult → signed rep</td><td>≥25% (state it confidently)</td><td>Consults but no conversion → fix the consult itself</td></tr>
+    <tr><td>In-person outreach drives platform</td><td>Tools sent / follow-ups from field</td><td>Pete logs regularly</td><td>Doesn't translate → fix capture (Section: Today)</td></tr>
+    <tr><td>Partners send referrals</td><td>Referrals from experiments</td><td>≥1 producing partner</td><td>None → drop the pilot</td></tr>
+    <tr><td><b>Workflow is sustainable</b></td><td>Pete's weekly time log</td><td>Cadence held, no burnout</td><td>Underwater → <b>cut surface immediately (existential)</b></td></tr>
+    <tr><td>Database stays accurate</td><td>Corrections logged + gate passing</td><td>Errors caught openly</td><td>Silent staleness → slow coverage to protect accuracy</td></tr>
+  </table>
+  <div class="card"><b>Day-90 read:</b> both #1 and #2 positive → thesis validated, shift to careful scaling. #1 zero despite traffic → value-prop/conversion broken. #1 healthy but #2 zero → the consultation experience is the problem.</div>
+</section>
+
+<!-- GUARDRAILS -->
+<section id="guardrails">
+  <div class="eyebrow mono">GUARDRAILS · what protects the sprint</div>
+  <h2>Stop-doing list + failure early-warnings</h2>
+
+  <div class="grid2">
+    <div class="card warnbox">
+      <h3 style="margin-top:0">Stop immediately</h3>
+      <ul class="tight">
+        <li><b>Stop building</b> new products, tools, calculators. Every new surface is a maintenance tax paid in the currency you have least of.</li>
+        <li><b>Stop expanding the Buyer Playbook</b> — most copyable, least differentiated. Freeze as an SEO on-ramp.</li>
+        <li><b>Stop investing in Dot</b> and native-app packaging. Low value; Dot is a trust liability. Park them.</li>
+        <li><b>Stop refining strategy docs.</b> Further planning is procrastination against the 4 switch-flips. (This doc included.)</li>
+        <li><b>Stop treating web/mobile/app as 3 projects</b> — it's one deploy + one optional packaging step.</li>
+        <li><b>Stop any motion toward market #2</b>, licensing, franchise, employed reporters, partner-agent networks. Zero gates met.</li>
+        <li><b>Stop leaving the site un-deployed.</b> The 401 is the most expensive thing on this list.</li>
+        <li><b>Stop entertaining ads / builder sponsorship / vendor kickbacks.</b> Disqualified, not "later."</li>
+        <li><b>Builder-neutral compensation, forever:</b> customary commission only — no builder-specific bonuses, spiffs, elevated co-op, "preferred builder" fees, or lender/title/insurance referral pay. If pay varied by builder, every recommendation would be compromised. (Decision record: strategy/compensation-independence-disclosure-standard.md)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Failure early-warnings (watch these)</h3>
+      <ul class="tight">
+        <li><b>Cadence breaks</b> <span class="pill p-reject">existential</span> — a missed Friday, then two. → Cut surface, never quality. <i>Most likely failure.</i></li>
+        <li><b>No demand despite launch</b> <span class="pill p-reject">existential</span> — real traffic, zero consults @ 4wk. → Fix conversion, then question the market. Don't build more.</li>
+        <li><b>Operator overload</b> <span class="pill p-reject">existential</span> — platform busy, closings zero. → Rebalance to conversations.</li>
+        <li><b>Trust compromised</b> <span class="pill p-reject">existential</span> — a "lead-gen in disguise" accusation, or a tempting conflicted check. → Must be <b>prevented</b>, rarely cured.</li>
+        <li><b>Data goes stale</b> <span class="pill p-test">manageable</span> — aging "last verified" dates. → Slow coverage to protect accuracy.</li>
+        <li><b>Too many products</b> <span class="pill p-test">manageable</span> — rising maintenance load. → Freeze and retire.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card accent"><b>Independence rule, on every page, forever:</b> the reader must encounter the <i>value</i> several times before they encounter the <i>offer</i> once. Representation appears late and contextually — never early, never repeatedly. Every form states what happens next ("a real person replies within 24 hours; no automated sequence"). The conversion system's credibility <b>is</b> the product.</div>
+</section>
+
+<!-- THE MACHINE -->
+<section id="machine">
+  <div class="eyebrow mono">THE MACHINE · so nothing gets lost</div>
+  <h2>Operating systems &amp; weekly rhythm</h2>
+  <p class="lead">Eight repeatable loops keep production going without reinventing anything. This is the index — the canonical runbook for each already exists in the project.</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h3 style="margin-top:0">Weekly rhythm</h3>
+      <ul class="tight">
+        <li><b>Mon–Thu:</b> field visits (≥1/wk) → structured rows first · database calls in outreach blocks · trade the mornings.</li>
+        <li><b>Fri 07:00 CT:</b> Weekly Dispatch — Data Console (10 min) → template → One-Sheet + repurposed assets → gate → MailerLite → log Scoreboard row.</li>
+        <li><b>Per visit (48-hr closeout):</b> post-visit flywheel — 1 field report → 1 Dispatch item → 1 social → profile updates.</li>
+        <li><b>Ongoing:</b> reply to every form within 24 hrs (personally) · log attribution on every consult · weekly time-log check.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">The 8 operating systems</h3>
+      <ul class="tight">
+        <li><b>OS-1 Weekly Dispatch</b> — Fri, Pete · <code>dispatch/weekly-dispatch-template.md</code></li>
+        <li><b>OS-2 Field Reports</b> — per visit, Pete · <code>tools/field-reporting-system-how-to-use.md</code></li>
+        <li><b>OS-3 Builder Profiles</b> — on coverage, team · <code>production-templates.md</code></li>
+        <li><b>OS-4 Community Profiles</b> — on visit, team · <code>production-templates.md</code></li>
+        <li><b>OS-5 Calculator updates</b> — monthly, team · <code>...true-cost-calculator-v2-changelog.md</code></li>
+        <li><b>OS-6 Website updates</b> — per change, team · gate 10/10, no redesigns</li>
+        <li><b>OS-7 Database updates</b> — weekly, append-only, dated, source-tagged</li>
+        <li><b>OS-8 SEO &amp; entity control</b> — per publish, Pete + team · <code>seo/seo-operating-system-and-tonight-pack.md</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <details>
+    <summary>The 4 moats getting the effort (everything else is on-ramp)</summary>
+    <div class="d-body">
+      <ul class="tight">
+        <li><b>1 · The unbroken weekly time series</b> — a year of dated Fridays no one can backfill. Costs only discipline. <b>Highest priority.</b></li>
+        <li><b>2 · The rate-sheet / MUD-PID document archive</b> — collected on-site, indexed by nobody. Free byproduct of field visits.</li>
+        <li><b>3 · The corrections + honest-uncertainty record</b> — structurally impossible for advertiser-funded competitors to copy. Costs only nerve.</li>
+        <li><b>4 · Named-source relationships + revisit deltas</b> — "model count 6→4, two reps gone." Operator-time-intensive; pace it.</li>
+      </ul>
+      <p class="footnote">Not moats (don't confuse them): the website, tools, calculators, PWA, Playbook, Dot, "brand," or the "operating system" framing. All copyable in weeks. They are the delivery surface, not the defense.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Expansion gates — the minimum before a second market is even a question</summary>
+    <div class="d-body">
+      <p>Staying Central Texas and doing it extremely well is a <b>good outcome, not a failure.</b> Do not enter a second market until ALL hold: 26+ consecutive Dispatches · a field process a second person could run · demonstrated repeat traffic + subscriber retention · steady qualified consults · a proven consult→rep rate · closings traced to the platform · known unit economics · verified (not just researched) home-market saturation · a documented conversion funnel you can state in numbers. Then choose the market by <b>observed relocation demand</b>, not by which city sounds exciting. Most realistic true-expansion model: Pete/Seider operate one adjacent Texas metro directly (preserves quality control + one brokerage footprint). Reject franchise/licensing near-term.</p>
+    </div>
+  </details>
+
+  <div style="margin:14px 0 6px"><button class="btn" onclick="copyStatus()">Copy end-of-day status</button> <span id="copied" class="footnote"></span></div>
+  <div class="footnote">Companion tools: <a href="index.html">Team hub</a> · <a href="production-board.html">Production Board</a> · <a href="../field-visit-summary.html">Visit Summary</a> · Full analysis: <code>strategy/business-conversion-expansion-stress-test-2026-07.md</code> · roadmap: <code>production/production-roadmap-2026-07-20.md</code></div>
+</section>
+
+</div>
+
+<div class="signoff">
+  <div class="lc">Look Closer<span class="dot">.</span></div>
+  <div class="msg">Turn it on. Feed it real data. Convert trust into representation. Protect Friday. Everything else compounds — or waits. <b style="color:#fff">Independent — editorial coverage is not for sale.</b> newhomedispatch.com</div>
+</div>
+
+<script>
+  // Date
+  (function(){
+    var d=new Date();
+    var opt={weekday:'long',year:'numeric',month:'long',day:'numeric'};
+    document.getElementById('today').textContent=d.toLocaleDateString('en-US',opt);
+  })();
+
+  // Checkbox progress + strike
+  function wire(grp,barId,labId){
+    var boxes=document.querySelectorAll('.chk[data-grp="'+grp+'"] input');
+    function update(){
+      var done=0;
+      boxes.forEach(function(b){
+        var row=b.closest('.chk');
+        if(b.checked){done++;row.classList.add('done');}else{row.classList.remove('done');}
+      });
+      var pct=boxes.length?Math.round(done/boxes.length*100):0;
+      document.getElementById(barId).style.width=pct+'%';
+      document.getElementById(labId).textContent=done+'/'+boxes.length;
+    }
+    boxes.forEach(function(b){b.addEventListener('change',update);});
+    update();
+  }
+  wire('cp','cp-bar','cp-lab');
+  wire('sp','sp-bar','sp-lab');
+
+  // Copy end-of-day status
+  function copyStatus(){
+    var cp=[],sp=[];
+    document.querySelectorAll('.chk[data-grp="cp"]').forEach(function(r){
+      cp.push((r.querySelector('input').checked?'[x] ':'[ ] ')+r.querySelector('.c-title').textContent.trim());
+    });
+    document.querySelectorAll('.chk[data-grp="sp"]').forEach(function(r){
+      sp.push((r.querySelector('input').checked?'[x] ':'[ ] ')+r.querySelector('.c-title').textContent.trim());
+    });
+    var d=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'});
+    var txt='NHD Sprint status — '+d+'\n\nCRITICAL PATH\n'+cp.join('\n')+'\n\nSPRINT\n'+sp.join('\n')+'\n\nField capture today: \nConsults / new subs: \nNotes: ';
+    var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy');document.getElementById('copied').textContent='Copied — paste to the team.';}
+    catch(e){document.getElementById('copied').textContent='Select-all in the box and copy.';}
+    setTimeout(function(){ta.remove();},100);
+  }
+</script>
+</body>
+</html>
