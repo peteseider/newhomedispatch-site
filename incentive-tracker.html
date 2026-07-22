@@ -1811,6 +1811,55 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
         <div class="ci-big">$20,000</div>
         <div class="ci-cap">The <b>median incentive</b> across the builder offers we track right now. Half are $20,000 or more; the largest is $35,000, the smallest $5,000. We call it the <b>Concession Index</b> &mdash; the higher it runs, the harder builders are working to move homes, and the more leverage you have at the table.</div>
       </div>
+      <div class="ci-chart" id="ci-chart">
+        <style>
+          .trk .ci-chart{border:1px solid var(--line,#E0E0E0);border-radius:2px;padding:16px 18px 12px;margin-bottom:18px;background:#fff;}
+          .trk .ci-chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
+          .trk .ci-chart-title{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:.98rem;}
+          .trk .ci-chart-updated{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--text-muted,#666);text-transform:uppercase;}
+          .trk #ci-svg{width:100%;height:150px;display:block;}
+          .trk .ci-chart-note{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;color:var(--text-muted,#666);text-transform:uppercase;margin-top:6px;}
+        </style>
+        <div class="ci-chart-head">
+          <span class="ci-chart-title">The Concession Index over time</span>
+          <span class="ci-chart-updated" id="ci-updated">Last verified &mdash;</span>
+        </div>
+        <svg id="ci-svg" viewBox="0 0 720 150" preserveAspectRatio="none" role="img" aria-label="Concession Index over time"></svg>
+        <div class="ci-chart-note" id="ci-chart-note">Verified twice daily &mdash; a new point every morning &amp; evening.</div>
+      </div>
+      <script>
+      (function(){
+        var SEED={points:[{t:"2026-07-20T17:05:00-05:00",label:"Jul 20",index:20000}],lastUpdatedLabel:"Jul 20, 2026 · 5:05 PM CT"};
+        function render(d){
+          var pts=((d&&d.points)||[]).slice().sort(function(a,b){return a.t<b.t?-1:1;});
+          if(!pts.length) return;
+          var upd=(d&&d.lastUpdatedLabel)||"";
+          var u=document.getElementById('ci-updated'); if(u&&upd) u.textContent="Last verified "+upd;
+          var svg=document.getElementById('ci-svg'); if(!svg) return;
+          var W=720,H=150,pad=28,xL=54,n=pts.length;
+          var vals=pts.map(function(p){return p.index;});
+          var min=Math.min.apply(null,vals),max=Math.max.apply(null,vals);
+          if(min===max){min=min-5000;max=max+5000;}
+          function X(i){return n<=1?W/2:xL+i*(W-xL-pad)/(n-1);}
+          function Y(v){return pad+(H-2*pad)*(1-(v-min)/(max-min));}
+          var f="";
+          [max,(max+min)/2,min].forEach(function(v){var y=Y(v);
+            f+='<line x1="'+xL+'" y1="'+y+'" x2="'+(W-pad)+'" y2="'+y+'" stroke="#EEEEEE"/>';
+            f+='<text x="'+(xL-8)+'" y="'+(y+4)+'" text-anchor="end" font-size="11" fill="#999999" font-family="Inter,sans-serif">$'+Math.round(v/1000)+'k</text>';});
+          if(n>1){var dp=pts.map(function(p,i){return (i?'L':'M')+X(i)+' '+Y(p.index);}).join(' ');
+            f+='<path d="'+dp+'" fill="none" stroke="#2B4FE0" stroke-width="2.5"/>';}
+          pts.forEach(function(p,i){
+            f+='<circle cx="'+X(i)+'" cy="'+Y(p.index)+'" r="4.5" fill="#2B4FE0"/>';
+            f+='<text x="'+X(i)+'" y="'+(Y(p.index)-12)+'" text-anchor="middle" font-size="12" font-weight="700" fill="#0A0A0A" font-family="Inter,sans-serif">$'+Math.round(p.index/1000)+'k</text>';
+            f+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="10.5" fill="#666666" font-family="monospace">'+(p.label||"")+'</text>';});
+          if(n<=1){var note=document.getElementById('ci-chart-note');
+            if(note) note.textContent="Tracking began "+((pts[0]&&pts[0].label)||"")+" — the line grows with each morning & evening sweep.";}
+          svg.innerHTML=f;
+        }
+        render(SEED);
+        fetch('/.netlify/functions/get-index',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){if(d&&d.points&&d.points.length)render(d);}).catch(function(){});
+      })();
+      </script>
       <div class="ci-stats">
         <div class="tile"><div class="ci-n">9</div><div class="ci-l">offers tracked across 8 builders and 8 Central Texas cities, re-verified twice daily</div></div>
         <div class="tile" style="border-top-color:var(--bad,#B32020);"><div class="ci-n" style="color:var(--bad,#B32020);">11</div><div class="ci-l">builders across the metro are still advertising offers <b>past their own deadline</b> &mdash; the countdown is fake</div></div>
