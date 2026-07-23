@@ -1752,7 +1752,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 </header>
 <ul class="nav-mobile" id="nav-mobile">
         <li><a href="weekly-dispatch.html" style="font-weight:800;color:#2B4FE0;">Weekly Dispatch <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">FREE · FRIDAY</span></a></li>
-        <li><a href="incentive-tracker.html" style="font-weight:800;color:#2B4FE0;">Incentive Tracker <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">MON &#183; WED</span></a></li>
+        <li><a href="incentive-tracker.html" style="font-weight:800;color:#2B4FE0;">Incentive Tracker <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">MONDAYS</span></a></li>
         <li><a href="daily-hot-sheet.html" style="font-weight:800;color:#2B4FE0;">Daily Hot Sheet <span style="font-weight:700;font-size:.68em;background:#0F2942;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">EVERY MORNING</span></a></li>
         <li><a href="start-here.html">Start Here</a></li>
         <li><a href="communities.html">Community Explorer</a></li>
@@ -1768,10 +1768,10 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 
   <!-- HERO -->
   <section class="trk-hero"><div class="wrap">
-    <div class="eyebrow">The Incentive Tracker <span style="font-weight:700;font-size:.72em;background:#2B4FE0;color:#fff;padding:2px 7px;border-radius:2px;margin-left:8px;vertical-align:middle;letter-spacing:.06em;">DATA TWICE DAILY · ISSUES MON &amp; WED</span></div>
+    <div class="eyebrow">The Incentive Tracker <span style="font-weight:700;font-size:.72em;background:#2B4FE0;color:#fff;padding:2px 7px;border-radius:2px;margin-left:8px;vertical-align:middle;letter-spacing:.06em;">DATA TWICE DAILY · NEW ISSUE MONDAYS</span></div>
     <h1>Builder incentives across Central Texas, tracked, ranked, and compared.</h1>
 <p style="margin-top:14px;font-size:0.95rem;"><a href="leverage-report.html" style="font-weight:700;color:var(--blueprint,#2B4FE0);">Have an offer in front of you? Build your Leverage Report from this data &rarr;</a></p>
-    <p class="lead">Most builder incentives are advertised once and never compared. We check them against each builder's own site twice a day, rank them by how much value actually reaches the buyer, and show which way each one is moving, so you can see what's real, what's rising, and what's about to expire before you walk into a sales office. New tracker issues publish Monday and Wednesday, and the week's key moves roll into Friday's Weekly Dispatch.</p>
+    <p class="lead">Most builder incentives are advertised once and never compared. We check them against each builder's own site twice a day, rank them by how much value actually reaches the buyer, and show which way each one is moving, so you can see what's real, what's rising, and what's about to expire before you walk into a sales office. A new tracker issue publishes every Monday, and the week's key moves roll into Friday's Weekly Dispatch.</p>
     <div class="trk-meta">
       <span>Last updated: <b id="trk-updated">…</b></span>
       <span>·</span>
@@ -1929,6 +1929,43 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
     </div>
   </section>
   <!-- CI-END -->
+
+  <!-- MOVEMENT LOG: auto-built from the sweep data. Shows every offer change
+       between Monday issues so the twice-daily checks stay visible. -->
+  <section class="blk"><div class="wrap">
+    <div class="blk-head"><h2>Movement log</h2><span class="n">Updated with every sweep</span></div>
+    <div id="trk-moves" style="border:1px solid var(--line,#E5E5E5);border-radius:2px;padding:16px 18px;background:var(--paper,#fff);font-size:.92rem;line-height:1.6;">&hellip;</div>
+    <script>
+    (function(){
+      function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+      function money(n){return '$'+Number(n).toLocaleString('en-US');}
+      function fmtD(d){var dt=new Date(d+'T12:00:00-05:00');return isNaN(dt)?d:dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+      fetch('/incentives.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(j){
+        var box=document.getElementById('trk-moves'); if(!box||!j) return;
+        var evts=[];
+        (j.records||[]).forEach(function(o){
+          var h=o.history||[];
+          for(var i=1;i<h.length;i++){
+            var up=h[i].value>h[i-1].value;
+            evts.push({d:h[i].date,html:'<b>'+esc(o.builder)+'</b> &middot; '+esc(o.community||'')+' &middot; '+money(h[i-1].value)+' &rarr; <b>'+money(h[i].value)+'</b> <span style="color:'+(up?'#1F7A43':'#B3382C')+';font-weight:700;">'+(up?'&#9650; better for buyers':'&#9660; pulled back')+'</span>'});
+          }
+        });
+        evts.sort(function(a,b){return a.d<b.d?1:-1;});
+        var stamp='';
+        fetch('/concession-index.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(ci){
+          if(ci&&ci.lastUpdatedLabel) stamp='<div style="margin-top:10px;font-size:.78rem;color:var(--text-muted,#767676);">Every offer re-verified against the builder\u2019s own site &middot; last sweep '+esc(ci.lastUpdatedLabel)+'</div>';
+          if(evts.length){
+            box.innerHTML=evts.slice(0,6).map(function(e){return '<div style="padding:6px 0;border-bottom:1px solid var(--line,#EEE);"><span style="font-family:monospace;font-size:.8rem;color:var(--text-muted,#767676);margin-right:10px;">'+fmtD(e.d)+'</span>'+e.html+'</div>';}).join('')+stamp;
+          } else {
+            var n=(j.records||[]).length;
+            box.innerHTML='No advertised-offer changes across the '+n+' tracked offers since tracking began '+fmtD(((j.records||[])[0]||{}).lastObserved||j.updated||'')+'. That stability is itself a read: builders are holding their positions, not sweetening them.'+stamp;
+          }
+        });
+      }).catch(function(){});
+    })();
+    </script>
+  </div></section>
+
 
   <!-- MARKET SUMMARY -->
   <section class="blk"><div class="wrap">

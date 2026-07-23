@@ -73,3 +73,33 @@
     document.addEventListener('click', function () { closeAllGroups(null); });
   });
 })();
+
+
+/* v118: single-source publication-schedule badges. Change the cadence HERE once
+   and every page's nav badges update at load (static HTML remains the fallback).
+   Current model: Hot Sheet daily each morning; Incentive Tracker data twice daily
+   with a new issue every Monday; key moves roll into Friday's Weekly Dispatch. */
+(function () {
+  var SCHEDULE = {
+    'daily-hot-sheet': 'EVERY MORNING',
+    'incentive-tracker': 'MONDAYS',
+    'weekly-dispatch': 'FREE · FRIDAY'
+  };
+  function apply() {
+    Object.keys(SCHEDULE).forEach(function (key) {
+      var links = document.querySelectorAll('a[href$="' + key + '.html"]');
+      Array.prototype.forEach.call(links, function (a) {
+        var spans = a.querySelectorAll('span');
+        Array.prototype.forEach.call(spans, function (sp) {
+          var t = (sp.textContent || '').trim();
+          if (t.length && t.length <= 16 && t === t.toUpperCase() && /[A-Z]/.test(t)) {
+            sp.textContent = SCHEDULE[key];
+          }
+        });
+      });
+    });
+  }
+  if (document.readyState !== 'loading') { apply(); }
+  else { document.addEventListener('DOMContentLoaded', apply); }
+  window.NHD_SCHEDULE = SCHEDULE;
+})();
