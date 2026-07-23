@@ -1948,7 +1948,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
           var _lv = function(l){ return (l||[]).filter(function(o){ if(!o.expires) return true; var k=_dk(o.expires); return !k || k >= _td; }); };
           var _all = _lv(j.records).length + _lv(j.promos).length;
           var _cm = document.getElementById('trk-count-meta');
-          if (_cm && _all) _cm.textContent = String(_all);
+          if (_cm && _all) { _cm.textContent = String(_all); window.__nhdCount = true; }
         } catch (e) {}
         var evts=[];
         (j.records||[]).forEach(function(o){
@@ -2538,7 +2538,7 @@ window.NHD_INCENTIVES = {"dates": ["2026-07-20"], "updated": "2026-07-22", "samp
   function render() { renderHead(); renderTable(); updateCmpBar(); }
   function init() {
     if (!window.__nhdSweepStamp) $('trk-updated').textContent = fmtDateShort(DATA.updated) + ', 2026';
-    $('trk-count-meta').textContent = recs.length;
+    if (!window.__nhdCount) $('trk-count-meta').textContent = recs.length;
     renderTiles(); renderTrend(); renderBest(); initFilters();
     $('cmp-clear').addEventListener('click', function () { compareSet = {}; $('cmp-panel').classList.remove('on'); render(); });
     $('cmp-go').addEventListener('click', function () { if (countCompare() < 2) { cmpMsg('Select at least 2 offers to compare.'); return; } renderComparePanel(); });
