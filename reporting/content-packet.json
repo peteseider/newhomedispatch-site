@@ -1,0 +1,54 @@
+{
+  "schema": "nhd-content-packet-v1",
+  "sweepId": "2026-07-23T17:03:12-05:00-PM",
+  "generatedAt": "2026-07-23T17:03:12-05:00",
+  "facts": {
+    "score": 74,
+    "band": "High",
+    "scoreDelta": 0,
+    "concessionIndex": 20000,
+    "offersLive": 33,
+    "buildersLive": 28,
+    "expired": 2,
+    "rateDaily": 6.85,
+    "ratePmmsWeekly": 6.58
+  },
+  "changes": {
+    "count": 4,
+    "newOffers": [
+      "Lennar",
+      "Taylor Morrison",
+      "Pulte Homes",
+      "Tri Pointe Homes"
+    ],
+    "improved": [],
+    "reduced": [],
+    "deadlinesNext7d": [
+      {
+        "builder": "Trophy Signature Homes",
+        "deadline": "2026-07-24",
+        "offer": "Rates from 1.99% (5.821% APR) FHA via 3/2/1 buydown (1.99/2.99/3.99->4.99) OR 2.99% conven"
+      },
+      {
+        "builder": "Lennar",
+        "deadline": "2026-07-26",
+        "offer": "Own Your Dream: promotional FHA FIXED 3.99% (4.785% APR) 30 year via Lennar Mortgage, exam"
+      }
+    ]
+  },
+  "interpretation": "Movement this sweep: 4 new offers (Lennar, Taylor Morrison, Pulte Homes). Market-wide score unchanged.",
+  "buyerAction": "Nearest advertised deadline: Trophy Signature Homes (2026-07-24). If that builder is on your list, get the current terms in writing today.",
+  "affectedSegments": [
+    "buyers considering: Trophy Signature Homes, Lennar",
+    "buyers purchasing within 30 days"
+  ],
+  "confidence": "All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.",
+  "sources": [
+    "incentives.json",
+    "score-history.json",
+    "concession-index.json",
+    "reporting/rate-benchmark.json",
+    "reporting/pmms.json"
+  ],
+  "publishRecommendation": "publish-watchlists"
+}
