@@ -285,7 +285,8 @@
    "expires": "",
    "source": "www.ashtonwoods.com/austin (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Community-level; affiliated lender. No deadline."
+   "note": "Community-level; affiliated lender. No deadline.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "ashton-woods",
@@ -294,7 +295,8 @@
    "expires": "",
    "source": "www.ashtonwoods.com/austin (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Zero-down badge on 5 Austin communities."
+   "note": "Zero-down badge on 5 Austin communities.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "toll-brothers",
@@ -303,7 +305,8 @@
    "expires": "",
    "source": "www.tollbrothers.com/luxury-homes-for-sale/Texas/Austin (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live. National Sales Event wrapper; likely TBI Mortgage. No date on landing page."
+   "note": "Live. National Sales Event wrapper; likely TBI Mortgage. No date on landing page.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "meritage",
@@ -312,7 +315,8 @@
    "expires": "through July 31",
    "source": "www.meritagehomes.com/state/tx/austin (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live ('Swimming in Savings'). Year not printed; current-summer framing = 2026. No dollar/rate figure."
+   "note": "Live ('Swimming in Savings'). Year not printed; current-summer framing = 2026. No dollar/rate figure.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "mi-homes",
@@ -321,7 +325,8 @@
    "expires": "June 3 – August 31, 2026",
    "source": "www.mihomes.com/new-homes/texas/greater-austin/incentives (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live. Carillon community, select homes. Also a 2026 'Bouquet of Homes' incentive page exists."
+   "note": "Live. Carillon community, select homes. Also a 2026 'Bouquet of Homes' incentive page exists.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "starlight-homes",
@@ -330,7 +335,8 @@
    "expires": "Contract 7/1–7/31/2026; close by 8/31/2026",
    "source": "www.starlighthomes.com/austin (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live. Velocio or Trailblazer Mortgage; 3.5% down, 640 FICO."
+   "note": "Live. Velocio or Trailblazer Mortgage; 3.5% down, 640 FICO.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "century-communities",
@@ -339,7 +345,8 @@
    "expires": "",
    "source": "www.centurycommunities.com/find-your-new-home/texas/austin-metro/ (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live 2026 promo named; no dollar/rate/deadline on page; detail page 404'd."
+   "note": "Live 2026 promo named; no dollar/rate/deadline on page; detail page 404'd.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "trophy-signature",
@@ -348,7 +355,8 @@
    "expires": "contract by 7/24, close by 8/28/26",
    "source": "trophysignaturehomes.com/promotion (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live 2026 promo (NOT the stale 2025 'Pick Your Savings'). Green Brick Mortgage. NOTE: targets austinUrl 404s — use /promotion."
+   "note": "Live 2026 promo (NOT the stale 2025 'Pick Your Savings'). Green Brick Mortgage. NOTE: targets austinUrl 404s — use /promotion.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "dream-finders-homes",
@@ -357,7 +365,8 @@
    "expires": "",
    "source": "dreamfindershomes.com/sales-event/ (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live national event page; no deadline stated."
+   "note": "Live national event page; no deadline stated.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "chesmar-homes",
@@ -366,7 +375,8 @@
    "expires": "",
    "source": "chesmar.com/austin/ (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live on /austin/ and /austin-incentives/. No deadline. Select homes."
+   "note": "Live on /austin/ and /austin-incentives/. No deadline. Select homes.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "sitterle-homes",
@@ -375,7 +385,8 @@
    "expires": "",
    "source": "sitterlehomes.com/final-inventory-event/ (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live price-cut event; no $ or date shown."
+   "note": "Live price-cut event; no $ or date shown.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "tilson-homes",
@@ -384,7 +395,8 @@
    "expires": "",
    "source": "www.tilsonhomes.com/easybuy-financing/ (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live standing build-on-lot financing program, not a limited promo."
+   "note": "Live standing build-on-lot financing program, not a limited promo.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "regency-toll-brothers",
@@ -393,7 +405,8 @@
    "expires": "",
    "source": "www.tollbrothers.com/regency/Austin-TX (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live buydown alongside the expired design-options offer. 55+."
+   "note": "Live buydown alongside the expired design-options offer. 55+.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "lennar",
@@ -402,7 +415,8 @@
    "expires": "2026-07-26",
    "source": "https://www.lennar.com/new-homes/texas/austin-central-texas/promo/sanlen_aus_oydq326",
    "observed": "2026-07-23",
-   "note": "A true 30 year fixed promotional rate, not a first year teaser. Sign 7/22 to 7/26/26, close and fully fund by 8/31/26. Requires Lennar Mortgage. Not combinable. UPGRADED 7/23 from the unverified 7/20 placeholder after reading the offer terms on Lennar own promo page."
+   "note": "A true 30 year fixed promotional rate, not a first year teaser. Sign 7/22 to 7/26/26, close and fully fund by 8/31/26. Requires Lennar Mortgage. Not combinable. UPGRADED 7/23 from the unverified 7/20 placeholder after reading the offer terms on Lennar own promo page.",
+   "firstObserved": "2026-07-23"
   },
   {
    "builderSlug": "stylecraft",
@@ -411,7 +425,8 @@
    "expires": "",
    "source": "www.stylecraft.com/new-homes/tx/georgetown/rancho-san-gabriel/ (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "NEW builder (not yet tracked/on site). 4.99% confirmed on stylecraft.com. FB flyer's '$20,000 Your Way', 'closing costs covered', 'through July 31' NOT on site — lead only."
+   "note": "NEW builder (not yet tracked/on site). 4.99% confirmed on stylecraft.com. FB flyer's '$20,000 Your Way', 'closing costs covered', 'through July 31' NOT on site — lead only.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "tri-pointe",
@@ -420,7 +435,8 @@
    "expires": "Contract before 7/31/2026; close by 8/28/2026",
    "source": "www.tripointehomes.com/promotion/tx/austin (builder-advertised)",
    "observed": "2026-07-23",
-   "note": "Re-verified 7/23: full Live Brilliantly slate now captured per community. Union remains $15K/1yr HOA (was $25K/3yr baseline earlier in July, that richer package now runs at Park Central main collection). Requires Tri Pointe Connect financing for full value. No expiration posted on the promotions page; original Union copy said contract by 7/31/26."
+   "note": "Re-verified 7/23: full Live Brilliantly slate now captured per community. Union remains $15K/1yr HOA (was $25K/3yr baseline earlier in July, that richer package now runs at Park Central main collection). Requires Tri Pointe Connect financing for full value. No expiration posted on the promotions page; original Union copy said contract by 7/31/26.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "express-homes",
@@ -429,7 +445,8 @@
    "expires": "contracts Mar 22–Dec 31 2026; close by Jan 31 2027",
    "source": "www.drhorton.com/texas/austin/manor/palomino (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live through Dec 31 2026. DRH-branded (Express = DRH entry line). Not yet tied to a specific tracked community/profile — tracked here as a builder-level claim pending field verification."
+   "note": "Live through Dec 31 2026. DRH-branded (Express = DRH entry line). Not yet tied to a specific tracked community/profile — tracked here as a builder-level claim pending field verification.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "empire-communities",
@@ -438,7 +455,8 @@
    "expires": "",
    "source": "empirehomes.com/us/texas/austin (builder-advertised)",
    "observed": "2026-07-23",
-   "note": "Re-verified 7/23. Framed as included-features value, not cash. Contingent on Empire's preferred lender. No expiration date posted. Communities listed: Adelton (Bastrop), Cool Water (Jarrell), Double Eagle Ranch (Cedar Creek), Flora (Hutto), Goodnight Ranch (Austin)."
+   "note": "Re-verified 7/23. Framed as included-features value, not cash. Contingent on Empire's preferred lender. No expiration date posted. Communities listed: Adelton (Bastrop), Cool Water (Jarrell), Double Eagle Ranch (Cedar Creek), Flora (Hutto), Goodnight Ranch (Austin).",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "terrata-homes",
@@ -447,7 +465,8 @@
    "expires": "",
    "source": "www.terratahomes.com/texas/austin (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live summer event; select communities; not combinable. Not yet tied to a specific tracked community/profile — tracked here as a builder-level claim pending field verification."
+   "note": "Live summer event; select communities; not combinable. Not yet tied to a specific tracked community/profile — tracked here as a builder-level claim pending field verification.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "scott-felder-homes",
@@ -456,7 +475,8 @@
    "expires": "",
    "source": "www.scottfelderhomes.com/communities/austin-area (builder-advertised)",
    "observed": "2026-07-23",
-   "note": "Re-verified 7/23. 6% Your Way expanded from Blackhawk-only at 7/20 baseline to four communities, that is a real widening of the concession footprint. Asterisked terms; no dates shown. Builder-level claim pending field verification."
+   "note": "Re-verified 7/23. 6% Your Way expanded from Blackhawk-only at 7/20 baseline to four communities, that is a real widening of the concession footprint. Asterisked terms; no dates shown. Builder-level claim pending field verification.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "united-built-homes",
@@ -465,7 +485,8 @@
    "expires": "",
    "source": "ubh.com/locations/texas/austin/ (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live 2026 cash-back promo (build-on-lot). No date shown. Not yet tied to a specific tracked community/profile — tracked here as a builder-level claim pending field verification."
+   "note": "Live 2026 cash-back promo (build-on-lot). No date shown. Not yet tied to a specific tracked community/profile — tracked here as a builder-level claim pending field verification.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "dr-horton",
@@ -474,7 +495,8 @@
    "expires": "contracts Mar 22–Dec 31 2026; close by Jan 31 2027",
    "source": "www.drhorton.com/texas/austin/georgetown/riverview (builder-advertised)",
    "observed": "2026-07-20",
-   "note": "Live through Dec 31 2026 (community-level). Same page's $65K flex + 3.99% FHA offers are EXPIRED (close by June 30 2026). Community-specific (not one of our tracked Larkspur/Anthem communities) — tracked here pending review."
+   "note": "Live through Dec 31 2026 (community-level). Same page's $65K flex + 3.99% FHA offers are EXPIRED (close by June 30 2026). Community-specific (not one of our tracked Larkspur/Anthem communities) — tracked here pending review.",
+   "firstObserved": "2026-07-20"
   },
   {
    "builderSlug": "taylor-morrison",
@@ -483,7 +505,8 @@
    "expires": "",
    "source": "https://www.taylormorrison.com/make-moves/austin",
    "observed": "2026-07-23",
-   "note": "The flex cash toward options path is NOT lender tied, which is unusual. The buydown/closing cost path requires Taylor Morrison Home Funding. Amounts vary by community; no hard expiration advertised. Verified on TM own regional offer page."
+   "note": "The flex cash toward options path is NOT lender tied, which is unusual. The buydown/closing cost path requires Taylor Morrison Home Funding. Amounts vary by community; no hard expiration advertised. Verified on TM own regional offer page.",
+   "firstObserved": "2026-07-23"
   },
   {
    "builderSlug": "pulte",
@@ -492,7 +515,8 @@
    "expires": "2026-07-31",
    "source": "https://www.pulte.com/homes/texas/austin",
    "observed": "2026-07-23",
-   "note": "Total percentage and dollar amount vary by home. Seller contribution toward rate promo and closing costs is capped at agency limits of 3 to 6 percent depending on loan program and down payment. Verified on Pulte own Austin page disclaimer."
+   "note": "Total percentage and dollar amount vary by home. Seller contribution toward rate promo and closing costs is capped at agency limits of 3 to 6 percent depending on loan program and down payment. Verified on Pulte own Austin page disclaimer.",
+   "firstObserved": "2026-07-23"
   },
   {
    "builderSlug": "tri-pointe",
@@ -501,7 +525,8 @@
    "expires": "",
    "source": "www.tripointehomes.com/promotion/tx/austin (builder-advertised)",
    "observed": "2026-07-23",
-   "note": "Promotional buydown via Tri Pointe Connect. Advertised as-low-as rate; APR varies by community. No expiration posted. Separate from the closing-credit slate tracked in the companion entry."
+   "note": "Promotional buydown via Tri Pointe Connect. Advertised as-low-as rate; APR varies by community. No expiration posted. Separate from the closing-credit slate tracked in the companion entry.",
+   "firstObserved": "2026-07-23"
   },
   {
    "builderSlug": "milestone",
@@ -510,7 +535,8 @@
    "expires": "2026-05-15",
    "source": "www.mymilestone.com/blue-ribbon-sales-event (builder-advertised)",
    "observed": "2026-07-23",
-   "note": "FLAGGED: the posted terms required contract on/after 4/16/26 and closing by 5/15/26 (FHA Yellow Ribbon variant by 5/30/26), so the advertised window ended over two months ago yet the event is still promoted on the homepage. Classic expired-but-displayed. Treat the 4.50% as an opening ask, not a live offer. Also note it is an ARM: fixed 7 years, adjusts every 6 months after."
+   "note": "FLAGGED: the posted terms required contract on/after 4/16/26 and closing by 5/15/26 (FHA Yellow Ribbon variant by 5/30/26), so the advertised window ended over two months ago yet the event is still promoted on the homepage. Classic expired-but-displayed. Treat the 4.50% as an opening ask, not a live offer. Also note it is an ARM: fixed 7 years, adjusts every 6 months after.",
+   "firstObserved": "2026-07-23"
   }
  ],
  "promosUpdated": "2026-07-23"

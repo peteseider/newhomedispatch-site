@@ -131,6 +131,53 @@
   footer.foot{margin-top:38px;background:var(--navy);padding:26px 24px;border-top:2px solid var(--blueprint);text-align:center;}
   footer.foot .wm{justify-content:center;font-size:19px;margin-bottom:8px;}
   .foot-legal{color:var(--on-navy);font-size:11.5px;max-width:680px;margin:10px auto 0;line-height:1.6;}
+
+  /* v121 */
+  html{scroll-behavior:smooth;}
+  #buying-power,#watchlist,#news{scroll-margin-top:64px;}
+  .ss-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);font-size:13px;}
+  .ss-row:last-child{border-bottom:none;}
+  .ss-row .k2{color:#333;}
+  .ss-row .v{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12.5px;text-align:right;white-space:nowrap;}
+  .ss-row .d{font-family:'IBM Plex Mono',monospace;font-size:11px;text-align:right;white-space:nowrap;min-width:74px;}
+  .ss-up{color:var(--good);}.ss-down{color:var(--bad);}.ss-flat{color:var(--muted);}.ss-na{color:#9a9a9a;font-style:italic;}
+  .ss-line{padding:11px 16px;background:#F7F9FF;border-top:1px solid #D6DEF5;font-size:13px;color:#243b63;line-height:1.55;}
+  .bpc{font-size:12px;font-weight:700;border:1px solid #C7CBD4;background:#fff;color:#333;border-radius:14px;padding:4px 11px;cursor:pointer;}
+  .bpc.on{background:var(--navy);border-color:var(--navy);color:#fff;}
+  #bp-custom{width:90px;font-size:12.5px;padding:4px 8px;border:1px solid #C7CBD4;border-radius:4px;display:none;font-family:inherit;}
+  .sens{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;flex-wrap:wrap;}
+  .sens .s1{flex:1;min-width:96px;padding:10px 12px;border-right:1px solid var(--line);}
+  .sens .s1:last-child{border-right:none;}
+  .sens .r1{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);}
+  .sens .p1{font-weight:800;font-size:15.5px;letter-spacing:-.02em;margin-top:2px;}
+  .bd-tbl{width:100%;border-collapse:collapse;font-size:12.5px;border:1px solid var(--line);}
+  .bd-tbl th{background:var(--paper-alt);color:#333;font-size:10px;padding:7px 9px;border-bottom:1px solid var(--line);text-align:right;}
+  .bd-tbl th:first-child{text-align:left;}
+  .bd-tbl td{padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-size:12px;text-align:right;border-bottom:1px solid var(--line);}
+  .bd-tbl td:first-child{text-align:left;}
+  .bd-tbl tr:last-child td{border-bottom:none;}
+  .wl-tools{display:flex;gap:12px;align-items:center;margin-top:10px;flex-wrap:wrap;}
+  .wl-clear{font-size:11.5px;font-weight:600;color:var(--bad);background:none;border:none;cursor:pointer;text-decoration:underline;padding:0;}
+  .news-card{border:1px solid var(--line);border-left:4px solid var(--blueprint);border-radius:0 8px 8px 0;background:#fff;padding:18px 20px;}
+  .news-kicker{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);line-height:1.6;}
+  .news-h{font-weight:800;font-size:17px;line-height:1.3;margin:6px 0 8px;}
+  .news-h a{color:var(--ink);text-decoration:none;}
+  .news-h a:hover{color:var(--blueprint);}
+  .news-p{font-size:13.5px;color:#333;line-height:1.6;margin-bottom:10px;}
+  .news-tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--blueprint);letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+  .news-meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#9a9a9a;margin-top:10px;line-height:1.6;}
+  #dl-table td{word-break:break-word;}
+  @media(max-width:480px){
+    #dl-table tr:first-child{display:none;}
+    #dl-table, #dl-table tbody, #dl-table tr, #dl-table td{display:block;width:100%;}
+    #dl-table tr{border-bottom:1px solid var(--line);padding:10px 12px;}
+    #dl-table td{border:none;padding:2px 0;}
+    #dl-table td:first-child{font-size:14px;}
+    .deadline{white-space:normal;}
+    .rank-head,.rank-row{grid-template-columns:22px 1fr 42px 66px;gap:8px;}
+    .rank-trend{font-size:9.5px;}
+    .rank-score{font-size:1.25rem;}
+  }
 </style>
 </head>
 <body>
@@ -158,6 +205,17 @@
     <div style="margin-top:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:#8fa8d9;text-transform:uppercase;">Published every morning · Tracker issue Mondays · Weekly Dispatch Fridays</div>
   </header>
 
+  <div id="wl-alert" style="display:none;margin:14px 24px 0;"></div>
+
+  <div style="padding:16px 24px 0;">
+    <div class="kick" style="margin-top:0;">▸ Since the last sweep <span class="r" id="ss-when">change history accruing</span></div>
+    <div class="rule"></div>
+    <div id="since-sweep" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
+      <div style="padding:13px 16px;color:var(--muted);font-size:12.5px;">Change history is accumulating. Comparison begins after the next verified sweep.</div>
+    </div>
+  </div>
+
+
   <div class="score">
     <div class="score-dial">
       <div class="score-num">74</div>
@@ -177,25 +235,80 @@
     <div class="sig warnc"><b id="sig-str">1 in 3</b><span>Offers with no lender strings, protect the rest</span></div>
   </div>
   <p class="disclose">One market-wide index, built transparently from the signals above (v0.1 public-signal model, see methodology). It is a read of buyer leverage, not a prediction or financial advice.</p>
-  <div style="padding:8px 24px 0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:#7d7d7d;line-height:1.5;">COVERAGE · <span id="cov-counts">35 offers tracked across 23 builders</span> · <span id="cov-exp">14 expired flagged</span> · re-verified <span id="cov-time">09:27 PM CT</span> · score confidence: <b style="color:var(--warn);">Moderate</b> (public-signal model, pre-MLS). Change-vs-prior-sweep begins once score history accrues.</div>
+  <div style="padding:8px 24px 0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:#7d7d7d;line-height:1.5;">COVERAGE · <span id="cov-counts">35 offers tracked across 23 builders</span> · <span id="cov-exp">14 expired flagged</span> · re-verified <span id="cov-time">09:27 PM CT</span> · score confidence: <b style="color:var(--warn);">Moderate</b> (public-signal model, pre-MLS). Change vs the prior sweep is reported at the top of this page.</div>
 
-  <div style="padding:18px 24px 0;">
+  <div class="pad">
+
+    <div class="kick" id="watchlist">▸ Your watchlist <span class="r">personalized · saved on this device</span></div>
+    <div class="rule"></div>
+    <div class="wl">
+      <p class="wl-intro"><b>Don't read every builder. Track yours.</b> Pick the builders you're considering, you'll open straight to what changed for them. Selections stay in your browser on this device, no account needed.</p>
+      <div class="picker" id="picker"></div>
+      <div class="wl-panel" id="wlPanel"></div>
+      <div class="wl-count" id="wlCount"></div>
+      <div class="wl-tools"><button type="button" class="wl-clear" id="wlClear" style="display:none;">Clear watchlist</button></div>
+      <a id="wlCta" href="preference-center.html" style="display:none;margin-top:14px;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:12px 18px;border-radius:5px;text-align:center;">Get changes for these builders by email →</a>
+    </div>
+
+    <div class="kick">▸ Today's one move</div>
+    <div class="rule"></div>
+    <div class="move">
+      <div class="l">The nearest hard deadline on the board</div>
+      <p id="one-move"><span class="hl">Trophy Signature's 1.99% first-year buydown ends Friday, July 24</span>, the single offer forcing a decision in the next seven days. If a Trophy home is on your list, get written terms today. Everything else runs to July 31 or later.</p>
+    </div>
+
+  </div>
+
+  <div style="padding:18px 24px 0;" id="buying-power">
     <div class="kick">▸ Today's rate and your buying power <span class="r">matters to every buyer</span></div>
     <div class="rule"></div>
     <div style="display:flex;gap:14px;flex-wrap:wrap;">
       <div style="flex:1;min-width:150px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
         <div style="font-size:30px;font-weight:800;letter-spacing:-.02em;" id="rate-now">6.77%</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.5;">30 yr fixed today<br><span id="rate-asof" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;">Mortgage News Daily · Jul 22</span></div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;">30 yr fixed · daily market index<br><span id="rate-asof" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;">Mortgage News Daily · Jul 22</span></div>
+        <div style="font-size:10.5px;color:#9a9a9a;margin-top:7px;line-height:1.45;">An index of average lender pricing, updated daily. Not a quote: your rate depends on credit, loan type, and points.</div>
       </div>
-      <div style="flex:2;min-width:230px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
-        <div style="font-size:12.5px;color:var(--muted);margin-bottom:6px;">What a <b>$2,600/mo</b> payment carries on a true 30 year fixed:</div>
-        <div style="font-size:14px;padding:3px 0;">at <b id="carry-r0">6.77%</b> → <b id="carry-v0">~$400,000</b> of home</div>
-        <div style="font-size:14px;padding:3px 0;">at <b id="carry-r1">5.77%</b> → <b id="carry-v1">~$444,000</b> of home <span id="carry-plus" style="color:#1F7A43;font-weight:800;">+$44K</span></div>
-        <div style="font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5;">Every 1 point on a real 30 year rate is about 10 percent of buying power. Builder teasers (1.99%, 2.99%) usually reset after year one. Verify the term in writing.</div>
+      <div style="flex:2;min-width:252px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
+        <div style="font-size:12.5px;color:var(--muted);margin-bottom:8px;">What a monthly <b>principal and interest</b> budget of <b id="bp-budget-lab">$2,600/mo</b> carries on a true 30 year fixed:</div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px;align-items:center;" id="bp-chips">
+          <button type="button" class="bpc" data-b="2000">$2,000</button>
+          <button type="button" class="bpc on" data-b="2600">$2,600</button>
+          <button type="button" class="bpc" data-b="3200">$3,200</button>
+          <button type="button" class="bpc" data-b="custom">Custom</button>
+          <input id="bp-custom" type="number" min="500" max="20000" step="100" placeholder="$/mo" aria-label="Custom monthly principal and interest budget">
+        </div>
+        <div id="bp-rows">
+          <div style="font-size:14px;padding:2.5px 0;">at <b id="carry-r0">6.77%</b> today → <b id="carry-v0">~$400,000</b> of loan</div>
+          <div style="font-size:14px;padding:2.5px 0;">at <b id="carry-r1">6.27%</b> → <b id="carry-v1">~$421,000</b> <span id="carry-p1" style="color:var(--good);font-weight:800;">+$21K</span></div>
+          <div style="font-size:14px;padding:2.5px 0;">at <b id="carry-r2">5.77%</b> → <b id="carry-v2">~$444,000</b> <span id="carry-p2" style="color:var(--good);font-weight:800;">+$44K</span></div>
+          <div style="font-size:14px;padding:2.5px 0;">at <b id="carry-r3">7.27%</b> → <b id="carry-v3">~$381,000</b> <span id="carry-p3" style="color:var(--bad);font-weight:800;">−$19K</span></div>
+        </div>
+        <div style="font-size:11px;color:var(--muted);margin-top:7px;line-height:1.5;">Loan amount only, principal and interest. Taxes, insurance, HOA, and mortgage insurance are on top. Builder teasers (1.99%, 2.99%) usually reset after year one; verify the term in writing.</div>
       </div>
       <div style="flex:1;min-width:150px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
         <div style="font-size:24px;font-weight:800;letter-spacing:-.02em;" id="floor-val">$199,990</div>
         <div style="font-size:12px;color:var(--muted);line-height:1.5;">entry level new-construction price floor<br><span id="floor-note" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;">Waterstone Village · Kyle</span></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;">
+      <div style="flex:1.1;min-width:240px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Payment sensitivity · $400,000 loan · P&amp;I only</div>
+        <div class="sens">
+          <div class="s1"><div class="r1">at 6.00%</div><div class="p1" id="sens-0">$2,398</div></div>
+          <div class="s1"><div class="r1">at 6.50%</div><div class="p1" id="sens-1">$2,528</div></div>
+          <div class="s1"><div class="r1">at 7.00%</div><div class="p1" id="sens-2">$2,661</div></div>
+        </div>
+        <div style="font-size:10.5px;color:#9a9a9a;margin-top:5px;line-height:1.5;">Every half point is roughly $130/mo on this loan. Two lender quotes can differ by more than a week of rate movement.</div>
+      </div>
+      <div style="flex:1.6;min-width:280px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Temporary vs permanent rate · $400,000 loan at today's index</div>
+        <table class="bd-tbl">
+          <tr><th>Structure</th><th>Year 1</th><th>Year 2</th><th>Year 3+</th></tr>
+          <tr><td style="font-family:Inter,sans-serif;font-weight:600;">Permanent rate</td><td id="bd-p1">$2,600</td><td id="bd-p2">$2,600</td><td id="bd-p3">$2,600</td></tr>
+          <tr><td style="font-family:Inter,sans-serif;font-weight:600;">2-1 buydown</td><td id="bd-a1">$2,091</td><td id="bd-a2">$2,339</td><td id="bd-a3">$2,600</td></tr>
+          <tr><td style="font-family:Inter,sans-serif;font-weight:600;">1-0 buydown</td><td id="bd-b1">$2,339</td><td id="bd-b2">$2,600</td><td id="bd-b3">$2,600</td></tr>
+        </table>
+        <div style="font-size:10.5px;color:#9a9a9a;margin-top:5px;line-height:1.5;">A temporary buydown discounts years one and two only, then the payment steps up to the full rate. Illustration at today's index. Never treat a year one payment as the permanent cost; a permanent buydown or a price cut can be worth more over time.</div>
       </div>
     </div>
   </div>
@@ -211,29 +324,12 @@
 
   <div class="pad">
 
-    <div class="kick">▸ Your watchlist <span class="r">personalized</span></div>
-    <div class="rule"></div>
-    <div class="wl">
-      <p class="wl-intro"><b>Don't read every builder. Track yours.</b> Pick the builders you're considering, you'll open straight to what changed for them.</p>
-      <div class="picker" id="picker"></div>
-      <div class="wl-panel" id="wlPanel"></div>
-      <div class="wl-count" id="wlCount"></div>
-      <a id="wlCta" href="preference-center.html" style="display:none;margin-top:14px;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:12px 18px;border-radius:5px;text-align:center;">Get changes for these builders by email →</a>
-    </div>
-
     <div class="kick">▸ Builder opportunity rankings <span class="r">who's most motivated</span></div>
     <div class="rule"></div>
     <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">A separate read from the market index above: how motivated <em>each builder</em> looks right now, from credit size, structure, deadline pressure, and today's movement. Higher = more room at the table. <a href="methodology-buyer-advantage-score.html#builder">How it's scored ↗</a> · our transparent read, not an endorsement.</p>
     <div class="rank">
       <div class="rank-head"><span>#</span><span>Builder</span><span>Score</span><span>Today</span></div>
       <div id="rankList"></div>
-    </div>
-
-    <div class="kick">▸ Today's one move</div>
-    <div class="rule"></div>
-    <div class="move">
-      <div class="l">The nearest hard deadline on the board</div>
-      <p id="one-move"><span class="hl">Trophy Signature's 1.99% first-year buydown ends Friday, July 24</span>, the single offer forcing a decision in the next seven days. If a Trophy home is on your list, get written terms today. Everything else runs to July 31 or later.</p>
     </div>
 
     <div class="kick">▸ Real vs. theater</div>
@@ -254,6 +350,15 @@
       <tr><td><b>Pacesetter</b></td><td>4.99% FHA/VA/USDA or 5.5% conv. + up to $10K closing</td><td class="deadline">Aug 3</td></tr>
     </table>
     <p style="font-size:12.5px;color:var(--muted);margin-top:10px;">Want the full detail, every offer, filters, history, builder pages? That lives in the <a href="incentive-tracker.html">Incentive Tracker</a>. This sheet is the five-minute decision; the Tracker is the database behind it.</p>
+
+    
+    <div class="kick" id="news">▸ What changed beyond the sales office <span class="r">curated · one story max</span></div>
+    <div class="rule"></div>
+    <div id="news-box">
+      <div class="wl-empty" style="border:1px solid var(--line);border-radius:8px;">No qualifying story today. We only run an item when it clears our buyer relevance bar; most days the sales office is the only thing that changed.</div>
+    </div>
+    <p style="font-size:11px;color:#9a9a9a;margin-top:8px;line-height:1.6;">A story appears here only when it may materially change affordability, financing, supply, taxes, insurance, infrastructure, schools, builder behavior, or buyer timing in Central Texas, and scores at least 70/100 on our published relevance model (locality 30, buyer impact 25, new-construction connection 20, recency 15, source quality 10). Every item links and credits the original publisher.</p>
+
 
     <div class="kick">▸ Built in house, sharpened every sweep <span class="r">proprietary</span></div>
     <div class="rule"></div>
@@ -309,29 +414,37 @@
 (function(){
   // Builder Opportunity Score v0.1, reproducible public-signal model (see /methodology-buyer-advantage-score.html#builder):
   //   40% credit size · 25% deadline pressure · 20% today's movement · 15% string-free. Higher = more motivated.
+  // canon = the exact builder name used by incentives.json / the Incentive Tracker,
+  // so watchlist selections join cleanly against the live dataset.
   var builders = [
-    {slug:'david-weekley', name:'David Weekley', score:74, trend:'flat', trendTxt:'► Stable',
+    {slug:'david-weekley', canon:'David Weekley', name:'David Weekley', score:74, trend:'flat', trendTxt:'► Stable',
      why:'Up to $50K or a 2.99% start on a hard July 31 deadline, the largest dated credit on the board.',
      status:{cls:'s-warn', txt:'⚠ Ends Jul 31'}, sub:'50th-Anniversary event'},
-    {slug:'empire', name:'Empire Communities', score:74, trend:'rise', trendTxt:'▲ Rising',
+    {slug:'empire', canon:'Empire Communities', name:'Empire Communities', score:74, trend:'rise', trendTxt:'▲ Rising',
      why:'A broad "up to $50K" plus a $133K cut on one aging spec, new today, two large credits appearing at once.',
      status:{cls:'s-up', txt:'▲ New incentive today'}, sub:'up to $50K + $133K spec cut'},
-    {slug:'brohn', name:'Brohn Homes', score:66, trend:'flat', trendTxt:'► Stable',
+    {slug:'brohn', canon:'Brohn Homes', name:'Brohn Homes', score:66, trend:'flat', trendTxt:'► Stable',
      why:'Up to $40K off + flex cash on a July 31 clock. Lender-tied (CMG), so protect the rate.',
      status:{cls:'s-flat', txt:'► $40K · ends Jul 31'}, sub:'up to $40K off + flex'},
-    {slug:'ashton', name:'Ashton Woods', score:61, trend:'rise', trendTxt:'▲ Rising',
+    {slug:'ashton', canon:'Ashton Woods', name:'Ashton Woods', score:61, trend:'rise', trendTxt:'▲ Rising',
      why:'A $118K cut on one featured home plus $10K at Cordova Trails, spec-clearing, not community-wide. No lender requirement.',
      status:{cls:'s-up', txt:'▲ $118K spec cut confirmed'}, sub:'featured-home reductions'},
-    {slug:'trophy', name:'Trophy Signature', score:53, trend:'flat', trendTxt:'► Stable',
+    {slug:'trophy', canon:'Trophy Signature Homes', name:'Trophy Signature', score:53, trend:'flat', trendTxt:'► Stable',
      why:'A 1.99% first-year buydown with a Friday July 24 contract deadline, the hardest short-term push on the board.',
      status:{cls:'s-warn', txt:'⚠ Ends Fri Jul 24'}, sub:'1.99% first-year buydown'},
-    {slug:'perry', name:'Perry Homes', score:52, trend:'flat', trendTxt:'► Stable',
+    {slug:'perry', canon:'Perry Homes', name:'Perry Homes', score:52, trend:'flat', trendTxt:'► Stable',
      why:'Biggest standing credit ($35K, no deadline), steady leverage, but no urgency signal today.',
      status:{cls:'s-flat', txt:'► No change'}, sub:'up to $35K, no deadline'}
   ];
+  var LS = 'nhdWatchV1';
   var watch = {};
+  try { watch = JSON.parse(localStorage.getItem(LS) || '{}') || {}; } catch(e) { watch = {}; }
+  var liveStatus = {};   // canon name -> {cls, txt, sub} from the latest sweep data
+  var extra = [];        // canon names beyond the curated six, added once live data lands
   function el(id){return document.getElementById(id);}
   function track(n,p){try{window.NHD&&NHD.trackEvent&&NHD.trackEvent(n,p||{});}catch(e){}}
+  function save(){ try { localStorage.setItem(LS, JSON.stringify(watch)); } catch(e){} }
+  function escA(x){ return String(x==null?'':x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
   el('rankList').innerHTML = builders.map(function(b,i){
     return '<div class="rank-row"><span class="n">'+(i+1)+'</span>'+
@@ -340,39 +453,79 @@
       '<span class="rank-trend t-'+b.trend+'">'+b.trendTxt+'</span></div>';
   }).join('');
 
-  el('picker').innerHTML = builders.map(function(b){
-    return '<button type="button" class="pick" data-s="'+b.slug+'">'+b.name+'<span class="x" style="display:none;">×</span></button>';
-  }).join('');
-
+  function chipHtml(canon, label){
+    return '<button type="button" class="pick'+(watch[canon]?' on':'')+'" data-s="'+escA(canon)+'">'+escA(label)+'<span class="x" style="display:'+(watch[canon]?'inline':'none')+';">×</span></button>';
+  }
+  function renderPicker(){
+    var html = builders.map(function(b){ return chipHtml(b.canon, b.name); });
+    extra.forEach(function(c){ html.push(chipHtml(c, c)); });
+    el('picker').innerHTML = html.join('');
+  }
+  function statusFor(canon){
+    var b = builders.filter(function(x){ return x.canon === canon; })[0];
+    if (liveStatus[canon]) {
+      var s = liveStatus[canon];
+      return {name: b ? b.name : canon, sub: s.sub || (b ? b.sub : ''), status: {cls: s.cls, txt: s.txt}};
+    }
+    if (b) return {name: b.name, sub: b.sub, status: b.status};
+    return {name: canon, sub: '', status: {cls:'s-flat', txt:'► No change today'}};
+  }
   function renderWatch(){
-    var chosen = builders.filter(function(b){return watch[b.slug];});
+    var chosen = Object.keys(watch).filter(function(k){ return watch[k]; }).map(statusFor);
     var panel = el('wlPanel');
     var cta = el('wlCta');
+    var clr = el('wlClear');
     if(!chosen.length){
-      panel.innerHTML = '<div class="wl-empty">Pick your builders above ↑, your morning view appears here.</div>';
-      el('wlCount').textContent=''; if(cta)cta.style.display='none'; return;
+      panel.innerHTML = '<div class="wl-empty">Pick your builders above ↑, your morning view appears here. Saved on this device only.</div>';
+      el('wlCount').textContent=''; if(cta)cta.style.display='none'; if(clr)clr.style.display='none';
+      renderAlert(); return;
     }
     var order = {'s-warn':0,'s-up':1,'s-down':2,'s-flat':3};
     chosen.sort(function(a,b){return order[a.status.cls]-order[b.status.cls];});
     panel.innerHTML = chosen.map(function(b){
-      return '<div class="wl-row"><div class="wl-b">'+b.name+'<small>'+b.sub+'</small></div>'+
+      return '<div class="wl-row"><div class="wl-b">'+escA(b.name)+'<small>'+escA(b.sub)+'</small></div>'+
         '<div class="wl-status '+b.status.cls+'">'+b.status.txt+'</div></div>';
     }).join('');
     var warns = chosen.filter(function(b){return b.status.cls==='s-warn';}).length;
     el('wlCount').textContent = chosen.length+' tracked'+(warns?' · '+warns+' need attention this week':' · nothing urgent');
-    if(cta){cta.style.display='block';cta.href='preference-center.html?builders='+chosen.map(function(b){return b.slug;}).join(',');}
+    if(cta){cta.style.display='block';cta.href='preference-center.html?builders='+Object.keys(watch).filter(function(k){return watch[k];}).map(encodeURIComponent).join(',');}
+    if(clr)clr.style.display='inline';
+    renderAlert();
   }
+  function renderAlert(){
+    var a = el('wl-alert'); if (!a) return;
+    var watched = Object.keys(watch).filter(function(k){ return watch[k]; });
+    if (!watched.length || !Object.keys(liveStatus).length) { a.style.display='none'; return; }
+    var n = watched.filter(function(c){ var s = liveStatus[c]; return s && s.cls !== 's-flat'; }).length;
+    if (!n) { a.style.display='none'; return; }
+    a.innerHTML = '<a href="#watchlist" style="display:inline-flex;align-items:center;gap:8px;background:#EEF2FF;border:1px solid #C7D4FF;color:#1E3A8A;font-weight:700;font-size:13px;text-decoration:none;border-radius:20px;padding:8px 15px;">● ' + n + ' change' + (n>1?'s':'') + ' affect' + (n>1?'':'s') + ' your watchlist ↓</a>';
+    a.style.display='block';
+  }
+  window.__nhdApplyChanges = function(map){
+    liveStatus = map || {};
+    var known = {};
+    builders.forEach(function(b){ known[b.canon] = 1; });
+    extra = Object.keys(liveStatus).filter(function(c){ return !known[c]; }).sort();
+    renderPicker(); renderWatch();
+  };
   el('picker').addEventListener('click', function(e){
     var btn = e.target.closest('.pick'); if(!btn) return;
     var s = btn.getAttribute('data-s');
     watch[s] = !watch[s];
-    btn.classList.toggle('on', watch[s]);
+    if (!watch[s]) delete watch[s];
+    save();
+    btn.classList.toggle('on', !!watch[s]);
     btn.querySelector('.x').style.display = watch[s] ? 'inline' : 'none';
     track('watchlist_builder_'+(watch[s]?'added':'removed'),{builder:s});
     renderWatch();
   });
+  var _clr = el('wlClear');
+  if(_clr) _clr.addEventListener('click', function(){
+    watch = {}; save(); renderPicker(); renderWatch(); track('watchlist_cleared',{});
+  });
   var _cta = el('wlCta');
   if(_cta) _cta.addEventListener('click', function(){track('watchlist_alert_cta_click',{builders:Object.keys(watch).filter(function(k){return watch[k];}).join(',')});});
+  renderPicker();
   renderWatch();
   window.addEventListener('load', function(){track('terminal_view', {});});
 })();
@@ -399,9 +552,18 @@
 })();
 </script>
 <script>
-/* Live hydration v2: every headline number, stamp, deadline, and share card on this
- * sheet re-reads the committed data files, so each automated sweep updates the page
- * with no HTML edit. Static markup stays as the fallback if any fetch fails. */
+/* Live hydration v3: every headline number, stamp, deadline, comparison, and module
+ * on this sheet re-reads the committed data files, so each automated sweep updates
+ * the page with no HTML edit. Static markup stays as the fallback if any fetch fails.
+ *
+ * Material-change logic (Since the last sweep + watchlist alert):
+ *   NEW       = a record whose first history entry, or a promo whose firstObserved,
+ *               equals the latest sweep date. Promos without firstObserved are never
+ *               counted as new (conservative; re-verification is not news).
+ *   IMPROVED  = a record with delta > 0 whose lastObserved equals the latest sweep date.
+ *   WEAKENED  = a record with delta < 0 whose lastObserved equals the latest sweep date.
+ *   NEWLY EXPIRED = an entry whose expiration date falls between the prior sweep's
+ *               date and today. Wording-only edits are never counted as changes. */
 (function () {
   function j(u){ return fetch(u, {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; }); }
   function txt(id, v){ var el = document.getElementById(id); if (el && v != null) el.textContent = String(v); }
@@ -415,11 +577,32 @@
     if (isNaN(d)) return dstr;
     return d.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric', timeZone:'America/Chicago'});
   }
-  Promise.all([j('/score-history.json'), j('/concession-index.json'), j('/incentives.json'), j('/reporting/sweep-latest.json')])
-  .then(function (res) {
-    var sh = res[0], ci = res[1], inc = res[2], sl = res[3];
+  function fmtShort(dstr){
+    var d = new Date(String(dstr).slice(0,10) + 'T12:00:00-05:00');
+    if (isNaN(d)) return String(dstr).slice(0,10);
+    return d.toLocaleDateString('en-US', {month:'short', day:'numeric', timeZone:'America/Chicago'});
+  }
+  function dkey(w){
+    w = String(w||'');
+    if (/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0,10);
+    var m = w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);
+    if (!m) return null;
+    var y = m[3] ? (m[3].length===2 ? '20'+m[3] : m[3]) : String(new Date().getFullYear());
+    return y + '-' + ('0'+m[1]).slice(-2) + '-' + ('0'+m[2]).slice(-2);
+  }
+  function pmt(loan, rate){ var i = rate/100/12; return loan * i / (1 - Math.pow(1+i, -360)); }
+  function carry(budget, rate){ var i = rate/100/12; return budget * (1 - Math.pow(1+i, -360)) / i; }
+
+  Promise.all([
+    j('/score-history.json'), j('/concession-index.json'), j('/incentives.json'),
+    j('/reporting/sweep-latest.json'), j('/reporting/rate-benchmark.json'),
+    j('/price-floor.json'), j('/reporting/market-trend.json'), j('/reporting/buyer-news.json')
+  ]).then(function (res) {
+    var sh = res[0], ci = res[1], inc = res[2], sl = res[3], rb = res[4], pf = res[5], mt = res[6], news = res[7];
     var stampLabel = (sl && sl.ranAtLabel) || (sh && sh.lastUpdatedLabel) || (ci && ci.lastUpdatedLabel) || null;
     var slot = (sl && sl.slot) || null;
+    var t = todayCT();
+    var latestDate = (sl && sl.ranAt ? String(sl.ranAt).slice(0,10) : (inc && inc.updated) || t);
 
     if (stampLabel) {
       txt('cov-time', stampLabel);
@@ -432,18 +615,11 @@
             : (ci && ci.points && ci.points.length ? ci.points[ci.points.length-1].index : null);
     if (idx != null) txt('sig-index', money(idx));
 
+    var newCount = null, improved = null, weakened = null, newlyExpired = null;
+    var changes = {}; // canonical builder name -> {cls, txt, sub}
     if (inc) {
-      var t = todayCT();
       var recs = Array.isArray(inc.records) ? inc.records : [];
       var promos = Array.isArray(inc.promos) ? inc.promos : [];
-      function dkey(w){
-        w = String(w||'');
-        if (/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0,10);
-        var m = w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);
-        if (!m) return null;
-        var y = m[3] ? (m[3].length===2 ? '20'+m[3] : m[3]) : String(new Date().getFullYear());
-        return y + '-' + ('0'+m[1]).slice(-2) + '-' + ('0'+m[2]).slice(-2);
-      }
       function liveOf(list){ return list.filter(function(o){ if (!o.expires) return true; var k = dkey(o.expires); return !k || k >= t; }); }
       var liveR = liveOf(recs), liveP = liveOf(promos);
       var expiredCount = (recs.length - liveR.length) + (promos.length - liveP.length);
@@ -461,6 +637,44 @@
         txt('sig-str', free + ' in ' + recs.length);
       }
 
+      /* movement counts for Since-the-last-sweep + watchlist */
+      newCount = 0; improved = 0; weakened = 0; newlyExpired = 0;
+      var priorDate = null;
+      if (sh && sh.points && sh.points.length >= 2) {
+        var sp = sh.points.slice().sort(function(a,b){ return String(a.t).localeCompare(String(b.t)); });
+        priorDate = String(sp[sp.length-2].t).slice(0,10);
+      }
+      function mark(name, cls, txt2, sub){ if (!name) return; if (!changes[name] || cls === 's-warn') changes[name] = {cls:cls, txt:txt2, sub:sub||''}; }
+      recs.forEach(function(o){
+        var isNew = o.history && o.history.length === 1 && o.history[0].date === latestDate;
+        if (isNew) { newCount++; mark(o.builder, 's-up', '▲ New offer this sweep', o.incentiveType); }
+        else if (o.lastObserved === latestDate && typeof o.delta === 'number' && o.delta > 0) { improved++; mark(o.builder, 's-up', '▲ Offer improved', money(o.advertisedValue)); }
+        else if (o.lastObserved === latestDate && typeof o.delta === 'number' && o.delta < 0) { weakened++; mark(o.builder, 's-down', '▼ Offer reduced', money(o.advertisedValue)); }
+      });
+      promos.forEach(function(p){
+        var k = p.expires ? dkey(p.expires) : null;
+        var isLive = !k || k >= t; /* an expired listing newly cataloged is a flag, not a new offer */
+        if (isLive && p.firstObserved && p.firstObserved === latestDate) { newCount++; mark(p.builder, 's-up', '▲ New offer this sweep', String(p.promo||'').slice(0,44)); }
+      });
+      recs.concat(promos).forEach(function(o){
+        var k = o.expires ? dkey(o.expires) : null;
+        if (k && k < t && priorDate && k >= priorDate) { newlyExpired++; mark(o.builder, 's-down', '▼ Offer expired', ''); }
+      });
+      /* deadlines within 7 days get attention status */
+      var wk = new Date(); wk.setDate(wk.getDate()+7);
+      var wkKey = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(wk);
+      liveR.concat(liveP).forEach(function(o){
+        var k = o.expires ? dkey(o.expires) : null;
+        if (k && k >= t && k <= wkKey) mark(o.builder, 's-warn', '⚠ Ends ' + fmtShort(k), '');
+      });
+      /* every live builder gets at least a flat entry so watchlist chips can exist */
+      var latestOffer = {};
+      liveP.forEach(function(p){ if (p.builder && !latestOffer[p.builder]) latestOffer[p.builder] = String(p.promo||'').slice(0,60); });
+      liveR.forEach(function(o){ if (o.builder && !latestOffer[o.builder]) latestOffer[o.builder] = (o.incentiveType?o.incentiveType+' · ':'')+money(o.advertisedValue); });
+      Object.keys(bld).forEach(function(name){ if (!changes[name]) changes[name] = {cls:'s-flat', txt:'► No change today', sub:latestOffer[name]||''}; else if (!changes[name].sub) changes[name].sub = latestOffer[name]||''; });
+      if (window.__nhdApplyChanges) window.__nhdApplyChanges(changes);
+
+      /* deadline table + one move (unchanged behavior) */
       var dated = liveR.map(function(o){ return {b:o.builder, what:(o.incentiveType?o.incentiveType+' · ':'')+money(o.advertisedValue), when:o.expires}; })
         .concat(liveP.map(function(o){ return {b:o.builder, what:o.promo, when:o.expires}; }))
         .filter(function(o){ return o.when && o.b && o.what; })
@@ -482,35 +696,129 @@
       }
     }
 
-    /* rate benchmark + entry-level price floor */
-    j('/reporting/rate-benchmark.json').then(function (rb) {
-      if (!rb || !rb.rate30yr) return;
-      var r = rb.rate30yr;
-      function carry(x){ var i = x/100/12; return 2600 * (1 - Math.pow(1+i, -360)) / i; }
-      var c0 = Math.round(carry(r)/1000), c1 = Math.round(carry(r-1)/1000);
+    /* ---- SINCE THE LAST SWEEP ---- */
+    (function () {
+      var box = document.getElementById('since-sweep');
+      if (!box) return;
+      var pts = (sh && sh.points) ? sh.points.slice().sort(function(a,b){ return String(a.t).localeCompare(String(b.t)); }) : [];
+      if (pts.length < 2) return; /* honest empty state stays */
+      var cur = pts[pts.length-1], prev = pts[pts.length-2];
+      var el = document.getElementById('ss-when');
+      if (el) el.textContent = fmtShort(prev.t) + ' sweep → ' + fmtShort(cur.t) + ' sweep';
+      function row(label, valHtml, deltaHtml){
+        return '<div class="ss-row"><span class="k2">' + label + '</span><span class="v">' + valHtml + '</span><span class="d">' + deltaHtml + '</span></div>';
+      }
+      function dchip(d, fmt, goodWhenDown){
+        if (d == null) return '<span class="ss-na">history accruing</span>';
+        if (d === 0) return '<span class="ss-flat">▬ no change</span>';
+        var good = goodWhenDown ? d < 0 : d > 0;
+        return '<span class="' + (good?'ss-up':'ss-down') + '">' + (d>0?'▲ +':'▼ −') + fmt(Math.abs(d)) + '</span>';
+      }
+      var html = '';
+      var dScore = cur.score - prev.score;
+      html += row('Buyer Advantage Score', prev.score + ' → ' + cur.score, dchip(dScore, function(x){return String(x);}, false));
+      var dIdx = null, idxVal = '';
+      if (ci && ci.points && ci.points.length >= 2) {
+        var iv = ci.points.map(function(p){return p.index;});
+        dIdx = iv[iv.length-1] - iv[iv.length-2]; idxVal = money(iv[iv.length-1]);
+        html += row('Concession Index', idxVal, dchip(dIdx, function(x){return money(x);}, false));
+      } else { html += row('Concession Index', (ci&&ci.points&&ci.points.length)?money(ci.points[ci.points.length-1].index):'', '<span class="ss-na">history accruing</span>'); }
+      var dRate = null, rateVal = '';
+      if (rb && rb.history && rb.history.length >= 2) {
+        var rh = rb.history.slice().sort(function(a,b){ return String(a.date).localeCompare(String(b.date)); });
+        dRate = +(rh[rh.length-1].rate - rh[rh.length-2].rate).toFixed(2); rateVal = rh[rh.length-1].rate.toFixed(2) + '%';
+        html += row('30 yr benchmark (daily index)', rateVal, dchip(dRate, function(x){return x.toFixed(2)+' pts';}, true));
+      } else if (rb && rb.rate30yr) {
+        html += row('30 yr benchmark (daily index)', rb.rate30yr.toFixed(2) + '%', '<span class="ss-na">history accruing</span>');
+      }
+      function cnt(n, up){ return n == null ? '<span class="ss-na">tracking begins as history accrues</span>' : (n === 0 ? '<span class="ss-flat">▬ none</span>' : '<span class="' + (up?'ss-up':'ss-down') + '">' + (up?'▲ ':'▼ ') + n + '</span>'); }
+      html += row('New offers detected', newCount == null ? '' : String(newCount), cnt(newCount, true));
+      html += row('Offers improved', improved == null ? '' : String(improved), cnt(improved, true));
+      html += row('Offers reduced', weakened == null ? '' : String(weakened), cnt(weakened, false));
+      html += row('Newly expired offers', newlyExpired == null ? '' : String(newlyExpired), cnt(newlyExpired, false));
+      /* rules-based interpretation line: verb from score delta, driver = largest
+         offer movement, concession clause, rate clause appended when it moved */
+      var line;
+      var drivers = [];
+      if (newCount) drivers.push(newCount + ' new offer' + (newCount>1?'s':'') + ' appeared');
+      if (improved) drivers.push(improved + ' offer' + (improved>1?'s':'') + ' improved');
+      if (weakened) drivers.push(weakened + ' offer' + (weakened>1?'s':'') + ' was reduced');
+      if (dIdx) drivers.push('the Concession Index moved ' + (dIdx>0?'up ':'down ') + money(Math.abs(dIdx)));
+      var rateClause = (dRate != null && dRate !== 0) ? (dRate > 0 ? ' despite a higher mortgage benchmark' : ' helped by a lower mortgage benchmark') : '';
+      if (dScore > 0) line = 'Buyer leverage improved' + (drivers.length ? ' because ' + drivers.slice(0,2).join(' and ') : '') + rateClause + '.';
+      else if (dScore < 0) line = 'Buyer leverage slipped' + (drivers.length ? ' as ' + drivers.slice(0,2).join(' and ') : '') + rateClause + '.';
+      else line = drivers.length ? 'Score unchanged: ' + drivers.slice(0,2).join(' and ') + ', not enough yet to move the market-wide read' + rateClause + '.' : 'No material change since the prior sweep. Builders are holding their positions' + rateClause + '.';
+      html += '<div class="ss-line">' + esc(line) + '</div>';
+      box.innerHTML = html;
+    })();
+
+    /* ---- RATE + BUYING POWER ---- */
+    (function () {
+      var r = (rb && rb.rate30yr) ? rb.rate30yr : null;
+      if (r == null) return;
       txt('rate-now', r.toFixed(2) + '%');
       if (rb.source || rb.asOfLabel) txt('rate-asof', (rb.source || '') + (rb.asOfLabel ? ' · ' + rb.asOfLabel : ''));
-      txt('carry-r0', r.toFixed(2) + '%');
-      txt('carry-r1', (r-1).toFixed(2) + '%');
-      txt('carry-v0', '~$' + (c0*1000).toLocaleString('en-US'));
-      txt('carry-v1', '~$' + (c1*1000).toLocaleString('en-US'));
-      txt('carry-plus', '+$' + (c1-c0) + 'K');
-    });
-    j('/price-floor.json').then(function (pf) {
+      var budget = 2600;
+      function kfmt(v){ return '~$' + (Math.round(v/1000)*1000).toLocaleString('en-US'); }
+      function renderBP(){
+        var base = carry(budget, r);
+        var rows = [[r, 'today'], [r-0.5, '−0.50'], [r-1.0, '−1.00'], [r+0.5, '+0.50']];
+        rows.forEach(function(rr, i){
+          var v = carry(budget, rr[0]);
+          txt('carry-r'+i, rr[0].toFixed(2) + '%');
+          txt('carry-v'+i, kfmt(v));
+          if (i > 0) {
+            var d = Math.round((v-base)/1000);
+            var elp = document.getElementById('carry-p'+i);
+            if (elp) { elp.textContent = (d>=0?'+$':'−$') + Math.abs(d) + 'K'; elp.style.color = d>=0 ? 'var(--good)' : 'var(--bad)'; }
+          }
+        });
+        var lab = document.getElementById('bp-budget-lab');
+        if (lab) lab.textContent = money(budget) + '/mo';
+      }
+      renderBP();
+      var chips = document.getElementById('bp-chips');
+      var custom = document.getElementById('bp-custom');
+      if (chips) chips.addEventListener('click', function(e){
+        var b = e.target.closest('.bpc'); if (!b) return;
+        chips.querySelectorAll('.bpc').forEach(function(x){ x.classList.remove('on'); });
+        b.classList.add('on');
+        if (b.getAttribute('data-b') === 'custom') { if (custom) { custom.style.display='inline-block'; custom.focus(); } return; }
+        if (custom) custom.style.display='none';
+        budget = parseInt(b.getAttribute('data-b'), 10); renderBP();
+        try{window.NHD&&NHD.trackEvent&&NHD.trackEvent('bp_budget',{b:budget});}catch(err){}
+      });
+      if (custom) custom.addEventListener('input', function(){
+        var v = parseInt(custom.value, 10);
+        if (v >= 500 && v <= 20000) { budget = v; renderBP(); }
+      });
+      /* sensitivity strip: fixed reference rates on a $400,000 loan */
+      [[6.0,'sens-0'],[6.5,'sens-1'],[7.0,'sens-2']].forEach(function(s){
+        txt(s[1], '$' + Math.round(pmt(400000, s[0])).toLocaleString('en-US'));
+      });
+      /* temporary vs permanent on $400,000 at today's index */
+      var perm = '$' + Math.round(pmt(400000, r)).toLocaleString('en-US');
+      var m1 = '$' + Math.round(pmt(400000, r-2)).toLocaleString('en-US');
+      var m2 = '$' + Math.round(pmt(400000, r-1)).toLocaleString('en-US');
+      txt('bd-p1', perm); txt('bd-p2', perm); txt('bd-p3', perm);
+      txt('bd-a1', m1); txt('bd-a2', m2); txt('bd-a3', perm);
+      txt('bd-b1', m2); txt('bd-b2', perm); txt('bd-b3', perm);
+    })();
+
+    /* ---- ENTRY-LEVEL PRICE FLOOR ---- */
+    (function () {
       if (!pf) return;
       var f = pf.floor || {};
-      var v = f.value || f.price || f.amount;
+      var v = f.value || f.advertisedFrom || f.price || f.amount;
       if (v) txt('floor-val', '$' + Number(v).toLocaleString('en-US'));
       var bits = [f.community, f.city || f.location, f.builder].filter(Boolean);
       if (bits.length) txt('floor-note', bits.join(' · '));
-    });
+    })();
 
-    /* WHERE WE STAND trend board */
-    Promise.all([j('/reporting/market-trend.json'), j('/reporting/rate-benchmark.json'), j('/concession-index.json')]).then(function (tr) {
-      var mt = tr[0], rb = tr[1], ci = tr[2];
+    /* ---- WHERE WE STAND trend board ---- */
+    (function () {
       var box = document.getElementById('trend-rows');
       if (!box || !mt) return;
-      function money(n){ return '$' + Number(n).toLocaleString('en-US'); }
       function spark(vals, w, hgt) {
         if (!vals || vals.length < 2) return '';
         var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals);
@@ -520,7 +828,7 @@
         });
         var pts = arr.map(function (p) { return p[0].toFixed(1) + ',' + p[1].toFixed(1); }).join(' ');
         var last = arr[arr.length - 1];
-        return '<svg width="' + w + '" height="' + hgt + '" style="display:block;"><polyline points="' + pts + '" fill="none" stroke="#2B4FE0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="' + last[0].toFixed(1) + '" cy="' + last[1].toFixed(1) + '" r="3" fill="#2B4FE0"/></svg>';
+        return '<svg width="' + w + '" height="' + hgt + '" style="display:block;" aria-hidden="true"><polyline points="' + pts + '" fill="none" stroke="#2B4FE0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="' + last[0].toFixed(1) + '" cy="' + last[1].toFixed(1) + '" r="3" fill="#2B4FE0"/></svg>';
       }
       function chip(label, delta, fmt, goodWhenDown) {
         if (delta == null) return '<span style="display:inline-block;margin-right:10px;font-size:11px;color:#9a9a9a;">' + label + ' —</span>';
@@ -547,7 +855,7 @@
         (mt.rate30yr.anchors || []).forEach(function (a) { if (!seen[a.date]) { seen[a.date] = 1; seq.push([a.date, a.rate]); } });
         (rb.history || []).forEach(function (hh) { if (!seen[hh.date]) { seen[hh.date] = 1; seq.push([hh.date, hh.rate]); } });
         seq.sort(function (a, b) { return a[0] < b[0] ? -1 : 1; });
-        html += row('30 yr fixed rate', 'Mortgage News Daily', now.toFixed(2) + '%',
+        html += row('30 yr fixed rate', 'daily index · Mortgage News Daily', now.toFixed(2) + '%',
           chip('1w', w1 != null ? +(now - w1).toFixed(2) : null, function (d) { return Math.abs(d).toFixed(2) + ' pts'; }, true) +
           chip('1yr', y1 != null ? +(now - y1).toFixed(2) : null, function (d) { return Math.abs(d).toFixed(2) + ' pts'; }, true) +
           (low != null ? '<span style="font-size:11px;color:#9a9a9a;">2026 low ' + low.toFixed(2) + '%</span>' : ''),
@@ -572,8 +880,33 @@
           spark(S.map(function (p) { return p.value; }), 110, 34));
       }
       if (html) box.innerHTML = html;
-    });
+    })();
 
+    /* ---- CURATED BUYER-RELEVANT NEWS ---- */
+    (function () {
+      var box = document.getElementById('news-box');
+      if (!box || !news) return; /* empty state stays if the file is missing */
+      var p = news.primary;
+      if (!p || p.status !== 'approved' || !(p.totalScore >= 70)) return;
+      var html = '<div class="news-card">' +
+        '<div class="news-kicker">' + esc(p.publisher) + ' · ' + esc(fmtShort(p.publishedAt)) + ' · ' + esc((p.geography||[]).slice(0,2).join(', ')) + ' · relevance ' + esc(p.totalScore) + '/100</div>' +
+        '<div class="news-h"><a href="' + esc(p.sourceUrl) + '" target="_blank" rel="noopener">' + esc(p.headline) + ' ↗</a></div>' +
+        '<p class="news-p">' + esc(p.summary) + '</p>' +
+        '<p class="news-p"><span class="news-tag">Why a buyer should care</span><br>' + esc(p.buyerImplication) + '</p>' +
+        '<p class="news-p"><span class="news-tag">Areas affected</span><br>' + esc((p.affectedAreas||[]).join(', ')) + '</p>' +
+        '<p class="news-p" style="margin-bottom:0;"><span class="news-tag">Buyer move</span><br>' + esc(p.buyerAction) + '</p>' +
+        '<div class="news-meta">' + esc(p.confidence || '') + (p.reviewedAt ? ' · reviewed ' + esc(fmtShort(p.reviewedAt)) : '') + ' · we summarize in our own words and always link the original reporting.</div>' +
+        '</div>';
+      var secs = Array.isArray(news.secondary) ? news.secondary.filter(function(s){ return s && s.status === 'approved'; }).slice(0,2) : [];
+      if (secs.length) {
+        html += '<div style="margin-top:10px;">' + secs.map(function(s){
+          return '<div style="padding:9px 0;border-bottom:1px solid var(--line);font-size:13px;"><a href="' + esc(s.sourceUrl) + '" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink);text-decoration:none;">' + esc(s.headline) + ' ↗</a> <span style="font-family:IBM Plex Mono,monospace;font-size:10.5px;color:#9a9a9a;">' + esc(s.publisher) + ' · ' + esc(fmtShort(s.publishedAt)) + '</span></div>';
+        }).join('') + '</div>';
+      }
+      box.innerHTML = html;
+    })();
+
+    /* evergreen share imgs cache-bust */
     var bust = Date.now();
     document.querySelectorAll('img.share-live').forEach(function(im){
       var u = im.getAttribute('src').split('?')[0] + '?t=' + bust;
