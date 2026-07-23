@@ -281,6 +281,42 @@ ${mast(`The Board<br><b>Where the market stands</b>`)}
 ${orient('The market signals a buyer should watch, on one card, from our twice-daily sweep and published MLS aggregates.','If the concession line rises while resale supply falls, your window is with the builders.','Every number is dated and sourced; the full board lives on the Daily Hot Sheet.')}
 ${foot(`Verified ${D.verified} \u00b7 rates: MND + Freddie Mac \u00b7 resale: Unlock MLS published \u00b7 permits: Austin open data`)}`);
 
+
+// ---------------- CAPTIONS: channel-ready copy from the content packet ----------------
+// One source (reporting/content-packet.json) -> per-channel captions, regenerated
+// every sweep. Less words, more graphic: the card carries the data, the caption
+// carries the takeaway. Never hand-rewrite these.
+function writeCaptions(outDir){
+  const cp = rd('reporting/content-packet.json', rd('site/reporting/content-packet.json', null));
+  if (!cp) { console.log('captions: no content packet, skipped'); return; }
+  const f = cp.facts || {};
+  const chg = cp.changes || {};
+  const newB = (chg.newOffers || []).slice(0,3).join(', ');
+  const dl = (chg.deadlinesNext7d && chg.deadlinesNext7d[0]) || null;
+  const rate = f.rateDaily ? f.rateDaily.toFixed(2) + '%' : '';
+  const stamp = D.verified;
+  const ig = ['The Board \u00b7 ' + stamp,
+    (chg.count ? chg.count + ' change' + (chg.count>1?'s':'') + ' since the last sweep' + (newB ? ': new offers from ' + newB : '') + '.' : 'Builders held their positions this sweep. Stability is information too.'),
+    'Rate: ' + rate + ' \u00b7 median incentive: $' + Number(f.concessionIndex||0).toLocaleString('en-US') + ' \u00b7 ' + f.offersLive + ' live offers across ' + f.buildersLive + ' builders.'
+      + (dl ? '\nNearest advertised deadline: ' + dl.builder + ', ' + dl.deadline + '.' : ''),
+    'Every number verified on the builder\u2019s own site, twice a day. Full board: link in bio.',
+    '#austinrealestate #newconstruction #centraltexas #homebuying #austintx'
+  ].join('\n\n');
+  const fb = [
+    (chg.count ? cp.interpretation : 'Quiet sweep: builders are holding their advertised positions.'),
+    cp.buyerAction,
+    'The full board, re-verified twice a day: newhomedispatch.com/daily-hot-sheet'
+  ].join('\n\n');
+  const x = (chg.count
+    ? chg.count + ' incentive change' + (chg.count>1?'s':'') + ' in Austin new construction since the last sweep' + (newB ? ' (' + newB + ')' : '') + '. Rate ' + rate + ', median credit $' + Number(f.concessionIndex||0).toLocaleString('en-US') + '. Verified on builder sites, twice daily.'
+    : 'No material incentive movement in Austin new construction this sweep. Rate ' + rate + '. Stability is a signal too.')
+    + ' newhomedispatch.com/daily-hot-sheet';
+  const out = ['=== INSTAGRAM ===', ig, '', '=== FACEBOOK ===', fb, '', '=== X ===', x, '',
+    '=== PUBLISH RECOMMENDATION ===', cp.publishRecommendation + ' \u00b7 sweep ' + (cp.sweepId||'')].join('\n');
+  fs.writeFileSync(outDir + '/captions.txt', out);
+  console.log('captions written (' + cp.publishRecommendation + ')');
+}
+
 const cards = { read, move, explained, rate, illusion, board };
 const OUT = process.env.SOCIAL_OUT || '.';
 const RENDER = process.env.SOCIAL_RENDER === '1';
@@ -303,4 +339,5 @@ const RENDER = process.env.SOCIAL_RENDER === '1';
     console.log(`rendered ${OUT}/hot-sheet-${name}.png`);
   }
   await b.close();
+  try { writeCaptions(OUT); } catch (e) { console.log('captions failed: ' + e.message); }
 })();
