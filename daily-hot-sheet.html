@@ -179,6 +179,27 @@
   <p class="disclose">One market-wide index, built transparently from the signals above (v0.1 public-signal model, see methodology). It is a read of buyer leverage, not a prediction or financial advice.</p>
   <div style="padding:8px 24px 0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:#7d7d7d;line-height:1.5;">COVERAGE · <span id="cov-counts">35 offers tracked across 23 builders</span> · <span id="cov-exp">14 expired flagged</span> · re-verified <span id="cov-time">09:27 PM CT</span> · score confidence: <b style="color:var(--warn);">Moderate</b> (public-signal model, pre-MLS). Change-vs-prior-sweep begins once score history accrues.</div>
 
+  <div style="padding:18px 24px 0;">
+    <div class="kick">▸ Today's rate and your buying power <span class="r">matters to every buyer</span></div>
+    <div class="rule"></div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:150px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
+        <div style="font-size:30px;font-weight:800;letter-spacing:-.02em;" id="rate-now">6.77%</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;">30 yr fixed today<br><span id="rate-asof" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;">Mortgage News Daily · Jul 22</span></div>
+      </div>
+      <div style="flex:2;min-width:230px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
+        <div style="font-size:12.5px;color:var(--muted);margin-bottom:6px;">What a <b>$2,600/mo</b> payment carries on a true 30 year fixed:</div>
+        <div style="font-size:14px;padding:3px 0;">at <b id="carry-r0">6.77%</b> → <b id="carry-v0">~$400,000</b> of home</div>
+        <div style="font-size:14px;padding:3px 0;">at <b id="carry-r1">5.77%</b> → <b id="carry-v1">~$444,000</b> of home <span id="carry-plus" style="color:#1F7A43;font-weight:800;">+$44K</span></div>
+        <div style="font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5;">Every 1 point on a real 30 year rate is about 10 percent of buying power. Builder teasers (1.99%, 2.99%) usually reset after year one. Verify the term in writing.</div>
+      </div>
+      <div style="flex:1;min-width:150px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
+        <div style="font-size:24px;font-weight:800;letter-spacing:-.02em;" id="floor-val">$199,990</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;">entry level new-construction price floor<br><span id="floor-note" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;">Waterstone Village · Kyle</span></div>
+      </div>
+    </div>
+  </div>
+
   <div class="pad">
 
     <div class="kick">▸ Your watchlist <span class="r">personalized</span></div>
@@ -225,16 +246,20 @@
     </table>
     <p style="font-size:12.5px;color:var(--muted);margin-top:10px;">Want the full detail, every offer, filters, history, builder pages? That lives in the <a href="incentive-tracker.html">Incentive Tracker</a>. This sheet is the five-minute decision; the Tracker is the database behind it.</p>
 
-    <div class="kick">▸ Share today's read <span class="r">social</span></div>
+    <div class="kick">▸ Built in house, sharpened every sweep <span class="r">proprietary</span></div>
     <div class="rule"></div>
-    <p style="font-size:12.5px;color:var(--muted);margin-bottom:12px;">Save these and post them, the day's most actionable numbers, ready for social. A fresh set is generated with each sweep.</p>
-    <p style="font-size:11px;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Instagram · portrait · re-rendered from live data with every sweep</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
-      <a href="share/hot-sheet-read.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-read.png" alt="The Read, Buyer Advantage Score gauge" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
-      <a href="share/hot-sheet-move.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-move.png" alt="The Move, nearest deadline and biggest credits" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
-      <a href="share/hot-sheet-explained.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-explained.png" alt="The Score Explained, five-signal methodology" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
-      <a href="share/hot-sheet-rate.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-rate.png" alt="What One Point Really Means, rate vs buying power" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
-      <a href="share/hot-sheet-illusion.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-illusion.png" alt="The Illusion of a Deal, mark up then mark down" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
+    <div class="how">
+      <h4>The Buyer Advantage Score</h4>
+      <p>One 0 to 100 read of buyer leverage, computed from five signals we verify ourselves, never from a builder claim. The weights are published; the tooling that gathers and scores the signals is ours.</p>
+      <h4>The Concession Index</h4>
+      <p>The median advertised incentive across every tracked offer, re-verified against each builder's own site twice a day and adjusted for how much value actually reaches the buyer.</p>
+      <h4>The Movement Log</h4>
+      <p>Every advertised change is logged with a date the moment a sweep catches it. Stability is reported too, because a market where builders hold steady is information. See it live on the <a href="incentive-tracker.html">Incentive Tracker</a>.</p>
+      <h4>The Entry Level Price Floor</h4>
+      <p>A running series watching the cheapest advertised new construction in the metro, so first time buyers can see the floor move before headlines do.</p>
+      <h4>The rate benchmark</h4>
+      <p>The daily 30 year fixed, tracked so every incentive can be judged against what your payment actually buys today.</p>
+      <p style="margin-top:10px;">The methods are published on the <a href="methodology.html">methodology page</a>. The pipeline that runs them is proprietary, it runs without days off, and it compounds: every sweep adds history no one can recreate later.</p>
     </div>
 
     <div class="kick">▸ How the intelligence works</div>
@@ -395,7 +420,15 @@
       var t = todayCT();
       var recs = Array.isArray(inc.records) ? inc.records : [];
       var promos = Array.isArray(inc.promos) ? inc.promos : [];
-      function liveOf(list){ return list.filter(function(o){ return !o.expires || String(o.expires) >= t; }); }
+      function dkey(w){
+        w = String(w||'');
+        if (/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0,10);
+        var m = w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);
+        if (!m) return null;
+        var y = m[3] ? (m[3].length===2 ? '20'+m[3] : m[3]) : String(new Date().getFullYear());
+        return y + '-' + ('0'+m[1]).slice(-2) + '-' + ('0'+m[2]).slice(-2);
+      }
+      function liveOf(list){ return list.filter(function(o){ if (!o.expires) return true; var k = dkey(o.expires); return !k || k >= t; }); }
       var liveR = liveOf(recs), liveP = liveOf(promos);
       var expiredCount = (recs.length - liveR.length) + (promos.length - liveP.length);
       if (sl && typeof sl.expired === 'number' && sl.expired > expiredCount) expiredCount = sl.expired;
@@ -412,14 +445,6 @@
         txt('sig-str', free + ' in ' + recs.length);
       }
 
-      function dkey(w){
-        w = String(w||'');
-        if (/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0,10);
-        var m = w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);
-        if (!m) return null;
-        var y = m[3] ? (m[3].length===2 ? '20'+m[3] : m[3]) : String(new Date().getFullYear());
-        return y + '-' + ('0'+m[1]).slice(-2) + '-' + ('0'+m[2]).slice(-2);
-      }
       var dated = liveR.map(function(o){ return {b:o.builder, what:(o.incentiveType?o.incentiveType+' · ':'')+money(o.advertisedValue), when:o.expires}; })
         .concat(liveP.map(function(o){ return {b:o.builder, what:o.promo, when:o.expires}; }))
         .filter(function(o){ return o.when && o.b && o.what; })
@@ -440,6 +465,29 @@
         mv.innerHTML = '<span class="hl">' + esc(n0.b) + ' · ' + esc(n0.what) + ' ends ' + esc(fmtDay(n0.k)) + '</span>, the nearest hard deadline on the board. If ' + esc(n0.b) + ' is on your list, get written terms today. Ask any builder, in writing, how long their current offer stands.';
       }
     }
+
+    /* rate benchmark + entry-level price floor */
+    j('/reporting/rate-benchmark.json').then(function (rb) {
+      if (!rb || !rb.rate30yr) return;
+      var r = rb.rate30yr;
+      function carry(x){ var i = x/100/12; return 2600 * (1 - Math.pow(1+i, -360)) / i; }
+      var c0 = Math.round(carry(r)/1000), c1 = Math.round(carry(r-1)/1000);
+      txt('rate-now', r.toFixed(2) + '%');
+      if (rb.source || rb.asOfLabel) txt('rate-asof', (rb.source || '') + (rb.asOfLabel ? ' · ' + rb.asOfLabel : ''));
+      txt('carry-r0', r.toFixed(2) + '%');
+      txt('carry-r1', (r-1).toFixed(2) + '%');
+      txt('carry-v0', '~$' + (c0*1000).toLocaleString('en-US'));
+      txt('carry-v1', '~$' + (c1*1000).toLocaleString('en-US'));
+      txt('carry-plus', '+$' + (c1-c0) + 'K');
+    });
+    j('/price-floor.json').then(function (pf) {
+      if (!pf) return;
+      var f = pf.floor || {};
+      var v = f.value || f.price || f.amount;
+      if (v) txt('floor-val', '$' + Number(v).toLocaleString('en-US'));
+      var bits = [f.community, f.city || f.location, f.builder].filter(Boolean);
+      if (bits.length) txt('floor-note', bits.join(' · '));
+    });
 
     var bust = Date.now();
     document.querySelectorAll('img.share-live').forEach(function(im){

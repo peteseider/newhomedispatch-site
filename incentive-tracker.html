@@ -1942,6 +1942,14 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
       function fmtD(d){var dt=new Date(d+'T12:00:00-05:00');return isNaN(dt)?d:dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
       fetch('/incentives.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(j){
         var box=document.getElementById('trk-moves'); if(!box||!j) return;
+        try {
+          var _dk = function(w){ w=String(w||''); if(/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0,10); var m=w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/); if(!m) return null; var y=m[3]?(m[3].length===2?'20'+m[3]:m[3]):String(new Date().getFullYear()); return y+'-'+('0'+m[1]).slice(-2)+'-'+('0'+m[2]).slice(-2); };
+          var _td = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago'}).format(new Date());
+          var _lv = function(l){ return (l||[]).filter(function(o){ if(!o.expires) return true; var k=_dk(o.expires); return !k || k >= _td; }); };
+          var _all = _lv(j.records).length + _lv(j.promos).length;
+          var _cm = document.getElementById('trk-count-meta');
+          if (_cm && _all) _cm.textContent = String(_all);
+        } catch (e) {}
         var evts=[];
         (j.records||[]).forEach(function(o){
           var h=o.history||[];
@@ -1986,6 +1994,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
   <!-- FULL TABLE -->
   <section class="blk"><div class="wrap">
     <div class="blk-head"><h2>Every tracked offer</h2><span class="n">Filter · sort · compare</span></div>
+    <p class="result-count" style="margin-top:-4px;">The table below holds the fully verified records with price history. The wider set of advertised promos we monitor appears in the Movement Log above the moment one changes.</p>
     <div class="controls" id="trk-controls">
       <div class="ctrl search"><label for="f-search">Search</label><input type="search" id="f-search" placeholder="Community, builder, city…" autocomplete="off"></div>
       <div class="ctrl"><label for="f-city">City / area</label><select id="f-city"></select></div>
