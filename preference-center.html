@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose your updates | New Home Dispatch</title>
+<meta name="description" content="Choose exactly what New Home Dispatch sends you: the morning Daily Hot Sheet, evening edition, Friday Weekly Dispatch, major-change alerts, and alerts for the specific builders you track.">
+<link rel="canonical" href="https://newhomedispatch.com/preference-center.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="analytics.js" defer></script>
+<style>
+  :root{--ink:#0A0A0A;--blueprint:#2B4FE0;--navy:#0F2942;--on-navy:#7E9BEC;--line:#E4E4E7;--muted:#666;--good:#1E7A46;--paper-alt:#F5F6F8;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',Arial,sans-serif;color:var(--ink);line-height:1.6;background:#EDEEF1;font-size:15.5px;}
+  a{color:var(--blueprint);}
+  .topnav{background:#fff;border-bottom:1px solid var(--line);}
+  .topnav-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:11px 22px;}
+  .topnav .brand{font-weight:800;color:var(--navy);text-decoration:none;font-size:16px;}
+  .topnav .brand .h{color:var(--blueprint);}.topnav .brand .bar{color:var(--blueprint);font-weight:400;}
+  .topnav .links a{color:#333;text-decoration:none;font-size:13px;font-weight:600;}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 70px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px 30px 34px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blueprint);font-weight:600;}
+  h1{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(24px,4.5vw,32px);letter-spacing:-.7px;line-height:1.1;margin:8px 0 8px;}
+  .sub{color:#444;margin-bottom:24px;}
+  fieldset{border:none;margin-bottom:22px;}
+  legend{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px;}
+  .opt{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:7px;padding:14px 16px;margin-bottom:10px;cursor:pointer;transition:border-color .12s;}
+  .opt:hover{border-color:var(--blueprint);}
+  .opt input{margin-top:3px;width:18px;height:18px;accent-color:var(--blueprint);flex:0 0 auto;}
+  .opt .t{font-weight:700;font-size:14.5px;}
+  .opt .t small{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:3px;}
+  .opt .rec{font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--good);border-radius:2px;padding:2px 6px;margin-left:7px;vertical-align:middle;}
+  label.field{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:0 0 6px;}
+  input[type=email],input[type=text]{width:100%;border:1px solid #C7CBD4;border-radius:6px;padding:11px 13px;font-size:15px;font-family:inherit;}
+  .btn{display:block;width:100%;background:var(--navy);color:#fff;border:none;border-radius:7px;padding:14px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;margin-top:8px;}
+  .fine{font-size:12px;color:var(--muted);margin-top:14px;text-align:center;}
+  .hp{position:absolute;left:-9999px;}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="topnav-inner">
+  <a href="index.html" class="brand">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</a>
+  <div class="links"><a href="daily-hot-sheet.html">← Terminal</a></div>
+</div></nav>
+<div class="wrap">
+  <div class="card">
+    <div class="eyebrow">Your updates</div>
+    <h1>Get exactly what's useful — nothing more.</h1>
+    <p class="sub">Four products, four different jobs. Pick what fits how you buy. You can change this anytime, and we won't send two emails a day unless you ask.</p>
+
+    <form name="preferences" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="bot-field"
+          onsubmit="try{window.NHD&&NHD.trackEvent&&NHD.trackEvent('subscription_complete',{});}catch(e){}">
+      <input type="hidden" name="form-name" value="preferences">
+      <p class="hp"><label>Leave blank: <input name="bot-field"></label></p>
+
+      <fieldset>
+        <legend>Daily — the Terminal</legend>
+        <label class="opt"><input type="checkbox" name="morning_hotsheet" value="yes" checked>
+          <span class="t">Morning Hot Sheet <span class="rec">Recommended</span><small>The five-minute decision read, every morning: Buyer Advantage Score, builder rankings, today's one move.</small></span></label>
+        <label class="opt"><input type="checkbox" name="major_change_alerts" value="yes" checked>
+          <span class="t">Major-change alerts <span class="rec">Recommended</span><small>Only when something material happens — a big new incentive, a verified withdrawal, a deadline inside 72 hours.</small></span></label>
+        <label class="opt"><input type="checkbox" name="evening_edition" value="yes">
+          <span class="t">Evening edition too<small>The PM sweep as well. By default we only send the evening read when there's a meaningful change — check this to get it every evening regardless.</small></span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Weekly & builder-specific</legend>
+        <label class="opt"><input type="checkbox" name="weekly_dispatch" value="yes">
+          <span class="t">Friday Weekly Dispatch<small>The narrative read — field notes, community news, the week's biggest moves and why they matter.</small></span></label>
+        <label class="opt"><input type="checkbox" name="builder_alerts" value="yes">
+          <span class="t">Alerts for the builders I track<small>Get a note the moment one of your builders changes an incentive, drops a price, or nears a deadline.</small></span></label>
+      </fieldset>
+
+      <fieldset>
+        <label class="field" for="builders">Builders to watch <span style="font-weight:400;">(optional — comma-separated)</span></label>
+        <input type="text" id="builders" name="builders" placeholder="e.g., David Weekley, Perry, Empire">
+      </fieldset>
+
+      <fieldset>
+        <label class="field" for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@email.com">
+      </fieldset>
+
+      <button type="submit" class="btn">Save my preferences</button>
+      <p class="fine">Independent and free. No builder mailing lists, no spam. Unsubscribe or change anytime.</p>
+    </form>
+  </div>
+</div>
+<script>
+  // Prefill builders from the Terminal watchlist (?builders=slug,slug) and enable builder alerts.
+  (function(){
+    try{
+      var q=new URLSearchParams(window.location.search);
+      var b=q.get('builders');
+      if(b){
+        var map={'david-weekley':'David Weekley','empire':'Empire Communities','brohn':'Brohn Homes','perry':'Perry Homes','trophy':'Trophy Signature','ashton':'Ashton Woods'};
+        var names=b.split(',').map(function(s){return map[s]||s;}).filter(Boolean);
+        if(names.length){
+          document.getElementById('builders').value=names.join(', ');
+          var ba=document.querySelector('input[name="builder_alerts"]'); if(ba)ba.checked=true;
+        }
+      }
+      window.addEventListener('load',function(){try{window.NHD&&NHD.trackEvent&&NHD.trackEvent('subscription_start',{from:'preference-center'});}catch(e){}});
+    }catch(e){}
+  })();
+</script>
+</body>
+</html>

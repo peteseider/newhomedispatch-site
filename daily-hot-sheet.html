@@ -187,7 +187,7 @@
       <div class="picker" id="picker"></div>
       <div class="wl-panel" id="wlPanel"></div>
       <div class="wl-count" id="wlCount"></div>
-      <a id="wlCta" href="incentive-watch.html" style="display:none;margin-top:14px;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:12px 18px;border-radius:5px;text-align:center;">Get changes for these builders by email →</a>
+      <a id="wlCta" href="preference-center.html" style="display:none;margin-top:14px;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:12px 18px;border-radius:5px;text-align:center;">Get changes for these builders by email →</a>
     </div>
 
     <div class="kick">▸ Builder opportunity rankings <span class="r">who's most motivated</span></div>
@@ -238,7 +238,7 @@
     <div class="cta-strip">
       <h3>Get the Terminal before you tour</h3>
       <p>Open it every morning, or have the twice-daily read sent to you — and choose exactly what you want: this Daily Hot Sheet, the Friday Weekly Dispatch, or both.</p>
-      <a href="incentive-watch.html">Choose your updates →</a>
+      <a href="preference-center.html">Choose your updates →</a>
     </div>
     <p style="text-align:center;font-size:13.5px;margin:16px 0 0;"><a href="buyer-strategy-call.html" onclick="try{window.NHD&&NHD.trackEvent&&NHD.trackEvent('buyerhelp_click',{from:'terminal'})}catch(e){}">Compare the real cost of these offers with an independent buyer representative →</a></p>
   </div>
@@ -304,7 +304,7 @@
     }).join('');
     var warns = chosen.filter(function(b){return b.status.cls==='s-warn';}).length;
     el('wlCount').textContent = chosen.length+' tracked'+(warns?' · '+warns+' need attention this week':' · nothing urgent');
-    if(cta){cta.style.display='block';cta.href='incentive-watch.html?builders='+chosen.map(function(b){return b.slug;}).join(',');}
+    if(cta){cta.style.display='block';cta.href='preference-center.html?builders='+chosen.map(function(b){return b.slug;}).join(',');}
   }
   el('picker').addEventListener('click', function(e){
     var btn = e.target.closest('.pick'); if(!btn) return;
