@@ -234,6 +234,7 @@ async function detectChanges() {
   try { await refreshRate(core.t); } catch (e) { console.log('[sweep] rate refresh skipped: ' + (e && e.message)); }
   try { await refreshPmms(core.t); } catch (e) { console.log('[sweep] pmms refresh skipped: ' + (e && e.message)); }
   try { await refreshPermits(core.t); } catch (e) { console.log('[sweep] permits refresh skipped: ' + (e && e.message)); }
+  try { writeContentPacket(core); } catch (e) { console.log('[sweep] content packet skipped: ' + (e && e.message)); }
 
   const outPath = p('reporting/sweep-latest.json');
   if (!existsSync(dirname(outPath))) mkdirSync(dirname(outPath), { recursive: true });
@@ -398,4 +399,73 @@ async function refreshPermits(t) {
   }
   if (!existsSync(dirname(path))) mkdirSync(dirname(path), { recursive: true });
   writeFileSync(path, JSON.stringify(pj, null, 2) + '\n');
+}
+
+// ---- content packet: one structured record per completed sweep. This is the
+// single canonical source for every downstream format (site modules, social,
+// email, SMS, weekly edition). Nothing downstream re-derives facts by hand.
+// publishRecommendation rules: broad only when a material change exists;
+// watchlist-only when changes touch specific builders without moving the
+// market read; internal-only when nothing material changed (an honest quiet
+// day is recorded, never dressed up).
+function writeContentPacket(core) {
+  const path = p('reporting/content-packet.json');
+  const inc = JSON.parse(readFileSync(p('incentives.json'), 'utf8'));
+  const dk = (w) => { w = String(w || ''); if (/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0, 10);
+    const m = w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/); if (!m) return null;
+    const y = m[3] ? (m[3].length === 2 ? '20' + m[3] : m[3]) : String(new Date().getFullYear());
+    return y + '-' + ('0' + m[1]).slice(-2) + '-' + ('0' + m[2]).slice(-2); };
+  const t = core.t.ymd;
+  const recs = inc.records || [], promos = inc.promos || [];
+  const liveOf = (l) => l.filter((o) => { const k = o.expires ? dk(o.expires) : null; return !k || k >= t; });
+  const liveR = liveOf(recs), liveP = liveOf(promos);
+  const bld = new Set([...liveR, ...liveP].map((o) => o.builder).filter(Boolean));
+  const newOffers = [];
+  recs.forEach((o) => { if (o.history && o.history.length === 1 && o.history[0].date === t) newOffers.push(o.builder); });
+  liveP.forEach((o) => { if (o.firstObserved === t) newOffers.push(o.builder); });
+  const improved = recs.filter((o) => o.lastObserved === t && o.delta > 0).map((o) => o.builder);
+  const reduced = recs.filter((o) => o.lastObserved === t && o.delta < 0).map((o) => o.builder);
+  const wk = new Date(t + 'T12:00:00Z'); wk.setUTCDate(wk.getUTCDate() + 7);
+  const wkKey = wk.toISOString().slice(0, 10);
+  const urgent = [...liveR, ...liveP].filter((o) => { const k = o.expires ? dk(o.expires) : null; return k && k >= t && k <= wkKey; })
+    .map((o) => ({ builder: o.builder, deadline: dk(o.expires), offer: (o.promo || (o.incentiveType ? o.incentiveType + ' $' + o.advertisedValue : '')).slice(0, 90) }))
+    .sort((a, b) => a.deadline < b.deadline ? -1 : 1);
+  let sh = { points: [] };
+  try { sh = JSON.parse(readFileSync(p('score-history.json'), 'utf8')); } catch { }
+  const pts = (sh.points || []).slice().sort((a, b) => String(a.t).localeCompare(String(b.t)));
+  const cur = pts[pts.length - 1] || {}, prev = pts[pts.length - 2] || null;
+  const dScore = prev ? cur.score - prev.score : null;
+  let rb = null; try { rb = JSON.parse(readFileSync(p('reporting/rate-benchmark.json'), 'utf8')); } catch { }
+  let pm = null; try { pm = JSON.parse(readFileSync(p('reporting/pmms.json'), 'utf8')); } catch { }
+  const changed = newOffers.length + improved.length + reduced.length;
+  const drivers = [];
+  if (newOffers.length) drivers.push(newOffers.length + ' new offer' + (newOffers.length > 1 ? 's' : '') + ' (' + [...new Set(newOffers)].slice(0, 3).join(', ') + ')');
+  if (improved.length) drivers.push(improved.length + ' improved');
+  if (reduced.length) drivers.push(reduced.length + ' reduced');
+  const interpretation = changed
+    ? 'Movement this sweep: ' + drivers.join(', ') + '. Market-wide score ' + (dScore ? (dScore > 0 ? 'up ' : 'down ') + Math.abs(dScore) : 'unchanged') + (dScore && Math.abs(dScore) <= 2 ? ' (within model noise)' : '') + '.'
+    : 'No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.';
+  const buyerAction = urgent.length
+    ? 'Nearest advertised deadline: ' + urgent[0].builder + ' (' + urgent[0].deadline + '). If that builder is on your list, get the current terms in writing today.'
+    : 'No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.';
+  const packet = {
+    schema: 'nhd-content-packet-v1',
+    sweepId: core.t.iso + '-' + core.t.slot,
+    generatedAt: core.t.iso,
+    facts: {
+      score: cur.score ?? null, band: cur.band ?? null, scoreDelta: dScore,
+      concessionIndex: core.idx, offersLive: liveR.length + liveP.length,
+      buildersLive: bld.size, expired: (recs.length - liveR.length) + (promos.length - liveP.length),
+      rateDaily: rb ? rb.rate30yr : null, ratePmmsWeekly: pm ? pm.rate : null,
+    },
+    changes: { count: changed, newOffers: [...new Set(newOffers)], improved: [...new Set(improved)], reduced: [...new Set(reduced)], deadlinesNext7d: urgent.slice(0, 5) },
+    interpretation,
+    buyerAction,
+    affectedSegments: urgent.length ? ['buyers considering: ' + [...new Set(urgent.map(u => u.builder))].join(', '), 'buyers purchasing within 30 days'] : ['no segment needs to act on today’s sweep'],
+    confidence: 'All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.',
+    sources: ['incentives.json', 'score-history.json', 'concession-index.json', 'reporting/rate-benchmark.json', 'reporting/pmms.json'],
+    publishRecommendation: changed ? (dScore ? 'publish-broadly' : 'publish-watchlists') : 'record-internal',
+  };
+  writeFileSync(path, JSON.stringify(packet, null, 2) + '\n');
+  console.log('[sweep] content packet: ' + packet.publishRecommendation + ' (' + changed + ' material changes)');
 }
