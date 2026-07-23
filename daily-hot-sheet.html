@@ -325,9 +325,9 @@
 
   <div class="pad">
 
-    <div class="kick">▸ Builder opportunity rankings <span class="r">who's most motivated</span></div>
+    <div class="kick">▸ Builder offer signals <span class="r">advertised pressure, ranked</span></div>
     <div class="rule"></div>
-    <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">A separate read from the market index above: how motivated <em>each builder</em> looks right now, from credit size, structure, deadline pressure, and today's movement. Higher = more room at the table. <a href="methodology-buyer-advantage-score.html#builder">How it's scored ↗</a> · our transparent read, not an endorsement.</p>
+    <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">A separate read from the market index above: how much <em>advertised offer pressure</em> each builder is showing right now, from credit size, structure, deadline pressure, and today's movement. It reads advertising behavior on the builder's own site; it does not claim to know internal motivation. Higher = more room to ask. <a href="methodology-buyer-advantage-score.html#builder">How it's scored ↗</a> · our transparent read, not an endorsement.</p>
     <div class="rank">
       <div class="rank-head"><span>#</span><span>Builder</span><span>Score</span><span>Today</span></div>
       <div id="rankList"></div>
@@ -350,6 +350,7 @@
       <tr><td><b>Coventry · DRB · Century · GFO · Meritage · AHA · Starlight</b></td><td>Seven more dated windows, closing credits, buydowns, flex cash</td><td class="deadline">Jul 31</td></tr>
       <tr><td><b>Pacesetter</b></td><td>4.99% FHA/VA/USDA or 5.5% conv. + up to $10K closing</td><td class="deadline">Aug 3</td></tr>
     </table>
+    <p style="font-size:11px;color:#9a9a9a;margin-top:8px;line-height:1.6;">Every date above is the <b>builder's advertised deadline</b>, not an independently confirmed one. Some deadlines quietly roll over; we log extensions sweep by sweep, and a per-builder deadline credibility read will publish once enough history accrues to be fair. An expired offer still on display is flagged, never counted as live.</p>
     <p style="font-size:12.5px;color:var(--muted);margin-top:10px;">Want the full detail, every offer, filters, history, builder pages? That lives in the <a href="incentive-tracker.html">Incentive Tracker</a>. This sheet is the five-minute decision; the Tracker is the database behind it.</p>
 
     
@@ -718,7 +719,9 @@
       }
       var html = '';
       var dScore = cur.score - prev.score;
-      html += row('Buyer Advantage Score', prev.score + ' → ' + cur.score, dchip(dScore, function(x){return String(x);}, false));
+      var scoreChip = dchip(dScore, function(x){return String(x);}, false);
+      if (dScore !== 0 && Math.abs(dScore) <= 2) scoreChip += ' <span class="ss-na">within model noise</span>';
+      html += row('Buyer Advantage Score', prev.score + ' → ' + cur.score, scoreChip);
       var dIdx = null, idxVal = '';
       if (ci && ci.points && ci.points.length >= 2) {
         var iv = ci.points.map(function(p){return p.index;});
