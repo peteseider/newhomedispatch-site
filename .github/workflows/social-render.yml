@@ -1,13 +1,18 @@
 name: Social cards render
 
 # Renders the five branded social cards from the live data and commits them to
-# share/. Runs ~15 min after the Concession Index sweep. Separate from
-# incentive-sweep.yml on purpose so it can never break the data/site publish.
+# share/. Fires automatically after every Concession Index sweep (workflow_run),
+# plus its own twice-daily cron as a backstop, plus manual dispatch. Separate
+# from incentive-sweep.yml on purpose, so it can never break the data/site
+# publish. Optionally uploads to Google Drive if GDRIVE_SA is set.
 
 on:
+  workflow_run:
+    workflows: ["Concession Index sweep"]
+    types: [completed]
   schedule:
-    - cron: '45 11 * * *'
-    - cron: '45 23 * * *'
+    - cron: '45 11 * * *'   # ~6:45 AM CT (CDT) backstop
+    - cron: '45 23 * * *'   # ~6:45 PM CT (CDT) backstop
   workflow_dispatch:
 
 permissions:
@@ -19,15 +24,21 @@ concurrency:
 
 jobs:
   render:
+    # After a sweep, only render if the sweep succeeded. Cron/manual always render.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     env:
       GDRIVE_SA: ${{ secrets.GDRIVE_SA }}
       GDRIVE_FOLDER: ${{ vars.GDRIVE_FOLDER }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # always render from the latest main, which includes the sweep's fresh data commit
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Pull latest (the sweep may have just pushed)
+        run: git pull --rebase origin main
       - name: Install dependencies
         run: npm install playwright googleapis --no-save
       - name: Install Chromium
@@ -41,6 +52,7 @@ jobs:
         run: |
           git config user.name  "nhd-social-bot"
           git config user.email "actions@users.noreply.github.com"
+          git pull --rebase origin main || true
           git add share/hot-sheet-read.png share/hot-sheet-move.png share/hot-sheet-explained.png share/hot-sheet-rate.png share/hot-sheet-illusion.png
           if git diff --cached --quiet; then echo "No image changes."; else git commit -m "Auto-render social cards" && git push; fi
       - name: Upload to Google Drive
