@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Hot Sheet — Buyer Decision Terminal | New Home Dispatch</title>
+<meta name="description" content="The twice-daily decision surface for Central Texas new-home buyers: one Buyer Advantage Score, builder opportunity rankings, what changed overnight, and a personalized watchlist. Independent and free.">
+<link rel="canonical" href="https://newhomedispatch.com/daily-hot-sheet.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Daily Hot Sheet — Buyer Decision Terminal | New Home Dispatch">
+<meta property="og:description" content="One Buyer Advantage Score, builder rankings, and what changed overnight — the five-minute decision surface, twice a day.">
+<meta property="og:url" content="https://newhomedispatch.com/daily-hot-sheet.html">
+<meta property="og:site_name" content="New Home Dispatch">
+<meta property="og:image" content="https://newhomedispatch.com/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="analytics.js" defer></script>
+<style>
+  :root{
+    --ink:#000;--ink-2:#0A0A0A;--blueprint:#2B4FE0;--blueprint-light:#4E7AFF;
+    --navy:#0F2942;--on-navy:#7E9BEC;--paper:#FFFFFF;--paper-alt:#F5F6F8;
+    --line:#E4E4E7;--muted:#666;--good:#1E7A46;--warn:#B7791F;--bad:#C0392B;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',Arial,sans-serif;background:#E9EAED;color:var(--ink-2);line-height:1.55;font-size:15px;-webkit-font-smoothing:antialiased;}
+  a{color:var(--blueprint);}
+  /* slim site nav */
+  .topnav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;}
+  .topnav-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:11px 24px;gap:14px;flex-wrap:wrap;}
+  .topnav .brand{font-weight:800;color:var(--navy);text-decoration:none;font-size:16px;display:inline-flex;align-items:baseline;gap:.22em;}
+  .topnav .brand .h{color:var(--blueprint);}.topnav .brand .bar{color:var(--blueprint);font-weight:400;}
+  .topnav .links{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .topnav .links a{color:#333;text-decoration:none;font-size:13px;font-weight:600;}
+  .topnav .links a:hover{color:var(--blueprint);}
+  .topnav .links a.cta{background:var(--navy);color:#fff;padding:6px 12px;border-radius:4px;}
+  @media(max-width:640px){.topnav .links a.hideS{display:none;}}
+
+  .term{max-width:920px;margin:0 auto;background:var(--paper);}
+  header.mast{background:var(--navy);background-image:linear-gradient(rgba(78,122,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(78,122,255,.08) 1px,transparent 1px);background-size:28px 28px;padding:24px 24px 20px;border-bottom:2px solid var(--blueprint);}
+  .mh-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+  .wm{font-weight:800;font-size:22px;color:#fff;display:inline-flex;align-items:baseline;gap:.25em;}
+  .wm .h{color:var(--blueprint-light);}.wm .bar{color:var(--blueprint-light);font-weight:400;}
+  .live{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy);}
+  .live .pulse{width:8px;height:8px;border-radius:50%;background:#39D98A;animation:p 2s infinite;}
+  @keyframes p{0%{box-shadow:0 0 0 0 rgba(57,217,138,.6)}70%{box-shadow:0 0 0 7px rgba(57,217,138,0)}100%{box-shadow:0 0 0 0 rgba(57,217,138,0)}}
+  .mh-title{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-top:14px;}
+  .mh-title .sep{color:var(--on-navy);}
+  .pad{padding:0 24px;}
+
+  .score{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:28px 24px 4px;}
+  @media(max-width:640px){.score{grid-template-columns:1fr;gap:12px;}}
+  .score-dial{text-align:center;}
+  .score-num{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:82px;line-height:.9;letter-spacing:-3px;}
+  .score-of{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-top:2px;}
+  .score-badge{display:inline-block;margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--good);border-radius:3px;padding:5px 10px;}
+  .score-lab{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blueprint);font-weight:600;}
+  .score-lab .idx{color:var(--muted);}
+  .score-head{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(21px,3.2vw,27px);letter-spacing:-.4px;line-height:1.12;margin:6px 0 8px;}
+  .score-sub{font-size:.96rem;color:#333;max-width:54ch;}
+  .score-sub b{color:var(--ink);}
+  .signals{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:18px 24px 4px;}
+  @media(max-width:760px){.signals{grid-template-columns:repeat(2,1fr);}}
+  .sig{border:1px solid var(--line);border-top:2px solid var(--blueprint);border-radius:4px;padding:12px 13px;}
+  .sig b{display:block;font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:1.4rem;line-height:1;letter-spacing:-.5px;}
+  .sig span{display:block;font-size:11px;color:var(--muted);margin-top:6px;line-height:1.35;}
+  .sig.goodc{border-top-color:var(--good);}.sig.badc{border-top-color:var(--bad);}.sig.warnc{border-top-color:var(--warn);}
+  .disclose{padding:10px 24px 0;font-size:11.5px;color:#8a8a8a;font-style:italic;}
+
+  .kick{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blueprint);margin:32px 0 0;}
+  .kick .r{color:var(--muted);float:right;letter-spacing:.08em;}
+  .rule{height:2px;background:var(--blueprint);margin:6px 0 14px;clear:both;}
+
+  .wl{background:var(--paper-alt);border:1px solid var(--line);border-radius:8px;padding:18px 20px;}
+  .wl-intro{font-size:13.5px;color:#444;margin-bottom:14px;}.wl-intro b{color:var(--ink);}
+  .picker{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+  .pick{font-size:13px;font-weight:600;border:1px solid #C7CBD4;background:#fff;color:#333;border-radius:20px;padding:7px 14px;cursor:pointer;transition:all .12s;user-select:none;}
+  .pick:hover{border-color:var(--blueprint);}
+  .pick.on{background:var(--blueprint);border-color:var(--blueprint);color:#fff;}
+  .pick .x{opacity:.7;margin-left:5px;}
+  .wl-panel{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .wl-empty{padding:24px 18px;text-align:center;color:var(--muted);font-size:13.5px;}
+  .wl-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--line);}
+  .wl-row:last-child{border-bottom:none;}
+  .wl-b{font-weight:700;font-size:14.5px;}.wl-b small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px;}
+  .wl-status{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;white-space:nowrap;text-align:right;}
+  .s-up{color:var(--good);}.s-down{color:var(--bad);}.s-warn{color:var(--warn);}.s-flat{color:var(--muted);}
+  .wl-count{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:10px;text-transform:uppercase;letter-spacing:.08em;}
+
+  .rank{border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .rank-head{display:grid;grid-template-columns:34px 1fr 62px 92px;gap:12px;padding:9px 16px;background:var(--navy);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;}
+  .rank-head span:nth-child(3),.rank-head span:nth-child(4){text-align:right;}
+  .rank-row{display:grid;grid-template-columns:34px 1fr 62px 92px;gap:12px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--line);}
+  .rank-row:last-child{border-bottom:none;}
+  .rank-row .n{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;color:var(--muted);font-size:14px;}
+  .rank-b{font-weight:700;font-size:15px;}
+  .rank-why{display:block;font-size:12.5px;color:#555;margin-top:4px;line-height:1.45;font-weight:400;}
+  .rank-score{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:1.7rem;line-height:1;text-align:right;letter-spacing:-1px;}
+  .rank-trend{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-align:right;white-space:nowrap;}
+  .t-rise{color:var(--good);}.t-fall{color:var(--bad);}.t-flat{color:var(--muted);}
+
+  .move{background:var(--navy);border-radius:6px;padding:18px 22px;color:#fff;}
+  .move .l{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy);margin-bottom:7px;}
+  .move p{font-size:1.04rem;line-height:1.5;}.move .hl{color:#9DB6FF;font-weight:700;}
+
+  .rvt{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:600px){.rvt{grid-template-columns:1fr;}}
+  .rvt .c{border:1px solid var(--line);border-radius:4px;padding:16px 18px;}
+  .rvt .c.real{border-top:3px solid var(--good);}.rvt .c.fake{border-top:3px solid var(--bad);}
+  .rvt .big{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:2rem;line-height:1;letter-spacing:-1px;}
+  .rvt .real .big{color:var(--good);}.rvt .fake .big{color:var(--bad);}
+  .rvt p{font-size:13px;color:#444;margin-top:8px;line-height:1.5;}
+
+  table{width:100%;border-collapse:collapse;background:var(--paper);font-size:13.5px;border:1px solid var(--line);border-radius:2px;}
+  th{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;text-align:left;background:var(--navy);color:#fff;padding:9px 10px;}
+  td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .deadline{color:var(--warn);font-weight:700;font-size:12.5px;white-space:nowrap;}
+
+  .how{background:#F7F9FF;border:1px solid #D6DEF5;border-radius:8px;padding:20px 22px;}
+  .how h4{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:1rem;margin:14px 0 5px;}
+  .how h4:first-child{margin-top:0;}
+  .how p{font-size:13.5px;color:#3a3a3a;line-height:1.6;}
+  .how .eng{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--blueprint);letter-spacing:.04em;}
+
+  .cta-strip{background:var(--navy);border-radius:8px;padding:22px 24px;text-align:center;margin-top:8px;}
+  .cta-strip h3{color:#fff;font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:6px;}
+  .cta-strip p{color:var(--on-navy);font-size:13.5px;max-width:56ch;margin:0 auto 14px;}
+  .cta-strip a{display:inline-block;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:11px 20px;border-radius:5px;}
+
+  footer.foot{margin-top:38px;background:var(--navy);padding:26px 24px;border-top:2px solid var(--blueprint);text-align:center;}
+  footer.foot .wm{justify-content:center;font-size:19px;margin-bottom:8px;}
+  .foot-legal{color:var(--on-navy);font-size:11.5px;max-width:680px;margin:10px auto 0;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<nav class="topnav" aria-label="Primary">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</a>
+    <div class="links">
+      <a href="incentive-tracker.html">Incentive Tracker</a>
+      <a href="weekly-dispatch.html" class="hideS">Weekly Dispatch</a>
+      <a href="buyer-guides.html" class="hideS">Buyer Playbook</a>
+      <a href="buyer-strategy-call.html" class="cta">Get Buyer Help</a>
+    </div>
+  </div>
+</nav>
+
+<div class="term">
+
+  <header class="mast">
+    <div class="mh-top">
+      <span class="wm">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</span>
+      <span class="live"><span class="pulse"></span> Live · verified 6:05am CT · Jul 22</span>
+    </div>
+    <div class="mh-title">Daily Hot Sheet <span class="sep">·</span> Buyer Decision Terminal <span class="sep">·</span> Central Texas</div>
+  </header>
+
+  <div class="score">
+    <div class="score-dial">
+      <div class="score-num">78</div>
+      <div class="score-of">/ 100</div>
+      <div class="score-badge">▲ High &amp; building</div>
+    </div>
+    <div>
+      <div class="score-lab">Buyer Advantage Score <span class="idx">· the market index</span></div>
+      <div class="score-head">Buyers hold the stronger hand this morning.</div>
+      <div class="score-sub">One number for the whole Central Texas new-home market — the housing buyer's Fear &amp; Greed Index. Today it reads high: incentives are large and widespread and builders are competing hard. The one thing holding it back: <b>most credits are tied to the builder's lender</b>, so the leverage is real only if you protect the full value.</div>
+    </div>
+  </div>
+  <div class="signals">
+    <div class="sig"><b>$20,000</b><span>Median advertised incentive — historically high</span></div>
+    <div class="sig goodc"><b>23</b><span>Builders competing with live offers</span></div>
+    <div class="sig badc"><b>14</b><span>Dead offers still displayed — motivated &amp; sloppy</span></div>
+    <div class="sig warnc"><b>1 in 3</b><span>Offers with no lender strings — protect the rest</span></div>
+  </div>
+  <p class="disclose">One market-wide index, built transparently from the signals above. It is a read of buyer leverage — not a prediction or financial advice.</p>
+
+  <div class="pad">
+
+    <div class="kick">▸ Your watchlist <span class="r">personalized</span></div>
+    <div class="rule"></div>
+    <div class="wl">
+      <p class="wl-intro"><b>Don't read 23 builders. Track yours.</b> Pick the builders you're considering — you'll open straight to what changed for them.</p>
+      <div class="picker" id="picker"></div>
+      <div class="wl-panel" id="wlPanel"></div>
+      <div class="wl-count" id="wlCount"></div>
+    </div>
+
+    <div class="kick">▸ Builder opportunity rankings <span class="r">who's most motivated</span></div>
+    <div class="rule"></div>
+    <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">A separate read from the market index above: how motivated <em>each builder</em> looks right now — credit size and structure, deadline pressure, and dead-offer sloppiness. Higher = more room at the table. Our transparent read, not an endorsement.</p>
+    <div class="rank">
+      <div class="rank-head"><span>#</span><span>Builder</span><span>Score</span><span>Today</span></div>
+      <div id="rankList"></div>
+    </div>
+
+    <div class="kick">▸ Today's one move</div>
+    <div class="rule"></div>
+    <div class="move">
+      <div class="l">The only clock ticking this week</div>
+      <p><span class="hl">Trophy Signature's 1.99% first-year buydown ends Friday, July 24</span> — the single offer forcing a decision in the next seven days. If a Trophy home is on your list, get written terms today. Everything else runs to July 31 or later.</p>
+    </div>
+
+    <div class="kick">▸ Real vs. theater</div>
+    <div class="rule"></div>
+    <div class="rvt">
+      <div class="c real"><div class="big">35</div><p>offers <b>verified live today</b> on the builder's own site. These are the ones you can act on.</p></div>
+      <div class="c fake"><div class="big">14</div><p><b>expired offers still displayed</b> — the countdown is fake. Treat a dead-but-posted offer as an opening bid: ask, in writing, if they'll honor it.</p></div>
+    </div>
+
+    <div class="kick">▸ The deadline clock — next 14 days</div>
+    <div class="rule"></div>
+    <table>
+      <tr><th>Builder</th><th>Offer</th><th>By when</th></tr>
+      <tr><td><b>Trophy Signature</b></td><td>1.99% first-year FHA buydown (→4.99%) or 2.99% conv. + free appliances</td><td class="deadline">Fri Jul 24 · 2 days</td></tr>
+      <tr><td><b>David Weekley</b></td><td>Up to $50K savings OR 2.99% start + $2,500 Heroes allowance</td><td class="deadline">Jul 31</td></tr>
+      <tr><td><b>Brohn Homes</b></td><td>Up to $40K off + flex cash (CMG)</td><td class="deadline">Jul 31</td></tr>
+      <tr><td><b>Coventry · DRB · Century · GFO · Meritage · AHA · Starlight</b></td><td>Seven more dated windows — closing credits, buydowns, flex cash</td><td class="deadline">Jul 31</td></tr>
+      <tr><td><b>Pacesetter</b></td><td>4.99% FHA/VA/USDA or 5.5% conv. + up to $10K closing</td><td class="deadline">Aug 3</td></tr>
+    </table>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:10px;">Want the full detail — every offer, filters, history, builder pages? That lives in the <a href="incentive-tracker.html">Incentive Tracker</a>. This sheet is the five-minute decision; the Tracker is the database behind it.</p>
+
+    <div class="kick">▸ How the intelligence works</div>
+    <div class="rule"></div>
+    <div class="how">
+      <h4>Two scores, never mixed</h4>
+      <p>The <b>Buyer Advantage Score</b> answers <em>"is now a good time to be shopping at all?"</em> — one market number you check like a rate. The <b>Builder Opportunity Rankings</b> answer <em>"who, specifically, is most motivated?"</em> Market = the weather; builders = which doors to knock on.</p>
+      <h4>Verified, not repackaged</h4>
+      <p>Every figure is captured live from each builder's own website twice a day and time-stamped — nothing carried forward, nothing field-verified is claimed that isn't. What's advertised is labeled advertised; what's expired-but-displayed is flagged.</p>
+      <h4>What's coming: the intelligence engine</h4>
+      <p>An MLS-derived market layer is in development to sharpen these scores — inventory and days-on-market trends, absorption, and predictive concession signals, all aggregate and derived within MLS rules. You won't see "an MLS section"; you'll see lines like <span class="eng">inventory up for three straight weeks — historically precedes larger concessions.</span> Not live until that pipeline is built.</p>
+    </div>
+
+    <div class="cta-strip">
+      <h3>Get the Terminal before you tour</h3>
+      <p>Open it every morning, or have the twice-daily read sent to you — and choose exactly what you want: this Daily Hot Sheet, the Friday Weekly Dispatch, or both.</p>
+      <a href="incentive-watch.html">Choose your updates →</a>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span class="wm">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</span>
+    <div class="foot-legal">Every figure is builder-advertised and verified live on the builder's own site — not field-verified, not an endorsement. Offers with lender names require the builder's affiliated lender and credit approval. The Buyer Advantage Score and Builder Opportunity Rankings are New Home Dispatch's transparent read of current leverage, not predictions or financial advice. Data: July 22, 2026 AM sweep.</div>
+    <div class="foot-legal">© 2026 New Home Dispatch — independent housing intelligence for Central Texas.</div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var builders = [
+    {slug:'david-weekley', name:'David Weekley', score:94, trend:'rise', trendTxt:'▲ Rising',
+     why:'Up to $50K or a 2.99% start on a hard July 31 deadline — a national builder putting a dated number this big on the table is pushing volume.',
+     status:{cls:'s-warn', txt:'⚠ Ends Jul 31 · 9 days'}, sub:'50th-Anniversary event'},
+    {slug:'empire', name:'Empire Communities', score:91, trend:'rise', trendTxt:'▲ Rising',
+     why:'A broad "up to $50K" plus a $133K cut on one aging spec, new today — two motivation signals at once.',
+     status:{cls:'s-up', txt:'▲ New incentive today'}, sub:'up to $50K + $133K spec cut'},
+    {slug:'brohn', name:'Brohn Homes', score:84, trend:'flat', trendTxt:'► Stable',
+     why:'Up to $40K off + flex cash on a July 31 clock. Lender-tied (CMG), so protect the rate.',
+     status:{cls:'s-flat', txt:'► $40K · ends Jul 31'}, sub:'up to $40K off + flex'},
+    {slug:'perry', name:'Perry Homes', score:76, trend:'flat', trendTxt:'► Stable',
+     why:'Biggest standing credit ($35K, no deadline) — steady leverage, but no urgency signal today.',
+     status:{cls:'s-flat', txt:'► No change'}, sub:'up to $35K, no deadline'},
+    {slug:'trophy', name:'Trophy Signature', score:72, trend:'rise', trendTxt:'▲ Rising',
+     why:'A 1.99% first-year buydown with a Friday contract deadline — the hardest short-term push on the board.',
+     status:{cls:'s-warn', txt:'⚠ Ends Fri · 2 days'}, sub:'1.99% first-year buydown'},
+    {slug:'ashton', name:'Ashton Woods', score:69, trend:'flat', trendTxt:'► Stable',
+     why:'A $118K cut on one featured home plus $10K at Cordova Trails — spec-clearing, not community-wide.',
+     status:{cls:'s-up', txt:'▲ $118K spec cut confirmed'}, sub:'featured-home reductions'}
+  ];
+  var watch = {};
+  function el(id){return document.getElementById(id);}
+
+  el('rankList').innerHTML = builders.map(function(b,i){
+    return '<div class="rank-row"><span class="n">'+(i+1)+'</span>'+
+      '<span><span class="rank-b">'+b.name+'</span><span class="rank-why">'+b.why+'</span></span>'+
+      '<span class="rank-score">'+b.score+'</span>'+
+      '<span class="rank-trend t-'+b.trend+'">'+b.trendTxt+'</span></div>';
+  }).join('');
+
+  el('picker').innerHTML = builders.map(function(b){
+    return '<button type="button" class="pick" data-s="'+b.slug+'">'+b.name+'<span class="x" style="display:none;">×</span></button>';
+  }).join('');
+
+  function renderWatch(){
+    var chosen = builders.filter(function(b){return watch[b.slug];});
+    var panel = el('wlPanel');
+    if(!chosen.length){
+      panel.innerHTML = '<div class="wl-empty">Pick your builders above ↑ — your morning view appears here.</div>';
+      el('wlCount').textContent=''; return;
+    }
+    var order = {'s-warn':0,'s-up':1,'s-down':2,'s-flat':3};
+    chosen.sort(function(a,b){return order[a.status.cls]-order[b.status.cls];});
+    panel.innerHTML = chosen.map(function(b){
+      return '<div class="wl-row"><div class="wl-b">'+b.name+'<small>'+b.sub+'</small></div>'+
+        '<div class="wl-status '+b.status.cls+'">'+b.status.txt+'</div></div>';
+    }).join('');
+    var warns = chosen.filter(function(b){return b.status.cls==='s-warn';}).length;
+    el('wlCount').textContent = chosen.length+' tracked'+(warns?' · '+warns+' need attention this week':' · nothing urgent');
+  }
+  el('picker').addEventListener('click', function(e){
+    var btn = e.target.closest('.pick'); if(!btn) return;
+    var s = btn.getAttribute('data-s');
+    watch[s] = !watch[s];
+    btn.classList.toggle('on', watch[s]);
+    btn.querySelector('.x').style.display = watch[s] ? 'inline' : 'none';
+    renderWatch();
+  });
+  renderWatch();
+})();
+</script>
+</body>
+</html>
