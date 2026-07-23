@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>The MUD &amp; PID Atlas | New Home Dispatch</title>
+<meta name="description" content="Special tax districts around Austin new construction, community by community: combined tax rates, MUD and PID flags, verification status, and how to confirm the district on your exact lot.">
+<link rel="canonical" href="https://newhomedispatch.com/mud-pid-atlas">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0F2942">
+<style>
+:root{--navy:#0F2942;--blue:#2B4FE0;--ink:#151515;--muted:#6b6b6b;--line:#E7E7E7;--good:#1F7A43;--warn:#B7791F;--loss:#B3382C;}
+*{box-sizing:border-box;}body{margin:0;font-family:'Inter',sans-serif;color:var(--ink);background:#FAFAF8;}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#fff;border-bottom:1px solid var(--line);}
+.brand{font-weight:800;font-size:18px;text-decoration:none;color:var(--ink);}.brand .h{color:var(--blue);}.brand .bar{color:var(--blue);font-weight:400;padding:0 2px;}
+.links a{margin-left:16px;text-decoration:none;color:var(--ink);font-weight:600;font-size:13.5px;}
+.links a.cta{background:var(--navy);color:#fff;padding:9px 14px;border-radius:6px;}
+.wrap{max-width:860px;margin:0 auto;padding:34px 20px 60px;}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);}
+h1{font-family:'Fraunces',serif;font-size:clamp(30px,6vw,44px);line-height:1.1;margin:10px 0 14px;letter-spacing:-.01em;}
+.lead{font-size:16.5px;line-height:1.65;color:#3a3a3a;max-width:64ch;}
+h2{font-family:'Fraunces',serif;font-size:22px;margin:34px 0 10px;}
+p{font-size:14.5px;line-height:1.7;color:#333;}
+.duo{display:flex;gap:14px;flex-wrap:wrap;margin:18px 0;}
+.duo .d{flex:1;min-width:250px;border:1px solid var(--line);border-radius:9px;background:#fff;padding:16px 18px;}
+.duo .d .h3{font-weight:800;font-size:15px;margin-bottom:6px;}
+.duo .d .h3 span{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--muted);display:block;font-weight:500;margin-top:2px;text-transform:uppercase;}
+.duo .d p{font-size:13px;margin:0;line-height:1.6;}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:13px;border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+th{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;text-align:left;background:var(--navy);color:#fff;padding:9px 10px;cursor:pointer;user-select:none;white-space:nowrap;}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+tr:last-child td{border-bottom:none;}
+.rate{font-family:'IBM Plex Mono',monospace;font-weight:600;white-space:nowrap;}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;border-radius:3px;padding:2.5px 7px;}
+.tag.mud{background:#FDF3E3;color:var(--warn);}
+.tag.ver{background:#E9F3EC;color:var(--good);}
+.tag.chk{background:#F0F0F0;color:#666;}
+.note{border-left:3px solid var(--blue);background:#fff;border-radius:0 8px 8px 0;padding:13px 16px;margin:18px 0;font-size:13.5px;line-height:1.65;color:#333;}
+.foot{border-top:1px solid var(--line);margin-top:44px;padding-top:18px;font-size:12px;color:var(--muted);line-height:1.7;}
+a{color:var(--blue);}
+.stampline{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);margin:8px 0 14px;letter-spacing:.03em;}
+@media(max-width:560px){
+  table, tbody, tr{display:block;width:100%;}
+  thead{display:none;}
+  tr{border-bottom:1px solid var(--line);padding:10px 12px;background:#fff;}
+  td{display:block;border:none;padding:2px 0;}
+  td:first-child{font-size:14px;}
+}
+</style>
+</head>
+<body>
+<nav class="top">
+  <a href="index.html" class="brand">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</a>
+  <div class="links">
+    <a href="daily-hot-sheet.html">Daily Hot Sheet</a>
+    <a href="communities.html">Community Explorer</a>
+    <a href="buyer-strategy-call.html" class="cta">Get Buyer Help</a>
+  </div>
+</nav>
+<div class="wrap">
+  <div class="eyebrow">Proprietary Data &middot; Special Tax Districts</div>
+  <h1>The MUD &amp; PID Atlas.</h1>
+  <p class="lead">Two homes that look identical can carry very different total tax rates, and the difference usually lives in a special district. This atlas tracks the combined rate and the district picture for every community we cover, one entry at a time, verified against public records as our field work reaches each one.</p>
+  <div class="stampline" id="atlas-stamp">Community registry, updated with the tracker dataset.</div>
+
+  <div class="duo">
+    <div class="d">
+      <div class="h3">MUD <span>Municipal Utility District</span></div>
+      <p>Usually a value based property tax inside your combined rate, adopted annually, funding district debt and operations. Confirm whether one applies to the specific lot through TCEQ and official district records, never builder marketing.</p>
+    </div>
+    <div class="d">
+      <div class="h3">PID <span>Public Improvement District</span></div>
+      <p>Usually a property specific assessment, separate from the tax rate, with a balance, an annual installment, and a term. Get the assessment plan and prepayment rules from title documents before you sign.</p>
+    </div>
+  </div>
+
+  <h2>The atlas</h2>
+  <p style="font-size:13px;color:var(--muted);">Tap a column to sort. Rates are the combined advertised or page verified rate we track for each community; the district column shows what our records note so far. Every community profile gets its full district picture pinned as verification reaches it.</p>
+  <table id="atlas">
+    <thead><tr><th data-k="name">Community</th><th data-k="city">City</th><th data-k="rate">Combined rate</th><th data-k="dist">District notes</th><th data-k="src">Source</th></tr></thead>
+    <tbody id="atlas-body">
+      <tr><td colspan="5" style="color:var(--muted);">Loading the community registry&hellip;</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note"><b>How to verify your exact lot:</b> ask the builder, in writing, for every taxing entity on the lot; cross check the MUD on the <a href="https://www.tceq.texas.gov/waterdistricts" target="_blank" rel="noopener">TCEQ water districts database</a>; pull the PID assessment plan through the title company; then re run your payment with the true combined rate in the <a href="true-cost-calculator.html">True Cost Calculator</a>. The <a href="texas-tax-reality-guide.html">Texas Tax Reality Guide</a> walks through all of it.</p></div>
+
+  <div class="foot">
+    Educational content, not tax or legal advice. Rates shown are the combined rates we track per community, dated and sourced in the registry; district status is noted where our records support it and marked for verification where they do not. Districts, rates, and assessments change; verify against official records before relying on any figure. &copy; 2026 New Home Dispatch &middot; independent housing intelligence for Central Texas &middot; <b>Look Closer.</b>
+  </div>
+</div>
+<script>
+(function(){
+  function j(u){ return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}); }
+  function esc(x){ return String(x==null?'':x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  Promise.all([j('/entities.json'), j('/incentives.json')]).then(function(res){
+    var reg = res[0], inc = res[1];
+    if (!reg || !reg.communities) return;
+    var mudNotes = {};
+    ((inc && inc.records) || []).forEach(function(r){
+      if (r.communitySlug && r.taxNote) mudNotes[r.communitySlug] = r.taxNote;
+    });
+    var rows = reg.communities.map(function(c){
+      var note = mudNotes[c.slug] || '';
+      return {
+        name: c.name, city: c.city || '', slug: c.slug, url: c.url,
+        rate: (typeof c.taxRate === 'number') ? c.taxRate : null,
+        dist: note ? note : (c.taxSource === 'community-page' ? 'profiled' : 'verify'),
+        src: c.taxSource || 'unverified'
+      };
+    });
+    var stamp = document.getElementById('atlas-stamp');
+    if (stamp && reg.updated) stamp.textContent = rows.length + ' communities tracked · registry updated ' + reg.updated + ' · grows with every sweep and field visit';
+    var key = 'rate', dir = -1;
+    function render(){
+      var sorted = rows.slice().sort(function(a,b){
+        var av = a[key], bv = b[key];
+        if (key === 'rate') { av = av == null ? -1 : av; bv = bv == null ? -1 : bv; return (bv - av) * (dir === -1 ? 1 : -1); }
+        return String(av).localeCompare(String(bv)) * (dir === -1 ? -1 : 1);
+      });
+      document.getElementById('atlas-body').innerHTML = sorted.map(function(r){
+        var distTag = r.dist === 'verify' ? '<span class="tag chk">verify with TCEQ</span>'
+          : r.dist === 'profiled' ? '<span class="tag ver">profiled</span>'
+          : '<span class="tag mud">' + esc(r.dist) + ' noted</span>';
+        return '<tr><td><a href="' + esc(r.url) + '"><b>' + esc(r.name) + '</b></a></td>' +
+          '<td>' + esc(r.city) + '</td>' +
+          '<td class="rate">' + (r.rate != null ? r.rate.toFixed(2) + '%' : '<span style="color:#9a9a9a;">pending</span>') + '</td>' +
+          '<td>' + distTag + '</td>' +
+          '<td style="font-family:IBM Plex Mono,monospace;font-size:10.5px;color:#888;">' + esc(r.src) + '</td></tr>';
+      }).join('');
+    }
+    document.querySelectorAll('#atlas th').forEach(function(th){
+      th.addEventListener('click', function(){
+        var k = th.getAttribute('data-k') === 'rate' ? 'rate' : th.getAttribute('data-k');
+        if (k === key) dir = -dir; else { key = k; dir = -1; }
+        render();
+      });
+    });
+    render();
+  });
+})();
+</script>
+<script src="nav.js" defer></script>
+<script src="analytics.js" defer></script>
+</body>
+</html>

@@ -178,6 +178,14 @@
     .rank-trend{font-size:9.5px;}
     .rank-score{font-size:1.25rem;}
   }
+
+  /* v125 simplification: lower sections fold into a tap-to-open drawer so the
+     top of the sheet reads as a 60-second brief; nothing is removed. */
+  details.fold>summary{cursor:pointer;list-style:none;user-select:none;}
+  details.fold>summary::-webkit-details-marker{display:none;}
+  details.fold>summary .tw{display:inline-block;transition:transform .15s ease;margin-right:2px;}
+  details.fold[open]>summary .tw{transform:rotate(90deg);}
+  details.fold>summary:hover{opacity:.85;}
 </style>
 </head>
 <body>
@@ -239,7 +247,7 @@
 
   <div class="pad">
 
-    <div class="kick" id="watchlist">▸ Your watchlist <span class="r">personalized · saved on this device</span></div>
+    <details class="fold"><summary class="kick" id="watchlist"><span class="tw">▸</span> Your watchlist <span class="r">personalized · saved on this device</span></summary>
     <div class="rule"></div>
     <div class="wl">
       <p class="wl-intro"><b>Don't read every builder. Track yours.</b> Pick the builders you're considering, you'll open straight to what changed for them. Selections stay in your browser on this device, no account needed.</p>
@@ -250,6 +258,7 @@
       <a id="wlCta" href="preference-center.html" style="display:none;margin-top:14px;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:12px 18px;border-radius:5px;text-align:center;">Get changes for these builders by email →</a>
     </div>
 
+    </details>
     <div class="kick">▸ Today's one move</div>
     <div class="rule"></div>
     <div class="move">
@@ -312,10 +321,17 @@
         <div style="font-size:10.5px;color:#9a9a9a;margin-top:5px;line-height:1.5;">A temporary buydown discounts years one and two only, then the payment steps up to the full rate. Illustration at today's index. Never treat a year one payment as the permanent cost; a permanent buydown or a price cut can be worth more over time.</div>
       </div>
     </div>
+    <div style="margin-top:12px;" id="fc-wrap">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Advertised builder rates vs the market · $400,000 loan · P&amp;I only</div>
+      <div id="fc-rows" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
+        <div style="padding:11px 14px;color:var(--muted);font-size:12px;">Loads from today's tracked offers&hellip;</div>
+      </div>
+      <div style="font-size:10.5px;color:#9a9a9a;margin-top:5px;line-height:1.5;">These are <b>builder advertised promotional rates</b>, usually forward commitments through the builder's affiliated lender. They require using that lender, full qualification, and often specific inventory homes, and they can change or sell out without notice. Advertised, not a quote, and not our verification of any lender's terms. Model your own scenario in the <a href="incentive-calculator.html">Incentive Reality Calculator</a>.</div>
+    </div>
   </div>
 
   <div style="padding:18px 24px 0;">
-    <div class="kick">▸ Where we stand <span class="r">today vs 1w · 1mo · 1yr</span></div>
+    <details class="fold"><summary class="kick"><span class="tw">▸</span> Where we stand <span class="r">today vs 1w · 1mo · 1yr</span></summary>
     <div class="rule"></div>
     <div id="trend-rows" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
       <div style="padding:14px 16px;color:var(--muted);font-size:12.5px;">Loading the trend board&hellip;</div>
@@ -323,9 +339,10 @@
     <div style="font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:#9a9a9a;margin-top:6px;line-height:1.6;">Green favors buyers, red works against them. Rate history: Mortgage News Daily (daily index) and Freddie Mac PMMS (weekly survey). Prices: City of Austin median sold, ABoR MLS. Resale rows: Unlock MLS published monthly snapshot, Austin MSA, all residential. Permits: City of Austin open data. The Concession Index is our own series and grows with every sweep. Deeper MLS layers (closed prices, delivered concessions) publish as aggregates once the licensed feed lands.</div>
   </div>
 
-  <div class="pad">
+  </details>
+    <div class="pad">
 
-    <div class="kick">▸ Builder offer signals <span class="r">advertised pressure, ranked</span></div>
+    <details class="fold"><summary class="kick"><span class="tw">▸</span> Builder offer signals <span class="r">advertised pressure, ranked</span></summary>
     <div class="rule"></div>
     <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">A separate read from the market index above: how much <em>advertised offer pressure</em> each builder is showing right now, from credit size, structure, deadline pressure, and today's movement. It reads advertising behavior on the builder's own site; it does not claim to know internal motivation. Higher = more room to ask. <a href="methodology-buyer-advantage-score.html#builder">How it's scored ↗</a> · our transparent read, not an endorsement.</p>
     <div class="rank">
@@ -333,14 +350,16 @@
       <div id="rankList"></div>
     </div>
 
-    <div class="kick">▸ Real vs. theater</div>
+    </details>
+    <details class="fold"><summary class="kick"><span class="tw">▸</span> Real vs. theater</summary>
     <div class="rule"></div>
     <div class="rvt">
       <div class="c real"><div class="big" id="rvt-live">35</div><p>offers <b>verified live today</b> on the builder's own site. These are the ones you can act on.</p></div>
       <div class="c fake"><div class="big" id="rvt-exp">14</div><p><b>expired offers still displayed</b>, the countdown is fake. Treat a dead-but-posted offer as an opening bid: ask, in writing, if they'll honor it.</p></div>
     </div>
 
-    <div class="kick">▸ The deadline clock, next 14 days</div>
+    </details>
+    <details class="fold"><summary class="kick"><span class="tw">▸</span> The deadline clock, next 14 days</summary>
     <div class="rule"></div>
     <table id="dl-table">
       <tr><th>Builder</th><th>Offer</th><th>By when</th></tr>
@@ -354,6 +373,7 @@
     <p style="font-size:12.5px;color:var(--muted);margin-top:10px;">Want the full detail, every offer, filters, history, builder pages? That lives in the <a href="incentive-tracker.html">Incentive Tracker</a>. This sheet is the five-minute decision; the Tracker is the database behind it.</p>
 
     
+    </details>
     <div class="kick" id="news">▸ What changed beyond the sales office <span class="r">curated · one story max</span></div>
     <div class="rule"></div>
     <div id="news-box">
@@ -362,7 +382,7 @@
     <p style="font-size:11px;color:#9a9a9a;margin-top:8px;line-height:1.6;">A story appears here only when it may materially change affordability, financing, supply, taxes, insurance, infrastructure, schools, builder behavior, or buyer timing in Central Texas, and scores at least 70/100 on our published relevance model (locality 30, buyer impact 25, new-construction connection 20, recency 15, source quality 10). Every item links and credits the original publisher.</p>
 
 
-    <div class="kick">▸ Built in house, sharpened every sweep <span class="r">proprietary</span></div>
+    <details class="fold"><summary class="kick"><span class="tw">▸</span> Built in house, sharpened every sweep <span class="r">proprietary</span></summary>
     <div class="rule"></div>
     <div class="how">
       <h4>The Buyer Advantage Score</h4>
@@ -378,7 +398,8 @@
       <p style="margin-top:10px;">The methods are published on the <a href="methodology.html">methodology page</a>. The pipeline that runs them is proprietary, it runs without days off, and it compounds: every sweep adds history no one can recreate later.</p>
     </div>
 
-    <div class="kick">▸ How the intelligence works</div>
+    </details>
+    <details class="fold"><summary class="kick"><span class="tw">▸</span> How the intelligence works</summary>
     <div class="rule"></div>
     <div class="how">
       <h4>Two scores, never mixed</h4>
@@ -389,6 +410,7 @@
       <p>An MLS-derived market layer is in development to sharpen these scores, inventory and days-on-market trends, absorption, and concession trends, all aggregate and derived within MLS rules. You won't see "an MLS section"; you'll see observations like <span class="eng">inventory up for three straight weeks, increasing a builder's current inventory burden.</span> Predictive relationships will only be published once enough retained history demonstrates them. Not live until that pipeline is built and authorized.</p>
     </div>
 
+    </details>
     <div style="background:#0F2942;border-radius:8px;padding:20px 22px;margin:22px 0 8px;color:#fff;">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;color:#8fa8d9;text-transform:uppercase;margin-bottom:8px;">The Dispatch rule</div>
       <div style="font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px;">The deal comes last.</div>
@@ -500,6 +522,7 @@
     if (!watched.length || !Object.keys(liveStatus).length) { a.style.display='none'; return; }
     var n = watched.filter(function(c){ var s = liveStatus[c]; return s && s.cls !== 's-flat'; }).length;
     if (!n) { a.style.display='none'; return; }
+    a.onclick = function(){ var d = document.getElementById('watchlist'); var det = d && d.closest('details'); if (det) det.open = true; };
     a.innerHTML = '<a href="#watchlist" style="display:inline-flex;align-items:center;gap:8px;background:#EEF2FF;border:1px solid #C7D4FF;color:#1E3A8A;font-weight:700;font-size:13px;text-decoration:none;border-radius:20px;padding:8px 15px;">● ' + n + ' change' + (n>1?'s':'') + ' affect' + (n>1?'':'s') + ' your watchlist ↓</a>';
     a.style.display='block';
   }
@@ -806,6 +829,45 @@
         txt(s[1], '$' + Math.round(pmt(400000, s[0])).toLocaleString('en-US'));
       });
       /* temporary vs permanent on $400,000 at today's index */
+      /* advertised builder promo rates vs market: fixed promotional rates only.
+         Teaser structures (first-year, 2-1, 1-0, 3/2/1) are excluded because
+         their year-one payment is not the permanent cost. */
+      (function () {
+        var box = document.getElementById('fc-rows');
+        if (!box || !inc || !Array.isArray(inc.promos)) return;
+        var cands = [];
+        inc.promos.forEach(function (p2) {
+          var k2 = p2.expires ? dkey(p2.expires) : null;
+          if (k2 && k2 < t) return;
+          var txt2 = String(p2.promo || '');
+          if (/first[- ]?year|2-1|1-0|3\/2\/1|ARM/i.test(txt2)) return;
+          var m2 = txt2.match(/(\d\.\d{2})\s*%/);
+          if (!m2) return;
+          var r2 = parseFloat(m2[1]);
+          if (!(r2 > 2.5 && r2 < r - 0.5)) return;
+          cands.push({ r: r2, b: p2.builder, fha: /FHA|VA|USDA/i.test(txt2), exp: k2 });
+        });
+        if (!cands.length) return;
+        cands.sort(function (a2, b2) { return a2.r - b2.r; });
+        var fha = cands.filter(function (c) { return c.fha; })[0];
+        var conv = cands.filter(function (c) { return !c.fha; })[0];
+        var mkt = Math.round(pmt(400000, r));
+        function fr(label, c) {
+          if (!c) return '';
+          var pay = Math.round(pmt(400000, c.r));
+          var d = mkt - pay;
+          return '<div style="display:flex;gap:12px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap;">' +
+            '<div style="flex:1.6;min-width:170px;font-size:12.5px;"><b>' + esc(c.b) + '</b> · advertised ' + c.r.toFixed(2) + '% ' + label + (c.exp ? ' <span style="font-family:IBM Plex Mono,monospace;font-size:10px;color:var(--warn);">through ' + esc(c.exp.slice(5).split('-').join('/')) + '</span>' : '') + '</div>' +
+            '<div style="min-width:90px;font-weight:800;font-size:15px;">$' + pay.toLocaleString('en-US') + '/mo</div>' +
+            '<div style="min-width:130px;font-size:12px;color:var(--good);font-weight:700;">$' + d.toLocaleString('en-US') + '/mo less than market</div></div>';
+        }
+        var html2 = '<div style="display:flex;gap:12px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--paper-alt);flex-wrap:wrap;">' +
+          '<div style="flex:1.6;min-width:170px;font-size:12.5px;"><b>Market</b> · ' + r.toFixed(2) + '% daily index</div>' +
+          '<div style="min-width:90px;font-weight:800;font-size:15px;">$' + mkt.toLocaleString('en-US') + '/mo</div>' +
+          '<div style="min-width:130px;font-size:12px;color:var(--muted);">your baseline</div></div>' +
+          fr('FHA/VA promo', fha) + fr('conventional promo', conv);
+        box.innerHTML = html2;
+      })();
       var perm = '$' + Math.round(pmt(400000, r)).toLocaleString('en-US');
       var m1 = '$' + Math.round(pmt(400000, r-2)).toLocaleString('en-US');
       var m2 = '$' + Math.round(pmt(400000, r-1)).toLocaleString('en-US');

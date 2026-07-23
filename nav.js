@@ -83,7 +83,7 @@
   var SCHEDULE = {
     'daily-hot-sheet': 'EVERY MORNING',
     'incentive-tracker': 'MONDAYS',
-    'weekly-dispatch': 'FREE · FRIDAY'
+    'weekly-dispatch': 'FRIDAYS'
   };
   function apply() {
     Object.keys(SCHEDULE).forEach(function (key) {
