@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buyer Advantage Score — Methodology (v0.1) | New Home Dispatch</title>
+<meta name="description" content="How New Home Dispatch calculates the Buyer Advantage Score: components, weights, baselines, a worked example, limitations, and change log. Version 0.1, public-signal model.">
+<link rel="canonical" href="https://newhomedispatch.com/methodology-buyer-advantage-score.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="analytics.js" defer></script>
+<style>
+  :root{--ink:#0A0A0A;--blueprint:#2B4FE0;--navy:#0F2942;--on-navy:#7E9BEC;--line:#E4E4E7;--muted:#666;--good:#1E7A46;--warn:#B7791F;--bad:#C0392B;--paper-alt:#F5F6F8;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff;font-size:15.5px;}
+  a{color:var(--blueprint);}
+  .topnav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;}
+  .topnav-inner{max-width:820px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:11px 24px;gap:14px;flex-wrap:wrap;}
+  .topnav .brand{font-weight:800;color:var(--navy);text-decoration:none;font-size:16px;}
+  .topnav .brand .h{color:var(--blueprint);}.topnav .brand .bar{color:var(--blueprint);font-weight:400;}
+  .topnav .links a{color:#333;text-decoration:none;font-size:13px;font-weight:600;margin-left:16px;}
+  .wrap{max-width:820px;margin:0 auto;padding:44px 24px 80px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blueprint);font-weight:600;}
+  h1{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(28px,5vw,40px);letter-spacing:-1px;line-height:1.08;margin:10px 0 8px;}
+  .ver{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:22px;}
+  h2{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:1.35rem;margin:38px 0 10px;letter-spacing:-.3px;}
+  p{margin:0 0 14px;} .lead{font-size:1.08rem;color:#222;}
+  .callout{background:var(--paper-alt);border-left:3px solid var(--blueprint);border-radius:3px;padding:16px 18px;margin:16px 0;font-size:.96rem;}
+  .warn{background:#FFFBEE;border-left:3px solid var(--warn);}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0;border:1px solid var(--line);}
+  th{background:var(--navy);color:#fff;text-align:left;padding:9px 11px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;}
+  td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .calc{font-family:'IBM Plex Mono',monospace;font-size:13px;background:var(--navy);color:#e8ecff;border-radius:5px;padding:16px 18px;margin:14px 0;line-height:1.7;overflow-x:auto;}
+  .calc b{color:#fff;}
+  .band{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0;}
+  @media(max-width:600px){.band{grid-template-columns:1fr 1fr;}}
+  .band div{border:1px solid var(--line);border-radius:4px;padding:10px;font-size:12.5px;text-align:center;}
+  .band .lab{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px;}
+  .band .cur{border-color:var(--good);border-width:2px;background:#F1FBF5;}
+  ul{margin:0 0 14px 20px;} li{margin-bottom:7px;}
+  .foot{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</a>
+    <div class="links"><a href="daily-hot-sheet.html">← Back to the Terminal</a></div>
+  </div>
+</nav>
+<div class="wrap">
+  <div class="eyebrow">Methodology</div>
+  <h1>The Buyer Advantage Score</h1>
+  <div class="ver">Version 0.1 · public-signal model · last updated July 23, 2026</div>
+
+  <p class="lead">The Buyer Advantage Score is one number for the whole Central Texas new-home market — a read of how much leverage buyers hold right now. This page shows exactly how it's calculated, so the number can be reproduced and checked. It is a transparent read, not a prediction or financial advice.</p>
+
+  <div class="callout warn"><b>What v0.1 is — and isn't.</b> This is a <b>public-signal model</b>: it uses only data we capture from builders' own websites twice a day. It does <b>not</b> yet include MLS market data (inventory, days-on-market, absorption), and its baselines are calibrated from editorial judgment pending back-testing against retained history. Treat it as an informed, reproducible index — not a precision instrument. The version number will advance as the model is back-tested and the MLS layer is added.</div>
+
+  <h2>The five components</h2>
+  <p>Each component is scored 0–100 from a stated input and formula, then weighted. Higher component score = stronger buyer leverage.</p>
+  <table>
+    <tr><th>Component</th><th class="n">Weight</th><th>Formula (v0.1)</th><th>Today's input</th><th class="n">Sub-score</th></tr>
+    <tr><td><b>Incentive level</b><br><span style="color:var(--muted);font-size:12.5px;">how big the median advertised credit is</span></td><td class="n">30%</td><td>clamp((median − $5k) ÷ $20k × 100)</td><td>median $20,000</td><td class="n">75</td></tr>
+    <tr><td><b>Competition breadth</b><br><span style="color:var(--muted);font-size:12.5px;">how many builders are actively offering</span></td><td class="n">20%</td><td>clamp(builders ÷ 25 × 100)</td><td>23 builders live</td><td class="n">92</td></tr>
+    <tr><td><b>Offer-validity friction</b><br><span style="color:var(--muted);font-size:12.5px;">share of displayed offers already expired</span></td><td class="n">15%</td><td>clamp(expired ÷ displayed × 300)</td><td>14 of 49 (28.6%)</td><td class="n">86</td></tr>
+    <tr><td><b>Lender-string factor</b><br><span style="color:var(--muted);font-size:12.5px;">share of offers with no lender requirement</span></td><td class="n">20%</td><td>string-free share × 100</td><td>1 in 3 (33%)</td><td class="n">33</td></tr>
+    <tr><td><b>Deadline pressure</b><br><span style="color:var(--muted);font-size:12.5px;">dated offers expiring within 14 days</span></td><td class="n">15%</td><td>clamp(count ÷ 12 × 100)</td><td>11 deadlines</td><td class="n">92</td></tr>
+  </table>
+
+  <h2>Worked example — why today equals 74</h2>
+  <div class="calc">
+    Incentive level&nbsp;&nbsp;&nbsp;0.30 × 75 = <b>22.5</b><br>
+    Competition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.20 × 92 = <b>18.4</b><br>
+    Validity friction&nbsp;0.15 × 86 = <b>12.9</b><br>
+    Lender-string&nbsp;&nbsp;&nbsp;&nbsp;0.20 × 33 = <b>&nbsp;6.6</b><br>
+    Deadline pressure&nbsp;0.15 × 92 = <b>13.8</b><br>
+    ─────────────────────────<br>
+    Buyer Advantage Score = <b>74.2 → 74</b>
+  </div>
+  <p>The lender-string factor (33) is what holds the score down: incentives are large and widespread, but two-thirds of them require the builder's own lender, so the full value only reaches a buyer who protects it. That single tension is the story the number tells this morning.</p>
+
+  <h2>The bands</h2>
+  <div class="band">
+    <div><span class="lab">0–39</span>Favors builders</div>
+    <div><span class="lab">40–59</span>Balanced</div>
+    <div class="cur"><span class="lab">60–79 · today</span>Favors buyers (High)</div>
+    <div><span class="lab">80–100</span>Strongly favors buyers</div>
+  </div>
+  <p>Because v0.1's precision is limited, read the <b>band</b> first and the exact number second. A move from 74 to 76 is noise; a move from "Favors buyers" to "Balanced" is signal.</p>
+
+  <h2>Limitations (read these)</h2>
+  <ul>
+    <li><b>Editorial baselines.</b> The formulas' anchor points ($5k–$25k incentive range, 25-builder saturation, etc.) are v0.1 judgment calls, not yet back-tested against outcomes.</li>
+    <li><b>No history yet.</b> We are storing every sweep's inputs and output starting now. Until enough history exists, we do not publish "change vs. prior sweep" or any predictive claim.</li>
+    <li><b>Offer-validity friction is interpretive.</b> An expired offer left on a builder's site proves the page is out of date — not, on its own, that the builder is motivated. It's a weak signal, weighted low, and flagged for review.</li>
+    <li><b>Pre-MLS.</b> The score does not yet include inventory, days-on-market, absorption, or concession data. Those are designed and will be added only after MLS authorization.</li>
+    <li><b>Advertised, not verified.</b> Inputs are builder-advertised figures captured from builders' own sites — not field-verified sale outcomes.</li>
+  </ul>
+
+  <h2>What the score does <em>not</em> mean</h2>
+  <ul>
+    <li>It is not a prediction that prices or rates will move.</li>
+    <li>It is not financial, mortgage, or investment advice.</li>
+    <li>It is not a statement about any individual home, community, or builder — those are the separate Builder Opportunity Rankings.</li>
+    <li>A high score does not mean "buy now." It means buyers, as a group, have more room to negotiate than usual.</li>
+  </ul>
+
+  <h2>Change log</h2>
+  <table>
+    <tr><th>Version</th><th>Date</th><th>Change</th></tr>
+    <tr><td>v0.1</td><td>2026-07-23</td><td>Initial public-signal model: 5 components (incentive level, competition, validity friction, lender-string, deadline pressure). Baselines editorial, pending back-test. Score history capture begins.</td></tr>
+  </table>
+
+  <div class="foot">New Home Dispatch is an independent consumer-education and housing-intelligence platform. The Buyer Advantage Score is a transparent editorial index built from builder-advertised data; it is not a prediction or financial advice. Questions or a correction? <a href="daily-hot-sheet.html">Return to the Terminal</a>.</div>
+</div>
+</body>
+</html>
