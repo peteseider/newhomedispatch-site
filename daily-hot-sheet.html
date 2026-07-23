@@ -267,6 +267,7 @@
         <div style="font-size:30px;font-weight:800;letter-spacing:-.02em;" id="rate-now">6.77%</div>
         <div style="font-size:12px;color:var(--muted);line-height:1.5;">30 yr fixed · daily market index<br><span id="rate-asof" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;">Mortgage News Daily · Jul 22</span></div>
         <div style="font-size:10.5px;color:#9a9a9a;margin-top:7px;line-height:1.45;">An index of average lender pricing, updated daily. Not a quote: your rate depends on credit, loan type, and points.</div>
+        <div id="pmms-line" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:7px;line-height:1.5;"></div>
       </div>
       <div style="flex:2;min-width:252px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
         <div style="font-size:12.5px;color:var(--muted);margin-bottom:8px;">What a monthly <b>principal and interest</b> budget of <b id="bp-budget-lab">$2,600/mo</b> carries on a true 30 year fixed:</div>
@@ -319,7 +320,7 @@
     <div id="trend-rows" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
       <div style="padding:14px 16px;color:var(--muted);font-size:12.5px;">Loading the trend board&hellip;</div>
     </div>
-    <div style="font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:#9a9a9a;margin-top:6px;line-height:1.6;">Green favors buyers, red works against them. Rate history: Mortgage News Daily. Prices: City of Austin median sold, ABoR MLS. The Concession Index is our own series and grows with every sweep. As MLS access lands, inventory and days-on-market join this board.</div>
+    <div style="font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:#9a9a9a;margin-top:6px;line-height:1.6;">Green favors buyers, red works against them. Rate history: Mortgage News Daily (daily index) and Freddie Mac PMMS (weekly survey). Prices: City of Austin median sold, ABoR MLS. Resale rows: Unlock MLS published monthly snapshot, Austin MSA, all residential. Permits: City of Austin open data. The Concession Index is our own series and grows with every sweep. Deeper MLS layers (closed prices, delivered concessions) publish as aggregates once the licensed feed lands.</div>
   </div>
 
   <div class="pad">
@@ -596,9 +597,10 @@
   Promise.all([
     j('/score-history.json'), j('/concession-index.json'), j('/incentives.json'),
     j('/reporting/sweep-latest.json'), j('/reporting/rate-benchmark.json'),
-    j('/price-floor.json'), j('/reporting/market-trend.json'), j('/reporting/buyer-news.json')
+    j('/price-floor.json'), j('/reporting/market-trend.json'), j('/reporting/buyer-news.json'),
+    j('/reporting/pmms.json'), j('/reporting/resale-market.json'), j('/reporting/permits.json')
   ]).then(function (res) {
-    var sh = res[0], ci = res[1], inc = res[2], sl = res[3], rb = res[4], pf = res[5], mt = res[6], news = res[7];
+    var sh = res[0], ci = res[1], inc = res[2], sl = res[3], rb = res[4], pf = res[5], mt = res[6], news = res[7], pmms = res[8], resale = res[9], permits = res[10];
     var stampLabel = (sl && sl.ranAtLabel) || (sh && sh.lastUpdatedLabel) || (ci && ci.lastUpdatedLabel) || null;
     var slot = (sl && sl.slot) || null;
     var t = todayCT();
@@ -758,6 +760,10 @@
       if (r == null) return;
       txt('rate-now', r.toFixed(2) + '%');
       if (rb.source || rb.asOfLabel) txt('rate-asof', (rb.source || '') + (rb.asOfLabel ? ' · ' + rb.asOfLabel : ''));
+      if (pmms && pmms.rate) {
+        var pl = document.getElementById('pmms-line');
+        if (pl) pl.textContent = 'Weekly national survey (Freddie Mac): ' + pmms.rate.toFixed(2) + '%' + (pmms.asOf ? ' · ' + pmms.asOf.slice(5).split('-').join('/') : '') + (pmms.prior && pmms.prior.rate ? ' · prior wk ' + pmms.prior.rate.toFixed(2) + '%' : '');
+      }
       var budget = 2600;
       function kfmt(v){ return '~$' + (Math.round(v/1000)*1000).toLocaleString('en-US'); }
       function renderBP(){
@@ -878,6 +884,33 @@
           chip('1mo', mo != null ? curP - mo : null, function (d) { return money(Math.abs(d)); }, true) +
           chip('1yr', yr != null ? curP - yr : null, function (d) { return money(Math.abs(d)); }, true),
           spark(S.map(function (p) { return p.value; }), 110, 34));
+      }
+      /* resale market rows: published MLS aggregates only (no individual records).
+         Buyer semantics: more inventory, longer market time, more listings, more
+         permits all favor buyers (green when up). */
+      if (resale && resale.msa) {
+        var M = resale.msa;
+        var moLabel = 'Jun 26 · Unlock MLS monthly · Austin MSA';
+        if (typeof M.monthsInventory === 'number') {
+          html += row('Resale months of inventory', moLabel, M.monthsInventory.toFixed(1) + ' mo',
+            chip('1yr', (typeof M.monthsInventoryYoYDelta === 'number') ? M.monthsInventoryYoYDelta : null, function (d) { return Math.abs(d).toFixed(1) + ' mo'; }, false) +
+            '<span style="font-size:11px;color:#9a9a9a;">falling supply works against buyers</span>', '');
+        }
+        if (typeof M.avgDaysOnMarket === 'number') {
+          html += row('Resale days on market', moLabel + ' · average', String(M.avgDaysOnMarket),
+            chip('1yr', (typeof M.avgDaysOnMarketYoYDelta === 'number') ? M.avgDaysOnMarketYoYDelta : null, function (d) { return Math.abs(d) + ' days'; }, false), '');
+        }
+        if (typeof M.activeListings === 'number') {
+          html += row('Resale active listings', moLabel, M.activeListings.toLocaleString('en-US'),
+            chip('1yr', (typeof M.activeListingsYoYPct === 'number') ? M.activeListingsYoYPct : null, function (d) { return Math.abs(d).toFixed(1) + '%'; }, false), '');
+        }
+      }
+      if (permits && permits.current && permits.priorYear && permits.current.count != null && permits.priorYear.count) {
+        var pd = Math.round((permits.current.count - permits.priorYear.count) / permits.priorYear.count * 1000) / 10;
+        html += row('New residential permits', 'City of Austin · trailing 30 days · open data', permits.current.count.toLocaleString('en-US'),
+          chip('vs yr-ago window', pd, function (d) { return Math.abs(d).toFixed(1) + '%'; }, false) +
+          '<span style="font-size:11px;color:#9a9a9a;">future supply favors buyers</span>',
+          spark((permits.history || []).map(function (h) { return h.count30d; }), 110, 34));
       }
       if (html) box.innerHTML = html;
     })();
