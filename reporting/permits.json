@@ -1,0 +1,23 @@
+{
+  "schema": "nhd-permits-v1",
+  "label": "New residential building permits issued · City of Austin · trailing 30 days",
+  "source": "City of Austin Open Data (Issued Construction Permits, 3syk-w9eu)",
+  "history": [
+    {
+      "date": "2026-07-23",
+      "count30d": 311,
+      "priorYear30d": 314
+    }
+  ],
+  "current": {
+    "from": "2026-06-23",
+    "to": "2026-07-23",
+    "count": 311
+  },
+  "priorYear": {
+    "from": "2025-06-23",
+    "to": "2025-07-23",
+    "count": 314
+  },
+  "updated": "2026-07-23"
+}
