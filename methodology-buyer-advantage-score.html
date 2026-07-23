@@ -108,10 +108,30 @@
     <li>A high score does not mean "buy now." It means buyers, as a group, have more room to negotiate than usual.</li>
   </ul>
 
+  <h2 id="builder">The Builder Opportunity Score</h2>
+  <p>A <b>separate</b> score from the market index — one per builder, answering "who, specifically, is most motivated?" Same discipline: reproducible from stated public signals, v0.1, pre-MLS.</p>
+  <table>
+    <tr><th>Component</th><th class="n">Weight</th><th>Formula (v0.1)</th></tr>
+    <tr><td><b>Credit size</b> — largest advertised credit</td><td class="n">40%</td><td>clamp(credit ÷ $50k × 100)</td></tr>
+    <tr><td><b>Deadline pressure</b></td><td class="n">25%</td><td>≤3d = 100 · ≤7d = 85 · ≤14d = 70 · ≤30d = 55 · none = 30</td></tr>
+    <tr><td><b>Today's movement</b></td><td class="n">20%</td><td>new/raised = 100 · large confirmed = 70 · stable = 50</td></tr>
+    <tr><td><b>String-free</b> — no lender requirement</td><td class="n">15%</td><td>no-lender = 100 · lender-tied = 40</td></tr>
+  </table>
+  <p><b>Worked example — David Weekley = 74:</b></p>
+  <div class="calc">
+    Credit $50k&nbsp;&nbsp;&nbsp;0.40 × 100 = <b>40.0</b><br>
+    Deadline Jul 31&nbsp;0.25 × 70&nbsp; = <b>17.5</b><br>
+    Movement&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.20 × 50&nbsp; = <b>10.0</b><br>
+    Lender-tied&nbsp;&nbsp;&nbsp;0.15 × 40&nbsp; = <b>&nbsp;6.0</b><br>
+    ─────────────────────────<br>
+    Builder Opportunity Score = <b>73.5 → 74</b>
+  </div>
+  <p>Same caveats as the market score apply: editorial baselines pending back-test, no history yet (so trend arrows reflect only <em>today's</em> observed movement, not a stored series), and it does not include MLS inventory/DOM data. Read it as "who has the most room at the table today," not an endorsement of any builder.</p>
+
   <h2>Change log</h2>
   <table>
     <tr><th>Version</th><th>Date</th><th>Change</th></tr>
-    <tr><td>v0.1</td><td>2026-07-23</td><td>Initial public-signal model: 5 components (incentive level, competition, validity friction, lender-string, deadline pressure). Baselines editorial, pending back-test. Score history capture begins.</td></tr>
+    <tr><td>v0.1</td><td>2026-07-23</td><td>Initial public-signal market model (5 components) + Builder Opportunity Score (4 components). Baselines editorial, pending back-test. Score-history capture begins.</td></tr>
   </table>
 
   <div class="foot">New Home Dispatch is an independent consumer-education and housing-intelligence platform. The Buyer Advantage Score is a transparent editorial index built from builder-advertised data; it is not a prediction or financial advice. Questions or a correction? <a href="daily-hot-sheet.html">Return to the Terminal</a>.</div>

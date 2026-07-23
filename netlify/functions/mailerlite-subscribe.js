@@ -55,11 +55,27 @@ const GROUP_IDS = {
 // Preference checkbox field name -> group ID. A submission can carry any
 // combination of these (hidden "always on" fields + visible optional
 // checkboxes) so one form can subscribe someone to multiple lists at once.
+// Finer preference groups added 2026-07-23 for the preference center
+// (preference-center.html). Create these three groups in MailerLite and set
+// their numeric IDs as Netlify env vars: ML_GROUP_EVENING,
+// ML_GROUP_MAJOR_ALERTS, ML_GROUP_BUILDER_ALERTS. Until they're set, these
+// preferences are still captured in Netlify Forms — they just don't route to a
+// dedicated MailerLite group yet (graceful: undefined IDs are filtered out, so
+// nothing breaks and the morning/weekly groups keep working).
+const OPTIONAL_GROUP_IDS = {
+  evening: process.env.ML_GROUP_EVENING,
+  majorAlerts: process.env.ML_GROUP_MAJOR_ALERTS,
+  builderAlerts: process.env.ML_GROUP_BUILDER_ALERTS,
+};
+
 const PREF_FIELD_GROUP_MAP = {
   pref_weekly: GROUP_IDS.weekly,
   pref_quarterly: GROUP_IDS.quarterly,
   pref_dailyhotsheet: GROUP_IDS.dailyHotSheet,
   pref_reportrequests: GROUP_IDS.reportRequests,
+  pref_evening: OPTIONAL_GROUP_IDS.evening,
+  pref_alerts: OPTIONAL_GROUP_IDS.majorAlerts,
+  pref_builderalerts: OPTIONAL_GROUP_IDS.builderAlerts,
 };
 
 // Fallback for forms that don't (yet) carry pref_* fields: form `name`
@@ -104,7 +120,8 @@ exports.handler = async (event) => {
       const v = fields[key];
       return v === 'yes' || v === 'on' || v === 'true' || v === true;
     })
-    .map((key) => PREF_FIELD_GROUP_MAP[key]);
+    .map((key) => PREF_FIELD_GROUP_MAP[key])
+    .filter(Boolean);   // drop optional groups whose env-var ID isn't set yet
 
   const hadPrefFields = Object.keys(PREF_FIELD_GROUP_MAP).some((key) => key in fields);
   const groupIds = prefGroups.length > 0 ? prefGroups : (!hadPrefFields ? [FORM_GROUP_MAP[formName]].filter(Boolean) : []);

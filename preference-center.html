@@ -57,19 +57,19 @@
 
       <fieldset>
         <legend>Daily — the Terminal</legend>
-        <label class="opt"><input type="checkbox" name="morning_hotsheet" value="yes" checked>
+        <label class="opt"><input type="checkbox" name="pref_dailyhotsheet" value="yes" checked>
           <span class="t">Morning Hot Sheet <span class="rec">Recommended</span><small>The five-minute decision read, every morning: Buyer Advantage Score, builder rankings, today's one move.</small></span></label>
-        <label class="opt"><input type="checkbox" name="major_change_alerts" value="yes" checked>
+        <label class="opt"><input type="checkbox" name="pref_alerts" value="yes" checked>
           <span class="t">Major-change alerts <span class="rec">Recommended</span><small>Only when something material happens — a big new incentive, a verified withdrawal, a deadline inside 72 hours.</small></span></label>
-        <label class="opt"><input type="checkbox" name="evening_edition" value="yes">
+        <label class="opt"><input type="checkbox" name="pref_evening" value="yes">
           <span class="t">Evening edition too<small>The PM sweep as well. By default we only send the evening read when there's a meaningful change — check this to get it every evening regardless.</small></span></label>
       </fieldset>
 
       <fieldset>
         <legend>Weekly & builder-specific</legend>
-        <label class="opt"><input type="checkbox" name="weekly_dispatch" value="yes">
+        <label class="opt"><input type="checkbox" name="pref_weekly" value="yes">
           <span class="t">Friday Weekly Dispatch<small>The narrative read — field notes, community news, the week's biggest moves and why they matter.</small></span></label>
-        <label class="opt"><input type="checkbox" name="builder_alerts" value="yes">
+        <label class="opt"><input type="checkbox" name="pref_builderalerts" value="yes">
           <span class="t">Alerts for the builders I track<small>Get a note the moment one of your builders changes an incentive, drops a price, or nears a deadline.</small></span></label>
       </fieldset>
 
@@ -99,7 +99,7 @@
         var names=b.split(',').map(function(s){return map[s]||s;}).filter(Boolean);
         if(names.length){
           document.getElementById('builders').value=names.join(', ');
-          var ba=document.querySelector('input[name="builder_alerts"]'); if(ba)ba.checked=true;
+          var ba=document.querySelector('input[name="pref_builderalerts"]'); if(ba)ba.checked=true;
         }
       }
       window.addEventListener('load',function(){try{window.NHD&&NHD.trackEvent&&NHD.trackEvent('subscription_start',{from:'preference-center'});}catch(e){}});

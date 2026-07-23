@@ -192,7 +192,7 @@
 
     <div class="kick">▸ Builder opportunity rankings <span class="r">who's most motivated</span></div>
     <div class="rule"></div>
-    <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">A separate read from the market index above: how motivated <em>each builder</em> looks right now — credit size and structure, deadline pressure, and dead-offer sloppiness. Higher = more room at the table. Our transparent read, not an endorsement.</p>
+    <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">A separate read from the market index above: how motivated <em>each builder</em> looks right now — from credit size, structure, deadline pressure, and today's movement. Higher = more room at the table. <a href="methodology-buyer-advantage-score.html#builder">How it's scored ↗</a> · our transparent read, not an endorsement.</p>
     <div class="rank">
       <div class="rank-head"><span>#</span><span>Builder</span><span>Score</span><span>Today</span></div>
       <div id="rankList"></div>
@@ -216,7 +216,7 @@
     <div class="rule"></div>
     <table>
       <tr><th>Builder</th><th>Offer</th><th>By when</th></tr>
-      <tr><td><b>Trophy Signature</b></td><td>1.99% first-year FHA buydown (→4.99%) or 2.99% conv. + free appliances</td><td class="deadline">Fri Jul 24 · 2 days</td></tr>
+      <tr><td><b>Trophy Signature</b></td><td>1.99% first-year FHA buydown (→4.99%) or 2.99% conv. + free appliances</td><td class="deadline">Fri Jul 24</td></tr>
       <tr><td><b>David Weekley</b></td><td>Up to $50K savings OR 2.99% start + $2,500 Heroes allowance</td><td class="deadline">Jul 31</td></tr>
       <tr><td><b>Brohn Homes</b></td><td>Up to $40K off + flex cash (CMG)</td><td class="deadline">Jul 31</td></tr>
       <tr><td><b>Coventry · DRB · Century · GFO · Meritage · AHA · Starlight</b></td><td>Seven more dated windows — closing credits, buydowns, flex cash</td><td class="deadline">Jul 31</td></tr>
@@ -253,25 +253,27 @@
 
 <script>
 (function(){
+  // Builder Opportunity Score v0.1 — reproducible public-signal model (see /methodology-buyer-advantage-score.html#builder):
+  //   40% credit size · 25% deadline pressure · 20% today's movement · 15% string-free. Higher = more motivated.
   var builders = [
-    {slug:'david-weekley', name:'David Weekley', score:94, trend:'rise', trendTxt:'▲ Rising',
-     why:'Up to $50K or a 2.99% start on a hard July 31 deadline — the largest dated credit on the board this week.',
-     status:{cls:'s-warn', txt:'⚠ Ends Jul 31 · 9 days'}, sub:'50th-Anniversary event'},
-    {slug:'empire', name:'Empire Communities', score:91, trend:'rise', trendTxt:'▲ Rising',
+    {slug:'david-weekley', name:'David Weekley', score:74, trend:'flat', trendTxt:'► Stable',
+     why:'Up to $50K or a 2.99% start on a hard July 31 deadline — the largest dated credit on the board.',
+     status:{cls:'s-warn', txt:'⚠ Ends Jul 31'}, sub:'50th-Anniversary event'},
+    {slug:'empire', name:'Empire Communities', score:74, trend:'rise', trendTxt:'▲ Rising',
      why:'A broad "up to $50K" plus a $133K cut on one aging spec, new today — two large credits appearing at once.',
      status:{cls:'s-up', txt:'▲ New incentive today'}, sub:'up to $50K + $133K spec cut'},
-    {slug:'brohn', name:'Brohn Homes', score:84, trend:'flat', trendTxt:'► Stable',
+    {slug:'brohn', name:'Brohn Homes', score:66, trend:'flat', trendTxt:'► Stable',
      why:'Up to $40K off + flex cash on a July 31 clock. Lender-tied (CMG), so protect the rate.',
      status:{cls:'s-flat', txt:'► $40K · ends Jul 31'}, sub:'up to $40K off + flex'},
-    {slug:'perry', name:'Perry Homes', score:76, trend:'flat', trendTxt:'► Stable',
+    {slug:'ashton', name:'Ashton Woods', score:61, trend:'rise', trendTxt:'▲ Rising',
+     why:'A $118K cut on one featured home plus $10K at Cordova Trails — spec-clearing, not community-wide. No lender requirement.',
+     status:{cls:'s-up', txt:'▲ $118K spec cut confirmed'}, sub:'featured-home reductions'},
+    {slug:'trophy', name:'Trophy Signature', score:53, trend:'flat', trendTxt:'► Stable',
+     why:'A 1.99% first-year buydown with a Friday July 24 contract deadline — the hardest short-term push on the board.',
+     status:{cls:'s-warn', txt:'⚠ Ends Fri Jul 24'}, sub:'1.99% first-year buydown'},
+    {slug:'perry', name:'Perry Homes', score:52, trend:'flat', trendTxt:'► Stable',
      why:'Biggest standing credit ($35K, no deadline) — steady leverage, but no urgency signal today.',
-     status:{cls:'s-flat', txt:'► No change'}, sub:'up to $35K, no deadline'},
-    {slug:'trophy', name:'Trophy Signature', score:72, trend:'rise', trendTxt:'▲ Rising',
-     why:'A 1.99% first-year buydown with a Friday contract deadline — the hardest short-term push on the board.',
-     status:{cls:'s-warn', txt:'⚠ Ends Fri · 2 days'}, sub:'1.99% first-year buydown'},
-    {slug:'ashton', name:'Ashton Woods', score:69, trend:'flat', trendTxt:'► Stable',
-     why:'A $118K cut on one featured home plus $10K at Cordova Trails — spec-clearing, not community-wide.',
-     status:{cls:'s-up', txt:'▲ $118K spec cut confirmed'}, sub:'featured-home reductions'}
+     status:{cls:'s-flat', txt:'► No change'}, sub:'up to $35K, no deadline'}
   ];
   var watch = {};
   function el(id){return document.getElementById(id);}
