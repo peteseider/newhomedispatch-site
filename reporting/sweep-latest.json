@@ -1,0 +1,15 @@
+{
+  "schema": "nhd-sweep-latest-v1",
+  "ranAt": "2026-07-23T00:03:33-05:00",
+  "ranAtLabel": "Jul 23, 2026 · 12:03 AM CT",
+  "slot": "AM",
+  "index": 20000,
+  "offers": 9,
+  "builders": 8,
+  "expired": 0,
+  "detection": {
+    "ran": false,
+    "reason": "no ANTHROPIC_API_KEY set"
+  },
+  "note": "Detection layer not run (deterministic index still republished with a fresh timestamp)."
+}
