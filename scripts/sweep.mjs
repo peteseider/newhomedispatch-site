@@ -232,6 +232,8 @@ async function detectChanges() {
   }
 
   try { await refreshRate(core.t); } catch (e) { console.log('[sweep] rate refresh skipped: ' + (e && e.message)); }
+  try { await refreshPmms(core.t); } catch (e) { console.log('[sweep] pmms refresh skipped: ' + (e && e.message)); }
+  try { await refreshPermits(core.t); } catch (e) { console.log('[sweep] permits refresh skipped: ' + (e && e.message)); }
 
   const outPath = p('reporting/sweep-latest.json');
   if (!existsSync(dirname(outPath))) mkdirSync(dirname(outPath), { recursive: true });
@@ -313,4 +315,87 @@ async function refreshRate(t) {
   }
   if (!existsSync(dirname(rbPath))) mkdirSync(dirname(rbPath), { recursive: true });
   writeFileSync(rbPath, JSON.stringify(rb, null, 2) + '\n');
+}
+
+// ---- weekly Freddie Mac PMMS benchmark via FRED (best effort; keeps last good value) ----
+async function refreshPmms(t) {
+  const path = p('reporting/pmms.json');
+  let pj;
+  try { pj = JSON.parse(readFileSync(path, 'utf8')); }
+  catch { pj = { schema: 'nhd-pmms-v1', label: '30 yr fixed weekly national survey', source: 'Freddie Mac PMMS', rate: null, asOf: null, history: [] }; }
+  try {
+    const ctl = new AbortController();
+    const to = setTimeout(() => ctl.abort(), 15000);
+    const res = await fetch('https://fred.stlouisfed.org/graph/fredgraph.csv?id=MORTGAGE30US', {
+      signal: ctl.signal, headers: { 'user-agent': 'Mozilla/5.0 (compatible; NHD-data; +https://newhomedispatch.com)' } });
+    clearTimeout(to);
+    if (res.status === 200) {
+      const rows = (await res.text()).trim().split('\n').map(r => r.split(','));
+      const data = rows.slice(1).map(r => ({ date: r[0], rate: parseFloat(r[1]) }))
+        .filter(r => /^\d{4}-\d{2}-\d{2}$/.test(r.date || '') && Number.isFinite(r.rate) && r.rate > 2 && r.rate < 15);
+      if (data.length) {
+        const last = data[data.length - 1];
+        const prior = data.length > 1 ? data[data.length - 2] : null;
+        const yearAgoTarget = new Date(last.date + 'T12:00:00Z'); yearAgoTarget.setUTCDate(yearAgoTarget.getUTCDate() - 364);
+        const yaKey = yearAgoTarget.toISOString().slice(0, 10);
+        let yearAgo = null, best = 1e9;
+        for (const d of data) { const diff = Math.abs(new Date(d.date) - new Date(yaKey)); if (diff < best) { best = diff; yearAgo = d; } }
+        pj.rate = last.rate; pj.asOf = last.date;
+        pj.prior = prior ? { rate: prior.rate, date: prior.date } : null;
+        pj.yearAgo = yearAgo && best < 15 * 86400000 ? { rate: yearAgo.rate, date: yearAgo.date } : pj.yearAgo || null;
+        pj.source = 'Freddie Mac PMMS (via FRED)';
+        pj.history = (pj.history || []).filter(h => h.date !== last.date).slice(-155);
+        pj.history.push({ date: last.date, rate: last.rate });
+        console.log('[sweep] pmms=' + last.rate + '% (' + last.date + ')');
+      }
+    } else {
+      console.log('[sweep] pmms: HTTP ' + res.status + ', keeping ' + pj.rate + '% (' + pj.asOf + ')');
+    }
+  } catch (e) {
+    console.log('[sweep] pmms fetch failed, keeping ' + pj.rate + '%: ' + (e && e.message));
+  }
+  if (!existsSync(dirname(path))) mkdirSync(dirname(path), { recursive: true });
+  writeFileSync(path, JSON.stringify(pj, null, 2) + '\n');
+}
+
+// ---- City of Austin new-residential building permits (Socrata open data; best effort) ----
+// Trailing-30-day count of issued Building Permits, class Residential, work class New,
+// plus the same window one year earlier for context. A leading supply signal.
+async function refreshPermits(t) {
+  const path = p('reporting/permits.json');
+  let pj;
+  try { pj = JSON.parse(readFileSync(path, 'utf8')); }
+  catch { pj = { schema: 'nhd-permits-v1', label: 'New residential building permits issued · City of Austin · trailing 30 days', source: 'City of Austin Open Data (Issued Construction Permits, 3syk-w9eu)', history: [] }; }
+  async function countBetween(fromIso, toIso) {
+    const where = encodeURIComponent(`permit_class_mapped='Residential' AND work_class='New' AND permit_type_desc='Building Permit' AND issue_date between '${fromIso}T00:00:00' and '${toIso}T00:00:00'`);
+    const url = `https://data.austintexas.gov/resource/3syk-w9eu.json?$select=count(*)%20as%20n&$where=${where}`;
+    const ctl = new AbortController();
+    const to = setTimeout(() => ctl.abort(), 20000);
+    const res = await fetch(url, { signal: ctl.signal, headers: { 'user-agent': 'Mozilla/5.0 (compatible; NHD-data; +https://newhomedispatch.com)' } });
+    clearTimeout(to);
+    if (res.status !== 200) throw new Error('HTTP ' + res.status);
+    const j = await res.json();
+    const n = parseInt(j && j[0] && j[0].n, 10);
+    if (!Number.isFinite(n)) throw new Error('unparseable count');
+    return n;
+  }
+  try {
+    const day = t.iso.slice(0, 10);
+    const from = new Date(day + 'T12:00:00Z'); from.setUTCDate(from.getUTCDate() - 30);
+    const fromKey = from.toISOString().slice(0, 10);
+    const pyTo = new Date(day + 'T12:00:00Z'); pyTo.setUTCFullYear(pyTo.getUTCFullYear() - 1);
+    const pyFrom = new Date(fromKey + 'T12:00:00Z'); pyFrom.setUTCFullYear(pyFrom.getUTCFullYear() - 1);
+    const count = await countBetween(fromKey, day);
+    const priorYear = await countBetween(pyFrom.toISOString().slice(0, 10), pyTo.toISOString().slice(0, 10));
+    pj.current = { from: fromKey, to: day, count: count };
+    pj.priorYear = { from: pyFrom.toISOString().slice(0, 10), to: pyTo.toISOString().slice(0, 10), count: priorYear };
+    pj.updated = day;
+    pj.history = (pj.history || []).filter(h => h.date !== day).slice(-179);
+    pj.history.push({ date: day, count30d: count, priorYear30d: priorYear });
+    console.log('[sweep] permits30d=' + count + ' (yr-ago window ' + priorYear + ')');
+  } catch (e) {
+    console.log('[sweep] permits fetch failed, keeping last: ' + (e && e.message));
+  }
+  if (!existsSync(dirname(path))) mkdirSync(dirname(path), { recursive: true });
+  writeFileSync(path, JSON.stringify(pj, null, 2) + '\n');
 }
