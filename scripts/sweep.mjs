@@ -231,6 +231,8 @@ async function detectChanges() {
     detect = { ran: false, reason: 'exception: ' + (e && e.message) };
   }
 
+  try { await refreshRate(core.t); } catch (e) { console.log('[sweep] rate refresh skipped: ' + (e && e.message)); }
+
   const outPath = p('reporting/sweep-latest.json');
   if (!existsSync(dirname(outPath))) mkdirSync(dirname(outPath), { recursive: true });
   const changed = (detect.candidates || []).filter((c) => c && c.status === 'CHANGED');
@@ -259,3 +261,56 @@ async function detectChanges() {
     for (const c of changed) console.log(`   - ${c.builder} / ${c.community}: ${c.newValue} (${c.sourceUrl || 'no url'})`);
   }
 })();
+
+// ---- daily 30yr rate benchmark (best effort; keeps last good value on failure) ----
+async function refreshRate(t) {
+  const rbPath = p('reporting/rate-benchmark.json');
+  let rb;
+  try { rb = JSON.parse(readFileSync(rbPath, 'utf8')); }
+  catch { rb = { schema: 'nhd-rate-benchmark-v1', rate30yr: 6.77, asOf: '2026-07-22', asOfLabel: 'Jul 22, 2026', source: 'Mortgage News Daily', history: [{date:'2026-07-22', rate:6.77}] }; }
+  try {
+    let v = NaN;
+    const urls = [
+      'https://www.mortgagenewsdaily.com/mortgage-rates/30-year-fixed',
+      'https://www.mortgagenewsdaily.com/mortgage-rates',
+    ];
+    const patterns = [
+      /30\s*(?:Yr|Year)\.?\s*Fixed[\s\S]{0,600}?(\d{1,2}\.\d{2})\s*%/i,
+      /"ratePercent"\s*:\s*"?(\d{1,2}\.\d{2})/i,
+      /current(?:ly)?[\s\S]{0,120}?(\d{1,2}\.\d{2})\s*%/i,
+      /(\d{1,2}\.\d{2})\s*%[\s\S]{0,200}?30\s*(?:Yr|Year)\.?\s*Fixed/i,
+    ];
+    for (const url of urls) {
+      if (Number.isFinite(v)) break;
+      try {
+        const ctl = new AbortController();
+        const to = setTimeout(() => ctl.abort(), 15000);
+        const res = await fetch(url, { signal: ctl.signal, headers: { 'user-agent': 'Mozilla/5.0 (compatible; NHD-rate-check; +https://newhomedispatch.com)' } });
+        clearTimeout(to);
+        if (res.status !== 200) continue;
+        const html = await res.text();
+        for (const pat of patterns) {
+          const m = html.match(pat);
+          const c = m ? parseFloat(m[1]) : NaN;
+          if (Number.isFinite(c) && c > 2 && c < 15) { v = c; break; }
+        }
+      } catch (e) { /* try next url */ }
+    }
+    if (Number.isFinite(v) && v > 2 && v < 15) {
+      const day = t.iso.slice(0, 10);
+      rb.history = (rb.history || []).filter(h => h.date !== day).slice(-89);
+      rb.history.push({ date: day, rate: v });
+      rb.rate30yr = v;
+      rb.asOf = day;
+      rb.asOfLabel = t.labelLong.split(' \u00b7 ')[0];
+      rb.source = 'Mortgage News Daily';
+      console.log('[sweep] rate30yr=' + v + '% (' + rb.asOfLabel + ')');
+    } else {
+      console.log('[sweep] rate: source not parseable, keeping ' + rb.rate30yr + '% (' + (rb.asOfLabel || rb.asOf) + ')');
+    }
+  } catch (e) {
+    console.log('[sweep] rate fetch failed, keeping ' + rb.rate30yr + '%: ' + (e && e.message));
+  }
+  if (!existsSync(dirname(rbPath))) mkdirSync(dirname(rbPath), { recursive: true });
+  writeFileSync(rbPath, JSON.stringify(rb, null, 2) + '\n');
+}

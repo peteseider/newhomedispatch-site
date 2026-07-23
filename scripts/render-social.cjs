@@ -10,6 +10,24 @@ const SH = rd('score-history.json', rd('site/score-history.json', {points:[{scor
 const SI = rd('sweep-inputs.json', rd('site/sweep-inputs.json', {offersVerified:35,expiredDisplayed:14,buildersLive:23}));
 const INC = rd('incentives.json', rd('site/incentives.json', {records:[]}));
 const RB = rd('reporting/rate-benchmark.json', rd('site/reporting/rate-benchmark.json', {rate30yr:6.77}));
+// ---- derive live counts from incentives.json exactly like the site pages do ----
+function dkey(w){ w = String(w||''); if (/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0,10);
+  const m = w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/); if (!m) return null;
+  const y = m[3] ? (m[3].length===2 ? '20'+m[3] : m[3]) : String(new Date().getFullYear());
+  return y+'-'+('0'+m[1]).slice(-2)+'-'+('0'+m[2]).slice(-2); }
+function escT(x){ return String(x==null?'':x).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+const _t = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const _recs = INC.records||[], _promos = INC.promos||[];
+const _liveOf = l => l.filter(o => { const k = o.expires ? dkey(o.expires) : null; return !k || k >= _t; });
+const _liveR = _liveOf(_recs), _liveP = _liveOf(_promos);
+const _bld = new Set([..._liveR, ..._liveP].map(o=>o.builder).filter(Boolean));
+const _expiredCt = (_recs.length - _liveR.length) + (_promos.length - _liveP.length);
+const _dated = [
+  ..._liveR.map(o=>({b:o.builder, what:(o.incentiveType?o.incentiveType+' \u00b7 ':'')+'$'+Number(o.advertisedValue).toLocaleString('en-US'), whenRaw:String(o.expires||''), k:o.expires?dkey(o.expires):null})),
+  ..._liveP.map(o=>({b:o.builder, what:String(o.promo||''), whenRaw:String(o.expires||''), k:o.expires?dkey(o.expires):null}))
+].filter(o=>o.k&&o.b).sort((a,b)=>a.k<b.k?-1:1);
+const _next = _dated[0] || null;
+const _top3 = [..._liveR].filter(o=>Number.isFinite(o.advertisedValue)).sort((a,b)=>b.advertisedValue-a.advertisedValue).slice(0,3);
 const lastScore = SH.points[SH.points.length-1] || {score:74,band:'High'};
 const lastIdx = CI.points[CI.points.length-1] || {index:20000};
 const bv = (INC.records||[]).map(r=>r.buyerValueScore).filter(Number.isFinite).sort((a,b)=>a-b);
@@ -21,10 +39,17 @@ const D = {
   score: lastScore.score || 74, band: lastScore.band || 'High',
   index: idxVal, reaches: Math.round(medReach/1000)*1000, lost: Math.max(0, idxVal - Math.round(medReach/1000)*1000),
   noStrings: (INC.records||[]).filter(r=>!r.lenderTied).length || 3, tracked: (INC.records||[]).length || 9,
-  offersLive: SI.offersVerified||35, expired: SI.expiredDisplayed||14, buildersLive: SI.buildersLive||23,
+  offersLive: (_liveR.length + _liveP.length) || SI.offersVerified || 35,
+  expired: _expiredCt,
+  buildersLive: _bld.size || SI.buildersLive || 23,
   marketRate: RB.rate30yr || 6.77,
   date: dateStr || 'Jul 23 2026', verified: (dateStr||'Jul 23').split(' ').slice(0,2).join(' '),
 };
+
+function _carry(r){ const i = r/100/12; return 2600 * (1 - Math.pow(1+i, -360)) / i; }
+const _rNow = D.marketRate;
+const _cNow = Math.round(_carry(_rNow)/1000);
+const _c1 = Math.round(_carry(_rNow-1)/1000);
 
 const CSS = `
 :root{--navy:#0B2138;--ink-line:rgba(150,178,230,.16);--blue:#2B4FE0;--blue-l:#6E93FF;--sky:#9DBBFF;--on-navy:#7C97CE;--good:#41C98A;--warn:#F2B43C;--loss:#E8795B;}
@@ -158,14 +183,12 @@ ${foot(`Independent · never builder funded · verified ${D.verified}`)}`);
 // ---------------- CARD 2: THE MOVE ----------------
 const move = page(`
 ${mast(`Today's One Move<br><b>Central Texas · ${D.date}</b>`)}
-<div class="eyebrow warn">The one deadline that matters this week</div>
-<div class="h-serif" style="font-size:56px;margin-top:22px;max-width:19ch;">Trophy Signature's <em>1.99% buydown</em> closes Friday.</div>
-<div style="margin-top:22px;"><span class="chip"><span class="dot"></span> Contract by Fri, Jul 24 · the only offer forcing a decision now</span></div>
+<div class="eyebrow warn">The nearest hard deadline on the board</div>
+<div class="h-serif" style="font-size:56px;margin-top:22px;max-width:19ch;">${_next ? escT(_next.b) + ' has the <em>next real deadline</em>.' : 'No hard deadlines <em>forcing a move</em> right now.'}</div>
+<div style="margin-top:22px;"><span class="chip"><span class="dot"></span> ${_next ? escT(_next.whenRaw || _next.k) + ' \u00b7 the nearest dated offer on the board' : 'every tracked offer currently runs open ended'}</span></div>
 <div class="eyebrow" style="margin-top:40px;">Biggest live community credits</div>
 <div style="margin-top:8px;">
-<div class="credit"><span class="v">$50,000</span><span class="n">David Weekley, 50th Anniversary<small>or a 2.99% start · runs through Jul 31</small></span></div>
-<div class="credit"><span class="v">$40,000</span><span class="n">Brohn Homes, price cut plus flex cash<small>select homes · runs through Jul 31</small></span></div>
-<div class="credit"><span class="v">$35,000</span><span class="n">Perry Homes, buydown or flex cash<small>no hard deadline · close by Sep 30</small></span></div></div>
+${_top3.map(o => '<div class="credit"><span class="v">$' + Number(o.advertisedValue).toLocaleString('en-US') + '</span><span class="n">' + escT(o.builder) + (o.community ? ', ' + escT(o.community) : '') + '<small>' + escT(o.incentiveType || 'credit') + (o.expires ? ' \u00b7 ' + escT(String(o.expires)) : ' \u00b7 no hard deadline') + '</small></span></div>').join('')}</div>
 <div class="pills" style="margin-top:34px;"><div class="p g"><b>${D.offersLive}</b><span>offers verified live today</span></div><div class="p w"><b>${D.expired}</b><span>expired offers still posted as live</span></div></div>
 ${orient('The single builder offer with a real, near deadline, plus the biggest credits on the board.','If a listed offer fits your plan, act before its date. Ignore the expired ones still on signs.','New deadlines surface constantly. This is where you catch the ones worth moving on.')}
 ${foot(`Verified on builder sites · ${D.verified}`)}`);
@@ -192,13 +215,13 @@ ${mast(`What One Point Really Means<br><b>Central Texas · ${D.date}</b>`)}
 <div class="h-serif" style="font-size:52px;margin-top:22px;max-width:18ch;">One point on your rate is about <em>10% more home</em>.</div>
 <div class="body" style="font-size:22px;margin-top:14px;max-width:44ch;">Keep the same monthly payment. A lower 30 year rate stretches how much house that payment can carry.</div>
 <div class="bp" style="margin-top:26px;">
-<div class="bpr"><span class="rt">At 6.77%</span><div class="bar a"><span class="hp">~$400,000 of home</span></div></div>
-<div class="bpr"><span class="rt">At 5.77%</span><div class="bar b"><span class="hp">~$444,000 of home</span></div><span class="plus">+$44K</span></div>
-<div class="bpcap">Same ~$2,600 monthly payment. One point lower buys roughly <b>$44,000 more house</b>, about 11 percent. That is why the rate matters more than a one time cash credit.</div>
+<div class="bpr"><span class="rt">At ${_rNow.toFixed(2)}%</span><div class="bar a"><span class="hp">~$${(_cNow*1000).toLocaleString('en-US')} of home</span></div></div>
+<div class="bpr"><span class="rt">At ${(_rNow-1).toFixed(2)}%</span><div class="bar b"><span class="hp">~$${(_c1*1000).toLocaleString('en-US')} of home</span></div><span class="plus">+$${_c1-_cNow}K</span></div>
+<div class="bpcap">Same ~$2,600 monthly payment. One point lower buys roughly <b>$${((_c1-_cNow)*1000).toLocaleString('en-US')} more house</b>, about ${Math.round((_c1-_cNow)/_cNow*100)} percent. That is why the rate matters more than a one time cash credit.</div>
 </div>
 <div class="edu" style="margin-top:24px;"><div class="el">Look closer before you celebrate a low rate</div><div class="et">Builder signs advertise first year teasers like <b>1.99% or 2.99%</b>. Most are step buydowns that reset, or ARMs. A teaser does not give you lasting buying power. Only a rate <b>fixed for the full 30 years</b> does. Ask for the note rate and the buydown schedule in writing.</div></div>
 ${orient('What a one point rate move is actually worth to your budget.','Chase a real, fixed rate buydown. For most buyers who keep the loan it beats a cash credit.','Rates move weekly. We track them so you know when your buying power shifts.')}
-${foot(`Market 30 yr 6.77%, Mortgage News Daily Jul 22 · illustration at ~$2,600 per month`)}`);
+${foot(`Market 30 yr ${_rNow.toFixed(2)}%, ${escT(RB.source||'Mortgage News Daily')} ${escT(RB.asOfLabel||'')} · illustration at ~$2,600 per month`)}`);
 
 // ---------------- CARD 5: THE ILLUSION OF A DEAL ----------------
 const illusion = page(`
