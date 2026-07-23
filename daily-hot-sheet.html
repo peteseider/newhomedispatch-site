@@ -152,7 +152,7 @@
   <header class="mast">
     <div class="mh-top">
       <span class="wm">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</span>
-      <span class="live"><span class="pulse"></span> Live · verified 6:05am CT · Jul 22</span>
+      <span class="live"><span class="pulse"></span> <span id="verstamp">Live · verified 6:05am CT · Jul 22</span></span>
     </div>
     <div class="mh-title">Daily Hot Sheet <span class="sep">·</span> Buyer Decision Terminal <span class="sep">·</span> Central Texas</div>
   </header>
@@ -321,6 +321,27 @@
   if(_cta) _cta.addEventListener('click', function(){track('watchlist_alert_cta_click',{builders:Object.keys(watch).filter(function(k){return watch[k];}).join(',')});});
   renderWatch();
   window.addEventListener('load', function(){track('terminal_view', {});});
+})();
+</script>
+<script>
+/* Auto-freshness: pull the latest sweep's Buyer Advantage Score + timestamp from
+ * score-history.json so the Terminal reflects the most recent automated run. Falls
+ * back silently to the hardcoded values if the file isn't present yet. */
+(function () {
+  fetch('/score-history.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.points || !d.points.length) return;
+      var pts = d.points.slice().sort(function (a, b) { return String(a.t).localeCompare(String(b.t)); });
+      var last = pts[pts.length - 1];
+      var vs = document.getElementById('verstamp');
+      if (vs && d.lastUpdatedLabel) vs.textContent = 'Live · verified ' + d.lastUpdatedLabel;
+      var sn = document.querySelector('.score-num');
+      if (sn && typeof last.score === 'number') sn.textContent = String(last.score);
+      var sb = document.querySelector('.score-badge');
+      if (sb && last.band) sb.textContent = 'Reads: ' + last.band;
+    })
+    .catch(function () { /* keep hardcoded fallback */ });
 })();
 </script>
 </body>
