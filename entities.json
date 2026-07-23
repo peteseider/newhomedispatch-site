@@ -1,1 +1,636 @@
-{"updated":"2026-07-22","sample":false,"communities":[{"kind":"community","slug":"6-creeks","name":"6 Creeks","city":"Kyle","taxRate":2.7,"taxSource":"tracker","hoaMonthly":null,"profile":"stub","tracked":true,"url":"communities/6-creeks.html"},{"kind":"community","slug":"anthem","name":"Anthem","city":"Kyle","taxRate":2.9,"taxSource":"tracker","hoaMonthly":null,"profile":"stub","tracked":true,"url":"communities/anthem.html"},{"kind":"community","slug":"bar-w-ranch","name":"Bar W Ranch","city":"Leander","taxRate":2.79,"taxSource":"community-page","hoaMonthly":42,"profile":"full","tracked":true,"url":"communities/bar-w-ranch.html"},{"kind":"community","slug":"belterra","name":"Belterra","city":"Austin (Dripping Springs)","taxRate":2.13,"taxSource":"community-page","hoaMonthly":105,"profile":"full","tracked":true,"url":"communities/belterra.html"},{"kind":"community","slug":"blackhawk","name":"Blackhawk","city":"Pflugerville","taxRate":2.9,"taxSource":"tracker","hoaMonthly":null,"profile":"stub","tracked":true,"url":"communities/blackhawk.html"},{"kind":"community","slug":"briarwood","name":"Briarwood","city":"Elgin","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/briarwood.html"},{"kind":"community","slug":"bryson","name":"Bryson","city":"Leander","taxRate":2.72,"taxSource":"community-page","hoaMonthly":null,"profile":"full","tracked":true,"url":"communities/bryson.html"},{"kind":"community","slug":"butler-farms","name":"Butler Farms","city":"Liberty Hill","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/butler-farms.html"},{"kind":"community","slug":"cascades-at-onion-creek","name":"Cascades at Onion Creek","city":"Austin (Onion Creek)","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/cascades-at-onion-creek.html"},{"kind":"community","slug":"cloverleaf","name":"Cloverleaf","city":"Austin (78747)","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/cloverleaf.html"},{"kind":"community","slug":"colony-at-cole-springs","name":"Colony at Cole Springs","city":"Buda","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/colony-at-cole-springs.html"},{"kind":"community","slug":"cool-water","name":"Cool Water","city":"Kyle","taxRate":2.8,"taxSource":"tracker","hoaMonthly":null,"profile":"stub","tracked":true,"url":"communities/cool-water.html"},{"kind":"community","slug":"eastern-wells","name":"Eastern Wells","city":"Jarrell","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/eastern-wells.html"},{"kind":"community","slug":"easton-park","name":"Easton Park","city":"Austin (Manor)","taxRate":2.62,"taxSource":"community-page","hoaMonthly":75,"profile":"full","tracked":true,"url":"communities/easton-park.html"},{"kind":"community","slug":"elm-park","name":"Elm Park","city":"Austin (78725 E)","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/elm-park.html"},{"kind":"community","slug":"evelyn","name":"Evelyn","city":"Austin (NE)","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/evelyn.html"},{"kind":"community","slug":"headwaters","name":"Headwaters","city":"Dripping Springs","taxRate":2.55,"taxSource":"community-page","hoaMonthly":152,"profile":"full","tracked":true,"url":"communities/headwaters.html"},{"kind":"community","slug":"kissing-tree","name":"Kissing Tree","city":"San Marcos","taxRate":2.47,"taxSource":"community-page","hoaMonthly":250,"profile":"full","tracked":true,"url":"communities/kissing-tree.html"},{"kind":"community","slug":"larkspur","name":"Larkspur","city":"Leander","taxRate":3.2,"taxSource":"tracker","hoaMonthly":null,"profile":"stub","tracked":true,"url":"communities/larkspur.html"},{"kind":"community","slug":"lexington-parke","name":"Lexington Parke","city":"Del Valle","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/lexington-parke.html"},{"kind":"community","slug":"marble-creek-crossing","name":"Marble Creek Crossing","city":"Austin (SE)","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/marble-creek-crossing.html"},{"kind":"community","slug":"prairie-winds","name":"Prairie Winds","city":"Hutto","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/prairie-winds.html"},{"kind":"community","slug":"rancho-sienna","name":"Rancho Sienna","city":"Georgetown","taxRate":3,"taxSource":"tracker","hoaMonthly":null,"profile":"stub","tracked":true,"url":"communities/rancho-sienna.html"},{"kind":"community","slug":"santa-rita-ranch","name":"Santa Rita Ranch","city":"Liberty Hill","taxRate":2.48,"taxSource":"community-page","hoaMonthly":95,"profile":"full","tracked":true,"url":"communities/santa-rita-ranch.html"},{"kind":"community","slug":"sonterra","name":"Sonterra","city":"Jarrell","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/sonterra.html"},{"kind":"community","slug":"sunfield","name":"Sunfield","city":"Buda","taxRate":3,"taxSource":"tracker","hoaMonthly":66,"profile":"full","tracked":true,"url":"communities/sunfield.html"},{"kind":"community","slug":"sunset-oaks","name":"Sunset Oaks","city":"Maxwell","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/sunset-oaks.html"},{"kind":"community","slug":"sweetwater","name":"Sweetwater","city":"Austin (Bee Cave)","taxRate":2.5,"taxSource":"tracker","hoaMonthly":null,"profile":"stub","tracked":true,"url":"communities/sweetwater.html"},{"kind":"community","slug":"travena","name":"Travena","city":"Georgetown","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/travena.html"},{"kind":"community","slug":"travisso","name":"Travisso","city":"Leander","taxRate":2.48,"taxSource":"community-page","hoaMonthly":90,"profile":"full","tracked":true,"url":"communities/travisso.html"},{"kind":"community","slug":"turners-crossing","name":"Turner's Crossing","city":"Buda","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/turners-crossing.html"},{"kind":"community","slug":"waterstone","name":"Waterstone","city":"Kyle","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/waterstone.html"},{"kind":"community","slug":"whisper-valley","name":"Whisper Valley","city":"Manor","taxRate":3.3,"taxSource":"tracker","hoaMonthly":72,"profile":"full","tracked":true,"url":"communities/whisper-valley.html"},{"kind":"community","slug":"willow-springs","name":"Willow Springs","city":"Buda","taxRate":null,"taxSource":"unverified","hoaMonthly":null,"profile":"researched","tracked":false,"url":"communities/willow-springs.html"},{"kind":"community","slug":"wolf-ranch","name":"Wolf Ranch","city":"Georgetown","taxRate":2.47,"taxSource":"community-page","hoaMonthly":98,"profile":"full","tracked":true,"url":"communities/wolf-ranch.html"}],"builders":[{"kind":"builder","slug":"ashton-woods","name":"Ashton Woods","profile":"stub","tracked":true,"url":"builders/ashton-woods.html"},{"kind":"builder","slug":"brohn-homes","name":"Brohn Homes","profile":"full","tracked":true,"url":"builders/brohn-homes.html"},{"kind":"builder","slug":"brookfield","name":"Brookfield Residential","profile":"full","tracked":true,"url":"builders/brookfield.html"},{"kind":"builder","slug":"centex","name":"Centex","profile":"full","tracked":false,"url":"builders/centex.html"},{"kind":"builder","slug":"century-communities","name":"Century Communities","profile":"researched","tracked":false,"url":"builders/century-communities.html"},{"kind":"builder","slug":"chesmar-homes","name":"Chesmar Homes","profile":"researched","tracked":false,"url":"builders/chesmar-homes.html"},{"kind":"builder","slug":"coventry","name":"Coventry Homes","profile":"full","tracked":true,"url":"builders/coventry.html"},{"kind":"builder","slug":"dr-horton","name":"D.R. Horton","profile":"full","tracked":true,"url":"builders/dr-horton.html"},{"kind":"builder","slug":"david-weekley","name":"David Weekley","profile":"full","tracked":true,"url":"builders/david-weekley.html"},{"kind":"builder","slug":"drb","name":"DRB Homes","profile":"full","tracked":false,"url":"builders/drb.html"},{"kind":"builder","slug":"drees","name":"Drees Custom Homes","profile":"full","tracked":false,"url":"builders/drees.html"},{"kind":"builder","slug":"gehan-homes","name":"Gehan Homes","profile":"full","tracked":false,"url":"builders/gehan-homes.html"},{"kind":"builder","slug":"highland","name":"Highland Homes","profile":"full","tracked":true,"url":"builders/highland.html"},{"kind":"builder","slug":"kb-home","name":"KB Home","profile":"stub","tracked":true,"url":"builders/kb-home.html"},{"kind":"builder","slug":"lennar","name":"Lennar","profile":"full","tracked":true,"url":"builders/lennar.html"},{"kind":"builder","slug":"lgi-homes","name":"LGI Homes","profile":"researched","tracked":false,"url":"builders/lgi-homes.html"},{"kind":"builder","slug":"mi-homes","name":"M/I Homes","profile":"researched","tracked":false,"url":"builders/mi-homes.html"},{"kind":"builder","slug":"meritage","name":"Meritage Homes","profile":"researched","tracked":false,"url":"builders/meritage.html"},{"kind":"builder","slug":"pacesetter","name":"Pacesetter Homes","profile":"full","tracked":true,"url":"builders/pacesetter.html"},{"kind":"builder","slug":"perry","name":"Perry Homes","profile":"full","tracked":true,"url":"builders/perry.html"},{"kind":"builder","slug":"pulte-homes","name":"Pulte Homes","profile":"stub","tracked":true,"url":"builders/pulte-homes.html"},{"kind":"builder","slug":"starlight-homes","name":"Starlight Homes","profile":"researched","tracked":false,"url":"builders/starlight-homes.html"},{"kind":"builder","slug":"taylor-morrison","name":"Taylor Morrison","profile":"full","tracked":true,"url":"builders/taylor-morrison.html"},{"kind":"builder","slug":"toll-brothers","name":"Toll Brothers","profile":"full","tracked":true,"url":"builders/toll-brothers.html"},{"kind":"builder","slug":"tri-pointe","name":"Tri Pointe Homes","profile":"full","tracked":false,"url":"builders/tri-pointe.html"},{"kind":"builder","slug":"aha-dream-homes","name":"AHA Dream Homes","profile":"stub","tracked":true,"url":"builders/aha-dream-homes.html"}]}
+{
+ "updated": "2026-07-23",
+ "sample": false,
+ "communities": [
+  {
+   "kind": "community",
+   "name": "6 Creeks",
+   "slug": "6-creeks",
+   "city": "Kyle",
+   "url": "communities/6-creeks.html",
+   "tracked": true,
+   "profile": "stub",
+   "taxRate": 2.7,
+   "taxSource": "tracker",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Anthem",
+   "slug": "anthem",
+   "city": "Kyle",
+   "url": "communities/anthem.html",
+   "tracked": true,
+   "profile": "stub",
+   "taxRate": 2.9,
+   "taxSource": "tracker",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Bar W Ranch",
+   "slug": "bar-w-ranch",
+   "city": "Leander",
+   "url": "communities/bar-w-ranch.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 2.79,
+   "taxSource": "community-page",
+   "hoaMonthly": 42
+  },
+  {
+   "kind": "community",
+   "name": "Belterra",
+   "slug": "belterra",
+   "city": "Austin (Dripping Springs)",
+   "url": "communities/belterra.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 2.13,
+   "taxSource": "community-page",
+   "hoaMonthly": 105
+  },
+  {
+   "kind": "community",
+   "name": "Blackhawk",
+   "slug": "blackhawk",
+   "city": "Pflugerville",
+   "url": "communities/blackhawk.html",
+   "tracked": true,
+   "profile": "stub",
+   "taxRate": 2.9,
+   "taxSource": "tracker",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Briarwood",
+   "slug": "briarwood",
+   "city": "Elgin",
+   "url": "communities/briarwood.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Bryson",
+   "slug": "bryson",
+   "city": "Leander",
+   "url": "communities/bryson.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 2.72,
+   "taxSource": "community-page",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Butler Farms",
+   "slug": "butler-farms",
+   "city": "Liberty Hill",
+   "url": "communities/butler-farms.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Cascades at Onion Creek",
+   "slug": "cascades-at-onion-creek",
+   "city": "Austin (Onion Creek)",
+   "url": "communities/cascades-at-onion-creek.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Cloverleaf",
+   "slug": "cloverleaf",
+   "city": "Austin (78747)",
+   "url": "communities/cloverleaf.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Colony at Cole Springs",
+   "slug": "colony-at-cole-springs",
+   "city": "Buda",
+   "url": "communities/colony-at-cole-springs.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Cool Water",
+   "slug": "cool-water",
+   "city": "Kyle",
+   "url": "communities/cool-water.html",
+   "tracked": true,
+   "profile": "stub",
+   "taxRate": 2.8,
+   "taxSource": "tracker",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Eastern Wells",
+   "slug": "eastern-wells",
+   "city": "Jarrell",
+   "url": "communities/eastern-wells.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Easton Park",
+   "slug": "easton-park",
+   "city": "Austin (Manor)",
+   "url": "communities/easton-park.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 2.62,
+   "taxSource": "community-page",
+   "hoaMonthly": 75
+  },
+  {
+   "kind": "community",
+   "name": "Elm Park",
+   "slug": "elm-park",
+   "city": "Austin (78725 E)",
+   "url": "communities/elm-park.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Evelyn",
+   "slug": "evelyn",
+   "city": "Austin (NE)",
+   "url": "communities/evelyn.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Headwaters",
+   "slug": "headwaters",
+   "city": "Dripping Springs",
+   "url": "communities/headwaters.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 2.55,
+   "taxSource": "community-page",
+   "hoaMonthly": 152
+  },
+  {
+   "kind": "community",
+   "name": "Kissing Tree",
+   "slug": "kissing-tree",
+   "city": "San Marcos",
+   "url": "communities/kissing-tree.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 2.47,
+   "taxSource": "community-page",
+   "hoaMonthly": 250
+  },
+  {
+   "kind": "community",
+   "name": "Larkspur",
+   "slug": "larkspur",
+   "city": "Leander",
+   "url": "communities/larkspur.html",
+   "tracked": true,
+   "profile": "stub",
+   "taxRate": 3.2,
+   "taxSource": "tracker",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Lexington Parke",
+   "slug": "lexington-parke",
+   "city": "Del Valle",
+   "url": "communities/lexington-parke.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Marble Creek Crossing",
+   "slug": "marble-creek-crossing",
+   "city": "Austin (SE)",
+   "url": "communities/marble-creek-crossing.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Prairie Winds",
+   "slug": "prairie-winds",
+   "city": "Hutto",
+   "url": "communities/prairie-winds.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Rancho Sienna",
+   "slug": "rancho-sienna",
+   "city": "Georgetown",
+   "url": "communities/rancho-sienna.html",
+   "tracked": true,
+   "profile": "stub",
+   "taxRate": 3,
+   "taxSource": "tracker",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Santa Rita Ranch",
+   "slug": "santa-rita-ranch",
+   "city": "Liberty Hill",
+   "url": "communities/santa-rita-ranch.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 2.48,
+   "taxSource": "community-page",
+   "hoaMonthly": 95
+  },
+  {
+   "kind": "community",
+   "name": "Sonterra",
+   "slug": "sonterra",
+   "city": "Jarrell",
+   "url": "communities/sonterra.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Sunfield",
+   "slug": "sunfield",
+   "city": "Buda",
+   "url": "communities/sunfield.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 3,
+   "taxSource": "tracker",
+   "hoaMonthly": 66
+  },
+  {
+   "kind": "community",
+   "name": "Sunset Oaks",
+   "slug": "sunset-oaks",
+   "city": "Maxwell",
+   "url": "communities/sunset-oaks.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Sweetwater",
+   "slug": "sweetwater",
+   "city": "Austin (Bee Cave)",
+   "url": "communities/sweetwater.html",
+   "tracked": true,
+   "profile": "stub",
+   "taxRate": 2.5,
+   "taxSource": "tracker",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Travena",
+   "slug": "travena",
+   "city": "Georgetown",
+   "url": "communities/travena.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Travisso",
+   "slug": "travisso",
+   "city": "Leander",
+   "url": "communities/travisso.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 2.48,
+   "taxSource": "community-page",
+   "hoaMonthly": 90
+  },
+  {
+   "kind": "community",
+   "name": "Turner's Crossing",
+   "slug": "turners-crossing",
+   "city": "Buda",
+   "url": "communities/turners-crossing.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Waterstone",
+   "slug": "waterstone",
+   "city": "Kyle",
+   "url": "communities/waterstone.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Whisper Valley",
+   "slug": "whisper-valley",
+   "city": "Manor",
+   "url": "communities/whisper-valley.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 3.3,
+   "taxSource": "tracker",
+   "hoaMonthly": 72
+  },
+  {
+   "kind": "community",
+   "name": "Willow Springs",
+   "slug": "willow-springs",
+   "city": "Buda",
+   "url": "communities/willow-springs.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "Wolf Ranch",
+   "slug": "wolf-ranch",
+   "city": "Georgetown",
+   "url": "communities/wolf-ranch.html",
+   "tracked": true,
+   "profile": "full",
+   "taxRate": 2.47,
+   "taxSource": "community-page",
+   "hoaMonthly": 98
+  }
+ ],
+ "builders": [
+  {
+   "kind": "builder",
+   "name": "Ashton Woods",
+   "slug": "ashton-woods",
+   "url": "builders/ashton-woods.html",
+   "tracked": true,
+   "profile": "stub"
+  },
+  {
+   "kind": "builder",
+   "name": "Brohn Homes",
+   "slug": "brohn-homes",
+   "url": "builders/brohn-homes.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Brookfield Residential",
+   "slug": "brookfield",
+   "url": "builders/brookfield.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Centex",
+   "slug": "centex",
+   "url": "builders/centex.html",
+   "tracked": false,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Century Communities",
+   "slug": "century-communities",
+   "url": "builders/century-communities.html",
+   "tracked": false,
+   "profile": "researched"
+  },
+  {
+   "kind": "builder",
+   "name": "Chesmar Homes",
+   "slug": "chesmar-homes",
+   "url": "builders/chesmar-homes.html",
+   "tracked": false,
+   "profile": "researched"
+  },
+  {
+   "kind": "builder",
+   "name": "Coventry Homes",
+   "slug": "coventry",
+   "url": "builders/coventry.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "D.R. Horton",
+   "slug": "dr-horton",
+   "url": "builders/dr-horton.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "David Weekley",
+   "slug": "david-weekley",
+   "url": "builders/david-weekley.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "DRB Homes",
+   "slug": "drb",
+   "url": "builders/drb.html",
+   "tracked": false,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Drees Custom Homes",
+   "slug": "drees",
+   "url": "builders/drees.html",
+   "tracked": false,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Gehan Homes",
+   "slug": "gehan-homes",
+   "url": "builders/gehan-homes.html",
+   "tracked": false,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Highland Homes",
+   "slug": "highland",
+   "url": "builders/highland.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "KB Home",
+   "slug": "kb-home",
+   "url": "builders/kb-home.html",
+   "tracked": true,
+   "profile": "stub"
+  },
+  {
+   "kind": "builder",
+   "name": "Lennar",
+   "slug": "lennar",
+   "url": "builders/lennar.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "LGI Homes",
+   "slug": "lgi-homes",
+   "url": "builders/lgi-homes.html",
+   "tracked": false,
+   "profile": "researched"
+  },
+  {
+   "kind": "builder",
+   "name": "M/I Homes",
+   "slug": "mi-homes",
+   "url": "builders/mi-homes.html",
+   "tracked": false,
+   "profile": "researched"
+  },
+  {
+   "kind": "builder",
+   "name": "Meritage Homes",
+   "slug": "meritage",
+   "url": "builders/meritage.html",
+   "tracked": false,
+   "profile": "researched"
+  },
+  {
+   "kind": "builder",
+   "name": "Pacesetter Homes",
+   "slug": "pacesetter",
+   "url": "builders/pacesetter.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Perry Homes",
+   "slug": "perry",
+   "url": "builders/perry.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Pulte Homes",
+   "slug": "pulte-homes",
+   "url": "builders/pulte-homes.html",
+   "tracked": true,
+   "profile": "stub"
+  },
+  {
+   "kind": "builder",
+   "name": "Starlight Homes",
+   "slug": "starlight-homes",
+   "url": "builders/starlight-homes.html",
+   "tracked": false,
+   "profile": "researched"
+  },
+  {
+   "kind": "builder",
+   "name": "Taylor Morrison",
+   "slug": "taylor-morrison",
+   "url": "builders/taylor-morrison.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Toll Brothers",
+   "slug": "toll-brothers",
+   "url": "builders/toll-brothers.html",
+   "tracked": true,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "Tri Pointe Homes",
+   "slug": "tri-pointe",
+   "url": "builders/tri-pointe.html",
+   "tracked": false,
+   "profile": "full"
+  },
+  {
+   "kind": "builder",
+   "name": "AHA Dream Homes",
+   "slug": "aha-dream-homes",
+   "url": "builders/aha-dream-homes.html",
+   "tracked": true,
+   "profile": "stub"
+  }
+ ]
+}
