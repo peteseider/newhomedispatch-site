@@ -8,7 +8,7 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="NHD Board">
-<title>New Home Dispatch — Production Board</title>
+<title>New Home Dispatch, Production Board</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -165,33 +165,33 @@
   <div class="wrap alert-in">
     <span class="dot">✅</span>
     <div><b>Site is LIVE and confirmed working, 6:57 AM CDT: newhomedispatch.com resolves correctly, no password wall, v85 deployed and gate-passed (10/10).</b>
-    <span class="fix" style="color:#DFF5E7"> Root cause of last night's 401 was DNS — the domain's nameservers were pointed at NS1 instead of GoDaddy, and the imported www CNAME pointed at an old locked Netlify project. Both fixed and verified directly in a real logged-in browser (not just a synthetic check) at newhomedispatch.com. If it still looks wrong on any one device, that's local DNS cache on that device/network catching up — try a hard refresh or a different network.</span></div>
+    <span class="fix" style="color:#DFF5E7"> Root cause of last night's 401 was DNS, the domain's nameservers were pointed at NS1 instead of GoDaddy, and the imported www CNAME pointed at an old locked Netlify project. Both fixed and verified directly in a real logged-in browser (not just a synthetic check) at newhomedispatch.com. If it still looks wrong on any one device, that's local DNS cache on that device/network catching up, try a hard refresh or a different network.</span></div>
   </div>
 </div>
 
 <!-- MORNING BRIEFING -->
 <div class="brief">
   <div class="wrap brief-in">
-    <h1>Overnight recap — what shipped while you were out, and what's actually left.</h1>
-    <p class="sub">Everything below is v85, live now, gate-passed. Nothing here needs a re-explanation call — the card has the answer.</p>
+    <h1>Overnight recap, what shipped while you were out, and what's actually left.</h1>
+    <p class="sub">Everything below is v85, live now, gate-passed. Nothing here needs a re-explanation call, the card has the answer.</p>
     <div class="brief-cols">
       <div class="brief-card">
-        <div class="who">Shipped overnight — verified live</div>
+        <div class="who">Shipped overnight, verified live</div>
         <ol>
           <li><div><span class="t"><b>Site 401 fixed at the root cause</b> (DNS/nameserver + wrong CNAME), not just patched.</span><span class="fx">Confirmed live in a real browser: desktop, and the site's own mobile layout.</span></div></li>
-          <li><div><span class="t"><b>"Fuzzy text" bug fixed sitewide</b> — 28 pages were missing the IBM Plex Mono font import and silently falling back to a system font.</span><span class="fx">This was the actual cause of the About page and label text looking off, not a rendering fluke.</span></div></li>
+          <li><div><span class="t"><b>"Fuzzy text" bug fixed sitewide</b>, 28 pages were missing the IBM Plex Mono font import and silently falling back to a system font.</span><span class="fx">This was the actual cause of the About page and label text looking off, not a rendering fluke.</span></div></li>
           <li><div><span class="t"><b>About page rebuilt on the standard site header/nav</b>, your real Facebook photo added, Scoreboard added to the Reports menu on all 38 pages that have it.</span><span class="fx">About no longer looks like a different site.</span></div></li>
           <li><div><span class="t"><b>Explorer map mobile bug fixed:</b> the whole map+filters+results block was gated behind a scroll-reveal animation sized for the entire (very tall) section, so it stayed invisible until you scrolled well past it.</span><span class="fx">Removed the reveal gate from that functional block; verified with a real mobile-viewport scroll test before and after deploy.</span></div></li>
           <li><div><span class="t"><b>Homepage Affordability Desk card is now fully clickable</b>, not just the small side link.</span><span class="fx">Verified by clicking it end-to-end.</span></div></li>
-          <li><div><span class="t"><b>Twice-daily automated sweep is running</b> (~6am / ~5pm CDT): builder websites for promos/incentives + the Facebook new-home-builders group, diffed day over day, written to the project.</span><span class="fx">Feeds the Scoreboard automatically — no page-specific work needed, it already reads the same dataset.</span></div></li>
+          <li><div><span class="t"><b>Twice-daily automated sweep is running</b> (~6am / ~5pm CDT): builder websites for promos/incentives + the Facebook new-home-builders group, diffed day over day, written to the project.</span><span class="fx">Feeds the Scoreboard automatically, no page-specific work needed, it already reads the same dataset.</span></div></li>
         </ol>
       </div>
       <div class="brief-card">
-        <div class="who">Still needs Pete — can't be done for you</div>
+        <div class="who">Still needs Pete, can't be done for you</div>
         <ol>
-          <li><div><span class="t"><b>MailerLite (or Mailchimp) login.</b></span><span class="fx">Both were checked tonight — neither had an active session, and credentials are never entered on your behalf. Everything downstream (forms, runbook) is ready the moment you sign in.</span></div></li>
-          <li><div><span class="t"><b>New builder lead from the Facebook scrub: Stylecraft Homes at Rancho San Gabriel</b> — not a tracked builder yet.</span><span class="fx">Full writeup with sourcing is in the project (facebook-group-scrub-2026-07-20.md). Worth a field visit to verify before adding.</span></div></li>
-          <li><div><span class="t"><b>Field week</b> is still what converts "researched" pins to "verified" and gets the incentive tracker off sample data.</span><span class="fx">The automated sweep captures what builders advertise, not field-verified ground truth — those stay two different confidence tiers on purpose.</span></div></li>
+          <li><div><span class="t"><b>MailerLite (or Mailchimp) login.</b></span><span class="fx">Both were checked tonight, neither had an active session, and credentials are never entered on your behalf. Everything downstream (forms, runbook) is ready the moment you sign in.</span></div></li>
+          <li><div><span class="t"><b>New builder lead from the Facebook scrub: Stylecraft Homes at Rancho San Gabriel</b>, not a tracked builder yet.</span><span class="fx">Full writeup with sourcing is in the project (facebook-group-scrub-2026-07-20.md). Worth a field visit to verify before adding.</span></div></li>
+          <li><div><span class="t"><b>Field week</b> is still what converts "researched" pins to "verified" and gets the incentive tracker off sample data.</span><span class="fx">The automated sweep captures what builders advertise, not field-verified ground truth, those stay two different confidence tiers on purpose.</span></div></li>
         </ol>
       </div>
     </div>
@@ -204,11 +204,11 @@
     <div class="kick" style="color:#1E8E4E">⚖ No decisions blocking the team right now</div>
     <div class="decide-grid">
       <div class="d-card" style="border-left-color:#1E8E4E">
-        <b>Hosting — RESOLVED:</b> Netlify. Confirmed in production; this is no longer an open question.
+        <b>Hosting, RESOLVED:</b> Netlify. Confirmed in production; this is no longer an open question.
         <div class="rec" style="background:#EFF8F2"><span class="r" style="color:#1E8E4E">Status</span>DNS on Netlify DNS for both the apex and www, SSL certificate active (Let's Encrypt, auto-renews), all six site forms on Netlify Forms.</div>
       </div>
       <div class="d-card" style="border-left-color:#1E8E4E">
-        <b>Brand line — RESOLVED:</b> "<b>Seider Realty Team powered by The Ascend Group at LPT Realty</b>" is the canonical wording sitewide.
+        <b>Brand line, RESOLVED:</b> "<b>Seider Realty Team powered by The Ascend Group at LPT Realty</b>" is the canonical wording sitewide.
         <div class="rec" style="background:#EFF8F2"><span class="r" style="color:#1E8E4E">Status</span>Correct everywhere checked tonight, including the new About page and footer.</div>
       </div>
     </div>
@@ -255,7 +255,7 @@
       <div class="col-b" data-cards></div><div class="empty">Nothing here for this filter.</div>
     </div>
     <div class="col backlog" data-col="backlog">
-      <div class="col-h"><h3>BACKLOG</h3><span class="sub">not yet — protect focus</span></div>
+      <div class="col-h"><h3>BACKLOG</h3><span class="sub">not yet, protect focus</span></div>
       <div class="col-b" data-cards></div><div class="empty">Nothing here for this filter.</div>
     </div>
   </div>
@@ -264,24 +264,24 @@
 <footer>
   <div class="wrap">
     <p class="lc">Look Closer<span class="dot">.</span></p>
-    <p>The blockers are switch-flips and one input — not more building. Execute what exists, verify ground truth, protect the cadence.</p>
-    <p>© 2026 New Home Dispatch · Independent — editorial coverage is not for sale · Buyer representation available through the Seider Realty Team powered by The Ascend Group at LPT Realty · newhomedispatch.com</p>
+    <p>The blockers are switch-flips and one input, not more building. Execute what exists, verify ground truth, protect the cadence.</p>
+    <p>© 2026 New Home Dispatch · Independent, editorial coverage is not for sale · Buyer representation available through the Seider Realty Team powered by The Ascend Group at LPT Realty · newhomedispatch.com</p>
   </div>
 </footer>
 
-<div class="toast" id="toast">Status copied — paste it to Claude tonight.</div>
+<div class="toast" id="toast">Status copied, paste it to Claude tonight.</div>
 
 <script>
 // ---------- task data (single source for cards + status export) ----------
 var TASKS = [
  // READY
  {id:'stylecraft', col:'ready', owner:'team', eff:'half-day', title:'Field-verify and add Stylecraft Homes / Rancho San Gabriel',
-  why:'Surfaced tonight in the Facebook group scrub — not yet a tracked builder. Highest-value new-builder candidate found so far.',
-  done:'Builder profile + community page live, sourced, confidence-tagged — not published as Verified until field-checked.'},
+  why:'Surfaced tonight in the Facebook group scrub, not yet a tracked builder. Highest-value new-builder candidate found so far.',
+  done:'Builder profile + community page live, sourced, confidence-tagged, not published as Verified until field-checked.'},
  {id:'lennarcheck', col:'ready', owner:'team', eff:'1 hr', title:'Check Lennar\'s 2 untracked Jarrell communities against lennar.com',
   why:'Cool Water at Sonterra and Rancho Del Cielo came up in the Facebook scrub but aren\'t in the tracker yet.',
   done:'Both either added with sourced data or logged as not-yet-relevant with a reason.'},
- {id:'fieldnotes', col:'ready', owner:'both', eff:'this week', title:'Start executing the Field Notes ideas — real content, real traffic',
+ {id:'fieldnotes', col:'ready', owner:'both', eff:'this week', title:'Start executing the Field Notes ideas, real content, real traffic',
   why:'Pete\'s explicit priority for this week: stop planning, start publishing dated field reporting that drives visits and conversion.',
   done:'First new Field Note published from this week\'s list, linked from the homepage Dispatch Reports strip.'},
  {id:'jsonld',  col:'ready', owner:'team', eff:'1 hr',     title:'Site-wide JSON-LD (Organization + WebSite)',
@@ -294,62 +294,62 @@ var TASKS = [
   why:'Shareable tool outputs are free distribution. Wiring, not building.',
   done:'Calculator + Leverage Report have copy buttons; tracked-builder profiles link the Leverage Report.'},
  {id:'kit',     col:'ready', owner:'pete', eff:'in field', title:'Run the Field Kit + Visit Summary tool today',
-  why:'The Visit Summary is now a working phone tool — fill it on site, tap Copy, text it to the team.',
+  why:'The Visit Summary is now a working phone tool, fill it on site, tap Copy, text it to the team.',
   done:'One Visit Summary captured + photo named per the standard.'},
 
  // IN PROGRESS
  {id:'incmerge', col:'prog', owner:'team', eff:'done', title:'Merged this morning’s AM sweep into the live Incentive Tracker',
-  why:'The 6:50am sweep (58 builders, cross-checked) had produced a rich result — 25 confirmed offers — that never made it past the project docs. Refreshed 6 existing tracked records with today’s re-verification, flagged 1 that couldn’t be reconfirmed (Ashton Woods/Headwaters — different offers now showing on their site) and 1 blocked by the builder’s server (Brohn Homes, HTTP 429), and added 23 new sourced promotions (up from 4) for builders not yet tied to a specific tracked community. Also promoted the Incentive Tracker in the Free Tools menu (was 4th of 7, now 2nd) since it’s now the most frequently-updating asset on the site.',
-  done:'Live — v89, gate-passed 10/10.'},
+  why:'The 6:50am sweep (58 builders, cross-checked) had produced a rich result, 25 confirmed offers, that never made it past the project docs. Refreshed 6 existing tracked records with today’s re-verification, flagged 1 that couldn’t be reconfirmed (Ashton Woods/Headwaters, different offers now showing on their site) and 1 blocked by the builder’s server (Brohn Homes, HTTP 429), and added 23 new sourced promotions (up from 4) for builders not yet tied to a specific tracked community. Also promoted the Incentive Tracker in the Free Tools menu (was 4th of 7, now 2nd) since it’s now the most frequently-updating asset on the site.',
+  done:'Live, v89, gate-passed 10/10.'},
  {id:'fieldwk', col:'prog',  owner:'pete', eff:'this week', title:'Field week: researched pins → verified',
   why:'Convert researched communities + archive rate sheets. Every product downstream needs this ground truth, including taking the incentive tracker off sample data.',
   done:'Registry entries flip to verified with dated sources.'},
  {id:'friday',  col:'prog',  owner:'both', eff:'Fri',     title:'Next Friday Dispatch cycle',
-  why:'Data Console → real numbers → Field Note → send. The automated AM/PM sweep now feeds the Scoreboard directly — Friday prep is lighter than before.',
+  why:'Data Console → real numbers → Field Note → send. The automated AM/PM sweep now feeds the Scoreboard directly, Friday prep is lighter than before.',
   done:'Issue sent; Scoreboard row logged to the database.'},
 
  // BLOCKED
  {id:'mailer',  col:'block', owner:'pete', eff:'30 min',  title:'MailerLite: create account, authenticate domain, generate API token + group IDs',
   why:'',
-  blocked:'Platform decision made — MailerLite. The Netlify Function that pushes signups into MailerLite is built and deployed (netlify/functions/mailerlite-subscribe.js) — it just needs a real account, an API token, and group IDs to talk to. Full steps: dispatch/mailerlite-netlify-function-integration.md. DNS records for domain auth can be added by Claude via GoDaddy once MailerLite shows them — the token itself is the one value that has to be typed in by hand.',
+  blocked:'Platform decision made, MailerLite. The Netlify Function that pushes signups into MailerLite is built and deployed (netlify/functions/mailerlite-subscribe.js), it just needs a real account, an API token, and group IDs to talk to. Full steps: dispatch/mailerlite-netlify-function-integration.md. DNS records for domain auth can be added by Claude via GoDaddy once MailerLite shows them, the token itself is the one value that has to be typed in by hand.',
   done:'MAILERLITE_API_TOKEN + group ID env vars set in Netlify, outgoing webhook wired, a real subscribe test lands in the MailerLite group and the welcome email arrives.'},
  {id:'notif',   col:'block', owner:'pete', eff:'10 min',  title:'Confirm form email notifications are ON (6 forms)',
   why:'',
-  blocked:'Not verified tonight — worth a quick check. Until confirmed, the 24-hour reply promise and story capture can\'t be guaranteed.',
+  blocked:'Not verified tonight, worth a quick check. Until confirmed, the 24-hour reply promise and story capture can\'t be guaranteed.',
   done:'Test submission on each form arrives in an inbox you check daily.'},
  {id:'sample',  col:'block', owner:'pete', eff:'field',   title:'Real incentive data → sample:false',
   why:'',
-  blocked:'Blocked on field week. The automated sweep captures what builders advertise (a claim), not field-verified fact — tracker stays sample-labeled until rows are field-checked.',
+  blocked:'Blocked on field week. The automated sweep captures what builders advertise (a claim), not field-verified fact, tracker stays sample-labeled until rows are field-checked.',
   done:'All rows real → sample:false set → yellow banners removed.'},
  {id:'social',  col:'block', owner:'pete', eff:'20 min',  title:'One post per social channel (or pull the icons)',
   why:'',
-  blocked:'Not verified tonight whether this is still open — empty linked channels are a standing trust leak if so.',
+  blocked:'Not verified tonight whether this is still open, empty linked channels are a standing trust leak if so.',
   done:'Each linked channel has ≥1 real post.'},
  {id:'stores',  col:'block', owner:'pete', eff:'30 min + fees', title:'App store accounts (Google / Apple)',
   why:'',
-  blocked:'Google $25 once, Apple $99/yr. Only blocks native store apps — the PWA is already installable and working on mobile. Low priority.',
+  blocked:'Google $25 once, Apple $99/yr. Only blocks native store apps, the PWA is already installable and working on mobile. Low priority.',
   done:'Accounts exist; PWABuilder packaging can start.'},
 
  // BACKLOG
  {id:'expir',   col:'backlog', owner:'team', eff:'T1',   title:'Promote "Expiring this weekend"',
-  why:'The Scoreboard is live and now auto-updates from the twice-daily sweep — surface the franchise as the check-before-you-visit habit hook.', done:''},
+  why:'The Scoreboard is live and now auto-updates from the twice-daily sweep, surface the franchise as the check-before-you-visit habit hook.', done:''},
  {id:'mud',     col:'backlog', owner:'team', eff:'T2',   title:'MUD/PID + field-observation tables',
   why:'Structure the sheets field week collects. Powers history charts and the future Trust Index.', done:''},
  {id:'taxmerge',col:'backlog', owner:'team', eff:'T2',   title:'Merge overlapping tax content by reference',
-  why:'Tax guide ↔ Look Closer checklist overlap ~30%. Reference, don’t restate — one source per fact.', done:''},
- {id:'market',  col:'backlog', owner:'team', eff:'T2',   title:'market.json extraction — defer',
+  why:'Tax guide ↔ Look Closer checklist overlap ~30%. Reference, don’t restate, one source per fact.', done:''},
+ {id:'market',  col:'backlog', owner:'team', eff:'T2',   title:'market.json extraction, defer',
   why:'Only if Dallas gets real. Cheap when the time comes; distraction now.', done:''},
  {id:'native',  col:'backlog', owner:'team', eff:'T2',   title:'Package native apps via PWABuilder',
   why:'After store accounts exist. The PWA already covers the app front for a weekly product.', done:''},
  {id:'netlifytoken', col:'backlog', owner:'pete', eff:'10 min', title:'Add a Netlify Personal Access Token so scheduled deploys can go fully hands-off',
   why:'The AM/PM sweep can update data automatically, but deploying a new build still needs a browser session open. A token lets future automation deploy without you.', done:''},
  {id:'gitrepo', col:'backlog', owner:'pete', eff:'15 min', title:'Put the site source in a GitHub repo, connect it to Netlify for continuous deployment',
-  why:'Found tonight: the AM/PM sweep’s automation is genuinely strong (58 builders, 8 parallel agents, Zillow/Facebook cross-checks, expired-offer detection) but it runs in a brand-new session each time with no access to the site’s files — they only exist in this session’s workspace. So it correctly captures and diffs data but can’t update the live site or deploy on its own; that step silently no-ops. A GitHub repo the sweep can check out at the start of each run, wired to Netlify’s own GitHub auto-deploy, replaces the manual zip-upload process entirely — this is the single biggest lever for making the scrub “as robust as possible.” Needs Pete’s GitHub account (or a new one) to set up the remote.', done:'Site source lives in GitHub; Netlify deploys automatically on push; the AM/PM sweep updates incentives.json via a commit instead of a manual zip.'},
+  why:'Found tonight: the AM/PM sweep’s automation is genuinely strong (58 builders, 8 parallel agents, Zillow/Facebook cross-checks, expired-offer detection) but it runs in a brand-new session each time with no access to the site’s files, they only exist in this session’s workspace. So it correctly captures and diffs data but can’t update the live site or deploy on its own; that step silently no-ops. A GitHub repo the sweep can check out at the start of each run, wired to Netlify’s own GitHub auto-deploy, replaces the manual zip-upload process entirely, this is the single biggest lever for making the scrub “as robust as possible.” Needs Pete’s GitHub account (or a new one) to set up the remote.', done:'Site source lives in GitHub; Netlify deploys automatically on push; the AM/PM sweep updates incentives.json via a commit instead of a manual zip.'},
  {id:'longterm',col:'backlog', owner:'team', eff:'T3',   title:'Parked: Trust Index · rate-sheet archive · history charts · Dallas · hosted Dot',
   why:'All need months of data that only the cadence creates. Keep feeding the datasets; do not start these.', done:''}
 ];
 
-var state = {}; // in-memory; resets on reload — use Copy Status before closing
+var state = {}; // in-memory; resets on reload, use Copy Status before closing
 var filter = 'all';
 
 function ownerTag(o){
@@ -411,10 +411,10 @@ document.querySelectorAll('.tab').forEach(function(tb){
   });
 });
 document.getElementById('copyStatus').addEventListener('click', function(){
-  var lines = ['NHD Production Board — end-of-day status ('+new Date().toLocaleDateString()+')',''];
+  var lines = ['NHD Production Board, end-of-day status ('+new Date().toLocaleDateString()+')',''];
   ['ready','prog','block'].forEach(function(c){
     var label = c==='ready'?'READY':(c==='prog'?'IN PROGRESS':'BLOCKED');
-    lines.push('— '+label+' —');
+    lines.push(', '+label+',');
     TASKS.filter(function(t){return t.col===c;}).forEach(function(t){
       lines.push((state[t.id]?'[DONE] ':'[open] ')+t.title+'  ('+(t.owner==='both'?'Pete+Team':t.owner)+')');
     });
