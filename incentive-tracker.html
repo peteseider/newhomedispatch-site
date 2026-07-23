@@ -1919,7 +1919,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
             f+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="10.5" fill="#666666" font-family="monospace">'+(p.label||"")+'</text>';});
           svg.innerHTML=f;
         }
-        var SEED={lastUpdatedLabel:"Jul 22, 2026 · 6:05 AM CT",points:[{t:"2026-07-22T06:05:00-05:00",label:"Jul 22",index:20000}]};
+        var SEED={lastUpdatedLabel:"Jul 22, 2026 · 09:27 PM CT",points:[{t:"2026-07-22T06:05:00-05:00",label:"Jul 22",index:20000}]};
         render(SEED);
         fetch('/concession-index.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){if(d)render(d);}).catch(function(){});
       })();

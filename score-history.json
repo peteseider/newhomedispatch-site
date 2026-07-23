@@ -2,8 +2,35 @@
   "schema": "nhd-buyer-advantage-score-history-v1",
   "metric": "Buyer Advantage Score (v0.1 public-signal model)",
   "points": [
-    { "t": "2026-07-22T06:05:00-05:00", "label": "Jul 22", "slot": "AM", "score": 74, "band": "High", "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 } }
+    {
+      "t": "2026-07-22T06:05:00-05:00",
+      "label": "Jul 22",
+      "slot": "AM",
+      "score": 74,
+      "band": "High",
+      "components": {
+        "incentive": 75,
+        "competition": 92,
+        "friction": 86,
+        "stringFree": 33,
+        "deadline": 92
+      }
+    },
+    {
+      "t": "2026-07-22T21:27:34-05:00",
+      "label": "Jul 22",
+      "slot": "PM",
+      "score": 74,
+      "band": "High",
+      "components": {
+        "incentive": 75,
+        "competition": 92,
+        "friction": 86,
+        "stringFree": 33,
+        "deadline": 92
+      }
+    }
   ],
-  "lastUpdated": "2026-07-22T06:05:00-05:00",
-  "lastUpdatedLabel": "Jul 22, 2026 · 6:05 AM CT"
+  "lastUpdated": "2026-07-22T21:27:34-05:00",
+  "lastUpdatedLabel": "Jul 22, 2026 · 09:27 PM CT"
 }
