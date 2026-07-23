@@ -239,7 +239,49 @@ ${mast(`The Illusion Of A Deal<br><b>Buyer Education</b>`)}
 ${orient('How builders can manufacture a deal by moving the base price first.','Ignore the discount headline. Ask for the delivered price and compare like homes.','We track price history, so you can see when a base quietly moved before the sale.')}
 ${foot(`Buyer education · example figures for illustration`)}`);
 
-const cards = { read, move, explained, rate, illusion };
+
+// ---------------- CARD 6: THE BOARD (live market trend single sheet) ----------------
+const _RS = rd('reporting/resale-market.json', rd('site/reporting/resale-market.json', null));
+const _PM = rd('reporting/pmms.json', rd('site/reporting/pmms.json', null));
+const _PR = rd('reporting/permits.json', rd('site/reporting/permits.json', null));
+function _brow(name, sub, val, chipTxt, chipCol){
+  return `<div style="display:flex;align-items:center;gap:20px;padding:19px 0;border-bottom:1px solid var(--ink-line);">
+    <div style="flex:1.5;"><div style="font-size:24px;font-weight:600;color:#F1F5FF;">${name}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#8FA6CE;margin-top:4px;">${sub}</div></div>
+    <div style="font-family:'Fraunces',serif;font-weight:600;font-size:42px;letter-spacing:-1px;color:#fff;min-width:150px;text-align:right;">${val}</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:600;min-width:190px;text-align:right;color:${chipCol};">${chipTxt}</div>
+  </div>`;
+}
+let _boardRows = '';
+{
+  const rNow = D.marketRate;
+  _boardRows += _brow('30 yr fixed rate', 'daily index · Mortgage News Daily', rNow.toFixed(2) + '%',
+    (_PM && _PM.rate ? 'weekly survey ' + _PM.rate.toFixed(2) + '%' : 'daily read'), '#9DBBFF');
+  _boardRows += _brow('Concession Index', 'median advertised incentive · ours', '$' + Number(D.index).toLocaleString('en-US'),
+    D.offersLive + ' live offers · ' + D.buildersLive + ' builders', '#9DBBFF');
+  if (_RS && _RS.msa) {
+    _boardRows += _brow('Resale inventory', 'months of supply · Austin MSA · Unlock MLS', _RS.msa.monthsInventory.toFixed(1) + ' mo',
+      (_RS.msa.monthsInventoryYoYDelta < 0 ? '\u25BC ' : '\u25B2 ') + Math.abs(_RS.msa.monthsInventoryYoYDelta).toFixed(1) + ' mo vs last yr',
+      _RS.msa.monthsInventoryYoYDelta < 0 ? '#E8795B' : '#41C98A');
+    _boardRows += _brow('Resale days on market', 'average · Austin MSA · Unlock MLS', String(_RS.msa.avgDaysOnMarket),
+      (_RS.msa.avgDaysOnMarketYoYDelta === 0 ? '\u25AC flat vs last yr' : (_RS.msa.avgDaysOnMarketYoYDelta > 0 ? '\u25B2 +' : '\u25BC ') + _RS.msa.avgDaysOnMarketYoYDelta + ' vs last yr'),
+      _RS.msa.avgDaysOnMarketYoYDelta > 0 ? '#41C98A' : (_RS.msa.avgDaysOnMarketYoYDelta === 0 ? '#8FA6CE' : '#E8795B'));
+  }
+  if (_PR && _PR.current && _PR.priorYear && _PR.priorYear.count) {
+    const pd = Math.round((_PR.current.count - _PR.priorYear.count) / _PR.priorYear.count * 1000) / 10;
+    _boardRows += _brow('New residential permits', 'City of Austin · trailing 30 days', _PR.current.count.toLocaleString('en-US'),
+      (pd >= 0 ? '\u25B2 +' : '\u25BC ') + Math.abs(pd).toFixed(1) + '% vs yr-ago window', pd >= 0 ? '#41C98A' : '#E8795B');
+  }
+}
+const board = page(`
+${mast(`The Board<br><b>Where the market stands</b>`)}
+<div class="eyebrow">New construction vs the market \u00b7 tracked twice daily</div>
+<div class="h-serif" style="font-size:56px;margin-top:22px;">Builders are conceding.<br>Resale is <em>tightening</em>.</div>
+<div style="margin-top:26px;">${_boardRows}</div>
+<div class="edu" style="margin-top:26px;"><div class="el">Why this board matters</div><div class="et">Resale supply is shrinking while builders stack credits and promo rates. Right now the <b>leverage lives in new construction</b>, and this board is re-verified every morning and every evening, so you see it move before the headlines do.</div></div>
+${orient('The market signals a buyer should watch, on one card, from our twice-daily sweep and published MLS aggregates.','If the concession line rises while resale supply falls, your window is with the builders.','Every number is dated and sourced; the full board lives on the Daily Hot Sheet.')}
+${foot(`Verified ${D.verified} \u00b7 rates: MND + Freddie Mac \u00b7 resale: Unlock MLS published \u00b7 permits: Austin open data`)}`);
+
+const cards = { read, move, explained, rate, illusion, board };
 const OUT = process.env.SOCIAL_OUT || '.';
 const RENDER = process.env.SOCIAL_RENDER === '1';
 
