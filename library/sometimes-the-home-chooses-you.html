@@ -1584,7 +1584,7 @@
 </style>
 
 <style>
-  /* Sometimes the Home Chooses You — page components */
+  /* Sometimes the Home Chooses You, page components */
   .hh-figure{margin:4px 0 30px; background:var(--blueprint-navy); border:1px solid var(--blueprint-navy); border-radius:var(--radius); padding:20px 22px;}
   .hh-figure svg{width:100%; height:auto; display:block;}
   .hh-chips{display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 10px; padding:0; list-style:none;}
@@ -1740,7 +1740,7 @@
 </header>
 <ul class="nav-mobile" id="nav-mobile">
         <li><a href="../weekly-dispatch.html" style="font-weight:800;color:#2B4FE0;">Weekly Dispatch <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">FREE · FRIDAY</span></a></li>
-        <li><a href="../incentive-tracker.html" style="font-weight:800;color:#2B4FE0;">Incentive Tracker <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">DAILY</span></a></li>
+        <li><a href="../incentive-tracker.html" style="font-weight:800;color:#2B4FE0;">Incentive Tracker <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">MON &#183; WED</span></a></li>
         <li><a href="../start-here.html">Start Here</a></li>
         <li><a href="../communities.html">Community Explorer</a></li>
         <li><a href="../buyer-guides.html">Buyer Guides</a></li>
@@ -1826,7 +1826,7 @@
               <svg viewBox="0 0 48 48" fill="none"><path d="M24 40S8 30 8 19a8 8 0 0 1 16-4 8 8 0 0 1 16 4c0 11-16 21-16 21z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
             </span>
             <span class="hht-label mono">Heart</span>
-            <span class="hht-q">Can you already picture your life here — the ordinary days, not the highlight reel?</span>
+            <span class="hht-q">Can you already picture your life here, the ordinary days, not the highlight reel?</span>
             <span class="hht-state mono" data-off="Tap if yes" data-on="✓ Yes">Tap if yes</span>
           </button>
         </div>
@@ -1834,7 +1834,7 @@
           <span class="hht-verdict-tag mono">Verdict</span>
           <div class="hht-verdict-body">
             <strong class="hht-verdict-title">Tap each side to see the call.</strong>
-            <p class="hht-verdict-copy">The rule is unglamorous: buy when <em>both</em> say yes — and be suspicious of a yes from only one.</p>
+            <p class="hht-verdict-copy">The rule is unglamorous: buy when <em>both</em> say yes, and be suspicious of a yes from only one.</p>
           </div>
         </div>
       </div>
@@ -1869,7 +1869,7 @@
       <div>
         <img src="../assets/wordmark-light.png" alt="New Home Dispatch" style="height:24px; width:auto; margin-bottom:12px;">
         <div class="footer-tagline">Look Closer<span class="footer-tagline-dot">.</span></div>
-        <div class="footer-tag">Free, plain-language intel for new-construction buyers. Independent education — not affiliated with any builder.</div>
+        <div class="footer-tag">Free, plain-language intel for new-construction buyers. Independent education, not affiliated with any builder.</div>
         <div class="footer-social">
           <span class="footer-social-label mono">Follow along</span>
           <div class="footer-social-icons">
@@ -1908,7 +1908,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 New Home Dispatch. All rights reserved. New Home Dispatch is an independent education and research platform — buyer representation is available through Seider Realty Team powered by The Ascend Group at LPT Realty for buyers who want hands-on help.</span>
+      <span>&copy; 2026 New Home Dispatch. All rights reserved. New Home Dispatch is an independent education and research platform, buyer representation is available through Seider Realty Team powered by The Ascend Group at LPT Realty for buyers who want hands-on help.</span>
       <a href="mailto:hello@newhomedispatch.com?subject=Correction%20request">Report a correction</a> <span style="opacity:.5;">&middot;</span> <a href="../corrections.html">Corrections log</a>
     </div>
   </div>
@@ -1922,10 +1922,10 @@
   var title=verdict.querySelector('.hht-verdict-title');
   var copy=verdict.querySelector('.hht-verdict-copy');
   var STATES={
-    'none':{s:'none', t:'Tap each side to see the call.', c:'The rule is unglamorous: buy when both say yes — and be suspicious of a yes from only one.'},
-    'head':{s:'head', t:'A house that works — but you can\'t picture living in it.', c:'Not wrong, but not it. A head-only yes is how buyers end up in a spreadsheet-perfect home they never quite come home to. Keep looking.'},
-    'heart':{s:'heart', t:'The dangerous one. Slow down.', c:'A heart-only yes is how buyers waive inspections, overpay, and talk themselves past a bad commute. Run the numbers first — then come back to the feeling.'},
-    'both':{s:'both', t:'Buy. Two independent checks agree.', c:'It fits the budget and the life you\'re already beginning to imagine. That\'s not romance — it\'s the numbers and the feeling pointing the same way.'}
+    'none':{s:'none', t:'Tap each side to see the call.', c:'The rule is unglamorous: buy when both say yes, and be suspicious of a yes from only one.'},
+    'head':{s:'head', t:'A house that works, but you can\'t picture living in it.', c:'Not wrong, but not it. A head-only yes is how buyers end up in a spreadsheet-perfect home they never quite come home to. Keep looking.'},
+    'heart':{s:'heart', t:'The dangerous one. Slow down.', c:'A heart-only yes is how buyers waive inspections, overpay, and talk themselves past a bad commute. Run the numbers first, then come back to the feeling.'},
+    'both':{s:'both', t:'Buy. Two independent checks agree.', c:'It fits the budget and the life you\'re already beginning to imagine. That\'s not romance, it\'s the numbers and the feeling pointing the same way.'}
   };
   function render(){
     var h=head.getAttribute('aria-pressed')==='true';
