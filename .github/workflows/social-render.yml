@@ -1,0 +1,48 @@
+name: Social cards render
+
+# Renders the five branded social cards from the live data and commits them to
+# share/. Runs ~15 min after the Concession Index sweep. Separate from
+# incentive-sweep.yml on purpose so it can never break the data/site publish.
+
+on:
+  schedule:
+    - cron: '45 11 * * *'
+    - cron: '45 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    env:
+      GDRIVE_SA: ${{ secrets.GDRIVE_SA }}
+      GDRIVE_FOLDER: ${{ vars.GDRIVE_FOLDER }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install playwright googleapis --no-save
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Render social cards
+        env:
+          SOCIAL_RENDER: '1'
+          SOCIAL_OUT: share
+        run: node scripts/render-social.cjs
+      - name: Commit rendered cards
+        run: |
+          git config user.name  "nhd-social-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add share/hot-sheet-read.png share/hot-sheet-move.png share/hot-sheet-explained.png share/hot-sheet-rate.png share/hot-sheet-illusion.png
+          if git diff --cached --quiet; then echo "No image changes."; else git commit -m "Auto-render social cards" && git push; fi
+      - name: Upload to Google Drive
+        if: ${{ env.GDRIVE_SA != '' }}
+        run: node scripts/upload-drive.cjs
