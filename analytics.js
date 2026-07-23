@@ -10,6 +10,23 @@
  */
 window.NHD = window.NHD || {};
 
+/* Google Analytics 4 — property "New Home Dispatch" · stream newhomedispatch.com
+ * (Measurement ID G-120VH1FFY7, created 2026-07-23). Bootstrapped here so every
+ * page that already loads analytics.js is instrumented from this one file, and
+ * so trackEvent() below routes all custom events (terminal_view, watchlist_*,
+ * subscription_*, buyerhelp_click, etc.) straight into GA4 with no per-page work. */
+(function () {
+  var GA_ID = 'G-120VH1FFY7';
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', GA_ID);
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  (document.head || document.documentElement).appendChild(s);
+})();
+
 NHD.trackEvent = function (name, params) {
   params = params || {};
   try {
