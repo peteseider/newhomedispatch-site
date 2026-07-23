@@ -148,6 +148,18 @@
   },
   {
    "kind": "community",
+   "name": "Crosswinds",
+   "slug": "crosswinds",
+   "city": "Kyle",
+   "url": "communities.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
    "name": "Eastern Wells",
    "slug": "eastern-wells",
    "city": "Jarrell",
@@ -256,6 +268,18 @@
   },
   {
    "kind": "community",
+   "name": "Plum Creek North",
+   "slug": "plum-creek-north",
+   "city": "Kyle",
+   "url": "communities.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
    "name": "Prairie Winds",
    "slug": "prairie-winds",
    "city": "Hutto",
@@ -336,6 +360,18 @@
    "profile": "stub",
    "taxRate": 2.5,
    "taxSource": "tracker",
+   "hoaMonthly": null
+  },
+  {
+   "kind": "community",
+   "name": "The Ridge",
+   "slug": "the-ridge",
+   "city": "Niederwald",
+   "url": "communities.html",
+   "tracked": false,
+   "profile": "researched",
+   "taxRate": null,
+   "taxSource": "unverified",
    "hoaMonthly": null
   },
   {
