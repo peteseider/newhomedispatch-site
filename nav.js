@@ -87,7 +87,7 @@
   };
   function apply() {
     Object.keys(SCHEDULE).forEach(function (key) {
-      var links = document.querySelectorAll('a[href$="' + key + '.html"]');
+      var links = document.querySelectorAll('a[href$="' + key + '.html"], a[href$="' + key + '"]');
       Array.prototype.forEach.call(links, function (a) {
         var spans = a.querySelectorAll('span');
         Array.prototype.forEach.call(spans, function (sp) {
