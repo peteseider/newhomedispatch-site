@@ -117,6 +117,49 @@ function recomputeIndex() {
   return { idx, offers, builders, expired, t, pointCount: ci.points.length };
 }
 
+// ---------- Buyer Advantage Score v0.1 + score history (reproducible; matches the methodology page) ----------
+function clamp(x) { return Math.max(0, Math.min(100, x)); }
+function bandFor(s) { return s >= 80 ? 'Strongly favors buyers' : s >= 60 ? 'High' : s >= 40 ? 'Balanced' : 'Favors builders'; }
+
+function recomputeScore(t) {
+  const inc = JSON.parse(readFileSync(p('incentives.json'), 'utf8'));
+  const records = inc.records || [];
+  const v = records.map((r) => Number(r.advertisedValue)).filter((n) => Number.isFinite(n)).sort((a, b) => a - b);
+  const median = v.length ? (v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2) : 0;
+  const stringFreeShare = records.length ? records.filter((r) => r.lenderTied === false).length / records.length : 0;
+
+  // Broader tracked counts come from the editorial sweep — read from sweep-inputs.json,
+  // falling back to the last published values so the score is always defined.
+  let inp = { buildersLive: 23, offersVerified: 35, expiredDisplayed: 14, deadlines14d: 11 };
+  try { inp = Object.assign(inp, JSON.parse(readFileSync(p('sweep-inputs.json'), 'utf8'))); } catch { /* defaults */ }
+
+  const cIncentive   = clamp((median - 5000) / 20000 * 100);   // 30%
+  const cCompetition = clamp(inp.buildersLive / 25 * 100);     // 20%
+  const displayed    = inp.offersVerified + inp.expiredDisplayed;
+  const cFriction    = displayed ? clamp(inp.expiredDisplayed / displayed * 300) : 0; // 15%
+  const cStringFree  = clamp(stringFreeShare * 100);           // 20%
+  const cDeadline    = clamp(inp.deadlines14d / 12 * 100);     // 15%
+
+  const score = Math.round(0.30 * cIncentive + 0.20 * cCompetition + 0.15 * cFriction + 0.20 * cStringFree + 0.15 * cDeadline);
+  const band = bandFor(score);
+
+  let hist;
+  try { hist = JSON.parse(readFileSync(p('score-history.json'), 'utf8')); }
+  catch { hist = { schema: 'nhd-buyer-advantage-score-history-v1', metric: 'Buyer Advantage Score (v0.1 public-signal model)', points: [] }; }
+  hist.points = Array.isArray(hist.points) ? hist.points : [];
+  const point = {
+    t: t.iso, label: t.label, slot: t.slot, score, band,
+    components: { incentive: Math.round(cIncentive), competition: Math.round(cCompetition), friction: Math.round(cFriction), stringFree: Math.round(cStringFree), deadline: Math.round(cDeadline) },
+  };
+  const at = hist.points.findIndex((pt) => (pt.t || '').slice(0, 10) === t.ymd && (pt.slot || '') === t.slot);
+  if (at >= 0) hist.points[at] = point; else hist.points.push(point);
+  hist.points.sort((a, b) => String(a.t).localeCompare(String(b.t)));
+  hist.lastUpdated = t.iso;
+  hist.lastUpdatedLabel = t.labelLong;
+  writeFileSync(p('score-history.json'), JSON.stringify(hist, null, 2) + '\n');
+  return { score, band, pointCount: hist.points.length };
+}
+
 // ---------- optional detection layer (never mutates verified values) ----------
 async function detectChanges() {
   const key = process.env.ANTHROPIC_API_KEY;
@@ -177,6 +220,9 @@ async function detectChanges() {
     `builders=${core.builders} expired=${core.expired} slot=${core.t.slot} ` +
     `at=${core.t.labelLong} points=${core.pointCount}`
   );
+
+  const bas = recomputeScore(core.t);
+  console.log(`[sweep] BuyerAdvantageScore=${bas.score} (${bas.band}) historyPoints=${bas.pointCount}`);
 
   let detect = { ran: false, reason: 'skipped' };
   try {

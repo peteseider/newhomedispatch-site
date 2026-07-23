@@ -1,0 +1,9 @@
+{
+  "schema": "nhd-sweep-inputs-v1",
+  "note": "Broader tracked counts from the editorial sweep that feed the Buyer Advantage Score (beyond the 9 verified records in incentives.json). Update these each sweep.",
+  "asOf": "2026-07-22 AM sweep",
+  "buildersLive": 23,
+  "offersVerified": 35,
+  "expiredDisplayed": 14,
+  "deadlines14d": 11
+}
