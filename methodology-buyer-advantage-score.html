@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buyer Advantage Score — Methodology (v0.1) | New Home Dispatch</title>
+<title>Buyer Advantage Score, Methodology (v0.1) | New Home Dispatch</title>
 <meta name="description" content="How New Home Dispatch calculates the Buyer Advantage Score: components, weights, baselines, a worked example, limitations, and change log. Version 0.1, public-signal model.">
 <link rel="canonical" href="https://newhomedispatch.com/methodology-buyer-advantage-score.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,12 +55,12 @@
   <h1>The Buyer Advantage Score</h1>
   <div class="ver">Version 0.1 · public-signal model · last updated July 23, 2026</div>
 
-  <p class="lead">The Buyer Advantage Score is one number for the whole Central Texas new-home market — a read of how much leverage buyers hold right now. This page shows exactly how it's calculated, so the number can be reproduced and checked. It is a transparent read, not a prediction or financial advice.</p>
+  <p class="lead">The Buyer Advantage Score is one number for the whole Central Texas new-home market, a read of how much leverage buyers hold right now. This page shows exactly how it's calculated, so the number can be reproduced and checked. It is a transparent read, not a prediction or financial advice.</p>
 
-  <div class="callout warn"><b>What v0.1 is — and isn't.</b> This is a <b>public-signal model</b>: it uses only data we capture from builders' own websites twice a day. It does <b>not</b> yet include MLS market data (inventory, days-on-market, absorption), and its baselines are calibrated from editorial judgment pending back-testing against retained history. Treat it as an informed, reproducible index — not a precision instrument. The version number will advance as the model is back-tested and the MLS layer is added.</div>
+  <div class="callout warn"><b>What v0.1 is, and isn't.</b> This is a <b>public-signal model</b>: it uses only data we capture from builders' own websites twice a day. It does <b>not</b> yet include MLS market data (inventory, days-on-market, absorption), and its baselines are calibrated from editorial judgment pending back-testing against retained history. Treat it as an informed, reproducible index, not a precision instrument. The version number will advance as the model is back-tested and the MLS layer is added.</div>
 
   <h2>The five components</h2>
-  <p>Each component is scored 0–100 from a stated input and formula, then weighted. Higher component score = stronger buyer leverage.</p>
+  <p>Each component is scored 0 to 100 from a stated input and formula, then weighted. Higher component score = stronger buyer leverage.</p>
   <table>
     <tr><th>Component</th><th class="n">Weight</th><th>Formula (v0.1)</th><th>Today's input</th><th class="n">Sub-score</th></tr>
     <tr><td><b>Incentive level</b><br><span style="color:var(--muted);font-size:12.5px;">how big the median advertised credit is</span></td><td class="n">30%</td><td>clamp((median − $5k) ÷ $20k × 100)</td><td>median $20,000</td><td class="n">75</td></tr>
@@ -70,7 +70,7 @@
     <tr><td><b>Deadline pressure</b><br><span style="color:var(--muted);font-size:12.5px;">dated offers expiring within 14 days</span></td><td class="n">15%</td><td>clamp(count ÷ 12 × 100)</td><td>11 deadlines</td><td class="n">92</td></tr>
   </table>
 
-  <h2>Worked example — why today equals 74</h2>
+  <h2>Worked example, why today equals 74</h2>
   <div class="calc">
     Incentive level&nbsp;&nbsp;&nbsp;0.30 × 75 = <b>22.5</b><br>
     Competition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.20 × 92 = <b>18.4</b><br>
@@ -84,40 +84,40 @@
 
   <h2>The bands</h2>
   <div class="band">
-    <div><span class="lab">0–39</span>Favors builders</div>
-    <div><span class="lab">40–59</span>Balanced</div>
-    <div class="cur"><span class="lab">60–79 · today</span>Favors buyers (High)</div>
-    <div><span class="lab">80–100</span>Strongly favors buyers</div>
+    <div><span class="lab">0 to 39</span>Favors builders</div>
+    <div><span class="lab">40 to 59</span>Balanced</div>
+    <div class="cur"><span class="lab">60 to 79 · today</span>Favors buyers (High)</div>
+    <div><span class="lab">80 to 100</span>Strongly favors buyers</div>
   </div>
   <p>Because v0.1's precision is limited, read the <b>band</b> first and the exact number second. A move from 74 to 76 is noise; a move from "Favors buyers" to "Balanced" is signal.</p>
 
   <h2>Limitations (read these)</h2>
   <ul>
-    <li><b>Editorial baselines.</b> The formulas' anchor points ($5k–$25k incentive range, 25-builder saturation, etc.) are v0.1 judgment calls, not yet back-tested against outcomes.</li>
+    <li><b>Editorial baselines.</b> The formulas' anchor points ($5k, $25k incentive range, 25-builder saturation, etc.) are v0.1 judgment calls, not yet back-tested against outcomes.</li>
     <li><b>No history yet.</b> We are storing every sweep's inputs and output starting now. Until enough history exists, we do not publish "change vs. prior sweep" or any predictive claim.</li>
-    <li><b>Offer-validity friction is interpretive.</b> An expired offer left on a builder's site proves the page is out of date — not, on its own, that the builder is motivated. It's a weak signal, weighted low, and flagged for review.</li>
+    <li><b>Offer-validity friction is interpretive.</b> An expired offer left on a builder's site proves the page is out of date, not, on its own, that the builder is motivated. It's a weak signal, weighted low, and flagged for review.</li>
     <li><b>Pre-MLS.</b> The score does not yet include inventory, days-on-market, absorption, or concession data. Those are designed and will be added only after MLS authorization.</li>
-    <li><b>Advertised, not verified.</b> Inputs are builder-advertised figures captured from builders' own sites — not field-verified sale outcomes.</li>
+    <li><b>Advertised, not verified.</b> Inputs are builder-advertised figures captured from builders' own sites, not field-verified sale outcomes.</li>
   </ul>
 
   <h2>What the score does <em>not</em> mean</h2>
   <ul>
     <li>It is not a prediction that prices or rates will move.</li>
     <li>It is not financial, mortgage, or investment advice.</li>
-    <li>It is not a statement about any individual home, community, or builder — those are the separate Builder Opportunity Rankings.</li>
+    <li>It is not a statement about any individual home, community, or builder, those are the separate Builder Opportunity Rankings.</li>
     <li>A high score does not mean "buy now." It means buyers, as a group, have more room to negotiate than usual.</li>
   </ul>
 
   <h2 id="builder">The Builder Opportunity Score</h2>
-  <p>A <b>separate</b> score from the market index — one per builder, answering "who, specifically, is most motivated?" Same discipline: reproducible from stated public signals, v0.1, pre-MLS.</p>
+  <p>A <b>separate</b> score from the market index, one per builder, answering "who, specifically, is most motivated?" Same discipline: reproducible from stated public signals, v0.1, pre-MLS.</p>
   <table>
     <tr><th>Component</th><th class="n">Weight</th><th>Formula (v0.1)</th></tr>
-    <tr><td><b>Credit size</b> — largest advertised credit</td><td class="n">40%</td><td>clamp(credit ÷ $50k × 100)</td></tr>
+    <tr><td><b>Credit size</b>, largest advertised credit</td><td class="n">40%</td><td>clamp(credit ÷ $50k × 100)</td></tr>
     <tr><td><b>Deadline pressure</b></td><td class="n">25%</td><td>≤3d = 100 · ≤7d = 85 · ≤14d = 70 · ≤30d = 55 · none = 30</td></tr>
     <tr><td><b>Today's movement</b></td><td class="n">20%</td><td>new/raised = 100 · large confirmed = 70 · stable = 50</td></tr>
-    <tr><td><b>String-free</b> — no lender requirement</td><td class="n">15%</td><td>no-lender = 100 · lender-tied = 40</td></tr>
+    <tr><td><b>String-free</b>, no lender requirement</td><td class="n">15%</td><td>no-lender = 100 · lender-tied = 40</td></tr>
   </table>
-  <p><b>Worked example — David Weekley = 74:</b></p>
+  <p><b>Worked example, David Weekley = 74:</b></p>
   <div class="calc">
     Credit $50k&nbsp;&nbsp;&nbsp;0.40 × 100 = <b>40.0</b><br>
     Deadline Jul 31&nbsp;0.25 × 70&nbsp; = <b>17.5</b><br>

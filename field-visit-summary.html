@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Community Visit Summary — Field Tool | New Home Dispatch</title>
+<title>Community Visit Summary, Field Tool | New Home Dispatch</title>
 <meta name="robots" content="noindex">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta name="theme-color" content="#0F2942">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="NHD Field">
-<!-- INTERNAL FIELD TOOL — do not publish in the public site nav. Open on a phone, fill during/after a visit, tap COPY, text it to the team. Nothing is uploaded anywhere; everything stays on the device until you send it. -->
+<!-- INTERNAL FIELD TOOL, do not publish in the public site nav. Open on a phone, fill during/after a visit, tap COPY, text it to the team. Nothing is uploaded anywhere; everything stays on the device until you send it. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -107,28 +107,28 @@
 
   <div class="sec">
     <h2>Top line</h2>
-    <label>One sentence — the story of this visit</label>
+    <label>One sentence, the story of this visit</label>
     <textarea id="topline" placeholder="e.g., Two model homes closed since June; incentives up $5K and the sales office wouldn't put the rate buydown in writing."></textarea>
   </div>
 
   <div class="sec">
     <h2>Three things I saw <span style="letter-spacing:0;text-transform:none">(tag each: 🟢 verified · 🟡 builder-claimed · 🔴 needs verification)</span></h2>
     <div class="obs">
-      <label>Observation 1</label><textarea class="obstxt" placeholder="What + where + number + how you know. e.g., Six complete spec homes on one street, three with price-cut signs — counted, photographed"></textarea>
+      <label>Observation 1</label><textarea class="obstxt" placeholder="What + where + number + how you know. e.g., Six complete spec homes on one street, three with price-cut signs, counted, photographed"></textarea>
       <div class="dots"><button class="dot v">🟢 Verified</button><button class="dot c">🟡 Claimed</button><button class="dot n">🔴 Verify</button></div>
     </div>
     <div class="obs">
-      <label>Observation 2</label><textarea class="obstxt" placeholder="e.g., Rep quoted 2.9% tax rate verbally; nothing in writing — rate sheet refused"></textarea>
+      <label>Observation 2</label><textarea class="obstxt" placeholder="e.g., Rep quoted 2.9% tax rate verbally; nothing in writing, rate sheet refused"></textarea>
       <div class="dots"><button class="dot v">🟢 Verified</button><button class="dot c">🟡 Claimed</button><button class="dot n">🔴 Verify</button></div>
     </div>
     <div class="obs">
-      <label>Observation 3</label><textarea class="obstxt" placeholder="e.g., Phase 3 amenity site still graded dirt; 'Pool Coming 2025' sign weathered — photographed"></textarea>
+      <label>Observation 3</label><textarea class="obstxt" placeholder="e.g., Phase 3 amenity site still graded dirt; 'Pool Coming 2025' sign weathered, photographed"></textarea>
       <div class="dots"><button class="dot v">🟢 Verified</button><button class="dot c">🟡 Claimed</button><button class="dot n">🔴 Verify</button></div>
     </div>
   </div>
 
   <div class="sec">
-    <h2>Money <span style="letter-spacing:0;text-transform:none">(from rate sheet / collateral — claims until verified)</span></h2>
+    <h2>Money <span style="letter-spacing:0;text-transform:none">(from rate sheet / collateral, claims until verified)</span></h2>
     <div class="row2">
       <div><label>Base / floor price</label><input type="text" id="mprice" placeholder="$"></div>
       <div><label>Current incentive</label><input type="text" id="mincent" placeholder="$ / description"></div>
@@ -139,17 +139,17 @@
     </div>
     <label>Rate sheet obtained?</label>
     <div class="seg" id="ratesheet">
-      <button data-v="Yes — photographed">Yes — photographed</button>
+      <button data-v="Yes, photographed">Yes, photographed</button>
       <button data-v="Refused">Refused</button>
       <button data-v="Not asked">Not asked</button>
     </div>
   </div>
 
   <div class="sec">
-    <h2>Photos <span style="letter-spacing:0;text-transform:none">(loads from camera or gallery — auto-named per the Media Standard)</span></h2>
-    <label class="filebtn" for="photoInput">📷 Add photos — camera or gallery</label>
+    <h2>Photos <span style="letter-spacing:0;text-transform:none">(loads from camera or gallery, auto-named per the Media Standard)</span></h2>
+    <label class="filebtn" for="photoInput">📷 Add photos, camera or gallery</label>
     <input type="file" id="photoInput" accept="image/*" multiple capture="environment" style="display:none">
-    <p class="note" style="margin:8px 0 0">Photos stay on your phone — this names them per the standard (<span style="font-family:'IBM Plex Mono',monospace;font-size:12px">Date_Community_Location_Subject_PhotoNN</span>) and lists them in the summary. Attach the photos themselves when you text it.</p>
+    <p class="note" style="margin:8px 0 0">Photos stay on your phone, this names them per the standard (<span style="font-family:'IBM Plex Mono',monospace;font-size:12px">Date_Community_Location_Subject_PhotoNN</span>) and lists them in the summary. Attach the photos themselves when you text it.</p>
     <div id="photoGrid"></div>
   </div>
 
@@ -178,7 +178,7 @@
     </div>
   </div>
 
-  <p class="foot">Look Closer<b>.</b> · Independent — editorial coverage is not for sale</p>
+  <p class="foot">Look Closer<b>.</b> · Independent, editorial coverage is not for sale</p>
 </div>
 
 <form name="field-visit-summary" data-netlify="true" netlify-honeypot="bot-field" hidden>
@@ -191,7 +191,7 @@
   <button class="btn primary" id="sendBtn">⇪ SEND TO HQ</button>
   <button class="btn primary" id="copyBtn" style="background:#0F2942">⧉ COPY</button>
 </div></div>
-<div class="toast" id="toast">Copied — paste into a text to the team.</div>
+<div class="toast" id="toast">Copied, paste into a text to the team.</div>
 
 <script>
 function segSetup(id, multi){
@@ -219,7 +219,7 @@ document.querySelectorAll('.dots').forEach(function(g){
   });
 });
 
-// auto visit-id from community + date — per the Media & File-Naming Standard:
+// auto visit-id from community + date, per the Media & File-Naming Standard:
 // YYYY-MM-DD_CommunityName_VisitNN (CommunityName PascalCase, no spaces)
 function pascal(s){
   return (s||'').split(/[^A-Za-z0-9]+/).filter(Boolean)
@@ -236,14 +236,14 @@ document.getElementById('visitid').addEventListener('input', function(){ this.da
 
 function segVal(id){
   var on = document.querySelector('#'+id+' button.on');
-  return on ? (on.getAttribute('data-v') || on.textContent) : '—';
+  return on ? (on.getAttribute('data-v') || on.textContent) : ', ';
 }
 function segMulti(id){
   var out = [];
   document.querySelectorAll('#'+id+' button.on').forEach(function(b){out.push(b.textContent)});
-  return out.length ? out.join(' · ') : '—';
+  return out.length ? out.join(' · ') : ', ';
 }
-function v(id){ var el = document.getElementById(id); return (el && el.value.trim()) ? el.value.trim() : '—'; }
+function v(id){ var el = document.getElementById(id); return (el && el.value.trim()) ? el.value.trim() : ', '; }
 
 // ---------- photos: load, preview, auto-name per the Media & File-Naming Standard ----------
 // Pattern: YYYY-MM-DD_CommunityName_Location_Subject_PhotoNN  (+ Evidence/Editorial class, ConsentY/N when people shown)
@@ -326,7 +326,7 @@ function buildSummary(){
     obs.push((i+1)+'. '+t+'  '+tag);
   });
   var L = [];
-  L.push('COMMUNITY VISIT SUMMARY — New Home Dispatch');
+  L.push('COMMUNITY VISIT SUMMARY, New Home Dispatch');
   L.push('Visit ID: '+v('visitid')+' · '+segVal('firstrep'));
   L.push('Community: '+v('community')+' · Builder: '+v('builder'));
   L.push('Date: '+v('vdate')+' '+v('vtime')+' · Weather: '+v('weather')+' · Reporter: '+v('reporter'));
@@ -334,7 +334,7 @@ function buildSummary(){
   L.push('TOP LINE: '+v('topline'));
   L.push('');
   L.push('WHAT I SAW  (🟢 verified · 🟡 builder-claimed · 🔴 needs verification)');
-  L.push(obs.length ? obs.join('\n') : '—');
+  L.push(obs.length ? obs.join('\n') : ', ');
   L.push('');
   L.push('MONEY (claims until verified): base/floor '+v('mprice')+' · incentive '+v('mincent')+' · deadline '+v('mdeadline')+' · tax quoted '+v('mtax')+' 🔴 verify');
   L.push('Rate sheet: '+segVal('ratesheet'));
@@ -342,8 +342,8 @@ function buildSummary(){
   L.push('BUYERS WOULD OVERLOOK: '+v('overlook'));
   L.push('PHOTO OF THE DAY: '+v('photo'));
   var pl = photoList();
-  L.push('PHOTOS CAPTURED ('+pl.length+') — rename originals to these before filing:');
-  L.push(pl.length ? pl.join('\n') : '—');
+  L.push('PHOTOS CAPTURED ('+pl.length+'), rename originals to these before filing:');
+  L.push(pl.length ? pl.join('\n') : ', ');
   L.push('DISPUTED CLAIM → CLARIFICATION: '+v('disputed'));
   L.push('RETURN-VISIT TRIGGER: '+v('trigger'));
   L.push('');
@@ -384,17 +384,17 @@ function buildRecord(){
 function toast2(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2600);}
 document.getElementById('sendBtn').addEventListener('click', function(){
   var rec = buildRecord();
-  if(rec.community==='—'||rec.date==='—'){ toast2('Fill community + date first.'); return; }
+  if(rec.community===', '||rec.date===', '){ toast2('Fill community + date first.'); return; }
   var body = new URLSearchParams({'form-name':'field-visit-summary',
     visitid:rec.visitId, community:rec.community, builder:rec.builder, vdate:rec.date,
     reporter:rec.reporter, summary:buildSummary(), payload:JSON.stringify(rec)}).toString();
   var btn=this; btn.disabled=true; btn.textContent='SENDING…';
   fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body})
     .then(function(r){ if(!r.ok) throw new Error(r.status);
-      btn.textContent='✓ SENT'; toast2('Sent to HQ — routed to '+rec.community+' / '+(rec.builder!=='—'?rec.builder:'community')+' via the Friday data cycle.');
+      btn.textContent='✓ SENT'; toast2('Sent to HQ, routed to '+rec.community+' / '+(rec.builder!==', '?rec.builder:'community')+' via the Friday data cycle.');
       setTimeout(function(){btn.disabled=false;btn.textContent='⇪ SEND TO HQ';},2500); })
     .catch(function(){ btn.disabled=false; btn.textContent='⇪ SEND TO HQ';
-      toast2('No connection — use COPY and text it. Nothing was lost.'); });
+      toast2('No connection, use COPY and text it. Nothing was lost.'); });
 });
 
 
@@ -403,12 +403,12 @@ document.getElementById('exampleBtn').addEventListener('click', function(){
   function set(id,val){ var el=document.getElementById(id); if(el){el.value=val; el.dispatchEvent(new Event('input')); el.dispatchEvent(new Event('change'));} }
   set('community','Santa Rita Ranch'); set('builder','GFO Home / Scott Felder');
   set('vdate','2026-07-20'); set('vtime','13:30'); set('weather','97°, clear');
-  set('reporter','EXAMPLE — not a real visit');
-  set('topline','Two builders quoting different tax rates for the same section, and the advertised $443,990 floor is gone — lowest sheet price today was $459,990.');
+  set('reporter','EXAMPLE, not a real visit');
+  set('topline','Two builders quoting different tax rates for the same section, and the advertised $443,990 floor is gone, lowest sheet price today was $459,990.');
   var obs = [
-    ['Lowest priced sheet in the GFO model was $459,990 — the website still advertises "from the high $400s"; photographed the sheet','v'],
-    ['Scott Felder rep quoted 2.61% total tax; GFO rep said "about 3%" for the same section — verbal only, neither would print it','n'],
-    ['Six completed spec homes on Serene Way, two with "price improved" riders — counted and photographed','v']
+    ['Lowest priced sheet in the GFO model was $459,990, the website still advertises "from the high $400s"; photographed the sheet','v'],
+    ['Scott Felder rep quoted 2.61% total tax; GFO rep said "about 3%" for the same section, verbal only, neither would print it','n'],
+    ['Six completed spec homes on Serene Way, two with "price improved" riders, counted and photographed','v']
   ];
   document.querySelectorAll('.obs').forEach(function(o,i){
     if(!obs[i]) return;
@@ -417,17 +417,17 @@ document.getElementById('exampleBtn').addEventListener('click', function(){
     o.querySelector('.dot.'+obs[i][1]).classList.add('on');
   });
   set('mprice','$459,990 (sheet)'); set('mincent','$20K flex, "ends Sunday" (verbal)');
-  set('mdeadline','claimed 7/26 — not in writing'); set('mtax','2.61% vs ~3% — conflicting');
+  set('mdeadline','claimed 7/26, not in writing'); set('mtax','2.61% vs ~3%, conflicting');
   function seg(id,txt){ document.querySelectorAll('#'+id+' button').forEach(function(b){ b.classList.toggle('on', b.textContent.indexOf(txt)>-1); }); }
-  seg('firstrep','First visit'); seg('ratesheet','Yes — photographed'); seg('status','Publish');
+  seg('firstrep','First visit'); seg('ratesheet','Yes, photographed'); seg('status','Publish');
   ['Dispatch Field Note','Community Profile','Builder Profile','Incentive Tracker'].forEach(function(r){
     document.querySelectorAll('#routes button').forEach(function(b){ if(b.textContent===r) b.classList.add('on'); });
   });
-  set('overlook','The tax rate difference between reps is worth ~$180/mo on this price — nobody touring would catch it without asking both.');
+  set('overlook','The tax rate difference between reps is worth ~$180/mo on this price, nobody touring would catch it without asking both.');
   set('photo','2026-07-20_SantaRitaRanch_GFOModel_PriceSheet_Photo01');
-  set('disputed','GFO "about 3%" vs Scott Felder 2.61% for same section — clarification request to both.');
+  set('disputed','GFO "about 3%" vs Scott Felder 2.61% for same section, clarification request to both.');
   set('trigger','When either builder prints a rate sheet with the tax rate on it');
-  var t=document.getElementById('toast'); t.textContent='Example loaded — study it, then tap Clear and do your real visit.'; t.classList.add('show'); setTimeout(function(){t.classList.remove('show')},3000);
+  var t=document.getElementById('toast'); t.textContent='Example loaded, study it, then tap Clear and do your real visit.'; t.classList.add('show'); setTimeout(function(){t.classList.remove('show')},3000);
 });
 
 document.getElementById('clearBtn').addEventListener('click', function(){

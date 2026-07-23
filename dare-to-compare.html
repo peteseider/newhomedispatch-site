@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <meta name="theme-color" content="#000000">
-<title>Dare to Compare — New Home Dispatch</title>
-<meta name="description" content="The Dare to Compare Workbook — capture the real price, incentives, taxes, included features, and important terms for up to 3 new-construction homes, then compare them side by side. Free, on your phone, no email.">
+<title>Dare to Compare, New Home Dispatch</title>
+<meta name="description" content="The Dare to Compare Workbook, capture the real price, incentives, taxes, included features, and important terms for up to 3 new-construction homes, then compare them side by side. Free, on your phone, no email.">
 <link rel="canonical" href="https://newhomedispatch.com/dare-to-compare.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dare to Compare — the field comparison tool | New Home Dispatch">
+<meta property="og:title" content="Dare to Compare, the field comparison tool | New Home Dispatch">
 <meta property="og:description" content="Take it into every model home. Capture up to 3 homes and compare them side by side before you decide. Free, no email.">
 <meta property="og:url" content="https://newhomedispatch.com/dare-to-compare.html">
 <meta property="og:site_name" content="New Home Dispatch">
@@ -241,7 +241,7 @@ table.cmp td .missing{color:var(--amber);font-weight:600;}
 <script>
 "use strict";
 /* ============================================================
-   NEW HOME DISPATCH — DARE TO COMPARE
+   NEW HOME DISPATCH, DARE TO COMPARE
    Mobile-first field comparison tool. MVP, local-only, no account.
    ============================================================ */
 const STORE_KEY = "nhd_dtc_v1";
@@ -268,17 +268,17 @@ const SECTIONS = [
     {k:"completion",label:"Est. completion / move-in",type:"text",half:true,ph:"MM/YYYY"},
     {k:"dateQuoted",label:"Date quoted",type:"date",half:true},
     {k:"salesRep",label:"Sales representative",type:"text",half:true},
-    {k:"photos",label:"Photos — flyer, price sheet, or home",type:"photos"},
+    {k:"photos",label:"Photos, flyer, price sheet, or home",type:"photos"},
   ]},
   { key:"price", title:"Price", intro:"Use the written price for this specific home when you have it. Don’t rely only on the advertised “from” price.", fields:[
     {k:"base",label:"Listed or base price",type:"money"},
     {k:"lot",label:"Lot premium",type:"money"},
-    {k:"structural",label:"Structural options",type:"money",hint:"Layout, elevation, extra bay — hard to change later."},
-    {k:"design",label:"Design / finish options",type:"money",hint:"Selections bought from the builder — part of your contract."},
+    {k:"structural",label:"Structural options",type:"money",hint:"Layout, elevation, extra bay, hard to change later."},
+    {k:"design",label:"Design / finish options",type:"money",hint:"Selections bought from the builder, part of your contract."},
     {k:"other",label:"Other required builder charges",type:"money"},
     {k:"contract",label:"Estimated contract price",type:"money",computedFrom:["base","lot","structural","design","other"]},
   ]},
-  { key:"included", title:"What’s included", intro:"Capture the differences that matter — not every feature.", fields:[
+  { key:"included", title:"What’s included", intro:"Capture the differences that matter, not every feature.", fields:[
     {k:"inc1",label:"Included feature 1",type:"text"},
     {k:"inc2",label:"Included feature 2",type:"text"},
     {k:"inc3",label:"Included feature 3",type:"text"},
@@ -322,9 +322,9 @@ const SECTIONS = [
     {k:"depositNonref",label:"When does it become nonrefundable?",type:"text"},
     {k:"inspAllowed",label:"Independent inspections allowed?",type:"yn"},
     {k:"inspStages",label:"Inspection stages allowed",type:"text",ph:"e.g. pre-drywall, final"},
-    {k:"warWork",label:"Warranty — workmanship",type:"text",half:true,ph:"e.g. 1 yr"},
-    {k:"warSys",label:"Warranty — systems",type:"text",half:true,ph:"e.g. 2 yr"},
-    {k:"warStruct",label:"Warranty — structural",type:"text",half:true,ph:"e.g. 10 yr"},
+    {k:"warWork",label:"Warranty, workmanship",type:"text",half:true,ph:"e.g. 1 yr"},
+    {k:"warSys",label:"Warranty, systems",type:"text",half:true,ph:"e.g. 2 yr"},
+    {k:"warStruct",label:"Warranty, structural",type:"text",half:true,ph:"e.g. 10 yr"},
     {k:"warAdmin",label:"Warranty administrator",type:"text",half:true},
     {k:"concern",label:"Important contract or cancellation concern",type:"textarea"},
     {k:"docs",label:"Written documents received?",type:"yn"},
@@ -338,7 +338,7 @@ const SECTIONS = [
     {k:"typed",label:"Additional notes",type:"textarea"},
     {k:"photos",label:"Additional photos",type:"photos"},
   ]},
-  { key:"score", title:"Score this home", intro:"Your score reflects this specific home and offer — not every home the builder builds. Confidence means confidence in the written numbers and process, not an accusation about honesty.", fields:[
+  { key:"score", title:"Score this home", intro:"Your score reflects this specific home and offer, not every home the builder builds. Confidence means confidence in the written numbers and process, not an accusation about honesty.", fields:[
     {k:"fit",label:"Fit",type:"score",hint:"How well it matches what you actually need."},
     {k:"value",label:"Value",type:"score",hint:"What you get for the all-in price."},
     {k:"confidence",label:"Confidence",type:"score",hint:"Confidence in the written numbers, process, and unresolved risk."},
@@ -349,7 +349,7 @@ const SECTIONS = [
 let state = load() || { homes:[], view:"intro", hi:0, si:0 };
 
 function load(){ try{ return JSON.parse(localStorage.getItem(STORE_KEY)); }catch(e){ return null; } }
-function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){ toast("Storage full — remove some photos"); } }
+function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){ toast("Storage full, remove some photos"); } }
 function newHome(){ return { details:{}, price:{}, included:{}, incentive:{}, taxes:{}, process:{}, notes:{}, score:{}, _src:{} }; }
 
 /* ---------- helpers ---------- */
@@ -357,7 +357,7 @@ const $=(s,r=document)=>r.querySelector(s);
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
 function esc(s){return (s==null?"":String(s)).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));}
 function num(v){ if(v==null||v==="")return null; const n=parseFloat(String(v).replace(/[^0-9.\-]/g,"")); return isNaN(n)?null:n; }
-function money(n){ if(n==null)return "—"; return "$"+Math.round(n).toLocaleString(); }
+function money(n){ if(n==null)return ", "; return "$"+Math.round(n).toLocaleString(); }
 function homeName(h,i){ const d=h.details||{}; return d.plan||d.builder||d.community||("Home "+String.fromCharCode(65+i)); }
 function homeLetter(i){ return String.fromCharCode(65+i); }
 let toastT;
@@ -387,7 +387,7 @@ function renderIntro(app){
       <div class="ky">The Field Workbook</div>
       <h1>Dare to Compare<span class="dot">.</span></h1>
     </div>
-    <h1 class="big">Compare the homes<span class="dot">—</span>not just the advertised prices.</h1>
+    <h1 class="big">Compare the homes<span class="dot">, </span>not just the advertised prices.</h1>
     <p class="sub">Add up to 3 homes as you visit builders. Capture the price, incentives, taxes, included features, and important terms. We’ll organize the information side by side before you decide.</p>
     <div class="howto" style="margin-top:22px;">
       <div class="hi"><div class="hn">1</div><div class="ht"><b>Add a home</b><span>A few minutes during or right after the visit.</span></div></div>
@@ -402,7 +402,7 @@ function renderIntro(app){
     </div>
   `;
   app.appendChild(s);
-  app.appendChild(actionbar(`<button class="btn primary wide" id="startBtn">${resume?"Continue — "+state.homes.length+" home"+(state.homes.length>1?"s":"")+" saved":"Add Your First Home"}</button>`));
+  app.appendChild(actionbar(`<button class="btn primary wide" id="startBtn">${resume?"Continue, "+state.homes.length+" home"+(state.homes.length>1?"s":"")+" saved":"Add Your First Home"}</button>`));
   $("#startBtn").onclick=()=>{ if(resume){ state.view="list"; } else { state.homes.push(newHome()); state.hi=0; state.si=0; state.view="home"; } save(); render(); };
   $("#dlFill").onclick=()=>{ window.open(FILLABLE_PDF,"_blank"); };
   $("#dlPrint").onclick=()=>{ window.open(PRINT_PDF,"_blank"); };
@@ -509,7 +509,7 @@ function renderField(f,sec,h,data){
 function refreshComputed(sec,h){ const c=document.getElementById("computed-contract"); if(c){ const t=contractTotal(h); c.querySelector(".cv").textContent=money(t); } }
 function srcSelector(h,k){ const box=el("div","srcsel"); const cur=()=> (h._src=h._src||{}, h._src[k]||""); [["Builder est.","builder"],["My entry","buyer"],["NHD calc","nhd"]].forEach(([t,v])=>{ const b=el("button",null,t); b.type="button"; b.setAttribute("aria-pressed",cur()===v); b.onclick=()=>{ h._src=h._src||{}; h._src[k]=(h._src[k]===v?"":v); save(); box.querySelectorAll("button").forEach((x,ix)=>x.setAttribute("aria-pressed",[["builder"],["buyer"],["nhd"]][ix][0]===h._src[k])); }; box.appendChild(b); }); return box; }
 function updateScoreTot(h){ /* score total shown live under section */ const holder=document.getElementById("scoretot"); if(holder){ holder.innerHTML=scoreTotHTML(h); } }
-function scoreTotHTML(h){ const s=h.score||{}; const vals=["fit","value","confidence"].map(k=>num(s[k])); const filled=vals.filter(v=>v!=null); const tot=filled.reduce((a,b)=>a+b,0); return `Total <b>${filled.length?tot:"—"}</b> / 15`; }
+function scoreTotHTML(h){ const s=h.score||{}; const vals=["fit","value","confidence"].map(k=>num(s[k])); const filled=vals.filter(v=>v!=null); const tot=filled.reduce((a,b)=>a+b,0); return `Total <b>${filled.length?tot:", "}</b> / 15`; }
 
 /* photos with downscale */
 function photoField(data,k){
@@ -544,7 +544,7 @@ function renderList(app){
   if(state.homes.length<MAX_HOMES) btns.innerHTML+=`<button class="btn ghost wide" id="addHome">Add Home ${homeLetter(state.homes.length)}</button>`;
   btns.innerHTML+=`<button class="btn primary wide" id="compareNow">Compare Now</button>`;
   s.appendChild(btns);
-  s.appendChild(el("div","footnote","You can return and add or edit any home later — everything is saved on this device."));
+  s.appendChild(el("div","footnote","You can return and add or edit any home later, everything is saved on this device."));
   app.appendChild(s);
   s.querySelectorAll(".hedit").forEach(b=>b.onclick=()=>{ state.hi=+b.dataset.i; state.si=0; state.view="home"; save(); render(); scrollTop(); });
   const ah=$("#addHome"); if(ah) ah.onclick=()=>{ state.homes.push(newHome()); state.hi=state.homes.length-1; state.si=0; state.view="home"; save(); render(); scrollTop(); };
@@ -585,39 +585,39 @@ function renderCompare(app){
   const rows=[
     ["grp","The home"],
     ["Community",h=>esc(h.details.community)],
-    ["Builder & plan",h=>esc([h.details.builder,h.details.plan].filter(Boolean).join(" — "))],
+    ["Builder & plan",h=>esc([h.details.builder,h.details.plan].filter(Boolean).join(", "))],
     ["Sq ft · bd · ba",h=>esc([h.details.sqft,h.details.beds,h.details.baths].filter(v=>v!=null&&v!=="").join(" · "))],
     ["grp","Price"],
     ["Estimated contract price",(h,i)=>fmtBest(money(contracts[i]),i===bestContract,"lowest")],
     ["grp","Offer"],
-    ["Incentive",h=>h.incentive.amount?money(num(h.incentive.amount)):"—"],
+    ["Incentive",h=>h.incentive.amount?money(num(h.incentive.amount)):", "],
     ["Type",h=>esc((h.incentive.types||[]).join(", "))],
     ["Builder lender / title required",h=>ynPair(h.incentive.lenderReq,h.incentive.titleReq)],
     ["Written?",h=>ynTxt(h.incentive.written)],
     ["grp","Ongoing"],
     ["Effective tax rate",h=>h.taxes.effRate?esc(h.taxes.effRate)+"%":miss("missing")],
     ["MUD / PID",h=>ynPair(h.taxes.mud,h.taxes.pid)],
-    ["HOA",h=>h.taxes.hoaAmt?money(num(h.taxes.hoaAmt))+(h.taxes.hoaFreq?" / "+esc(h.taxes.hoaFreq.toLowerCase()):""):"—"],
-    ["Est. payment quoted",h=>h.taxes.payEst?money(num(h.taxes.payEst)):"—"],
+    ["HOA",h=>h.taxes.hoaAmt?money(num(h.taxes.hoaAmt))+(h.taxes.hoaFreq?" / "+esc(h.taxes.hoaFreq.toLowerCase()):""):", "],
+    ["Est. payment quoted",h=>h.taxes.payEst?money(num(h.taxes.payEst)):", "],
     ["Payment after temp terms",(h,i)=>fmtBest(payAfters[i]!=null?money(payAfters[i]):miss("only temp shown"),i===bestPay&&payAfters[i]!=null,"lowest")],
     ["grp","Protection"],
-    ["Deposit · refundable?",h=>[h.process.deposit?money(num(h.process.deposit)):"—",esc(h.process.depositNonref)||miss("unknown")].join(" · ")],
+    ["Deposit · refundable?",h=>[h.process.deposit?money(num(h.process.deposit)):", ",esc(h.process.depositNonref)||miss("unknown")].join(" · ")],
     ["Inspections allowed",h=>ynTxt(h.process.inspAllowed)],
-    ["Warranty (w/s/struct)",h=>esc([h.process.warWork,h.process.warSys,h.process.warStruct].filter(Boolean).join(" / "))||"—"],
+    ["Warranty (w/s/struct)",h=>esc([h.process.warWork,h.process.warSys,h.process.warStruct].filter(Boolean).join(" / "))||", "],
     ["grp","Score"],
-    ["Fit · Value · Confidence",h=>esc([h.score.fit,h.score.value,h.score.confidence].map(v=>v||"–").join(" · "))],
-    ["Total",(h,i)=>fmtBest((scores[i]!=null?scores[i]:"—")+" / 15",i===bestScore&&scores[i]!=null,"highest")],
-    ["Biggest unresolved question",h=>esc(h.notes.unresolved)||"—"],
+    ["Fit · Value · Confidence",h=>esc([h.score.fit,h.score.value,h.score.confidence].map(v=>v||", ").join(" · "))],
+    ["Total",(h,i)=>fmtBest((scores[i]!=null?scores[i]:", ")+" / 15",i===bestScore&&scores[i]!=null,"highest")],
+    ["Biggest unresolved question",h=>esc(h.notes.unresolved)||", "],
   ];
   const scroll=el("div","cmp-scroll");
   const tbl=el("table","cmp");
   let thead="<thead><tr><th>Field</th>"+state.homes.map((h,i)=>`<th>Home ${homeLetter(i)}<br><span style="font-weight:400;font-size:11px;opacity:.85">${esc(homeName(h,i))}</span></th>`).join("")+"</tr></thead>";
   let tb="<tbody>";
   rows.forEach(r=>{ if(r[0]==="grp"){ tb+=`<tr class="grp"><td colspan="${1+state.homes.length}">${esc(r[1])}</td></tr>`; }
-    else { tb+=`<tr><td class="lab">${esc(r[0])}</td>`+state.homes.map((h,i)=>{ let v=r[1](h,i); if(v==null||v==="")v="—"; return `<td>${v}</td>`; }).join("")+"</tr>"; } });
+    else { tb+=`<tr><td class="lab">${esc(r[0])}</td>`+state.homes.map((h,i)=>{ let v=r[1](h,i); if(v==null||v==="")v=", "; return `<td>${v}</td>`; }).join("")+"</tr>"; } });
   tb+="</tbody>";
   tbl.innerHTML=thead+tb; scroll.appendChild(tbl); s.appendChild(scroll);
-  s.appendChild(el("div","footnote","Best-value markers flag the lowest price, lowest post-buydown payment, and highest score. They are hints — not a verdict."));
+  s.appendChild(el("div","footnote","Best-value markers flag the lowest price, lowest post-buydown payment, and highest score. They are hints, not a verdict."));
 
   // readout (no winner by score alone)
   const anyScore=scores.some(v=>v!=null);
@@ -629,8 +629,8 @@ function renderCompare(app){
   const vb=el("div","verifybox");
   vb.innerHTML=`<div class="vh">What still needs verification</div>`;
   state.homes.forEach((h,i)=>{ const flags=verifyFlags(h); const box=el("div","vhome");
-    box.innerHTML=`<div class="vname">Home ${homeLetter(i)} — ${esc(homeName(h,i))}</div>`+
-      (flags.length?flags.map(f=>`<div class="vitem">${esc(f)}</div>`).join(""):`<div class="vclear">Nothing flagged — the key items are captured.</div>`);
+    box.innerHTML=`<div class="vname">Home ${homeLetter(i)}, ${esc(homeName(h,i))}</div>`+
+      (flags.length?flags.map(f=>`<div class="vitem">${esc(f)}</div>`).join(""):`<div class="vclear">Nothing flagged, the key items are captured.</div>`);
     vb.appendChild(box);
   });
   s.appendChild(vb);
@@ -639,17 +639,17 @@ function renderCompare(app){
   const cta=el("div","ctablock");
   cta.innerHTML=`<div class="bp"></div>
     <h3>Before you sign</h3>
-    <p>Send these numbers straight into the True-Cost Calculator — your price, tax rate, and HOA carry over — to test the full monthly picture. Or ask us for an independent second look.</p>
+    <p>Send these numbers straight into the True-Cost Calculator, your price, tax rate, and HOA carry over, to test the full monthly picture. Or ask us for an independent second look.</p>
     <div class="cbtns">
       <a class="btn primary wide" href="${buildCalcUrl()}" rel="noopener">Run these numbers through the True-Cost Calculator</a>
       <a class="btn ghost wide" style="background:#fff;" href="${SECOND_LOOK_URL}" rel="noopener">Want an independent second look before you sign?</a>
       <a class="btn ghost wide" style="background:#fff;" href="leverage-report.html" rel="noopener">Have one offer in hand? Get your Leverage Report</a>
     </div>
-    ${state.homes.length>2?'<div style="font-size:12px;color:#aab6cc;margin-top:12px;line-height:1.4;">The calculator compares two homes at a time — your first two carry over automatically. Add the third there if you need it.</div>':''}`;
+    ${state.homes.length>2?'<div style="font-size:12px;color:#aab6cc;margin-top:12px;line-height:1.4;">The calculator compares two homes at a time, your first two carry over automatically. Add the third there if you need it.</div>':''}`;
   s.appendChild(cta);
 
   s.appendChild(el("div","looks",'Look Closer<span class="dot">.</span>'));
-  s.appendChild(el("div","independence","Independent — editorial coverage is not for sale. · newhomedispatch.com"));
+  s.appendChild(el("div","independence","Independent, editorial coverage is not for sale. · newhomedispatch.com"));
 
   app.appendChild(s);
   app.appendChild(actionbar(`
@@ -659,7 +659,7 @@ function renderCompare(app){
   `));
   $("#editHomes").onclick=()=>{ state.view="list"; save(); render(); scrollTop(); };
   $("#download").onclick=()=>window.print();
-  $("#emailBtn").onclick=()=>{ const subj=encodeURIComponent("My Dare to Compare comparison — New Home Dispatch"); const body=encodeURIComponent(emailSummary()); location.href=`mailto:?subject=${subj}&body=${body}`; };
+  $("#emailBtn").onclick=()=>{ const subj=encodeURIComponent("My Dare to Compare comparison, New Home Dispatch"); const body=encodeURIComponent(emailSummary()); location.href=`mailto:?subject=${subj}&body=${body}`; };
 }
 function scoreTotal(h){ const s=h.score||{}; const vals=["fit","value","confidence"].map(k=>num(s[k])); if(vals.every(v=>v==null))return null; return vals.map(v=>v||0).reduce((a,b)=>a+b,0); }
 function monthlyHOA(h){ const a=num(h.taxes&&h.taxes.hoaAmt); if(a==null)return null; const fr=(h.taxes&&h.taxes.hoaFreq)||"Monthly"; return fr==="Annual"?a/12:(fr==="Quarterly"?a/3:a); }
@@ -676,9 +676,9 @@ function buildCalcUrl(){
 }
 function fmtBest(txt,isBest,word){ return txt+(isBest?` <span class="best">${word}</span>`:""); }
 function miss(t){ return `<span class="missing">${esc(t)}</span>`; }
-function ynTxt(v){ return v==="yes"?"Yes":v==="no"?"No":v==="unknown"?miss("unknown"):"—"; }
-function ynPair(a,b){ const f=v=>v==="yes"?"Y":v==="no"?"N":v==="unknown"?"?":"–"; return f(a)+" / "+f(b); }
-function emailSummary(){ let out="DARE TO COMPARE — New Home Dispatch\n\n"; state.homes.forEach((h,i)=>{ out+=`HOME ${homeLetter(i)}: ${homeName(h,i)}\n`; out+=`  Contract price: ${money(contractTotal(h))}\n`; out+=`  Incentive: ${h.incentive.amount?money(num(h.incentive.amount)):"—"} (${(h.incentive.types||[]).join(", ")||"—"})\n`; out+=`  Tax rate: ${h.taxes.effRate?h.taxes.effRate+"%":"—"}  HOA: ${h.taxes.hoaAmt?money(num(h.taxes.hoaAmt)):"—"}\n`; out+=`  Score: ${scoreTotal(h)!=null?scoreTotal(h)+"/15":"—"}\n`; const fl=verifyFlags(h); if(fl.length)out+="  Needs verification: "+fl.join("; ")+"\n"; out+="\n"; }); out+="Run these numbers through the True-Cost Calculator: "+CALC_URL+"\n"; return out; }
+function ynTxt(v){ return v==="yes"?"Yes":v==="no"?"No":v==="unknown"?miss("unknown"):", "; }
+function ynPair(a,b){ const f=v=>v==="yes"?"Y":v==="no"?"N":v==="unknown"?"?":", "; return f(a)+" / "+f(b); }
+function emailSummary(){ let out="DARE TO COMPARE, New Home Dispatch\n\n"; state.homes.forEach((h,i)=>{ out+=`HOME ${homeLetter(i)}: ${homeName(h,i)}\n`; out+=`  Contract price: ${money(contractTotal(h))}\n`; out+=`  Incentive: ${h.incentive.amount?money(num(h.incentive.amount)):", "} (${(h.incentive.types||[]).join(", ")||", "})\n`; out+=`  Tax rate: ${h.taxes.effRate?h.taxes.effRate+"%":", "}  HOA: ${h.taxes.hoaAmt?money(num(h.taxes.hoaAmt)):", "}\n`; out+=`  Score: ${scoreTotal(h)!=null?scoreTotal(h)+"/15":", "}\n`; const fl=verifyFlags(h); if(fl.length)out+="  Needs verification: "+fl.join("; ")+"\n"; out+="\n"; }); out+="Run these numbers through the True-Cost Calculator: "+CALC_URL+"\n"; return out; }
 
 /* boot */
 render();

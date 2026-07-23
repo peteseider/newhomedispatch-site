@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>NHD — 30-Day Validation Dashboard (private)</title>
+<title>NHD, 30-Day Validation Dashboard (private)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -46,7 +46,7 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>New Home Dispatch — 30-Day Validation Dashboard</h1>
+    <h1>New Home Dispatch, 30-Day Validation Dashboard</h1>
     <p>Prove three behaviors: buyers <b style="color:#fff;">return</b>, buyers <b style="color:#fff;">track specific builders</b>, and tracked interest becomes <b style="color:#fff;">subscriptions &amp; consultations</b>. Build less, measure more.</p>
     <div class="priv">Private · noindex · for the team only</div>
   </header>
@@ -59,12 +59,12 @@
     <div class="prod"><span class="live">Live</span><b>Buyer Playbook</b><small>Quarterly evergreen education.</small><a href="buyer-guides.html" target="_blank">Open →</a></div>
   </div>
 
-  <h2>Validation metrics — enter this week's number to see status</h2>
+  <h2>Validation metrics, enter this week's number to see status</h2>
   <table>
     <thead><tr><th>Metric</th><th>Target</th><th>This week</th><th>Status</th><th>Where to read it in GA4</th></tr></thead>
     <tbody id="mrows"></tbody>
   </table>
-  <p class="note">Numbers are entered manually each week from GA4 (nothing is stored — this is a live calculator, refresh clears it). GA4 property: <b>New Home Dispatch</b> · tag G-120VH1FFY7.</p>
+  <p class="note">Numbers are entered manually each week from GA4 (nothing is stored, this is a live calculator, refresh clears it). GA4 property: <b>New Home Dispatch</b> · tag G-120VH1FFY7.</p>
   <a class="ga" href="https://analytics.google.com/" target="_blank">Open Google Analytics → select "New Home Dispatch"</a>
 
   <h2>Launch checklist</h2>
@@ -94,7 +94,7 @@
   tb.innerHTML=metrics.map(function(x,i){
     return '<tr><td><span class="m">'+x.m+'</span><span class="d">'+x.d+'</span></td>'+
       '<td class="n">'+x.t+'</td>'+
-      '<td class="n"><input class="val" data-i="'+i+'" type="number" placeholder="—">'+(x.unit||'')+'</td>'+
+      '<td class="n"><input class="val" data-i="'+i+'" type="number" placeholder=", ">'+(x.unit||'')+'</td>'+
       '<td><span class="status st-none" id="s'+i+'">Awaiting data</span></td>'+
       '<td class="where">'+x.where+'</td></tr>';
   }).join('');

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Choose your updates | New Home Dispatch</title>
-<meta name="description" content="Choose exactly what New Home Dispatch sends you: the morning Daily Hot Sheet, evening edition, Friday Weekly Dispatch, major-change alerts, and alerts for the specific builders you track.">
+<meta name="description" content="Choose exactly what New Home Dispatch sends you: the morning Daily Hot Sheet, the afternoon Single Shareable, the Friday Weekly Dispatch, major-change alerts, and alerts for the specific builders you track.">
 <link rel="canonical" href="https://newhomedispatch.com/preference-center.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -47,7 +47,7 @@
 <div class="wrap">
   <div class="card">
     <div class="eyebrow">Your updates</div>
-    <h1>Get exactly what's useful — nothing more.</h1>
+    <h1>Get exactly what's useful, nothing more.</h1>
     <p class="sub">Four products, four different jobs. Pick what fits how you buy. You can change this anytime, and we won't send two emails a day unless you ask.</p>
 
     <form name="preferences" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="bot-field"
@@ -56,25 +56,25 @@
       <p class="hp"><label>Leave blank: <input name="bot-field"></label></p>
 
       <fieldset>
-        <legend>Daily — the Terminal</legend>
+        <legend>Daily, the Terminal</legend>
         <label class="opt"><input type="checkbox" name="pref_dailyhotsheet" value="yes" checked>
           <span class="t">Morning Hot Sheet <span class="rec">Recommended</span><small>The five-minute decision read, every morning: Buyer Advantage Score, builder rankings, today's one move.</small></span></label>
         <label class="opt"><input type="checkbox" name="pref_alerts" value="yes" checked>
-          <span class="t">Major-change alerts <span class="rec">Recommended</span><small>Only when something material happens — a big new incentive, a verified withdrawal, a deadline inside 72 hours.</small></span></label>
+          <span class="t">Major-change alerts <span class="rec">Recommended</span><small>Only when something material happens, a big new incentive, a verified withdrawal, a deadline inside 72 hours.</small></span></label>
         <label class="opt"><input type="checkbox" name="pref_evening" value="yes">
-          <span class="t">Evening edition too<small>The PM sweep as well. By default we only send the evening read when there's a meaningful change — check this to get it every evening regardless.</small></span></label>
+          <span class="t">The Single Shareable (afternoon)<small>Twice a day on new data pushes: the notes from the latest scrub, plus the afternoon&#39;s most relevant Austin market, real estate, and mortgage headlines. A different read than the Hot Sheet by design.</small></span></label>
       </fieldset>
 
       <fieldset>
         <legend>Weekly & builder-specific</legend>
         <label class="opt"><input type="checkbox" name="pref_weekly" value="yes">
-          <span class="t">Friday Weekly Dispatch<small>The narrative read — field notes, community news, the week's biggest moves and why they matter.</small></span></label>
+          <span class="t">Friday Weekly Dispatch<small>The narrative read, field notes, community news, the week's biggest moves and why they matter.</small></span></label>
         <label class="opt"><input type="checkbox" name="pref_builderalerts" value="yes">
           <span class="t">Alerts for the builders I track<small>Get a note the moment one of your builders changes an incentive, drops a price, or nears a deadline.</small></span></label>
       </fieldset>
 
       <fieldset>
-        <label class="field" for="builders">Builders to watch <span style="font-weight:400;">(optional — comma-separated)</span></label>
+        <label class="field" for="builders">Builders to watch <span style="font-weight:400;">(optional, comma-separated)</span></label>
         <input type="text" id="builders" name="builders" placeholder="e.g., David Weekley, Perry, Empire">
       </fieldset>
 
