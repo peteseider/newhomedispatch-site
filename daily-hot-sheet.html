@@ -155,6 +155,7 @@
       <span class="live"><span class="pulse"></span> <span id="verstamp">Live · verified 09:27 PM CT · Jul 22</span></span>
     </div>
     <div class="mh-title">Daily Hot Sheet <span class="sep">·</span> Buyer Decision Terminal <span class="sep">·</span> Central Texas</div>
+    <div style="margin-top:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:#8fa8d9;text-transform:uppercase;">Published every morning · Incentive Tracker issues Mon &amp; Wed · Weekly Dispatch Fridays</div>
   </header>
 
   <div class="score">
@@ -170,20 +171,20 @@
     </div>
   </div>
   <div class="signals">
-    <div class="sig"><b>$20,000</b><span>Median advertised incentive across tracked offers</span></div>
-    <div class="sig goodc"><b>23</b><span>Builders competing with live offers</span></div>
-    <div class="sig badc"><b>14</b><span>Expired offers still displayed on builder sites</span></div>
-    <div class="sig warnc"><b>1 in 3</b><span>Offers with no lender strings, protect the rest</span></div>
+    <div class="sig"><b id="sig-index">$20,000</b><span>Median advertised incentive across tracked offers</span></div>
+    <div class="sig goodc"><b id="sig-bld">23</b><span>Builders competing with live offers</span></div>
+    <div class="sig badc"><b id="sig-exp">14</b><span>Expired offers still displayed on builder sites</span></div>
+    <div class="sig warnc"><b id="sig-str">1 in 3</b><span>Offers with no lender strings, protect the rest</span></div>
   </div>
   <p class="disclose">One market-wide index, built transparently from the signals above (v0.1 public-signal model, see methodology). It is a read of buyer leverage, not a prediction or financial advice.</p>
-  <div style="padding:8px 24px 0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:#7d7d7d;line-height:1.5;">COVERAGE · 59 builders checked · 35 offers verified live across 23 builders · 14 expired flagged · re-verified 09:27 PM CT · score confidence: <b style="color:var(--warn);">Moderate</b> (public-signal model, pre-MLS). Change-vs-prior-sweep begins once score history accrues.</div>
+  <div style="padding:8px 24px 0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:#7d7d7d;line-height:1.5;">COVERAGE · <span id="cov-counts">35 offers tracked across 23 builders</span> · <span id="cov-exp">14 expired flagged</span> · re-verified <span id="cov-time">09:27 PM CT</span> · score confidence: <b style="color:var(--warn);">Moderate</b> (public-signal model, pre-MLS). Change-vs-prior-sweep begins once score history accrues.</div>
 
   <div class="pad">
 
     <div class="kick">▸ Your watchlist <span class="r">personalized</span></div>
     <div class="rule"></div>
     <div class="wl">
-      <p class="wl-intro"><b>Don't read 23 builders. Track yours.</b> Pick the builders you're considering, you'll open straight to what changed for them.</p>
+      <p class="wl-intro"><b>Don't read every builder. Track yours.</b> Pick the builders you're considering, you'll open straight to what changed for them.</p>
       <div class="picker" id="picker"></div>
       <div class="wl-panel" id="wlPanel"></div>
       <div class="wl-count" id="wlCount"></div>
@@ -201,20 +202,20 @@
     <div class="kick">▸ Today's one move</div>
     <div class="rule"></div>
     <div class="move">
-      <div class="l">The only clock ticking this week</div>
-      <p><span class="hl">Trophy Signature's 1.99% first-year buydown ends Friday, July 24</span>, the single offer forcing a decision in the next seven days. If a Trophy home is on your list, get written terms today. Everything else runs to July 31 or later.</p>
+      <div class="l">The nearest hard deadline on the board</div>
+      <p id="one-move"><span class="hl">Trophy Signature's 1.99% first-year buydown ends Friday, July 24</span>, the single offer forcing a decision in the next seven days. If a Trophy home is on your list, get written terms today. Everything else runs to July 31 or later.</p>
     </div>
 
     <div class="kick">▸ Real vs. theater</div>
     <div class="rule"></div>
     <div class="rvt">
-      <div class="c real"><div class="big">35</div><p>offers <b>verified live today</b> on the builder's own site. These are the ones you can act on.</p></div>
-      <div class="c fake"><div class="big">14</div><p><b>expired offers still displayed</b>, the countdown is fake. Treat a dead-but-posted offer as an opening bid: ask, in writing, if they'll honor it.</p></div>
+      <div class="c real"><div class="big" id="rvt-live">35</div><p>offers <b>verified live today</b> on the builder's own site. These are the ones you can act on.</p></div>
+      <div class="c fake"><div class="big" id="rvt-exp">14</div><p><b>expired offers still displayed</b>, the countdown is fake. Treat a dead-but-posted offer as an opening bid: ask, in writing, if they'll honor it.</p></div>
     </div>
 
     <div class="kick">▸ The deadline clock, next 14 days</div>
     <div class="rule"></div>
-    <table>
+    <table id="dl-table">
       <tr><th>Builder</th><th>Offer</th><th>By when</th></tr>
       <tr><td><b>Trophy Signature</b></td><td>1.99% first-year FHA buydown (→4.99%) or 2.99% conv. + free appliances</td><td class="deadline">Fri Jul 24</td></tr>
       <tr><td><b>David Weekley</b></td><td>Up to $50K savings OR 2.99% start + $2,500 Heroes allowance</td><td class="deadline">Jul 31</td></tr>
@@ -227,16 +228,13 @@
     <div class="kick">▸ Share today's read <span class="r">social</span></div>
     <div class="rule"></div>
     <p style="font-size:12.5px;color:var(--muted);margin-bottom:12px;">Save these and post them, the day's most actionable numbers, ready for social. A fresh set is generated with each sweep.</p>
-    <p style="font-size:11px;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Instagram · portrait (3-slide carousel)</p>
+    <p style="font-size:11px;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Instagram · portrait · re-rendered from live data with every sweep</p>
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
-      <a href="share/hot-sheet-2026-07-22-1.png" target="_blank" rel="noopener"><img src="share/hot-sheet-2026-07-22-1.png" alt="Instagram share card, Buyer Advantage Score" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
-      <a href="share/hot-sheet-2026-07-22-2.png" target="_blank" rel="noopener"><img src="share/hot-sheet-2026-07-22-2.png" alt="Instagram share card, today's one move and biggest credits" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
-      <a href="share/hot-sheet-2026-07-22-3.png" target="_blank" rel="noopener"><img src="share/hot-sheet-2026-07-22-3.png" alt="Instagram share card, why the number lies" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
-    </div>
-    <p style="font-size:11px;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">X / Twitter · landscape (2 cards)</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:6px;">
-      <a href="share/hot-sheet-tw-2026-07-22-1.png" target="_blank" rel="noopener"><img src="share/hot-sheet-tw-2026-07-22-1.png" alt="X share card, the read" loading="lazy" style="width:270px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
-      <a href="share/hot-sheet-tw-2026-07-22-2.png" target="_blank" rel="noopener"><img src="share/hot-sheet-tw-2026-07-22-2.png" alt="X share card, act on it" loading="lazy" style="width:270px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
+      <a href="share/hot-sheet-read.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-read.png" alt="The Read, Buyer Advantage Score gauge" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
+      <a href="share/hot-sheet-move.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-move.png" alt="The Move, nearest deadline and biggest credits" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
+      <a href="share/hot-sheet-explained.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-explained.png" alt="The Score Explained, five-signal methodology" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
+      <a href="share/hot-sheet-rate.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-rate.png" alt="What One Point Really Means, rate vs buying power" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
+      <a href="share/hot-sheet-illusion.png" target="_blank" rel="noopener"><img class="share-live" src="share/hot-sheet-illusion.png" alt="The Illusion of a Deal, mark up then mark down" loading="lazy" style="width:132px;height:auto;border:1px solid var(--line);border-radius:6px;display:block;"></a>
     </div>
 
     <div class="kick">▸ How the intelligence works</div>
@@ -260,7 +258,7 @@
 
   <footer class="foot">
     <span class="wm">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</span>
-    <div class="foot-legal">Every figure is builder-advertised and verified live on the builder's own site, not field-verified, not an endorsement. Offers with lender names require the builder's affiliated lender and credit approval. The Buyer Advantage Score and Builder Opportunity Rankings are New Home Dispatch's transparent read of current leverage, not predictions or financial advice. Data: July 22, 2026 AM sweep.</div>
+    <div class="foot-legal">Every figure is builder-advertised and verified live on the builder's own site, not field-verified, not an endorsement. Offers with lender names require the builder's affiliated lender and credit approval. The Buyer Advantage Score and Builder Opportunity Rankings are New Home Dispatch's transparent read of current leverage, not predictions or financial advice. Data: <span id="datastamp">July 23, 2026 AM sweep</span>.</div>
     <div class="foot-legal">© 2026 New Home Dispatch, independent housing intelligence for Central Texas.</div>
   </footer>
 
@@ -357,6 +355,99 @@
       if (sb && last.band) sb.textContent = 'Reads: ' + last.band;
     })
     .catch(function () { /* keep hardcoded fallback */ });
+})();
+</script>
+<script>
+/* Live hydration v2: every headline number, stamp, deadline, and share card on this
+ * sheet re-reads the committed data files, so each automated sweep updates the page
+ * with no HTML edit. Static markup stays as the fallback if any fetch fails. */
+(function () {
+  function j(u){ return fetch(u, {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; }); }
+  function txt(id, v){ var el = document.getElementById(id); if (el && v != null) el.textContent = String(v); }
+  function esc(x){ return String(x==null?'':x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function money(n){ return '$' + Number(n).toLocaleString('en-US'); }
+  function todayCT(){
+    return new Intl.DateTimeFormat('en-CA', {timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date());
+  }
+  function fmtDay(dstr){
+    var d = new Date(dstr + 'T12:00:00-05:00');
+    if (isNaN(d)) return dstr;
+    return d.toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric', timeZone:'America/Chicago'});
+  }
+  Promise.all([j('/score-history.json'), j('/concession-index.json'), j('/incentives.json'), j('/reporting/sweep-latest.json')])
+  .then(function (res) {
+    var sh = res[0], ci = res[1], inc = res[2], sl = res[3];
+    var stampLabel = (sl && sl.ranAtLabel) || (sh && sh.lastUpdatedLabel) || (ci && ci.lastUpdatedLabel) || null;
+    var slot = (sl && sl.slot) || null;
+
+    if (stampLabel) {
+      txt('cov-time', stampLabel);
+      txt('datastamp', stampLabel + (slot ? ' · ' + slot + ' sweep' : ''));
+      var vs = document.getElementById('verstamp');
+      if (vs) vs.textContent = 'Live · verified ' + stampLabel;
+    }
+
+    var idx = (sl && typeof sl.index === 'number') ? sl.index
+            : (ci && ci.points && ci.points.length ? ci.points[ci.points.length-1].index : null);
+    if (idx != null) txt('sig-index', money(idx));
+
+    if (inc) {
+      var t = todayCT();
+      var recs = Array.isArray(inc.records) ? inc.records : [];
+      var promos = Array.isArray(inc.promos) ? inc.promos : [];
+      function liveOf(list){ return list.filter(function(o){ return !o.expires || String(o.expires) >= t; }); }
+      var liveR = liveOf(recs), liveP = liveOf(promos);
+      var expiredCount = (recs.length - liveR.length) + (promos.length - liveP.length);
+      if (sl && typeof sl.expired === 'number' && sl.expired > expiredCount) expiredCount = sl.expired;
+      var bld = {};
+      liveR.forEach(function(o){ if (o.builder) bld[o.builder] = 1; });
+      liveP.forEach(function(o){ if (o.builder) bld[o.builder] = 1; });
+      var nBld = Object.keys(bld).length, nLive = liveR.length + liveP.length;
+      if (nLive) { txt('sig-bld', nBld); txt('rvt-live', nLive);
+        txt('cov-counts', nLive + ' offers tracked across ' + nBld + ' builders'); }
+      txt('sig-exp', expiredCount); txt('rvt-exp', expiredCount);
+      txt('cov-exp', expiredCount + ' expired flagged');
+      if (recs.length) {
+        var free = recs.filter(function(o){ return !o.lenderTied; }).length;
+        txt('sig-str', free + ' in ' + recs.length);
+      }
+
+      function dkey(w){
+        w = String(w||'');
+        if (/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0,10);
+        var m = w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);
+        if (!m) return null;
+        var y = m[3] ? (m[3].length===2 ? '20'+m[3] : m[3]) : String(new Date().getFullYear());
+        return y + '-' + ('0'+m[1]).slice(-2) + '-' + ('0'+m[2]).slice(-2);
+      }
+      var dated = liveR.map(function(o){ return {b:o.builder, what:(o.incentiveType?o.incentiveType+' · ':'')+money(o.advertisedValue), when:o.expires}; })
+        .concat(liveP.map(function(o){ return {b:o.builder, what:o.promo, when:o.expires}; }))
+        .filter(function(o){ return o.when && o.b && o.what; })
+        .map(function(o){ o.k = dkey(o.when); return o; })
+        .filter(function(o){ return o.k && o.k >= t; })
+        .sort(function(a,b){ return a.k < b.k ? -1 : 1; });
+      var tbl = document.getElementById('dl-table');
+      if (tbl && dated.length) {
+        var rows = dated.slice(0,6).map(function(o){
+          var whenCell = /^\d{4}-\d{2}-\d{2}/.test(String(o.when)) ? fmtDay(o.k) : esc(String(o.when)) + ' (' + fmtDay(o.k) + ')';
+          return '<tr><td><b>'+esc(o.b)+'</b></td><td>'+esc(o.what)+'</td><td class="deadline">'+whenCell+'</td></tr>';
+        }).join('');
+        tbl.innerHTML = '<tr><th>Builder</th><th>Offer</th><th>By when</th></tr>' + rows;
+      }
+      var mv = document.getElementById('one-move');
+      if (mv && dated.length) {
+        var n0 = dated[0];
+        mv.innerHTML = '<span class="hl">' + esc(n0.b) + ' · ' + esc(n0.what) + ' ends ' + esc(fmtDay(n0.k)) + '</span>, the nearest hard deadline on the board. If ' + esc(n0.b) + ' is on your list, get written terms today. Ask any builder, in writing, how long their current offer stands.';
+      }
+    }
+
+    var bust = Date.now();
+    document.querySelectorAll('img.share-live').forEach(function(im){
+      var u = im.getAttribute('src').split('?')[0] + '?t=' + bust;
+      im.setAttribute('src', u);
+      var a = im.closest('a'); if (a) a.setAttribute('href', u);
+    });
+  });
 })();
 </script>
 </body>

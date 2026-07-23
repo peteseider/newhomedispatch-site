@@ -1768,10 +1768,10 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 
   <!-- HERO -->
   <section class="trk-hero"><div class="wrap">
-    <div class="eyebrow">The Incentive Tracker</div>
+    <div class="eyebrow">The Incentive Tracker <span style="font-weight:700;font-size:.72em;background:#2B4FE0;color:#fff;padding:2px 7px;border-radius:2px;margin-left:8px;vertical-align:middle;letter-spacing:.06em;">DATA TWICE DAILY · ISSUES MON &amp; WED</span></div>
     <h1>Builder incentives across Central Texas, tracked, ranked, and compared.</h1>
 <p style="margin-top:14px;font-size:0.95rem;"><a href="leverage-report.html" style="font-weight:700;color:var(--blueprint,#2B4FE0);">Have an offer in front of you? Build your Leverage Report from this data &rarr;</a></p>
-    <p class="lead">Most builder incentives are advertised once and never compared. We log them across the metro every week, rank them by how much value actually reaches the buyer, and show which way each one is moving, so you can see what's real, what's rising, and what's about to expire before you walk into a sales office.</p>
+    <p class="lead">Most builder incentives are advertised once and never compared. We check them against each builder's own site twice a day, rank them by how much value actually reaches the buyer, and show which way each one is moving, so you can see what's real, what's rising, and what's about to expire before you walk into a sales office. New tracker issues publish Monday and Wednesday, and the week's key moves roll into Friday's Weekly Dispatch.</p>
     <div class="trk-meta">
       <span>Last updated: <b id="trk-updated">…</b></span>
       <span>·</span>
@@ -1898,6 +1898,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
           var upd=(d&&d.lastUpdatedLabel)||"";
           var eb=document.getElementById('ci-eyebrow'); if(eb&&upd) eb.textContent="Concession Index · verified "+upd;
           var u=document.getElementById('ci-updated'); if(u&&upd) u.textContent="Last verified "+upd;
+          var hu=document.getElementById('trk-updated'); if(hu&&d&&d.lastUpdatedLabel){hu.textContent=d.lastUpdatedLabel; window.__nhdSweepStamp=true;}
           var pts=((d&&d.points)||[]).slice().sort(function(a,b){return a.t<b.t?-1:1;});
           if(pts.length<3) return;            /* only show the line once it has something to say */
           var box=document.getElementById('ci-chart'); if(box) box.style.display='';
@@ -1931,7 +1932,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 
   <!-- MARKET SUMMARY -->
   <section class="blk"><div class="wrap">
-    <div class="blk-head"><h2>The market this week</h2><span class="n">Summary</span></div>
+    <div class="blk-head"><h2>The market right now</h2><span class="n">Summary</span></div>
     <div class="tiles" id="trk-tiles"></div>
   </div></section>
 
@@ -1988,7 +1989,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
   <!-- BUYER SUBMISSION -->
   <section class="blk" id="report-incentive"><div class="wrap">
     <div class="blk-head"><h2>Seen a different number?</h2><span class="n">Report an incentive</span></div>
-    <p class="result-count" style="margin-top:-6px;">If a sales office quoted you something better, worse, or different from what we show, tell us. We verify before anything appears, your name never does. This is how the tracker gets sharper every week.</p>
+    <p class="result-count" style="margin-top:-6px;">If a sales office quoted you something better, worse, or different from what we show, tell us. We verify before anything appears, your name never does. This is how the tracker gets sharper with every sweep.</p>
     <form name="incentive-report" method="POST" action="thanks-incentive.html" data-netlify="true" netlify-honeypot="bot-field" data-fallback-email="hello@newhomedispatch.com" style="max-width:720px;">
       <input type="hidden" name="form-name" value="incentive-report">
       <p style="position:absolute;left:-9999px;"><label>Leave blank: <input name="bot-field"></label></p>
@@ -2490,7 +2491,7 @@ window.NHD_INCENTIVES = {"dates": ["2026-07-20"], "updated": "2026-07-22", "samp
   /* ---------- orchestrate ---------- */
   function render() { renderHead(); renderTable(); updateCmpBar(); }
   function init() {
-    $('trk-updated').textContent = fmtDateShort(DATA.updated) + ', 2026';
+    if (!window.__nhdSweepStamp) $('trk-updated').textContent = fmtDateShort(DATA.updated) + ', 2026';
     $('trk-count-meta').textContent = recs.length;
     renderTiles(); renderTrend(); renderBest(); initFilters();
     $('cmp-clear').addEventListener('click', function () { compareSet = {}; $('cmp-panel').classList.remove('on'); render(); });
