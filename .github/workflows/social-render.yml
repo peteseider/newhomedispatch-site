@@ -53,7 +53,7 @@ jobs:
           git config user.name  "nhd-social-bot"
           git config user.email "actions@users.noreply.github.com"
           git pull --rebase origin main || true
-          git add share/hot-sheet-read.png share/hot-sheet-move.png share/hot-sheet-explained.png share/hot-sheet-rate.png share/hot-sheet-illusion.png
+          git add share/hot-sheet-read.png share/hot-sheet-move.png share/hot-sheet-explained.png share/hot-sheet-rate.png share/hot-sheet-illusion.png share/hot-sheet-board.png
           if git diff --cached --quiet; then echo "No image changes."; else git commit -m "Auto-render social cards" && git push; fi
       - name: Upload to Google Drive
         if: ${{ env.GDRIVE_SA != '' }}
