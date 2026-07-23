@@ -1,0 +1,58 @@
+{
+  "schema": "nhd-market-trend-v1",
+  "note": "Historical anchors researched and source-verified 2026-07-23. Current values come from the live files (rate-benchmark.json, concession-index.json); these anchors provide the lookback. Never fabricate points: every anchor carries its source.",
+  "rate30yr": {
+    "label": "30 yr fixed (Mortgage News Daily index)",
+    "anchors": [
+      {
+        "date": "2025-07-31",
+        "rate": 6.75,
+        "src": "MND retrospective, mortgagenewsdaily.com/markets/mortgage-rates-07212026"
+      },
+      {
+        "date": "2026-02-25",
+        "rate": 5.99,
+        "src": "MND retrospective: late-February 2026 low"
+      },
+      {
+        "date": "2026-05-19",
+        "rate": 6.75,
+        "src": "MND retrospective"
+      },
+      {
+        "date": "2026-07-16",
+        "rate": 6.68,
+        "src": "MND daily newsletter 2026-07-16"
+      },
+      {
+        "date": "2026-07-21",
+        "rate": 6.75,
+        "src": "MND 2026-07-21 article"
+      },
+      {
+        "date": "2026-07-22",
+        "rate": 6.77,
+        "src": "MND (also Wolf Street 2026-07-22)"
+      }
+    ]
+  },
+  "medianPrice": {
+    "label": "City of Austin median sold price",
+    "source": "ABoR MLS via RPR (austinrealestatehomesblog.com monthly reports)",
+    "cadence": "monthly",
+    "series": [
+      {
+        "month": "2025-06",
+        "value": 629500
+      },
+      {
+        "month": "2026-05",
+        "value": 620000
+      },
+      {
+        "month": "2026-06",
+        "value": 645000
+      }
+    ]
+  }
+}
