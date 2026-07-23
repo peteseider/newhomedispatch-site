@@ -1,0 +1,46 @@
+{
+ "schema": "nhd-resale-market-v1",
+ "updated": "2026-07-23",
+ "note": "Published aggregate market statistics only; no individual listing or sold records. Each block carries its own source and definition. Monthly cadence; series accrue as new reports publish.",
+ "msa": {
+  "label": "Austin-Round Rock-San Marcos MSA · single family, condos, townhomes",
+  "month": "2026-06",
+  "source": "Unlock MLS June 2026 Market Snapshot, as reported by Echelon Property Group (echelonpropertygroup.com/blog/austin-housing-market-update-june-2026)",
+  "medianSoldPrice": 450000,
+  "medianSoldPriceYoYPct": 1.1,
+  "closedSales": 2961,
+  "pendingSales": 2994,
+  "pendingSalesYoYPct": 13.2,
+  "activeListings": 13245,
+  "activeListingsYoYPct": -14.8,
+  "monthsInventory": 4.4,
+  "monthsInventoryYoYDelta": -1.0,
+  "avgDaysOnMarket": 62,
+  "avgDaysOnMarketYoYDelta": 0
+ },
+ "cityAustinSingleFamily": {
+  "label": "City of Austin · single family · RPR/ABoR MLS",
+  "month": "2026-06",
+  "source": "austinrealestatehomesblog.com June 2026 price report (RPR / ABoR MLS)",
+  "medianSoldPrice": 645000,
+  "medianSoldPricePriorYear": 629500,
+  "medianDaysOnMarket": 24,
+  "medianDaysOnMarketPriorYear": 30,
+  "monthsInventory": 4.45,
+  "monthsInventoryPriorYear": 6.06,
+  "activeListings": 3312,
+  "activeListingsPriorYear": 4160,
+  "closedSales": 814,
+  "medianPricePerSqft": 309,
+  "medianPricePerSqftPriorYear": 300
+ },
+ "trercContext": {
+  "month": "2026-04",
+  "source": "Texas Real Estate Research Center, Texas Housing Insight (published 2026-07-01; April 2026 data)",
+  "austinPriceYoYPct": -3.3,
+  "medianSellerPriceReduction": 19000,
+  "priceReductionPctOfList": 5.4,
+  "activeInventoryYoYPct": 3.2,
+  "note": "TRERC repeat-methodology price change diverges from MLS median mix; kept as context, not displayed as a headline number."
+ }
+}
