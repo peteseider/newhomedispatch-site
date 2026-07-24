@@ -1,21 +1,24 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-07-24T10:49:12-05:00-AM",
-  "generatedAt": "2026-07-24T10:49:12-05:00",
+  "sweepId": "2026-07-24T12:54:03-05:00-PM",
+  "generatedAt": "2026-07-24T12:54:03-05:00",
   "facts": {
     "score": 74,
     "band": "High",
     "scoreDelta": 0,
     "concessionIndex": 20000,
-    "offersLive": 33,
-    "buildersLive": 28,
+    "offersLive": 35,
+    "buildersLive": 30,
     "expired": 2,
-    "rateDaily": 6.85,
+    "rateDaily": 6.81,
     "ratePmmsWeekly": 6.58
   },
   "changes": {
-    "count": 0,
-    "newOffers": [],
+    "count": 2,
+    "newOffers": [
+      "Risewell Homes",
+      "Flintrock Builders"
+    ],
     "improved": [],
     "reduced": [],
     "deadlinesNext7d": [
@@ -46,7 +49,7 @@
       }
     ]
   },
-  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
+  "interpretation": "Movement this sweep: 2 new offers (Risewell Homes, Flintrock Builders). Market-wide score unchanged.",
   "buyerAction": "Nearest advertised deadline: Trophy Signature Homes (2026-07-24). If that builder is on your list, get the current terms in writing today.",
   "affectedSegments": [
     "buyers considering: Trophy Signature Homes, Lennar, Brookfield Residential, Brohn Homes, KB Home, AHA Dream Homes, Tri Pointe Homes, Pulte Homes",
@@ -60,5 +63,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "record-internal"
+  "publishRecommendation": "publish-watchlists"
 }

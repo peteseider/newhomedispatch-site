@@ -71,8 +71,22 @@
         "stringFree": 33,
         "deadline": 92
       }
+    },
+    {
+      "t": "2026-07-24T12:54:03-05:00",
+      "label": "Jul 24",
+      "slot": "PM",
+      "score": 74,
+      "band": "High",
+      "components": {
+        "incentive": 75,
+        "competition": 92,
+        "friction": 86,
+        "stringFree": 33,
+        "deadline": 92
+      }
     }
   ],
-  "lastUpdated": "2026-07-24T10:49:12-05:00",
-  "lastUpdatedLabel": "Jul 24, 2026 · 10:49 AM CT"
+  "lastUpdated": "2026-07-24T12:54:03-05:00",
+  "lastUpdatedLabel": "Jul 24, 2026 · 12:54 PM CT"
 }
