@@ -1,0 +1,46 @@
+{
+  "schema": "nhd-incentive-half-life-v1",
+  "metric": "Median days an advertised offer survives unchanged (offer persistence)",
+  "lastUpdated": "2026-07-24T07:58:42.941Z",
+  "runKey": "2026-07-24-AM",
+  "mature": false,
+  "maturityNote": "Event log is 0 days old; publish only after 28+ days of accumulation. Values below are provisional and right-censored.",
+  "completedSpansMedianDays": null,
+  "openSpansMedianDays": 4,
+  "completedSpans": 0,
+  "openSpans": 9,
+  "byBuilder": {
+    "ashton-woods": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "perry": {
+      "completedMedian": null,
+      "open": 2
+    },
+    "brookfield": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "brohn-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "pacesetter": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "kb-home": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "dr-horton": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "aha-dream-homes": {
+      "completedMedian": null,
+      "open": 1
+    }
+  }
+}

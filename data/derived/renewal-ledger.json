@@ -1,0 +1,65 @@
+{
+  "schema": "nhd-renewal-ledger-v1",
+  "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
+  "lastUpdated": "2026-07-24T07:58:42.941Z",
+  "runKey": "2026-07-24-AM",
+  "observationRuns": 16,
+  "currentlyExpiredButDisplayed": [],
+  "builders": {
+    "dr-horton": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "lennar": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "pulte-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "kb-home": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "taylor-morrison": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "century-communities": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "lgi-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "mi-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "tri-pointe": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    }
+  },
+  "note": "A deadline_extended event is a renewal: an advertised expiration that moved later. expired_but_displayed counts sweep observations of an offer still advertised after its stated deadline."
+}

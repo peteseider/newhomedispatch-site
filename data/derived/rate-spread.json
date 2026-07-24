@@ -1,0 +1,69 @@
+{
+  "schema": "nhd-rate-spread-v1",
+  "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
+  "lastUpdated": "2026-07-24T07:58:42.941Z",
+  "runKey": "2026-07-24-AM",
+  "pmms": {
+    "week": "7/23/2026",
+    "rate30": 6.58
+  },
+  "offers": [
+    {
+      "id": "inc01",
+      "builder": "ashton-woods",
+      "community": "headwaters",
+      "advertisedRate": 3.25,
+      "spreadBps": -333
+    },
+    {
+      "id": "inc02",
+      "builder": "perry",
+      "community": "wolf-ranch",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc04",
+      "builder": "brookfield",
+      "community": "easton-park",
+      "advertisedRate": 1.99,
+      "spreadBps": -459
+    },
+    {
+      "id": "inc06",
+      "builder": "brohn-homes",
+      "community": "kissing-tree",
+      "advertisedRate": 2.75,
+      "spreadBps": -383
+    },
+    {
+      "id": "inc07",
+      "builder": "perry",
+      "community": "bryson",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc09",
+      "builder": "pacesetter",
+      "community": "bar-w-ranch",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc17",
+      "builder": "dr-horton",
+      "community": "anthem",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc19",
+      "builder": "aha-dream-homes",
+      "community": "whisper-valley",
+      "advertisedRate": 3.75,
+      "spreadBps": -283
+    }
+  ],
+  "note": "Advertised rates are builder claims parsed from offer text; PMMS is the weekly market average. Negative spread = advertised below market (the buydown teaser)."
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "nhd-breadth-depth-v1",
+  "metric": "Share of tracked builders with live offers (breadth) vs median advertised value (depth)",
+  "points": [
+    {
+      "t": "2026-07-24T07:58:42.941Z",
+      "runKey": "2026-07-24-AM",
+      "breadthBuilders": 23,
+      "verifiedOffers": 35,
+      "depthMedianUSD": 20000,
+      "lenderTiedShare": 0.67
+    }
+  ],
+  "lastUpdated": "2026-07-24T07:58:42.941Z"
+}
