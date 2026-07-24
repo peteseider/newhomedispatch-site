@@ -3,8 +3,8 @@
   "metric": "Median advertised cash incentive across verified tracked offers",
   "unit": "USD",
   "timezone": "America/Chicago",
-  "lastUpdated": "2026-07-24T02:58:25-05:00",
-  "lastUpdatedLabel": "Jul 24, 2026 · 02:58 AM CT",
+  "lastUpdated": "2026-07-24T10:49:12-05:00",
+  "lastUpdatedLabel": "Jul 24, 2026 · 10:49 AM CT",
   "points": [
     {
       "t": "2026-07-22T06:05:00-05:00",
@@ -43,7 +43,7 @@
       "expired": 0
     },
     {
-      "t": "2026-07-24T02:58:25-05:00",
+      "t": "2026-07-24T10:49:12-05:00",
       "label": "Jul 24",
       "slot": "AM",
       "index": 20000,
