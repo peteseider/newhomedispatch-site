@@ -30,133 +30,134 @@ h2{font-size:13px;font-family:'IBM Plex Mono',monospace;letter-spacing:.12em;tex
 </head>
 <body>
 <div class="hdr">
-  <div class="k">NHD Team Toolbox &middot; internal &middot; the one page that knows where everything is</div>
-  <h1>Every page, tool, and system.</h1>
-  <p>Type to filter. PUBLIC is on the site for buyers, INTERNAL is team only (share directly, never post), AUTO runs by itself. Add this page to your home screen; it is the front door to the whole operation.</p>
+<div class="k">NHD Team Toolbox &middot; internal &middot; the one page that knows where everything is</div>
+<h1>Every page, tool, and system.</h1>
+<p>Type to filter. PUBLIC is on the site for buyers, INTERNAL is team only (share directly, never post), AUTO runs by itself. Add this page to your home screen; it is the front door to the whole operation.</p>
 </div>
 <div class="wrap">
-  <div class="search"><input id="q" type="search" placeholder="Filter: tracker, route, drive, cards, dashboard..." autocomplete="off"></div>
-  <div id="list"></div>
-  <div class="count" id="count"></div>
+<div class="search"><input id="q" type="search" placeholder="Filter: tracker, route, drive, cards, dashboard..." autocomplete="off"></div>
+<div id="list"></div>
+<div class="count" id="count"></div>
 </div>
 <script>
 (function(){
-  var D = [
-    ['Flagship products (public)', [
-      ['Homepage', '/', 'pub', 'v3: intelligence status bar, authority hero, Today\'s Buyer Snapshot dashboard, Deal Record, toolkit, field block, usage ladder.'],
-      ['Daily Hot Sheet', '/daily-hot-sheet.html', 'pub', 'The Buyer Decision Terminal. Verified four times a day; single sheet download inside.'],
-      ['Incentive Tracker', '/incentive-tracker.html', 'pub', 'Searchable offer database + Concession Index. 45 tracked builders.'],
-      ['Community Explorer', '/communities.html', 'pub', '38 communities, taxes, HOA, comparisons.'],
-      ['Builders', '/builders.html', 'pub', 'Builder profiles and comparisons.'],
-      ['Weekly Dispatch', '/weekly-dispatch.html', 'pub', 'Friday narrative + field notes.'],
-      ['Buyer Playbook', '/buyer-guides.html', 'pub', 'Sixteen chapters by buying stage. Free, refreshed quarterly.'],
-      ['Reports', '/reports.html', 'pub', 'Published reporting.'],
-      ['Free Tools hub', '/free-tools.html', 'pub', 'Every buyer tool on one page.'],
-      ['Share Kit', '/share-kit.html', 'pub', 'Every social asset, always current: live cards, The Board, captions, reel, education slides.']
-    ]],
-    ['Tools and calculators (public)', [
-      ['True Cost Calculator', '/true-cost-calculator.html', 'pub', 'All-in monthly cost with taxes, MUD/PID, HOA, insurance.'],
-      ['Incentive Reality Calculator', '/incentive-calculator.html', 'pub', 'What an advertised offer is actually worth.'],
-      ['MUD and PID Atlas', '/mud-pid-atlas.html', 'pub', 'Special tax districts by community, sortable, with the TCEQ verification protocol.'],
-      ['Negotiation Window', '/negotiation-window.html', 'pub', 'Builder fiscal quarter clocks + live deadlines from the tape.'],
-      ['Who Owns the Neighborhood', '/who-owns-the-neighborhood.html', 'pub', 'Ownership research tool.'],
-      ['Affordability', '/affordability.html', 'pub', 'Payment and budget tool.'],
-      ['Dare to Compare', '/dare-to-compare.html', 'pub', 'Side-by-side offer comparison.'],
-      ['Zero Out of Pocket', '/zero-out-of-pocket.html', 'pub', 'Low cash-to-close paths.'],
-      ['Down Payment Assistance', '/down-payment-assistance.html', 'pub', 'DPA programs guide.'],
-      ['Look Closer Checklist', '/look-closer-checklist.html', 'pub', 'Buyer inspection list; doubles as the reporter field list.'],
-      ['Texas Tax Reality Guide', '/texas-tax-reality-guide.html', 'pub', 'How the combined rate really works.'],
-      ['First Time Buyers', '/first-time-buyers.html', 'pub', 'Starting from zero.'],
-      ['Start Here', '/start-here.html', 'pub', 'New visitor orientation.'],
-      ['The Deal Comes Last', '/deal-comes-last.html', 'pub', 'The Dispatch Rule + the Head and Heart Test.']
-    ]],
-    ['Methodology and trust (public)', [
-      ['How We Research', '/methodology.html', 'pub', 'The research standard.'],
-      ['Buyer Advantage Score method', '/methodology-buyer-advantage-score.html', 'pub', 'Score v0.1 methodology.'],
-      ['How We Evaluate', '/how-we-evaluate.html', 'pub', 'The standard every observation must meet. Required reading before a first field day.'],
-      ['Corrections', '/corrections.html', 'pub', 'The corrections log.'],
-      ['Field Notes', '/field-notes.html', 'pub', 'Published field observations.']
-    ]],
-    ['Internal: dashboards and ops', [
-      ['30-Day Validation Dashboard', '/dashboard.html', 'int', 'The four products, weekly GA4 metrics calculator, launch checklist, MLS scrub digest panel.'],
-      ['THE FIELD GUIDE, Edition 01 (the book)', '/team/field-guide.pdf', 'int', '14-page branded employee handbook + field manual: who we are, the machine, products, community visit SOP, conversations, systems, rules, first week, glossary. Print it, home-screen it, hand it to every new hire.'],
-      ['Team hub', '/team/', 'int', 'Start here for a new reporter. Links + add-to-home-screen.'],
-      ['Field Route 01: Kyle and Buda', '/team/route-01.html', 'int', 'Phone checklist for the route: navigate, capture, file, mark logged.'],
-      ['Community Visit Summary', '/field-visit-summary.html', 'int', 'File every field visit. Send to HQ or Copy.'],
-      ['Production Board', '/team/production-board.html', 'int', 'Ready / In Progress / Blocked / Backlog.'],
-      ['Sprint Command Center', '/team/command-center.html', 'int', 'Critical path, sprint, money engine, guardrails.'],
-      ['Latest Field Visit component', '/team/latest-field-visit-component.html', 'int', 'The publication block visits feed onto profiles.']
-    ]],
-    ['The Deal Record (new today)', [
-      ['Report a Deal form', '/report-a-deal.html', 'pub', 'Three minute form. Builder and community dropdowns load live from the registry. Submissions email Pete and land in Netlify Forms.'],
-      ['Deal report thanks page', '/report-a-deal-thanks.html', 'pub', 'Explains review, redaction, and the Document verified label.'],
-      ['Netlify Forms inbox (deal-report)', 'https://app.netlify.com/projects/newhomedispatch/forms', 'int', 'Every submitted deal. Two TEST submissions are safe to delete.'],
-      ['Deal Desk strategy + build package', 'https://drive.google.com/drive/folders/1OWjJUB2TJ82wxhjighZ2hwoYXYF4auq3', 'int', 'In Drive HQ, 05 - Strategy and Business: the 18 part Advertised vs Achieved strategy and the Deal Desk implementation spec.']
-    ]],
-    ['Route 01 landing pages', [
-      ['Crosswinds profile', '/communities/crosswinds.html', 'pub', 'Six-builder intake target; field visit block waiting.'],
-      ['Plum Creek North profile', '/communities/plum-creek-north.html', 'pub', 'Lennar 3.99% deadline watch; deadline credibility series starts here.'],
-      ['The Ridge profile', '/communities/the-ridge.html', 'pub', 'Announced 6,200 homes; before-picture archive.']
-    ]],
-    ['Sister site: peteseider.com', [
-      ['peteseider.com', 'https://peteseider.com/', 'pub', 'Personal trust and conversion hub. The revenue side.'],
-      ['Home search (IDX)', 'https://peteseider.com/homes.html', 'pub', 'Live MLS search once MLSGRID_TOKEN is set; interim search until then.'],
-      ['MLS digest endpoint', 'https://peteseider.com/.netlify/functions/mls-digest', 'auto', 'Aggregate daily scrub digest consumed by the NHD dashboard.']
-    ]],
-    ['Drive (Google)', [
-      ['HQ master folder', 'https://drive.google.com/drive/folders/1o-z3YaItR1QJhpukv2So-0mTO8hzubgQ', 'int', 'New Home Dispatch - HQ. Everything lives under topic folders 01 to 99.'],
-      ['00 - INDEX (Start Here) PDF', 'https://drive.google.com/drive/folders/1o-z3YaItR1QJhpukv2So-0mTO8hzubgQ', 'int', 'First file at the top of HQ: clickable map of every folder + quick site links. Rebuilds via buildDriveIndex, so open it from the folder.'],
-      ['00 - FIELD GUIDE PDF', 'https://drive.google.com/drive/folders/1OD2vB4_Y8BLlz-6-5DvtOrboOr8I2c0E', 'int', 'First file in 02 - Field Reporting: the pocket field guide with links and the per-stop flow.'],
-      ['Social cards delivery folder', 'https://drive.google.com/drive/folders/1I-p_shUoMhlMfbUXnCgvhG-MxV4C_mnF', 'auto', 'All share assets land here 7am and 7pm daily.']
-    ]],
-    ['Automations (run themselves)', [
-      ['Concession Index sweep', 'https://github.com/peteseider/newhomedispatch-site/actions', 'auto', 'Four times daily: 6:30a, 10:30a, 2:30p, 6:30p CT. Verifies offers, recomputes scores, deploys.'],
-      ['Social cards render', 'https://github.com/peteseider/newhomedispatch-site/actions', 'auto', 'After every sweep: six cards + The Board + captions.'],
-      ['Quant sensors + derive', 'https://github.com/peteseider/newhomedispatch-site/actions', 'auto', 'Watchlist detection lanes and derived metrics.'],
-      ['NHD Automations (Apps Script)', 'https://script.google.com/u/2/home/projects/1keESHNvhmuYhbnURgI4ab1zJPqMeHFkK46AbFHJCdMZP9AnQviibVJLX/edit', 'auto', 'Drive delivery 7am/7pm, sweep watchdog, Drive index + field guide builders, Drive organizer.'],
-      ['MLS daily scrub', 'https://peteseider.com/.netlify/functions/mls-scrub', 'auto', 'Daily MLS delta digest to Blobs once the token is set. Safe no-op until then.'],
-      ['Netlify: newhomedispatch', 'https://app.netlify.com/projects/newhomedispatch/deploys', 'int', 'NHD deploys. Auto-publishes from GitHub main.'],
-      ['Netlify: peteseider', 'https://app.netlify.com/projects/peteseider/deploys', 'int', 'peteseider.com deploys + MLSGRID_TOKEN env var lives here.']
-    ]],
-    ['Data files (for chats and devs)', [
-      ['entities.json', '/entities.json', 'auto', 'The registry spine: 45 builders, 38 communities. Its updated stamp must match incentives.json.'],
-      ['incentives.json', '/incentives.json', 'auto', 'The verified tape: promos + deep records with history.'],
-      ['sweep-latest.json', '/reporting/sweep-latest.json', 'auto', 'Stamp and counts from the latest sweep.'],
-      ['content-packet.json', '/reporting/content-packet.json', 'auto', 'Facts, changes, interpretation, publish recommendation per sweep.']
-    ]]
-  ];
-  var list = document.getElementById('list');
-  var html = '';
-  D.forEach(function(sec){
-    html += '<h2 data-sec>' + sec[0] + '</h2>';
-    sec[1].forEach(function(it){
-      var tagClass = it[2] === 'int' ? 'tag int' : (it[2] === 'auto' ? 'tag auto' : 'tag');
-      var tagText = it[2] === 'int' ? 'Internal' : (it[2] === 'auto' ? 'Auto' : 'Public');
-      html += '<a class="item" href="' + it[1] + '"' + (it[1].indexOf('http') === 0 ? ' target="_blank" rel="noopener"' : '') + '>' +
-        '<span class="' + tagClass + '">' + tagText + '</span><b>' + it[0] + '</b><small>' + it[3] + '</small></a>';
-    });
-  });
-  list.innerHTML = html;
-  var items = [].slice.call(list.querySelectorAll('.item'));
-  var secs = [].slice.call(list.querySelectorAll('h2'));
-  var countEl = document.getElementById('count');
-  function refresh(){
-    var q = document.getElementById('q').value.trim().toLowerCase();
-    var shown = 0;
-    items.forEach(function(el){
-      var hit = !q || el.textContent.toLowerCase().indexOf(q) !== -1;
-      el.classList.toggle('hide', !hit);
-      if (hit) shown++;
-    });
-    secs.forEach(function(h){
-      var el = h.nextElementSibling, any = false;
-      while (el && el.tagName !== 'H2') { if (el.classList && !el.classList.contains('hide')) any = true; el = el.nextElementSibling; }
-      h.classList.toggle('hide', !any);
-    });
-    countEl.textContent = shown + ' items';
-  }
-  document.getElementById('q').addEventListener('input', refresh);
-  refresh();
+var D = [
+['Flagship products (public)', [
+['Homepage', '/', 'pub', 'v3: intelligence status bar, authority hero, Today\'s Buyer Snapshot dashboard, Deal Record, toolkit, field block, usage ladder.'],
+['Daily Hot Sheet', '/daily-hot-sheet.html', 'pub', 'The Buyer Decision Terminal. Verified four times a day; single sheet download inside.'],
+['Incentive Tracker', '/incentive-tracker.html', 'pub', 'Searchable offer database + Concession Index. 45 tracked builders.'],
+['Community Explorer', '/communities.html', 'pub', '38 communities, taxes, HOA, comparisons.'],
+['Builders', '/builders.html', 'pub', 'Builder profiles and comparisons.'],
+['Weekly Dispatch', '/weekly-dispatch.html', 'pub', 'Friday narrative + field notes.'],
+['Buyer Playbook', '/buyer-guides.html', 'pub', 'Sixteen chapters by buying stage. Free, refreshed quarterly.'],
+['Reports', '/reports.html', 'pub', 'Published reporting.'],
+['Free Tools hub', '/free-tools.html', 'pub', 'Every buyer tool on one page.'],
+['Share Kit', '/share-kit.html', 'pub', 'Every social asset, always current: live cards, The Board, captions, reel, education slides.']
+]],
+['Tools and calculators (public)', [
+['True Cost Calculator', '/true-cost-calculator.html', 'pub', 'All-in monthly cost with taxes, MUD/PID, HOA, insurance.'],
+['Incentive Reality Calculator', '/incentive-calculator.html', 'pub', 'What an advertised offer is actually worth.'],
+['MUD and PID Atlas', '/mud-pid-atlas.html', 'pub', 'Special tax districts by community, sortable, with the TCEQ verification protocol.'],
+['Negotiation Window', '/negotiation-window.html', 'pub', 'Builder fiscal quarter clocks + live deadlines from the tape.'],
+['Who Owns the Neighborhood', '/who-owns-the-neighborhood.html', 'pub', 'Ownership research tool.'],
+['Affordability', '/affordability.html', 'pub', 'Payment and budget tool.'],
+['Dare to Compare', '/dare-to-compare.html', 'pub', 'Side-by-side offer comparison.'],
+['Zero Out of Pocket', '/zero-out-of-pocket.html', 'pub', 'Low cash-to-close paths.'],
+['Down Payment Assistance', '/down-payment-assistance.html', 'pub', 'DPA programs guide.'],
+['Look Closer Checklist', '/look-closer-checklist.html', 'pub', 'Buyer inspection list; doubles as the reporter field list.'],
+['Texas Tax Reality Guide', '/texas-tax-reality-guide.html', 'pub', 'How the combined rate really works.'],
+['First Time Buyers', '/first-time-buyers.html', 'pub', 'Starting from zero.'],
+['Start Here', '/start-here.html', 'pub', 'New visitor orientation.'],
+['The Deal Comes Last', '/deal-comes-last.html', 'pub', 'The Dispatch Rule + the Head and Heart Test.']
+]],
+['Methodology and trust (public)', [
+['How We Research', '/methodology.html', 'pub', 'The research standard.'],
+['Buyer Advantage Score method', '/methodology-buyer-advantage-score.html', 'pub', 'Score v0.1 methodology.'],
+['How We Evaluate', '/how-we-evaluate.html', 'pub', 'The standard every observation must meet. Required reading before a first field day.'],
+['Corrections', '/corrections.html', 'pub', 'The corrections log.'],
+['Field Notes', '/field-notes.html', 'pub', 'Published field observations.']
+]],
+['Internal: dashboards and ops', [
+['Team Flow Book (interactive)', '/team/flow-book.html', 'int', 'CEO strategy book plus operating handbook, in one searchable page: Command Center for whatever is happening right now, vision and the three-prong funnel, buyer lifecycle scripts for every situation by call, text, and email, the peteseider.com conversion playbook, and live buyer and seller capture forms. Start here for anything Zillow, database, or social.'],
+['30-Day Validation Dashboard', '/dashboard.html', 'int', 'The four products, weekly GA4 metrics calculator, launch checklist, MLS scrub digest panel.'],
+['THE FIELD GUIDE, Edition 01 (the book)', '/team/field-guide.pdf', 'int', '14-page branded employee handbook + field manual: who we are, the machine, products, community visit SOP, conversations, systems, rules, first week, glossary. Print it, home-screen it, hand it to every new hire.'],
+['Team hub', '/team/', 'int', 'Start here for a new reporter. Links + add-to-home-screen.'],
+['Field Route 01: Kyle and Buda', '/team/route-01.html', 'int', 'Phone checklist for the route: navigate, capture, file, mark logged.'],
+['Community Visit Summary', '/field-visit-summary.html', 'int', 'File every field visit. Send to HQ or Copy.'],
+['Production Board', '/team/production-board.html', 'int', 'Ready / In Progress / Blocked / Backlog.'],
+['Sprint Command Center', '/team/command-center.html', 'int', 'Critical path, sprint, money engine, guardrails.'],
+['Latest Field Visit component', '/team/latest-field-visit-component.html', 'int', 'The publication block visits feed onto profiles.']
+]],
+['The Deal Record (new today)', [
+['Report a Deal form', '/report-a-deal.html', 'pub', 'Three minute form. Builder and community dropdowns load live from the registry. Submissions email Pete and land in Netlify Forms.'],
+['Deal report thanks page', '/report-a-deal-thanks.html', 'pub', 'Explains review, redaction, and the Document verified label.'],
+['Netlify Forms inbox (deal-report)', 'https://app.netlify.com/projects/newhomedispatch/forms', 'int', 'Every submitted deal. Two TEST submissions are safe to delete.'],
+['Deal Desk strategy + build package', 'https://drive.google.com/drive/folders/1OWjJUB2TJ82wxhjighZ2hwoYXYF4auq3', 'int', 'In Drive HQ, 05 - Strategy and Business: the 18 part Advertised vs Achieved strategy and the Deal Desk implementation spec.']
+]],
+['Route 01 landing pages', [
+['Crosswinds profile', '/communities/crosswinds.html', 'pub', 'Six-builder intake target; field visit block waiting.'],
+['Plum Creek North profile', '/communities/plum-creek-north.html', 'pub', 'Lennar 3.99% deadline watch; deadline credibility series starts here.'],
+['The Ridge profile', '/communities/the-ridge.html', 'pub', 'Announced 6,200 homes; before-picture archive.']
+]],
+['Sister site: peteseider.com', [
+['peteseider.com', 'https://peteseider.com/', 'pub', 'Personal trust and conversion hub. The revenue side.'],
+['Home search (IDX)', 'https://peteseider.com/homes.html', 'pub', 'Live MLS search once MLSGRID_TOKEN is set; interim search until then.'],
+['MLS digest endpoint', 'https://peteseider.com/.netlify/functions/mls-digest', 'auto', 'Aggregate daily scrub digest consumed by the NHD dashboard.']
+]],
+['Drive (Google)', [
+['HQ master folder', 'https://drive.google.com/drive/folders/1o-z3YaItR1QJhpukv2So-0mTO8hzubgQ', 'int', 'New Home Dispatch - HQ. Everything lives under topic folders 01 to 99.'],
+['00 - INDEX (Start Here) PDF', 'https://drive.google.com/drive/folders/1o-z3YaItR1QJhpukv2So-0mTO8hzubgQ', 'int', 'First file at the top of HQ: clickable map of every folder + quick site links. Rebuilds via buildDriveIndex, so open it from the folder.'],
+['00 - FIELD GUIDE PDF', 'https://drive.google.com/drive/folders/1OD2vB4_Y8BLlz-6-5DvtOrboOr8I2c0E', 'int', 'First file in 02 - Field Reporting: the pocket field guide with links and the per-stop flow.'],
+['Social cards delivery folder', 'https://drive.google.com/drive/folders/1I-p_shUoMhlMfbUXnCgvhG-MxV4C_mnF', 'auto', 'All share assets land here 7am and 7pm daily.']
+]],
+['Automations (run themselves)', [
+['Concession Index sweep', 'https://github.com/peteseider/newhomedispatch-site/actions', 'auto', 'Four times daily: 6:30a, 10:30a, 2:30p, 6:30p CT. Verifies offers, recomputes scores, deploys.'],
+['Social cards render', 'https://github.com/peteseider/newhomedispatch-site/actions', 'auto', 'After every sweep: six cards + The Board + captions.'],
+['Quant sensors + derive', 'https://github.com/peteseider/newhomedispatch-site/actions', 'auto', 'Watchlist detection lanes and derived metrics.'],
+['NHD Automations (Apps Script)', 'https://script.google.com/u/2/home/projects/1keESHNvhmuYhbnURgI4ab1zJPqMeHFkK46AbFHJCdMZP9AnQviibVJLX/edit', 'auto', 'Drive delivery 7am/7pm, sweep watchdog, Drive index + field guide builders, Drive organizer.'],
+['MLS daily scrub', 'https://peteseider.com/.netlify/functions/mls-scrub', 'auto', 'Daily MLS delta digest to Blobs once the token is set. Safe no-op until then.'],
+['Netlify: newhomedispatch', 'https://app.netlify.com/projects/newhomedispatch/deploys', 'int', 'NHD deploys. Auto-publishes from GitHub main.'],
+['Netlify: peteseider', 'https://app.netlify.com/projects/peteseider/deploys', 'int', 'peteseider.com deploys + MLSGRID_TOKEN env var lives here.']
+]],
+['Data files (for chats and devs)', [
+['entities.json', '/entities.json', 'auto', 'The registry spine: 45 builders, 38 communities. Its updated stamp must match incentives.json.'],
+['incentives.json', '/incentives.json', 'auto', 'The verified tape: promos + deep records with history.'],
+['sweep-latest.json', '/reporting/sweep-latest.json', 'auto', 'Stamp and counts from the latest sweep.'],
+['content-packet.json', '/reporting/content-packet.json', 'auto', 'Facts, changes, interpretation, publish recommendation per sweep.']
+]]
+];
+var list = document.getElementById('list');
+var html = '';
+D.forEach(function(sec){
+html += '<h2 data-sec>' + sec[0] + '</h2>';
+sec[1].forEach(function(it){
+var tagClass = it[2] === 'int' ? 'tag int' : (it[2] === 'auto' ? 'tag auto' : 'tag');
+var tagText = it[2] === 'int' ? 'Internal' : (it[2] === 'auto' ? 'Auto' : 'Public');
+html += '<a class="item" href="' + it[1] + '"' + (it[1].indexOf('http') === 0 ? ' target="_blank" rel="noopener"' : '') + '>' +
+'<span class="' + tagClass + '">' + tagText + '</span><b>' + it[0] + '</b><small>' + it[3] + '</small></a>';
+});
+});
+list.innerHTML = html;
+var items = [].slice.call(list.querySelectorAll('.item'));
+var secs = [].slice.call(list.querySelectorAll('h2'));
+var countEl = document.getElementById('count');
+function refresh(){
+var q = document.getElementById('q').value.trim().toLowerCase();
+var shown = 0;
+items.forEach(function(el){
+var hit = !q || el.textContent.toLowerCase().indexOf(q) !== -1;
+el.classList.toggle('hide', !hit);
+if (hit) shown++;
+});
+secs.forEach(function(h){
+var el = h.nextElementSibling, any = false;
+while (el && el.tagName !== 'H2') { if (el.classList && !el.classList.contains('hide')) any = true; el = el.nextElementSibling; }
+h.classList.toggle('hide', !any);
+});
+countEl.textContent = shown + ' items';
+}
+document.getElementById('q').addEventListener('input', refresh);
+refresh();
 })();
 </script>
 </body>

@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Flow Book, New Home Dispatch &amp; Seider Realty Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F1B2E;
+    --navy2:#0B2545;
+    --ink:#1a1f2b;
+    --slate:#5b6a7d;
+    --line:#e2e7ec;
+    --soft:#f6f8fa;
+    --white:#ffffff;
+    --nhd-blue:#1E2E9E;
+    --nhd-blue-bright:#5B82EF;
+    --srt-navy:#131A2B;
+    --srt-blue:#1D5FB0;
+    --srt-green:#1E8449;
+    --srt-accent:#6E86D8;
+    --gold:#C9A648;
+    --sidebar-w:300px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',Arial,sans-serif;
+    color:var(--ink);
+    background:var(--soft);
+    -webkit-font-smoothing:antialiased;
+  }
+  a, button{-webkit-tap-highlight-color:rgba(30,46,158,.15); touch-action:manipulation;}
+  #sidebar a.nav-link{-webkit-tap-highlight-color:transparent;}
+  h1,h2,h3,h4,.brand-font{font-family:'Poppins',Arial,sans-serif;}
+  ::selection{background:var(--gold);color:#1a1200;}
+
+  /* ===== Progress bar ===== */
+  #progress-bar{
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,var(--nhd-blue-bright),var(--gold));
+    z-index:200; transition:width .08s linear;
+  }
+
+  /* ===== Sidebar / TOC ===== */
+  #sidebar{
+    position:fixed; top:0; left:0; bottom:0; width:var(--sidebar-w);
+    background:linear-gradient(180deg,var(--navy) 0%, var(--srt-navy) 100%);
+    color:#fff; overflow-y:auto; z-index:50;
+    padding:26px 20px 40px;
+    border-right:1px solid rgba(255,255,255,.06);
+  }
+  #sidebar .logo-row{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+  #sidebar .logo-mark{
+    width:34px;height:34px;border-radius:8px;
+    background:linear-gradient(135deg,var(--nhd-blue-bright),var(--srt-blue));
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:15px;font-family:'Poppins',sans-serif;color:#fff;
+    flex-shrink:0;
+  }
+  #sidebar .brand-name{font-weight:600;font-size:14px;line-height:1.25;}
+  #sidebar .brand-sub{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:2px;}
+  #sidebar .book-title{margin-top:18px;font-size:19px;font-weight:600;line-height:1.3;}
+  #sidebar .book-updated{
+    display:inline-block;margin-top:9px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    background:rgba(255,255,255,.08);color:rgba(255,255,255,.75);padding:4px 9px;border-radius:20px;
+  }
+
+  /* Search */
+  #search-wrap{position:relative;margin-top:20px;}
+  #search-input{
+    width:100%; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16);
+    border-radius:9px; padding:10px 34px 10px 12px; color:#fff; font-size:13px; font-family:'Inter',sans-serif;
+  }
+  #search-input::placeholder{color:rgba(255,255,255,.45);}
+  #search-input:focus{outline:none; border-color:var(--gold); background:rgba(255,255,255,.12);}
+  #search-icon{position:absolute; right:11px; top:10px; color:rgba(255,255,255,.4); font-size:13px; pointer-events:none;}
+  #search-results{
+    display:none; margin-top:8px; background:rgba(0,0,0,.28); border-radius:9px; overflow:hidden;
+    max-height:280px; overflow-y:auto; border:1px solid rgba(255,255,255,.1);
+  }
+  #search-results.show{display:block;}
+  #search-results .res{
+    display:block; padding:10px 12px; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.06);
+  }
+  #search-results .res:last-child{border-bottom:none;}
+  #search-results .res:hover{background:rgba(255,255,255,.08);}
+  #search-results .res .rtitle{font-size:12.5px; font-weight:600; color:#fff;}
+  #search-results .res .rsnippet{font-size:11px; color:rgba(255,255,255,.55); margin-top:2px; line-height:1.4;}
+  #search-empty{padding:12px; font-size:12px; color:rgba(255,255,255,.5); display:none;}
+
+  #sidebar nav{margin-top:22px;}
+  #sidebar .nav-group{margin-bottom:6px;}
+  #sidebar .nav-group-label{
+    font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);
+    margin:16px 0 8px; font-weight:600;
+  }
+  #sidebar a.nav-link{
+    display:flex; align-items:center; gap:9px;
+    color:rgba(255,255,255,.82); text-decoration:none; font-size:13.5px;
+    padding:10px 10px; border-radius:7px; line-height:1.3; min-height:22px;
+    transition:background .12s ease, color .12s ease;
+  }
+  #sidebar a.nav-link:hover{background:rgba(255,255,255,.08); color:#fff;}
+  #sidebar a.nav-link.active{background:rgba(255,255,255,.13); color:#fff; font-weight:600;}
+  #sidebar a.nav-link .num{
+    width:18px;height:18px;border-radius:5px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.55);
+    font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  #sidebar a.nav-link.active .num{background:var(--gold); color:#1a1200;}
+  #sidebar .tag-nhd{color:var(--nhd-blue-bright);}
+  #sidebar .tag-srt{color:#8fa8e8;}
+
+  #sidebar-toggle{display:none;}
+
+  /* ===== Mobile breadcrumb ===== */
+  #mobile-crumb{
+    display:none; position:fixed; top:0; left:0; right:0; height:54px; z-index:55;
+    background:var(--navy2); color:#fff; align-items:center; padding-left:66px; padding-right:16px;
+    font-size:13.5px; font-weight:600; box-shadow:0 2px 10px rgba(0,0,0,.15);
+  }
+
+  /* ===== Main content ===== */
+  #main{margin-left:var(--sidebar-w); min-height:100vh;}
+
+  .cover{
+    background:
+      linear-gradient(rgba(11,20,38,.90),rgba(15,27,46,.94)),
+      url('https://images.pexels.com/photos/5281394/pexels-photo-5281394.jpeg?auto=compress&cs=tinysrgb&w=1920');
+    background-size:cover; background-position:center;
+    color:#fff; padding:90px 64px 74px;
+  }
+  .cover .eyebrow{
+    display:inline-block; font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--gold); font-weight:600; margin-bottom:18px;
+  }
+  .cover h1{font-size:clamp(34px,4.2vw,54px); font-weight:600; line-height:1.15; max-width:820px;}
+  .cover .sub{font-size:17px; color:rgba(255,255,255,.78); max-width:640px; margin-top:18px; line-height:1.6; font-weight:300;}
+  .cover .badges{display:flex; gap:10px; margin-top:26px; flex-wrap:wrap;}
+  .cover .badge{
+    font-size:11.5px; letter-spacing:.04em; padding:7px 14px; border-radius:20px;
+    border:1px solid rgba(255,255,255,.22); color:rgba(255,255,255,.85);
+  }
+  .cover .cover-actions{display:flex; gap:12px; margin-top:32px; flex-wrap:wrap;}
+  .cover .cta-btn{
+    display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:600;
+    padding:13px 22px; border-radius:9px; text-decoration:none; cursor:pointer; border:none; font-family:'Inter',sans-serif;
+  }
+  .cover .cta-btn.primary{background:var(--nhd-blue-bright); color:#fff;}
+  .cover .cta-btn.ghost{background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.28);}
+  .cover .cta-btn:hover{filter:brightness(1.08);}
+  #today-chip{font-size:12.5px; color:rgba(255,255,255,.65); margin-top:14px;}
+  #today-chip strong{color:var(--gold);}
+
+  section.block{padding:52px 64px; border-bottom:1px solid var(--line); background:#fff; scroll-margin-top:20px;}
+  section.block.tint{background:var(--soft);}
+  section.block .head-row{display:flex; align-items:baseline; gap:12px; margin-bottom:6px; flex-wrap:wrap;}
+  section.block .sec-num{
+    font-family:'Poppins',sans-serif; font-size:13px; font-weight:700; color:var(--gold);
+    background:var(--navy2); width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  section.block h2{font-size:25px; font-weight:600; color:var(--navy2);}
+  section.block .kicker{
+    font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:600; margin-bottom:10px;
+  }
+  .kicker.nhd{color:var(--nhd-blue);}
+  .kicker.srt{color:var(--srt-blue);}
+  .kicker.both{color:var(--gold);}
+  section.block p.lede{font-size:15.5px; color:var(--slate); max-width:760px; line-height:1.7; margin-bottom:26px;}
+
+  .card-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; margin-top:8px;}
+  .card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:20px 22px;}
+  .card h4{font-size:14.5px; color:var(--navy2); margin-bottom:8px;}
+  .card p{font-size:13.5px; color:var(--slate); line-height:1.55;}
+  .card a.ext{font-size:12.5px; color:var(--nhd-blue); text-decoration:none; font-weight:600; display:inline-flex; align-items:center; gap:4px; margin-top:10px;}
+  .card a.ext:hover{text-decoration:underline;}
+
+  table.flow{width:100%; border-collapse:collapse; margin-top:10px; font-size:13.5px;}
+  table.flow th{
+    text-align:left; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--navy2); border-bottom:2px solid var(--navy2); padding:8px 12px 8px 0;
+  }
+  table.flow td{padding:11px 12px 11px 0; border-bottom:1px solid var(--line); vertical-align:top; color:var(--ink);}
+  table.flow tr:last-child td{border-bottom:none;}
+  table.flow td.strong{font-weight:600; color:var(--nhd-blue); white-space:nowrap;}
+  table.flow tr.today-row{background:#FFF8E8;}
+  table.flow tr.today-row td.strong{color:#8a6416;}
+  .today-pill{
+    display:inline-block; font-size:9.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    background:var(--gold); color:#1a1200; padding:2px 7px; border-radius:10px; margin-left:8px; vertical-align:middle;
+  }
+
+  .script-box{
+    background:var(--navy2); color:#fff; border-radius:12px; padding:20px 22px; margin:14px 0;
+    border-left:4px solid var(--gold);
+  }
+  .script-box .sb-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; gap:10px;}
+  .script-box .label{font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+  .script-box p{font-size:14.5px; line-height:1.7; color:rgba(255,255,255,.92); font-style:italic;}
+  .copy-btn{
+    display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:600; color:#fff;
+    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:8px;
+    padding:10px 15px; min-height:38px; cursor:pointer; font-family:'Inter',sans-serif; flex-shrink:0; transition:background .12s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .copy-btn:hover{background:rgba(255,255,255,.22);}
+  .copy-btn.copied{background:var(--srt-green); border-color:var(--srt-green);}
+
+  .rule-list{list-style:none; margin-top:14px;}
+  .rule-list li{
+    padding:10px 0 10px 26px; position:relative; font-size:14px; color:var(--ink); border-bottom:1px solid var(--line); line-height:1.55;
+  }
+  .rule-list li:last-child{border-bottom:none;}
+  .rule-list li::before{content:"•"; position:absolute; left:2px; color:var(--nhd-blue); font-weight:700; font-size:18px; line-height:1.1;}
+  .rule-list li strong{color:var(--navy2);}
+
+  .link-table{width:100%; border-collapse:collapse; margin-top:12px;}
+  .link-table th{text-align:left; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--navy2); border-bottom:2px solid var(--navy2); padding:8px 12px 8px 0;}
+  .link-table td{padding:12px 12px 12px 0; border-bottom:1px solid var(--line); font-size:13.5px; vertical-align:top;}
+  .link-table a{color:var(--nhd-blue); text-decoration:none; font-weight:600;}
+  .link-table a:hover{text-decoration:underline;}
+  .pill{display:inline-block; font-size:10px; letter-spacing:.05em; text-transform:uppercase; padding:2px 8px; border-radius:10px; font-weight:700;}
+  .pill.internal{background:#EAF0FF; color:var(--nhd-blue);}
+  .pill.external{background:#FDF1DC; color:#8a6416;}
+  .pill.unlisted{background:#F2E9FF; color:#6b3fa0;}
+  .pill.soon{background:#FCEEEE; color:#a32020;}
+
+  .journey{position:relative; margin-top:20px; padding-left:8px;}
+  .journey::before{
+    content:""; position:absolute; left:31px; top:14px; bottom:14px; width:2px;
+    background:linear-gradient(180deg,var(--gold),var(--nhd-blue));
+  }
+  .journey .day{
+    background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px 20px; margin-bottom:14px;
+    position:relative; margin-left:52px;
+  }
+  .journey .day h4{color:var(--navy2); font-size:14.5px; margin-bottom:8px;}
+  .journey .day .num{
+    position:absolute; left:-52px; top:14px;
+    width:28px;height:28px;border-radius:50%;background:var(--navy2);color:var(--gold);font-size:13px;
+    display:flex;align-items:center;justify-content:center;font-weight:700;border:3px solid #fff;box-shadow:0 0 0 2px var(--navy2);
+  }
+  .journey .day ul{padding-left:20px; font-size:13.5px; color:var(--slate); line-height:1.8;}
+
+  .swatch-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:14px;}
+  .swatch{width:150px;}
+  .swatch .chip{height:56px; border-radius:8px; border:1px solid rgba(0,0,0,.06);}
+  .swatch .hex{font-size:11.5px; color:var(--slate); margin-top:6px; font-family:monospace;}
+  .swatch .name{font-size:12.5px; font-weight:600; color:var(--ink); margin-top:2px;}
+
+  .callout{
+    background:#FFF8E8; border:1px solid #E8D9A8; border-radius:10px; padding:16px 20px; margin:16px 0; font-size:13.5px; color:#6b5620; line-height:1.6;
+  }
+  .callout strong{color:#7A5A00;}
+  .callout.blue{background:#EEF2FA; border-color:#C7D4F0; color:#2b3d5e;}
+  .callout.blue strong{color:#2B4FE0;}
+  .callout.todo{background:#FCEEEE; border-color:#EFC9C9; color:#7a2e2e;}
+  .callout.todo strong{color:#a32020;}
+
+  footer.book-footer{
+    padding:44px 64px; background:var(--navy); color:rgba(255,255,255,.6); font-size:12.5px; text-align:center;
+  }
+  footer.book-footer a{color:#8fa8e8;}
+
+  /* ===== Quick Access floating panel ===== */
+  #qa-btn{
+    position:fixed; bottom:26px; right:26px; z-index:90;
+    width:58px; height:58px; border-radius:50%; border:none; cursor:pointer;
+    background:linear-gradient(135deg,var(--navy2),var(--nhd-blue)); color:#fff;
+    font-size:24px; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 24px rgba(11,37,69,.4); transition:transform .15s ease;
+  }
+  #qa-btn:hover{transform:scale(1.06);}
+  #qa-panel{
+    position:fixed; bottom:96px; right:26px; z-index:90; width:330px; max-width:calc(100vw - 40px);
+    background:#fff; border-radius:16px; box-shadow:0 16px 48px rgba(0,0,0,.28);
+    overflow:hidden; display:none; border:1px solid var(--line);
+  }
+  #qa-panel.show{display:block;}
+  #qa-panel .qa-head{background:var(--navy2); color:#fff; padding:16px 18px;}
+  #qa-panel .qa-head .qa-day{font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+  #qa-panel .qa-head .qa-focus{font-size:13.5px; margin-top:5px; line-height:1.4;}
+  #qa-panel .qa-body{padding:16px 18px; max-height:340px; overflow-y:auto;}
+  #qa-panel .qa-section{margin-bottom:16px;}
+  #qa-panel .qa-section:last-child{margin-bottom:0;}
+  #qa-panel .qa-label{font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--slate); font-weight:700; margin-bottom:8px;}
+  #qa-panel .qa-script{font-size:13px; font-style:italic; color:var(--ink); line-height:1.55; background:var(--soft); border-radius:8px; padding:10px 12px;}
+  #qa-panel .qa-links a{
+    display:block; font-size:13px; color:var(--nhd-blue); text-decoration:none; font-weight:600; padding:7px 0; border-bottom:1px solid var(--line);
+  }
+  #qa-panel .qa-links a:last-child{border-bottom:none;}
+
+  /* ===== Print ===== */
+  @media print{
+    #sidebar, #sidebar-toggle, #qa-btn, #qa-panel, #progress-bar, #mobile-crumb{display:none !important;}
+    #main{margin-left:0 !important;}
+    section.block{border-bottom:1px solid #ccc; page-break-inside:avoid;}
+    .cover{background:var(--navy2) !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    .script-box{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  }
+
+  @media(max-width:900px){
+    #sidebar{transform:translateX(-100%); transition:transform .2s ease; box-shadow:0 0 40px rgba(0,0,0,.3);}
+    #sidebar.open{transform:translateX(0);}
+    #main{margin-left:0;}
+    #sidebar-toggle{
+      display:flex; position:fixed; top:10px; left:16px; z-index:60;
+      width:44px;height:44px;border-radius:10px;background:var(--navy2);color:#fff;
+      align-items:center;justify-content:center; border:none; font-size:18px; cursor:pointer;
+      box-shadow:0 4px 14px rgba(0,0,0,.25);
+    }
+    #mobile-crumb{display:flex;}
+    #main{padding-top:54px;}
+    .cover, section.block{padding-left:26px; padding-right:26px;}
+    .cover{padding-top:36px;}
+    #qa-btn{bottom:20px; right:20px; width:52px; height:52px; font-size:21px;}
+    #qa-panel{bottom:82px; right:16px;}
+  }
+  @media(min-width:901px){
+    #sidebar-toggle{display:none !important;}
+  }
+
+  /* ===== Command Center scenario launcher ===== */
+  .scenario-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:20px;}
+  .scenario-card{
+    background:var(--navy2); color:#fff; border-radius:14px; padding:22px 22px 20px;
+    border:1px solid rgba(255,255,255,.08); scroll-margin-top:20px;
+  }
+  .scenario-card .sc-icon{font-size:24px; display:block; margin-bottom:10px;}
+  .scenario-card h4{color:#fff; font-size:15px; margin-bottom:8px;}
+  .scenario-card .sc-script{
+    font-size:13px; font-style:italic; color:rgba(255,255,255,.88); line-height:1.6;
+    background:rgba(255,255,255,.07); border-radius:8px; padding:10px 12px; margin-bottom:12px;
+  }
+  .scenario-card .sc-links{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+  .scenario-card .sc-links a, .scenario-card .sc-links button{
+    font-size:11.5px; font-weight:600; color:#fff; background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2); border-radius:7px; padding:8px 11px; text-decoration:none;
+    cursor:pointer; font-family:'Inter',sans-serif; -webkit-tap-highlight-color:transparent;
+  }
+  .scenario-card .sc-links a:hover, .scenario-card .sc-links button:hover{background:rgba(255,255,255,.22);}
+  .scenario-card .sc-links a.gold{background:var(--gold); color:#1a1200; border-color:var(--gold);}
+
+  /* ===== Flow diagrams ===== */
+  .flow-diagram{display:flex; align-items:stretch; gap:0; flex-wrap:wrap; margin:22px 0; row-gap:14px;}
+  .flow-box{
+    background:#fff; border:2px solid var(--nhd-blue); border-radius:12px; padding:16px 18px;
+    flex:1; min-width:170px; text-align:center; display:flex; flex-direction:column; justify-content:center;
+  }
+  .flow-box.accent{border-color:var(--gold); background:#FFFBF0;}
+  .flow-box.green{border-color:var(--srt-green); background:#F3FBF6;}
+  .flow-box h5{font-size:13px; color:var(--navy2); margin-bottom:5px; font-family:'Poppins',sans-serif;}
+  .flow-box p{font-size:11.5px; color:var(--slate); line-height:1.45;}
+  .flow-arrow{
+    display:flex; align-items:center; justify-content:center; font-size:20px; color:var(--slate);
+    padding:0 10px; flex-shrink:0; min-width:34px;
+  }
+  @media(max-width:760px){
+    .flow-diagram{flex-direction:column;}
+    .flow-arrow{transform:rotate(90deg); padding:2px 0;}
+  }
+
+  /* ===== Stage stepper (buyer lifecycle) ===== */
+  .stage-nav{display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 6px;}
+  .stage-nav a{
+    font-size:12px; font-weight:600; color:var(--nhd-blue); background:#EAF0FF; border-radius:20px;
+    padding:7px 13px; text-decoration:none;
+  }
+  .stage-nav a:hover{background:var(--nhd-blue); color:#fff;}
+  .stage{
+    border:1px solid var(--line); border-radius:14px; padding:26px 26px 22px; margin:20px 0; scroll-margin-top:20px;
+    background:#fff;
+  }
+  .stage .stage-head{display:flex; align-items:center; gap:12px; margin-bottom:6px; flex-wrap:wrap;}
+  .stage .stage-num{
+    width:32px; height:32px; border-radius:50%; background:var(--navy2); color:var(--gold);
+    font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    font-family:'Poppins',sans-serif;
+  }
+  .stage h3{font-size:18px; color:var(--navy2); font-family:'Poppins',sans-serif;}
+  .stage .stage-goal{font-size:13.5px; color:var(--slate); margin:8px 0 16px; line-height:1.6;}
+  .stage .channel-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-bottom:10px;}
+
+  /* ===== Fillable capture forms ===== */
+  .capture-form{background:var(--soft); border:1px solid var(--line); border-radius:14px; padding:24px; margin:18px 0;}
+  .capture-form h4{color:var(--navy2); font-size:15px; margin-bottom:4px;}
+  .capture-form .cf-note{font-size:12.5px; color:var(--slate); margin-bottom:16px; line-height:1.5;}
+  .form-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px;}
+  .form-field{margin-bottom:14px;}
+  .form-field.full{grid-column:1/-1;}
+  .form-field label{display:block; font-size:11px; font-weight:700; color:var(--navy2); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em;}
+  .form-field input, .form-field select, .form-field textarea{
+    width:100%; border:1px solid var(--line); border-radius:8px; padding:10px 12px; font-size:14px;
+    font-family:'Inter',sans-serif; color:var(--ink); background:#fff;
+  }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus{outline:none; border-color:var(--nhd-blue);}
+  .form-field textarea{min-height:64px; resize:vertical;}
+  .cf-actions{display:flex; gap:10px; margin-top:6px; flex-wrap:wrap;}
+  .cf-btn{
+    font-size:13px; font-weight:600; padding:10px 18px; border-radius:8px; border:none; cursor:pointer;
+    font-family:'Inter',sans-serif; min-height:38px;
+  }
+  .cf-btn.primary{background:var(--nhd-blue); color:#fff;}
+  .cf-btn.ghost{background:#fff; color:var(--navy2); border:1px solid var(--line);}
+  .cf-btn.copied{background:var(--srt-green); color:#fff;}
+  .summary-out{
+    background:var(--navy2); color:#fff; border-radius:10px; padding:16px 18px; margin-top:16px;
+    font-size:12.5px; white-space:pre-wrap; font-family:'SFMono-Regular',Consolas,monospace; display:none; line-height:1.6;
+  }
+  .summary-out.show{display:block;}
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<button id="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+<div id="mobile-crumb">Start Here</div>
+
+<aside id="sidebar">
+  <div class="logo-row">
+    <div class="logo-mark">S</div>
+    <div>
+      <div class="brand-name">New Home Dispatch<br>Seider Realty Team</div>
+    </div>
+  </div>
+  <div class="brand-sub">Internal, Not For Public Distribution</div>
+  <div class="book-title">Team Flow Book</div>
+  <span class="book-updated">Rev 5 · 2026-07-24</span>
+
+  <div id="search-wrap">
+    <input id="search-input" type="text" placeholder="Search the book...">
+    <span id="search-icon">⌕</span>
+    <div id="search-results"></div>
+    <div id="search-empty">No matches. Try a different word.</div>
+  </div>
+
+  <nav>
+    <div class="nav-group">
+      <a class="nav-link" href="#command-center"><span class="num">1</span>Command Center</a>
+      <a class="nav-link" href="#start-here"><span class="num">2</span>Start Here</a>
+    </div>
+
+    <div class="nav-group-label">CEO Strategy <span class="tag-nhd">BOTH</span></div>
+    <div class="nav-group">
+      <a class="nav-link" href="#vision-mission"><span class="num">3</span>Vision, Mission &amp; The Three Prongs</a>
+      <a class="nav-link" href="#the-funnel"><span class="num">4</span>How Leads Become Closings</a>
+      <a class="nav-link" href="#two-brands"><span class="num">5</span>The Two Brands</a>
+    </div>
+
+    <div class="nav-group-label">Field Operations <span class="tag-nhd">NHD</span></div>
+    <div class="nav-group">
+      <a class="nav-link" href="#weekly-rhythm"><span class="num">6</span>Weekly Rhythm</a>
+      <a class="nav-link" href="#daily-itinerary"><span class="num">7</span>Daily Itinerary</a>
+      <a class="nav-link" href="#field-scripts"><span class="num">8</span>Scripts &amp; Talking Points</a>
+      <a class="nav-link" href="#buyer-lifecycle"><span class="num">9</span>Buyer Lifecycle Engine</a>
+      <a class="nav-link" href="#objections"><span class="num">10</span>Objections &amp; Answers</a>
+      <a class="nav-link" href="#outreach-links"><span class="num">11</span>Which Link, When</a>
+      <a class="nav-link" href="#story-collection"><span class="num">12</span>Story Collection</a>
+      <a class="nav-link" href="#field-tools"><span class="num">13</span>Field Tools &amp; Systems</a>
+    </div>
+
+    <div class="nav-group-label">Business Systems <span class="tag-nhd">NHD</span></div>
+    <div class="nav-group">
+      <a class="nav-link" href="#data-architecture"><span class="num">14</span>Data &amp; Research Architecture</a>
+      <a class="nav-link" href="#roadmap"><span class="num">15</span>Priority Roadmap</a>
+    </div>
+
+    <div class="nav-group-label">Sales &amp; Service <span class="tag-srt">SRT</span></div>
+    <div class="nav-group">
+      <a class="nav-link" href="#srt-site"><span class="num">16</span>peteseider.com Pages</a>
+      <a class="nav-link" href="#srt-playbook"><span class="num">17</span>peteseider.com Conversion Playbook</a>
+      <a class="nav-link" href="#zillow-leads"><span class="num">18</span>Lead &amp; CRM Systems</a>
+      <a class="nav-link" href="#capture-forms"><span class="num">19</span>In-Call Capture Forms</a>
+    </div>
+
+    <div class="nav-group-label">Directory</div>
+    <div class="nav-group">
+      <a class="nav-link" href="#tools-directory"><span class="num">20</span>Internal Tools &amp; Repos</a>
+      <a class="nav-link" href="#external-directory"><span class="num">21</span>External Links</a>
+      <a class="nav-link" href="#brand-reference"><span class="num">22</span>Brand Quick Reference</a>
+    </div>
+
+    <div class="nav-group-label">Onboarding</div>
+    <div class="nav-group">
+      <a class="nav-link" href="#new-hire"><span class="num">23</span>New Hire, First Week</a>
+      <a class="nav-link" href="#rules"><span class="num">24</span>Rules That Do Not Change</a>
+    </div>
+  </nav>
+</aside>
+
+<div id="main">
+
+  <div class="cover" id="start-here">
+    <span class="eyebrow">Internal Operating Handbook</span>
+    <h1>The Team Flow Book</h1>
+    <p class="sub">Everything a new person needs to work at full speed inside New Home Dispatch and the Seider Realty Team. The scripts to say, the tools to use, the systems behind the numbers, and the rhythm of a working week. One document, built to live on your phone or tablet in the field.</p>
+    <div class="badges">
+      <span class="badge">Rev 5 · 2026-07-24</span>
+      <span class="badge">24 sections, searchable</span>
+      <span class="badge">Command Center below, one tap to a script</span>
+    </div>
+    <div class="cover-actions">
+      <a class="cta-btn primary" href="#command-center">⚡ Go to Command Center</a>
+      <a class="cta-btn ghost" href="#new-hire">New here? Start your first week</a>
+      <button class="cta-btn ghost" onclick="window.print()">🖨 Print or save as PDF</button>
+    </div>
+    <div id="today-chip"></div>
+  </div>
+
+  <section class="block" id="command-center">
+    <div class="head-row"><span class="sec-num">1</span><div class="kicker both">Open this first, every time</div></div>
+    <h2>Command Center</h2>
+    <p class="lede">This is the button you press before you do anything else. Pick what is happening right now and it hands you the script, the form, and the exact links to send, so nothing gets improvised and nothing gets forgotten. Every card below points into the full detail in the Buyer Lifecycle Engine if you want more.</p>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <span class="sc-icon">📞</span>
+        <h4>A Zillow call is coming in right now</h4>
+        <div class="sc-script">Hi, this is Pete Seider, thanks for reaching out through Zillow. I saw you were looking at [address or community], is this still something you are actively looking at, or just starting to explore?</div>
+        <div class="sc-links">
+          <a href="#stage-first-contact">Full script</a>
+          <a href="#capture-forms">Open capture form</a>
+          <a class="gold" href="#stage-nurture">What to send</a>
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="sc-icon">🏗️</span>
+        <h4>They are looking at new construction</h4>
+        <div class="sc-script">New construction is actually where I spend most of my time, I have an independent research site that tracks builder incentives and true costs across the metro, want me to send you the guide for the area you are looking at?</div>
+        <div class="sc-links">
+          <a href="#stage-nurture">Full script</a>
+          <a href="https://newhomedispatch.com/incentive-tracker.html" target="_blank" rel="noopener">Incentive Tracker</a>
+          <a class="gold" href="https://peteseider.com/new-construction-advantage.html" target="_blank" rel="noopener">Send this page</a>
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="sc-icon">🏡</span>
+        <h4>They want a specific area of town</h4>
+        <div class="sc-script">Let me pull that up, I track every community we cover with tax rate, HOA, and builder mix side by side so you are not guessing between neighborhoods.</div>
+        <div class="sc-links">
+          <a href="#stage-nurture">Full script</a>
+          <a href="https://newhomedispatch.com/communities" target="_blank" rel="noopener">Communities tool</a>
+          <a class="gold" href="https://peteseider.com/buyer-advantage.html" target="_blank" rel="noopener">Send buyer guide</a>
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="sc-icon">💰</span>
+        <h4>They asked what it will actually cost</h4>
+        <div class="sc-script">Good question, the sticker price almost never matches the real payment once you add taxes, HOA, and insurance, let me send you the calculator that does the real math.</div>
+        <div class="sc-links">
+          <a href="#objections">Full script</a>
+          <a href="https://newhomedispatch.com/true-cost-calculator.html" target="_blank" rel="noopener">True Cost Calculator</a>
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="sc-icon">🏷️</span>
+        <h4>They are selling, not buying</h4>
+        <div class="sc-script">Tell me a little about the home and your timeline, I will walk you through what it is actually worth in this market and what selling looks like right now.</div>
+        <div class="sc-links">
+          <a href="#stage-first-contact">Full script</a>
+          <a href="#capture-forms">Seller capture form</a>
+          <a class="gold" href="https://peteseider.com/seller-advantage.html" target="_blank" rel="noopener">Send seller guide</a>
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="sc-icon">👋</span>
+        <h4>A past client is reaching back out</h4>
+        <div class="sc-script">Great to hear from you, what is going on, are you thinking of moving again or is this about someone you know?</div>
+        <div class="sc-links">
+          <a href="#field-scripts">Reasons to reach out</a>
+          <a href="#story-collection">Ask for their story</a>
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="sc-icon">💬</span>
+        <h4>Someone DMed from social</h4>
+        <div class="sc-script">Thanks for reaching out, happy to help, are you further along in the search or just starting to look around?</div>
+        <div class="sc-links">
+          <a href="#stage-first-contact">Full script</a>
+          <a href="#the-funnel">Why this works</a>
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="sc-icon">🚶</span>
+        <h4>Someone walked up at a model home</h4>
+        <div class="sc-script">Hi, I am Pete, I actually cover this builder independently, happy to tell you what I am seeing here that the sales rep will not, want my number?</div>
+        <div class="sc-links">
+          <a href="#daily-itinerary">Field block script</a>
+          <a href="#capture-forms">Open capture form</a>
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="sc-icon">❓</span>
+        <h4>"Wait, what do you actually do?"</h4>
+        <div class="sc-script">It's called New Home Dispatch, an independent guide for new construction buyers, free tools, real field reporting, no builder spin. I'm Pete Seider, I built it because buyers deserve someone doing the homework on their side.</div>
+        <div class="sc-links">
+          <a href="#vision-mission">The full pitch</a>
+          <a href="#field-scripts">All narratives</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="head-row"><span class="sec-num">2</span><div class="kicker both">How to use this book</div></div>
+    <h2>Start here</h2>
+    <p class="lede">This is the one document to hand a new person before they go into the field, get on the phone, or touch the website. Read it start to finish once, then keep it open as a reference. Use the search box at the top of the menu, or tap the lightning icon in the corner any time you just need a script or a link fast.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h4>If you are brand new</h4>
+        <p>Read The Two Brands next, then go straight to New Hire, First Week near the bottom. It ties every other section together in the order you will actually need it.</p>
+      </div>
+      <div class="card">
+        <h4>If you are heading into the field today</h4>
+        <p>Open the quick access panel in the bottom corner. It shows today's focus and the ten second script with a one tap copy button, no scrolling required.</p>
+      </div>
+      <div class="card">
+        <h4>If you need a link or a tool fast</h4>
+        <p>Type into the search box at the top of the menu. It searches every section, every script, and every link in the book at once.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="vision-mission">
+    <div class="head-row"><span class="sec-num">3</span><div class="kicker both">CEO Strategy</div></div>
+    <h2>Vision, mission, and the three prongs of the business</h2>
+    <p class="lede">This section is written for the CEO, who is also the one employee. Read it the way you would read the first three slides of a pitch to an investor, because that is exactly what it is. Everything below it in this book is the operating detail underneath these few paragraphs.</p>
+
+    <div class="card-grid">
+      <div class="card" style="border-top:3px solid var(--gold);">
+        <h4>Vision</h4>
+        <p>Become the one name in Central Texas new construction that buyers trust more than the builder, more than the portal, and more than the sales rep standing in the model home, and use that trust to build the recurring, defensible research business other agents cannot copy.</p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--gold);">
+        <h4>Mission</h4>
+        <p>Do the homework buyers cannot do themselves, publish it for free before anyone asks, and turn every person who reads it into either a client, a subscriber, or a referral, without ever putting coverage up for sale.</p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--gold);">
+        <h4>Operating principle</h4>
+        <p>Anything done more than once becomes a system in this book. If a call, a text, a form, or a link gets used twice, it gets written down here so it never has to be reinvented a third time.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:34px; font-size:16px; color:var(--navy2);">The three prongs</h3>
+    <p class="lede" style="margin-top:8px;">Every asset, every page, every dollar in this business belongs to one of three prongs. They are not three separate businesses, they are three stages of the same person moving from stranger to client.</p>
+
+    <div class="card-grid">
+      <div class="card" style="border-top:3px solid var(--nhd-blue);">
+        <h4 style="color:var(--nhd-blue);">1. New Home Dispatch, the trust engine</h4>
+        <p>Independent research, free tools, and field reporting on new construction builders across the metro. This is the front door. Nobody pays for coverage, nobody gets special treatment, and that independence is exactly what makes it worth reading. Its only job is to earn trust before anyone is asked for anything.</p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--srt-blue);">
+        <h4 style="color:var(--srt-blue);">2. PeteSeider.com, the conversion engine</h4>
+        <p>This is where a reader becomes a lead. The buyer and seller questionnaires, the advantage pages, the true cost tools, and the buyer strategy call booking all live here. It is the personal brand site, and it is currently the main business, the one that actually puts food on the table. Every other prong exists to feed it traffic it can convert.</p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--srt-green);">
+        <h4 style="color:var(--srt-green);">3. Seider Realty Team, the production engine</h4>
+        <p>Powered by The Ascend Group at LPT Realty. This is where a lead becomes a closing, touring, negotiating, and getting to the closing table. It is the only prong where a license is required and the only place commission is earned. Say the affiliation line exactly this way when it comes up: "Seider Realty Team, powered by The Ascend Group at LPT Realty."</p>
+      </div>
+    </div>
+
+    <div class="callout blue" style="margin-top:24px;">
+      <strong>Why three prongs and not one:</strong> a portal lead does not trust a salesperson on first contact, but they will trust a researcher. New Home Dispatch earns the trust a direct sales pitch cannot. PeteSeider.com converts that trust into an actual lead with contact information and intent. Seider Realty Team closes it. Skipping a step, pitching representation before the trust is earned, is the single most common way a good lead goes cold.
+    </div>
+  </section>
+
+  <section class="block" id="the-funnel">
+    <div class="head-row"><span class="sec-num">4</span><div class="kicker both">CEO Strategy</div></div>
+    <h2>How leads become closings, the funnel</h2>
+    <p class="lede">Three sources bring people in. One trust engine warms them up. One site converts them. One team closes them. This is the whole business drawn as a diagram, and it is the map every script and every tool in this book plugs into somewhere.</p>
+
+    <h3 style="font-size:14.5px; color:var(--navy2); text-transform:uppercase; letter-spacing:.04em; margin-top:8px;">Where people come from</h3>
+    <div class="flow-diagram">
+      <div class="flow-box"><h5>Zillow &amp; portals</h5><p>Inbound calls and leads from Zillow, the paid, lowest trust, highest volume source. They do not know Pete yet.</p></div>
+      <div class="flow-box"><h5>The database</h5><p>About 400 past clients and contacts. The highest trust source, and the one most often under used between transactions.</p></div>
+      <div class="flow-box"><h5>Social media</h5><p>Organic content and DMs, medium trust, and the audience most likely to have already read something from New Home Dispatch before they ever say hello.</p></div>
+    </div>
+
+    <h3 style="font-size:14.5px; color:var(--navy2); text-transform:uppercase; letter-spacing:.04em; margin-top:30px;">Where they go next</h3>
+    <div class="flow-diagram">
+      <div class="flow-box accent"><h5>New Home Dispatch</h5><p>Free tools and independent research build trust fast, the incentive tracker, the true cost calculator, the communities tool, the Friday email.</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box"><h5>PeteSeider.com</h5><p>The questionnaires, the advantage pages, and the buyer strategy call turn a trusting reader into a named lead with intent and contact information.</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box green"><h5>Seider Realty Team</h5><p>Touring, negotiating, and closing. Powered by The Ascend Group at LPT Realty. This is the only step where commission is earned.</p></div>
+    </div>
+
+    <div class="callout" style="margin-top:26px;">
+      <strong>The part that makes this different from a normal agent's funnel:</strong> a normal agent tries to convert a Zillow lead directly into a client on the first call, and it rarely works because there is no trust yet. NHD exists to shorten that gap. Sending a Zillow caller to a free, independent tool the same day does more to build trust in ten minutes than three follow up calls do, and it is the reason a New Home Dispatch link belongs in almost every first contact script in this book.
+    </div>
+
+    <h3 style="font-size:14.5px; color:var(--navy2); text-transform:uppercase; letter-spacing:.04em; margin-top:30px;">The moat, why this is hard to copy</h3>
+    <p class="lede" style="margin-top:8px; margin-bottom:14px;">Straight from the research strategy: nearly every competitor reports price, the slowest, most lagging number in housing. New Home Dispatch's edge is publishing the indicators that move before price does, sales, listings, permits, and rates, so it describes where the market is going while everyone else describes where it has already been. That edge is what makes the free content worth reading, which is what makes the whole funnel above work.</p>
+    <ul class="rule-list">
+      <li><strong>Proprietary composites.</strong> The NHD Leverage Index and similar named, owned indexes are citation magnets nobody else can publish, because nobody else built them.</li>
+      <li><strong>The new construction lane.</strong> Builder incentives, true cost versus resale, and buydown math, the exact area most national price outlets ignore because new homes are a small share of total sales.</li>
+      <li><strong>Relocation intelligence.</strong> Migration data framed as a decision tool for the exact audience that already defines both New Home Dispatch and Seider Realty Team, people moving in.</li>
+      <li><strong>The Austin flagship.</strong> Being the definitive research voice on the one market this audience cares about most, before expanding the same machine to any other metro.</li>
+    </ul>
+  </section>
+
+  <section class="block tint" id="two-brands">
+    <div class="head-row"><span class="sec-num">5</span><div class="kicker both">Foundational</div></div>
+    <h2>The Two Brands</h2>
+    <p class="lede">Everything in this business runs through one of two brands. Knowing which one you are standing in changes what you can say and what goes on the asset.</p>
+    <div class="card-grid">
+      <div class="card" style="border-top:3px solid var(--nhd-blue);">
+        <h4 style="color:var(--nhd-blue);">New Home Dispatch, the publisher</h4>
+        <p>Independent consumer research on new construction builders. Free, no login, coverage is never for sale. This is the trust building front door. Lead with this, always. Byline is Pete Seider or the reporter's real name, never anonymous.</p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--srt-blue);">
+        <h4 style="color:var(--srt-blue);">Seider Realty Team, the service</h4>
+        <p>Powered by The Ascend Group at LPT Realty. This is where hands on representation lives: touring, negotiating, closing. It is a separate, optional door that opens only when someone asks for it.</p>
+      </div>
+    </div>
+    <div class="callout blue" style="margin-top:22px;">
+      <strong>The one rule that matters most:</strong> one brand per asset, never both on the same piece. Research tools and public content are New Home Dispatch. Pete's personal marketing and client facing consult work are Seider Realty Team. The affiliation line, said exactly this way when it comes up: <em>"Seider Realty Team, powered by The Ascend Group at LPT Realty."</em>
+    </div>
+  </section>
+
+  <!-- ===================== FIELD OPERATIONS ===================== -->
+
+  <section class="block" id="weekly-rhythm">
+    <div class="head-row"><span class="sec-num">6</span><div class="kicker nhd">Field Operations, NHD</div></div>
+    <h2>The Weekly Rhythm</h2>
+    <p class="lede">Five field capable days, a three to five visit weekly target, not a daily quota. Some days will not have a visit at all, and that is by design. Today's row is highlighted automatically.</p>
+    <table class="flow" id="weekly-table">
+      <tr><th>Day</th><th>Primary focus</th><th>Field visit</th></tr>
+      <tr data-day="1"><td class="strong">Monday</td><td>Outreach plus one visit if the week allows it. Review the weekend's incentive sweep before anything else.</td><td>Optional</td></tr>
+      <tr data-day="2"><td class="strong">Tuesday</td><td>Field day. Model homes are open and reps have time, since weekday foot traffic runs lower.</td><td><strong>Yes</strong></td></tr>
+      <tr data-day="3"><td class="strong">Wednesday</td><td>Build and content day: site work, the Buyer Playbook, structured data entry from the week's visits so far.</td><td>Optional</td></tr>
+      <tr data-day="4"><td class="strong">Thursday</td><td>Field day.</td><td><strong>Yes</strong></td></tr>
+      <tr data-day="5"><td class="strong">Friday</td><td>Field day plus the Weekly Dispatch goes out. Close out the week's data before the email sends.</td><td><strong>Yes</strong></td></tr>
+      <tr data-day="6"><td class="strong">Saturday</td><td>Highest buyer foot traffic. Best day for a flagship first visit with the full shot list, if you are taking one this week.</td><td>Optional, high value</td></tr>
+      <tr data-day="0"><td class="strong">Sunday</td><td>Off, or admin only. No field, no outreach.</td><td>No</td></tr>
+    </table>
+    <div class="callout">
+      <strong>Why Tuesday, Thursday, Friday, Saturday and not a fixed daily quota:</strong> treat the table as the default shape, not a rule. Move a visit to whichever day you are actually near a community.
+    </div>
+  </section>
+
+  <section class="block tint" id="daily-itinerary">
+    <div class="head-row"><span class="sec-num">7</span><div class="kicker nhd">Field Operations, NHD</div></div>
+    <h2>The Daily Itinerary</h2>
+    <p class="lede">Same shape every field day. Copy this each morning and fill the blanks before eight.</p>
+    <table class="flow">
+      <tr><th>Block</th><th>What goes here</th></tr>
+      <tr><td class="strong">Early, admin</td><td>Once your morning obligations are clear, read today's incentive sweep delta and yesterday's Visit Summary before you leave the house.</td></tr>
+      <tr><td class="strong">Field block</td><td>Community, builder, and time, filled in. Run the Rapid Field Capture Form, two pages, print or phone. Shoot the floor shot list: entrance, approach, one ordinary street, active construction, amenity status, model exterior, price and incentive evidence, one shot of something buyers usually overlook. One dated observation and one real photo, minimum, before you leave.</td></tr>
+      <tr><td class="strong">Outreach block</td><td>Eight to twelve calls or texts from the database. Pick one reason from the reasons to reach out list below. Never just checking in. Send the same day follow up text to everyone you talked to.</td></tr>
+      <tr><td class="strong">Within 48 hours</td><td>Run the post visit workflow: enter the visit into the field observations database, file media by the naming standard, flag anything that needs editorial review. A visit is not done until the data is entered.</td></tr>
+      <tr><td class="strong">Close of day</td><td>Text the team your Visit Summary. Log it on the Production Board.</td></tr>
+    </table>
+  </section>
+
+  <section class="block" id="field-scripts">
+    <div class="head-row"><span class="sec-num">8</span><div class="kicker nhd">Field Operations, NHD</div></div>
+    <h2>Scripts &amp; Talking Points</h2>
+    <p class="lede">Memorize the ten second version. Everything else builds on it. Every script below has a copy button so you can paste it straight into a text or say it back word for word until it feels natural in your own voice.</p>
+
+    <div class="script-box" data-copy="It's called New Home Dispatch. Think of it as an independent guide for new construction buyers. Free tools, real field reporting, no builder spin. I'm Pete Seider. I built it because buyers deserve someone doing the homework on their side.">
+      <div class="sb-head"><span class="label">Ten seconds</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+      <p>It's called New Home Dispatch. Think of it as an independent guide for new construction buyers. Free tools, real field reporting, no builder spin. I'm Pete Seider. I built it because buyers deserve someone doing the homework on their side.</p>
+    </div>
+
+    <div class="script-box" data-copy="New Home Dispatch is a consumer publication for people buying new construction homes in Central Texas. We visit the communities ourselves, track builder incentives week over week, and verify the tax rates builders tend to gloss over. Then we publish it all for free: a true cost calculator, an offer checker, a twenty five point tour checklist. It's independent, which means coverage is never for sale. If someone wants hands on help beyond the research, that's the Seider Realty Team, powered by The Ascend Group at LPT Realty. The tools stay free for everybody either way, no strings attached.">
+      <div class="sb-head"><span class="label">Thirty seconds</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+      <p>New Home Dispatch is a consumer publication for people buying new construction homes in Central Texas. We visit the communities ourselves, track builder incentives week over week, and verify the tax rates builders tend to gloss over. Then we publish it all for free: a true cost calculator, an offer checker, a twenty five point tour checklist. It's independent, which means coverage is never for sale. If someone wants hands on help beyond the research, that's the Seider Realty Team, powered by The Ascend Group at LPT Realty. The tools stay free for everybody either way, no strings attached.</p>
+    </div>
+
+    <div class="script-box" data-copy="Start with the origin. Years of walking buyers through contracts, watching them get surprised at the design center, by MUD taxes, by from prices that never seem to apply to them. Then the difference. Builder claims get labeled as claims, and when we're wrong, we correct it publicly. Then the products. The Explorer, every community verified in person. The Friday scoreboard. The free tools. Then what's next. Field verification is ongoing, the builder directory keeps growing, and more markets are planned. Then the ask. Their story, or someone they know who's shopping.">
+      <div class="sb-head"><span class="label">Two minutes, five beats in order</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+      <p style="font-style:normal;">
+        <strong>Origin.</strong> Years of walking buyers through contracts, watching them get surprised at the design center, by MUD taxes, by "from" prices that never seem to apply to them.<br><br>
+        <strong>The difference.</strong> Builder claims get labeled as claims, and when we're wrong, we correct it publicly.<br><br>
+        <strong>The products.</strong> The Explorer, every community verified in person. The Friday scoreboard. The free tools.<br><br>
+        <strong>What's next.</strong> Field verification is ongoing, the builder directory keeps growing, more markets are planned.<br><br>
+        <strong>The ask.</strong> Their story, or someone they know who's shopping.
+      </p>
+    </div>
+
+    <h4 style="margin-top:30px; color:var(--navy2); font-size:15px;">Reasons to reach out. Always have a real one, never just checking in.</h4>
+    <ul class="rule-list">
+      <li><strong>The story ask, for past clients:</strong> "I'm building something and I want your voice in it."</li>
+      <li><strong>The launch or update reason:</strong> "The site's been getting real updates. Free tools for new construction buyers, and you're one of the people I want to show first."</li>
+      <li><strong>The market reason:</strong> "Builder incentives are moving right now. We track them weekly. If anyone you know is shopping new construction, the free Friday email is worth reading before they tour."</li>
+      <li><strong>The referral reason, soft, always last:</strong> "Who do you know looking at new builds? I'd rather your people walk in prepared than get played."</li>
+    </ul>
+
+    <h4 style="margin-top:30px; color:var(--navy2); font-size:15px;">Same day follow up texts</h4>
+    <div class="script-box" data-copy="Hey [name], it's Pete Seider with New Home Dispatch. Here's the link to those free buyer tools I mentioned: newhomedispatch.com. True cost calculator, the offer checker, and the Friday email tracking builder incentives. No spam, no builder spin. Great talking with you. Pete">
+      <div class="sb-head"><span class="label">Text, general</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+      <p>Hey [name], it's Pete Seider with New Home Dispatch. Here's the link to those free buyer tools I mentioned: newhomedispatch.com. True cost calculator, the offer checker, and the Friday email tracking builder incentives. No spam, no builder spin. Great talking with you. Pete</p>
+    </div>
+    <div class="script-box" data-copy="Great catching up! Like I said, I'm gathering real, anonymous buyer stories to help people who are right where you were. Two minutes, no names published: newhomedispatch.com/share-your-story">
+      <div class="sb-head"><span class="label">Text, story ask after a call</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+      <p>Great catching up! Like I said, I'm gathering real, anonymous buyer stories to help people who are right where you were. Two minutes, no names published: newhomedispatch.com/share-your-story</p>
+    </div>
+
+    <div class="callout blue" style="margin-top:24px;">
+      <strong>These are the general narratives.</strong> For the specific call, text, and email to use at each stage of an actual buyer or seller relationship, from the first Zillow call through closing and the referral ask, go to the Buyer Lifecycle Engine next.
+    </div>
+  </section>
+
+  <section class="block tint" id="buyer-lifecycle">
+    <div class="head-row"><span class="sec-num">9</span><div class="kicker both">The core system</div></div>
+    <h2>Buyer Lifecycle Engine</h2>
+    <p class="lede">This is the system underneath everything. Every person who ever contacts this business, no matter where they came from, moves through the same eight stages. Each stage below has the call script, the text, the email where it applies, the exact link or tool to send, and the form to fill out so nothing gets forgotten. Anything said or sent more than once lives here.</p>
+
+    <div class="stage-nav">
+      <a href="#stage-cold-lead">1. Cold lead arrives</a>
+      <a href="#stage-first-contact">2. First contact</a>
+      <a href="#stage-qualify">3. Qualify &amp; capture</a>
+      <a href="#stage-nurture">4. Nurture &amp; educate</a>
+      <a href="#stage-tour">5. Tour &amp; showing</a>
+      <a href="#stage-offer">6. Offer &amp; negotiate</a>
+      <a href="#stage-closing">7. Under contract to close</a>
+      <a href="#stage-post-close">8. Post close, story &amp; referral</a>
+    </div>
+
+    <div class="stage" id="stage-cold-lead">
+      <div class="stage-head"><span class="stage-num">1</span><h3>Cold lead arrives</h3></div>
+      <p class="stage-goal"><strong>Goal:</strong> notice it fast and route it correctly. A lead is only cold because nobody has talked to them yet, speed is the entire advantage here.</p>
+      <table class="flow">
+        <tr><th>Source</th><th>What it looks like</th><th>Response time target</th></tr>
+        <tr><td class="strong">Zillow</td><td>Phone call or Zillow lead notification, usually a name and a listing they clicked</td><td>Answer live, or call back within 5 minutes</td></tr>
+        <tr><td class="strong">Database</td><td>A past client texts, calls, or replies to an email</td><td>Same conversation, do not let it wait</td></tr>
+        <tr><td class="strong">Social media</td><td>DM or comment on a New Home Dispatch or personal post</td><td>Within the hour, same day at worst</td></tr>
+        <tr><td class="strong">Website</td><td>Buyer or seller questionnaire submission on peteseider.com, or a buyer strategy call booking</td><td>Within the hour, they already told you what they want</td></tr>
+        <tr><td class="strong">Field</td><td>Someone at a model home or open house asks a real question</td><td>Immediate, in person</td></tr>
+      </table>
+      <div class="callout" style="margin-top:16px;"><strong>The only rule that matters at this stage:</strong> every lead gets logged into Follow Up Boss the same day it arrives, even if the first call goes to voicemail. A lead that only lives in a text thread is a lead that gets lost.</div>
+    </div>
+
+    <div class="stage" id="stage-first-contact">
+      <div class="stage-head"><span class="stage-num">2</span><h3>First contact</h3></div>
+      <p class="stage-goal"><strong>Goal:</strong> find out fast whether this is a real, active buyer or someone early in the process, without sounding like a script. Lead with New Home Dispatch, not with representation.</p>
+      <div class="channel-grid">
+        <div class="script-box" data-copy="Hi, this is Pete Seider, thanks for reaching out through Zillow. I saw you were looking at [address or community], is this still something you are actively looking at, or just starting to explore? [wait for answer] Got it. I actually run an independent research site on new construction in this area, New Home Dispatch, want me to send you what we track on that community so you are not just going off the builder's numbers?">
+          <div class="sb-head"><span class="label">Call, Zillow inbound</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+          <p>Hi, this is Pete Seider, thanks for reaching out through Zillow. I saw you were looking at [address or community], is this still something you are actively looking at, or just starting to explore? [wait for answer] Got it. I actually run an independent research site on new construction in this area, New Home Dispatch, want me to send you what we track on that community so you are not just going off the builder's numbers?</p>
+        </div>
+        <div class="script-box" data-copy="Hi [name], this is Pete Seider, I saw you were looking at homes around [area] on Zillow. No pressure at all, just wanted to reach out and see where you are in the process and send over a free tool that most buyers in your spot find useful.">
+          <div class="sb-head"><span class="label">Text, if the call goes to voicemail</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+          <p>Hi [name], this is Pete Seider, I saw you were looking at homes around [area] on Zillow. No pressure at all, just wanted to reach out and see where you are in the process and send over a free tool that most buyers in your spot find useful.</p>
+        </div>
+        <div class="script-box" data-copy="Subject: Following up on your search near [area] Hi [name], thanks for reaching out through Zillow. I wanted to introduce myself, I'm Pete Seider, and I also run an independent research site called New Home Dispatch that tracks builder incentives and true costs across the metro. Whether or not you ever work with me, the free tools are worth a look before you tour anywhere: newhomedispatch.com. Happy to answer anything in the meantime. Pete">
+          <div class="sb-head"><span class="label">Email, if no phone answer</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+          <p style="font-style:normal;"><strong>Subject: Following up on your search near [area]</strong><br><br>Hi [name], thanks for reaching out through Zillow. I wanted to introduce myself, I'm Pete Seider, and I also run an independent research site called New Home Dispatch that tracks builder incentives and true costs across the metro. Whether or not you ever work with me, the free tools are worth a look before you tour anywhere: newhomedispatch.com. Happy to answer anything in the meantime. Pete</p>
+        </div>
+      </div>
+      <div class="callout blue"><strong>Why New Home Dispatch comes before Seider Realty Team in every one of these:</strong> a stranger does not trust a sales pitch, but they will take a free tool. Representation gets brought up only after they ask, or after they have engaged with something free first.</div>
+    </div>
+
+    <div class="stage" id="stage-qualify">
+      <div class="stage-head"><span class="stage-num">3</span><h3>Qualify &amp; capture</h3></div>
+      <p class="stage-goal"><strong>Goal:</strong> get the handful of facts that decide everything else, on the same call, without it feeling like an interrogation. Use the in-call capture form in section 19 so nothing gets forgotten and it is ready to paste straight into Follow Up Boss.</p>
+      <div class="script-box" data-copy="A few quick questions so I send you the right stuff and don't waste your time. Are you further along and ready to tour, or still early in the research? Is this new construction, resale, or open to either? What area or areas are you focused on? Do you have a timeline, are we talking weeks or months? And have you talked to a lender yet, or is that still ahead of you?">
+        <div class="sb-head"><span class="label">Call, the five questions</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+        <p>A few quick questions so I send you the right stuff and don't waste your time. Are you further along and ready to tour, or still early in the research? Is this new construction, resale, or open to either? What area or areas are you focused on? Do you have a timeline, are we talking weeks or months? And have you talked to a lender yet, or is that still ahead of you?</p>
+      </div>
+      <ul class="rule-list">
+        <li><strong>Stage:</strong> early research, actively touring, or ready to write an offer. This decides everything sent in the next stage.</li>
+        <li><strong>Product:</strong> new construction, resale, or open to either. New construction routes to the Incentive Tracker and the new construction advantage page. Resale routes to the buyer advantage page and the communities tool.</li>
+        <li><strong>Area:</strong> specific community or general part of town. Determines which community page or guide to send.</li>
+        <li><strong>Timeline:</strong> weeks, months, or just watching. Sets the nurture cadence, see stage 4.</li>
+        <li><strong>Financing:</strong> pre approved, talking to a lender, or has not started. Someone with no lender yet needs that conversation before anything else moves.</li>
+      </ul>
+      <div class="callout" style="margin-top:16px;"><strong>Open the capture form now:</strong> jump to <a href="#capture-forms" style="color:#7A5A00; font-weight:700;">In-Call Capture Forms</a> and fill it out live while you are still on the call. It builds a clean summary you can copy straight into Follow Up Boss when you hang up.</div>
+    </div>
+
+    <div class="stage" id="stage-nurture">
+      <div class="stage-head"><span class="stage-num">4</span><h3>Nurture &amp; educate</h3></div>
+      <p class="stage-goal"><strong>Goal:</strong> send the one thing that matches what they actually said, same day, every time. This is the stage most leads are lost at, not from a bad call, but from nothing ever showing up afterward.</p>
+      <table class="link-table">
+        <tr><th>What they told you</th><th>Send this</th><th>Say this with it</th></tr>
+        <tr><td>Looking at new construction</td><td><a href="https://peteseider.com/new-construction-advantage.html" target="_blank" rel="noopener">peteseider.com/new-construction-advantage</a> and the <a href="https://newhomedispatch.com/incentive-tracker.html" target="_blank" rel="noopener">Incentive Tracker</a></td><td>"New construction is actually where I spend most of my time, this tracks what builders are really offering, not just the sticker price."</td></tr>
+        <tr><td>Focused on a specific area or community</td><td><a href="https://newhomedispatch.com/communities" target="_blank" rel="noopener">Communities tool</a></td><td>"This lets you compare tax rate, HOA, and builder mix side by side so you are not guessing between neighborhoods."</td></tr>
+        <tr><td>Worried about total monthly cost</td><td><a href="https://newhomedispatch.com/true-cost-calculator.html" target="_blank" rel="noopener">True Cost Calculator</a></td><td>"This does the real math, taxes, HOA, and insurance included, not just principal and interest."</td></tr>
+        <tr><td>Comparing builder offers</td><td><a href="https://newhomedispatch.com/incentive-tracker.html" target="_blank" rel="noopener">Incentive Tracker</a></td><td>"Every incentive we are tracking across the metro, ranked by real value, not just the sticker number."</td></tr>
+        <tr><td>Touring this weekend</td><td><a href="https://newhomedispatch.com/look-closer-checklist.html" target="_blank" rel="noopener">Look Closer checklist</a></td><td>"A twenty five point checklist to take into the model home, it catches what the sales rep will not point out."</td></tr>
+        <tr><td>Ready for resale, general buyer</td><td><a href="https://peteseider.com/buyer-advantage.html" target="_blank" rel="noopener">peteseider.com/buyer-advantage</a></td><td>"Here is how I work with buyers, no cost to you, the seller's side covers commission."</td></tr>
+        <tr><td>Selling their current home</td><td><a href="https://peteseider.com/seller-advantage.html" target="_blank" rel="noopener">peteseider.com/seller-advantage</a> and the seller questionnaire</td><td>"Let's start with what the home is actually worth right now and what selling looks like on your timeline."</td></tr>
+        <tr><td>Wants ongoing updates, not ready to talk yet</td><td><a href="https://newhomedispatch.com/subscribe-dispatch.html" target="_blank" rel="noopener">Subscribe to the Dispatch</a></td><td>"One email every Friday, the scoreboard, the best deal of the week, a field note. No spam, unsubscribe anytime."</td></tr>
+        <tr><td>Just starting to research, months out</td><td><a href="https://newhomedispatch.com/get-guides.html" target="_blank" rel="noopener">Free buyer guides</a></td><td>"Free sixteen chapter buyer guide, no email needed to read it, good place to start."</td></tr>
+        <tr><td>Wants hands on help now</td><td><a href="https://peteseider.com" target="_blank" rel="noopener">Book a buyer strategy call</a></td><td>"This is where it connects to actual representation, through Seider Realty Team. Everything else stays free either way."</td></tr>
+      </table>
+      <div class="callout blue" style="margin-top:18px;"><strong>Cadence by timeline:</strong> weeks out gets a call within 24 hours of the first send. Months out gets added to the Friday Dispatch and a check in call every two to three weeks. Just watching gets the Dispatch and nothing else until they reach back out, do not over call someone who told you they are not ready.</div>
+    </div>
+
+    <div class="stage" id="stage-tour">
+      <div class="stage-head"><span class="stage-num">5</span><h3>Tour &amp; showing</h3></div>
+      <p class="stage-goal"><strong>Goal:</strong> walk in prepared, and make sure they do too. This is also where a New Home Dispatch field visit can happen in the same trip.</p>
+      <div class="channel-grid">
+        <div class="script-box" data-copy="Before we head in, I sent you the Look Closer checklist, twenty five things worth checking that the model home will not point out on its own. And remember, whatever the sales rep quotes you, I will run the real numbers afterward with taxes and HOA included, so do not make a decision off their number alone.">
+          <div class="sb-head"><span class="label">Text, day of tour</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+          <p>Before we head in, I sent you the Look Closer checklist, twenty five things worth checking that the model home will not point out on its own. And remember, whatever the sales rep quotes you, I will run the real numbers afterward with taxes and HOA included, so do not make a decision off their number alone.</p>
+        </div>
+        <div class="script-box" data-copy="Builder claims are claims until verified, so if the rep tells you something today that sounds off, or too good, write it down and I will check it against what we have on file at New Home Dispatch before you sign anything.">
+          <div class="sb-head"><span class="label">In person, at the model home</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+          <p>Builder claims are claims until verified, so if the rep tells you something today that sounds off, or too good, write it down and I will check it against what we have on file at New Home Dispatch before you sign anything.</p>
+        </div>
+      </div>
+      <div class="callout"><strong>Two birds, one trip:</strong> if this is a community not yet covered, or due for a refresh, run the Rapid Field Capture while you are already there. See Field Tools &amp; Systems for the observation formula and the Send to HQ workflow.</div>
+    </div>
+
+    <div class="stage" id="stage-offer">
+      <div class="stage-head"><span class="stage-num">6</span><h3>Offer &amp; negotiate</h3></div>
+      <p class="stage-goal"><strong>Goal:</strong> make sure every incentive and every number on the table is understood in real terms before anyone signs, and handle the price and incentive objections calmly, using data instead of opinion.</p>
+      <div class="channel-grid">
+        <div class="script-box" data-copy="Before we write this offer, let's run it through the true cost tool together so we both know the real payment, not just what the builder quoted, taxes, HOA, insurance, and the buydown schedule included.">
+          <div class="sb-head"><span class="label">Call, before writing an offer</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+          <p>Before we write this offer, let's run it through the true cost tool together so we both know the real payment, not just what the builder quoted, taxes, HOA, insurance, and the buydown schedule included.</p>
+        </div>
+        <div class="script-box" data-copy="That rate buydown sounds bigger than it actually is once you look at what it is worth over the life of the loan versus a permanent rate reduction or a straight price cut. I can run all three side by side so you know exactly what you are choosing between.">
+          <div class="sb-head"><span class="label">Objection, "the incentive sounds amazing"</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+          <p>That rate buydown sounds bigger than it actually is once you look at what it is worth over the life of the loan versus a permanent rate reduction or a straight price cut. I can run all three side by side so you know exactly what you are choosing between.</p>
+        </div>
+      </div>
+      <p class="lede" style="margin-top:6px; margin-bottom:8px;">See the full Objections &amp; Answers section next for the honest answers to "are you selling something", "how is this different from Zillow", and "why should I trust you."</p>
+    </div>
+
+    <div class="stage" id="stage-closing">
+      <div class="stage-head"><span class="stage-num">7</span><h3>Under contract to closing</h3></div>
+      <p class="stage-goal"><strong>Goal:</strong> keep them calm and informed through the part of the process that feels the longest, and never let a milestone pass without them hearing it from you first.</p>
+      <div class="script-box" data-copy="Quick update, we are officially under contract. Next up is the option period, then inspection, then we move toward the appraisal and final walkthrough. I will text you at every one of those milestones so you are never wondering what is happening. Nothing you need to do right now except sit tight, I will reach out the second there is a next step.">
+        <div class="sb-head"><span class="label">Text, right after going under contract</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+        <p>Quick update, we are officially under contract. Next up is the option period, then inspection, then we move toward the appraisal and final walkthrough. I will text you at every one of those milestones so you are never wondering what is happening. Nothing you need to do right now except sit tight, I will reach out the second there is a next step.</p>
+      </div>
+      <ul class="rule-list">
+        <li><strong>Option period ends:</strong> confirm inspection is scheduled or complete, text the same day.</li>
+        <li><strong>Appraisal ordered:</strong> let them know the expected turnaround, set the expectation before they start wondering.</li>
+        <li><strong>Clear to close:</strong> confirm the closing date and what to bring, text and email both.</li>
+        <li><strong>Day before closing:</strong> a short check in text, "all set for tomorrow, let me know if anything comes up tonight."</li>
+      </ul>
+    </div>
+
+    <div class="stage" id="stage-post-close">
+      <div class="stage-head"><span class="stage-num">8</span><h3>Post close, story &amp; referral</h3></div>
+      <p class="stage-goal"><strong>Goal:</strong> this is where a closed deal turns into the next three leads, through the database, through a story, and through a referral. Do not skip this because the transaction is technically done.</p>
+      <div class="channel-grid">
+        <div class="script-box" data-copy="Congratulations again on the new place! One favor whenever you have two minutes, I'm gathering real, honest buyer stories to help people who are right where you were a few months ago. Totally anonymous if you want, no pressure either way: newhomedispatch.com/share-your-story">
+          <div class="sb-head"><span class="label">Text, one week after closing</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+          <p>Congratulations again on the new place! One favor whenever you have two minutes, I'm gathering real, honest buyer stories to help people who are right where you were a few months ago. Totally anonymous if you want, no pressure either way: newhomedispatch.com/share-your-story</p>
+        </div>
+        <div class="script-box" data-copy="Hope the new place is treating you well. No ask here, just checking in. If anyone you know ever mentions looking at new construction, I would love an introduction, that is genuinely how this business grows. Otherwise, enjoy the house!">
+          <div class="sb-head"><span class="label">Text, thirty to sixty days after closing</span><button class="copy-btn" onclick="copyScript(this)">Copy</button></div>
+          <p>Hope the new place is treating you well. No ask here, just checking in. If anyone you know ever mentions looking at new construction, I would love an introduction, that is genuinely how this business grows. Otherwise, enjoy the house!</p>
+        </div>
+      </div>
+      <div class="callout blue"><strong>Do not lose them into the void:</strong> every closed client goes back into the database and gets added to the Friday Dispatch. They are now the highest trust source in the funnel from stage one, treat future outreach to them accordingly, warmer and less formal than a cold Zillow lead.</div>
+    </div>
+  </section>
+
+  <section class="block tint" id="objections">
+    <div class="head-row"><span class="sec-num">10</span><div class="kicker nhd">Field Operations, NHD</div></div>
+    <h2>Objections, the honest answers</h2>
+    <table class="flow">
+      <tr><th>They ask</th><th>You say</th></tr>
+      <tr><td class="strong">"Are you selling something?"</td><td>"The publication is free and independent. If someone wants representation, my team handles that separately. But the whole point of NHD is you don't need to hire anyone just to get the truth."</td></tr>
+      <tr><td class="strong">"How is it different from Zillow?"</td><td>"Zillow shows listings, and builders are their customers. We do the opposite. It's adversarial homework: incentive tracking, tax verification, field visits, and corrections made on the record."</td></tr>
+      <tr><td class="strong">"What does it cost?"</td><td>"Nothing. The tools, the Friday email, the profiles. All free, no login."</td></tr>
+      <tr><td class="strong">"Why should I trust you?"</td><td>"Honestly, don't just trust it, verify it. Every fact is dated and sourced, anything unverified gets labeled, and corrections stay on the record. That's the whole model."</td></tr>
+    </table>
+  </section>
+
+  <section class="block" id="outreach-links">
+    <div class="head-row"><span class="sec-num">11</span><div class="kicker nhd">Field Operations, NHD</div></div>
+    <h2>Which Link, When</h2>
+    <p class="lede">All free, no login required unless noted. If you are unsure which one fits, send the homepage. It routes to everything: <a href="https://newhomedispatch.com" target="_blank" rel="noopener">newhomedispatch.com</a></p>
+    <table class="link-table">
+      <tr><th>Situation</th><th>Send this link</th><th>One line to say with it</th></tr>
+      <tr><td>General interest, just met someone</td><td><a href="https://newhomedispatch.com" target="_blank" rel="noopener">newhomedispatch.com</a></td><td>"Independent research on new construction builders. It's free."</td></tr>
+      <tr><td>They want ongoing updates</td><td><a href="https://newhomedispatch.com/subscribe-dispatch.html" target="_blank" rel="noopener">/subscribe-dispatch.html</a></td><td>"One email every Friday: the scoreboard, best deal of the week, a field note."</td></tr>
+      <tr><td>They are early in research</td><td><a href="https://newhomedispatch.com/get-guides.html" target="_blank" rel="noopener">/get-guides.html</a></td><td>"Free sixteen chapter buyer guide. No email needed to read it."</td></tr>
+      <tr><td>They are comparing builder offers</td><td><a href="https://newhomedispatch.com/incentive-tracker.html" target="_blank" rel="noopener">/incentive-tracker.html</a></td><td>"Every incentive we're tracking, ranked by real value, not the sticker number."</td></tr>
+      <tr><td>"What will this actually cost me?"</td><td><a href="https://newhomedispatch.com/true-cost-calculator.html" target="_blank" rel="noopener">/true-cost-calculator.html</a></td><td>"Real monthly cost with taxes, HOA, and insurance included."</td></tr>
+      <tr><td>Deciding between communities</td><td><a href="https://newhomedispatch.com/communities" target="_blank" rel="noopener">/communities</a></td><td>"Filter and compare tracked communities: tax rate, HOA, builders."</td></tr>
+      <tr><td>Touring this weekend</td><td><a href="https://newhomedispatch.com/look-closer-checklist.html" target="_blank" rel="noopener">/look-closer-checklist.html</a></td><td>"Twenty five point checklist to take into the model home."</td></tr>
+      <tr><td>Wants hands on help</td><td><a href="https://newhomedispatch.com/buyer-strategy-call" target="_blank" rel="noopener">/buyer-strategy-call</a></td><td>"This is where it connects to representation, through Seider Realty Team."</td></tr>
+      <tr><td>Got a different quote than the tracker shows</td><td>Report an Incentive form, bottom of /incentive-tracker.html</td><td>"Tell us. We verify before it goes live, and your name never does."</td></tr>
+    </table>
+    <div class="callout blue" style="margin-top:18px;"><strong>Once they are ready to actually work with you, the link switches from newhomedispatch.com to peteseider.com.</strong> See section 17, peteseider.com Conversion Playbook, for the page by page version of this same table on the conversion side.</div>
+  </section>
+
+  <section class="block tint" id="story-collection">
+    <div class="head-row"><span class="sec-num">12</span><div class="kicker nhd">Field Operations, NHD</div></div>
+    <h2>Story Collection</h2>
+    <p class="lede">Two forms, same goal, a buyer's story sent back to you privately, for two different audiences.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h4>Form 1, people you have worked with</h4>
+        <p><a href="https://newhomedispatch.com/share-your-story" target="_blank" rel="noopener">newhomedispatch.com/share-your-story</a> (short: <a href="https://newhomedispatch.com/share" target="_blank" rel="noopener">/share</a>)<br><br>For your past clients, people who already know you. Text it after a call. Name and contact are both optional, and there is an optional section for the ones who want to go deeper.</p>
+      </div>
+      <div class="card">
+        <h4>Form 2, anyone, fully anonymous</h4>
+        <p><a href="https://newhomedispatch.com/share-anonymously" target="_blank" rel="noopener">newhomedispatch.com/share-anonymously</a><br><br>For any website visitor. Lives in the site footer on every page. Does not ask for a name. This is the one that finds people on its own.</p>
+      </div>
+    </div>
+    <div class="callout blue">
+      <strong>The simple way to remember it:</strong> share-your-story is for people you know, you text that one. share-anonymously is for anybody, it lives on the website.
+    </div>
+  </section>
+
+  <section class="block" id="field-tools">
+    <div class="head-row"><span class="sec-num">13</span><div class="kicker nhd">Field Operations, NHD</div></div>
+    <h2>Field Tools &amp; Systems</h2>
+    <p class="lede">These pages are unlisted, no index, linked nowhere public. Share them directly with the team only, do not post them publicly.</p>
+    <table class="link-table">
+      <tr><th>Tool</th><th>URL</th><th>Use</th></tr>
+      <tr><td>Team hub <span class="pill unlisted">start here</span></td><td><a href="https://newhomedispatch.com/team/" target="_blank" rel="noopener">/team/</a></td><td>Links to everything below plus add to home screen instructions. Give a new reporter this one link.</td></tr>
+      <tr><td>Community Visit Summary</td><td><a href="https://newhomedispatch.com/field-visit-summary.html" target="_blank" rel="noopener">/field-visit-summary.html</a></td><td>Every field visit. Structured capture, confidence dots, photo auto naming, send to HQ filing.</td></tr>
+      <tr><td>Production Board</td><td><a href="https://newhomedispatch.com/team/production-board.html" target="_blank" rel="noopener">/team/production-board.html</a></td><td>Daily ops: ready, in progress, blocked, backlog.</td></tr>
+      <tr><td>Sprint Command Center</td><td><a href="https://newhomedispatch.com/team/command-center.html" target="_blank" rel="noopener">/team/command-center.html</a></td><td>Critical path, the ten action sprint, scoreboard thresholds, guardrails.</td></tr>
+      <tr><td>Look Closer checklist, public</td><td><a href="https://newhomedispatch.com/look-closer-checklist.html" target="_blank" rel="noopener">/look-closer-checklist.html</a></td><td>Buyer checklist that doubles as the reporter inspection list.</td></tr>
+      <tr><td>How We Evaluate, public</td><td><a href="https://newhomedispatch.com/how-we-evaluate.html" target="_blank" rel="noopener">/how-we-evaluate.html</a></td><td>The standard every observation must meet. Required reading before a first field day.</td></tr>
+    </table>
+    <div class="callout blue">
+      <strong>Save it as an app, once per phone:</strong> iPhone, open in Safari, tap Share, then Add to Home Screen. Android, Chrome, tap the three dots, then Add to Home screen. It installs full screen like a native app.
+    </div>
+    <h4 style="margin-top:26px; color:var(--navy2); font-size:15px;">The observation formula, what goes in "Three Things I Saw"</h4>
+    <p style="font-size:13.5px; color:var(--slate); margin-top:6px;"><strong>What, plus where or scope, plus a number, plus how you know.</strong> Then tag it:</p>
+    <ul class="rule-list">
+      <li>🟢 <strong>Verified</strong>, you counted it, photographed it, or hold the document.</li>
+      <li>🟡 <strong>Builder claimed</strong>, a rep or flyer said it, treat it as a claim.</li>
+      <li>🔴 <strong>Needs verification</strong>, conflicting, verbal only, or unchecked.</li>
+    </ul>
+    <p style="font-size:13px; color:var(--slate); margin-top:10px;">Good: <em>"Six completed spec homes on Serene Way, two with price improved riders, counted and photographed."</em> 🟢 &nbsp;·&nbsp; Bad: <em>"Lots of inventory sitting."</em> No number, no location, no evidence.</p>
+  </section>
+
+  <!-- ===================== BUSINESS SYSTEMS ===================== -->
+
+  <section class="block tint" id="data-architecture">
+    <div class="head-row"><span class="sec-num">14</span><div class="kicker nhd">Business Systems, NHD</div></div>
+    <h2>Data &amp; Research Architecture</h2>
+    <p class="lede">The short version of how NHD's research actually gets built, for anyone who needs to understand why the numbers are trustworthy, not just what they say.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h4>Entity ID system</h4>
+        <p>Every builder, community, tax district, property, source, offer, observation, and publication has a stable ID. This is what stops "D.R. Horton" and "DR Horton" from silently becoming two different builders in the data.</p>
+      </div>
+      <div class="card">
+        <h4>Coverage minimums</h4>
+        <p>Before any metro wide claim is published: at least fifteen active builders, at least forty communities, all five MSA counties, at least eighty percent verified with a quote, at least ninety percent observed within thirty days. Until that bar is met, everything is labeled pilot or sample, never a metro wide claim.</p>
+      </div>
+      <div class="card">
+        <h4>Evidence tiers</h4>
+        <p>Public builder claim, then MLS, then direct written confirmation, then field observation, then verified transaction. Field talk is never treated as equal to written terms.</p>
+      </div>
+      <div class="card">
+        <h4>MLS and portal data, never scraped</h4>
+        <p>Under any circumstance. This protects the pending MLS Grid and IDX application, which is an existential risk to a real business relationship, not just a style choice.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="roadmap">
+    <div class="head-row"><span class="sec-num">15</span><div class="kicker nhd">Business Systems, NHD</div></div>
+    <h2>Priority Roadmap, where the business is headed</h2>
+    <p class="lede">The build order, so everyone understands why today's work matters to what comes next.</p>
+    <table class="flow">
+      <tr><th>Phase</th><th>What it is</th><th>Status</th></tr>
+      <tr><td class="strong">P1</td><td>Publish the Incentive Tracker as a labeled pilot</td><td>Done</td></tr>
+      <tr><td class="strong">P2</td><td>Expand coverage toward fifteen builders, forty communities, five counties</td><td>In progress</td></tr>
+      <tr><td class="strong">P3</td><td>Historical change detection and timelines, "Since Last Update"</td><td>Waiting on a second monthly archive</td></tr>
+      <tr><td class="strong">P4</td><td>Buyer offer comparison calculator, the single highest leverage next build</td><td>Next</td></tr>
+      <tr><td class="strong">P5</td><td>MUD and PID Tax Atlas, phase one map</td><td>Seeded, fourteen districts</td></tr>
+      <tr><td class="strong">P6</td><td>True Cost Compare, joins builder, community, tax, and property data</td><td>Architecture designed</td></tr>
+      <tr><td class="strong">P7</td><td>Composite Incentive Intensity Index</td><td>Deliberately held until coverage and history exist</td></tr>
+    </table>
+  </section>
+
+  <!-- ===================== SALES & SERVICE ===================== -->
+
+  <section class="block tint" id="srt-site">
+    <div class="head-row"><span class="sec-num">16</span><div class="kicker srt">Sales &amp; Service, SRT</div></div>
+    <h2>peteseider.com, Live Pages</h2>
+    <p class="lede">The client facing side of the business. Core pages plus the newest additions.</p>
+    <table class="link-table">
+      <tr><th>Page</th><th>URL</th><th>Notes</th></tr>
+      <tr><td>Home</td><td><a href="https://peteseider.com" target="_blank" rel="noopener">peteseider.com</a></td><td>&nbsp;</td></tr>
+      <tr><td>Buy</td><td><a href="https://peteseider.com/buy.html" target="_blank" rel="noopener">/buy.html</a></td><td>Links to the Buyer Questionnaire</td></tr>
+      <tr><td>Sell</td><td><a href="https://peteseider.com/sell.html" target="_blank" rel="noopener">/sell.html</a></td><td>Links to the Seller Questionnaire</td></tr>
+      <tr><td>New Construction</td><td><a href="https://peteseider.com/new-construction.html" target="_blank" rel="noopener">/new-construction.html</a></td><td>&nbsp;</td></tr>
+      <tr><td>Live Home Search</td><td><a href="https://peteseider.com/homes.html" target="_blank" rel="noopener">/homes.html</a></td><td>Inline community and builder results, ZIP mapping</td></tr>
+      <tr><td>Buyer Advantage <span class="pill internal">landing page</span></td><td><a href="https://peteseider.com/buyer-advantage.html" target="_blank" rel="noopener">/buyer-advantage.html</a></td><td>Standalone, for paid traffic and social, not in the nav</td></tr>
+      <tr><td>Seller Advantage <span class="pill internal">landing page</span></td><td><a href="https://peteseider.com/seller-advantage.html" target="_blank" rel="noopener">/seller-advantage.html</a></td><td>Standalone, for paid traffic and social, not in the nav</td></tr>
+      <tr><td>New Construction Advantage <span class="pill internal">landing page</span></td><td><a href="https://peteseider.com/new-construction-advantage.html" target="_blank" rel="noopener">/new-construction-advantage.html</a></td><td>Standalone, for paid traffic and social, not in the nav</td></tr>
+      <tr><td>Buyer Questionnaire</td><td><a href="https://peteseider.com/buyer-questionnaire.html" target="_blank" rel="noopener">/buyer-questionnaire.html</a></td><td>&nbsp;</td></tr>
+      <tr><td>Seller Questionnaire</td><td><a href="https://peteseider.com/seller-questionnaire.html" target="_blank" rel="noopener">/seller-questionnaire.html</a></td><td>Linked from the footer and the Sell page hero</td></tr>
+    </table>
+  </section>
+
+  <section class="block" id="srt-playbook">
+    <div class="head-row"><span class="sec-num">17</span><div class="kicker srt">Sales &amp; Service, SRT</div></div>
+    <h2>peteseider.com Conversion Playbook</h2>
+    <p class="lede">New Home Dispatch earns the trust. This site is where that trust turns into a named lead. Every page has a job, and the job is always to move someone one step closer to the buyer strategy call or a filled out questionnaire. This is the page by page version of the funnel described in section 4.</p>
+
+    <table class="link-table">
+      <tr><th>Page</th><th>Its one job</th><th>Send it when</th></tr>
+      <tr><td>Home, <a href="https://peteseider.com" target="_blank" rel="noopener">peteseider.com</a></td><td>Establish credibility fast and route to buy, sell, or new construction</td><td>First link sent to anyone who does not yet know which path they need</td></tr>
+      <tr><td>Buy, <a href="https://peteseider.com/buy.html" target="_blank" rel="noopener">/buy.html</a></td><td>Explain how buyer representation works, route to the questionnaire</td><td>Resale buyer, ready to talk about working together</td></tr>
+      <tr><td>Buyer Advantage, <a href="https://peteseider.com/buyer-advantage.html" target="_blank" rel="noopener">/buyer-advantage.html</a></td><td>High end standalone pitch for paid traffic and social, no site nav</td><td>Cold social or paid click, someone who has never heard of Pete before</td></tr>
+      <tr><td>Buyer Questionnaire, <a href="https://peteseider.com/buyer-questionnaire.html" target="_blank" rel="noopener">/buyer-questionnaire.html</a></td><td>Capture timeline, budget, area, and financing stage in their own words</td><td>They said yes to working together, before the first real conversation</td></tr>
+      <tr><td>Sell, <a href="https://peteseider.com/sell.html" target="_blank" rel="noopener">/sell.html</a></td><td>Explain how listing works, route to the seller questionnaire</td><td>Anyone who mentions selling their current home</td></tr>
+      <tr><td>Seller Advantage, <a href="https://peteseider.com/seller-advantage.html" target="_blank" rel="noopener">/seller-advantage.html</a></td><td>High end standalone pitch for paid traffic and social, no site nav</td><td>Cold social or paid click focused on selling</td></tr>
+      <tr><td>Seller Questionnaire, <a href="https://peteseider.com/seller-questionnaire.html" target="_blank" rel="noopener">/seller-questionnaire.html</a></td><td>Capture the home, the timeline, and the motivation to sell</td><td>They said yes to a listing conversation</td></tr>
+      <tr><td>New Construction, <a href="https://peteseider.com/new-construction.html" target="_blank" rel="noopener">/new-construction.html</a></td><td>Position Pete as a new construction specialist, not just a resale agent</td><td>Anyone who mentions a builder, a model home, or a community by name</td></tr>
+      <tr><td>New Construction Advantage, <a href="https://peteseider.com/new-construction-advantage.html" target="_blank" rel="noopener">/new-construction-advantage.html</a></td><td>High end standalone pitch for paid traffic and social, no site nav</td><td>Cold social or paid click focused on new construction</td></tr>
+      <tr><td>Live Home Search, <a href="https://peteseider.com/homes.html" target="_blank" rel="noopener">/homes.html</a></td><td>Let them browse communities and builder offers inline, no data entry</td><td>Someone who wants to look before they are ready to talk to anyone</td></tr>
+      <tr><td>Buyer Strategy Call</td><td>Book actual time on the calendar, the final step of the funnel</td><td>Anyone who has engaged with at least one free tool or one questionnaire already</td></tr>
+    </table>
+
+    <div class="callout" style="margin-top:20px;"><strong>The pattern to notice:</strong> every one of the three advantage pages exists for cold traffic that has never heard the New Home Dispatch pitch, paid ads and social shares. Everyone who is already warm from New Home Dispatch should land on the plain buy, sell, or new construction page instead, since they have already heard the trust building pitch and do not need to be sold again.</div>
+
+    <h3 style="margin-top:30px; font-size:16px; color:var(--navy2);">How the two sites divide the work</h3>
+    <div class="flow-diagram">
+      <div class="flow-box accent"><h5>newhomedispatch.com</h5><p>Free, independent, no ask. Builds trust. Never pitches representation directly.</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box"><h5>peteseider.com</h5><p>The pitch, the questionnaires, the advantage pages, and the booking link all live here. This is where representation is finally offered.</p></div>
+    </div>
+    <p class="lede" style="margin-top:16px; margin-bottom:0;">If a New Home Dispatch page ever pitches representation directly, or a peteseider.com page pretends to be neutral research, the one brand per asset rule from section 5 has been broken. Fix it before it ships.</p>
+  </section>
+
+  <section class="block" id="zillow-leads">
+    <div class="head-row"><span class="sec-num">18</span><div class="kicker srt">Sales &amp; Service, SRT</div></div>
+    <h2>Lead &amp; CRM Systems</h2>
+    <p class="lede"><strong>Follow Up Boss is the main CRM.</strong> Every lead should end up there, no matter where it started. RealScout, HouseWhisperer, and Yolo run alongside it as additional technology, and Zillow is a lead source that feeds in. Full step by step detail is coming once the handoff between each tool is confirmed. For now, here is the shell so nothing gets forgotten.</p>
+    <div class="card-grid">
+      <div class="card" style="border-top:3px solid var(--srt-blue);">
+        <h4>Follow Up Boss <span class="pill internal">main CRM</span></h4>
+        <p>The system of record for every lead and every past client. Add: login location, who owns first response, the follow up cadence expected once a lead lands here.</p>
+      </div>
+      <div class="card">
+        <h4>RealScout <span class="pill soon">detail coming</span></h4>
+        <p>Buyer collaboration platform. Add: how it connects to Follow Up Boss, and when a lead should be moved into it.</p>
+      </div>
+      <div class="card">
+        <h4>HouseWhisperer <span class="pill soon">detail coming</span></h4>
+        <p>Add: what this tool actually does day to day and where it fits between Follow Up Boss and a live conversation.</p>
+      </div>
+      <div class="card">
+        <h4>Yolo <span class="pill soon">detail coming</span></h4>
+        <p>Add: what this tool actually does day to day and where it fits between Follow Up Boss and a live conversation.</p>
+      </div>
+      <div class="card">
+        <h4>Zillow <span class="pill soon">detail coming</span></h4>
+        <p>Lead source, likely through Zillow Premier Agent. Add: response time expectation and how a Zillow lead lands in Follow Up Boss.</p>
+        <a class="ext" href="https://www.zillow.com/agent-resources/premier-agent/" target="_blank" rel="noopener">zillow.com/agent-resources ↗</a>
+      </div>
+    </div>
+    <div class="callout todo">
+      <strong>This section grows next.</strong> Walk through one real lead, start to close, through Follow Up Boss and every tool it touches, and this becomes a real step by step map instead of a shell.
+    </div>
+  </section>
+
+  <section class="block tint" id="capture-forms">
+    <div class="head-row"><span class="sec-num">19</span><div class="kicker srt">Sales &amp; Service, SRT</div></div>
+    <h2>In-Call Capture Forms</h2>
+    <p class="lede">Fill these out live, while still on the phone or standing in front of someone. Nothing here saves anywhere or leaves this page, it only builds a clean summary you can copy and paste straight into Follow Up Boss the second the conversation ends. Nothing gets forgotten between hanging up and logging it.</p>
+
+    <div class="capture-form" id="buyer-capture">
+      <h4>Buyer Capture</h4>
+      <p class="cf-note">Use this for stage 3, Qualify &amp; Capture, in the Buyer Lifecycle Engine. Every field is optional, fill in whatever actually came up in the conversation.</p>
+      <div class="form-grid">
+        <div class="form-field"><label>Name</label><input type="text" data-label="Name"></div>
+        <div class="form-field"><label>Phone or email</label><input type="text" data-label="Contact"></div>
+        <div class="form-field"><label>Source</label>
+          <select data-label="Source"><option value=""></option><option>Zillow</option><option>Database, past client</option><option>Social media</option><option>Website questionnaire</option><option>Field, in person</option><option>Referral</option></select>
+        </div>
+        <div class="form-field"><label>Stage</label>
+          <select data-label="Stage"><option value=""></option><option>Early research</option><option>Actively touring</option><option>Ready to write an offer</option></select>
+        </div>
+        <div class="form-field"><label>Product</label>
+          <select data-label="Product"><option value=""></option><option>New construction</option><option>Resale</option><option>Open to either</option></select>
+        </div>
+        <div class="form-field"><label>Area or community</label><input type="text" data-label="Area"></div>
+        <div class="form-field"><label>Price range</label><input type="text" data-label="Price range"></div>
+        <div class="form-field"><label>Timeline</label>
+          <select data-label="Timeline"><option value=""></option><option>Weeks</option><option>1 to 3 months</option><option>3 to 6 months</option><option>Just watching</option></select>
+        </div>
+        <div class="form-field"><label>Financing</label>
+          <select data-label="Financing"><option value=""></option><option>Pre approved</option><option>Talking to a lender</option><option>Has not started</option></select>
+        </div>
+        <div class="form-field full"><label>Notes, anything else worth remembering</label><textarea data-label="Notes"></textarea></div>
+      </div>
+      <div class="cf-actions">
+        <button class="cf-btn primary" onclick="buildSummary('buyer-capture')">Build summary</button>
+        <button class="cf-btn ghost" onclick="copySummary('buyer-capture', this)">Copy summary</button>
+        <button class="cf-btn ghost" onclick="clearCaptureForm('buyer-capture')">Clear form</button>
+      </div>
+      <div class="summary-out" id="buyer-capture-out"></div>
+    </div>
+
+    <div class="capture-form" id="seller-capture">
+      <h4>Seller Capture</h4>
+      <p class="cf-note">Use this the moment someone mentions selling their current home, whether or not they are also buying.</p>
+      <div class="form-grid">
+        <div class="form-field"><label>Name</label><input type="text" data-label="Name"></div>
+        <div class="form-field"><label>Phone or email</label><input type="text" data-label="Contact"></div>
+        <div class="form-field"><label>Property address</label><input type="text" data-label="Address"></div>
+        <div class="form-field"><label>Source</label>
+          <select data-label="Source"><option value=""></option><option>Zillow</option><option>Database, past client</option><option>Social media</option><option>Website questionnaire</option><option>Field, in person</option><option>Referral</option></select>
+        </div>
+        <div class="form-field"><label>Reason for selling</label><input type="text" data-label="Reason"></div>
+        <div class="form-field"><label>Timeline</label>
+          <select data-label="Timeline"><option value=""></option><option>Weeks</option><option>1 to 3 months</option><option>3 to 6 months</option><option>Just exploring value</option></select>
+        </div>
+        <div class="form-field"><label>Also buying next</label>
+          <select data-label="Also buying"><option value=""></option><option>Yes, new construction</option><option>Yes, resale</option><option>Not sure yet</option><option>No, selling only</option></select>
+        </div>
+        <div class="form-field"><label>Mortgage status</label><input type="text" data-label="Mortgage status" placeholder="Payoff estimate or notes"></div>
+        <div class="form-field full"><label>Notes, anything else worth remembering</label><textarea data-label="Notes"></textarea></div>
+      </div>
+      <div class="cf-actions">
+        <button class="cf-btn primary" onclick="buildSummary('seller-capture')">Build summary</button>
+        <button class="cf-btn ghost" onclick="copySummary('seller-capture', this)">Copy summary</button>
+        <button class="cf-btn ghost" onclick="clearCaptureForm('seller-capture')">Clear form</button>
+      </div>
+      <div class="summary-out" id="seller-capture-out"></div>
+    </div>
+
+    <div class="callout blue"><strong>These stay private to this device.</strong> Nothing typed here is saved, submitted, or sent anywhere automatically, it only builds text on this screen for you to copy. Treat it like a notepad, not a database, Follow Up Boss is still the system of record.</div>
+  </section>
+
+  <!-- ===================== DIRECTORY ===================== -->
+
+  <section class="block tint" id="tools-directory">
+    <div class="head-row"><span class="sec-num">20</span><div class="kicker both">Directory</div></div>
+    <h2>Internal Tools &amp; Repos</h2>
+    <table class="link-table">
+      <tr><th>System</th><th>Where</th><th>What it is for</th></tr>
+      <tr><td>peteseider.com repo <span class="pill internal">GitHub</span></td><td><a href="https://github.com/peteseider/PeteSeider-Website-GITHUB" target="_blank" rel="noopener">peteseider/PeteSeider-Website-GITHUB</a></td><td>Site source. Deploys through GitHub's Upload Files page, there is no direct git push channel from the assistant side.</td></tr>
+      <tr><td>newhomedispatch.com repo <span class="pill internal">GitHub</span></td><td><a href="https://github.com/peteseider/newhomedispatch-site" target="_blank" rel="noopener">peteseider/newhomedispatch-site</a></td><td>Site source, quant scripts, and the automated sensors.</td></tr>
+      <tr><td>Netlify, both sites <span class="pill internal">hosting</span></td><td><a href="https://app.netlify.com" target="_blank" rel="noopener">app.netlify.com</a></td><td>Deploy logs, form submissions, environment variables.</td></tr>
+      <tr><td>Master Package <span class="pill internal">Desktop</span></td><td>Desktop, New Home Dispatch Master Package</td><td>Start Here, Latest Deploy, Field Notes, Team Field Kit, Collateral, Strategy, Version History, Data and Technical.</td></tr>
+      <tr><td>Research Engine <span class="pill internal">Desktop</span></td><td>Desktop, Seider Realty Team Research Engine</td><td>Canonical data files, brand assets, chart kits, strategy brief.</td></tr>
+    </table>
+  </section>
+
+  <section class="block" id="external-directory">
+    <div class="head-row"><span class="sec-num">21</span><div class="kicker both">Directory</div></div>
+    <h2>External Links</h2>
+    <table class="link-table">
+      <tr><th>Service</th><th>Link</th><th>Use</th></tr>
+      <tr><td>Follow Up Boss <span class="pill internal">main CRM</span></td><td><a href="https://www.followupboss.com" target="_blank" rel="noopener">followupboss.com ↗</a></td><td>Where every lead should end up. See Lead and CRM Systems above.</td></tr>
+      <tr><td>Zillow</td><td><a href="https://www.zillow.com" target="_blank" rel="noopener">zillow.com ↗</a></td><td>Listings portal and lead source. See Lead and CRM Systems above.</td></tr>
+      <tr><td>LPT Realty</td><td><a href="https://www.lptrealty.com" target="_blank" rel="noopener">lptrealty.com ↗</a></td><td>Sponsoring brokerage.</td></tr>
+      <tr><td>MLS Grid</td><td><a href="https://www.mlsgrid.com" target="_blank" rel="noopener">mlsgrid.com ↗</a></td><td>IDX data feed, registration path for MLS search on peteseider.com.</td></tr>
+      <tr><td>Unlock MLS, ABOR</td><td><a href="https://abor.com" target="_blank" rel="noopener">abor.com ↗</a></td><td>Austin Board of Realtors, market reports, MLS access questions.</td></tr>
+      <tr><td>FRED, St Louis Fed</td><td><a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">fred.stlouisfed.org ↗</a></td><td>Backbone macro data source for NHD research.</td></tr>
+      <tr><td>Texas Comptroller, Special Districts</td><td><a href="https://comptroller.texas.gov" target="_blank" rel="noopener">comptroller.texas.gov ↗</a></td><td>MUD and PID finance data for the Tax Atlas.</td></tr>
+      <tr><td>TCAD, WCAD, Hays CAD</td><td><a href="https://www.traviscad.org" target="_blank" rel="noopener">traviscad.org ↗</a></td><td>County appraisal district parcel and rate data.</td></tr>
+    </table>
+  </section>
+
+  <section class="block tint" id="brand-reference">
+    <div class="head-row"><span class="sec-num">22</span><div class="kicker both">Directory</div></div>
+    <h2>Brand Quick Reference</h2>
+    <p class="lede">The full rules live in the Brand and Logo docs. This is the fast version, for picking a color or checking a font mid task.</p>
+
+    <h4 style="color:var(--nhd-blue); font-size:15px; margin-top:8px;">New Home Dispatch</h4>
+    <p style="font-size:13px; color:var(--slate); margin:6px 0 4px;">Logo: <strong>new Home | dispatch.</strong> "Home" set in blue, with a blue period. Tagline: "Look Closer." Font: Poppins.</p>
+    <div class="swatch-row">
+      <div class="swatch"><div class="chip" style="background:#1E2E9E;"></div><div class="name">NHD Blue, light background</div><div class="hex">#1E2E9E</div></div>
+      <div class="swatch"><div class="chip" style="background:#5B82EF;"></div><div class="name">NHD Blue, dark background</div><div class="hex">#5B82EF</div></div>
+      <div class="swatch"><div class="chip" style="background:#0B2545;"></div><div class="name">System Navy</div><div class="hex">#0B2545</div></div>
+    </div>
+
+    <h4 style="color:var(--srt-blue); font-size:15px; margin-top:30px;">Seider Realty Team</h4>
+    <p style="font-size:13px; color:var(--slate); margin:6px 0 4px;">Full logo, the S house mark plus wordmark plus sponsor line, for primary marketing. The S symbol alone only where space is tight, avatars, favicons, watermarks.</p>
+    <div class="swatch-row">
+      <div class="swatch"><div class="chip" style="background:#131A2B;"></div><div class="name">SRT Navy</div><div class="hex">#131A2B</div></div>
+      <div class="swatch"><div class="chip" style="background:#1D5FB0;"></div><div class="name">Leading series blue</div><div class="hex">#1D5FB0</div></div>
+      <div class="swatch"><div class="chip" style="background:#1E8449;"></div><div class="name">Lagging series green</div><div class="hex">#1E8449</div></div>
+      <div class="swatch"><div class="chip" style="background:#6E86D8;"></div><div class="name">Sponsor line accent</div><div class="hex">#6E86D8</div></div>
+    </div>
+
+    <div class="callout" style="margin-top:24px;">
+      <strong>Never mix the two logos on one asset.</strong> Dark lockup on navy or black backgrounds, light lockup on white. Do not stretch, recolor, or re typeset either logo.
+    </div>
+  </section>
+
+  <!-- ===================== ONBOARDING ===================== -->
+
+  <section class="block" id="new-hire">
+    <div class="head-row"><span class="sec-num">23</span><div class="kicker both">Onboarding</div></div>
+    <h2>New Hire, First Week</h2>
+    <p class="lede">Read this book in this order and you will be field ready by day three.</p>
+    <div class="journey">
+      <div class="day">
+        <div class="num">1</div>
+        <h4>Day 1, Orient</h4>
+        <ul>
+          <li>Read The Two Brands and How We Evaluate, linked in Field Tools.</li>
+          <li>Save the Team Hub link to your home screen.</li>
+          <li>Memorize the ten second script. Say it out loud five times.</li>
+        </ul>
+      </div>
+      <div class="day">
+        <div class="num">2</div>
+        <h4>Day 2, Learn the tools</h4>
+        <ul>
+          <li>Open the Community Visit Summary tool and tap "See a filled example."</li>
+          <li>Read the observation formula until the three tags are automatic.</li>
+          <li>Walk through Which Link, When. Know the top three by heart: homepage, tracker, true cost calculator.</li>
+        </ul>
+      </div>
+      <div class="day">
+        <div class="num">3</div>
+        <h4>Day 3, First field day</h4>
+        <ul>
+          <li>Shadow a visit if you can, or run your own using the Daily Itinerary template.</li>
+          <li>Practice the thirty second script live, once, on a real rep.</li>
+          <li>File the visit within forty eight hours. This book, not memory, is the source of truth on how.</li>
+        </ul>
+      </div>
+      <div class="day">
+        <div class="num">4</div>
+        <h4>By end of week</h4>
+        <ul>
+          <li>Complete one outreach block, eight to twelve calls or texts, with a real reason from the menu.</li>
+          <li>Know the rules below cold. They are not optional.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="rules">
+    <div class="head-row"><span class="sec-num">24</span><div class="kicker both">Onboarding</div></div>
+    <h2>Rules That Do Not Change</h2>
+    <ul class="rule-list">
+      <li><strong>Free tools first, always.</strong> Representation is a separate, optional door, never lead with it.</li>
+      <li><strong>Do not quote a number from memory.</strong> Incentives and tax rates move weekly, point to the live tracker or calculator instead.</li>
+      <li><strong>MLS and portal data is never scraped,</strong> under any circumstance. It protects the real IDX relationship.</li>
+      <li><strong>One good field capture beats five rushed ones.</strong> A visit is not complete until the data is entered, not when you leave the community.</li>
+      <li><strong>Builder claims are claims until verified.</strong> Advertised prices are floors, not facts.</li>
+      <li><strong>Byline standard:</strong> Pete Seider or the reporter's real name, never anonymous when representing the brand.</li>
+      <li><strong>Affiliation line, said exactly this way when it comes up:</strong> "Seider Realty Team, powered by The Ascend Group at LPT Realty."</li>
+      <li><strong>One brand per asset, never both.</strong> See The Two Brands.</li>
+    </ul>
+  </section>
+
+  <footer class="book-footer">
+    Team Flow Book, Rev 2, built 2026-07-24, New Home Dispatch and Seider Realty Team, internal use only.<br>
+    Sourced from the Team Field Kit, the Field Operating Rhythm, the Team Tools Guide, and the Brand and Logo Rules docs. Tell your Claude session what to add, correct, or expand. This book is meant to be kept current.
+  </footer>
+
+</div>
+
+<!-- ===================== Quick Access ===================== -->
+<button id="qa-btn" onclick="toggleQA()">⚡</button>
+<div id="qa-panel">
+  <div class="qa-head">
+    <div class="qa-day" id="qa-day">Today</div>
+    <div class="qa-focus" id="qa-focus">Loading...</div>
+  </div>
+  <div class="qa-body">
+    <div class="qa-section">
+      <div class="qa-label">Ten second script</div>
+      <div class="qa-script">It's called New Home Dispatch. An independent guide for new construction buyers. Free tools, real field reporting, no builder spin. I'm Pete Seider, and I built it because buyers deserve someone doing the homework on their side.</div>
+      <button class="copy-btn" style="margin-top:8px; background:var(--navy2); border-color:var(--navy2);" onclick="copyQuick(this)" data-copy="It's called New Home Dispatch. An independent guide for new construction buyers. Free tools, real field reporting, no builder spin. I'm Pete Seider, and I built it because buyers deserve someone doing the homework on their side.">Copy script</button>
+    </div>
+    <div class="qa-section">
+      <div class="qa-label">Jump straight to</div>
+      <div class="qa-links">
+        <a href="#weekly-rhythm" onclick="jumpFromQA(event,'#weekly-rhythm')">Today's plan in the Weekly Rhythm</a>
+        <a href="#field-scripts" onclick="jumpFromQA(event,'#field-scripts')">All scripts and talking points</a>
+        <a href="#outreach-links" onclick="jumpFromQA(event,'#outreach-links')">Which link to send</a>
+        <a href="https://newhomedispatch.com/incentive-tracker.html" target="_blank" rel="noopener">Incentive Tracker ↗</a>
+        <a href="https://newhomedispatch.com/true-cost-calculator.html" target="_blank" rel="noopener">True Cost Calculator ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var DAY_FOCUS = {
+    0: {name:"Sunday", focus:"Off, or admin only. No field, no outreach.", visit:false},
+    1: {name:"Monday", focus:"Outreach plus one visit if the week allows it. Review the weekend's incentive sweep first.", visit:false},
+    2: {name:"Tuesday", focus:"Field day. Model homes are open and reps have time.", visit:true},
+    3: {name:"Wednesday", focus:"Build and content day. Site work, the Buyer Playbook, structured data entry.", visit:false},
+    4: {name:"Thursday", focus:"Field day.", visit:true},
+    5: {name:"Friday", focus:"Field day plus the Weekly Dispatch goes out. Close out the week's data first.", visit:true},
+    6: {name:"Saturday", focus:"Highest buyer foot traffic. Best day for a flagship first visit.", visit:false}
+  };
+
+  function setupToday(){
+    var d = new Date().getDay();
+    var info = DAY_FOCUS[d];
+    var chip = document.getElementById('today-chip');
+    if (chip) chip.innerHTML = "Today is <strong>" + info.name + "</strong>. " + info.focus;
+    var qaDay = document.getElementById('qa-day');
+    var qaFocus = document.getElementById('qa-focus');
+    if (qaDay) qaDay.textContent = info.name + (info.visit ? " · Field day" : "");
+    if (qaFocus) qaFocus.textContent = info.focus;
+    var row = document.querySelector('#weekly-table tr[data-day="' + d + '"]');
+    if (row){
+      row.classList.add('today-row');
+      var firstCell = row.querySelector('td.strong');
+      if (firstCell && !firstCell.querySelector('.today-pill')){
+        var pill = document.createElement('span');
+        pill.className = 'today-pill';
+        pill.textContent = 'Today';
+        firstCell.appendChild(pill);
+      }
+    }
+  }
+  setupToday();
+
+  function toggleQA(){
+    document.getElementById('qa-panel').classList.toggle('show');
+  }
+
+  function jumpFromQA(e, hash){
+    e.preventDefault();
+    toggleQA();
+    var target = document.querySelector(hash);
+    setTimeout(function(){
+      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      history.pushState(null, '', hash);
+    }, 60);
+  }
+
+  function doCopy(text, btn){
+    function done(ok){
+      if (!btn) return;
+      var original = btn.textContent;
+      btn.textContent = ok ? 'Copied' : 'Copy failed';
+      btn.classList.add('copied');
+      setTimeout(function(){ btn.textContent = original; btn.classList.remove('copied'); }, 1600);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ done(true); }).catch(function(){ fallbackCopy(text, done); });
+    } else {
+      fallbackCopy(text, done);
+    }
+  }
+  function fallbackCopy(text, done){
+    try{
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.style.position='fixed'; ta.style.left='-9999px';
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      done(ok);
+    }catch(e){ done(false); }
+  }
+  function copyScript(btn){
+    var box = btn.closest('.script-box');
+    var text = box.getAttribute('data-copy') || box.querySelector('p').innerText;
+    doCopy(text, btn);
+  }
+  function copyQuick(btn){
+    doCopy(btn.getAttribute('data-copy'), btn);
+  }
+
+  function buildSummary(formId){
+    var container = document.getElementById(formId);
+    var fields = container.querySelectorAll('[data-label]');
+    var lines = [];
+    fields.forEach(function(f){
+      var val = (f.value || '').trim();
+      if (val) lines.push(f.getAttribute('data-label') + ': ' + val);
+    });
+    var out = document.getElementById(formId + '-out');
+    if (!out) return;
+    out.textContent = lines.length ? lines.join('\n') : 'Fill in at least one field first, then build the summary again.';
+    out.classList.add('show');
+  }
+
+  function copySummary(formId, btn){
+    var out = document.getElementById(formId + '-out');
+    if (!out || !out.classList.contains('show') || !out.textContent){
+      buildSummary(formId);
+    }
+    doCopy(out.textContent, btn);
+  }
+
+  function clearCaptureForm(formId){
+    var container = document.getElementById(formId);
+    container.querySelectorAll('[data-label]').forEach(function(f){ f.value = ''; });
+    var out = document.getElementById(formId + '-out');
+    if (out){ out.classList.remove('show'); out.textContent = ''; }
+  }
+
+  // Active-link highlighting on scroll + progress bar + mobile breadcrumb
+  var links = Array.from(document.querySelectorAll('#sidebar a.nav-link'));
+  var targets = links.map(function(l){ return document.querySelector(l.getAttribute('href')); }).filter(Boolean);
+  var crumb = document.getElementById('mobile-crumb');
+  function onScroll(){
+    var current = targets[0];
+    var y = window.scrollY + 120;
+    for (var i=0;i<targets.length;i++){ if (targets[i].offsetTop <= y) current = targets[i]; }
+    links.forEach(function(l){ l.classList.remove('active'); });
+    var idx = targets.indexOf(current);
+    if (idx > -1){
+      links[idx].classList.add('active');
+      if (crumb) crumb.textContent = links[idx].textContent.replace(/^\d+/, '').trim();
+    }
+    var doc = document.documentElement;
+    var pct = (window.scrollY) / (doc.scrollHeight - doc.clientHeight) * 100;
+    var bar = document.getElementById('progress-bar');
+    if (bar) bar.style.width = Math.min(100, Math.max(0,pct)) + '%';
+  }
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+  links.forEach(function(l){
+    l.addEventListener('click', function(e){
+      var hash = l.getAttribute('href');
+      var target = document.querySelector(hash);
+      document.getElementById('sidebar').classList.remove('open');
+      if (target){
+        e.preventDefault();
+        setTimeout(function(){
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+          history.pushState(null, '', hash);
+        }, 60);
+      }
+    });
+  });
+
+  // Search index
+  var searchIndex = [];
+  document.querySelectorAll('section.block').forEach(function(sec){
+    var h2 = sec.querySelector('h2');
+    if (!h2) return;
+    var title = h2.textContent.trim();
+    var anchor = '#' + sec.id;
+    var text = sec.innerText.replace(/\s+/g,' ').trim();
+    searchIndex.push({title:title, anchor:anchor, text:text});
+  });
+  var searchInput = document.getElementById('search-input');
+  var searchResults = document.getElementById('search-results');
+  var searchEmpty = document.getElementById('search-empty');
+  searchInput.addEventListener('input', function(){
+    var q = this.value.trim().toLowerCase();
+    if (q.length < 2){ searchResults.classList.remove('show'); searchEmpty.style.display='none'; return; }
+    var matches = searchIndex.filter(function(item){ return item.text.toLowerCase().indexOf(q) > -1; }).slice(0,8);
+    searchResults.innerHTML = '';
+    if (matches.length === 0){
+      searchResults.classList.remove('show');
+      searchEmpty.style.display = 'block';
+      return;
+    }
+    searchEmpty.style.display = 'none';
+    matches.forEach(function(m){
+      var idx = m.text.toLowerCase().indexOf(q);
+      var start = Math.max(0, idx-40);
+      var snippet = (start>0?'…':'') + m.text.substring(start, idx+60) + '…';
+      var a = document.createElement('a');
+      a.href = m.anchor; a.className = 'res';
+      a.innerHTML = '<div class="rtitle">' + m.title + '</div><div class="rsnippet">' + snippet + '</div>';
+      a.addEventListener('click', function(e){
+        var hash = m.anchor;
+        var target = document.querySelector(hash);
+        searchResults.classList.remove('show');
+        searchInput.value = '';
+        document.getElementById('sidebar').classList.remove('open');
+        if (target){
+          e.preventDefault();
+          setTimeout(function(){
+            target.scrollIntoView({behavior:'smooth', block:'start'});
+            history.pushState(null, '', hash);
+          }, 60);
+        }
+      });
+      searchResults.appendChild(a);
+    });
+    searchResults.classList.add('show');
+  });
+  document.addEventListener('click', function(e){
+    if (!document.getElementById('search-wrap').contains(e.target)){
+      searchResults.classList.remove('show');
+    }
+  });
+</script>
+
+</body>
+</html>
