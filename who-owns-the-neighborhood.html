@@ -133,9 +133,12 @@ function pickCommunity(slug) {
   if (hit) hit.mk.openTooltip();
 }
 function quickRead() {
+  const seen = new Set();
   const ranked = DIST.filter(d => d.rate_per_100 != null && !d.total_tax)
     .map(d => ({ d, mo: Math.round(500000 * d.rate_per_100 / 100 / 12) }))
-    .sort((a, b) => b.mo - a.mo).slice(0, 5);
+    .sort((a, b) => b.mo - a.mo)
+    .filter(r => seen.has(r.d.community) ? false : seen.add(r.d.community))
+    .slice(0, 5);
   let h = '<p style="font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 10px">The district layer shows the special district tax each community carries. The ownership layer shows who holds the deeds, from county appraisal rolls, updated as county exports are processed.</p>';
   h += '<div class="t" style="margin-bottom:6px">Heaviest monthly district cost at $500k</div>';
   ranked.forEach(r => {
