@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Your Deal, New Home Dispatch</title>
+<meta name="description" content="Just bought a new construction home in Central Texas? Report your real deal in about three minutes, anonymous, mostly dropdowns. Every verified report makes the next buyer harder to fool.">
+<link rel="canonical" href="https://newhomedispatch.com/report-a-deal.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Report Your Deal, New Home Dispatch">
+<meta property="og:description" content="What did you actually get from the builder? Report your real deal in about three minutes, anonymous. Every verified report makes the next buyer harder to fool.">
+<meta property="og:url" content="https://newhomedispatch.com/report-a-deal.html">
+<meta property="og:site_name" content="New Home Dispatch">
+<meta property="og:image" content="https://newhomedispatch.com/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blueprint:#2B4FE0;--blueprint-light:#9DBBFF;--ink:#0A0A0A;--navy:#0F2942;--paper:#fff;--paper-alt:#F4F6F9;--line:#E0E0E0;--text-muted:#444;--amber:#FFB100;--radius:4px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper-alt);line-height:1.6;-webkit-font-smoothing:antialiased;}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;}
+a{color:var(--blueprint);}
+.topbar{background:var(--paper);border-bottom:1px solid var(--line);}
+.topbar-inner{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+.topbar img{height:22px;width:auto;display:block;}
+.topbar .back{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--navy);}
+.hero{background:var(--navy);border-bottom:3px solid var(--blueprint);color:#fff;padding:44px 20px 40px;}
+.hero-inner{max-width:860px;margin:0 auto;}
+.hero .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blueprint-light);}
+.hero h1{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(1.5rem,4.5vw,2.2rem);line-height:1.15;letter-spacing:-.01em;margin-top:12px;max-width:24ch;}
+.hero p{color:#C7D4EA;font-size:.98rem;max-width:60ch;margin-top:14px;}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#9DBBFF;}
+.hero .facts span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#39D98A;margin-right:7px;vertical-align:1px;}
+main{max-width:860px;margin:0 auto;padding:34px 16px 80px;}
+form{display:flex;flex-direction:column;gap:22px;}
+.card{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--blueprint);border-radius:var(--radius);padding:26px 22px;}
+.card .step{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blueprint);font-weight:600;}
+.card h2{font-family:'Archivo Expanded',sans-serif;font-size:1.15rem;margin:8px 0 4px;}
+.card .hint{font-size:.85rem;color:var(--text-muted);margin-bottom:16px;}
+.row{display:flex;flex-direction:column;gap:7px;margin-top:16px;}
+.row:first-of-type{margin-top:0;}
+label.f{font-size:.8rem;font-weight:600;color:var(--ink);}
+label.f .opt{font-weight:400;color:var(--text-muted);}
+select,input[type=number],input[type=email],input[type=text],textarea{border:1px solid #C9CFDA;border-radius:3px;padding:12px 12px;font:inherit;font-size:16px;color:var(--ink);background:#fff;width:100%;}
+select:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--blueprint);outline-offset:2px;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:560px){.two{grid-template-columns:1fr;}}
+.pills{display:flex;flex-wrap:wrap;gap:10px;}
+.pill{position:relative;}
+.pill input{position:absolute;opacity:0;inset:0;cursor:pointer;}
+.pill span{display:inline-block;border:1.5px solid #C9CFDA;border-radius:3px;padding:11px 16px;font-size:.9rem;font-weight:600;color:var(--ink);background:#fff;cursor:pointer;user-select:none;line-height:1.3;}
+.pill input:checked + span{border-color:var(--blueprint);background:var(--blueprint);color:#fff;}
+.pill input:focus-visible + span{outline:2px solid var(--blueprint);outline-offset:2px;}
+.checks{display:flex;flex-direction:column;gap:9px;}
+.chk{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1.5px solid #C9CFDA;border-radius:3px;padding:11px 13px;cursor:pointer;font-size:.9rem;line-height:1.4;}
+.chk input{width:17px;height:17px;margin-top:2px;accent-color:var(--blueprint);flex-shrink:0;}
+.chk.on{border-color:var(--blueprint);background:#F0F4FF;}
+.chk b{font-weight:600;}
+.chk small{display:block;color:var(--text-muted);font-size:.78rem;font-weight:400;}
+.submitbar{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.83rem;color:var(--text-muted);line-height:1.55;}
+.consent input{width:17px;height:17px;margin-top:2px;accent-color:var(--blueprint);flex-shrink:0;}
+button.go{margin-top:18px;width:100%;border:0;border-radius:3px;background:var(--amber);color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:1rem;padding:16px 20px;cursor:pointer;letter-spacing:.01em;}
+button.go:hover{filter:brightness(1.05);}
+.finenote{font-size:.75rem;color:var(--text-muted);margin-top:14px;line-height:1.55;text-align:center;}
+.hp{position:absolute;left:-9999px;}
+footer{background:var(--navy);color:#8fa8d9;font-size:.78rem;padding:26px 20px;text-align:center;line-height:1.6;}
+footer a{color:#C7D4EA;}
+.hidden{display:none !important;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<div class="topbar-inner">
+<a href="index.html" aria-label="New Home Dispatch home"><img src="assets/wordmark-dark.png" alt="New Home Dispatch"></a>
+<a class="back" href="index.html">&larr; newhomedispatch.com</a>
+</div>
+</div>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="eyebrow">Advertised vs. Achieved &middot; The record</div>
+<h1>What did you actually get? Put it on the record.</h1>
+<p>Builder ads show the public offer. Your contract shows the real one. Report your deal below, about three minutes, mostly taps and dropdowns, completely anonymous. Every verified report makes the next buyer harder to fool.</p>
+<div class="facts"><span>Anonymous</span><span>About 3 minutes</span><span>Never sold to builders</span></div>
+</div>
+</section>
+
+<main>
+<form name="deal-report" method="POST" action="report-a-deal-thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="deal-report">
+<p class="hp"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+
+<div class="card">
+<span class="step">Step 1 of 4</span>
+<h2>The home</h2>
+<p class="hint">Where and what you bought. No address, ever, community level only.</p>
+
+<div class="row">
+<label class="f">I am the&hellip;</label>
+<div class="pills">
+<label class="pill"><input type="radio" name="role" value="Buyer" required><span>Buyer</span></label>
+<label class="pill"><input type="radio" name="role" value="Buyer's agent"><span>Buyer&rsquo;s agent</span></label>
+<label class="pill"><input type="radio" name="role" value="Other"><span>Other</span></label>
+</div>
+</div>
+
+<div class="two">
+<div class="row">
+<label class="f" for="builder">Builder</label>
+<select id="builder" name="builder" required>
+<option value="" selected disabled>Select the builder&hellip;</option>
+</select>
+</div>
+<div class="row">
+<label class="f" for="community">Community</label>
+<select id="community" name="community" required>
+<option value="" selected disabled>Select the community&hellip;</option>
+</select>
+</div>
+</div>
+<div class="row hidden" id="builder-other-row">
+<label class="f" for="builder-other">Builder name</label>
+<input type="text" id="builder-other" name="builder_other" placeholder="Builder name">
+</div>
+<div class="row hidden" id="community-other-row">
+<label class="f" for="community-other">Community name <span class="opt">(or nearest city)</span></label>
+<input type="text" id="community-other" name="community_other" placeholder="Community or city">
+</div>
+
+<div class="row">
+<label class="f">The home was&hellip;</label>
+<div class="pills">
+<label class="pill"><input type="radio" name="inventory_type" value="Move-in ready inventory" required><span>Move-in ready (inventory)</span></label>
+<label class="pill"><input type="radio" name="inventory_type" value="Built to order"><span>Built for us from scratch</span></label>
+</div>
+</div>
+
+<div class="two">
+<div class="row">
+<label class="f" for="contract-month">Contract month</label>
+<select id="contract-month" name="contract_month" required>
+<option value="" selected disabled>Month&hellip;</option>
+<option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option>
+</select>
+</div>
+<div class="row">
+<label class="f" for="contract-year">Year</label>
+<select id="contract-year" name="contract_year" required>
+<option value="" selected disabled>Year&hellip;</option>
+<option>2026</option><option>2025</option><option>2024</option><option>Earlier</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class="card">
+<span class="step">Step 2 of 4</span>
+<h2>The numbers</h2>
+<p class="hint">The only two numbers we ask you to type. Round numbers are fine.</p>
+<div class="two">
+<div class="row">
+<label class="f" for="list-price">Asking price when you started ($)</label>
+<input type="number" id="list-price" name="list_price" inputmode="numeric" min="100000" max="5000000" placeholder="e.g. 425000" required>
+</div>
+<div class="row">
+<label class="f" for="contract-price">Final contract price ($)</label>
+<input type="number" id="contract-price" name="contract_price" inputmode="numeric" min="100000" max="5000000" placeholder="e.g. 409000" required>
+</div>
+</div>
+<div class="row">
+<label class="f" for="financing">How was it financed?</label>
+<select id="financing" name="financing" required>
+<option value="" selected disabled>Select&hellip;</option>
+<option>Conventional loan</option>
+<option>FHA</option>
+<option>VA</option>
+<option>USDA</option>
+<option>Cash</option>
+<option>Builder lender special program (buydown, below-market rate)</option>
+<option>Not sure</option>
+</select>
+</div>
+<div class="row">
+<label class="f">Did the incentive require the builder&rsquo;s preferred lender?</label>
+<div class="pills">
+<label class="pill"><input type="radio" name="preferred_lender" value="Yes" required><span>Yes</span></label>
+<label class="pill"><input type="radio" name="preferred_lender" value="No"><span>No</span></label>
+<label class="pill"><input type="radio" name="preferred_lender" value="Not sure"><span>Not sure</span></label>
+</div>
+</div>
+</div>
+
+<div class="card">
+<span class="step">Step 3 of 4</span>
+<h2>The deal</h2>
+<p class="hint">Check everything that applied. This is the part that helps the next buyer most.</p>
+
+<div class="row">
+<label class="f">What was the builder publicly advertising at the time?</label>
+<div class="checks">
+<label class="chk"><input type="checkbox" name="adv_closing_credit" value="yes"><span><b>Closing cost credit</b><small>&ldquo;$XX,XXX toward closing costs&rdquo;</small></span></label>
+<label class="chk"><input type="checkbox" name="adv_rate_buydown" value="yes"><span><b>Special interest rate or buydown</b><small>An advertised below-market rate</small></span></label>
+<label class="chk"><input type="checkbox" name="adv_price_cut" value="yes"><span><b>Price reduction</b><small>The home was publicly marked down</small></span></label>
+<label class="chk"><input type="checkbox" name="adv_design_credit" value="yes"><span><b>Design center or upgrade credit</b></span></label>
+<label class="chk"><input type="checkbox" name="adv_none" value="yes"><span><b>No advertised incentive</b></span></label>
+<label class="chk"><input type="checkbox" name="adv_unsure" value="yes"><span><b>Don&rsquo;t remember</b></span></label>
+</div>
+</div>
+
+<div class="row">
+<label class="f" for="advertised-value">Rough value of the advertised package</label>
+<select id="advertised-value" name="advertised_value">
+<option value="" selected disabled>Select&hellip;</option>
+<option>None</option>
+<option>Under $5,000</option>
+<option>$5,000 to $10,000</option>
+<option>$10,000 to $20,000</option>
+<option>$20,000 to $30,000</option>
+<option>Over $30,000</option>
+<option>Not sure</option>
+</select>
+</div>
+
+<div class="row">
+<label class="f">Beyond the advertised deal, what else did you get by asking or negotiating?</label>
+<div class="checks">
+<label class="chk"><input type="checkbox" name="neg_price_reduction" value="yes"><span><b>A further price reduction</b><small>Below the advertised or listed price</small></span></label>
+<label class="chk"><input type="checkbox" name="neg_closing_costs" value="yes"><span><b>Extra closing cost help</b><small>More than the advertised credit</small></span></label>
+<label class="chk"><input type="checkbox" name="neg_rate" value="yes"><span><b>A better rate than advertised</b><small>Extra points paid or a deeper buydown</small></span></label>
+<label class="chk"><input type="checkbox" name="neg_upgrades" value="yes"><span><b>Upgrades or items thrown in</b><small>Appliances, blinds, gutters, design credit</small></span></label>
+<label class="chk"><input type="checkbox" name="neg_lot_premium" value="yes"><span><b>Lot premium reduced or waived</b></span></label>
+<label class="chk"><input type="checkbox" name="neg_flexibility" value="yes"><span><b>Contract flexibility</b><small>Closing date, earnest money, contingencies, repairs</small></span></label>
+<label class="chk"><input type="checkbox" name="neg_none" value="yes"><span><b>Nothing beyond the advertised deal</b><small>That&rsquo;s a useful report too</small></span></label>
+</div>
+</div>
+
+<div class="row">
+<label class="f" for="extra-value">Rough value of everything extra you negotiated</label>
+<select id="extra-value" name="extra_value">
+<option value="" selected disabled>Select&hellip;</option>
+<option>Nothing extra</option>
+<option>Under $5,000</option>
+<option>$5,000 to $10,000</option>
+<option>$10,000 to $20,000</option>
+<option>Over $20,000</option>
+<option>Not sure</option>
+</select>
+</div>
+
+<div class="row">
+<label class="f" for="sitting">How long had the home been sitting when you went under contract? <span class="opt">(optional)</span></label>
+<select id="sitting" name="inventory_age">
+<option value="" selected disabled>Select&hellip;</option>
+<option>Brand new listing</option>
+<option>About 1 to 2 months</option>
+<option>About 3 to 5 months</option>
+<option>6 months or more</option>
+<option>Not sure / built to order</option>
+</select>
+</div>
+</div>
+
+<div class="card">
+<span class="step">Step 4 of 4</span>
+<h2>Anything else? <span style="font-family:'Inter',sans-serif;font-weight:400;font-size:.85rem;color:var(--text-muted);">(optional)</span></h2>
+<p class="hint">One or two lines if you want. No names or addresses, please.</p>
+<div class="row">
+<textarea name="notes" rows="3" maxlength="600" placeholder="e.g. They wouldn't move on price but added the fridge, blinds, and paid two points when we showed an outside lender quote."></textarea>
+</div>
+<div class="row">
+<label class="f" for="email">Email <span class="opt">(optional, private, only used if we need to verify a detail, never published, never sold)</span></label>
+<input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+</div>
+</div>
+
+<div class="submitbar">
+<label class="consent">
+<input type="checkbox" name="consent" value="agreed" required>
+<span>I understand my report will be published anonymized, at community and month level only, with no names, addresses, or exact dates, and New Home Dispatch may email me only to verify a detail.</span>
+</label>
+<button class="go" type="submit">Submit my deal report &rarr;</button>
+<p class="finenote">Individual reported outcomes, not builder policy. Every deal reflects its home, its timing, and its buyer. Read <a href="methodology.html">how we verify</a>.</p>
+</div>
+</form>
+</main>
+
+<footer>
+&copy; 2026 New Home Dispatch. Independent research, never paid by a builder. Buyer representation is available separately through Seider Realty Team powered by The Ascend Group at LPT Realty. <a href="index.html">Home</a> &middot; <a href="methodology.html">Methodology</a>
+</footer>
+
+<script>
+(function(){
+var FALLBACK_BUILDERS = ["Ashton Woods","Brohn Homes","Brookfield Residential","Centex","Century Communities","Chesmar Homes","Coventry Homes","D.R. Horton","David Weekley","DRB Homes","Drees Custom Homes","Brightland Homes","Highland Homes","KB Home","Lennar","LGI Homes","M/I Homes","Meritage Homes","Pacesetter Homes","Perry Homes","Pulte Homes","Starlight Homes","Taylor Morrison","Toll Brothers","Tri Pointe Homes","AHA Dream Homes","Scott Felder Homes","GFO Home","Empire Communities","MileStone Community Builders","Dream Finders Homes","Sitterle Homes","CastleRock Communities","Trophy Signature Homes","Landsea Homes","Giddens Homes","Saratoga Homes","Terrata Homes","Grand Endeavor Homes","Omega Builders","Stylecraft Builders","Del Webb","Risewell Homes","Flintrock Builders","Ash Creek Homes"];
+function fill(sel, names){
+  names.slice().sort(function(a,b){return a.localeCompare(b);}).forEach(function(n){
+    var o=document.createElement('option'); o.textContent=n; o.value=n; sel.appendChild(o);
+  });
+  var other=document.createElement('option'); other.value='__other__'; other.textContent='Another builder / not listed'; sel.appendChild(other);
+}
+var bSel=document.getElementById('builder'), cSel=document.getElementById('community');
+function fillCommunities(names){
+  names.slice().sort(function(a,b){return a.localeCompare(b);}).forEach(function(n){
+    var o=document.createElement('option'); o.textContent=n; o.value=n; cSel.appendChild(o);
+  });
+  var other=document.createElement('option'); other.value='__other__'; other.textContent='Another community / not listed'; cSel.appendChild(other);
+}
+fetch('entities.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+  var builders = (d && d.builders && d.builders.length) ? d.builders.map(function(b){return b.name||b;}) : FALLBACK_BUILDERS;
+  fill(bSel, builders);
+  var comms = (d && d.communities && d.communities.length) ? d.communities.map(function(c){return c.name||c;}) : [];
+  fillCommunities(comms);
+}).catch(function(){ fill(bSel, FALLBACK_BUILDERS); fillCommunities([]); });
+
+function toggleOther(sel, rowId){
+  sel.addEventListener('change', function(){
+    var row=document.getElementById(rowId);
+    var inp=row.querySelector('input');
+    if(sel.value==='__other__'){ row.classList.remove('hidden'); inp.required=true; }
+    else { row.classList.add('hidden'); inp.required=false; }
+  });
+}
+toggleOther(bSel,'builder-other-row');
+toggleOther(cSel,'community-other-row');
+
+document.querySelectorAll('.chk input').forEach(function(cb){
+  cb.addEventListener('change', function(){ cb.closest('.chk').classList.toggle('on', cb.checked); });
+});
+
+// Very light PII screen on the notes field: block emails/phones/street numbers with a friendly nudge.
+document.querySelector('form').addEventListener('submit', function(e){
+  var ta=document.querySelector('textarea[name=notes]');
+  var notes=(ta.value||'');
+  var warn=document.getElementById('pii-warn');
+  if(/(\b\d{5,}\b)|(@)|(\b\d{3}[-.\s]\d{3}[-.\s]\d{4}\b)/.test(notes)){
+    e.preventDefault();
+    if(!warn){
+      warn=document.createElement('p');
+      warn.id='pii-warn';
+      warn.style.cssText='color:#B3261E;font-size:.85rem;font-weight:600;margin-top:10px;';
+      warn.textContent='Please remove anything that looks like an address, phone number, or email from the notes box. Reports stay anonymous.';
+      ta.parentNode.appendChild(warn);
+    }
+    ta.focus();
+    return;
+  }
+  if(warn) warn.remove();
+  if(window.NHD) NHD.trackEvent('deal_report_submit', {});
+});
+})();
+</script>
+</body>
+</html>
