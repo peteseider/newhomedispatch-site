@@ -1,7 +1,7 @@
 {
   "schema": "nhd-builder-pressure-index-v0.1",
   "metric": "Builder Pressure Index: observed motivation signals per builder (0-100)",
-  "lastUpdated": "2026-07-24T00:36:36.001Z",
+  "lastUpdated": "2026-07-24T17:12:11.285Z",
   "mature": false,
   "maturityNote": "Publish externally only when mature=true (28+ days of twice-daily event log). Until then this is an internal read.",
   "weights": "v0.1 equal-weights across live components; components with no data are excluded, never imputed.",
@@ -23,31 +23,31 @@
     },
     {
       "builder": "kb-home",
-      "score": 59,
+      "score": 40,
       "components": {
         "depth": null,
-        "urgency": null,
+        "urgency": 0,
         "churn": null,
-        "fiscal": 18,
+        "fiscal": 20,
         "strings": 100
       },
-      "liveComponents": 2,
+      "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 37
+      "daysToFiscalQuarterEnd": 36
     },
     {
       "builder": "dr-horton",
-      "score": 50,
+      "score": 33,
       "components": {
         "depth": null,
-        "urgency": null,
+        "urgency": 0,
         "churn": null,
         "fiscal": 0,
         "strings": 100
       },
-      "liveComponents": 2,
+      "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 68
+      "daysToFiscalQuarterEnd": 67
     }
   ],
   "insufficientData": [

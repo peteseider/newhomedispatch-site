@@ -2,7 +2,7 @@
   "schema": "nhd-concession-timeline-v1",
   "product": "NHD Concession History Lookup (B2B product 2, appraiser seed)",
   "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting. Advertised concessions are builder claims on the stated dates, captured by the sweep; they are not closed-transaction terms.",
-  "generated": "2026-07-24T00:36:36.041Z",
+  "generated": "2026-07-24T17:12:11.334Z",
   "note": "Grows from the append-only raw archive; each sweep adds dated observations. The history is unreconstructable by anyone starting later.",
   "communities": {
     "headwaters": {

@@ -2,7 +2,7 @@
   "schema": "nhd-qualifying-tax-cards-v1",
   "product": "NHD Qualifying Tax Cards (per-community special-district rates for underwriting estimates)",
   "disclosure": "Verified rows are confirmed against county appraisal district or district records for the stated tax year. Rates change annually; confirm at the appraisal district before final underwriting. Illustrative, not tax or lending advice. New Home Dispatch is independent; no builder or lender influences coverage.",
-  "generated": "2026-07-24T00:36:36.080Z",
+  "generated": "2026-07-24T17:12:11.381Z",
   "counts": {
     "verified": 31,
     "needsVerification": 18
