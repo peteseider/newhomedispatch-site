@@ -181,11 +181,16 @@
 
   /* v125 simplification: lower sections fold into a tap-to-open drawer so the
      top of the sheet reads as a 60-second brief; nothing is removed. */
-  details.fold>summary{cursor:pointer;list-style:none;user-select:none;}
+  details.fold>summary{cursor:pointer;list-style:none;user-select:none;display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:6px;padding:11px 14px;background:var(--paper-alt);margin-top:26px;}
+  details.fold>summary.kick{margin-top:26px;}
   details.fold>summary::-webkit-details-marker{display:none;}
   details.fold>summary .tw{display:inline-block;transition:transform .15s ease;margin-right:2px;}
   details.fold[open]>summary .tw{transform:rotate(90deg);}
-  details.fold>summary:hover{opacity:.85;}
+  details.fold>summary:hover{border-color:var(--blueprint);}
+  details.fold>summary::after{content:'+ tap to open';font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blueprint);font-weight:700;white-space:nowrap;flex-shrink:0;}
+  details.fold[open]>summary::after{content:'\2212 close';color:var(--muted);}
+  details.fold[open]>summary{background:#fff;border-color:var(--blueprint);}
+  details.fold>summary .r{float:none;}
 </style>
 </head>
 <body>
@@ -194,6 +199,8 @@
   <div class="topnav-inner">
     <a href="index.html" class="brand">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</a>
     <div class="links">
+      <a href="index.html">Home</a>
+      <a href="free-tools.html" class="hideS">Free Tools</a>
       <a href="incentive-tracker.html">Incentive Tracker</a>
       <a href="weekly-dispatch.html" class="hideS">Weekly Dispatch</a>
       <a href="buyer-guides.html" class="hideS">Buyer Playbook</a>
@@ -221,6 +228,7 @@
     <div id="since-sweep" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
       <div style="padding:13px 16px;color:var(--muted);font-size:12.5px;">Change history is accumulating. Comparison begins after the next verified sweep.</div>
     </div>
+    <div style="text-align:right;margin-top:7px;"><a href="share/hot-sheet-board.png" download style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--blueprint);text-decoration:none;">Today's board as a single sheet &darr;</a> <span style="font-size:10px;color:#9a9a9a;">&middot; refreshed every sweep, share it anywhere</span></div>
   </div>
 
 
