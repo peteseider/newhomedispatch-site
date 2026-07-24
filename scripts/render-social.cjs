@@ -177,7 +177,7 @@ ${mast(`Buyer Decision Terminal<br><b>Central Texas · ${D.date}</b>`)}
 <div style="margin-top:24px;"><div class="gap-head"><span class="gap-title">The $${D.index.toLocaleString()} on the sign vs. what reaches you</span><span class="gap-note">$1 in every $5 evaporates</span></div>
 <div class="meter"><div class="reach"><b>~$${D.reaches.toLocaleString()} reaches the buyer</b></div><div class="lost"><b>$4K lost</b></div></div>
 <div class="legend"><span class="k"><span class="sw a"></span> Median value that <b>actually lands</b></span><span class="k"><span class="sw b"></span> Lost to <b>lender strings</b></span></div></div>
-${orient('Our proprietary 0 to 100 read of who holds leverage in Central Texas new construction.','Higher means buyers lead. Above 65 is a strong window to negotiate.','It updates twice a day. Watch the number move before you make an offer.')}
+${orient('Our proprietary 0 to 100 read of who holds leverage in Central Texas new construction.','Higher means buyers lead. Above 65 is a strong window to negotiate.','It updates four times a day. Watch the number move before you make an offer.')}
 ${foot(`Independent · never builder funded · verified ${D.verified}`)}`);
 
 // ---------------- CARD 2: THE MOVE ----------------
@@ -274,11 +274,11 @@ let _boardRows = '';
 }
 const board = page(`
 ${mast(`The Board<br><b>Where the market stands</b>`)}
-<div class="eyebrow">New construction vs the market \u00b7 tracked twice daily</div>
+<div class="eyebrow">New construction vs the market \u00b7 tracked four times daily</div>
 <div class="h-serif" style="font-size:56px;margin-top:22px;">Builders are conceding.<br>Resale is <em>tightening</em>.</div>
 <div style="margin-top:26px;">${_boardRows}</div>
 <div class="edu" style="margin-top:26px;"><div class="el">Why this board matters</div><div class="et">Resale supply is shrinking while builders stack credits and promo rates. Right now the <b>leverage lives in new construction</b>, and this board is re-verified every morning and every evening, so you see it move before the headlines do.</div></div>
-${orient('The market signals a buyer should watch, on one card, from our twice-daily sweep and published MLS aggregates.','If the concession line rises while resale supply falls, your window is with the builders.','Every number is dated and sourced; the full board lives on the Daily Hot Sheet.')}
+${orient('The market signals a buyer should watch, on one card, from our four-times-daily sweep and published MLS aggregates.','If the concession line rises while resale supply falls, your window is with the builders.','Every number is dated and sourced; the full board lives on the Daily Hot Sheet.')}
 ${foot(`Verified ${D.verified} \u00b7 rates: MND + Freddie Mac \u00b7 resale: Unlock MLS published \u00b7 permits: Austin open data`)}`);
 
 
@@ -299,16 +299,16 @@ function writeCaptions(outDir){
     (chg.count ? chg.count + ' change' + (chg.count>1?'s':'') + ' since the last sweep' + (newB ? ': new offers from ' + newB : '') + '.' : 'Builders held their positions this sweep. Stability is information too.'),
     'Rate: ' + rate + ' \u00b7 median incentive: $' + Number(f.concessionIndex||0).toLocaleString('en-US') + ' \u00b7 ' + f.offersLive + ' live offers across ' + f.buildersLive + ' builders.'
       + (dl ? '\nNearest advertised deadline: ' + dl.builder + ', ' + dl.deadline + '.' : ''),
-    'Every number verified on the builder\u2019s own site, twice a day. Full board: link in bio.',
+    'Every number verified on the builder\u2019s own site, four times a day. Full board: link in bio.',
     '#austinrealestate #newconstruction #centraltexas #homebuying #austintx'
   ].join('\n\n');
   const fb = [
     (chg.count ? cp.interpretation : 'Quiet sweep: builders are holding their advertised positions.'),
     cp.buyerAction,
-    'The full board, re-verified twice a day: newhomedispatch.com/daily-hot-sheet'
+    'The full board, re-verified four times a day: newhomedispatch.com/daily-hot-sheet'
   ].join('\n\n');
   const x = (chg.count
-    ? chg.count + ' incentive change' + (chg.count>1?'s':'') + ' in Austin new construction since the last sweep' + (newB ? ' (' + newB + ')' : '') + '. Rate ' + rate + ', median credit $' + Number(f.concessionIndex||0).toLocaleString('en-US') + '. Verified on builder sites, twice daily.'
+    ? chg.count + ' incentive change' + (chg.count>1?'s':'') + ' in Austin new construction since the last sweep' + (newB ? ' (' + newB + ')' : '') + '. Rate ' + rate + ', median credit $' + Number(f.concessionIndex||0).toLocaleString('en-US') + '. Verified on builder sites, four times daily.'
     : 'No material incentive movement in Austin new construction this sweep. Rate ' + rate + '. Stability is a signal too.')
     + ' newhomedispatch.com/daily-hot-sheet';
   const out = ['=== INSTAGRAM ===', ig, '', '=== FACEBOOK ===', fb, '', '=== X ===', x, '',
