@@ -2475,8 +2475,8 @@
 <script>
 (function(){
   function j(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}
-  Promise.all([j('/reporting/sweep-latest.json'),j('/score-history.json'),j('/reporting/rate-benchmark.json'),j('/incentives.json')]).then(function(res){
-    var sl=res[0],sh=res[1],rb=res[2],inc=res[3];
+  Promise.all([j('/reporting/sweep-latest.json'),j('/score-history.json'),j('/reporting/rate-benchmark.json'),j('/incentives.json'),j('/entities.json')]).then(function(res){
+    var sl=res[0],sh=res[1],rb=res[2],inc=res[3],reg=res[4];
     function t(id,v){var e=document.getElementById(id);if(e&&v!=null)e.textContent=v;}
     if(sl&&sl.ranAtLabel){t('tick-stamp','verified '+sl.ranAtLabel);
       var hp=document.getElementById('hero-proof');
@@ -2484,7 +2484,8 @@
         function dk(w){w=String(w||'');if(/^\d{4}-\d{2}-\d{2}/.test(w))return w.slice(0,10);var m=w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);if(!m)return null;var y=m[3]?(m[3].length===2?'20'+m[3]:m[3]):'2026';return y+'-'+('0'+m[1]).slice(-2)+'-'+('0'+m[2]).slice(-2);}
         function lv(l){return (l||[]).filter(function(o){if(!o.expires)return true;var k=dk(o.expires);return !k||k>=today;});}
         var lr=lv(inc.records),lp=lv(inc.promos);var bld={};lr.concat(lp).forEach(function(o){if(o.builder)bld[o.builder]=1;});
-        hp.innerHTML='<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:7px;vertical-align:1px;"></span>'+(lr.length+lp.length)+' offers verified live across '+Object.keys(bld).length+' builders \u00b7 last check '+sl.ranAtLabel;}}
+        var spine=(reg&&reg.builders&&reg.builders.length)||0;var cov=Object.keys(bld).length+(spine>0?' of '+spine+' tracked':'')+' builders';
+        hp.innerHTML='<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:7px;vertical-align:1px;"></span>'+(lr.length+lp.length)+' offers verified live across '+cov+' \u00b7 last check '+sl.ranAtLabel;}}
     if(sh&&sh.points&&sh.points.length)t('tick-score','Buyer Advantage '+sh.points[sh.points.length-1].score);
     if(sl&&typeof sl.index==='number')t('tick-idx','$'+sl.index.toLocaleString('en-US')+' median credit');
     if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
