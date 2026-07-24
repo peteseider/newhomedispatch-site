@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Share Kit | New Home Dispatch</title>
+<meta name="description" content="Every current New Home Dispatch social graphic in one place: the six live Hot Sheet cards, The Board single sheet, caption copy, the Dispatch Rule reel, and the education sets, refreshed automatically with every sweep.">
+<link rel="canonical" href="https://newhomedispatch.com/share-kit">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0F2942">
+<style>
+:root{--navy:#0F2942;--blue:#2B4FE0;--ink:#151515;--muted:#6b6b6b;--line:#E7E7E7;--good:#1F7A43;}
+*{box-sizing:border-box;}body{margin:0;font-family:'Inter',sans-serif;color:var(--ink);background:#FAFAF8;}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#fff;border-bottom:1px solid var(--line);}
+.brand{font-weight:800;font-size:18px;text-decoration:none;color:var(--ink);}.brand .h{color:var(--blue);}.brand .bar{color:var(--blue);font-weight:400;padding:0 2px;}
+.links a{margin-left:16px;text-decoration:none;color:var(--ink);font-weight:600;font-size:13.5px;}
+.links a.cta{background:var(--navy);color:#fff;padding:9px 14px;border-radius:6px;}
+.wrap{max-width:960px;margin:0 auto;padding:34px 20px 60px;}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);}
+h1{font-family:'Fraunces',serif;font-size:clamp(30px,6vw,44px);line-height:1.1;margin:10px 0 14px;letter-spacing:-.01em;}
+.lead{font-size:16px;line-height:1.65;color:#3a3a3a;max-width:66ch;}
+h2{font-family:'Fraunces',serif;font-size:22px;margin:38px 0 6px;}
+.sub{font-size:13.5px;color:#555;line-height:1.6;margin:0 0 16px;max-width:70ch;}
+.stampline{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);margin:8px 0 4px;letter-spacing:.03em;}
+.stampline .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--good);margin-right:6px;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:14px 0;}
+.card{border:1px solid var(--line);border-radius:9px;background:#fff;overflow:hidden;display:flex;flex-direction:column;}
+.card img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;background:#0F2942;}
+.card .b{padding:10px 12px 12px;}
+.card .t{font-weight:700;font-size:13px;margin-bottom:2px;}
+.card .w{font-size:11.5px;color:#666;line-height:1.5;min-height:34px;}
+.dl{display:inline-block;margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--navy);border-radius:5px;padding:6px 10px;text-decoration:none;}
+.dl.alt{background:#fff;color:var(--navy);border:1px solid var(--navy);}
+.capbox{border:1px solid var(--line);border-radius:9px;background:#fff;padding:14px 16px;position:relative;}
+.capbox pre{white-space:pre-wrap;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.7;color:#333;margin:0;max-height:340px;overflow:auto;}
+.copybtn{position:absolute;top:10px;right:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:var(--blue);color:#fff;border:none;border-radius:5px;padding:6px 10px;cursor:pointer;}
+.note{border-left:3px solid var(--blue);background:#fff;border-radius:0 8px 8px 0;padding:13px 16px;margin:18px 0;font-size:13.5px;line-height:1.65;color:#333;}
+.foot{border-top:1px solid var(--line);margin-top:44px;padding-top:18px;font-size:12px;color:var(--muted);line-height:1.7;}
+a{color:var(--blue);}
+.rowlinks{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0;}
+</style>
+</head>
+<body>
+<nav class="top">
+  <a href="index.html" class="brand">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</a>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="daily-hot-sheet.html">Daily Hot Sheet</a>
+    <a href="free-tools.html">Free Tools</a>
+    <a href="buyer-strategy-call.html" class="cta">Get Buyer Help</a>
+  </div>
+</nav>
+<div class="wrap">
+  <div class="eyebrow">Share Kit &middot; Always Current</div>
+  <h1>Every shareable, one page.</h1>
+  <p class="lead">Everything New Home Dispatch publishes for social lives here, already rendered and ready to download. The six live cards and the caption copy regenerate automatically with every sweep, so whatever you grab from this page carries the current numbers. The reel and education sets update when the campaign updates.</p>
+  <div class="stampline" id="kit-stamp"><span class="dot"></span>Cards regenerate with every sweep.</div>
+
+  <h2>The live cards</h2>
+  <p class="sub">Rendered fresh after each sweep from the same data the site runs on. The Board is the single sheet: the whole market picture in one graphic.</p>
+  <div class="grid" id="live-cards"></div>
+
+  <h2>Caption copy</h2>
+  <p class="sub">Channel ready text for Instagram, Facebook, and X, written from the current sweep with a publish recommendation at the top. Copy, paste, post.</p>
+  <div class="capbox">
+    <button class="copybtn" id="copy-cap">Copy all</button>
+    <pre id="captions">Loading current captions&hellip;</pre>
+  </div>
+
+  <h2>The Dispatch Rule reel</h2>
+  <p class="sub">Six slides plus the finished 25 second MP4: the deal comes last, the head and heart test decides the tie.</p>
+  <div class="grid" id="reel-cards"></div>
+
+  <h2>The deal education set</h2>
+  <p class="sub">Four evergreen slides on reading a builder deal. Post any time; the lesson does not expire.</p>
+  <div class="grid" id="edu-cards"></div>
+
+  <div class="note"><b>Where else these live:</b> every file on this page is also delivered to the Drive folder <a href="https://drive.google.com/drive/folders/1I-p_shUoMhlMfbUXnCgvhG-MxV4C_mnF" target="_blank" rel="noopener">Social Media &rsaquo; Daily Hot Sheet, Social Cards</a> at 7am and 7pm daily. This page is the fastest path: it always shows the current render, with no folder digging.</div>
+
+  <div class="foot">
+    Graphics are generated from verified, dated data; sources are on each card. &copy; 2026 New Home Dispatch &middot; independent housing intelligence for Central Texas &middot; <b>Look Closer.</b>
+  </div>
+</div>
+<script>
+(function(){
+  var LIVE = [
+    {f:'hot-sheet-read',   t:'The 10 second read', w:'Score plus the one move. The daily anchor post.'},
+    {f:'hot-sheet-move',   t:'The move',           w:'What a buyer should do today and why.'},
+    {f:'hot-sheet-explained', t:'The score, explained', w:'What Buyer Advantage measures. For new followers.'},
+    {f:'hot-sheet-rate',   t:'Rate reality',       w:'Advertised promo rates against the market baseline.'},
+    {f:'hot-sheet-illusion', t:'The incentive illusion', w:'Why the biggest advertised number is rarely the best deal.'},
+    {f:'hot-sheet-board',  t:'The Board (single sheet)', w:'The whole market in one graphic. Rate, index, resale, permits.'}
+  ];
+  var REEL = [1,2,3,4,5,6].map(function(n){ return {f:'reel-deal-'+n, t:'Reel slide '+n, w: n===6 ? 'The head and heart test closes it.' : 'The deal comes last, slide '+n+' of 6.'}; });
+  var EDU  = [1,2,3,4].map(function(n){ return {f:'edu-deal-'+n, t:'Education slide '+n, w:'Reading a builder deal, part '+n+' of 4.'}; });
+  var bust = Date.now();
+  function card(item){
+    var src = 'share/' + item.f + '.png?v=' + bust;
+    return '<div class="card"><a href="share/' + item.f + '.png" download><img loading="lazy" src="' + src + '" alt="' + item.t + '"></a>' +
+      '<div class="b"><div class="t">' + item.t + '</div><div class="w">' + item.w + '</div>' +
+      '<a class="dl" href="share/' + item.f + '.png" download>Download PNG</a></div></div>';
+  }
+  document.getElementById('live-cards').innerHTML = LIVE.map(card).join('');
+  document.getElementById('reel-cards').innerHTML = REEL.map(card).join('') +
+    '<div class="card"><div class="b" style="padding-top:14px;"><div class="t">The finished reel (MP4)</div><div class="w">25 seconds, vertical, ready for Instagram Reels, TikTok, and Shorts.</div>' +
+    '<a class="dl" href="share/dispatch-rule-reel.mp4" download>Download MP4</a> <a class="dl alt" href="share/dispatch-rule-reel.mp4" target="_blank" rel="noopener">Preview</a></div></div>';
+  document.getElementById('edu-cards').innerHTML = EDU.map(card).join('');
+
+  fetch('reporting/sweep-latest.json', {cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(s){
+    if (s && s.ranAtLabel) document.getElementById('kit-stamp').innerHTML = '<span class="dot"></span>Live cards rendered from the sweep of ' + s.ranAtLabel + '. They regenerate automatically with every sweep.';
+  }).catch(function(){});
+  fetch('share/captions.txt', {cache:'no-store'}).then(function(r){return r.ok?r.text():null;}).then(function(t){
+    if (t) document.getElementById('captions').textContent = t;
+    else document.getElementById('captions').textContent = 'Captions were not available just now. They regenerate with the next sweep.';
+  }).catch(function(){ document.getElementById('captions').textContent = 'Captions were not available just now. They regenerate with the next sweep.'; });
+  document.getElementById('copy-cap').addEventListener('click', function(){
+    var txt = document.getElementById('captions').textContent;
+    navigator.clipboard.writeText(txt).then(function(){
+      var b = document.getElementById('copy-cap'); b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy all'; }, 1600);
+    });
+  });
+})();
+</script>
+<script src="nav.js" defer></script>
+<script src="analytics.js" defer></script>
+</body>
+</html>

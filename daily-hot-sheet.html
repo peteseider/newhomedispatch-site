@@ -228,7 +228,7 @@
     <div id="since-sweep" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
       <div style="padding:13px 16px;color:var(--muted);font-size:12.5px;">Change history is accumulating. Comparison begins after the next verified sweep.</div>
     </div>
-    <div style="text-align:right;margin-top:7px;"><a href="share/hot-sheet-board.png" download style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--blueprint);text-decoration:none;">Today's board as a single sheet &darr;</a> <span style="font-size:10px;color:#9a9a9a;">&middot; refreshed every sweep, share it anywhere</span></div>
+    <div style="text-align:right;margin-top:7px;"><a href="share/hot-sheet-board.png" download style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--blueprint);text-decoration:none;">Today's board as a single sheet &darr;</a> <span style="font-size:10px;color:#9a9a9a;">&middot; refreshed every sweep, share it anywhere &middot;</span> <a href="share-kit.html" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--blueprint);text-decoration:none;">Full share kit &rarr;</a></div>
   </div>
 
 
@@ -1034,25 +1034,6 @@
       var a = im.closest('a'); if (a) a.setAttribute('href', u);
     });
   });
-})();
-</script>
-
-<script>
-/* Coverage registry line: appends the full tracked footprint (live from
-   entities.json) to the tape coverage counts. Self updating as the registry
-   grows; guarded against re-append and hydration overwrites. */
-(function () {
-  fetch('entities.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (e) {
-    if (!e || !e.builders) return;
-    var n = e.builders.length;
-    var w = e.builders.filter(function (b) { return b.tier === 'watch'; }).length;
-    var el = document.getElementById('cov-counts');
-    if (!el) return;
-    var line = ' \u00B7 ' + n + ' builders on the registry, ' + w + ' on watch';
-    var apply = function () { if (el.textContent.indexOf('registry') === -1) el.textContent = el.textContent + line; };
-    apply();
-    try { new MutationObserver(apply).observe(el, { childList: true, characterData: true, subtree: true }); } catch (x) { }
-  }).catch(function () { });
 })();
 </script>
 </body>
