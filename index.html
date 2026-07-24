@@ -1770,6 +1770,7 @@ body.nav-open .nav-mobile{display:flex;}
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0F2942">
 <script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js").catch(function(){});</script>
+<style>@media(max-width:1500px){ul.nav-desktop{flex-wrap:wrap;row-gap:4px;justify-content:flex-end;}}</style>
 </head>
 
 <style id="wd-strip-css">
@@ -1860,21 +1861,35 @@ body.nav-open .nav-mobile{display:flex;}
 <li><a href="buyer-strategy-call.html" class="nav-mobile-cta">Get Buyer Help</a></li>
 <li><a href="methodology.html">About &amp; Methodology</a></li>
 </ul>
-<a href="report-a-deal.html" style="display:block;background:#FFB100;color:#0A0A0A;text-decoration:none;padding:11px 20px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;font-weight:600;" onclick="if(window.NHD) NHD.trackEvent('deal_report_cta_click', {context:'banner'});">
-<span style="background:#0A0A0A;color:#FFB100;padding:2px 7px;border-radius:2px;margin-right:9px;font-size:10px;letter-spacing:.12em;">THE DEAL RECORD IS OPEN</span>Just closed on a new build? What you actually got helps the next buyer. Report it in 3 minutes, anonymous &rarr;
-</a>
+
 <main id="main-content">
+<div id="nhd-ticker" style="background:#0F2942;border-top:2px solid #2B4FE0;border-bottom:2px solid #2B4FE0;">
+<a href="daily-hot-sheet.html" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;max-width:1180px;margin:0 auto;padding:13px 24px;text-decoration:none;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;">
+<span style="color:#8fa8d9;text-transform:uppercase;font-size:10px;letter-spacing:.14em;"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:6px;vertical-align:1px;"></span>Live</span>
+<span id="tick-score" style="font-weight:700;">Buyer Advantage 74</span>
+<span style="color:#3d5a7e;">|</span>
+<span id="tick-idx" style="font-weight:700;">$20,000 median credit</span>
+<span style="color:#3d5a7e;">|</span>
+<span id="tick-rate" style="font-weight:700;">30 yr 6.85%</span>
+<span style="color:#3d5a7e;">|</span>
+<span id="tick-changes" style="font-weight:700;color:#F7CE7C;">tracking</span>
+<span id="tick-stamp" style="color:#8fa8d9;font-size:10.5px;margin-left:auto;">live from the tracker</span>
+<span style="color:#9DBBFF;font-weight:700;">Open the Hot Sheet &rarr;</span>
+<span style="color:#8fa8d9;font-size:10.5px;" onclick="event.preventDefault();event.stopPropagation();location.href='report-a-deal.html';if(window.NHD) NHD.trackEvent('deal_report_cta_click', {context:'statusbar'});">Deal Record: open &rarr;</span>
+</a>
+</div>
+
 
 <section class="hero v29b-hero">
 <div class="v29b-grid" aria-hidden="true"></div>
 <div class="wrap v29b-inner">
 <div class="v29b-copy">
 <div class="kicker mono"><span class="v29b-dot" aria-hidden="true"></span>The Independent Guide to New Construction</div>
-<h1>Know if your deal is <em>actually good</em>. Before you sign.</h1>
-<p class="sub">Builders advertise one number. Buyers sign another. We track every builder offer in Central Texas four times a day, walk the communities in person, and record what real buyers actually negotiated, so you can see what a good deal looks like before you're sitting across from a sales counselor. Free, independent, never paid by a builder.</p>
+<h1>The market, <em>verified</em>. Four times a day.</h1>
+<p class="sub">Independent intelligence for buying new construction in Central Texas. Every builder offer checked against the source four times a day, communities walked in person, and real negotiated outcomes recorded, so you know what a good deal looks like before you sign one. Free, independent, never paid by a builder.</p>
 <div class="hero-ctas">
-<a href="start-here.html" class="btn btn-amber">Start Here</a>
-<a href="report-a-deal.html" class="btn btn-outline-light">Report your deal</a>
+<a href="daily-hot-sheet.html" class="btn btn-amber">Open the Hot Sheet</a>
+<a href="#snapshot" class="btn btn-outline-light">See today's changes</a>
 </div>
 <a href="#navigator" class="v28-look" aria-label="Look closer, see what to figure out first">
 <span class="v28-look-text">Look Closer<span class="hero-tagline-dot">.</span></span>
@@ -1960,7 +1975,59 @@ body.nav-open .nav-mobile{display:flex;}
 <p>Follow the construction, inspection, walkthrough, and closing process.</p>
 <span class="read-link mono">See the stage guides &rarr;</span>
 </a>
-<a class="nav-card" href="free-tools.html">
+<a class="nav-car
+<section id="snapshot" style="background:#F4F5F7;border-bottom:1px solid #E4E4E7;">
+<style>
+.snapv1{max-width:1180px;margin:0 auto;padding:44px 24px 40px;}
+.snapv1 .sk{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2B4FE0;}
+.snapv1 h2{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(1.3rem,2.6vw,1.8rem);margin:8px 0 4px;color:#0A0A0A;}
+.snapv1 .stamp{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#666;margin-bottom:20px;}
+.snapv1 .grid{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;}
+@media(max-width:860px){.snapv1 .grid{grid-template-columns:1fr;}}
+.snapv1 .card{background:#fff;border:1px solid #E4E4E7;border-top:3px solid #2B4FE0;border-radius:8px;padding:16px 18px;}
+.snapv1 .lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#666;margin-bottom:8px;}
+.snapv1 .score{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#0A0A0A;}
+.snapv1 .delta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#666;margin-top:4px;}
+.snapv1 .tape{list-style:none;margin:0;padding:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.5;}
+.snapv1 .tape li{padding:7px 0;border-bottom:1px dashed #E4E4E7;color:#222;}
+.snapv1 .tape li:last-child{border-bottom:none;}
+.snapv1 .num{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:22px;color:#0A0A0A;}
+.snapv1 .sub2{font-size:11.5px;color:#666;line-height:1.5;margin-top:3px;}
+.snapv1 .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#666;}
+.snapv1 .foot a{color:#2B4FE0;font-weight:600;text-decoration:none;}
+</style>
+<div class="snapv1">
+  <div class="sk">Live from the last sweep</div>
+  <h2>Today's buyer snapshot.</h2>
+  <div class="stamp" id="snap-stamp">Loading the tracker&hellip;</div>
+  <div class="grid">
+    <div class="card">
+      <div class="lbl">Buyer Advantage Score</div>
+      <div class="score" id="snap-score">74</div>
+      <div class="delta" id="snap-delta">vs yesterday</div>
+      <svg id="snap-spark" width="100%" height="36" viewBox="0 0 200 36" preserveAspectRatio="none" style="margin-top:10px;"><polyline id="snap-line" fill="none" stroke="#2B4FE0" stroke-width="2" points=""/></svg>
+      <div class="sub2">Above 65 means buyers lead. <a href="methodology-buyer-advantage-score.html" style="color:#2B4FE0;">How it is scored</a></div>
+    </div>
+    <div class="card">
+      <div class="lbl">Changed since the last sweep</div>
+      <ul class="tape" id="snap-changes"><li>Reading the tape&hellip;</li></ul>
+    </div>
+    <div class="card">
+      <div class="lbl">Rate reality</div>
+      <div class="num" id="snap-rate">6.85%</div>
+      <div class="sub2">market 30 yr fixed</div>
+      <div class="num" id="snap-promo" style="margin-top:10px;color:#1E7A46;">&nbsp;</div>
+      <div class="sub2" id="snap-promo-note">best advertised fixed promo on the tape</div>
+      <div class="sub2" id="snap-deadline" style="margin-top:10px;color:#B3382C;"></div>
+    </div>
+  </div>
+  <div class="foot">
+    <span id="snap-next">Verified four times a day, every day.</span>
+    <a href="subscribe-dispatch.html" onclick="if(window.NHD) NHD.trackEvent('subscribe_cta_click', {context:'snapshot'});">Get this snapshot by email, mornings &rarr;</a>
+  </div>
+</div>
+</section>
+d" href="free-tools.html">
 <span class="nav-card-icon mono">06</span>
 <h3>Show me the free tools</h3>
 <p>Open the workbook, guides, checklists, and the Resource Desk.</p>
@@ -1984,18 +2051,6 @@ body.nav-open .nav-mobile{display:flex;}
 </div>
 </div>
 </section>
-<div id="nhd-ticker" style="background:#0F2942;border-top:2px solid #2B4FE0;border-bottom:2px solid #2B4FE0;">
-<a href="daily-hot-sheet.html" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;max-width:1180px;margin:0 auto;padding:13px 24px;text-decoration:none;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;">
-<span style="color:#8fa8d9;text-transform:uppercase;font-size:10px;letter-spacing:.14em;">Since the last sweep</span>
-<span id="tick-score" style="font-weight:700;">Buyer Advantage 74</span>
-<span style="color:#3d5a7e;">|</span>
-<span id="tick-idx" style="font-weight:700;">$20,000 median credit</span>
-<span style="color:#3d5a7e;">|</span>
-<span id="tick-rate" style="font-weight:700;">30 yr 6.85%</span>
-<span id="tick-stamp" style="color:#8fa8d9;font-size:10.5px;margin-left:auto;">live from the tracker</span>
-<span style="color:#9DBBFF;font-weight:700;">Open the Hot Sheet &rarr;</span>
-</a>
-</div>
 
 <section class="ava" aria-labelledby="ava-title">
 <style>
@@ -2289,6 +2344,14 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 </div>
 </section>
 
+
+<section style="background:#0A0A0A;color:#fff;">
+<div style="max-width:1180px;margin:0 auto;padding:44px 24px;">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#F7CE7C;">Field reporting</div>
+<p style="font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(1.2rem,2.4vw,1.7rem);margin:8px 0 8px;">We go look.</p>
+<p style="font-size:.95rem;line-height:1.65;color:#C9CDD6;max-width:70ch;margin:0;">Not everything is on a website. <span style="color:#fff;font-weight:600;">Field Route 01: Kyle and Buda, ten stops, in progress.</span> Verified pricing, tax district checks, incentive signage, and original photos land on the community pages the same day they are captured. First up: what Lennar does when its own advertised deadline hits this Sunday.</p>
+</div>
+</section>
 <section class="about" id="about">
 <div class="wrap reveal">
 <div class="eyebrow mono">Why Trust This</div>
@@ -2408,6 +2471,23 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 </div>
 </section>
 
+
+<section style="background:#fff;border-top:1px solid #E4E4E7;">
+<div style="max-width:1180px;margin:0 auto;padding:40px 24px;">
+<div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2B4FE0;margin-bottom:14px;">How buyers use this site</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:.92rem;">
+<a href="daily-hot-sheet.html" style="color:#0A0A0A;font-weight:600;text-decoration:none;border:1px solid #E4E4E7;border-radius:6px;padding:9px 14px;" onclick="if(window.NHD) NHD.trackEvent('ladder_click', {rung:'hot-sheet'});">1. Read the Hot Sheet</a>
+<span style="color:#bbb;">&rarr;</span>
+<a href="true-cost-calculator.html" style="color:#0A0A0A;font-weight:600;text-decoration:none;border:1px solid #E4E4E7;border-radius:6px;padding:9px 14px;" onclick="if(window.NHD) NHD.trackEvent('ladder_click', {rung:'calculator'});">2. Run your numbers</a>
+<span style="color:#bbb;">&rarr;</span>
+<a href="communities.html" style="color:#0A0A0A;font-weight:600;text-decoration:none;border:1px solid #E4E4E7;border-radius:6px;padding:9px 14px;" onclick="if(window.NHD) NHD.trackEvent('ladder_click', {rung:'communities'});">3. Compare communities</a>
+<span style="color:#bbb;">&rarr;</span>
+<a href="incentive-watch.html" style="color:#0A0A0A;font-weight:600;text-decoration:none;border:1px solid #E4E4E7;border-radius:6px;padding:9px 14px;" onclick="if(window.NHD) NHD.trackEvent('ladder_click', {rung:'watch'});">4. Watch your builder</a>
+<span style="color:#bbb;">&rarr;</span>
+<a href="buyer-strategy-call.html" style="color:#fff;background:#0F2942;font-weight:600;text-decoration:none;border-radius:6px;padding:9px 14px;" onclick="if(window.NHD) NHD.trackEvent('ladder_click', {rung:'consult'});">5. Talk to Pete when it is time</a>
+</div>
+</div>
+</section>
 <footer>
 <div class="wrap">
 <div class="footer-top">
@@ -2523,5 +2603,66 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
 });
 })();
 </script>
+
+<script>
+(function(){
+  function j(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}
+  function t(id,v){var e=document.getElementById(id);if(e&&v!=null)e.textContent=v;}
+  Promise.all([j('/reporting/sweep-latest.json'),j('/score-history.json'),j('/reporting/rate-benchmark.json'),j('/reporting/content-packet.json'),j('/incentives.json')]).then(function(res){
+    var sl=res[0],sh=res[1],rb=res[2],cp=res[3],inc=res[4];
+    if(sl&&sl.ranAtLabel)t('snap-stamp','From the sweep of '+sl.ranAtLabel+' \u00b7 every figure dated and sourced');
+    if(sh&&sh.points&&sh.points.length){
+      var pts=sh.points.slice(-14);
+      var last=pts[pts.length-1].score, prev=pts.length>1?pts[pts.length-2].score:last;
+      t('snap-score',last);
+      var d=last-prev;
+      t('snap-delta',(d>0?'\u25B2 +':(d<0?'\u25BC ':'\u2192 '))+(d===0?'unchanged vs prior sweep':Math.abs(d)+' vs prior sweep'));
+      var vals=pts.map(function(p){return p.score;});
+      var mn=Math.min.apply(null,vals),mx=Math.max.apply(null,vals),span=(mx-mn)||1;
+      var line=vals.map(function(v,i){return (i*(200/(vals.length-1||1))).toFixed(1)+','+(32-((v-mn)/span)*26+2).toFixed(1);}).join(' ');
+      var el=document.getElementById('snap-line'); if(el) el.setAttribute('points',line);
+    }
+    if(rb&&rb.rate30yr){t('snap-rate',rb.rate30yr.toFixed(2)+'%');}
+    var chEl=document.getElementById('snap-changes');
+    if(chEl){
+      var rows=[];
+      if(cp&&cp.changes&&cp.changes.length){
+        cp.changes.slice(0,4).forEach(function(c){
+          var s=(c.builder?c.builder+': ':'')+(c.summary||c.type||'change logged');
+          rows.push('<li>'+String(s).replace(/</g,'&lt;').slice(0,90)+'</li>');
+        });
+      }
+      if(!rows.length) rows.push('<li>Builders held their positions this sweep. Stability is information too.</li>');
+      if(cp&&cp.buyerAction) rows.push('<li style="color:#2B4FE0;">Today\u2019s move: '+String(cp.buyerAction).replace(/</g,'&lt;').slice(0,110)+'</li>');
+      chEl.innerHTML=rows.join('');
+      var n=(cp&&cp.changes)?cp.changes.length:0;
+      t('tick-changes',n>0?(n+' change'+(n>1?'s':'')+' today'):'steady today');
+    }
+    if(inc){
+      var today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+      var best=null,bestWho='';
+      (inc.promos||[]).forEach(function(p){
+        var txt=p.promo||'';
+        if(/first[- ]?year|2-1|1-0|3\/2\/1|ARM|5\/1|7\/6|10\/6/i.test(txt))return;
+        var m=txt.match(/(\d\.\d{2,3})%/);
+        if(m){var r=parseFloat(m[1]);if(r>2&&r<7&&(best===null||r<best)){best=r;bestWho=p.builder;}}
+      });
+      if(best!==null){t('snap-promo',best.toFixed(2)+'%');t('snap-promo-note','best advertised fixed promo ('+bestWho+'), lender terms apply');}
+      function dk(w){w=String(w||'');var m=w.match(/(\d{4})-(\d{2})-(\d{2})/);if(m)return m[0];m=w.match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);if(m){var y=m[3].length===2?'20'+m[3]:m[3];return y+'-'+('0'+m[1]).slice(-2)+'-'+('0'+m[2]).slice(-2);}return null;}
+      var soon=null,who='';
+      (inc.promos||[]).concat(inc.records||[]).forEach(function(o){var k=dk(o.expires);if(k&&k>=today&&(soon===null||k<soon)){soon=k;who=o.builder;}});
+      if(soon){t('snap-deadline','Nearest advertised deadline: '+who+', '+soon);}
+    }
+    try{
+      var nowCT=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'}));
+      var slots=[[6,30],[10,30],[14,30],[18,30]],nxt=null;
+      for(var i=0;i<slots.length;i++){var dte=new Date(nowCT);dte.setHours(slots[i][0],slots[i][1],0,0);if(dte>nowCT){nxt=dte;break;}}
+      var lbl=nxt?((nxt.getHours()%12||12)+':30 '+(nxt.getHours()>=12?'PM':'AM')+' CT'):'6:30 AM CT tomorrow';
+      t('snap-next','Verified four times a day, every day. Next check about '+lbl+'.');
+    }catch(e){}
+  });
+})();
+</script>
+
 </body>
 </html>
