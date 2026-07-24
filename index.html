@@ -1880,6 +1880,7 @@
       </a>
       <div class="hero-footline">
         <span class="hero-trustline">Independent research. Clearly sourced. Always free for buyers.</span>
+        <span id="hero-proof" style="display:block;margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#8fa8d9;"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:7px;vertical-align:1px;"></span>Verification runs twice a day, every day</span>
         <span class="hero-coverage mono" aria-label="Current coverage area"><span class="hero-coverage-dot" aria-hidden="true"></span>Now covering the Austin area</span>
       </div>
     </div>
@@ -1979,6 +1980,19 @@
     </div>
   </div>
 </section>
+<div id="nhd-ticker" style="background:#0F2942;border-top:2px solid #2B4FE0;border-bottom:2px solid #2B4FE0;">
+  <a href="daily-hot-sheet.html" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;max-width:1180px;margin:0 auto;padding:13px 24px;text-decoration:none;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;">
+    <span style="color:#8fa8d9;text-transform:uppercase;font-size:10px;letter-spacing:.14em;">Since the last sweep</span>
+    <span id="tick-score" style="font-weight:700;">Buyer Advantage 74</span>
+    <span style="color:#3d5a7e;">|</span>
+    <span id="tick-idx" style="font-weight:700;">$20,000 median credit</span>
+    <span style="color:#3d5a7e;">|</span>
+    <span id="tick-rate" style="font-weight:700;">30 yr 6.85%</span>
+    <span id="tick-stamp" style="color:#8fa8d9;font-size:10.5px;margin-left:auto;">live from the tracker</span>
+    <span style="color:#9DBBFF;font-weight:700;">Open the Hot Sheet &rarr;</span>
+  </a>
+</div>
+
 <section class="nhd-tools3" id="free-tools" aria-labelledby="nhd-tools3-h">
   <style>
   .nhd-tools3{background:var(--paper,#fff);border-top:1px solid #E0E0E0;border-bottom:1px solid #E0E0E0;padding:88px 0 80px;}
@@ -2356,6 +2370,14 @@
 
 
 </main>
+<section style="background:#fff;border-top:1px solid #E0E0E0;padding:54px 24px;">
+  <div style="max-width:820px;margin:0 auto;text-align:center;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2B4FE0;margin-bottom:14px;">Independence, in writing</div>
+    <p style="font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(1.2rem,2.4vw,1.7rem);line-height:1.3;color:#000;margin:0 0 14px;">Builders advertise. We verify. Rankings cannot be bought and findings cannot be suppressed.</p>
+    <p style="font-size:.95rem;line-height:1.65;color:#444;margin:0;">Every figure on this site is checked against the builder's own site twice a day, dated, and sourced. The research is free for buyers, always. When a buyer wants representation, that is Seider Realty Team; the research and the revenue never touch.</p>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="footer-top">
@@ -2450,5 +2472,24 @@
 <script src="assistant-launcher.js" defer></script>
 <!-- v73 nav fix: click-to-toggle + hover bridge (dropdowns were hover-only with dead 4px gap) -->
 <style>.nav-grp{position:relative}.nav-grp::after{content:"";position:absolute;left:0;right:0;top:100%;height:10px}.site-header,.nav-wrap{overflow:visible !important}.site-header{position:sticky;top:0;z-index:300}body>header:not(.hero){position:sticky;top:0;z-index:300}header:has(.site-nav){position:sticky;top:0;z-index:300}.nav-grp .nav-drop{z-index:400}</style>
+<script>
+(function(){
+  function j(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}
+  Promise.all([j('/reporting/sweep-latest.json'),j('/score-history.json'),j('/reporting/rate-benchmark.json'),j('/incentives.json')]).then(function(res){
+    var sl=res[0],sh=res[1],rb=res[2],inc=res[3];
+    function t(id,v){var e=document.getElementById(id);if(e&&v!=null)e.textContent=v;}
+    if(sl&&sl.ranAtLabel){t('tick-stamp','verified '+sl.ranAtLabel);
+      var hp=document.getElementById('hero-proof');
+      if(hp&&inc){var today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+        function dk(w){w=String(w||'');if(/^\d{4}-\d{2}-\d{2}/.test(w))return w.slice(0,10);var m=w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);if(!m)return null;var y=m[3]?(m[3].length===2?'20'+m[3]:m[3]):'2026';return y+'-'+('0'+m[1]).slice(-2)+'-'+('0'+m[2]).slice(-2);}
+        function lv(l){return (l||[]).filter(function(o){if(!o.expires)return true;var k=dk(o.expires);return !k||k>=today;});}
+        var lr=lv(inc.records),lp=lv(inc.promos);var bld={};lr.concat(lp).forEach(function(o){if(o.builder)bld[o.builder]=1;});
+        hp.innerHTML='<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:7px;vertical-align:1px;"></span>'+(lr.length+lp.length)+' offers verified live across '+Object.keys(bld).length+' builders \u00b7 last check '+sl.ranAtLabel;}}
+    if(sh&&sh.points&&sh.points.length)t('tick-score','Buyer Advantage '+sh.points[sh.points.length-1].score);
+    if(sl&&typeof sl.index==='number')t('tick-idx','$'+sl.index.toLocaleString('en-US')+' median credit');
+    if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
+  });
+})();
+</script>
 </body>
 </html>
