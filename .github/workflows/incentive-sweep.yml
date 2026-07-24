@@ -1,16 +1,22 @@
 name: Concession Index sweep
 
-# Runs twice daily on GitHub's servers (NOT the authoring sandbox, which is
-# firewalled from pushing). Recomputes the Concession Index from the verified
+# Runs on GitHub's servers (NOT the authoring sandbox, which is firewalled
+# from pushing). Recomputes the Concession Index from the verified
 # incentives.json, stamps the exact run time, commits, and lets Netlify
 # auto-deploy. Times are UTC; GitHub cron does not observe DST, so during
-# US Central Daylight Time (Mar–Nov) these fire ~6:30 AM / 6:30 PM CT, and an
-# hour earlier in winter. Adjust the two cron lines if you want them pinned.
+# US Central Daylight Time (Mar–Nov) these fire an hour later on the clock in
+# winter. Four slots because GitHub cron can fire late or skip a slot under
+# load: the 6:30 AM / 6:30 PM CT anchors match the published twice-daily
+# promise, and the midday slots keep the "last check" stamp fresh even when
+# an anchor slot is delayed. The site promises twice a day; extra runs only
+# make the data fresher than promised, never staler.
 
 on:
   schedule:
-    - cron: '30 11 * * *'   # ~6:30 AM CT (CDT)
-    - cron: '30 23 * * *'   # ~6:30 PM CT (CDT)
+    - cron: '30 11 * * *'   # ~6:30 AM CT (CDT) — morning anchor
+    - cron: '30 15 * * *'   # ~10:30 AM CT (CDT) — midday freshness
+    - cron: '30 19 * * *'   # ~2:30 PM CT (CDT) — afternoon freshness
+    - cron: '30 23 * * *'   # ~6:30 PM CT (CDT) — evening anchor
   workflow_dispatch:         # lets you run it on demand from the Actions tab
 
 permissions:
