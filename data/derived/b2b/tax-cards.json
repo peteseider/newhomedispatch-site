@@ -1,0 +1,859 @@
+{
+  "schema": "nhd-qualifying-tax-cards-v1",
+  "product": "NHD Qualifying Tax Cards (per-community special-district rates for underwriting estimates)",
+  "disclosure": "Verified rows are confirmed against county appraisal district or district records for the stated tax year. Rates change annually; confirm at the appraisal district before final underwriting. Illustrative, not tax or lending advice. New Home Dispatch is independent; no builder or lender influences coverage.",
+  "generated": "2026-07-24T00:36:36.080Z",
+  "counts": {
+    "verified": 31,
+    "needsVerification": 18
+  },
+  "verifiedCards": [
+    {
+      "community": "Anthem",
+      "city": "Kyle",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "Anthem MUD",
+      "ratePer100": 1,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 292,
+        "at500k": 417,
+        "at750k": 625
+      },
+      "source": "https://hayscad.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Springhollow",
+      "city": "Hays Co.",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "Springhollow MUD",
+      "ratePer100": 1,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 292,
+        "at500k": 417,
+        "at750k": 625
+      },
+      "source": "https://hayscad.com/",
+      "notes": "-"
+    },
+    {
+      "community": "West Bastrop Village",
+      "city": "Bastrop",
+      "county": "Bastrop",
+      "districtType": "MUD",
+      "districtName": "West Bastrop Village MUD",
+      "ratePer100": 1,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 292,
+        "at500k": 417,
+        "at750k": 625
+      },
+      "source": "https://bastropcad.org/",
+      "notes": "-"
+    },
+    {
+      "community": "Easton Park",
+      "city": "Del Valle",
+      "county": "Travis",
+      "districtType": "MUD",
+      "districtName": "Pilot Knob MUD #4",
+      "ratePer100": 0.95,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 277,
+        "at500k": 396,
+        "at750k": 594
+      },
+      "source": "https://www.texasnationaltitle.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Easton Park",
+      "city": "Del Valle",
+      "county": "Travis",
+      "districtType": "MUD",
+      "districtName": "Pilot Knob MUD #5",
+      "ratePer100": 0.95,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 277,
+        "at500k": 396,
+        "at750k": 594
+      },
+      "source": "https://www.texasnationaltitle.com/",
+      "notes": "-"
+    },
+    {
+      "community": "La Salle",
+      "city": "Kyle",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "LaSalle MUD #1",
+      "ratePer100": 0.95,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 277,
+        "at500k": 396,
+        "at750k": 594
+      },
+      "source": "https://hayscad.com/",
+      "notes": "-"
+    },
+    {
+      "community": "(East Hays)",
+      "city": "Kyle",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "East Hays Co. MUD #1",
+      "ratePer100": 0.91,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 265,
+        "at500k": 379,
+        "at750k": 569
+      },
+      "source": "https://hayscad.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Sunfield",
+      "city": "Buda",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "Sunfield MUD #3",
+      "ratePer100": 0.9,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 263,
+        "at500k": 375,
+        "at750k": 563
+      },
+      "source": "https://www.texasnationaltitle.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Headwaters",
+      "city": "Dripping Springs",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "Headwaters MUD",
+      "ratePer100": 0.9,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 263,
+        "at500k": 375,
+        "at750k": 563
+      },
+      "source": null,
+      "notes": "debt/O&M split"
+    },
+    {
+      "community": "Crosswinds",
+      "city": "Kyle",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "Crosswinds MUD",
+      "ratePer100": 0.9,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 263,
+        "at500k": 375,
+        "at750k": 563
+      },
+      "source": "https://hayscad.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Bryson",
+      "city": "Leander",
+      "county": "Williamson",
+      "districtType": "MUD",
+      "districtName": "Williamson Co. MUD #22",
+      "ratePer100": 0.8995,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 262,
+        "at500k": 375,
+        "at750k": 562
+      },
+      "source": "https://www.wilcotx.gov/",
+      "notes": "corrected from 0.35 est"
+    },
+    {
+      "community": "Meadows of Blackhawk",
+      "city": "Pflugerville",
+      "county": "Travis",
+      "districtType": "WCID",
+      "districtName": "Lakeside WCID #2A",
+      "ratePer100": 0.89,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 260,
+        "at500k": 371,
+        "at750k": 556
+      },
+      "source": "https://lakesidewcid2a.com/tax-and-budgetary-information",
+      "notes": "-"
+    },
+    {
+      "community": "Easton Park",
+      "city": "Del Valle",
+      "county": "Travis",
+      "districtType": "MUD",
+      "districtName": "Pilot Knob MUD #3",
+      "ratePer100": 0.8752,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 255,
+        "at500k": 365,
+        "at750k": 547
+      },
+      "source": "https://www.texasnationaltitle.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Wild Ridge",
+      "city": "Buda",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "Wild Ridge MUD",
+      "ratePer100": 0.8722,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 254,
+        "at500k": 363,
+        "at750k": 545
+      },
+      "source": "https://hayscad.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Sunfield",
+      "city": "Buda",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "Sunfield MUD #1",
+      "ratePer100": 0.87,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 254,
+        "at500k": 363,
+        "at750k": 544
+      },
+      "source": "https://www.texasnationaltitle.com/",
+      "notes": "-"
+    },
+    {
+      "community": "The Colony",
+      "city": "Bastrop",
+      "county": "Bastrop",
+      "districtType": "MUD",
+      "districtName": "The Colony MUD #1",
+      "ratePer100": 0.85,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 248,
+        "at500k": 354,
+        "at750k": 531
+      },
+      "source": "https://bastropcad.org/",
+      "notes": "#1E lower (0.665)"
+    },
+    {
+      "community": "ShadowGlen",
+      "city": "Manor",
+      "county": "Travis",
+      "districtType": "MUD",
+      "districtName": "Travis Co. MUD #2",
+      "ratePer100": 0.831,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 242,
+        "at500k": 346,
+        "at750k": 519
+      },
+      "source": "https://traviscountymud2.org/rates/",
+      "notes": "-"
+    },
+    {
+      "community": "Santa Rita Ranch",
+      "city": "Liberty Hill",
+      "county": "Williamson",
+      "districtType": "MUD",
+      "districtName": "Williamson Co. MUD #19B",
+      "ratePer100": 0.8276,
+      "pidAnnual": null,
+      "taxYear": "2026",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 241,
+        "at500k": 345,
+        "at750k": 517
+      },
+      "source": "https://www.texasnationaltitle.com/wp-content/uploads/2023/01/CentralTexasTaxRates.pdf",
+      "notes": "newer sub-district"
+    },
+    {
+      "community": "Easton Park",
+      "city": "Del Valle",
+      "county": "Travis",
+      "districtType": "MUD",
+      "districtName": "Pilot Knob MUD #2",
+      "ratePer100": 0.8258,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 241,
+        "at500k": 344,
+        "at750k": 516
+      },
+      "source": "https://eastonparkatx.com/",
+      "notes": "multiple MUDs"
+    },
+    {
+      "community": "(DS area)",
+      "city": "Dripping Springs",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "Dripping Springs MUD #1",
+      "ratePer100": 0.76,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 222,
+        "at500k": 317,
+        "at750k": 475
+      },
+      "source": "https://hayscad.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Whispering Hollow",
+      "city": "Buda",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "Buda MUD #1",
+      "ratePer100": 0.75,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 219,
+        "at500k": 313,
+        "at750k": 469
+      },
+      "source": "https://hayscad.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Rancho Sienna",
+      "city": "Georgetown",
+      "county": "Williamson",
+      "districtType": "MUD",
+      "districtName": "Williamson Co. MUD #12",
+      "ratePer100": 0.7296,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 213,
+        "at500k": 304,
+        "at750k": 456
+      },
+      "source": "https://wcmud12.org/tax-and-budgetary-information",
+      "notes": "-"
+    },
+    {
+      "community": "Reunion Ranch",
+      "city": "Driftwood",
+      "county": "Hays",
+      "districtType": "WCID",
+      "districtName": "Reunion Ranch WCID",
+      "ratePer100": 0.623,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 182,
+        "at500k": 260,
+        "at750k": 389
+      },
+      "source": "https://rrwcid.org/",
+      "notes": "-"
+    },
+    {
+      "community": "Serene Hills",
+      "city": "Lakeway",
+      "county": "Travis",
+      "districtType": "WCID",
+      "districtName": "Travis Co. WCID #17 (Serene Hills)",
+      "ratePer100": 0.51,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 149,
+        "at500k": 213,
+        "at750k": 319
+      },
+      "source": "https://www.texasnationaltitle.com/",
+      "notes": "-"
+    },
+    {
+      "community": "Santa Rita Ranch",
+      "city": "Liberty Hill",
+      "county": "Williamson",
+      "districtType": "MUD",
+      "districtName": "Williamson Co. MUD #19",
+      "ratePer100": 0.4899,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 143,
+        "at500k": 204,
+        "at750k": 306
+      },
+      "source": "https://www.texasnationaltitle.com/",
+      "notes": "older sub-district (declined)"
+    },
+    {
+      "community": "(North Hays)",
+      "city": "Dripping Springs",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "North Hays Co. MUD #1",
+      "ratePer100": 0.46,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 134,
+        "at500k": 192,
+        "at750k": 288
+      },
+      "source": "https://hayscad.com/",
+      "notes": "mature/lower"
+    },
+    {
+      "community": "Falcon Pointe",
+      "city": "Pflugerville",
+      "county": "Travis",
+      "districtType": "MUD",
+      "districtName": "Travis Co. MUD #15",
+      "ratePer100": 0.2646,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 77,
+        "at500k": 110,
+        "at750k": 165
+      },
+      "source": "https://www.texasnationaltitle.com/",
+      "notes": "mature/low"
+    },
+    {
+      "community": "(North Hays)",
+      "city": "Dripping Springs",
+      "county": "Hays",
+      "districtType": "MUD",
+      "districtName": "North Hays Co. MUD #2",
+      "ratePer100": 0.2,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 58,
+        "at500k": 83,
+        "at750k": 125
+      },
+      "source": "https://hayscad.com/",
+      "notes": "mature/lower"
+    },
+    {
+      "community": "Steiner Ranch",
+      "city": "Austin",
+      "county": "Travis",
+      "districtType": "WCID",
+      "districtName": "Travis Co. WCID #17 (Steiner)",
+      "ratePer100": 0.1396,
+      "pidAnnual": null,
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "at350k": 41,
+        "at500k": 58,
+        "at750k": 87
+      },
+      "source": "https://www.texasnationaltitle.com/",
+      "notes": "mature/very low"
+    },
+    {
+      "community": "Whisper Valley",
+      "city": "Manor",
+      "county": "Travis",
+      "districtType": "PID",
+      "districtName": "Whisper Valley PID",
+      "ratePer100": null,
+      "pidAnnual": "1480-2004",
+      "taxYear": "2025",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "pidMonthly": null
+      },
+      "source": "https://neuhausre.com/guides/mud-pid-special-districts-guide-austin/",
+      "notes": "per lot"
+    },
+    {
+      "community": "Hunters Crossing",
+      "city": "Bastrop",
+      "county": "Bastrop",
+      "districtType": "PID",
+      "districtName": "Hunters Crossing PID",
+      "ratePer100": null,
+      "pidAnnual": "403",
+      "taxYear": "2020",
+      "confidence": "Verified",
+      "monthlyDistrictCost": {
+        "pidMonthly": 34
+      },
+      "source": "https://www.cityofbastrop.org/",
+      "notes": "~$403/lot/yr; dissolving"
+    }
+  ],
+  "needsVerificationAppendix": {
+    "note": "NOT for underwriting use until promoted to Verified. Ships free as a coverage map.",
+    "cards": [
+      {
+        "community": "Caliterra",
+        "city": "Dripping Springs",
+        "county": "Hays",
+        "districtType": "MUD/PID",
+        "districtName": "Caliterra (total tax)",
+        "ratePer100": 2.5353,
+        "pidAnnual": null,
+        "taxYear": "2025",
+        "confidence": "Partial",
+        "monthlyDistrictCost": {
+          "at350k": 739,
+          "at500k": 1056,
+          "at750k": 1585
+        },
+        "source": null,
+        "notes": "total tax; MUD/PID unsplit"
+      },
+      {
+        "community": "Sweetwater",
+        "city": "Bee Cave",
+        "county": "Travis",
+        "districtType": "MUD",
+        "districtName": "Lazy Nine MUD #1B",
+        "ratePer100": null,
+        "pidAnnual": null,
+        "taxYear": null,
+        "confidence": "Unverified",
+        "monthlyDistrictCost": null,
+        "source": "https://www.brb.texas.gov/",
+        "notes": "rate not found"
+      },
+      {
+        "community": "Pioneer Crossing",
+        "city": "Austin",
+        "county": "Travis",
+        "districtType": "MUD",
+        "districtName": "Northtown MUD",
+        "ratePer100": 0.625,
+        "pidAnnual": null,
+        "taxYear": "2020",
+        "confidence": "Partial",
+        "monthlyDistrictCost": {
+          "at350k": 182,
+          "at500k": 260,
+          "at750k": 391
+        },
+        "source": "https://northtownmud.org/taxrate.html",
+        "notes": "latest published"
+      },
+      {
+        "community": "Paloma Lake",
+        "city": "Round Rock",
+        "county": "Williamson",
+        "districtType": "MUD",
+        "districtName": "Paloma Lake MUD #1",
+        "ratePer100": 0.3775,
+        "pidAnnual": null,
+        "taxYear": "2024",
+        "confidence": "Partial",
+        "monthlyDistrictCost": {
+          "at350k": 110,
+          "at500k": 157,
+          "at750k": 236
+        },
+        "source": "https://www.wilcotx.gov/760/Tax-Rates",
+        "notes": "mature/low"
+      },
+      {
+        "community": "Siena",
+        "city": "Hutto",
+        "county": "Williamson",
+        "districtType": "MUD",
+        "districtName": "Siena MUD #1",
+        "ratePer100": 0.551,
+        "pidAnnual": null,
+        "taxYear": "2024",
+        "confidence": "Partial",
+        "monthlyDistrictCost": {
+          "at350k": 161,
+          "at500k": 230,
+          "at750k": 344
+        },
+        "source": "https://www.wilcotx.gov/760/Tax-Rates",
+        "notes": "-"
+      },
+      {
+        "community": "Berry Creek Highlands",
+        "city": "Georgetown",
+        "county": "Williamson",
+        "districtType": "MUD",
+        "districtName": "Berry Creek Highlands MUD",
+        "ratePer100": 0.55,
+        "pidAnnual": null,
+        "taxYear": "2024",
+        "confidence": "Partial",
+        "monthlyDistrictCost": {
+          "at350k": 160,
+          "at500k": 229,
+          "at750k": 344
+        },
+        "source": "https://www.wilcotx.gov/760/Tax-Rates",
+        "notes": "-"
+      },
+      {
+        "community": "Highlands at Mayfield Ranch",
+        "city": "Round Rock",
+        "county": "Williamson",
+        "districtType": "MUD",
+        "districtName": "Highlands at Mayfield Ranch MUD",
+        "ratePer100": 0.5052,
+        "pidAnnual": null,
+        "taxYear": "2024",
+        "confidence": "Partial",
+        "monthlyDistrictCost": {
+          "at350k": 147,
+          "at500k": 211,
+          "at750k": 316
+        },
+        "source": "https://www.wilcotx.gov/760/Tax-Rates",
+        "notes": "-"
+      },
+      {
+        "community": "Parkside on the River",
+        "city": "Liberty Hill",
+        "county": "Williamson",
+        "districtType": "MUD",
+        "districtName": "Parkside on the River MUD #1",
+        "ratePer100": 0.92,
+        "pidAnnual": null,
+        "taxYear": "2024",
+        "confidence": "Partial",
+        "monthlyDistrictCost": {
+          "at350k": 268,
+          "at500k": 383,
+          "at750k": 575
+        },
+        "source": "https://www.wilcotx.gov/760/Tax-Rates",
+        "notes": "-"
+      },
+      {
+        "community": "Altessa",
+        "city": "Bastrop",
+        "county": "Bastrop",
+        "districtType": "MUD",
+        "districtName": "Altessa MUD",
+        "ratePer100": 0.83,
+        "pidAnnual": null,
+        "taxYear": "2024",
+        "confidence": "Partial",
+        "monthlyDistrictCost": {
+          "at350k": 242,
+          "at500k": 346,
+          "at750k": 519
+        },
+        "source": "https://bastropcad.org/",
+        "notes": "2024"
+      },
+      {
+        "community": "Trinity Ranch",
+        "city": "Elgin",
+        "county": "Bastrop",
+        "districtType": "MUD",
+        "districtName": "Elgin MUD",
+        "ratePer100": 0.95,
+        "pidAnnual": null,
+        "taxYear": "2025",
+        "confidence": "Partial",
+        "monthlyDistrictCost": {
+          "at350k": 277,
+          "at500k": 396,
+          "at750k": 594
+        },
+        "source": "https://bastropcad.org/taxing-units/",
+        "notes": "community mapping unconfirmed"
+      },
+      {
+        "community": "6 Creeks",
+        "city": "Kyle",
+        "county": "Hays",
+        "districtType": "PID",
+        "districtName": "6 Creeks PID",
+        "ratePer100": null,
+        "pidAnnual": null,
+        "taxYear": "2025",
+        "confidence": "Partial",
+        "monthlyDistrictCost": null,
+        "source": "https://www.municipalbonds.com/",
+        "notes": "assessment not verified"
+      },
+      {
+        "community": "Cimarron Hills",
+        "city": "Georgetown",
+        "county": "Williamson",
+        "districtType": "PID",
+        "districtName": "Cimarron Hills PID",
+        "ratePer100": null,
+        "pidAnnual": null,
+        "taxYear": "2024",
+        "confidence": "Partial",
+        "monthlyDistrictCost": null,
+        "source": "https://www.wilcotx.gov/756/Public-Improvement-Districts-PIDs",
+        "notes": "assessment not verified"
+      },
+      {
+        "community": "Teravista",
+        "city": "Round Rock",
+        "county": "Williamson",
+        "districtType": "None",
+        "districtName": "No special district",
+        "ratePer100": null,
+        "pidAnnual": null,
+        "taxYear": "2024",
+        "confidence": "Partial",
+        "monthlyDistrictCost": null,
+        "source": "https://www.wilcotx.gov/756/Public-Improvement-Districts-PIDs",
+        "notes": "verify at CAD"
+      },
+      {
+        "community": "Mueller",
+        "city": "Austin",
+        "county": "Travis",
+        "districtType": "None",
+        "districtName": "No special district",
+        "ratePer100": null,
+        "pidAnnual": null,
+        "taxYear": "2025",
+        "confidence": "Partial",
+        "monthlyDistrictCost": null,
+        "source": "https://neuhausre.com/",
+        "notes": "city utilities; no MUD"
+      },
+      {
+        "community": "Garlic Creek",
+        "city": "Buda",
+        "county": "Hays",
+        "districtType": "None",
+        "districtName": "No special district",
+        "ratePer100": null,
+        "pidAnnual": null,
+        "taxYear": "2025",
+        "confidence": "Partial",
+        "monthlyDistrictCost": null,
+        "source": "https://www.austinrealestatehomesblog.com/buda/garlic-creek/",
+        "notes": "no district line on bill"
+      },
+      {
+        "community": "Kissing Tree",
+        "city": "San Marcos",
+        "county": "Hays",
+        "districtType": "None",
+        "districtName": "No MUD/PID on homeowner bill",
+        "ratePer100": null,
+        "pidAnnual": null,
+        "taxYear": "2025",
+        "confidence": "Partial",
+        "monthlyDistrictCost": null,
+        "source": "https://kissingtree.com/frequently-asked-questions/",
+        "notes": "55+; city/county/ISD only"
+      },
+      {
+        "community": "Presidential Meadows",
+        "city": "Manor",
+        "county": "Travis",
+        "districtType": "None",
+        "districtName": "No special district",
+        "ratePer100": null,
+        "pidAnnual": null,
+        "taxYear": "2024",
+        "confidence": "Partial",
+        "monthlyDistrictCost": null,
+        "source": "https://www.texasally.com/",
+        "notes": "Manor city limits"
+      },
+      {
+        "community": "Big Sky Ranch",
+        "city": "Dripping Springs",
+        "county": "Hays",
+        "districtType": "None",
+        "districtName": "No special district",
+        "ratePer100": null,
+        "pidAnnual": null,
+        "taxYear": "2025",
+        "confidence": "Partial",
+        "monthlyDistrictCost": null,
+        "source": "https://www.austinrealestatehomesblog.com/",
+        "notes": "~1.86% combined; no district line"
+      }
+    ]
+  }
+}

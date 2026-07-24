@@ -1,0 +1,671 @@
+{
+  "schema": "nhd-earnings-tape-v1",
+  "metric": "Public builder quarterly revenue, gross profit, gross margin (consolidated national, SEC XBRL)",
+  "source": "https://data.sec.gov (EDGAR XBRL)",
+  "lastUpdated": "2026-07-24T00:36:27.202Z",
+  "builders": {
+    "dr-horton": {
+      "cik": "0000882184",
+      "quarters": [
+        {
+          "end": "2024-03-31",
+          "fp": "Q2",
+          "fy": 2025,
+          "revenue": 9107200000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-06-30",
+          "fp": "Q3",
+          "fy": 2025,
+          "revenue": 9965700000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-12-31",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 7613000000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-03-31",
+          "fp": "Q2",
+          "fy": 2026,
+          "revenue": 7734000000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-06-30",
+          "fp": "Q3",
+          "fy": 2026,
+          "revenue": 9225700000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-12-31",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 6886900000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2026-03-31",
+          "fp": "Q2",
+          "fy": 2026,
+          "revenue": 7558100000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2026-06-30",
+          "fp": "Q3",
+          "fy": 2026,
+          "revenue": 9227100000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        }
+      ],
+      "noData": false,
+      "latestMarginPct": null,
+      "marginVsPrior4Avg": null
+    },
+    "lennar": {
+      "cik": "0000920760",
+      "quarters": [
+        {
+          "end": "2024-02-29",
+          "fp": "Q1",
+          "fy": 2025,
+          "revenue": 7312930000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-05-31",
+          "fp": "Q2",
+          "fy": 2025,
+          "revenue": 8765592000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-08-31",
+          "fp": "Q3",
+          "fy": 2025,
+          "revenue": 9416042000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-02-28",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 7631545000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-05-31",
+          "fp": "Q2",
+          "fy": 2026,
+          "revenue": 8377502000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-08-31",
+          "fp": "Q3",
+          "fy": 2025,
+          "revenue": 8810278000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2026-02-28",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 6619476000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2026-05-31",
+          "fp": "Q2",
+          "fy": 2026,
+          "revenue": 7939872000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        }
+      ],
+      "noData": false,
+      "latestMarginPct": null,
+      "marginVsPrior4Avg": null
+    },
+    "pulte-homes": {
+      "cik": "0000822416",
+      "quarters": [
+        {
+          "end": "2022-06-30",
+          "fp": "Q2",
+          "fy": 2023,
+          "revenue": 3879752000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2022-09-30",
+          "fp": "Q3",
+          "fy": 2023,
+          "revenue": 3895062000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2023-03-31",
+          "fp": "Q1",
+          "fy": 2024,
+          "revenue": 3575641000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2023-06-30",
+          "fp": "Q2",
+          "fy": 2024,
+          "revenue": 4188753000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2023-09-30",
+          "fp": "Q3",
+          "fy": 2024,
+          "revenue": 4003533000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-03-31",
+          "fp": "Q1",
+          "fy": 2024,
+          "revenue": 3949160000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-06-30",
+          "fp": "Q2",
+          "fy": 2024,
+          "revenue": 4599655000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-09-30",
+          "fp": "Q3",
+          "fy": 2024,
+          "revenue": 4476342000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        }
+      ],
+      "noData": false,
+      "latestMarginPct": null,
+      "marginVsPrior4Avg": null
+    },
+    "kb-home": {
+      "cik": "0000795266",
+      "quarters": [
+        {
+          "end": "2019-02-28",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 811483000,
+          "grossProfit": 139604000,
+          "grossMarginPct": 17.2
+        },
+        {
+          "end": "2019-05-31",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 1021803000,
+          "grossProfit": 177019000,
+          "grossMarginPct": 17.3
+        },
+        {
+          "end": "2019-08-31",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 1160786000,
+          "grossProfit": 216029000,
+          "grossMarginPct": 18.6
+        },
+        {
+          "end": "2019-11-30",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 1558675000,
+          "grossProfit": 306834000,
+          "grossMarginPct": 19.7
+        },
+        {
+          "end": "2020-02-29",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 1075935000,
+          "grossProfit": 188920000,
+          "grossMarginPct": 17.6
+        },
+        {
+          "end": "2020-05-31",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 913970000,
+          "grossProfit": 168634000,
+          "grossMarginPct": 18.5
+        },
+        {
+          "end": "2020-08-31",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 999013000,
+          "grossProfit": 199462000,
+          "grossMarginPct": 20
+        },
+        {
+          "end": "2020-11-30",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 1194256000,
+          "grossProfit": 241624000,
+          "grossMarginPct": 20.2
+        }
+      ],
+      "noData": false,
+      "latestMarginPct": 20.2,
+      "marginVsPrior4Avg": 1.3
+    },
+    "toll-brothers": {
+      "cik": "0000794170",
+      "quarters": [],
+      "noData": true,
+      "latestMarginPct": null,
+      "marginVsPrior4Avg": null
+    },
+    "meritage": {
+      "cik": "0001018844",
+      "quarters": [],
+      "noData": true,
+      "latestMarginPct": null,
+      "marginVsPrior4Avg": null
+    },
+    "taylor-morrison": {
+      "cik": "0001562476",
+      "quarters": [
+        {
+          "end": "2019-12-31",
+          "fp": "FY",
+          "fy": 2019,
+          "revenue": 1466436000,
+          "grossProfit": 207202000,
+          "grossMarginPct": 14.1
+        },
+        {
+          "end": "2020-03-31",
+          "fp": "Q3",
+          "fy": 2019,
+          "revenue": 1345699000,
+          "grossProfit": 197756000,
+          "grossMarginPct": 14.7
+        },
+        {
+          "end": "2020-06-30",
+          "fp": "Q2",
+          "fy": 2020,
+          "revenue": 1526685000,
+          "grossProfit": 244178000,
+          "grossMarginPct": 16
+        },
+        {
+          "end": "2020-09-30",
+          "fp": "Q3",
+          "fy": 2020,
+          "revenue": 1699434000,
+          "grossProfit": 309689000,
+          "grossMarginPct": 18.2
+        },
+        {
+          "end": "2021-06-30",
+          "fp": "Q2",
+          "fy": 2022,
+          "revenue": 1719280000,
+          "grossProfit": 328703000,
+          "grossMarginPct": 19.1
+        },
+        {
+          "end": "2021-09-30",
+          "fp": "Q3",
+          "fy": 2022,
+          "revenue": 1858751000,
+          "grossProfit": 392450000,
+          "grossMarginPct": 21.1
+        },
+        {
+          "end": "2022-06-30",
+          "fp": "Q2",
+          "fy": 2022,
+          "revenue": 1995023000,
+          "grossProfit": 541480000,
+          "grossMarginPct": 27.1
+        },
+        {
+          "end": "2022-09-30",
+          "fp": "Q3",
+          "fy": 2022,
+          "revenue": 2034644000,
+          "grossProfit": 557940000,
+          "grossMarginPct": 27.4
+        }
+      ],
+      "noData": false,
+      "latestMarginPct": 27.4,
+      "marginVsPrior4Avg": 6
+    },
+    "century-communities": {
+      "cik": "0001576940",
+      "quarters": [
+        {
+          "end": "2024-03-31",
+          "fp": "Q1",
+          "fy": 2025,
+          "revenue": 948543000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-06-30",
+          "fp": "Q2",
+          "fy": 2025,
+          "revenue": 1039450000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-09-30",
+          "fp": "Q3",
+          "fy": 2025,
+          "revenue": 1136866000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-03-31",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 903232000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-06-30",
+          "fp": "Q2",
+          "fy": 2026,
+          "revenue": 1000724000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-09-30",
+          "fp": "Q3",
+          "fy": 2025,
+          "revenue": 980284000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2026-03-31",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 789673000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2026-06-30",
+          "fp": "Q2",
+          "fy": 2026,
+          "revenue": 927227000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        }
+      ],
+      "noData": false,
+      "latestMarginPct": null,
+      "marginVsPrior4Avg": null
+    },
+    "lgi-homes": {
+      "cik": "0001580670",
+      "quarters": [
+        {
+          "end": "2023-09-30",
+          "fp": "Q3",
+          "fy": 2024,
+          "revenue": 617539000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-03-31",
+          "fp": "Q1",
+          "fy": 2025,
+          "revenue": 390851000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-06-30",
+          "fp": "Q2",
+          "fy": 2025,
+          "revenue": 602497000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-09-30",
+          "fp": "Q3",
+          "fy": 2025,
+          "revenue": 651854000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-03-31",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 351420000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-06-30",
+          "fp": "Q2",
+          "fy": 2025,
+          "revenue": 483485000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-09-30",
+          "fp": "Q3",
+          "fy": 2025,
+          "revenue": 396632000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2026-03-31",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 319736000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        }
+      ],
+      "noData": false,
+      "latestMarginPct": null,
+      "marginVsPrior4Avg": null
+    },
+    "mi-homes": {
+      "cik": "0000799292",
+      "quarters": [
+        {
+          "end": "2023-09-30",
+          "fp": "Q3",
+          "fy": 2024,
+          "revenue": 1046371000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-03-31",
+          "fp": "Q1",
+          "fy": 2025,
+          "revenue": 1046703000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-06-30",
+          "fp": "Q2",
+          "fy": 2025,
+          "revenue": 1109781000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2024-09-30",
+          "fp": "Q3",
+          "fy": 2025,
+          "revenue": 1142909000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-03-31",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 976093000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-06-30",
+          "fp": "Q2",
+          "fy": 2025,
+          "revenue": 1162592000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2025-09-30",
+          "fp": "Q3",
+          "fy": 2025,
+          "revenue": 1131791000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2026-03-31",
+          "fp": "Q1",
+          "fy": 2026,
+          "revenue": 920707000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        }
+      ],
+      "noData": false,
+      "latestMarginPct": null,
+      "marginVsPrior4Avg": null
+    },
+    "tri-pointe": {
+      "cik": "0001561680",
+      "quarters": [
+        {
+          "end": "2019-09-30",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 748395000,
+          "grossProfit": 169664000,
+          "grossMarginPct": 22.7
+        },
+        {
+          "end": "2019-12-31",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 1141274000,
+          "grossProfit": 251646000,
+          "grossMarginPct": 22
+        },
+        {
+          "end": "2020-03-31",
+          "fp": "Q1",
+          "fy": 2021,
+          "revenue": 597050000,
+          "grossProfit": 123342000,
+          "grossMarginPct": 20.7
+        },
+        {
+          "end": "2020-06-30",
+          "fp": "Q2",
+          "fy": 2021,
+          "revenue": 770106000,
+          "grossProfit": 167674000,
+          "grossMarginPct": 21.8
+        },
+        {
+          "end": "2020-09-30",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 832464000,
+          "grossProfit": 185170000,
+          "grossMarginPct": 22.2
+        },
+        {
+          "end": "2020-12-31",
+          "fp": "FY",
+          "fy": 2020,
+          "revenue": 1060827000,
+          "grossProfit": 254532000,
+          "grossMarginPct": 24
+        },
+        {
+          "end": "2021-03-31",
+          "fp": "Q1",
+          "fy": 2021,
+          "revenue": 720966000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2021-06-30",
+          "fp": "Q2",
+          "fy": 2021,
+          "revenue": 1018064000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        }
+      ],
+      "noData": false,
+      "latestMarginPct": 24,
+      "marginVsPrior4Avg": 2.3
+    }
+  },
+  "note": "Consolidated national figures from SEC filings; never Austin-specific. The research use is the join: margin trend vs our local advertised tape (Earnings-to-Tape lag), computable once both series accrue."
+}

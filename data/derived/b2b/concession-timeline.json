@@ -1,0 +1,126 @@
+{
+  "schema": "nhd-concession-timeline-v1",
+  "product": "NHD Concession History Lookup (B2B product 2, appraiser seed)",
+  "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting. Advertised concessions are builder claims on the stated dates, captured by the sweep; they are not closed-transaction terms.",
+  "generated": "2026-07-24T00:36:36.041Z",
+  "note": "Grows from the append-only raw archive; each sweep adds dated observations. The history is unreconstructable by anyone starting later.",
+  "communities": {
+    "headwaters": {
+      "community": "Headwaters",
+      "city": "Dripping Springs",
+      "entries": [
+        {
+          "date": "2026-07-20",
+          "builder": "ashton-woods",
+          "advertisedValue": 30000,
+          "incentiveType": "Closing costs",
+          "lenderTied": false
+        }
+      ]
+    },
+    "wolf-ranch": {
+      "community": "Wolf Ranch",
+      "city": "Georgetown",
+      "entries": [
+        {
+          "date": "2026-07-20",
+          "builder": "perry",
+          "advertisedValue": 35000,
+          "incentiveType": "Flex cash",
+          "lenderTied": true
+        }
+      ]
+    },
+    "easton-park": {
+      "community": "Easton Park",
+      "city": "Austin (Manor)",
+      "entries": [
+        {
+          "date": "2026-07-20",
+          "builder": "brookfield",
+          "advertisedValue": 10000,
+          "incentiveType": "Upgrades / design credit",
+          "lenderTied": false
+        }
+      ]
+    },
+    "kissing-tree": {
+      "community": "Kissing Tree",
+      "city": "San Marcos",
+      "entries": [
+        {
+          "date": "2026-07-20",
+          "builder": "brohn-homes",
+          "advertisedValue": 10000,
+          "incentiveType": "Closing costs",
+          "lenderTied": true
+        }
+      ]
+    },
+    "bryson": {
+      "community": "Bryson",
+      "city": "Leander",
+      "entries": [
+        {
+          "date": "2026-07-20",
+          "builder": "perry",
+          "advertisedValue": 35000,
+          "incentiveType": "Flex cash",
+          "lenderTied": true
+        }
+      ]
+    },
+    "bar-w-ranch": {
+      "community": "Bar W Ranch",
+      "city": "Leander",
+      "entries": [
+        {
+          "date": "2026-07-20",
+          "builder": "pacesetter",
+          "advertisedValue": 10000,
+          "incentiveType": "Closing costs",
+          "lenderTied": true
+        }
+      ]
+    },
+    "blackhawk": {
+      "community": "Blackhawk",
+      "city": "Pflugerville",
+      "entries": [
+        {
+          "date": "2026-07-20",
+          "builder": "kb-home",
+          "advertisedValue": 5000,
+          "incentiveType": "Closing costs",
+          "lenderTied": true
+        }
+      ]
+    },
+    "anthem": {
+      "community": "Anthem",
+      "city": "Kyle",
+      "entries": [
+        {
+          "date": "2026-07-20",
+          "builder": "dr-horton",
+          "advertisedValue": 25000,
+          "incentiveType": "Flex cash",
+          "lenderTied": true
+        }
+      ]
+    },
+    "whisper-valley": {
+      "community": "Whisper Valley",
+      "city": "Manor",
+      "entries": [
+        {
+          "date": "2026-07-20",
+          "builder": "aha-dream-homes",
+          "advertisedValue": 20000,
+          "incentiveType": "Flex cash",
+          "lenderTied": false
+        }
+      ]
+    }
+  }
+}

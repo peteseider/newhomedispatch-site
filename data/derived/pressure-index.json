@@ -1,0 +1,60 @@
+{
+  "schema": "nhd-builder-pressure-index-v0.1",
+  "metric": "Builder Pressure Index: observed motivation signals per builder (0-100)",
+  "lastUpdated": "2026-07-24T00:36:36.001Z",
+  "mature": false,
+  "maturityNote": "Publish externally only when mature=true (28+ days of twice-daily event log). Until then this is an internal read.",
+  "weights": "v0.1 equal-weights across live components; components with no data are excluded, never imputed.",
+  "methodology": "methodology-pressure-index.md",
+  "ranked": [
+    {
+      "builder": "perry",
+      "score": 75,
+      "components": {
+        "depth": 50,
+        "urgency": null,
+        "churn": null,
+        "fiscal": null,
+        "strings": 100
+      },
+      "liveComponents": 2,
+      "offersTracked": 2,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
+      "builder": "kb-home",
+      "score": 59,
+      "components": {
+        "depth": null,
+        "urgency": null,
+        "churn": null,
+        "fiscal": 18,
+        "strings": 100
+      },
+      "liveComponents": 2,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": 37
+    },
+    {
+      "builder": "dr-horton",
+      "score": 50,
+      "components": {
+        "depth": null,
+        "urgency": null,
+        "churn": null,
+        "fiscal": 0,
+        "strings": 100
+      },
+      "liveComponents": 2,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": 68
+    }
+  ],
+  "insufficientData": [
+    "ashton-woods",
+    "brookfield",
+    "brohn-homes",
+    "pacesetter",
+    "aha-dream-homes"
+  ]
+}

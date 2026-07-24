@@ -1,0 +1,134 @@
+{
+  "schema": "nhd-builder-benchmark-v1",
+  "product": "NHD Builder Benchmark (B2B product 1)",
+  "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting.",
+  "generated": "2026-07-24T00:36:36.041Z",
+  "sample": {
+    "verifiedOffers": 9,
+    "builders": 8,
+    "label": "PILOT SAMPLE: verified tracked offers only; broaden before external sale"
+  },
+  "benchmark": [
+    {
+      "builder": "perry",
+      "offers": 2,
+      "communities": 2,
+      "maxAdvertisedValue": 35000,
+      "bestAdvertisedRate": 4.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 100,
+        "rateAggressiveness": 33
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "ashton-woods",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 30000,
+      "bestAdvertisedRate": 3.25,
+      "lenderTiedShare": 0,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 86,
+        "rateAggressiveness": 67
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "dr-horton",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 25000,
+      "bestAdvertisedRate": 4.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 71,
+        "rateAggressiveness": 33
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "aha-dream-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 20000,
+      "bestAdvertisedRate": 3.75,
+      "lenderTiedShare": 0,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 57,
+        "rateAggressiveness": 50
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "brookfield",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 10000,
+      "bestAdvertisedRate": 1.99,
+      "lenderTiedShare": 0,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 14,
+        "rateAggressiveness": 100
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "brohn-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 10000,
+      "bestAdvertisedRate": 2.75,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 14,
+        "rateAggressiveness": 83
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "pacesetter",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 10000,
+      "bestAdvertisedRate": 4.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 14,
+        "rateAggressiveness": 33
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "kb-home",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 5000,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    }
+  ],
+  "weeklyMoves": []
+}

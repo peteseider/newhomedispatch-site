@@ -1,0 +1,78 @@
+{
+  "generated": "2026-07-24T00:36:36.170Z",
+  "count": 12,
+  "items": [
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Caliterra",
+      "action": "VERIFY district rate for Caliterra (Dripping Springs): Caliterra (total tax). Source: county appraisal district. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Sweetwater",
+      "action": "VERIFY district rate for Sweetwater (Bee Cave): Lazy Nine MUD #1B. Source: https://www.brb.texas.gov/. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Pioneer Crossing",
+      "action": "VERIFY district rate for Pioneer Crossing (Austin): Northtown MUD. Source: https://northtownmud.org/taxrate.html. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Paloma Lake",
+      "action": "VERIFY district rate for Paloma Lake (Round Rock): Paloma Lake MUD #1. Source: https://www.wilcotx.gov/760/Tax-Rates. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Siena",
+      "action": "VERIFY district rate for Siena (Hutto): Siena MUD #1. Source: https://www.wilcotx.gov/760/Tax-Rates. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Berry Creek Highlands",
+      "action": "VERIFY district rate for Berry Creek Highlands (Georgetown): Berry Creek Highlands MUD. Source: https://www.wilcotx.gov/760/Tax-Rates. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Highlands at Mayfield Ranch",
+      "action": "VERIFY district rate for Highlands at Mayfield Ranch (Round Rock): Highlands at Mayfield Ranch MUD. Source: https://www.wilcotx.gov/760/Tax-Rates. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Parkside on the River",
+      "action": "VERIFY district rate for Parkside on the River (Liberty Hill): Parkside on the River MUD #1. Source: https://www.wilcotx.gov/760/Tax-Rates. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Altessa",
+      "action": "VERIFY district rate for Altessa (Bastrop): Altessa MUD. Source: https://bastropcad.org/. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Trinity Ranch",
+      "action": "VERIFY district rate for Trinity Ranch (Elgin): Elgin MUD. Source: https://bastropcad.org/taxing-units/. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "6 Creeks",
+      "action": "VERIFY district rate for 6 Creeks (Kyle): 6 Creeks PID. Source: https://www.municipalbonds.com/. Unblocks a sellable tax card."
+    },
+    {
+      "score": 50,
+      "kind": "tax_verify",
+      "ref": "Cimarron Hills",
+      "action": "VERIFY district rate for Cimarron Hills (Georgetown): Cimarron Hills PID. Source: https://www.wilcotx.gov/756/Public-Improvement-Districts-PIDs. Unblocks a sellable tax card."
+    }
+  ]
+}
