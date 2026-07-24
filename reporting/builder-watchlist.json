@@ -1,0 +1,97 @@
+{
+ "schema": "nhd-builder-watchlist-v1",
+ "purpose": "Builders active in the Austin metro not yet in the verified tape. The sweep detection layer checks each offersUrl for a current advertised incentive and emits NEW_BUILDER_OFFER candidates for human verification. Nothing publishes until a human verifies and promotes into incentives.json.",
+ "updated": "2026-07-23",
+ "builders": [
+  {
+   "slug": "scott-felder-homes",
+   "name": "Scott Felder Homes",
+   "offersUrl": "https://www.scottfelderhomes.com/communities/austin-area",
+   "note": "Austin, Round Rock, Georgetown, Leander, Pflugerville, Dripping Springs"
+  },
+  {
+   "slug": "gfo-home",
+   "name": "GFO Home",
+   "offersUrl": "https://www.gfohome.com/division/austin/",
+   "note": "Austin division live; Pflugerville, Liberty Hill"
+  },
+  {
+   "slug": "empire-communities",
+   "name": "Empire Communities",
+   "offersUrl": "https://empirehomes.com/us/texas/austin/",
+   "note": "Goodnight Ranch, Adelton (Bastrop)"
+  },
+  {
+   "slug": "milestone",
+   "name": "MileStone Community Builders",
+   "offersUrl": "https://www.mymilestone.com/",
+   "note": "Austin local volume builder, multiple communities"
+  },
+  {
+   "slug": "dream-finders-homes",
+   "name": "Dream Finders Homes",
+   "offersUrl": "https://dreamfindershomes.com/new-homes/tx/austin/",
+   "note": "Austin division; also operates the Coventry Homes brand"
+  },
+  {
+   "slug": "sitterle-homes",
+   "name": "Sitterle Homes",
+   "offersUrl": "https://sitterlehomes.com/communities/",
+   "note": "Santa Rita Ranch, Parmer Ranch Cottages, Clearwater Ranch, Belterra"
+  },
+  {
+   "slug": "castlerock-communities",
+   "name": "CastleRock Communities",
+   "offersUrl": "https://www.c-rock.com/austin",
+   "note": "Austin area communities page live"
+  },
+  {
+   "slug": "trophy-signature-homes",
+   "name": "Trophy Signature Homes",
+   "offersUrl": "https://trophysignaturehomes.com/homes/austin/hutto",
+   "note": "Green Brick brand; Prairie Winds in Hutto"
+  },
+  {
+   "slug": "landsea-homes",
+   "name": "Landsea Homes",
+   "offersUrl": "https://www.newhomesource.com/communities/tx/austin-area/builder-landsea-homes-19499",
+   "note": "Avery Centre (Round Rock), Lariat (Liberty Hill), Manor Commons; confirm corporate status before publishing"
+  },
+  {
+   "slug": "giddens-homes",
+   "name": "Giddens Homes",
+   "offersUrl": "https://giddenshomes.com/communities/",
+   "note": "Central Texas semi custom; Georgetown, Salado"
+  },
+  {
+   "slug": "saratoga-homes",
+   "name": "Saratoga Homes",
+   "offersUrl": "https://www.saratogahomestexas.com/new-homes/",
+   "note": "Tessera on Lake Travis and Austin area"
+  },
+  {
+   "slug": "terrata-homes",
+   "name": "Terrata Homes",
+   "offersUrl": "https://www.terratahomes.com/texas/austin",
+   "note": "LGI premium brand; Whisper Valley and Austin area"
+  },
+  {
+   "slug": "grand-endeavor-homes",
+   "name": "Grand Endeavor Homes",
+   "offersUrl": "https://www.grandendeavorhomes.com/communities/",
+   "note": "Georgetown and Liberty Hill semi custom: Woodland Hills, Highland Oaks, Tesoro"
+  },
+  {
+   "slug": "omega-builders",
+   "name": "Omega Builders",
+   "offersUrl": "https://www.omegabuilders.com/communities",
+   "note": "North corridor (Temple, Belton); relevant to buyers priced up the I-35 corridor"
+  },
+  {
+   "slug": "stylecraft-builders",
+   "name": "Stylecraft Builders",
+   "offersUrl": "https://www.stylecraft.com/new-homes/",
+   "note": "North corridor (Temple, Killeen area) affordable new homes"
+  }
+ ]
+}
