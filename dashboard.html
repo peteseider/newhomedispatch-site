@@ -8,105 +8,105 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{--ink:#0A0A0A;--blueprint:#2B4FE0;--navy:#0F2942;--on-navy:#7E9BEC;--line:#E4E4E7;--muted:#666;--good:#1E7A46;--warn:#B7791F;--bad:#C0392B;--paper-alt:#F5F6F8;}
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Inter',Arial,sans-serif;background:#EDEEF1;color:var(--ink);line-height:1.5;font-size:14.5px;}
-  .wrap{max-width:1040px;margin:0 auto;padding:26px 22px 70px;}
-  header{background:var(--navy);border-radius:10px;padding:22px 26px;color:#fff;margin-bottom:22px;}
-  header h1{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.4px;}
-  header p{color:var(--on-navy);font-size:13px;margin-top:5px;}
-  header .priv{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9DB6FF;margin-top:8px;}
-  h2{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:15px;letter-spacing:-.2px;margin:24px 0 10px;}
-  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
-  @media(max-width:820px){.grid4{grid-template-columns:1fr 1fr;}}
-  .prod{background:#fff;border:1px solid var(--line);border-top:3px solid var(--blueprint);border-radius:7px;padding:13px 14px;}
-  .prod b{font-size:14px;} .prod small{display:block;color:var(--muted);font-size:11.5px;margin-top:4px;line-height:1.4;}
-  .prod a{font-size:11.5px;font-weight:600;text-decoration:none;color:var(--blueprint);display:inline-block;margin-top:7px;}
-  .prod .live{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--good);border-radius:2px;padding:1px 6px;float:right;}
-  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:7px;overflow:hidden;font-size:13px;}
-  th{background:var(--navy);color:#fff;text-align:left;padding:9px 11px;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
-  td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:middle;}
-  tr:last-child td{border-bottom:none;}
-  td .m{font-weight:600;} td .d{display:block;color:var(--muted);font-size:11px;margin-top:2px;}
-  td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
-  input.val{width:74px;border:1px solid #C7CBD4;border-radius:5px;padding:6px 8px;font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:right;}
-  .status{font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:3px 8px;border-radius:3px;white-space:nowrap;}
-  .st-none{background:#EEE;color:#888;} .st-good{background:#E6F5EC;color:var(--good);} .st-bad{background:#FBE9E7;color:var(--bad);}
-  .where{font-size:11px;color:var(--muted);}
-  .checklist{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 4px;}
-  .ci{display:flex;gap:11px;align-items:flex-start;padding:10px 14px;border-bottom:1px solid var(--line);}
-  .ci:last-child{border-bottom:none;}
-  .ci .mk{font-family:'IBM Plex Mono',monospace;font-weight:700;flex:0 0 auto;}
-  .ci .done{color:var(--good);} .ci .todo{color:var(--warn);}
-  .ci b{font-size:13.5px;} .ci small{display:block;color:var(--muted);font-size:12px;margin-top:2px;line-height:1.45;}
-  .note{font-size:12px;color:var(--muted);margin-top:8px;}
-  a.ga{display:inline-block;margin-top:6px;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:12px;padding:8px 13px;border-radius:5px;}
+:root{--ink:#0A0A0A;--blueprint:#2B4FE0;--navy:#0F2942;--on-navy:#7E9BEC;--line:#E4E4E7;--muted:#666;--good:#1E7A46;--warn:#B7791F;--bad:#C0392B;--paper-alt:#F5F6F8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',Arial,sans-serif;background:#EDEEF1;color:var(--ink);line-height:1.5;font-size:14.5px;}
+.wrap{max-width:1040px;margin:0 auto;padding:26px 22px 70px;}
+header{background:var(--navy);border-radius:10px;padding:22px 26px;color:#fff;margin-bottom:22px;}
+header h1{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.4px;}
+header p{color:var(--on-navy);font-size:13px;margin-top:5px;}
+header .priv{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9DB6FF;margin-top:8px;}
+h2{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:15px;letter-spacing:-.2px;margin:24px 0 10px;}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+@media(max-width:820px){.grid4{grid-template-columns:1fr 1fr;}}
+.prod{background:#fff;border:1px solid var(--line);border-top:3px solid var(--blueprint);border-radius:7px;padding:13px 14px;}
+.prod b{font-size:14px;} .prod small{display:block;color:var(--muted);font-size:11.5px;margin-top:4px;line-height:1.4;}
+.prod a{font-size:11.5px;font-weight:600;text-decoration:none;color:var(--blueprint);display:inline-block;margin-top:7px;}
+.prod .live{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--good);border-radius:2px;padding:1px 6px;float:right;}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:7px;overflow:hidden;font-size:13px;}
+th{background:var(--navy);color:#fff;text-align:left;padding:9px 11px;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;}
+td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:middle;}
+tr:last-child td{border-bottom:none;}
+td .m{font-weight:600;} td .d{display:block;color:var(--muted);font-size:11px;margin-top:2px;}
+td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+input.val{width:74px;border:1px solid #C7CBD4;border-radius:5px;padding:6px 8px;font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:right;}
+.status{font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:3px 8px;border-radius:3px;white-space:nowrap;}
+.st-none{background:#EEE;color:#888;} .st-good{background:#E6F5EC;color:var(--good);} .st-bad{background:#FBE9E7;color:var(--bad);}
+.where{font-size:11px;color:var(--muted);}
+.checklist{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 4px;}
+.ci{display:flex;gap:11px;align-items:flex-start;padding:10px 14px;border-bottom:1px solid var(--line);}
+.ci:last-child{border-bottom:none;}
+.ci .mk{font-family:'IBM Plex Mono',monospace;font-weight:700;flex:0 0 auto;}
+.ci .done{color:var(--good);} .ci .todo{color:var(--warn);}
+.ci b{font-size:13.5px;} .ci small{display:block;color:var(--muted);font-size:12px;margin-top:2px;line-height:1.45;}
+.note{font-size:12px;color:var(--muted);margin-top:8px;}
+a.ga{display:inline-block;margin-top:6px;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:12px;padding:8px 13px;border-radius:5px;}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <h1>New Home Dispatch, 30-Day Validation Dashboard</h1>
-    <p>Prove three behaviors: buyers <b style="color:#fff;">return</b>, buyers <b style="color:#fff;">track specific builders</b>, and tracked interest becomes <b style="color:#fff;">subscriptions &amp; consultations</b>. Build less, measure more.</p>
-    <div class="priv">Private · noindex · for the team only</div>
-  </header>
+<header>
+<h1>New Home Dispatch, 30-Day Validation Dashboard</h1>
+<p>Prove three behaviors: buyers <b style="color:#fff;">return</b>, buyers <b style="color:#fff;">track specific builders</b>, and tracked interest becomes <b style="color:#fff;">subscriptions &amp; consultations</b>. Build less, measure more.</p>
+<div class="priv">Private · noindex · for the team only</div>
+</header>
 
-  <h2>The four products</h2>
-  <div class="grid4">
-    <div class="prod"><span class="live">Live</span><b>Daily Hot Sheet / Terminal</b><small>Twice-daily 5-minute decision surface.</small><a href="daily-hot-sheet.html" target="_blank">Open →</a></div>
-    <div class="prod"><span class="live">Live</span><b>Incentive Tracker</b><small>Searchable database + Concession Index.</small><a href="incentive-tracker.html" target="_blank">Open →</a></div>
-    <div class="prod"><span class="live">Live</span><b>Weekly Dispatch</b><small>Friday narrative + field notes.</small><a href="weekly-dispatch.html" target="_blank">Open →</a></div>
-    <div class="prod"><span class="live">Live</span><b>Buyer Playbook</b><small>Quarterly evergreen education.</small><a href="buyer-guides.html" target="_blank">Open →</a></div>
-  </div>
+<h2>The four products</h2>
+<div class="grid4">
+<div class="prod"><span class="live">Live</span><b>Daily Hot Sheet / Terminal</b><small>Four-times-daily 5-minute decision surface.</small><a href="daily-hot-sheet.html" target="_blank">Open →</a></div>
+<div class="prod"><span class="live">Live</span><b>Incentive Tracker</b><small>Searchable database + Concession Index.</small><a href="incentive-tracker.html" target="_blank">Open →</a></div>
+<div class="prod"><span class="live">Live</span><b>Weekly Dispatch</b><small>Friday narrative + field notes.</small><a href="weekly-dispatch.html" target="_blank">Open →</a></div>
+<div class="prod"><span class="live">Live</span><b>Buyer Playbook</b><small>Quarterly evergreen education.</small><a href="buyer-guides.html" target="_blank">Open →</a></div>
+</div>
 
-  <h2>Validation metrics, enter this week's number to see status</h2>
-  <table>
-    <thead><tr><th>Metric</th><th>Target</th><th>This week</th><th>Status</th><th>Where to read it in GA4</th></tr></thead>
-    <tbody id="mrows"></tbody>
-  </table>
-  <p class="note">Numbers are entered manually each week from GA4 (nothing is stored, this is a live calculator, refresh clears it). GA4 property: <b>New Home Dispatch</b> · tag G-120VH1FFY7.</p>
-  <a class="ga" href="https://analytics.google.com/" target="_blank">Open Google Analytics → select "New Home Dispatch"</a>
+<h2>Validation metrics, enter this week's number to see status</h2>
+<table>
+<thead><tr><th>Metric</th><th>Target</th><th>This week</th><th>Status</th><th>Where to read it in GA4</th></tr></thead>
+<tbody id="mrows"></tbody>
+</table>
+<p class="note">Numbers are entered manually each week from GA4 (nothing is stored, this is a live calculator, refresh clears it). GA4 property: <b>New Home Dispatch</b> · tag G-120VH1FFY7.</p>
+<a class="ga" href="https://analytics.google.com/" target="_blank">Open Google Analytics → select "New Home Dispatch"</a>
 
-  <h2>Launch checklist</h2>
-  <div class="checklist">
-    <div class="ci"><span class="mk done">✓</span><div><b>Analytics installed &amp; verified</b><small>GA4 (G-120VH1FFY7) live on 41 pages; page_view + custom events firing. Data fills in over the next hours/48h.</small></div></div>
-    <div class="ci"><span class="mk done">✓</span><div><b>Terminal live with reproducible scores</b><small>Buyer Advantage Score v0.1 (74) + Builder Opportunity Rankings + Watchlist + methodology page.</small></div></div>
-    <div class="ci"><span class="mk done">✓</span><div><b>Preference center live</b><small>Morning Hot Sheet + Weekly Dispatch route to MailerLite now.</small></div></div>
-    <div class="ci"><span class="mk todo">☐</span><div><b>Create 3 MailerLite groups + set Netlify env vars</b><small>Evening · Major-change alerts · Builder alerts → ML_GROUP_EVENING / ML_GROUP_MAJOR_ALERTS / ML_GROUP_BUILDER_ALERTS. Then the finer preferences route too.</small></div></div>
-    <div class="ci"><span class="mk todo">☐</span><div><b>Send the MLS authorization packet</b><small>To Unlock MLS Data Licensing + responsible broker. No MLS build until written answers.</small></div></div>
-    <div class="ci"><span class="mk todo">☐</span><div><b>Twice-daily automation (GitHub Action)</b><small>Recompute Concession Index + scores, capture history (turns on "vs. prior sweep"), keep the Terminal fresh. Needs repo + Netlify link + API key.</small></div></div>
-  </div>
+<h2>Launch checklist</h2>
+<div class="checklist">
+<div class="ci"><span class="mk done">✓</span><div><b>Analytics installed &amp; verified</b><small>GA4 (G-120VH1FFY7) live on 41 pages; page_view + custom events firing. Data fills in over the next hours/48h.</small></div></div>
+<div class="ci"><span class="mk done">✓</span><div><b>Terminal live with reproducible scores</b><small>Buyer Advantage Score v0.1 (74) + Builder Opportunity Rankings + Watchlist + methodology page.</small></div></div>
+<div class="ci"><span class="mk done">✓</span><div><b>Preference center live</b><small>Morning Hot Sheet + Weekly Dispatch route to MailerLite now.</small></div></div>
+<div class="ci"><span class="mk todo">☐</span><div><b>Create 3 MailerLite groups + set Netlify env vars</b><small>Evening · Major-change alerts · Builder alerts → ML_GROUP_EVENING / ML_GROUP_MAJOR_ALERTS / ML_GROUP_BUILDER_ALERTS. Then the finer preferences route too.</small></div></div>
+<div class="ci"><span class="mk todo">☐</span><div><b>Send the MLS authorization packet</b><small>To Unlock MLS Data Licensing + responsible broker. No MLS build until written answers.</small></div></div>
+<div class="ci"><span class="mk done">✓</span><div><b>Four-times-daily automation (GitHub Action)</b><small>Live: sweeps at 6:30a, 10:30a, 2:30p and 6:30p CT recompute the Concession Index + scores, capture history, auto-deploy, and re-render the social cards after every run.</small></div></div>
+</div>
 </div>
 
 <script>
 (function(){
-  var metrics=[
-    {m:'Unique Terminal visitors', d:'distinct terminal_view', t:'baseline wk 1', dir:'up', target:null, where:'Reports → Engagement → Events → terminal_view (users)'},
-    {m:'7-day return rate', d:'return within 7 days', t:'≥ 20%', dir:'up', target:20, unit:'%', where:'Reports → Retention'},
-    {m:'Watchlist adoption', d:'visitors w/ ≥1 builder added', t:'≥ 25%', dir:'up', target:25, unit:'%', where:'Events → watchlist_builder_added (users) ÷ terminal_view'},
-    {m:'Alert-CTA conversion', d:'watchlist_alert_cta_click ÷ adopters', t:'≥ 15%', dir:'up', target:15, unit:'%', where:'Events → watchlist_alert_cta_click'},
-    {m:'Subscription completion', d:'complete ÷ start', t:'≥ 40%', dir:'up', target:40, unit:'%', where:'Events → subscription_complete ÷ subscription_start'},
-    {m:'Tracker click-through', d:'tracker_click ÷ terminal_view', t:'≥ 10%', dir:'up', target:10, unit:'%', where:'Events → tracker_click'},
-    {m:'Buyer-help rate', d:'buyerhelp_click ÷ terminal_view', t:'≥ 2%', dir:'up', target:2, unit:'%', where:'Events → buyerhelp_click'},
-    {m:'Unsubscribe rate', d:'unsubs ÷ subscribers', t:'≤ 3% / mo', dir:'down', target:3, unit:'%', where:'MailerLite → Subscribers'}
-  ];
-  var tb=document.getElementById('mrows');
-  tb.innerHTML=metrics.map(function(x,i){
-    return '<tr><td><span class="m">'+x.m+'</span><span class="d">'+x.d+'</span></td>'+
-      '<td class="n">'+x.t+'</td>'+
-      '<td class="n"><input class="val" data-i="'+i+'" type="number" placeholder=", ">'+(x.unit||'')+'</td>'+
-      '<td><span class="status st-none" id="s'+i+'">Awaiting data</span></td>'+
-      '<td class="where">'+x.where+'</td></tr>';
-  }).join('');
-  tb.addEventListener('input',function(e){
-    var el=e.target.closest('input.val'); if(!el) return;
-    var i=+el.getAttribute('data-i'), x=metrics[i], s=document.getElementById('s'+i), v=parseFloat(el.value);
-    if(el.value===''||isNaN(v)){s.className='status st-none';s.textContent='Awaiting data';return;}
-    if(x.target==null){s.className='status st-good';s.textContent='Logged';return;}
-    var ok = x.dir==='down' ? (v<=x.target) : (v>=x.target);
-    s.className='status '+(ok?'st-good':'st-bad');
-    s.textContent= ok ? 'On target' : 'Below target';
-  });
+var metrics=[
+{m:'Unique Terminal visitors', d:'distinct terminal_view', t:'baseline wk 1', dir:'up', target:null, where:'Reports → Engagement → Events → terminal_view (users)'},
+{m:'7-day return rate', d:'return within 7 days', t:'≥ 20%', dir:'up', target:20, unit:'%', where:'Reports → Retention'},
+{m:'Watchlist adoption', d:'visitors w/ ≥1 builder added', t:'≥ 25%', dir:'up', target:25, unit:'%', where:'Events → watchlist_builder_added (users) ÷ terminal_view'},
+{m:'Alert-CTA conversion', d:'watchlist_alert_cta_click ÷ adopters', t:'≥ 15%', dir:'up', target:15, unit:'%', where:'Events → watchlist_alert_cta_click'},
+{m:'Subscription completion', d:'complete ÷ start', t:'≥ 40%', dir:'up', target:40, unit:'%', where:'Events → subscription_complete ÷ subscription_start'},
+{m:'Tracker click-through', d:'tracker_click ÷ terminal_view', t:'≥ 10%', dir:'up', target:10, unit:'%', where:'Events → tracker_click'},
+{m:'Buyer-help rate', d:'buyerhelp_click ÷ terminal_view', t:'≥ 2%', dir:'up', target:2, unit:'%', where:'Events → buyerhelp_click'},
+{m:'Unsubscribe rate', d:'unsubs ÷ subscribers', t:'≤ 3% / mo', dir:'down', target:3, unit:'%', where:'MailerLite → Subscribers'}
+];
+var tb=document.getElementById('mrows');
+tb.innerHTML=metrics.map(function(x,i){
+return '<tr><td><span class="m">'+x.m+'</span><span class="d">'+x.d+'</span></td>'+
+'<td class="n">'+x.t+'</td>'+
+'<td class="n"><input class="val" data-i="'+i+'" type="number" placeholder=", ">'+(x.unit||'')+'</td>'+
+'<td><span class="status st-none" id="s'+i+'">Awaiting data</span></td>'+
+'<td class="where">'+x.where+'</td></tr>';
+}).join('');
+tb.addEventListener('input',function(e){
+var el=e.target.closest('input.val'); if(!el) return;
+var i=+el.getAttribute('data-i'), x=metrics[i], s=document.getElementById('s'+i), v=parseFloat(el.value);
+if(el.value===''||isNaN(v)){s.className='status st-none';s.textContent='Awaiting data';return;}
+if(x.target==null){s.className='status st-good';s.textContent='Logged';return;}
+var ok = x.dir==='down' ? (v<=x.target) : (v>=x.target);
+s.className='status '+(ok?'st-good':'st-bad');
+s.textContent= ok ? 'On target' : 'Below target';
+});
 })();
 </script>
 </body>
