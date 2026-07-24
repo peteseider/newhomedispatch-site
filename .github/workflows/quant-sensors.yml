@@ -1,0 +1,72 @@
+name: Quant sensors
+
+# S2 headline ingest + S3 field ingest + S5a permits + the Pressure Index
+# composite. Daily at ~6:45 AM/PM CT (after the sweep and derive cycles);
+# permits piggyback on every trigger (cheap). Read-only with respect to
+# human-gated files; commits only under data/ and reporting/ suggestion files.
+
+on:
+  schedule:
+    - cron: '45 11 * * *'    # ~6:45 AM CT
+    - cron: '45 23 * * *'    # ~6:45 PM CT
+    - cron: '0 10 * * 1'     # Monday ~5:00 AM CT (permits emphasis)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quant-sensors
+  cancel-in-progress: false
+
+jobs:
+  sensors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Ingest headlines (S2)
+        run: node scripts/ingest-headlines.mjs
+
+      - name: Ingest field observations (S3)
+        run: node scripts/ingest-field.mjs
+
+      - name: Pull permits (S5a)
+        run: node scripts/fetch-permits.mjs
+
+      - name: Ingest MLS member export if present (writes ONLY to gitignored data-private/)
+        run: node scripts/ingest-mls-export.mjs
+
+      - name: Pull builder earnings tape (S6, SEC EDGAR)
+        run: node scripts/fetch-earnings.mjs
+
+      - name: Compute Builder Pressure Index (composite, internal until mature)
+        run: node scripts/pressure-index.mjs
+
+      - name: Generate B2B analytics (benchmark + concession timeline)
+        run: node scripts/b2b-benchmark.mjs
+
+      - name: Generate Qualifying Tax Cards (B2B, verified rows only)
+        run: node scripts/gen-tax-cards.mjs
+
+      - name: Classify ownership if CAD exports present (investor share)
+        run: node scripts/investor-share.mjs
+
+      - name: Build the verification triage queue (grows the tape)
+        run: node scripts/verify-queue.mjs
+
+      - name: Commit sensor data
+        run: |
+          git config user.name "nhd-quant-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ reporting/field-confirmations.json
+          git diff --cached --quiet || git commit -m "Quant sensors: headlines + field + permits + pressure [skip ci]"
+          git push

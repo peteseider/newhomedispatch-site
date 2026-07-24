@@ -1,0 +1,45 @@
+name: Derive quant metrics
+
+# Runs after each "Concession Index sweep" completes (and on demand).
+# Builds the append-only raw archive, the offer event log, and the four
+# Phase 1 derived metrics (renewal ledger, half-life, rate spread,
+# breadth-depth). Read-only with respect to incentives.json; commits only
+# under data/. See scripts/derive-metrics.mjs for the full contract.
+
+on:
+  workflow_run:
+    workflows: ["Concession Index sweep"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: derive-metrics
+  cancel-in-progress: false
+
+jobs:
+  derive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Derive metrics
+        run: node scripts/derive-metrics.mjs
+
+      - name: Commit derived data
+        run: |
+          git config user.name "nhd-quant-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Quant derive: event log + metrics [skip ci]"
+          git push
