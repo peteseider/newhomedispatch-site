@@ -173,6 +173,20 @@ async function detectChanges() {
     lenderTied: r.lenderTied, expires: r.expires,
   }));
 
+  // Watchlist: builders active in the metro but not yet in the verified tape.
+  // The detection layer scans a rotating slice each run (keeps web_search use
+  // bounded) and emits NEW_BUILDER_OFFER candidates for human verification.
+  let watch = [];
+  try {
+    const wl = JSON.parse(readFileSync(p('reporting/builder-watchlist.json'), 'utf8'));
+    const all = wl.builders || [];
+    if (all.length) {
+      const day = Math.floor(Date.now() / 864e5);
+      const start = (day * 4) % all.length;
+      watch = all.concat(all).slice(start, start + 4);
+    }
+  } catch { /* no watchlist present */ }
+
   const prompt =
     `You are auditing advertised new-home incentives for Austin/Central Texas as of today. ` +
     `Here is New Home Dispatch's currently VERIFIED set (builder-advertised figures we last confirmed):\n` +
@@ -181,7 +195,13 @@ async function detectChanges() {
     `incentive (closing-cost help, flex cash, rate buydown value, design credit). For each one, report ` +
     `whether the advertised cash figure appears UNCHANGED, CHANGED (give the new advertised figure + the ` +
     `source URL), or UNVERIFIABLE (page not reachable / no clear figure). Do not guess — only report CHANGED ` +
-    `when the builder's own site states a different figure. Return a compact JSON array of ` +
+    `when the builder's own site states a different figure.` +
+    (watch.length ?
+      `\n\nADDITIONALLY, these builders are on our watchlist and not yet tracked. Check each one's site ` +
+      `for any CURRENT advertised buyer incentive and report it with status NEW_BUILDER_OFFER (include the ` +
+      `advertised figure, the community if stated, and the source URL); if none is advertised, skip it:\n` +
+      JSON.stringify(watch.map((w) => ({ builder: w.name, url: w.offersUrl })), null, 2) : '') +
+    ` Return a compact JSON array of ` +
     `{community, builder, status, newValue, sourceUrl, note}. Return ONLY the JSON.`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -194,7 +214,7 @@ async function detectChanges() {
     body: JSON.stringify({
       model,
       max_tokens: 4000,
-      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 20 }],
+      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 24 }],
       messages: [{ role: 'user', content: prompt }],
     }),
   });
@@ -231,14 +251,10 @@ async function detectChanges() {
     detect = { ran: false, reason: 'exception: ' + (e && e.message) };
   }
 
-  try { await refreshRate(core.t); } catch (e) { console.log('[sweep] rate refresh skipped: ' + (e && e.message)); }
-  try { await refreshPmms(core.t); } catch (e) { console.log('[sweep] pmms refresh skipped: ' + (e && e.message)); }
-  try { await refreshPermits(core.t); } catch (e) { console.log('[sweep] permits refresh skipped: ' + (e && e.message)); }
-  try { writeContentPacket(core); } catch (e) { console.log('[sweep] content packet skipped: ' + (e && e.message)); }
-
   const outPath = p('reporting/sweep-latest.json');
   if (!existsSync(dirname(outPath))) mkdirSync(dirname(outPath), { recursive: true });
   const changed = (detect.candidates || []).filter((c) => c && c.status === 'CHANGED');
+  const newOffers = (detect.candidates || []).filter((c) => c && c.status === 'NEW_BUILDER_OFFER');
   const summary = {
     schema: 'nhd-sweep-latest-v1',
     ranAt: core.t.iso,
@@ -249,7 +265,7 @@ async function detectChanges() {
     builders: core.builders,
     expired: core.expired,
     detection: detect.ran
-      ? { ran: true, model: detect.model, changedCount: changed.length, candidates: detect.candidates }
+      ? { ran: true, model: detect.model, changedCount: changed.length, newOfferCount: newOffers.length, candidates: detect.candidates }
       : { ran: false, reason: detect.reason },
     note: detect.ran
       ? (changed.length
@@ -263,209 +279,8 @@ async function detectChanges() {
     console.log('[sweep] candidates:');
     for (const c of changed) console.log(`   - ${c.builder} / ${c.community}: ${c.newValue} (${c.sourceUrl || 'no url'})`);
   }
+  if (newOffers.length) {
+    console.log('[sweep] watchlist builders advertising offers (verify to add to the tape):');
+    for (const c of newOffers) console.log(`   - ${c.builder}: ${c.newValue} (${c.sourceUrl || 'no url'})`);
+  }
 })();
-
-// ---- daily 30yr rate benchmark (best effort; keeps last good value on failure) ----
-async function refreshRate(t) {
-  const rbPath = p('reporting/rate-benchmark.json');
-  let rb;
-  try { rb = JSON.parse(readFileSync(rbPath, 'utf8')); }
-  catch { rb = { schema: 'nhd-rate-benchmark-v1', rate30yr: 6.77, asOf: '2026-07-22', asOfLabel: 'Jul 22, 2026', source: 'Mortgage News Daily', history: [{date:'2026-07-22', rate:6.77}] }; }
-  try {
-    let v = NaN;
-    const urls = [
-      'https://www.mortgagenewsdaily.com/mortgage-rates/30-year-fixed',
-      'https://www.mortgagenewsdaily.com/mortgage-rates',
-    ];
-    const patterns = [
-      /30\s*(?:Yr|Year)\.?\s*Fixed[\s\S]{0,600}?(\d{1,2}\.\d{2})\s*%/i,
-      /"ratePercent"\s*:\s*"?(\d{1,2}\.\d{2})/i,
-      /current(?:ly)?[\s\S]{0,120}?(\d{1,2}\.\d{2})\s*%/i,
-      /(\d{1,2}\.\d{2})\s*%[\s\S]{0,200}?30\s*(?:Yr|Year)\.?\s*Fixed/i,
-    ];
-    for (const url of urls) {
-      if (Number.isFinite(v)) break;
-      try {
-        const ctl = new AbortController();
-        const to = setTimeout(() => ctl.abort(), 15000);
-        const res = await fetch(url, { signal: ctl.signal, headers: { 'user-agent': 'Mozilla/5.0 (compatible; NHD-rate-check; +https://newhomedispatch.com)' } });
-        clearTimeout(to);
-        if (res.status !== 200) continue;
-        const html = await res.text();
-        for (const pat of patterns) {
-          const m = html.match(pat);
-          const c = m ? parseFloat(m[1]) : NaN;
-          if (Number.isFinite(c) && c > 2 && c < 15) { v = c; break; }
-        }
-      } catch (e) { /* try next url */ }
-    }
-    if (Number.isFinite(v) && v > 2 && v < 15) {
-      const day = t.iso.slice(0, 10);
-      rb.history = (rb.history || []).filter(h => h.date !== day).slice(-89);
-      rb.history.push({ date: day, rate: v });
-      rb.rate30yr = v;
-      rb.asOf = day;
-      rb.asOfLabel = t.labelLong.split(' \u00b7 ')[0];
-      rb.source = 'Mortgage News Daily';
-      console.log('[sweep] rate30yr=' + v + '% (' + rb.asOfLabel + ')');
-    } else {
-      console.log('[sweep] rate: source not parseable, keeping ' + rb.rate30yr + '% (' + (rb.asOfLabel || rb.asOf) + ')');
-    }
-  } catch (e) {
-    console.log('[sweep] rate fetch failed, keeping ' + rb.rate30yr + '%: ' + (e && e.message));
-  }
-  if (!existsSync(dirname(rbPath))) mkdirSync(dirname(rbPath), { recursive: true });
-  writeFileSync(rbPath, JSON.stringify(rb, null, 2) + '\n');
-}
-
-// ---- weekly Freddie Mac PMMS benchmark via FRED (best effort; keeps last good value) ----
-async function refreshPmms(t) {
-  const path = p('reporting/pmms.json');
-  let pj;
-  try { pj = JSON.parse(readFileSync(path, 'utf8')); }
-  catch { pj = { schema: 'nhd-pmms-v1', label: '30 yr fixed weekly national survey', source: 'Freddie Mac PMMS', rate: null, asOf: null, history: [] }; }
-  try {
-    const ctl = new AbortController();
-    const to = setTimeout(() => ctl.abort(), 15000);
-    const res = await fetch('https://fred.stlouisfed.org/graph/fredgraph.csv?id=MORTGAGE30US', {
-      signal: ctl.signal, headers: { 'user-agent': 'Mozilla/5.0 (compatible; NHD-data; +https://newhomedispatch.com)' } });
-    clearTimeout(to);
-    if (res.status === 200) {
-      const rows = (await res.text()).trim().split('\n').map(r => r.split(','));
-      const data = rows.slice(1).map(r => ({ date: r[0], rate: parseFloat(r[1]) }))
-        .filter(r => /^\d{4}-\d{2}-\d{2}$/.test(r.date || '') && Number.isFinite(r.rate) && r.rate > 2 && r.rate < 15);
-      if (data.length) {
-        const last = data[data.length - 1];
-        const prior = data.length > 1 ? data[data.length - 2] : null;
-        const yearAgoTarget = new Date(last.date + 'T12:00:00Z'); yearAgoTarget.setUTCDate(yearAgoTarget.getUTCDate() - 364);
-        const yaKey = yearAgoTarget.toISOString().slice(0, 10);
-        let yearAgo = null, best = 1e9;
-        for (const d of data) { const diff = Math.abs(new Date(d.date) - new Date(yaKey)); if (diff < best) { best = diff; yearAgo = d; } }
-        pj.rate = last.rate; pj.asOf = last.date;
-        pj.prior = prior ? { rate: prior.rate, date: prior.date } : null;
-        pj.yearAgo = yearAgo && best < 15 * 86400000 ? { rate: yearAgo.rate, date: yearAgo.date } : pj.yearAgo || null;
-        pj.source = 'Freddie Mac PMMS (via FRED)';
-        pj.history = (pj.history || []).filter(h => h.date !== last.date).slice(-155);
-        pj.history.push({ date: last.date, rate: last.rate });
-        console.log('[sweep] pmms=' + last.rate + '% (' + last.date + ')');
-      }
-    } else {
-      console.log('[sweep] pmms: HTTP ' + res.status + ', keeping ' + pj.rate + '% (' + pj.asOf + ')');
-    }
-  } catch (e) {
-    console.log('[sweep] pmms fetch failed, keeping ' + pj.rate + '%: ' + (e && e.message));
-  }
-  if (!existsSync(dirname(path))) mkdirSync(dirname(path), { recursive: true });
-  writeFileSync(path, JSON.stringify(pj, null, 2) + '\n');
-}
-
-// ---- City of Austin new-residential building permits (Socrata open data; best effort) ----
-// Trailing-30-day count of issued Building Permits, class Residential, work class New,
-// plus the same window one year earlier for context. A leading supply signal.
-async function refreshPermits(t) {
-  const path = p('reporting/permits.json');
-  let pj;
-  try { pj = JSON.parse(readFileSync(path, 'utf8')); }
-  catch { pj = { schema: 'nhd-permits-v1', label: 'New residential building permits issued · City of Austin · trailing 30 days', source: 'City of Austin Open Data (Issued Construction Permits, 3syk-w9eu)', history: [] }; }
-  async function countBetween(fromIso, toIso) {
-    const where = encodeURIComponent(`permit_class_mapped='Residential' AND work_class='New' AND permit_type_desc='Building Permit' AND issue_date between '${fromIso}T00:00:00' and '${toIso}T00:00:00'`);
-    const url = `https://data.austintexas.gov/resource/3syk-w9eu.json?$select=count(*)%20as%20n&$where=${where}`;
-    const ctl = new AbortController();
-    const to = setTimeout(() => ctl.abort(), 20000);
-    const res = await fetch(url, { signal: ctl.signal, headers: { 'user-agent': 'Mozilla/5.0 (compatible; NHD-data; +https://newhomedispatch.com)' } });
-    clearTimeout(to);
-    if (res.status !== 200) throw new Error('HTTP ' + res.status);
-    const j = await res.json();
-    const n = parseInt(j && j[0] && j[0].n, 10);
-    if (!Number.isFinite(n)) throw new Error('unparseable count');
-    return n;
-  }
-  try {
-    const day = t.iso.slice(0, 10);
-    const from = new Date(day + 'T12:00:00Z'); from.setUTCDate(from.getUTCDate() - 30);
-    const fromKey = from.toISOString().slice(0, 10);
-    const pyTo = new Date(day + 'T12:00:00Z'); pyTo.setUTCFullYear(pyTo.getUTCFullYear() - 1);
-    const pyFrom = new Date(fromKey + 'T12:00:00Z'); pyFrom.setUTCFullYear(pyFrom.getUTCFullYear() - 1);
-    const count = await countBetween(fromKey, day);
-    const priorYear = await countBetween(pyFrom.toISOString().slice(0, 10), pyTo.toISOString().slice(0, 10));
-    pj.current = { from: fromKey, to: day, count: count };
-    pj.priorYear = { from: pyFrom.toISOString().slice(0, 10), to: pyTo.toISOString().slice(0, 10), count: priorYear };
-    pj.updated = day;
-    pj.history = (pj.history || []).filter(h => h.date !== day).slice(-179);
-    pj.history.push({ date: day, count30d: count, priorYear30d: priorYear });
-    console.log('[sweep] permits30d=' + count + ' (yr-ago window ' + priorYear + ')');
-  } catch (e) {
-    console.log('[sweep] permits fetch failed, keeping last: ' + (e && e.message));
-  }
-  if (!existsSync(dirname(path))) mkdirSync(dirname(path), { recursive: true });
-  writeFileSync(path, JSON.stringify(pj, null, 2) + '\n');
-}
-
-// ---- content packet: one structured record per completed sweep. This is the
-// single canonical source for every downstream format (site modules, social,
-// email, SMS, weekly edition). Nothing downstream re-derives facts by hand.
-// publishRecommendation rules: broad only when a material change exists;
-// watchlist-only when changes touch specific builders without moving the
-// market read; internal-only when nothing material changed (an honest quiet
-// day is recorded, never dressed up).
-function writeContentPacket(core) {
-  const path = p('reporting/content-packet.json');
-  const inc = JSON.parse(readFileSync(p('incentives.json'), 'utf8'));
-  const dk = (w) => { w = String(w || ''); if (/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0, 10);
-    const m = w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/); if (!m) return null;
-    const y = m[3] ? (m[3].length === 2 ? '20' + m[3] : m[3]) : String(new Date().getFullYear());
-    return y + '-' + ('0' + m[1]).slice(-2) + '-' + ('0' + m[2]).slice(-2); };
-  const t = core.t.ymd;
-  const recs = inc.records || [], promos = inc.promos || [];
-  const liveOf = (l) => l.filter((o) => { const k = o.expires ? dk(o.expires) : null; return !k || k >= t; });
-  const liveR = liveOf(recs), liveP = liveOf(promos);
-  const bld = new Set([...liveR, ...liveP].map((o) => o.builder).filter(Boolean));
-  const newOffers = [];
-  recs.forEach((o) => { if (o.history && o.history.length === 1 && o.history[0].date === t) newOffers.push(o.builder); });
-  liveP.forEach((o) => { if (o.firstObserved === t) newOffers.push(o.builder); });
-  const improved = recs.filter((o) => o.lastObserved === t && o.delta > 0).map((o) => o.builder);
-  const reduced = recs.filter((o) => o.lastObserved === t && o.delta < 0).map((o) => o.builder);
-  const wk = new Date(t + 'T12:00:00Z'); wk.setUTCDate(wk.getUTCDate() + 7);
-  const wkKey = wk.toISOString().slice(0, 10);
-  const urgent = [...liveR, ...liveP].filter((o) => { const k = o.expires ? dk(o.expires) : null; return k && k >= t && k <= wkKey; })
-    .map((o) => ({ builder: o.builder, deadline: dk(o.expires), offer: (o.promo || (o.incentiveType ? o.incentiveType + ' $' + o.advertisedValue : '')).slice(0, 90) }))
-    .sort((a, b) => a.deadline < b.deadline ? -1 : 1);
-  let sh = { points: [] };
-  try { sh = JSON.parse(readFileSync(p('score-history.json'), 'utf8')); } catch { }
-  const pts = (sh.points || []).slice().sort((a, b) => String(a.t).localeCompare(String(b.t)));
-  const cur = pts[pts.length - 1] || {}, prev = pts[pts.length - 2] || null;
-  const dScore = prev ? cur.score - prev.score : null;
-  let rb = null; try { rb = JSON.parse(readFileSync(p('reporting/rate-benchmark.json'), 'utf8')); } catch { }
-  let pm = null; try { pm = JSON.parse(readFileSync(p('reporting/pmms.json'), 'utf8')); } catch { }
-  const changed = newOffers.length + improved.length + reduced.length;
-  const drivers = [];
-  if (newOffers.length) drivers.push(newOffers.length + ' new offer' + (newOffers.length > 1 ? 's' : '') + ' (' + [...new Set(newOffers)].slice(0, 3).join(', ') + ')');
-  if (improved.length) drivers.push(improved.length + ' improved');
-  if (reduced.length) drivers.push(reduced.length + ' reduced');
-  const interpretation = changed
-    ? 'Movement this sweep: ' + drivers.join(', ') + '. Market-wide score ' + (dScore ? (dScore > 0 ? 'up ' : 'down ') + Math.abs(dScore) : 'unchanged') + (dScore && Math.abs(dScore) <= 2 ? ' (within model noise)' : '') + '.'
-    : 'No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.';
-  const buyerAction = urgent.length
-    ? 'Nearest advertised deadline: ' + urgent[0].builder + ' (' + urgent[0].deadline + '). If that builder is on your list, get the current terms in writing today.'
-    : 'No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.';
-  const packet = {
-    schema: 'nhd-content-packet-v1',
-    sweepId: core.t.iso + '-' + core.t.slot,
-    generatedAt: core.t.iso,
-    facts: {
-      score: cur.score ?? null, band: cur.band ?? null, scoreDelta: dScore,
-      concessionIndex: core.idx, offersLive: liveR.length + liveP.length,
-      buildersLive: bld.size, expired: (recs.length - liveR.length) + (promos.length - liveP.length),
-      rateDaily: rb ? rb.rate30yr : null, ratePmmsWeekly: pm ? pm.rate : null,
-    },
-    changes: { count: changed, newOffers: [...new Set(newOffers)], improved: [...new Set(improved)], reduced: [...new Set(reduced)], deadlinesNext7d: urgent.slice(0, 5) },
-    interpretation,
-    buyerAction,
-    affectedSegments: urgent.length ? ['buyers considering: ' + [...new Set(urgent.map(u => u.builder))].join(', '), 'buyers purchasing within 30 days'] : ['no segment needs to act on today’s sweep'],
-    confidence: 'All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.',
-    sources: ['incentives.json', 'score-history.json', 'concession-index.json', 'reporting/rate-benchmark.json', 'reporting/pmms.json'],
-    publishRecommendation: changed ? (dScore ? 'publish-broadly' : 'publish-watchlists') : 'record-internal',
-  };
-  writeFileSync(path, JSON.stringify(packet, null, 2) + '\n');
-  console.log('[sweep] content packet: ' + packet.publishRecommendation + ' (' + changed + ' material changes)');
-}
