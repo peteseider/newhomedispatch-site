@@ -77,7 +77,7 @@
 
 /* v118: single-source publication-schedule badges. Change the cadence HERE once
    and every page's nav badges update at load (static HTML remains the fallback).
-   Current model: Hot Sheet daily each morning; Incentive Tracker data twice daily
+   Current model: Hot Sheet daily each morning; Incentive Tracker data four times daily
    with a new issue every Monday; key moves roll into Friday's Weekly Dispatch. */
 (function () {
   var SCHEDULE = {
@@ -102,52 +102,4 @@
   if (document.readyState !== 'loading') { apply(); }
   else { document.addEventListener('DOMContentLoaded', apply); }
   window.NHD_SCHEDULE = SCHEDULE;
-})();
-
-
-/* v74: single source Free Tools menu additions. One edit here appears on every
-   page (desktop dropdown + mobile drawer). Guarded so re-runs never duplicate. */
-(function () {
-  function ready(fn){ if(document.readyState!=='loading'){fn();} else {document.addEventListener('DOMContentLoaded',fn);} }
-  ready(function () {
-    var items = [
-      { href: '/who-owns-the-neighborhood.html', label: 'Who Owns the Neighborhood' },
-      { href: '/negotiation-window.html', label: 'The Negotiation Window' }
-    ];
-    var groups = document.querySelectorAll('.nav-grp');
-    for (var g = 0; g < groups.length; g++) {
-      var btn = groups[g].querySelector('.nav-grp-btn');
-      var ul = groups[g].querySelector('ul');
-      if (!btn || !ul) continue;
-      if ((btn.textContent || '').indexOf('Free Tools') === -1) continue;
-      for (var i = 0; i < items.length; i++) {
-        if (ul.querySelector('a[href$="' + items[i].href.slice(1) + '"]')) continue;
-        var li = document.createElement('li');
-        var a = document.createElement('a');
-        a.href = items[i].href; a.textContent = items[i].label;
-        li.appendChild(a); ul.appendChild(li);
-      }
-    }
-    var mob = document.querySelector('.nav-mobile');
-    if (mob) {
-      var anchorA = mob.querySelector('a[href$="free-tools.html"]');
-      if (anchorA) {
-        for (var j = items.length - 1; j >= 0; j--) {
-          if (mob.querySelector('a[href$="' + items[j].href.slice(1) + '"]')) continue;
-          var a2 = document.createElement('a');
-          a2.href = items[j].href; a2.textContent = items[j].label;
-          a2.className = anchorA.className;
-          var host = anchorA.parentElement;
-          if (host && host.tagName === 'LI') {
-            var li2 = document.createElement('li');
-            li2.className = host.className;
-            li2.appendChild(a2);
-            host.parentElement.insertBefore(li2, host.nextSibling);
-          } else {
-            anchorA.parentElement.insertBefore(a2, anchorA.nextSibling);
-          }
-        }
-      }
-    }
-  });
 })();

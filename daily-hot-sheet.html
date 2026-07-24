@@ -410,7 +410,7 @@
       <h4>The Buyer Advantage Score</h4>
       <p>One 0 to 100 read of buyer leverage, computed from five signals we verify ourselves, never from a builder claim. The weights are published; the tooling that gathers and scores the signals is ours.</p>
       <h4>The Concession Index</h4>
-      <p>The median advertised incentive across every tracked offer, re-verified against each builder's own site twice a day and adjusted for how much value actually reaches the buyer.</p>
+      <p>The median advertised incentive across every tracked offer, re-verified against each builder's own site four times a day and adjusted for how much value actually reaches the buyer.</p>
       <h4>The Movement Log</h4>
       <p>Every advertised change is logged with a date the moment a sweep catches it. Stability is reported too, because a market where builders hold steady is information. See it live on the <a href="incentive-tracker.html">Incentive Tracker</a>.</p>
       <h4>The Entry Level Price Floor</h4>
@@ -427,7 +427,7 @@
       <h4>Two scores, never mixed</h4>
       <p>The <b>Buyer Advantage Score</b> answers <em>"is now a good time to be shopping at all?"</em>, one market number you check like a rate. The <b>Builder Opportunity Rankings</b> answer <em>"who, specifically, is most motivated?"</em> Market = the weather; builders = which doors to knock on.</p>
       <h4>Verified, not repackaged</h4>
-      <p>Every figure is captured live from each builder's own website twice a day and time-stamped, nothing carried forward, nothing field-verified is claimed that isn't. What's advertised is labeled advertised; what's expired-but-displayed is flagged.</p>
+      <p>Every figure is captured live from each builder's own website four times a day and time-stamped, nothing carried forward, nothing field-verified is claimed that isn't. What's advertised is labeled advertised; what's expired-but-displayed is flagged.</p>
       <h4>What's coming: the intelligence engine</h4>
       <p>An MLS-derived market layer is in development to sharpen these scores, inventory and days-on-market trends, absorption, and concession trends, all aggregate and derived within MLS rules. You won't see "an MLS section"; you'll see observations like <span class="eng">inventory up for three straight weeks, increasing a builder's current inventory burden.</span> Predictive relationships will only be published once enough retained history demonstrates them. Not live until that pipeline is built and authorized.</p>
     </div>
@@ -959,7 +959,7 @@
         var cur = vals[vals.length - 1], first = vals[0];
         html += row('Concession Index', 'median advertised incentive · our series', money(cur),
           chip('since Jul 20', +(cur - first), function (d) { return money(Math.abs(d)); }, false) +
-          '<span style="font-size:11px;color:#9a9a9a;">new series · history accrues twice daily</span>',
+          '<span style="font-size:11px;color:#9a9a9a;">new series · history accrues with every sweep, four times daily</span>',
           spark(vals, 110, 34));
       }
       if (mt.medianPrice && mt.medianPrice.series && mt.medianPrice.series.length) {
