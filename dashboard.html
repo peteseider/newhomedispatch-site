@@ -59,6 +59,9 @@ a.ga{display:inline-block;margin-top:6px;background:var(--blueprint);color:#fff;
 <div class="prod"><span class="live">Live</span><b>Buyer Playbook</b><small>Quarterly evergreen education.</small><a href="buyer-guides.html" target="_blank">Open →</a></div>
 </div>
 
+<h2>MLS daily scrub, internal aggregates</h2>
+<div class="prod" id="mlsdigest" style="border-top-color:var(--good);"><b>Digest</b><small id="mlsdigest-body">Checking the peteseider.com scrub endpoint...</small></div>
+
 <h2>Validation metrics, enter this week's number to see status</h2>
 <table>
 <thead><tr><th>Metric</th><th>Target</th><th>This week</th><th>Status</th><th>Where to read it in GA4</th></tr></thead>
@@ -107,6 +110,20 @@ var ok = x.dir==='down' ? (v<=x.target) : (v>=x.target);
 s.className='status '+(ok?'st-good':'st-bad');
 s.textContent= ok ? 'On target' : 'Below target';
 });
+})();
+(function(){
+var el=document.getElementById('mlsdigest-body'); if(!el) return;
+fetch('https://peteseider.com/.netlify/functions/mls-digest',{cache:'no-store'}).then(function(r){return r.json();}).then(function(j){
+if(!j || !j.available){ el.textContent='Waiting on the first scrub run. It activates the day after MLSGRID_TOKEN is set in the peteseider Netlify project. ' + (j && j.reason ? j.reason : ''); return; }
+var d=j.digest||{};
+var parts=[];
+if(d.generatedAt) parts.push('Generated '+d.generatedAt);
+if(typeof d.activeCount==='number') parts.push('Active: '+d.activeCount.toLocaleString());
+if(typeof d.newConstructionCount==='number') parts.push('New construction: '+d.newConstructionCount.toLocaleString());
+if(typeof d.priceReductions==='number') parts.push('Price reductions (26h): '+d.priceReductions.toLocaleString());
+if(d.byCity){ var top=Object.keys(d.byCity).sort(function(a,b){return d.byCity[b]-d.byCity[a];}).slice(0,6).map(function(c){return c+' '+d.byCity[c];}).join(' | '); if(top) parts.push('By city: '+top); }
+el.textContent = parts.length ? parts.join(' | ') : 'Digest present but empty; check mls-scrub logs. Raw keys: '+Object.keys(d).join(', ');
+}).catch(function(){ el.textContent='Endpoint unreachable from this origin. Aggregates only; internal use pending the licensing answer.'; });
 })();
 </script>
 </body>
