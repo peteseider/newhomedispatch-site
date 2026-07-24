@@ -1752,7 +1752,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 </header>
 <ul class="nav-mobile" id="nav-mobile">
         <li><a href="weekly-dispatch.html" style="font-weight:800;color:#2B4FE0;">Weekly Dispatch <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">FREE · FRIDAY</span></a></li>
-        <li><a href="incentive-tracker.html" style="font-weight:800;color:#2B4FE0;">Incentive Tracker <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">MON &#183; WED</span></a></li>
+        <li><a href="incentive-tracker.html" style="font-weight:800;color:#2B4FE0;">Incentive Tracker <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">MONDAYS</span></a></li>
         <li><a href="daily-hot-sheet.html" style="font-weight:800;color:#2B4FE0;">Daily Hot Sheet <span style="font-weight:700;font-size:.68em;background:#0F2942;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">EVERY MORNING</span></a></li>
         <li><a href="start-here.html">Start Here</a></li>
         <li><a href="communities.html">Community Explorer</a></li>
@@ -1768,10 +1768,10 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 
   <!-- HERO -->
   <section class="trk-hero"><div class="wrap">
-    <div class="eyebrow">The Incentive Tracker</div>
+    <div class="eyebrow">The Incentive Tracker <span style="font-weight:700;font-size:.72em;background:#2B4FE0;color:#fff;padding:2px 7px;border-radius:2px;margin-left:8px;vertical-align:middle;letter-spacing:.06em;">DATA TWICE DAILY · NEW ISSUE MONDAYS</span></div>
     <h1>Builder incentives across Central Texas, tracked, ranked, and compared.</h1>
 <p style="margin-top:14px;font-size:0.95rem;"><a href="leverage-report.html" style="font-weight:700;color:var(--blueprint,#2B4FE0);">Have an offer in front of you? Build your Leverage Report from this data &rarr;</a></p>
-    <p class="lead">Most builder incentives are advertised once and never compared. We log them across the metro every week, rank them by how much value actually reaches the buyer, and show which way each one is moving, so you can see what's real, what's rising, and what's about to expire before you walk into a sales office.</p>
+    <p class="lead">Most builder incentives are advertised once and never compared. We check them against each builder's own site twice a day, rank them by how much value actually reaches the buyer, and show which way each one is moving, so you can see what's real, what's rising, and what's about to expire before you walk into a sales office. A new tracker issue publishes every Monday, and the week's key moves roll into Friday's Weekly Dispatch.</p>
     <div class="trk-meta">
       <span>Last updated: <b id="trk-updated">…</b></span>
       <span>·</span>
@@ -1898,6 +1898,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
           var upd=(d&&d.lastUpdatedLabel)||"";
           var eb=document.getElementById('ci-eyebrow'); if(eb&&upd) eb.textContent="Concession Index · verified "+upd;
           var u=document.getElementById('ci-updated'); if(u&&upd) u.textContent="Last verified "+upd;
+          var hu=document.getElementById('trk-updated'); if(hu&&d&&d.lastUpdatedLabel){hu.textContent=d.lastUpdatedLabel; window.__nhdSweepStamp=true;}
           var pts=((d&&d.points)||[]).slice().sort(function(a,b){return a.t<b.t?-1:1;});
           if(pts.length<3) return;            /* only show the line once it has something to say */
           var box=document.getElementById('ci-chart'); if(box) box.style.display='';
@@ -1929,9 +1930,64 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
   </section>
   <!-- CI-END -->
 
+  <!-- THE DISPATCH RULE: the incentive never leads the decision -->
+  <section class="blk"><div class="wrap">
+    <div style="background:#0F2942;border-radius:10px;padding:20px 24px;color:#fff;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#8fa8d9;text-transform:uppercase;margin-bottom:6px;">The Dispatch rule &middot; read before you use this tracker</div>
+      <div style="font-size:21px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px;">The deal comes last.</div>
+      <p style="font-size:13.5px;line-height:1.65;color:#c9d6ef;margin:0 0 10px;">Goals first, then area, then community, then builder, and only then the numbers. A bigger incentive can just be a bigger markup underneath. This tracker exists for trend awareness and negotiating windows on a home you already chose for the right reasons, never so a discount picks your house.</p>
+      <a href="deal-comes-last.html" style="color:#9DBBFF;font-weight:700;font-size:13.5px;">The full order of operations &rarr;</a>
+    </div>
+  </div></section>
+
+  <!-- MOVEMENT LOG: auto-built from the sweep data. Shows every offer change
+       between Monday issues so the twice-daily checks stay visible. -->
+  <section class="blk"><div class="wrap">
+    <div class="blk-head"><h2>Movement log</h2><span class="n">Updated with every sweep</span></div>
+    <div id="trk-moves" style="border:1px solid var(--line,#E5E5E5);border-radius:2px;padding:16px 18px;background:var(--paper,#fff);font-size:.92rem;line-height:1.6;">&hellip;</div>
+    <script>
+    (function(){
+      function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+      function money(n){return '$'+Number(n).toLocaleString('en-US');}
+      function fmtD(d){var dt=new Date(d+'T12:00:00-05:00');return isNaN(dt)?d:dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+      fetch('/incentives.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(j){
+        var box=document.getElementById('trk-moves'); if(!box||!j) return;
+        try {
+          var _dk = function(w){ w=String(w||''); if(/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0,10); var m=w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/); if(!m) return null; var y=m[3]?(m[3].length===2?'20'+m[3]:m[3]):String(new Date().getFullYear()); return y+'-'+('0'+m[1]).slice(-2)+'-'+('0'+m[2]).slice(-2); };
+          var _td = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago'}).format(new Date());
+          var _lv = function(l){ return (l||[]).filter(function(o){ if(!o.expires) return true; var k=_dk(o.expires); return !k || k >= _td; }); };
+          var _all = _lv(j.records).length + _lv(j.promos).length;
+          var _cm = document.getElementById('trk-count-meta');
+          if (_cm && _all) { _cm.textContent = String(_all); window.__nhdCount = true; }
+        } catch (e) {}
+        var evts=[];
+        (j.records||[]).forEach(function(o){
+          var h=o.history||[];
+          for(var i=1;i<h.length;i++){
+            var up=h[i].value>h[i-1].value;
+            evts.push({d:h[i].date,html:'<b>'+esc(o.builder)+'</b> &middot; '+esc(o.community||'')+' &middot; '+money(h[i-1].value)+' &rarr; <b>'+money(h[i].value)+'</b> <span style="color:'+(up?'#1F7A43':'#B3382C')+';font-weight:700;">'+(up?'&#9650; better for buyers':'&#9660; pulled back')+'</span>'});
+          }
+        });
+        evts.sort(function(a,b){return a.d<b.d?1:-1;});
+        var stamp='';
+        fetch('/concession-index.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(ci){
+          if(ci&&ci.lastUpdatedLabel) stamp='<div style="margin-top:10px;font-size:.78rem;color:var(--text-muted,#767676);">Every offer re-verified against the builder\u2019s own site &middot; last sweep '+esc(ci.lastUpdatedLabel)+'</div>';
+          if(evts.length){
+            box.innerHTML=evts.slice(0,6).map(function(e){return '<div style="padding:6px 0;border-bottom:1px solid var(--line,#EEE);"><span style="font-family:monospace;font-size:.8rem;color:var(--text-muted,#767676);margin-right:10px;">'+fmtD(e.d)+'</span>'+e.html+'</div>';}).join('')+stamp;
+          } else {
+            var n=(j.records||[]).length;
+            box.innerHTML='No advertised-offer changes across the '+n+' tracked offers since tracking began '+fmtD(((j.records||[])[0]||{}).lastObserved||j.updated||'')+'. That stability is itself a read: builders are holding their positions, not sweetening them.'+stamp;
+          }
+        });
+      }).catch(function(){});
+    })();
+    </script>
+  </div></section>
+
+
   <!-- MARKET SUMMARY -->
   <section class="blk"><div class="wrap">
-    <div class="blk-head"><h2>The market this week</h2><span class="n">Summary</span></div>
+    <div class="blk-head"><h2>The market right now</h2><span class="n">Summary</span></div>
     <div class="tiles" id="trk-tiles"></div>
   </div></section>
 
@@ -1948,6 +2004,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
   <!-- FULL TABLE -->
   <section class="blk"><div class="wrap">
     <div class="blk-head"><h2>Every tracked offer</h2><span class="n">Filter · sort · compare</span></div>
+    <p class="result-count" style="margin-top:-4px;">The table below holds the fully verified records with price history. The wider set of advertised promos we monitor appears in the Movement Log above the moment one changes.</p>
     <div class="controls" id="trk-controls">
       <div class="ctrl search"><label for="f-search">Search</label><input type="search" id="f-search" placeholder="Community, builder, city…" autocomplete="off"></div>
       <div class="ctrl"><label for="f-city">City / area</label><select id="f-city"></select></div>
@@ -1988,7 +2045,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
   <!-- BUYER SUBMISSION -->
   <section class="blk" id="report-incentive"><div class="wrap">
     <div class="blk-head"><h2>Seen a different number?</h2><span class="n">Report an incentive</span></div>
-    <p class="result-count" style="margin-top:-6px;">If a sales office quoted you something better, worse, or different from what we show, tell us. We verify before anything appears, your name never does. This is how the tracker gets sharper every week.</p>
+    <p class="result-count" style="margin-top:-6px;">If a sales office quoted you something better, worse, or different from what we show, tell us. We verify before anything appears, your name never does. This is how the tracker gets sharper with every sweep.</p>
     <form name="incentive-report" method="POST" action="thanks-incentive.html" data-netlify="true" netlify-honeypot="bot-field" data-fallback-email="hello@newhomedispatch.com" style="max-width:720px;">
       <input type="hidden" name="form-name" value="incentive-report">
       <p style="position:absolute;left:-9999px;"><label>Leave blank: <input name="bot-field"></label></p>
@@ -2159,7 +2216,8 @@ window.NHD_INCENTIVES = {"dates": ["2026-07-20"], "updated": "2026-07-22", "samp
    Reads window.NHD_INCENTIVES (see incentives-data.js). All figures are field
    observations, labeled by source tier. Rankings are editorial (transferability of
    value), disclosed on the methodology panel. No lending or investment advice. */
-function initTracker(DATA) {
+(function () {
+  var DATA = window.NHD_INCENTIVES;
   if (!DATA || !DATA.records) return;
   var recs = DATA.records.slice();
   var DATES = DATA.dates;
@@ -2188,8 +2246,7 @@ function initTracker(DATA) {
     recs.forEach(function (r) { builders[r.builder] = 1; communities[r.community] = 1; });
     var rising = recs.filter(function (r) { return r.delta > 0; }).length;
     var lenderShare = Math.round(recs.filter(function (r) { return r.lenderTied; }).length / recs.length * 100);
-    var deltaStr = (medianSeries.length < 2 || isNaN(medDelta)) ? 'Baseline week on the tape'
-      : medDelta === 0 ? 'No change wk/wk'
+    var deltaStr = medDelta === 0 ? 'No change wk/wk'
       : (medDelta > 0 ? '<span class="up">&#9650; ' + usd(Math.abs(medDelta)) + '</span> vs last week' : '<span class="dn">&#9660; ' + usd(Math.abs(medDelta)) + '</span> vs last week');
     var tiles = [
       { k: 'Median advertised incentive', v: usd(curMed), s: deltaStr },
@@ -2490,42 +2547,14 @@ function initTracker(DATA) {
   /* ---------- orchestrate ---------- */
   function render() { renderHead(); renderTable(); updateCmpBar(); }
   function init() {
-    $('trk-updated').textContent = fmtDateShort(DATA.updated) + ', 2026';
-    $('trk-count-meta').textContent = recs.length;
+    if (!window.__nhdSweepStamp) $('trk-updated').textContent = fmtDateShort(DATA.updated) + ', 2026';
+    if (!window.__nhdCount) $('trk-count-meta').textContent = recs.length;
     renderTiles(); renderTrend(); renderBest(); initFilters();
     $('cmp-clear').addEventListener('click', function () { compareSet = {}; $('cmp-panel').classList.remove('on'); render(); });
     $('cmp-go').addEventListener('click', function () { if (countCompare() < 2) { cmpMsg('Select at least 2 offers to compare.'); return; } renderComparePanel(); });
     render();
   }
   if (document.readyState !== 'loading') init(); else document.addEventListener('DOMContentLoaded', init);
-}
-/* Runtime data: the tracker reads incentives.json (the same verified file the
-   twice daily sweep republishes), so every number and the timestamp update on
-   each pull with no HTML edit. The inline block above is the offline fallback. */
-(function () {
-  var booted = false;
-  var boot = function (d) {
-    if (booted) return; booted = true;
-    initTracker(d && d.records && d.records.length ? d : window.NHD_INCENTIVES);
-  };
-  try {
-    fetch('incentives.json', { cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(boot)
-      .catch(function () { boot(null); });
-    setTimeout(function () { boot(null); }, 4000);
-  } catch (e) { boot(null); }
-  /* Append the sweep's exact last-checked stamp when available */
-  try {
-    fetch('reporting/sweep-latest.json', { cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (j) {
-        if (!j || !j.ranAtLabel) return;
-        var el = document.getElementById('trk-updated');
-        if (el) el.textContent = el.textContent + ' · checked ' + j.ranAtLabel;
-      })
-      .catch(function () { });
-  } catch (e) { }
 })();
 </script>
 
