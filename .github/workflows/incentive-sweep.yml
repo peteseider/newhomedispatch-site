@@ -4,12 +4,11 @@ name: Concession Index sweep
 # from pushing). Recomputes the Concession Index from the verified
 # incentives.json, stamps the exact run time, commits, and lets Netlify
 # auto-deploy. Times are UTC; GitHub cron does not observe DST, so during
-# US Central Daylight Time (Mar–Nov) these fire an hour later on the clock in
-# winter. Four slots because GitHub cron can fire late or skip a slot under
-# load: the 6:30 AM / 6:30 PM CT anchors match the published twice-daily
-# promise, and the midday slots keep the "last check" stamp fresh even when
-# an anchor slot is delayed. The site promises twice a day; extra runs only
-# make the data fresher than promised, never staler.
+# US Central Daylight Time (Mar-Nov) these fire an hour later on the clock in
+# winter. Four slots match the published four-times-a-day promise (6:30 AM,
+# 10:30 AM, 2:30 PM, 6:30 PM CT). GitHub cron can fire late or silently skip
+# a slot under load (confirmed 2026-07-24); the Apps Script sweepWatchdog
+# is the same-day backstop for that, see NHD Automations.
 
 on:
   schedule:
