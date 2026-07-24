@@ -67,6 +67,6 @@ jobs:
         run: |
           git config user.name "nhd-quant-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/ reporting/field-confirmations.json
+          git add --all data/ reporting/ || true
           git diff --cached --quiet || git commit -m "Quant sensors: headlines + field + permits + pressure [skip ci]"
           git push
