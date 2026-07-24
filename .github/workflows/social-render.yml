@@ -49,12 +49,27 @@ jobs:
           SOCIAL_OUT: share
         run: node scripts/render-social.cjs
       - name: Commit rendered cards
+        # Commit FIRST, then rebase with autostash, then push with retries.
+        # Rebasing before the commit fails whenever the render leaves unstaged
+        # changes, and a plain push loses the race if anything else lands on
+        # main while Chromium was rendering (this exact race failed run 18).
         run: |
           git config user.name  "nhd-social-bot"
           git config user.email "actions@users.noreply.github.com"
-          git pull --rebase origin main || true
           git add share/hot-sheet-read.png share/hot-sheet-move.png share/hot-sheet-explained.png share/hot-sheet-rate.png share/hot-sheet-illusion.png share/hot-sheet-board.png share/captions.txt
-          if git diff --cached --quiet; then echo "No image changes."; else git commit -m "Auto-render social cards" && git push; fi
+          if git diff --cached --quiet; then
+            echo "No image changes."
+          else
+            git commit -m "Auto-render social cards"
+            ok=0
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main
+              if git push; then ok=1; break; fi
+              echo "Push rejected, retry $i"
+              sleep 5
+            done
+            if [ "$ok" != "1" ]; then echo "Could not push after 3 attempts"; exit 1; fi
+          fi
       - name: Upload to Google Drive
         if: ${{ env.GDRIVE_SA != '' }}
         run: node scripts/upload-drive.cjs
