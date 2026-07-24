@@ -1,0 +1,295 @@
+{
+ "schema": "nhd-sweep-targets-v1",
+ "purpose": "Canonical builder roster for every sweep (the scheduled Live Builder Intelligence Sweep and the GitHub sweep detection layer). Any sweep prompt or script should treat THIS file as the source of truth for who gets checked. Add a builder here and every sweep picks it up.",
+ "updated": "2026-07-24",
+ "count": 41,
+ "targets": [
+  {
+   "slug": "ashton-woods",
+   "name": "Ashton Woods",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "brohn-homes",
+   "name": "Brohn Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "brookfield",
+   "name": "Brookfield Residential",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "centex",
+   "name": "Centex",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "century-communities",
+   "name": "Century Communities",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "chesmar-homes",
+   "name": "Chesmar Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "coventry",
+   "name": "Coventry Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "dr-horton",
+   "name": "D.R. Horton",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "david-weekley",
+   "name": "David Weekley",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "drb",
+   "name": "DRB Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "drees",
+   "name": "Drees Custom Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "gehan-homes",
+   "name": "Brightland Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": "Gehan rebranded to Brightland; slug kept for event log continuity"
+  },
+  {
+   "slug": "highland",
+   "name": "Highland Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "kb-home",
+   "name": "KB Home",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "lennar",
+   "name": "Lennar",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "lgi-homes",
+   "name": "LGI Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "mi-homes",
+   "name": "M/I Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "meritage",
+   "name": "Meritage Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "pacesetter",
+   "name": "Pacesetter Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "perry",
+   "name": "Perry Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "pulte-homes",
+   "name": "Pulte Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "starlight-homes",
+   "name": "Starlight Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "taylor-morrison",
+   "name": "Taylor Morrison",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "toll-brothers",
+   "name": "Toll Brothers",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "tri-pointe",
+   "name": "Tri Pointe Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "aha-dream-homes",
+   "name": "AHA Dream Homes",
+   "tier": "tracked",
+   "offersUrl": null,
+   "note": null
+  },
+  {
+   "slug": "scott-felder-homes",
+   "name": "Scott Felder Homes",
+   "tier": "watch",
+   "offersUrl": "https://www.scottfelderhomes.com/communities/austin-area",
+   "note": "Austin, Round Rock, Georgetown, Leander, Pflugerville, Dripping Springs"
+  },
+  {
+   "slug": "gfo-home",
+   "name": "GFO Home",
+   "tier": "watch",
+   "offersUrl": "https://www.gfohome.com/division/austin/",
+   "note": "Austin division live; Pflugerville, Liberty Hill"
+  },
+  {
+   "slug": "empire-communities",
+   "name": "Empire Communities",
+   "tier": "watch",
+   "offersUrl": "https://empirehomes.com/us/texas/austin/",
+   "note": "Goodnight Ranch, Adelton (Bastrop)"
+  },
+  {
+   "slug": "milestone",
+   "name": "MileStone Community Builders",
+   "tier": "watch",
+   "offersUrl": "https://www.mymilestone.com/",
+   "note": "Austin local volume builder, multiple communities"
+  },
+  {
+   "slug": "dream-finders-homes",
+   "name": "Dream Finders Homes",
+   "tier": "watch",
+   "offersUrl": "https://dreamfindershomes.com/new-homes/tx/austin/",
+   "note": "Austin division; also operates the Coventry Homes brand"
+  },
+  {
+   "slug": "sitterle-homes",
+   "name": "Sitterle Homes",
+   "tier": "watch",
+   "offersUrl": "https://sitterlehomes.com/communities/",
+   "note": "Santa Rita Ranch, Parmer Ranch Cottages, Clearwater Ranch, Belterra"
+  },
+  {
+   "slug": "castlerock-communities",
+   "name": "CastleRock Communities",
+   "tier": "watch",
+   "offersUrl": "https://www.c-rock.com/austin",
+   "note": "Austin area communities page live"
+  },
+  {
+   "slug": "trophy-signature-homes",
+   "name": "Trophy Signature Homes",
+   "tier": "watch",
+   "offersUrl": "https://trophysignaturehomes.com/homes/austin/hutto",
+   "note": "Green Brick brand; Prairie Winds in Hutto"
+  },
+  {
+   "slug": "landsea-homes",
+   "name": "Landsea Homes",
+   "tier": "watch",
+   "offersUrl": "https://www.newhomesource.com/communities/tx/austin-area/builder-landsea-homes-19499",
+   "note": "Avery Centre (Round Rock), Lariat (Liberty Hill), Manor Commons; confirm corporate status before publishing"
+  },
+  {
+   "slug": "giddens-homes",
+   "name": "Giddens Homes",
+   "tier": "watch",
+   "offersUrl": "https://giddenshomes.com/communities/",
+   "note": "Central Texas semi custom; Georgetown, Salado"
+  },
+  {
+   "slug": "saratoga-homes",
+   "name": "Saratoga Homes",
+   "tier": "watch",
+   "offersUrl": "https://www.saratogahomestexas.com/new-homes/",
+   "note": "Tessera on Lake Travis and Austin area"
+  },
+  {
+   "slug": "terrata-homes",
+   "name": "Terrata Homes",
+   "tier": "watch",
+   "offersUrl": "https://www.terratahomes.com/texas/austin",
+   "note": "LGI premium brand; Whisper Valley and Austin area"
+  },
+  {
+   "slug": "grand-endeavor-homes",
+   "name": "Grand Endeavor Homes",
+   "tier": "watch",
+   "offersUrl": "https://www.grandendeavorhomes.com/communities/",
+   "note": "Georgetown and Liberty Hill semi custom"
+  },
+  {
+   "slug": "omega-builders",
+   "name": "Omega Builders",
+   "tier": "watch",
+   "offersUrl": "https://www.omegabuilders.com/communities",
+   "note": "North corridor (Temple, Belton)"
+  },
+  {
+   "slug": "stylecraft-builders",
+   "name": "Stylecraft Builders",
+   "tier": "watch",
+   "offersUrl": "https://www.stylecraft.com/new-homes/",
+   "note": "North corridor (Temple, Killeen area)"
+  }
+ ]
+}
