@@ -177,7 +177,9 @@
   .card a.ext{font-size:12.5px; color:var(--nhd-blue); text-decoration:none; font-weight:600; display:inline-flex; align-items:center; gap:4px; margin-top:10px;}
   .card a.ext:hover{text-decoration:underline;}
 
-  table.flow{width:100%; border-collapse:collapse; margin-top:10px; font-size:13.5px;}
+  .table-wrap{width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  table.flow{width:100%; border-collapse:collapse; margin-top:10px; font-size:13.5px; table-layout:auto;}
+  table.flow td, table.flow th{overflow-wrap:anywhere; word-break:break-word;}
   table.flow th{
     text-align:left; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
     color:var(--navy2); border-bottom:2px solid var(--navy2); padding:8px 12px 8px 0;
@@ -216,10 +218,10 @@
   .rule-list li::before{content:"•"; position:absolute; left:2px; color:var(--nhd-blue); font-weight:700; font-size:18px; line-height:1.1;}
   .rule-list li strong{color:var(--navy2);}
 
-  .link-table{width:100%; border-collapse:collapse; margin-top:12px;}
+  .link-table{width:100%; border-collapse:collapse; margin-top:12px; table-layout:auto;}
   .link-table th{text-align:left; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--navy2); border-bottom:2px solid var(--navy2); padding:8px 12px 8px 0;}
-  .link-table td{padding:12px 12px 12px 0; border-bottom:1px solid var(--line); font-size:13.5px; vertical-align:top;}
-  .link-table a{color:var(--nhd-blue); text-decoration:none; font-weight:600;}
+  .link-table td{padding:12px 12px 12px 0; border-bottom:1px solid var(--line); font-size:13.5px; vertical-align:top; overflow-wrap:anywhere; word-break:break-word;}
+  .link-table a{color:var(--nhd-blue); text-decoration:none; font-weight:600; overflow-wrap:anywhere; word-break:break-word;}
   .link-table a:hover{text-decoration:underline;}
   .pill{display:inline-block; font-size:10px; letter-spacing:.05em; text-transform:uppercase; padding:2px 8px; border-radius:10px; font-weight:700;}
   .pill.internal{background:#EAF0FF; color:var(--nhd-blue);}
