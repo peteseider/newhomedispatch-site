@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Field Route 01: Kyle &amp; Buda | NHD Team</title>
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0F2942">
+<style>
+:root{--navy:#0F2942;--blue:#2B4FE0;--gold:#F7CE7C;--ink:#151515;--line:#E7E7E7;--warn:#B7791F;--loss:#B3382C;--good:#1F7A43;}
+*{box-sizing:border-box;}body{margin:0;font-family:'Inter',sans-serif;color:var(--ink);background:#F4F4F1;padding-bottom:120px;}
+.hdr{background:var(--navy);color:#fff;padding:18px 16px 16px;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.hdr .k{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8fa8d9;}
+.hdr h1{font-size:18px;margin:4px 0 0;font-weight:800;}
+.hdr .prog{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);margin-top:4px;}
+.wrap{max-width:560px;margin:0 auto;padding:14px 12px;}
+.urgent{background:#fff;border-left:4px solid var(--loss);border-radius:0 8px 8px 0;padding:12px 14px;margin-bottom:14px;font-size:13.5px;line-height:1.55;}
+.urgent b{color:var(--loss);}
+.stop{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;}
+.stop.done{opacity:.55;}
+.stop-head{display:flex;align-items:center;gap:12px;padding:14px;cursor:pointer;user-select:none;}
+.num{flex:0 0 34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center;}
+.stop.done .num{background:var(--good);}
+.stop-head .t{flex:1;}
+.stop-head .t .n{font-weight:800;font-size:15px;}
+.stop-head .t .s{font-size:11.5px;color:#666;margin-top:1px;}
+.stop-head .why{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:#F0F0F0;color:#555;white-space:nowrap;}
+.stop-head .why.hot{background:#FBEAE8;color:var(--loss);}
+.stop-body{display:none;padding:0 14px 14px;border-top:1px solid var(--line);}
+.stop.open .stop-body{display:block;}
+.cap{font-size:13px;line-height:1.6;color:#333;margin:12px 0;}
+.cap b{display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:3px;font-weight:600;}
+.row{display:flex;gap:8px;flex-wrap:wrap;}
+.act{flex:1;min-width:110px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:600;padding:11px 8px;border-radius:7px;text-decoration:none;}
+.act.map{background:var(--navy);color:#fff;}
+.act.file{background:#fff;color:var(--navy);border:1.5px solid var(--navy);}
+.checkbtn{width:100%;margin-top:10px;padding:11px;border:1.5px dashed #bbb;background:#FAFAF8;border-radius:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#666;cursor:pointer;}
+.stop.done .checkbtn{border-style:solid;border-color:var(--good);color:var(--good);}
+.pin{position:fixed;bottom:0;left:0;right:0;background:var(--navy);color:#fff;padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:60;}
+.pin .k{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+.pin .q{font-size:12px;line-height:1.45;margin-top:3px;}
+.kit{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;margin:4px 0 14px;font-size:13px;line-height:1.6;color:#333;}
+.kit b{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:4px;}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="k">NHD Field Route 01 &middot; Internal &middot; Kyle &amp; Buda</div>
+  <h1>Ten stops, south to north.</h1>
+  <div class="prog" id="prog">0 of 10 stops logged</div>
+</header>
+<div class="wrap">
+  <div class="urgent"><b>Time sensitive first:</b> Lennar's advertised 3.99% FHA fixed (Own Your Dream) has a posted deadline of <b>Sunday July 26</b>. Hit Plum Creek North early. Get the flyer and the written terms so we can log what happens to the offer after its own deadline: honored, extended, or quietly replaced. That observation starts the deadline credibility series.</div>
+
+  <div class="kit"><b>Every stop, same kit</b>
+  Entrance photo &middot; amenity photo &middot; one ordinary street &middot; every incentive sign &middot; grab the price sheet or flyer &middot; count quick move in homes. Then tap File Visit and send it before you drive off. Verified figures replace tracker tier numbers the same day.</div>
+
+  <div id="stops"></div>
+</div>
+<div class="pin">
+  <div class="k">Three questions, in writing, every office</div>
+  <div class="q">1. What is the current incentive and its real deadline? &nbsp;2. Does it require your lender? &nbsp;3. Will you honor the posted offer if it has expired?</div>
+</div>
+<script>
+(function(){
+  var STOPS = [
+    {n:'Plum Creek North', s:'Kyle · Lennar', why:'3.99% deadline 7/26', hot:true,
+     cap:'Written promo terms and the lender requirement. QMI count and price sheet. Photos of every signage mention of the rate or deadline. Ask: is the deadline posted on site?',
+     q:'Lennar Plum Creek North Kyle TX'},
+    {n:'Waterstone Village', s:'Kyle · Meritage', why:'entry floor $199,990', hot:false,
+     cap:'Confirm the advertised floor still stands and on which plans. MUD or PID from the sales office disclosure. Combined tax rate in writing. Streetscape photos.',
+     q:'Meritage Homes Waterstone Kyle TX'},
+    {n:'Crosswinds', s:'Kyle · six tracked builders', why:'full intake', hot:false,
+     cap:'Full intake: price sheets per builder (Pacesetter, Highland, Perry, Pulte, MileStone, Brightland), incentives vs tracker, HOA dues, tax rate, MUD or PID, amenity photos at Windy Point. Candidate for tracked status. Its profile page is live and waiting for this data.',
+     q:'Crosswinds Kyle TX new homes'},
+    {n:'6 Creeks', s:'Kyle · tracked', why:'verify 2.70% rate', hot:false,
+     cap:'Verify combined rate and district for the Atlas. Posted incentives vs tracker. Photos.',
+     q:'6 Creeks Kyle TX'},
+    {n:'Anthem', s:'Kyle · tracked', why:'verify 2.90% rate', hot:false,
+     cap:'Atlas verification: rate and district in writing. Check for expired offers still displayed.',
+     q:'Anthem Kyle TX community'},
+    {n:'Cool Water', s:'registry says Kyle', why:'name conflict', hot:true,
+     cap:'Empire advertises a Cool Water in Jarrell. Confirm whether these are two communities or one mislabeled registry entry. Correct the registry from the ground.',
+     q:'Cool Water Kyle TX community'},
+    {n:'Sunfield', s:'Buda · tracked', why:'verify 3.00% rate', hot:false,
+     cap:'Verify rate and district. Lazy river amenity photos. Incentive signage vs tracker.',
+     q:'Sunfield Buda TX'},
+    {n:"Turner's Crossing", s:'Buda · Tri Pointe', why:'4.99% promo live', hot:false,
+     cap:'Verify the advertised 4.99% (5.213% APR) and the $10K credit on site and in writing. Tax rate and district (registry is unverified). Photos.',
+     q:'Tri Pointe Turners Crossing Buda TX'},
+    {n:'Colony at Cole Springs + Willow Springs', s:'Buda · researched', why:'registry gaps', hot:false,
+     cap:'Quick pass each: tax rate, district, active builders, entry price. Fills two unverified rows in the Atlas.',
+     q:'Colony at Cole Springs Buda TX'},
+    {n:'The Ridge site', s:'Niederwald · SH 21 at SH 130', why:'before picture', hot:false,
+     cap:'Drive by photos of the current land state. No sales office yet. This is the before picture our archive will own; its profile page is live and waiting.',
+     q:'SH 21 and SH 130 Niederwald TX'}
+  ];
+  var box = document.getElementById('stops');
+  var state = {};
+  function render(){
+    var doneCount = Object.keys(state).filter(function(k){return state[k];}).length;
+    document.getElementById('prog').textContent = doneCount + ' of 10 stops logged';
+  }
+  STOPS.forEach(function(st, i){
+    var d = document.createElement('div');
+    d.className = 'stop';
+    d.innerHTML = '<div class="stop-head"><div class="num">' + (i+1) + '</div>' +
+      '<div class="t"><div class="n">' + st.n + '</div><div class="s">' + st.s + '</div></div>' +
+      '<div class="why' + (st.hot ? ' hot' : '') + '">' + st.why + '</div></div>' +
+      '<div class="stop-body"><div class="cap"><b>Verify and capture</b>' + st.cap + '</div>' +
+      '<div class="row"><a class="act map" target="_blank" rel="noopener" href="https://maps.google.com/?q=' + encodeURIComponent(st.q) + '">Navigate</a>' +
+      '<a class="act file" href="../field-visit-summary.html">File visit</a></div>' +
+      '<button class="checkbtn">Mark stop logged</button></div>';
+    d.querySelector('.stop-head').addEventListener('click', function(){ d.classList.toggle('open'); });
+    d.querySelector('.checkbtn').addEventListener('click', function(e){
+      e.stopPropagation();
+      state[i] = !state[i];
+      d.classList.toggle('done', !!state[i]);
+      this.textContent = state[i] ? 'Logged. Tap to undo' : 'Mark stop logged';
+      render();
+    });
+    box.appendChild(d);
+  });
+  render();
+})();
+</script>
+</body>
+</html>
