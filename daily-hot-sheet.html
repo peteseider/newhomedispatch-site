@@ -1036,5 +1036,25 @@
   });
 })();
 </script>
+<script>
+/* Deep-link scroll fix: ticker/nav links land here as e.g. daily-hot-sheet#score to jump
+   straight to a section. Content on this page hydrates asynchronously (score-history.json
+   fetch, live hydration v3), so the browser's native scroll-to-hash on initial load can be
+   interrupted by the resulting layout shift (worse with scroll-behavior:smooth on <html>)
+   and land at the top instead. Re-apply the scroll after render settles. */
+(function () {
+  if (!location.hash) return;
+  var id = location.hash.slice(1);
+  function go() {
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' });
+  }
+  window.addEventListener('load', function () {
+    go();
+    setTimeout(go, 350);
+    setTimeout(go, 900);
+  });
+})();
+</script>
 </body>
 </html>
