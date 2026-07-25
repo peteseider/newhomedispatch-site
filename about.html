@@ -286,6 +286,61 @@
 </div>
 
 <main class="wrap">
+<div id="nhd-ticker" style="background:linear-gradient(180deg,#0c2138 0%,#081524 100%);border-top:1px solid rgba(201,169,110,.4);border-bottom:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;"><style>
+#nhd-ticker-track{display:flex;width:max-content;animation:nhdTickerScroll 38s linear infinite;}
+#nhd-ticker:hover #nhd-ticker-track,#nhd-ticker.nhd-paused #nhd-ticker-track{animation-play-state:paused;}
+@keyframes nhdTickerScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.nhd-tick-set{display:flex;align-items:center;flex:none;}
+.nhd-tick-item{display:flex;align-items:center;gap:7px;padding:12px 22px;text-decoration:none;white-space:nowrap;font-family:'Inter', sans-serif;font-size:12px;letter-spacing:.03em;border-right:1px solid rgba(255,255,255,.09);}
+a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
+.nhd-tick-eyebrow{color:#c9a96e;text-transform:uppercase;font-size:9px;letter-spacing:.13em;}
+@media (prefers-reduced-motion: reduce){#nhd-ticker-track{animation:none;}}
+@media (max-width:680px){.nhd-tick-item{padding:11px 16px;font-size:11.5px;gap:6px;}.nhd-tick-eyebrow{display:none;}}
+</style>
+<div id="nhd-ticker-track">
+<div class="nhd-tick-set">
+<span class="nhd-tick-item" style="border-left:1px solid rgba(255,255,255,.09);"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;animation:pulse 2.2s infinite;"></span><span class="tick-live-label" style="color:#8fa8d9;text-transform:uppercase;font-size:9.5px;letter-spacing:.13em;">Live</span></span>
+<a class='nhd-tick-item' href='/daily-hot-sheet#score' style='color:#fff;'><span class="nhd-tick-eyebrow">Score</span><span id="tick-score" style="font-weight:700;">Buyer Advantage 74</span></a>
+<a class='nhd-tick-item' href='/daily-hot-sheet#incentives' style='color:#fff;'><span class="nhd-tick-eyebrow">Credit</span><span id="tick-idx" style="font-weight:700;">$20,000 median credit</span></a>
+<a class='nhd-tick-item' href='/daily-hot-sheet#buying-power' style='color:#fff;'><span class="nhd-tick-eyebrow">Rate</span><span id="tick-rate" style="font-weight:700;">30 yr 6.85%</span></a>
+<a class='nhd-tick-item' href='/daily-hot-sheet#since-sweep' style='color:#F7CE7C;'><span id="tick-changes" style="font-weight:700;">tracking</span></a>
+<a class='nhd-tick-item tick-dealrecord' href='/report-a-deal' onclick='if(window.NHD)NHD.trackEvent(\'deal_report_cta_click\',{context:\'statusbar\'});' style='color:#8fa8d9;font-size:10.5px;'>Deal Record: open &rarr;</a>
+<a class='nhd-tick-item' href='/daily-hot-sheet' style='color:#9DBBFF;font-weight:700;'>Open the Hot Sheet &rarr;</a>
+<span class="nhd-tick-item" style="color:#8fa8d9;font-size:10.5px;border-right:none;"><span id="tick-stamp">live from the tracker</span></span>
+</div>
+<div class="nhd-tick-set" aria-hidden="true">
+<span class="nhd-tick-item" style="border-left:1px solid rgba(255,255,255,.09);"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;"></span><span style="color:#8fa8d9;text-transform:uppercase;font-size:9.5px;letter-spacing:.13em;">Live</span></span>
+<a class='nhd-tick-item' href='/daily-hot-sheet#score' style='color:#fff;' tabindex='-1'><span class="nhd-tick-eyebrow">Score</span><span data-tick="tick-score" style="font-weight:700;">Buyer Advantage 74</span></a>
+<a class='nhd-tick-item' href='/daily-hot-sheet#incentives' style='color:#fff;' tabindex='-1'><span class="nhd-tick-eyebrow">Credit</span><span data-tick="tick-idx" style="font-weight:700;">$20,000 median credit</span></a>
+<a class='nhd-tick-item' href='/daily-hot-sheet#buying-power' style='color:#fff;' tabindex='-1'><span class="nhd-tick-eyebrow">Rate</span><span data-tick="tick-rate" style="font-weight:700;">30 yr 6.85%</span></a>
+<a class='nhd-tick-item' href='/daily-hot-sheet#since-sweep' style='color:#F7CE7C;' tabindex='-1'><span data-tick="tick-changes" style="font-weight:700;">tracking</span></a>
+<a class='nhd-tick-item' href='/report-a-deal' style='color:#8fa8d9;font-size:10.5px;' tabindex='-1'>Deal Record: open &rarr;</a>
+<a class='nhd-tick-item' href='/daily-hot-sheet' style='color:#9DBBFF;font-weight:700;' tabindex='-1'>Open the Hot Sheet &rarr;</a>
+<span class="nhd-tick-item" style="color:#8fa8d9;font-size:10.5px;border-right:none;"><span data-tick="tick-stamp">live from the tracker</span></span>
+</div>
+</div>
+<script>(function(){var el=document.getElementById('nhd-ticker');if(!el)return;var timer;el.addEventListener('touchstart',function(){el.classList.add('nhd-paused');clearTimeout(timer);},{passive:true});el.addEventListener('touchend',function(){timer=setTimeout(function(){el.classList.remove('nhd-paused');},2500);},{passive:true});})();</script>
+</div>
+<script>
+(function(){
+function j(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}
+Promise.all([j('/reporting/sweep-latest.json'),j('/score-history.json'),j('/reporting/rate-benchmark.json'),j('/incentives.json'),j('/entities.json')]).then(function(res){
+var sl=res[0],sh=res[1],rb=res[2],inc=res[3],reg=res[4];
+function t(id,v){if(v==null)return;var els=document.querySelectorAll('#'+id+',[data-tick="'+id+'"]');for(var i=0;i<els.length;i++)els[i].textContent=v;}
+if(sl&&sl.ranAtLabel){t('tick-stamp','verified '+sl.ranAtLabel);
+var hp=document.getElementById('hero-proof');
+if(hp&&inc){var today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+function dk(w){w=String(w||'');if(/^\d{4}-\d{2}-\d{2}/.test(w))return w.slice(0,10);var m=w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/);if(!m)return null;var y=m[3]?(m[3].length===2?'20'+m[3]:m[3]):'2026';return y+'-'+('0'+m[1]).slice(-2)+'-'+('0'+m[2]).slice(-2);}
+function lv(l){return (l||[]).filter(function(o){if(!o.expires)return true;var k=dk(o.expires);return !k||k>=today;});}
+var lr=lv(inc.records),lp=lv(inc.promos);var bld={};lr.concat(lp).forEach(function(o){if(o.builder)bld[o.builder]=1;});
+var spine=(reg&&reg.builders&&reg.builders.length)||0;var cov=Object.keys(bld).length+(spine>0?' of '+spine+' tracked':'')+' builders';
+hp.innerHTML='<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:7px;vertical-align:1px;"></span>'+(lr.length+lp.length)+' offers verified live across '+cov+' · last check '+sl.ranAtLabel;}}
+if(sh&&sh.points&&sh.points.length)t('tick-score','Buyer Advantage '+sh.points[sh.points.length-1].score);
+if(sl&&typeof sl.index==='number')t('tick-idx','$'+sl.index.toLocaleString('en-US')+' median credit');
+if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
+});
+})();
+</script>
   <h2>What this is</h2>
   <p>New Home Dispatch is an independent consumer-intelligence publication for people buying new-construction homes in Austin and Central Texas. We visit communities in person, compare builders and communities on the record, track incentives and prices over time, and build free tools that help buyers make better decisions at every step, from the first model-home tour to the closing table.</p>
   <div class="callout"><strong>We are not</strong> a builder's marketing channel, a listings portal, or a lead-generation site. Builder claims are reported as claims, never as facts. When we haven't verified something, we say so on the page.</div>
