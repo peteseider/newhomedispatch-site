@@ -79,7 +79,7 @@ letter-spacing:-0.02em;
 .mono{
 font-family:'Inter', sans-serif;
 font-weight:600;
-letter-spacing:0.08em;
+letter-spacing:0.05em;
 text-transform:uppercase;
 }
 
@@ -126,7 +126,7 @@ letter-spacing:-0.01em;
 .logo img{flex-shrink:0}
 .logo .dot{color:var(--amber);}
 .logo-tag{
-font-family:'IBM Plex Mono', monospace;
+font-family:'Inter', sans-serif;
 font-size:0.6rem;
 letter-spacing:0.12em;
 color:var(--text-muted);
@@ -150,7 +150,7 @@ nav a:hover{opacity:1;}
 display:inline-flex;
 align-items:center;
 gap:8px;
-font-family:'IBM Plex Mono', monospace;
+font-family:'Inter', sans-serif;
 font-size:0.72rem;
 font-weight:600;
 letter-spacing:0.06em;
@@ -1435,7 +1435,7 @@ gap:40px;
 flex-wrap:wrap;
 }
 .footer-col h3{
-font-family:'IBM Plex Mono', monospace;
+font-family:'Inter', sans-serif;
 font-size:0.68rem;
 letter-spacing:0.1em;
 text-transform:uppercase;
@@ -1669,14 +1669,14 @@ mask-image:radial-gradient(ellipse 90% 80% at 68% 45%, #000 30%, transparent 88%
 /* House art, contained, integrated, never dominant */
 .v29b-art{position:relative; display:flex; align-items:center; justify-content:center;}
 .v29b-art svg{width:100%; max-width:440px; height:auto; display:block;}
-.v29b-cap{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:3px; fill:rgba(255,255,255,0.5);}
+.v29b-cap{font-family:'Inter', sans-serif; font-size:10px; letter-spacing:3px; fill:rgba(255,255,255,0.5);}
 .v29b-house{fill:none; stroke:#4E7AFF; stroke-width:1.7; stroke-linejoin:round; opacity:0.92;}
 .v29b-house path, .v29b-house rect, .v29b-house line{stroke-dasharray:1200; stroke-dashoffset:1200; animation:v29bdraw 1.4s ease forwards;}
 .v29b-house .d2{animation-delay:.22s;} .v29b-house .d3{animation-delay:.44s;} .v29b-house .d4{animation-delay:.62s;}
 .v29b-anno .adot{fill:var(--blueprint-light); stroke:#0A0A0A; stroke-width:1.2;}
 .v29b-anno .aline{stroke:var(--blueprint-light); stroke-width:1.1; fill:none; opacity:0.85;}
-.v29b-anno .atxt{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1.2px; fill:#fff; font-weight:600;}
-.v29b-anno .asub{font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:1px; fill:#8FA8FF;}
+.v29b-anno .atxt{font-family:'Inter', sans-serif; font-size:10px; letter-spacing:1.2px; fill:#fff; font-weight:600;}
+.v29b-anno .asub{font-family:'Inter', sans-serif; font-size:9px; letter-spacing:1px; fill:#8FA8FF;}
 .v29b-anno{opacity:0; animation:v28fade .8s ease forwards; animation-delay:1.05s;}
 .v29b-stamp{position:absolute; right:2%; top:-6%; width:92px; height:92px; background:#fff; border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:3; box-shadow:0 0 0 5px rgba(255,255,255,0.1);}
 .v29b-stamp .stamp-inner{font-family:'Inter',sans-serif; font-weight:700; font-size:0.44rem; letter-spacing:0.06em; text-align:center; color:var(--ink); line-height:1.35; text-transform:uppercase;}
@@ -1736,7 +1736,7 @@ mask-image:radial-gradient(ellipse 90% 80% at 68% 45%, #000 30%, transparent 88%
 .v29c-unlocks ul{list-style:none; margin:0; padding:0;}
 .v29c-unlocks li{display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:13px 0; border-top:1px solid rgba(255,255,255,0.1); color:#fff; font-size:0.98rem; font-weight:500;}
 .v29c-unlocks li:first-child{border-top:none;}
-.v29c-unlocks li span{font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);}
+.v29c-unlocks li span{font-family:'Inter', sans-serif; font-size:0.6rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);}
 </style><style id="gnav-css">
 .site-nav{display:flex; align-items:center;}
 .nav-desktop{display:flex; align-items:center; gap:4px; list-style:none; margin:0; padding:0;}
@@ -1769,21 +1769,52 @@ body.nav-open .nav-mobile{display:flex;}
 .nav-mobile .nm-cta-btn:hover,.nav-mobile .nm-cta-btn:focus-visible{background:#163a5c;}
 .nav-mobile .nm-group-label{padding:16px 28px 6px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);font-weight:700;border-bottom:none;}
 .nav-mobile .nm-badge{font-weight:700;font-size:.62em;padding:2px 7px;border-radius:2px;margin-left:6px;vertical-align:middle;letter-spacing:.02em;}
-.nav-mobile a{display:flex;align-items:center;gap:12px;}
-.nm-ico{width:19px;height:19px;flex:0 0 19px;stroke:var(--blueprint);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round;}
-.nm-featured .nm-ico{stroke:var(--blueprint-navy);}
-.nav-mobile .nm-badge{margin-left:auto;flex:0 0 auto;}
-.nm-sec{border-bottom:1px solid var(--line);}
-.nm-sec-btn{display:flex;align-items:center;gap:12px;width:100%;padding:17px 28px;font-size:1.05rem;color:var(--ink);background:none;border:none;cursor:pointer;font-family:inherit;text-align:left;min-height:44px;}
-.nm-sec-btn:hover,.nm-sec-btn:focus-visible{background:var(--paper-alt);}
-.nm-chev{width:16px;height:16px;flex:0 0 16px;margin-left:auto;stroke:var(--text-muted);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease;}
+.nav-mobile a{display:flex;align-items:center;gap:11px;font-size:.95rem;font-weight:500;padding:13px 22px;border-bottom:1px solid #F3F4F6;}
+.nm-ico{width:17px;height:17px;flex:0 0 17px;stroke:#5B6472;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.nav-mobile .nm-featured{background:#fff;border-left:3px solid var(--blueprint,#2B4FE0);font-weight:700;}
+.nm-featured .nm-ico{stroke:var(--blueprint,#2B4FE0);}
+.nav-mobile .nm-cta-wrap{padding:12px 18px;border-bottom:1px solid #F3F4F6;}
+.nav-mobile .nm-cta-btn{display:block;text-align:center;padding:12px 18px;border-bottom:none;border-radius:6px;background:var(--blueprint-navy,#0F2942);color:#fff;font-weight:700;font-size:.9rem;letter-spacing:.01em;}
+.nav-mobile .nm-cta-btn:hover,.nav-mobile .nm-cta-btn:focus-visible{background:#163a5c;}
+.nav-mobile .nm-badge{margin-left:auto;flex:0 0 auto;font-weight:700;font-size:.58em;padding:2px 6px;border-radius:3px;letter-spacing:.02em;}
+.nm-sec{border-bottom:1px solid #F3F4F6;}
+.nm-sec-btn{display:flex;align-items:center;gap:11px;width:100%;padding:13px 22px;font-size:.95rem;font-weight:500;color:var(--ink,#111);background:none;border:none;cursor:pointer;font-family:inherit;text-align:left;min-height:44px;}
+.nm-sec-btn:hover,.nm-sec-btn:focus-visible{background:#FAFAFB;}
+.nm-chev{width:14px;height:14px;flex:0 0 14px;margin-left:auto;stroke:#9AA1AB;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease;}
 .nm-sec.open .nm-chev{transform:rotate(180deg);}
-.nm-sec-list{list-style:none;margin:0;padding:0;max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--paper-alt);}
+.nm-sec-list{list-style:none;margin:0;padding:0;max-height:0;overflow:hidden;transition:max-height .3s ease;background:#FAFAFB;}
 .nm-sec.open .nm-sec-list{max-height:420px;}
-.nm-sec-list a{padding:14px 28px 14px 59px;font-size:.98rem;}
+.nm-sec-list a{padding:11px 22px 11px 50px;font-size:.88rem;font-weight:400;color:#3F4753;border-bottom:1px solid #F3F4F6;}
 .nm-sec-list li:last-child a{border-bottom:none;}
 }
 @media (prefers-reduced-motion: reduce){ .nav-drop{transition:none;} .nav-caret{transition:none;} .nm-sec-list{transition:none;} .nm-chev{transition:none;} }
+
+/* v30 news-style hero + editorial media */
+.v30-hero{background:#fff;border-bottom:1px solid #E4E4E7;}
+.v30-grid{display:flex;gap:56px;align-items:center;padding:54px 0 58px;}
+.v30-copy{flex:1.05 1 0;min-width:0;}
+.v30-fig{flex:1 1 0;min-width:0;margin:0;}
+.v30-fig img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:10px;box-shadow:0 12px 36px rgba(15,41,66,.16);}
+.v30-fig figcaption{margin-top:9px;font-size:.75rem;color:#8a919c;}
+.v30-kicker{display:flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--blueprint,#2B4FE0);margin-bottom:16px;font-family:'Inter', sans-serif;}
+.v30-dot{width:7px;height:7px;border-radius:50%;background:var(--blueprint,#2B4FE0);flex:0 0 7px;}
+.v30-h1{font-family:'Inter', sans-serif;font-size:clamp(2.1rem,4.4vw,3.3rem);line-height:1.07;letter-spacing:-0.022em;color:#0F2942;margin:0 0 16px;font-weight:800;}
+.v30-h1 em{font-style:normal;color:var(--blueprint,#2B4FE0);}
+.v30-sub{font-size:1.02rem;line-height:1.66;color:#3F4753;max-width:56ch;margin:0 0 12px;}
+.v30-attr{font-size:.8rem;color:#6b7280;margin-bottom:24px;}
+.v30-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.v30-btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:700;font-size:.92rem;text-decoration:none;font-family:'Inter', sans-serif;}
+.v30-btn-primary{background:var(--blueprint-navy,#0F2942);color:#fff;}
+.v30-btn-primary:hover{background:#163a5c;}
+.v30-btn-ghost{border:1.5px solid #D7DBE2;color:#0F2942;background:#fff;}
+.v30-btn-ghost:hover{border-color:#0F2942;}
+@media (max-width:860px){.v30-grid{flex-direction:column-reverse;gap:22px;padding:20px 0 40px;}.v30-fig img{aspect-ratio:16/10;border-radius:8px;}}
+.v28r-grid{display:flex;gap:34px;align-items:stretch;}
+.v28r-fig{flex:0 0 42%;margin:0;}
+.v28r-fig img{width:100%;height:100%;min-height:220px;object-fit:cover;border-radius:8px;}
+.v28r-body{flex:1 1 0;min-width:0;}
+@media (max-width:760px){.v28r-grid{flex-direction:column;gap:16px;}.v28r-fig{flex:none;}.v28r-fig img{min-height:0;aspect-ratio:16/9;}}
+.cpn-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:14px;}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://newhomedispatch.com/#org","name":"New Home Dispatch","url":"https://newhomedispatch.com/","logo":{"@type":"ImageObject","url":"https://newhomedispatch.com/assets/apple-touch-icon.png","width":180,"height":180},"sameAs":["https://www.youtube.com/@NewHomeDispatch","https://x.com/newhomedispatch","https://www.instagram.com/newhomedispatch/"]},{"@type":"WebSite","name":"New Home Dispatch","alternateName":"NHD","url":"https://newhomedispatch.com/","publisher":{"@id":"https://newhomedispatch.com/#org"}}]}</script>
 <link rel="manifest" href="manifest.webmanifest">
@@ -1910,7 +1941,7 @@ body.nav-open .nav-mobile{display:flex;}
 #nhd-ticker:hover #nhd-ticker-track,#nhd-ticker.nhd-paused #nhd-ticker-track{animation-play-state:paused;}
 @keyframes nhdTickerScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .nhd-tick-set{display:flex;align-items:center;flex:none;}
-.nhd-tick-item{display:flex;align-items:center;gap:7px;padding:12px 22px;text-decoration:none;white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;border-right:1px solid rgba(255,255,255,.09);}
+.nhd-tick-item{display:flex;align-items:center;gap:7px;padding:12px 22px;text-decoration:none;white-space:nowrap;font-family:'Inter', sans-serif;font-size:12px;letter-spacing:.03em;border-right:1px solid rgba(255,255,255,.09);}
 a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 .nhd-tick-eyebrow{color:#c9a96e;text-transform:uppercase;font-size:9px;letter-spacing:.13em;}
 @media (prefers-reduced-motion: reduce){#nhd-ticker-track{animation:none;}}
@@ -1942,64 +1973,22 @@ a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 </div>
 
 
-<section class="hero v29b-hero">
-<div class="v29b-grid" aria-hidden="true"></div>
-<div class="wrap v29b-inner">
-<div class="v29b-copy">
-<div class="kicker mono"><span class="v29b-dot" aria-hidden="true"></span>The Independent Guide to New Construction</div>
-<h1>The market, <em>verified</em>. <span style="color:#9DBBFF;">Four times a day.</span></h1>
-<p class="sub">Independent intelligence for buying new construction in Central Texas. Every builder offer checked against the source four times a day, communities walked in person, and real negotiated outcomes recorded, so you know what a good deal looks like before you sign one. Free, independent, never paid by a builder.</p>
-<div class="hero-ctas">
-<a href="daily-hot-sheet.html" class="btn btn-amber">Open the Hot Sheet</a>
-<a href="#snapshot" class="btn btn-outline-light">See today's changes</a>
-</div>
-<a href="#navigator" class="v28-look" aria-label="Look closer, see what to figure out first">
-<span class="v28-look-text">Look Closer<span class="hero-tagline-dot">.</span></span>
-<span class="v28-look-arrow" aria-hidden="true">
-<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</span>
-</a>
-<div class="hero-footline">
-<span class="hero-trustline">Independent research. Clearly sourced. Always free for buyers.</span>
-<span id="hero-proof" style="display:block;margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#8fa8d9;"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:7px;vertical-align:1px;"></span>Verification runs four times a day, every day</span>
-<span class="hero-coverage mono" aria-label="Current coverage area"><span class="hero-coverage-dot" aria-hidden="true"></span>Now covering the Austin area</span>
+<section class="hero v30-hero">
+<div class="wrap v30-grid">
+<div class="v30-copy">
+<div class="v30-kicker"><span class="v30-dot"></span>The Independent Guide to New Construction</div>
+<h1 class="v30-h1">The market, <em>verified</em>.<br>Four times a day.</h1>
+<p class="v30-sub">Independent intelligence for buying new construction in Central Texas. Every builder offer checked against the source four times a day, communities walked in person, and real negotiated outcomes recorded, so you know what a good deal looks like before you sign one.</p>
+<div class="v30-attr">New Home Dispatch &middot; Updated four times daily &middot; Free, independent, never paid by a builder</div>
+<div class="v30-ctas">
+<a class="v30-btn v30-btn-primary" href="/daily-hot-sheet">Open the Hot Sheet</a>
+<a class="v30-btn v30-btn-ghost" href="#snapshot">See today’s changes</a>
 </div>
 </div>
-<div class="v29b-art" aria-hidden="true">
-<div class="v29b-stamp">
-<img src="assets/icon-dark.png" alt="" style="width:40px; height:auto; margin-bottom:5px;">
-<div class="stamp-inner">Independently<br>Reported</div>
-</div>
-<svg viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blueprint elevation of a house annotated with what New Home Dispatch verifies: the combined tax rate and the true monthly cost including taxes, HOA, and escrow.">
-<text x="230" y="34" text-anchor="middle" class="v29b-cap">FIG. 01, WHAT WE VERIFY</text>
-<g class="v29b-house">
-<path class="d1" d="M110,214 L230,120 L350,214"/>
-<path class="d1" d="M128,214 L230,134 L332,214"/>
-<path class="d2" d="M300,168 L300,120 L326,120 L326,182"/>
-<rect class="d2" x="128" y="214" width="204" height="150"/>
-<rect class="d3" x="206" y="300" width="40" height="64"/>
-<rect class="d3" x="152" y="244" width="42" height="42"/>
-<path class="d3" d="M173,244 L173,286 M152,265 L194,265"/>
-<rect class="d3" x="266" y="244" width="42" height="42"/>
-<path class="d3" d="M287,244 L287,286 M266,265 L308,265"/>
-<line class="d4" x1="92" y1="364" x2="368" y2="364"/>
-</g>
-<circle cx="230" cy="322" r="2.2" fill="#4E7AFF"/>
-<g class="v29b-anno">
-<g>
-<circle cx="230" cy="120" r="4" class="adot"/>
-<path d="M230,120 L230,84 L392,84" class="aline"/>
-<text x="392" y="78" text-anchor="end" class="atxt">COMBINED TAX RATE</text>
-<text x="392" y="97" text-anchor="end" class="asub">VERIFY BY ADDRESS</text>
-</g>
-<g>
-<circle cx="230" cy="364" r="4" class="adot"/>
-<path d="M230,364 L230,398" class="aline"/>
-<text x="230" y="414" text-anchor="middle" class="atxt">TRUE MONTHLY COST · TAXES + HOA + ESCROW</text>
-</g>
-</g>
-</svg>
-</div>
+<figure class="v30-fig">
+<img src="https://images.pexels.com/photos/3958954/pexels-photo-3958954.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Street of newly built single-family homes in a suburban community" fetchpriority="high" decoding="async">
+<figcaption>New-construction street. Photo: Pexels, free license.</figcaption>
+</figure>
 </div>
 </section>
 
@@ -2040,21 +2029,21 @@ a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 <section id="snapshot" style="background:#F4F5F7;border-bottom:1px solid #E4E4E7;">
 <style>
 .snapv1{max-width:1180px;margin:0 auto;padding:44px 24px 40px;}
-.snapv1 .sk{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2B4FE0;}
+.snapv1 .sk{font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2B4FE0;}
 .snapv1 h2{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(1.3rem,2.6vw,1.8rem);margin:8px 0 4px;color:#0A0A0A;}
-.snapv1 .stamp{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#666;margin-bottom:20px;}
+.snapv1 .stamp{font-family:'Inter', sans-serif;font-size:10.5px;color:#666;margin-bottom:20px;}
 .snapv1 .grid{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;}
 @media(max-width:860px){.snapv1 .grid{grid-template-columns:1fr;}}
 .snapv1 .card{background:#fff;border:1px solid #E4E4E7;border-top:3px solid #2B4FE0;border-radius:8px;padding:16px 18px;}
-.snapv1 .lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#666;margin-bottom:8px;}
+.snapv1 .lbl{font-family:'Inter', sans-serif;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#666;margin-bottom:8px;}
 .snapv1 .score{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#0A0A0A;}
-.snapv1 .delta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#666;margin-top:4px;}
-.snapv1 .tape{list-style:none;margin:0;padding:0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.5;}
+.snapv1 .delta{font-family:'Inter', sans-serif;font-size:11px;color:#666;margin-top:4px;}
+.snapv1 .tape{list-style:none;margin:0;padding:0;font-family:'Inter', sans-serif;font-size:11.5px;line-height:1.5;}
 .snapv1 .tape li{padding:7px 0;border-bottom:1px dashed #E4E4E7;color:#222;}
 .snapv1 .tape li:last-child{border-bottom:none;}
 .snapv1 .num{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:22px;color:#0A0A0A;}
 .snapv1 .sub2{font-size:11.5px;color:#666;line-height:1.5;margin-top:3px;}
-.snapv1 .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#666;}
+.snapv1 .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:16px;font-family:'Inter', sans-serif;font-size:10.5px;color:#666;}
 .snapv1 .foot a{color:#2B4FE0;font-weight:600;text-decoration:none;}
 </style>
 <div class="snapv1">
@@ -2122,12 +2111,12 @@ a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 .ava-dek{font-size:1.02rem;line-height:1.68;color:#C7D4EA;max-width:640px;margin:16px 0 0;}
 .ava-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;}
 .ava-step{border-top:3px solid #2B4FE0;padding-top:16px;}
-.ava-step .n{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.14em;color:#9DBBFF;text-transform:uppercase;}
+.ava-step .n{font-family:'Inter', sans-serif;font-size:.68rem;letter-spacing:.14em;color:#9DBBFF;text-transform:uppercase;}
 .ava-step h3{font-family:'Archivo Expanded',sans-serif;font-size:1.02rem;margin:8px 0 8px;color:#fff;}
 .ava-step p{font-size:.9rem;line-height:1.6;color:#C7D4EA;margin:0;}
 .ava-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:38px;}
 .ava-note{font-size:.78rem;color:#8fa8d9;line-height:1.6;max-width:640px;margin-top:22px;}
-.ava-live{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#9DBBFF;margin-top:20px;}
+.ava-live{display:inline-flex;align-items:center;gap:8px;font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.08em;color:#9DBBFF;margin-top:20px;}
 .ava-live::before{content:"";width:7px;height:7px;border-radius:50%;background:#39D98A;}
 .ava-agents{font-size:.85rem;color:#C7D4EA;margin-top:26px;border-left:3px solid #2B4FE0;padding-left:16px;line-height:1.6;max-width:640px;}
 .ava-agents a{color:#9DBBFF;}
@@ -2310,12 +2299,12 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 <div class="eyebrow mono">Dispatch Reports</div>
 <h2 class="section-title">What's changing around the market right now.</h2>
 <div class="v28-report">
-<a href="affordability.html" style="display:block;color:inherit;text-decoration:none" aria-label="Open the Affordability Desk report">
+<a href="affordability.html" style="display:block;color:inherit;text-decoration:none" aria-label="Open the Affordability Desk report"><div class="v28r-grid"><figure class="v28r-fig"><img src="https://images.pexels.com/photos/37627682/pexels-photo-37627682.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Framing stage of a new home under construction" loading="lazy" decoding="async"></figure><div class="v28r-body">
 <span class="b-num mono">Featured · The Affordability Desk</span>
 <h3>Where new construction actually starts: $199,990.</h3>
 <p>We verified every sub-$300K advertised starting price in the metro, 21 entries across five builders, three of them inside Austin city limits, and three communities where builders compete head-to-head. Plus the four checks that keep a cheap sticker from becoming an expensive payment.</p>
 <div class="v28-report-take mono">Takeaway: the price floor is real, but it's a starting position, the tax rate, the collection, the commute, and the lender tie decide what you actually pay.</div>
-</a>
+</div></div></a>
 <div class="v28-report-ctas">
 <a href="affordability.html" class="btn btn-dark">Open the Affordability Desk &rarr;</a>
 <a href="reports/entry-level-price-floor.html" class="read-link mono">Or go straight to the Price Floor Report &rarr;</a>
@@ -2407,7 +2396,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 
 <section style="background:#0A0A0A;color:#fff;">
 <div style="max-width:1180px;margin:0 auto;padding:44px 24px;">
-<div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#F7CE7C;">Field reporting</div>
+<div style="font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#F7CE7C;">Field reporting</div>
 <p style="font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(1.2rem,2.4vw,1.7rem);margin:8px 0 8px;">We go look.</p>
 <p style="font-size:.95rem;line-height:1.65;color:#C9CDD6;max-width:70ch;margin:0;">Not everything is on a website. <span style="color:#fff;font-weight:600;">Field Route 01: Kyle and Buda, ten stops, in progress.</span> Verified pricing, tax district checks, incentive signage, and original photos land on the community pages the same day they are captured. First up: what Lennar does when its own advertised deadline hits this Sunday.</p>
 </div>
@@ -2436,7 +2425,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 </div>
 </div>
 <div style="border-top:2px solid #0A0A0A;margin-top:34px;padding-top:26px;text-align:center;">
-<div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2B4FE0;margin-bottom:12px;">Independence, in writing</div>
+<div style="font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2B4FE0;margin-bottom:12px;">Independence, in writing</div>
 <p style="font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(1.1rem,2.2vw,1.5rem);line-height:1.3;color:#000;margin:0 0 12px;">Builders advertise. We verify. Rankings cannot be bought and findings cannot be suppressed.</p>
 <p style="font-size:.95rem;line-height:1.65;color:#444;margin:0;max-width:72ch;margin-left:auto;margin-right:auto;">Every figure on this site is checked against the builder's own site four times a day, dated, and sourced. The research is free for buyers, always. When a buyer wants representation, that is Seider Realty Team; the research and the revenue never touch.</p>
 </div>
@@ -2533,7 +2522,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 
 <section style="background:#fff;border-top:1px solid #E4E4E7;">
 <div style="max-width:1180px;margin:0 auto;padding:40px 24px;">
-<div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2B4FE0;margin-bottom:14px;">How buyers use this site</div>
+<div style="font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2B4FE0;margin-bottom:14px;">How buyers use this site</div>
 <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:.92rem;">
 <a href="daily-hot-sheet.html" style="color:#0A0A0A;font-weight:600;text-decoration:none;border:1px solid #E4E4E7;border-radius:6px;padding:9px 14px;" onclick="if(window.NHD) NHD.trackEvent('ladder_click', {rung:'hot-sheet'});">1. Read the Hot Sheet</a>
 <span style="color:#bbb;">&rarr;</span>
@@ -2554,18 +2543,21 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
     <p class="directory-sub">New Home Dispatch focuses on new construction. These newsrooms cover the rest of what shapes a neighborhood &#8212; permits, schools, retail, and the economy behind it. Same standard we hold ourselves to: original reporting over press releases.</p>
     <div class="cp-grid">
       <a class="cp-card" href="https://austin.urbanize.city/" target="_blank" rel="noopener">
+<img class="cpn-img" src="https://images.pexels.com/photos/34192130/pexels-photo-34192130.jpeg?auto=compress&cs=tinysrgb&w=900" alt="New homes framed in a growing subdivision" loading="lazy" decoding="async">
         <div class="cp-region mono">Development &amp; Permits</div>
         <h3>Urbanize Austin</h3>
         <p>Ground-level tracking of what's being built and where, across the metro.</p>
         <span class="read-link mono">Visit site &#8599;</span>
       </a>
       <a class="cp-card" href="https://communityimpact.com/austin/" target="_blank" rel="noopener">
+<img class="cpn-img" src="https://images.pexels.com/photos/37215506/pexels-photo-37215506.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Austin skyline over Lady Bird Lake" loading="lazy" decoding="async">
         <div class="cp-region mono">Hyperlocal News</div>
         <h3>Community Impact</h3>
         <p>Suburb-by-suburb reporting on schools, retail, and infrastructure timelines.</p>
         <span class="read-link mono">Visit site &#8599;</span>
       </a>
       <a class="cp-card" href="https://www.bizjournals.com/austin/" target="_blank" rel="noopener">
+<img class="cpn-img" src="https://images.pexels.com/photos/273204/pexels-photo-273204.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Downtown Austin skyline" loading="lazy" decoding="async">
         <div class="cp-region mono">Business &amp; Economy</div>
         <h3>Austin Business Journal</h3>
         <p>Employer relocations and commercial development that drive housing demand.</p>
