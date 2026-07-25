@@ -1789,35 +1789,36 @@ body.nav-open .nav-mobile{display:flex;}
 }
 @media (prefers-reduced-motion: reduce){ .nav-drop{transition:none;} .nav-caret{transition:none;} .nm-sec-list{transition:none;} .nm-chev{transition:none;} }
 
-/* v30 news-style hero + editorial media */
-.v30-hero{background:#fff;border-bottom:1px solid #E4E4E7;}
-.v30-grid{display:flex;gap:56px;align-items:center;padding:54px 0 58px;}
-.v30-copy{flex:1.05 1 0;min-width:0;}
-.v30-fig{flex:1 1 0;min-width:0;margin:0;}
-.v30-fig img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:10px;box-shadow:0 12px 36px rgba(15,41,66,.16);}
-.v30-fig figcaption{margin-top:9px;font-size:.75rem;color:#8a919c;}
-.v30-kicker{display:flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--blueprint,#2B4FE0);margin-bottom:16px;font-family:'Inter', sans-serif;}
-.v30-dot{width:7px;height:7px;border-radius:50%;background:var(--blueprint,#2B4FE0);flex:0 0 7px;}
-.v30-h1{font-family:'Inter', sans-serif;font-size:clamp(2.1rem,4.4vw,3.3rem);line-height:1.07;letter-spacing:-0.022em;color:#0F2942;margin:0 0 16px;font-weight:800;}
-.v30-h1 em{font-style:normal;color:var(--blueprint,#2B4FE0);}
-.v30-sub{font-size:1.02rem;line-height:1.66;color:#3F4753;max-width:56ch;margin:0 0 12px;}
-.v30-attr{font-size:.8rem;color:#6b7280;margin-bottom:24px;}
-.v30-ctas{display:flex;gap:12px;flex-wrap:wrap;}
-.v30-btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:700;font-size:.92rem;text-decoration:none;font-family:'Inter', sans-serif;}
-.v30-btn-primary{background:var(--blueprint-navy,#0F2942);color:#fff;}
-.v30-btn-primary:hover{background:#163a5c;}
-.v30-btn-ghost{border:1.5px solid #D7DBE2;color:#0F2942;background:#fff;}
-.v30-btn-ghost:hover{border-color:#0F2942;}
-@media (max-width:860px){.v30-grid{flex-direction:column-reverse;gap:22px;padding:20px 0 40px;}.v30-fig img{aspect-ratio:16/10;border-radius:8px;}}
-.v28r-grid{display:flex;gap:34px;align-items:stretch;}
-.v28r-fig{flex:0 0 42%;margin:0;}
-.v28r-fig img{width:100%;height:100%;min-height:220px;object-fit:cover;border-radius:8px;}
-.v28r-body{flex:1 1 0;min-width:0;}
-@media (max-width:760px){.v28r-grid{flex-direction:column;gap:16px;}.v28r-fig{flex:none;}.v28r-fig img{min-height:0;aspect-ratio:16/9;}}
-.cpn-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:14px;}
-.v30-hero h1{font-family:'Inter', sans-serif;font-size:clamp(2.1rem,4.4vw,3.3rem);line-height:1.07;letter-spacing:-0.022em;color:#0F2942;margin:0 0 16px;font-weight:800;max-width:none;}
-.v30-hero h1 em{font-style:normal;color:var(--blueprint,#2B4FE0);}
-.v30-hero .v30-sub{color:#3F4753;}
+/* v31 editorial hero framework: typography-led now, reporting slot rotates in field photography later */
+.v31-hero{background:#fff;border-bottom:1px solid #E4E4E7;}
+.v31-grid{display:flex;gap:64px;align-items:flex-start;padding:60px 0 40px;}
+.v31-lead{flex:1.35 1 0;min-width:0;}
+.v31-kicker{display:flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#0F2942;margin-bottom:20px;}
+.v31-dot{width:7px;height:7px;border-radius:50%;background:var(--blueprint,#2B4FE0);flex:0 0 7px;}
+.v31-hero h1{font-family:'Inter',sans-serif;font-size:clamp(2.4rem,5vw,3.9rem);line-height:1.02;letter-spacing:-0.03em;color:#0F2942;margin:0 0 20px;font-weight:800;max-width:none;}
+.v31-hero h1 em{font-style:normal;color:var(--blueprint,#2B4FE0);}
+.v31-dek{font-size:1.05rem;line-height:1.65;color:#3F4753;max-width:58ch;margin:0 0 26px;}
+.v31-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.v31-btn{display:inline-block;padding:13px 24px;border-radius:5px;font-family:'Inter',sans-serif;font-weight:700;font-size:.92rem;text-decoration:none;}
+.v31-btn-primary{background:#0F2942;color:#fff;}
+.v31-btn-primary:hover{background:#163a5c;}
+.v31-btn-ghost{border:1.5px solid #D7DBE2;color:#0F2942;background:#fff;}
+.v31-btn-ghost:hover{border-color:#0F2942;}
+.v31-slot{flex:1 1 0;min-width:0;border:1px solid #E4E4E7;border-top:3px solid var(--blueprint,#2B4FE0);padding:20px 24px 16px;background:#fff;}
+.v31-slot-head{display:flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:4px;}
+.v31-live-dot{width:7px;height:7px;border-radius:50%;background:#1F9D55;animation:pulse 2.2s infinite;flex:0 0 7px;}
+.v31-item{display:block;padding:13px 0;border-bottom:1px solid #F0F1F3;text-decoration:none;color:inherit;}
+.v31-item:last-of-type{border-bottom:none;}
+.v31-item-tag{display:block;font-family:'Inter',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blueprint,#2B4FE0);margin-bottom:5px;}
+.v31-item-title{display:block;font-family:'Inter',sans-serif;font-weight:700;font-size:1.02rem;line-height:1.35;color:#0F2942;}
+.v31-item:hover .v31-item-title{color:var(--blueprint,#2B4FE0);}
+.v31-slot-foot{margin-top:10px;padding-top:12px;border-top:1px solid #F0F1F3;font-size:.74rem;color:#8a919c;}
+.v31-proof{display:flex;border-top:1px solid #E4E4E7;padding:20px 0 28px;flex-wrap:wrap;}
+.v31-stat{flex:1 1 0;min-width:130px;padding:0 18px;border-left:1px solid #E4E4E7;}
+.v31-stat:first-child{border-left:none;padding-left:0;}
+.v31-num{display:block;font-family:'Inter',sans-serif;font-weight:800;font-size:1.7rem;line-height:1.1;letter-spacing:-0.02em;color:#0F2942;}
+.v31-lab{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.72rem;line-height:1.3;letter-spacing:.06em;text-transform:uppercase;color:#6b7280;margin-top:4px;}
+@media (max-width:860px){.v31-grid{flex-direction:column;gap:26px;padding:26px 0 20px;}.v31-hero h1{font-size:clamp(2rem,8vw,2.6rem);}.v31-proof{padding:14px 0 20px;}.v31-stat{flex:1 1 40%;padding:8px 14px;border-left:none;}.v31-stat:first-child{padding-left:14px;}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://newhomedispatch.com/#org","name":"New Home Dispatch","url":"https://newhomedispatch.com/","logo":{"@type":"ImageObject","url":"https://newhomedispatch.com/assets/apple-touch-icon.png","width":180,"height":180},"sameAs":["https://www.youtube.com/@NewHomeDispatch","https://x.com/newhomedispatch","https://www.instagram.com/newhomedispatch/"]},{"@type":"WebSite","name":"New Home Dispatch","alternateName":"NHD","url":"https://newhomedispatch.com/","publisher":{"@id":"https://newhomedispatch.com/#org"}}]}</script>
 <link rel="manifest" href="manifest.webmanifest">
@@ -1976,22 +1977,33 @@ a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 </div>
 
 
-<section class="hero v30-hero">
-<div class="wrap v30-grid">
-<div class="v30-copy">
-<div class="v30-kicker"><span class="v30-dot"></span>The Independent Guide to New Construction</div>
-<h1 class="v30-h1">The market, <em>verified</em>.<br>Four times a day.</h1>
-<p class="v30-sub">Independent intelligence for buying new construction in Central Texas. Every builder offer checked against the source four times a day, communities walked in person, and real negotiated outcomes recorded, so you know what a good deal looks like before you sign one.</p>
-<div class="v30-attr">New Home Dispatch &middot; Updated four times daily &middot; Free, independent, never paid by a builder</div>
-<div class="v30-ctas">
-<a class="v30-btn v30-btn-primary" href="/daily-hot-sheet">Open the Hot Sheet</a>
-<a class="v30-btn v30-btn-ghost" href="#snapshot">See today’s changes</a>
+<section class="hero v31-hero">
+<div class="wrap">
+<div class="v31-grid">
+<div class="v31-lead">
+<div class="v31-kicker"><span class="v31-dot"></span>The Independent Record of New Construction &middot; Central Texas</div>
+<h1>The market, <em>verified</em>.<br>Four times a day.</h1>
+<p class="v31-dek">Every advertised builder offer in Central Texas is checked against the source four times a day. Communities are walked in person. Real negotiated outcomes are recorded. All of it is archived &mdash; the record gets deeper every single day.</p>
+<div class="v31-ctas">
+<a class="v31-btn v31-btn-primary" href="/daily-hot-sheet">Open today&rsquo;s Hot Sheet</a>
+<a class="v31-btn v31-btn-ghost" href="/reports">Read the reporting</a>
 </div>
 </div>
-<figure class="v30-fig">
-<img src="https://images.pexels.com/photos/3958954/pexels-photo-3958954.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Street of newly built single-family homes in a suburban community" fetchpriority="high" decoding="async">
-<figcaption>New-construction street. Photo: Pexels, free license.</figcaption>
-</figure>
+<aside class="v31-slot" aria-label="Latest from the field">
+<div class="v31-slot-head"><span class="v31-live-dot" aria-hidden="true"></span>Latest from the field</div>
+<a class="v31-item" href="#snapshot"><span class="v31-item-tag">Today&rsquo;s sweep</span><span class="v31-item-title">What changed since the last verification pass</span></a>
+<a class="v31-item" href="/affordability"><span class="v31-item-tag">Investigation</span><span class="v31-item-title">Where new construction actually starts: $199,990</span></a>
+<a class="v31-item" href="/field-notes"><span class="v31-item-tag">Field route</span><span class="v31-item-title">Kyle &amp; Buda: ten stops, verified in person</span></a>
+<div class="v31-slot-foot">Reported, verified, and archived by New Home Dispatch</div>
+</aside>
+</div>
+<div class="v31-proof" aria-label="Coverage in numbers">
+<div class="v31-stat"><span class="v31-num">45</span><span class="v31-lab">builders tracked</span></div>
+<div class="v31-stat"><span class="v31-num">38</span><span class="v31-lab">communities covered</span></div>
+<div class="v31-stat"><span class="v31-num">4&times;</span><span class="v31-lab">verified daily</span></div>
+<div class="v31-stat"><span class="v31-num">11</span><span class="v31-lab">walked &amp; fully tracked</span></div>
+<div class="v31-stat"><span class="v31-num">100%</span><span class="v31-lab">independent &middot; no builder pays</span></div>
+</div>
 </div>
 </section>
 
@@ -2302,12 +2314,12 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 <div class="eyebrow mono">Dispatch Reports</div>
 <h2 class="section-title">What's changing around the market right now.</h2>
 <div class="v28-report">
-<a href="affordability.html" style="display:block;color:inherit;text-decoration:none" aria-label="Open the Affordability Desk report"><div class="v28r-grid"><figure class="v28r-fig"><img src="https://images.pexels.com/photos/37627682/pexels-photo-37627682.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Framing stage of a new home under construction" loading="lazy" decoding="async"></figure><div class="v28r-body">
+<a href="affordability.html" style="display:block;color:inherit;text-decoration:none" aria-label="Open the Affordability Desk report">
 <span class="b-num mono">Featured · The Affordability Desk</span>
 <h3>Where new construction actually starts: $199,990.</h3>
 <p>We verified every sub-$300K advertised starting price in the metro, 21 entries across five builders, three of them inside Austin city limits, and three communities where builders compete head-to-head. Plus the four checks that keep a cheap sticker from becoming an expensive payment.</p>
 <div class="v28-report-take mono">Takeaway: the price floor is real, but it's a starting position, the tax rate, the collection, the commute, and the lender tie decide what you actually pay.</div>
-</div></div></a>
+</a>
 <div class="v28-report-ctas">
 <a href="affordability.html" class="btn btn-dark">Open the Affordability Desk &rarr;</a>
 <a href="reports/entry-level-price-floor.html" class="read-link mono">Or go straight to the Price Floor Report &rarr;</a>
@@ -2546,21 +2558,18 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
     <p class="directory-sub">New Home Dispatch focuses on new construction. These newsrooms cover the rest of what shapes a neighborhood &#8212; permits, schools, retail, and the economy behind it. Same standard we hold ourselves to: original reporting over press releases.</p>
     <div class="cp-grid">
       <a class="cp-card" href="https://austin.urbanize.city/" target="_blank" rel="noopener">
-<img class="cpn-img" src="https://images.pexels.com/photos/34192130/pexels-photo-34192130.jpeg?auto=compress&cs=tinysrgb&w=900" alt="New homes framed in a growing subdivision" loading="lazy" decoding="async">
         <div class="cp-region mono">Development &amp; Permits</div>
         <h3>Urbanize Austin</h3>
         <p>Ground-level tracking of what's being built and where, across the metro.</p>
         <span class="read-link mono">Visit site &#8599;</span>
       </a>
       <a class="cp-card" href="https://communityimpact.com/austin/" target="_blank" rel="noopener">
-<img class="cpn-img" src="https://images.pexels.com/photos/37215506/pexels-photo-37215506.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Austin skyline over Lady Bird Lake" loading="lazy" decoding="async">
         <div class="cp-region mono">Hyperlocal News</div>
         <h3>Community Impact</h3>
         <p>Suburb-by-suburb reporting on schools, retail, and infrastructure timelines.</p>
         <span class="read-link mono">Visit site &#8599;</span>
       </a>
       <a class="cp-card" href="https://www.bizjournals.com/austin/" target="_blank" rel="noopener">
-<img class="cpn-img" src="https://images.pexels.com/photos/273204/pexels-photo-273204.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Downtown Austin skyline" loading="lazy" decoding="async">
         <div class="cp-region mono">Business &amp; Economy</div>
         <h3>Austin Business Journal</h3>
         <p>Employer relocations and commercial development that drive housing demand.</p>
