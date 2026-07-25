@@ -1633,6 +1633,9 @@
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0F2942">
 <script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js").catch(function(){});</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-sA+e2Z6UTKqYWo6WvBUfMcHc17JgbmR2r8+/JlUB0jgAT4dwfmhOEhKw6/nkoclOwCEmSA1F2iqk6bIQBw+U+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -1864,7 +1867,12 @@
     </div>
 
     <div class="explorer-layout" id="compare">
-      <div class="explorer-map-wrap">
+      <div class="map-view-toggle" style="display:flex;gap:8px;margin-bottom:10px;">
+  <button type="button" id="map-view-btn" class="tag-btn mono">MAP VIEW</button>
+  <button type="button" id="grid-view-btn" class="tag-btn mono">GRID VIEW</button>
+</div>
+<div id="nhd-leaflet-map" style="height:520px;border-radius:2px;border:1px solid #E0E0E0;margin-bottom:12px;"></div>
+<div class="explorer-map-wrap">
         <svg class="explorer-map" id="explorer-map" viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Austin-area new home communities">
           <defs>
             <pattern id="mapGrid" width="28" height="28" patternUnits="userSpaceOnUse">
@@ -3025,5 +3033,93 @@ const NHD_DATA = {
 <!-- v73 nav fix: click-to-toggle + hover bridge (dropdowns were hover-only with dead 4px gap) -->
 <style>.nav-grp{position:relative}.nav-grp::after{content:"";position:absolute;left:0;right:0;top:100%;height:10px}.site-header,.nav-wrap{overflow:visible !important}.site-header{position:sticky;top:0;z-index:300}body>header:not(.hero){position:sticky;top:0;z-index:300}header:has(.site-nav){position:sticky;top:0;z-index:300}.nav-grp .nav-drop{z-index:400}</style>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+<script>
+(function(){
+  var NHD_GEO = {'santa-rita-ranch':[30.65294,-97.83004,'Santa Rita Ranch'],'wolf-ranch':[30.63156,-97.70253,'Wolf Ranch'],'whisper-valley':[30.29265,-97.55383,'Whisper Valley'],'belterra':[30.20109,-97.98151,'Belterra'],'easton-park':[30.20259,-97.73715,'Easton Park'],'sunfield':[30.08144,-97.80902,'Sunfield'],'kissing-tree':[29.83733,-97.99477,'Kissing Tree'],'bryson':[30.60747,-97.85125,'Bryson'],'headwaters':[30.19867,-98.047,'Headwaters'],'travisso':[30.53295,-97.90967,'Travisso'],'bar-w-ranch':[30.5796,-97.854,'Bar W Ranch'],'waterstone':[29.95408,-97.86072,'Waterstone'],'sonterra':[30.80876,-97.60407,'Sonterra'],'sunset-oaks':[29.8819,-97.79564,'Sunset Oaks'],'eastern-wells':[30.82491,-97.60445,'Eastern Wells'],'cloverleaf':[30.20873,-97.60564,'Cloverleaf'],'evelyn':[30.32992,-97.66144,'Evelyn'],'colony-at-cole-springs':[30.08247,-97.84171,'Colony at Cole Springs'],'butler-farms':[30.66491,-97.92252,'Butler Farms'],'elm-park':[30.27455,-97.71649,'Elm Park'],'willow-springs':[30.08247,-97.84171,'Willow Springs'],'marble-creek-crossing':[30.27113,-97.7437,'Marble Creek Crossing'],'cascades-at-onion-creek':[30.20873,-97.60564,'Cascades at Onion Creek'],'turners-crossing':[30.08247,-97.84171,'Turners Crossing'],'travena':[30.63702,-97.67756,'Travena'],'prairie-winds':[30.54276,-97.54689,'Prairie Winds'],'lexington-parke':[30.1776,-97.61063,'Lexington Parke'],'briarwood':[30.36082,-97.41483,'Briarwood'],'6-creeks':[30.00289,-97.90384,'6 Creeks'],'anthem':[30.02554,-97.90485,'Anthem'],'blackhawk':[30.46923,-97.57616,'Blackhawk'],'cool-water':[29.98929,-97.87721,'Cool Water'],'crosswinds':[29.98929,-97.87721,'Crosswinds'],'larkspur':[30.62902,-97.8521,'Larkspur'],'plum-creek-north':[30.0381,-97.88108,'Plum Creek North'],'rancho-sienna':[30.63191,-97.81544,'Rancho Sienna'],'sweetwater':[30.32978,-98.02382,'Sweetwater'],'the-ridge':[30.00938,-97.72806,'The Ridge'],'meadowlark-preserve':[30.43937,-97.62,'Meadowlark Preserve'],'pradera':[29.95772,-97.78611,'Pradera'],'river-bridge-ranch':[29.88264,-97.94058,'River Bridge Ranch'],'firefly-pointe':[30.58128,-97.55077,'Firefly Pointe'],'elm-creek':[30.3655,-97.39672,'Elm Creek'],'woodfield-preserve':[30.69706,-97.70408,'Woodfield Preserve'],'bertram-oaks':[30.74376,-98.05543,'Bertram Oaks'],'cotton-brook':[30.54276,-97.54689,'Cotton Brook'],'winfield-park':[30.54276,-97.54689,'Winfield Park'],'thunder-rock':[30.51865,-98.29724,'Thunder Rock'],'trails-at-wildhorse':[30.27113,-97.7437,'Trails at Wildhorse'],'monarch-ranch':[30.34209,-97.5559,'Monarch Ranch'],'palomino':[30.34209,-97.5559,'Palomino'],'carillon':[30.36586,-97.49812,'Carillon'],'durango':[30.05688,-97.69111,'Durango'],'frontier':[30.05688,-97.69111,'Frontier'],'prairie-lakes':[30.08247,-97.84171,'Prairie Lakes'],'southgrove':[29.98929,-97.87721,'Southgrove'],'avery-centre':[30.50859,-97.67881,'Avery Centre'],'watermill':[29.95772,-97.78611,'Watermill'],'creekside-at-estancia':[30.20259,-97.73715,'Creekside at Estancia'],'mustang-valley':[30.34209,-97.5559,'Mustang Valley'],'stoney-chase':[30.1776,-97.61063,'Stoney Chase'],'overlook-ranch':[30.63702,-97.67756,'Overlook Ranch'],'salerno':[30.58397,-97.6025,'Salerno'],'river-bluff':[30.57361,-97.85673,'River Bluff'],'hidden-trails':[31.05601,-97.46445,'Hidden Trails']};
+  var VERIFIED_IDS = ['santa-rita-ranch','wolf-ranch','whisper-valley','belterra','easton-park','sunfield','kissing-tree','bryson','headwaters','travisso','bar-w-ranch'];
+  var mapInited = false;
+  function initNhdMap(){
+    if (mapInited) return;
+    mapInited = true;
+    var map = L.map('nhd-leaflet-map', {scrollWheelZoom:false}).setView([30.35,-97.72], 9);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors \u00a9 <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd', maxZoom: 19
+    }).addTo(map);
+    var cluster = L.markerClusterGroup({maxClusterRadius:42});
+    Object.keys(NHD_GEO).forEach(function(id){
+      var g = NHD_GEO[id];
+      var verified = VERIFIED_IDS.indexOf(id) > -1;
+      var marker = L.circleMarker([g[0], g[1]], {
+        radius: verified ? 7 : 6,
+        color: verified ? '#000000' : '#2B4FE0',
+        weight: 2,
+        fillColor: verified ? '#000000' : '#ffffff',
+        fillOpacity: 1
+      });
+      marker.bindTooltip(g[2], {direction:'top', offset:[0,-6]});
+      marker.on('click', function(){
+        var proxy = document.querySelector('.explorer-map-wrap g.map-pin[data-community="' + id + '"] circle.pin-hit');
+        if (proxy) {
+          proxy.dispatchEvent(new MouseEvent('click', {bubbles:true}));
+        }
+        var panel = document.querySelector('.panel-detail');
+        if (panel) panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+      });
+      cluster.addLayer(marker);
+      NHD_GEO[id].push(marker);
+    });
+    map.addLayer(cluster);
+
+    var svgWrap = document.querySelector('.explorer-map-wrap');
+    if (svgWrap) {
+      var syncDim = function(){
+        svgWrap.querySelectorAll('g.map-pin[data-community]').forEach(function(g){
+          var id = g.getAttribute('data-community');
+          var entry = NHD_GEO[id];
+          if (!entry || !entry[3]) return;
+          var dimmed = g.classList.contains('is-dim');
+          entry[3].setStyle({opacity: dimmed ? 0.2 : 1, fillOpacity: dimmed ? 0.15 : 1});
+        });
+      };
+      var observer = new MutationObserver(syncDim);
+      observer.observe(svgWrap, {attributes:true, attributeFilter:['class'], subtree:true, childList:true});
+      syncDim();
+    }
+    setTimeout(function(){ map.invalidateSize(); }, 250);
+  }
+  function showMap(){
+    var mapEl = document.getElementById('nhd-leaflet-map');
+    var gridEl = document.querySelector('.explorer-map-wrap');
+    var mapBtn = document.getElementById('map-view-btn');
+    var gridBtn = document.getElementById('grid-view-btn');
+    if (mapEl) mapEl.style.display = 'block';
+    if (gridEl) gridEl.style.display = 'none';
+    if (mapBtn) { mapBtn.style.background = '#000'; mapBtn.style.color = '#fff'; }
+    if (gridBtn) { gridBtn.style.background = ''; gridBtn.style.color = ''; }
+    initNhdMap();
+  }
+  function showGrid(){
+    var mapEl = document.getElementById('nhd-leaflet-map');
+    var gridEl = document.querySelector('.explorer-map-wrap');
+    var mapBtn = document.getElementById('map-view-btn');
+    var gridBtn = document.getElementById('grid-view-btn');
+    if (mapEl) mapEl.style.display = 'none';
+    if (gridEl) gridEl.style.display = '';
+    if (gridBtn) { gridBtn.style.background = '#000'; gridBtn.style.color = '#fff'; }
+    if (mapBtn) { mapBtn.style.background = ''; mapBtn.style.color = ''; }
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var mapBtn = document.getElementById('map-view-btn');
+    var gridBtn = document.getElementById('grid-view-btn');
+    if (mapBtn) mapBtn.addEventListener('click', showMap);
+    if (gridBtn) gridBtn.addEventListener('click', showGrid);
+    showMap();
+  });
+})();
+</script>
 </body>
 </html>
