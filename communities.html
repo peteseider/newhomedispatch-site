@@ -2654,7 +2654,17 @@ const NHD_DATA = {
     return builderOk && regionOk && priceOk && taxOk && hoaOk && schoolOk && ageOk;
   }
 
-  function renderPins(){
+  
+  function syncMapMarkers(){
+    if (!mapInited) return;
+    NHD_DATA.communities.forEach(function(c){
+      var entry = NHD_GEO[c.id];
+      if (!entry || !entry[3]) return;
+      var match = communityMatchesFilter(c);
+      entry[3].setStyle({opacity: match ? 1 : 0.15, fillOpacity: match ? 1 : 0.08});
+    });
+  }
+function renderPins(){
     pinsG.innerHTML = '';
     NHD_DATA.communities.forEach(c=>{
       const match = communityMatchesFilter(c);
@@ -2673,6 +2683,8 @@ const NHD_DATA = {
         if(window.innerWidth<900){ const d=document.getElementById('panel-detail'); if(d&&d.style.display!=='none') d.scrollIntoView({behavior:'smooth',block:'nearest'}); } });
       pinsG.appendChild(g);
     });
+  
+    syncMapMarkers();
   }
 
   function renderGrid(){
