@@ -1,4 +1,4 @@
-# Verify Today (2026-07-24)
+# Verify Today (2026-07-25)
 Ranked worklist. Twenty minutes here grows the published tape fastest.
 
 1. [50] VERIFY district rate for Caliterra (Dripping Springs): Caliterra (total tax). Source: county appraisal district. Unblocks a sellable tax card.
