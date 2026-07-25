@@ -1567,6 +1567,28 @@
     .nav-mobile .nav-mobile-cta{color:var(--blueprint); font-weight:600;}
   }
   @media (prefers-reduced-motion: reduce){ .nav-drop{transition:none;} .nav-caret{transition:none;} }
+
+/* mobile nav elevation */
+@media (max-width:760px){
+.nav-mobile a{display:flex;align-items:center;gap:12px;}
+.nm-ico{width:19px;height:19px;flex:0 0 19px;stroke:var(--blueprint,#2B4FE0);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.nav-mobile .nm-featured{background:var(--paper-alt,#F4F5F7);border-left:3px solid var(--blueprint-navy,#0F2942);font-weight:800;}
+.nm-featured .nm-ico{stroke:var(--blueprint-navy,#0F2942);}
+.nav-mobile .nm-cta-wrap{padding:14px 20px;border-bottom:1px solid var(--line,#E4E4E7);}
+.nav-mobile .nm-cta-btn{display:block;text-align:center;padding:13px 20px;border-bottom:none;border-radius:3px;background:var(--blueprint-navy,#0F2942);color:#fff;font-weight:700;letter-spacing:.02em;}
+.nav-mobile .nm-cta-btn:hover,.nav-mobile .nm-cta-btn:focus-visible{background:#163a5c;}
+.nav-mobile .nm-badge{font-weight:700;font-size:.62em;padding:2px 7px;border-radius:2px;margin-left:auto;flex:0 0 auto;letter-spacing:.02em;}
+.nm-sec{border-bottom:1px solid var(--line,#E4E4E7);}
+.nm-sec-btn{display:flex;align-items:center;gap:12px;width:100%;padding:17px 28px;font-size:1.05rem;color:var(--ink,#111);background:none;border:none;cursor:pointer;font-family:inherit;text-align:left;min-height:44px;}
+.nm-sec-btn:hover,.nm-sec-btn:focus-visible{background:var(--paper-alt,#F4F5F7);}
+.nm-chev{width:16px;height:16px;flex:0 0 16px;margin-left:auto;stroke:var(--text-muted,#6b7280);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease;}
+.nm-sec.open .nm-chev{transform:rotate(180deg);}
+.nm-sec-list{list-style:none;margin:0;padding:0;max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--paper-alt,#F4F5F7);}
+.nm-sec.open .nm-sec-list{max-height:420px;}
+.nm-sec-list a{padding:14px 28px 14px 59px;font-size:.98rem;}
+.nm-sec-list li:last-child a{border-bottom:none;}
+}
+@media (prefers-reduced-motion:reduce){.nm-sec-list{transition:none;}.nm-chev{transition:none;}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0F2942">
@@ -1632,27 +1654,40 @@
   </div>
 </header>
 <ul class="nav-mobile" id="nav-mobile">
-<li><a href="start-here.html" class="nm-featured">Start Here</a></li>
-<li><a href="communities.html">Community Explorer</a></li>
-<li><a href="buyer-guides.html">Buyer Guides</a></li>
-<li><a href="free-tools.html">Free Tools</a></li>
-<li><a href="reports.html">Latest Reports</a></li>
-<li class="nm-cta-wrap"><a href="/buyer-strategy-call" class="nm-cta-btn">Get Buyer Help</a></li>
-<li class="nm-group-label">Recurring Publications</li>
+<li><a href="start-here.html" class="nm-featured"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>Start Here</a></li>
+<li><a href="communities.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Community Explorer</a></li>
+<li><a href="buyer-guides.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Buyer Guides</a></li>
+<li><a href="free-tools.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>Free Tools</a></li>
+<li><a href="reports.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Latest Reports</a></li>
+<li><a href="methodology.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>About &amp; Methodology</a></li>
+<li class="nm-cta-wrap"><a href="/buyer-strategy-call" class="nm-cta-btn">Get Buyer Help &rarr;</a></li>
+<li class="nm-sec">
+<button type="button" class="nm-sec-btn" aria-expanded="false"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Recurring Publications<svg class="nm-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+<ul class="nm-sec-list">
 <li><a href="weekly-dispatch.html">Weekly Dispatch <span class="nm-badge" style="background:var(--blueprint);color:#fff;">FREE &middot; FRIDAY</span></a></li>
 <li><a href="incentive-tracker.html">Incentive Tracker <span class="nm-badge" style="background:var(--blueprint-light);color:#fff;">MON &#183; WED</span></a></li>
 <li><a href="daily-hot-sheet.html">Daily Hot Sheet <span class="nm-badge" style="background:var(--blueprint-navy);color:#fff;">EVERY MORNING</span></a></li>
 <li><a href="report-a-deal.html">Report a Deal <span class="nm-badge" style="background:#F7CE7C;color:#0F2942;">NEW</span></a></li>
-<li><a href="methodology.html">About &amp; Methodology</a></li>
-        <li class="nm-group-label">Elsewhere in Austin</li>
-        <li><a href="https://austin.urbanize.city/" target="_blank" rel="noopener">Urbanize Austin</a></li>
-        <li><a href="https://communityimpact.com/austin/" target="_blank" rel="noopener">Community Impact</a></li>
-        <li><a href="https://www.bizjournals.com/austin/" target="_blank" rel="noopener">Austin Business Journal</a></li>
-        <li class="nm-group-label">Follow New Home Dispatch</li>
-        <li><a href="https://www.youtube.com/@NewHomeDispatch" target="_blank" rel="noopener">YouTube</a></li>
-        <li><a href="https://www.instagram.com/newhomedispatch/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://x.com/newhomedispatch" target="_blank" rel="noopener">X</a></li>
 </ul>
+</li>
+<li class="nm-sec">
+<button type="button" class="nm-sec-btn" aria-expanded="false"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Elsewhere in Austin<svg class="nm-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+<ul class="nm-sec-list">
+<li><a href="https://austin.urbanize.city/" target="_blank" rel="noopener">Urbanize Austin</a></li>
+<li><a href="https://communityimpact.com/austin/" target="_blank" rel="noopener">Community Impact</a></li>
+<li><a href="https://www.bizjournals.com/austin/" target="_blank" rel="noopener">Austin Business Journal</a></li>
+</ul>
+</li>
+<li class="nm-sec">
+<button type="button" class="nm-sec-btn" aria-expanded="false"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg>Follow New Home Dispatch<svg class="nm-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+<ul class="nm-sec-list">
+<li><a href="https://www.youtube.com/@NewHomeDispatch" target="_blank" rel="noopener">YouTube</a></li>
+<li><a href="https://www.instagram.com/newhomedispatch/" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="https://x.com/newhomedispatch" target="_blank" rel="noopener">X</a></li>
+</ul>
+</li>
+</ul>
+<script>(function(){var nm=document.getElementById("nav-mobile");if(!nm)return;nm.addEventListener("click",function(e){var b=e.target.closest(".nm-sec-btn");if(!b)return;var s=b.parentElement;var o=s.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});})();</script>
 <main id="main-content">
 <section class="gate-hero">
   <div class="gate-grid-bg" aria-hidden="true"></div>
