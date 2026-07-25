@@ -3089,7 +3089,14 @@ const NHD_DATA = {
       observer.observe(svgWrap, {attributes:true, attributeFilter:['class'], subtree:true, childList:true});
       syncDim();
     }
-    setTimeout(function(){ map.invalidateSize(); }, 250);
+    function resyncMap(){ map.invalidateSize(); map.setView(map.getCenter(), map.getZoom(), {animate:false}); }
+    setTimeout(resyncMap, 250);
+    setTimeout(resyncMap, 1000);
+    if (window.ResizeObserver) {
+      var ro = new ResizeObserver(function(){ resyncMap(); });
+      ro.observe(document.getElementById('nhd-leaflet-map'));
+    }
+    window.addEventListener('load', resyncMap);
   }
   function showMap(){
     var mapEl = document.getElementById('nhd-leaflet-map');
