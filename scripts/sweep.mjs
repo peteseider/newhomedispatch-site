@@ -228,6 +228,34 @@ async function detectChanges() {
   return { ran: true, model, candidates, raw: text };
 }
 
+// ---------- standing inventory (per-builder QMI counts) ----------
+// Additive and fail-safe: cannot break the sweep. Recomputes totals from the
+// human/AI-verified data/standing-inventory.json and appends a history point
+// only when the verified counts actually change. Like the concession index,
+// this NEVER invents a number — null counts stay null until a human or the
+// verification workflow records a count read from the builder's own site.
+function updateStandingInventory(t) {
+  const path = p('data/standing-inventory.json');
+  if (!existsSync(path)) { console.log('[sweep] standing-inventory: no data file, skipping'); return; }
+  const si = JSON.parse(readFileSync(path, 'utf8'));
+  const builders = Array.isArray(si.builders) ? si.builders : [];
+  const counted = builders.filter((b) => typeof b.qmiCount === 'number' && b.qmiCount >= 0);
+  si.totals = {
+    buildersTracked: builders.length,
+    buildersWithCounts: counted.length,
+    totalQmi: counted.reduce((s, b) => s + b.qmiCount, 0),
+    lastChecked: t.labelLong,
+  };
+  const sig = counted.map((b) => b.slug + ':' + b.qmiCount).sort().join('|');
+  si.history = Array.isArray(si.history) ? si.history : [];
+  const last = si.history[si.history.length - 1];
+  if (counted.length && (!last || last.sig !== sig)) {
+    si.history.push({ t: t.iso, slot: t.slot, sig, totalQmi: si.totals.totalQmi, buildersWithCounts: counted.length });
+  }
+  writeFileSync(path, JSON.stringify(si, null, 2) + '\n');
+  console.log('[sweep] standing-inventory: ' + counted.length + '/' + builders.length + ' builders counted, totalQmi=' + si.totals.totalQmi + ', historyPoints=' + si.history.length);
+}
+
 // ---------- main ----------
 (async () => {
   const core = recomputeIndex();
@@ -250,6 +278,7 @@ async function detectChanges() {
   try { await refreshRate(core.t); } catch (e) { console.log('[sweep] rate refresh skipped: ' + (e && e.message)); }
   try { await refreshPmms(core.t); } catch (e) { console.log('[sweep] pmms refresh skipped: ' + (e && e.message)); }
   try { await refreshPermits(core.t); } catch (e) { console.log('[sweep] permits refresh skipped: ' + (e && e.message)); }
+  try { updateStandingInventory(core.t); } catch (e) { console.log('[sweep] standing inventory skipped: ' + (e && e.message)); }
   try { writeContentPacket(core); } catch (e) { console.log('[sweep] content packet skipped: ' + (e && e.message)); }
 
   const outPath = p('reporting/sweep-latest.json');
