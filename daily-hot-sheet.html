@@ -41,10 +41,10 @@
   .mh-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
   .wm{font-weight:800;font-size:22px;color:#fff;display:inline-flex;align-items:baseline;gap:.25em;}
   .wm .h{color:var(--blueprint-light);}.wm .bar{color:var(--blueprint-light);font-weight:400;}
-  .live{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy);}
+  .live{display:inline-flex;align-items:center;gap:8px;font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy);}
   .live .pulse{width:8px;height:8px;border-radius:50%;background:#39D98A;animation:p 2s infinite;}
   @keyframes p{0%{box-shadow:0 0 0 0 rgba(57,217,138,.6)}70%{box-shadow:0 0 0 7px rgba(57,217,138,0)}100%{box-shadow:0 0 0 0 rgba(57,217,138,0)}}
-  .mh-title{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-top:14px;}
+  .mh-title{font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-top:14px;}
   .mh-title .sep{color:var(--on-navy);}
   .pad{padding:0 24px;}
 
@@ -52,9 +52,9 @@
   @media(max-width:640px){.score{grid-template-columns:1fr;gap:12px;}}
   .score-dial{text-align:center;}
   .score-num{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:82px;line-height:.9;letter-spacing:-3px;}
-  .score-of{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-top:2px;}
-  .score-badge{display:inline-block;margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--good);border-radius:3px;padding:5px 10px;}
-  .score-lab{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blueprint);font-weight:600;}
+  .score-of{font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-top:2px;}
+  .score-badge{display:inline-block;margin-top:10px;font-family:'Inter', sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--good);border-radius:3px;padding:5px 10px;}
+  .score-lab{font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blueprint);font-weight:600;}
   .score-lab .idx{color:var(--muted);}
   .score-head{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(21px,3.2vw,27px);letter-spacing:-.4px;line-height:1.12;margin:6px 0 8px;}
   .score-sub{font-size:.96rem;color:#333;max-width:54ch;}
@@ -67,7 +67,7 @@
   .sig.goodc{border-top-color:var(--good);}.sig.badc{border-top-color:var(--bad);}.sig.warnc{border-top-color:var(--warn);}
   .disclose{padding:10px 24px 0;font-size:11.5px;color:#8a8a8a;font-style:italic;}
 
-  .kick{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blueprint);margin:32px 0 0;}
+  .kick{font-family:'Inter', sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blueprint);margin:32px 0 0;}
   .kick .r{color:var(--muted);float:right;letter-spacing:.08em;}
   .rule{height:2px;background:var(--blueprint);margin:6px 0 14px;clear:both;}
 
@@ -83,12 +83,12 @@
   .wl-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--line);}
   .wl-row:last-child{border-bottom:none;}
   .wl-b{font-weight:700;font-size:14.5px;}.wl-b small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px;}
-  .wl-status{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;white-space:nowrap;text-align:right;}
+  .wl-status{font-family:'Inter', sans-serif;font-size:11.5px;font-weight:600;white-space:nowrap;text-align:right;}
   .s-up{color:var(--good);}.s-down{color:var(--bad);}.s-warn{color:var(--warn);}.s-flat{color:var(--muted);}
-  .wl-count{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:10px;text-transform:uppercase;letter-spacing:.08em;}
+  .wl-count{font-family:'Inter', sans-serif;font-size:11px;color:var(--muted);margin-top:10px;text-transform:uppercase;letter-spacing:.08em;}
 
   .rank{border:1px solid var(--line);border-radius:6px;overflow:hidden;}
-  .rank-head{display:grid;grid-template-columns:34px 1fr 62px 92px;gap:12px;padding:9px 16px;background:var(--navy);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;}
+  .rank-head{display:grid;grid-template-columns:34px 1fr 62px 92px;gap:12px;padding:9px 16px;background:var(--navy);color:#fff;font-family:'Inter', sans-serif;font-size:10px;letter-spacing:.08em;text-transform:uppercase;}
   .rank-head span:nth-child(3),.rank-head span:nth-child(4){text-align:right;}
   .rank-row{display:grid;grid-template-columns:34px 1fr 62px 92px;gap:12px;align-items:center;padding:13px 16px;border-bottom:1px solid var(--line);}
   .rank-row:last-child{border-bottom:none;}
@@ -96,11 +96,11 @@
   .rank-b{font-weight:700;font-size:15px;}
   .rank-why{display:block;font-size:12.5px;color:#555;margin-top:4px;line-height:1.45;font-weight:400;}
   .rank-score{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:1.7rem;line-height:1;text-align:right;letter-spacing:-1px;}
-  .rank-trend{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;text-align:right;white-space:nowrap;}
+  .rank-trend{font-family:'Inter', sans-serif;font-size:11px;font-weight:600;text-align:right;white-space:nowrap;}
   .t-rise{color:var(--good);}.t-fall{color:var(--bad);}.t-flat{color:var(--muted);}
 
   .move{background:var(--navy);border-radius:6px;padding:18px 22px;color:#fff;}
-  .move .l{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy);margin-bottom:7px;}
+  .move .l{font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy);margin-bottom:7px;}
   .move p{font-size:1.04rem;line-height:1.5;}.move .hl{color:#9DB6FF;font-weight:700;}
 
   .rvt{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
@@ -121,7 +121,7 @@
   .how h4{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:1rem;margin:14px 0 5px;}
   .how h4:first-child{margin-top:0;}
   .how p{font-size:13.5px;color:#3a3a3a;line-height:1.6;}
-  .how .eng{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--blueprint);letter-spacing:.04em;}
+  .how .eng{font-family:'Inter', sans-serif;font-size:11px;color:var(--blueprint);letter-spacing:.04em;}
 
   .cta-strip{background:var(--navy);border-radius:8px;padding:22px 24px;text-align:center;margin-top:8px;}
   .cta-strip h3{color:#fff;font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:6px;}
@@ -138,8 +138,8 @@
   .ss-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);font-size:13px;}
   .ss-row:last-child{border-bottom:none;}
   .ss-row .k2{color:#333;}
-  .ss-row .v{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12.5px;text-align:right;white-space:nowrap;}
-  .ss-row .d{font-family:'IBM Plex Mono',monospace;font-size:11px;text-align:right;white-space:nowrap;min-width:74px;}
+  .ss-row .v{font-family:'Inter', sans-serif;font-weight:600;font-size:12.5px;text-align:right;white-space:nowrap;}
+  .ss-row .d{font-family:'Inter', sans-serif;font-size:11px;text-align:right;white-space:nowrap;min-width:74px;}
   .ss-up{color:var(--good);}.ss-down{color:var(--bad);}.ss-flat{color:var(--muted);}.ss-na{color:#9a9a9a;font-style:italic;}
   .ss-line{padding:11px 16px;background:#F7F9FF;border-top:1px solid #D6DEF5;font-size:13px;color:#243b63;line-height:1.55;}
   .bpc{font-size:12px;font-weight:700;border:1px solid #C7CBD4;background:#fff;color:#333;border-radius:14px;padding:4px 11px;cursor:pointer;}
@@ -148,24 +148,24 @@
   .sens{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;flex-wrap:wrap;}
   .sens .s1{flex:1;min-width:96px;padding:10px 12px;border-right:1px solid var(--line);}
   .sens .s1:last-child{border-right:none;}
-  .sens .r1{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);}
+  .sens .r1{font-family:'Inter', sans-serif;font-size:11px;color:var(--muted);}
   .sens .p1{font-weight:800;font-size:15.5px;letter-spacing:-.02em;margin-top:2px;}
   .bd-tbl{width:100%;border-collapse:collapse;font-size:12.5px;border:1px solid var(--line);}
   .bd-tbl th{background:var(--paper-alt);color:#333;font-size:10px;padding:7px 9px;border-bottom:1px solid var(--line);text-align:right;}
   .bd-tbl th:first-child{text-align:left;}
-  .bd-tbl td{padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-size:12px;text-align:right;border-bottom:1px solid var(--line);}
+  .bd-tbl td{padding:7px 9px;font-family:'Inter', sans-serif;font-size:12px;text-align:right;border-bottom:1px solid var(--line);}
   .bd-tbl td:first-child{text-align:left;}
   .bd-tbl tr:last-child td{border-bottom:none;}
   .wl-tools{display:flex;gap:12px;align-items:center;margin-top:10px;flex-wrap:wrap;}
   .wl-clear{font-size:11.5px;font-weight:600;color:var(--bad);background:none;border:none;cursor:pointer;text-decoration:underline;padding:0;}
   .news-card{border:1px solid var(--line);border-left:4px solid var(--blueprint);border-radius:0 8px 8px 0;background:#fff;padding:18px 20px;}
-  .news-kicker{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);line-height:1.6;}
+  .news-kicker{font-family:'Inter', sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);line-height:1.6;}
   .news-h{font-weight:800;font-size:17px;line-height:1.3;margin:6px 0 8px;}
   .news-h a{color:var(--ink);text-decoration:none;}
   .news-h a:hover{color:var(--blueprint);}
   .news-p{font-size:13.5px;color:#333;line-height:1.6;margin-bottom:10px;}
-  .news-tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--blueprint);letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
-  .news-meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#9a9a9a;margin-top:10px;line-height:1.6;}
+  .news-tag{font-family:'Inter', sans-serif;font-size:10.5px;color:var(--blueprint);letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+  .news-meta{font-family:'Inter', sans-serif;font-size:10.5px;color:#9a9a9a;margin-top:10px;line-height:1.6;}
   #dl-table td{word-break:break-word;}
   @media(max-width:480px){
     #dl-table tr:first-child{display:none;}
@@ -187,7 +187,7 @@
   details.fold>summary .tw{display:inline-block;transition:transform .15s ease;margin-right:2px;}
   details.fold[open]>summary .tw{transform:rotate(90deg);}
   details.fold>summary:hover{border-color:var(--blueprint);}
-  details.fold>summary::after{content:'+ tap to open';font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blueprint);font-weight:700;white-space:nowrap;flex-shrink:0;}
+  details.fold>summary::after{content:'+ tap to open';font-family:'Inter', sans-serif;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blueprint);font-weight:700;white-space:nowrap;flex-shrink:0;}
   details.fold[open]>summary::after{content:'\2212 close';color:var(--muted);}
   details.fold[open]>summary{background:#fff;border-color:var(--blueprint);}
   details.fold>summary .r{float:none;}
@@ -217,7 +217,7 @@
       <span class="live"><span class="pulse"></span> <span id="verstamp">Live · verified 09:27 PM CT · Jul 22</span></span>
     </div>
     <div class="mh-title">Daily Hot Sheet <span class="sep">·</span> Buyer Decision Terminal <span class="sep">·</span> Central Texas</div>
-    <div style="margin-top:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:#8fa8d9;text-transform:uppercase;">Published every morning · Tracker issue Mondays · Weekly Dispatch Fridays</div>
+    <div style="margin-top:6px;font-family:'Inter', sans-serif;font-size:10px;letter-spacing:.08em;color:#8fa8d9;text-transform:uppercase;">Published every morning · Tracker issue Mondays · Weekly Dispatch Fridays</div>
   </header>
 
   <div id="wl-alert" style="display:none;margin:14px 24px 0;"></div>
@@ -228,7 +228,7 @@
     <div id="since-sweep" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
       <div style="padding:13px 16px;color:var(--muted);font-size:12.5px;">Change history is accumulating. Comparison begins after the next verified sweep.</div>
     </div>
-    <div style="text-align:right;margin-top:7px;"><a href="share/hot-sheet-board.png" download style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--blueprint);text-decoration:none;">Today's board as a single sheet &darr;</a> </div>
+    <div style="text-align:right;margin-top:7px;"><a href="share/hot-sheet-board.png" download style="font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--blueprint);text-decoration:none;">Today's board as a single sheet &darr;</a> </div>
   </div>
 
 
@@ -265,7 +265,7 @@
     <div class="sig warnc"><b id="sig-str">1 in 3</b><span>Offers with no lender strings attached. The rest require the builder's lender, so protect your rate.</span></div>
   </div>
   <p class="disclose">One market-wide index, built transparently from the signals above (v0.1 public-signal model, see methodology). It is a read of buyer leverage, not a prediction or financial advice.</p>
-  <div style="padding:8px 24px 0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:#7d7d7d;line-height:1.5;">COVERAGE · <span id="cov-counts">35 offers tracked across 23 builders</span> · <span id="cov-exp">14 expired flagged</span> · re-verified <span id="cov-time">09:27 PM CT</span> · score confidence: <b style="color:var(--warn);">Moderate</b> (public-signal model, pre-MLS). Change vs the prior sweep is reported at the top of this page.</div>
+  <div style="padding:8px 24px 0;font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:.03em;color:#7d7d7d;line-height:1.5;">COVERAGE · <span id="cov-counts">35 offers tracked across 23 builders</span> · <span id="cov-exp">14 expired flagged</span> · re-verified <span id="cov-time">09:27 PM CT</span> · score confidence: <b style="color:var(--warn);">Moderate</b> (public-signal model, pre-MLS). Change vs the prior sweep is reported at the top of this page.</div>
 
   <div class="pad">
 
@@ -296,9 +296,9 @@
     <div style="display:flex;gap:14px;flex-wrap:wrap;">
       <div style="flex:1;min-width:150px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
         <div style="font-size:30px;font-weight:800;letter-spacing:-.02em;" id="rate-now">6.77%</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.5;">30 yr fixed · daily market index<br><span id="rate-asof" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;">Mortgage News Daily · Jul 22</span></div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;">30 yr fixed · daily market index<br><span id="rate-asof" style="font-family:'Inter', sans-serif;font-size:10.5px;">Mortgage News Daily · Jul 22</span></div>
         <div style="font-size:10.5px;color:#9a9a9a;margin-top:7px;line-height:1.45;">An index of average lender pricing, updated daily. Not a quote: your rate depends on credit, loan type, and points.</div>
-        <div id="pmms-line" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:7px;line-height:1.5;"></div>
+        <div id="pmms-line" style="font-family:'Inter', sans-serif;font-size:10.5px;color:var(--muted);margin-top:7px;line-height:1.5;"></div>
       </div>
       <div style="flex:2;min-width:252px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
         <div style="font-size:12.5px;color:var(--muted);margin-bottom:8px;">What a monthly <b>principal and interest</b> budget of <b id="bp-budget-lab">$2,600/mo</b> carries on a true 30 year fixed:</div>
@@ -319,12 +319,12 @@
       </div>
       <div style="flex:1;min-width:150px;border:1px solid var(--line);border-radius:6px;padding:14px 16px;">
         <div style="font-size:24px;font-weight:800;letter-spacing:-.02em;" id="floor-val">$199,990</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.5;">the cheapest advertised new home we track. When this falls, the entry door opens wider.<br><span id="floor-note" style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;">Waterstone Village · Kyle</span></div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;">the cheapest advertised new home we track. When this falls, the entry door opens wider.<br><span id="floor-note" style="font-family:'Inter', sans-serif;font-size:10.5px;">Waterstone Village · Kyle</span></div>
       </div>
     </div>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;">
       <div style="flex:1.1;min-width:240px;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Payment sensitivity · $400,000 loan · P&amp;I only</div>
+        <div style="font-family:'Inter', sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Payment sensitivity · $400,000 loan · P&amp;I only</div>
         <div class="sens">
           <div class="s1"><div class="r1">at 6.00%</div><div class="p1" id="sens-0">$2,398</div></div>
           <div class="s1"><div class="r1">at 6.50%</div><div class="p1" id="sens-1">$2,528</div></div>
@@ -333,7 +333,7 @@
         <div style="font-size:10.5px;color:#9a9a9a;margin-top:5px;line-height:1.5;">Every half point is roughly $130/mo on this loan. Two lender quotes can differ by more than a week of rate movement.</div>
       </div>
       <div style="flex:1.6;min-width:280px;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Temporary vs permanent rate · $400,000 loan at today's index</div>
+        <div style="font-family:'Inter', sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Temporary vs permanent rate · $400,000 loan at today's index</div>
         <table class="bd-tbl">
           <tr><th>Structure</th><th>Year 1</th><th>Year 2</th><th>Year 3+</th></tr>
           <tr><td style="font-family:Inter,sans-serif;font-weight:600;">Permanent rate</td><td id="bd-p1">$2,600</td><td id="bd-p2">$2,600</td><td id="bd-p3">$2,600</td></tr>
@@ -344,7 +344,7 @@
       </div>
     </div>
     <div style="margin-top:12px;" id="fc-wrap">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Advertised builder rates vs the market · $400,000 loan · P&amp;I only</div>
+      <div style="font-family:'Inter', sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Advertised builder rates vs the market · $400,000 loan · P&amp;I only</div>
       <div id="fc-rows" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
         <div style="padding:11px 14px;color:var(--muted);font-size:12px;">Loads from today's tracked offers&hellip;</div>
       </div>
@@ -358,7 +358,7 @@
     <div id="trend-rows" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
       <div style="padding:14px 16px;color:var(--muted);font-size:12.5px;">Loading the trend board&hellip;</div>
     </div>
-    <div style="font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:#9a9a9a;margin-top:6px;line-height:1.6;">Green favors buyers, red works against them. Rate history: Mortgage News Daily (daily index) and Freddie Mac PMMS (weekly survey). Prices: City of Austin median sold, ABoR MLS. Resale rows: Unlock MLS published monthly snapshot, Austin MSA, all residential. Permits: City of Austin open data. The Concession Index is our own series and grows with every sweep. Deeper MLS layers (closed prices, delivered concessions) publish as aggregates once the licensed feed lands.</div>
+    <div style="font-size:10.5px;font-family:'Inter', sans-serif;color:#9a9a9a;margin-top:6px;line-height:1.6;">Green favors buyers, red works against them. Rate history: Mortgage News Daily (daily index) and Freddie Mac PMMS (weekly survey). Prices: City of Austin median sold, ABoR MLS. Resale rows: Unlock MLS published monthly snapshot, Austin MSA, all residential. Permits: City of Austin open data. The Concession Index is our own series and grows with every sweep. Deeper MLS layers (closed prices, delivered concessions) publish as aggregates once the licensed feed lands.</div>
   </div>
 
   </details>
@@ -434,7 +434,7 @@
 
     </details>
     <div style="background:#0F2942;border-radius:8px;padding:20px 22px;margin:22px 0 8px;color:#fff;">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;color:#8fa8d9;text-transform:uppercase;margin-bottom:8px;">The Dispatch rule</div>
+      <div style="font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:.1em;color:#8fa8d9;text-transform:uppercase;margin-bottom:8px;">The Dispatch rule</div>
       <div style="font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px;">The deal comes last.</div>
       <p style="font-size:13px;line-height:1.65;color:#c9d6ef;margin:0 0 10px;">Goals first. Then area, then community, then builder. The incentive is the final lever in the negotiation, never the first filter, because a bigger number on the sign can just be a bigger markup underneath it. We track deals so you can see the trend and know when your negotiating window opens, not so a discount picks your house.</p>
       <a href="deal-comes-last.html" style="color:#9DBBFF;font-weight:700;font-size:13px;">Why the deal comes last &rarr;</a> <span style="color:#8fa8d9;font-size:12px;">&middot;</span> <a href="deal-comes-last.html#head-heart" style="color:#8fa8d9;font-weight:600;font-size:12.5px;">and when the numbers tie, the head and heart test &rarr;</a>
@@ -879,7 +879,7 @@
           var pay = Math.round(pmt(400000, c.r));
           var d = mkt - pay;
           return '<div style="display:flex;gap:12px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap;">' +
-            '<div style="flex:1.6;min-width:170px;font-size:12.5px;"><b>' + esc(c.b) + '</b> · advertised ' + c.r.toFixed(2) + '% ' + label + (c.exp ? ' <span style="font-family:IBM Plex Mono,monospace;font-size:10px;color:var(--warn);">through ' + esc(c.exp.slice(5).split('-').join('/')) + '</span>' : '') + '</div>' +
+            '<div style="flex:1.6;min-width:170px;font-size:12.5px;"><b>' + esc(c.b) + '</b> · advertised ' + c.r.toFixed(2) + '% ' + label + (c.exp ? ' <span style="font-family:Inter, sans-serif;font-size:10px;color:var(--warn);">through ' + esc(c.exp.slice(5).split('-').join('/')) + '</span>' : '') + '</div>' +
             '<div style="min-width:90px;font-weight:800;font-size:15px;">$' + pay.toLocaleString('en-US') + '/mo</div>' +
             '<div style="min-width:130px;font-size:12px;color:var(--good);font-weight:700;">$' + d.toLocaleString('en-US') + '/mo less than market</div></div>';
         }
@@ -933,7 +933,7 @@
       }
       function row(name, sub, valueHtml, chipsHtml, sparkHtml) {
         return '<div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap;">' +
-          '<div style="flex:1.4;min-width:150px;"><div style="font-weight:800;font-size:13.5px;">' + name + '</div><div style="font-size:10.5px;color:#9a9a9a;font-family:IBM Plex Mono,monospace;">' + sub + '</div></div>' +
+          '<div style="flex:1.4;min-width:150px;"><div style="font-weight:800;font-size:13.5px;">' + name + '</div><div style="font-size:10.5px;color:#9a9a9a;font-family:Inter, sans-serif;">' + sub + '</div></div>' +
           '<div style="min-width:86px;font-size:19px;font-weight:800;letter-spacing:-.02em;">' + valueHtml + '</div>' +
           '<div style="flex:2;min-width:200px;">' + chipsHtml + '</div>' +
           '<div style="min-width:110px;">' + sparkHtml + '</div></div>';
@@ -1020,7 +1020,7 @@
       var secs = Array.isArray(news.secondary) ? news.secondary.filter(function(s){ return s && s.status === 'approved'; }).slice(0,2) : [];
       if (secs.length) {
         html += '<div style="margin-top:10px;">' + secs.map(function(s){
-          return '<div style="padding:9px 0;border-bottom:1px solid var(--line);font-size:13px;"><a href="' + esc(s.sourceUrl) + '" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink);text-decoration:none;">' + esc(s.headline) + ' ↗</a> <span style="font-family:IBM Plex Mono,monospace;font-size:10.5px;color:#9a9a9a;">' + esc(s.publisher) + ' · ' + esc(fmtShort(s.publishedAt)) + '</span></div>';
+          return '<div style="padding:9px 0;border-bottom:1px solid var(--line);font-size:13px;"><a href="' + esc(s.sourceUrl) + '" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink);text-decoration:none;">' + esc(s.headline) + ' ↗</a> <span style="font-family:Inter, sans-serif;font-size:10.5px;color:#9a9a9a;">' + esc(s.publisher) + ' · ' + esc(fmtShort(s.publishedAt)) + '</span></div>';
         }).join('') + '</div>';
       }
       box.innerHTML = html;
