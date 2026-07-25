@@ -1763,6 +1763,12 @@ body.nav-open .nav-mobile{display:flex;}
 .nav-mobile a{display:block; padding:17px 28px; font-size:1.05rem; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); min-height:44px;}
 .nav-mobile a:hover, .nav-mobile a:focus-visible{background:var(--paper-alt);}
 .nav-mobile .nav-mobile-cta{color:var(--blueprint); font-weight:600;}
+.nav-mobile .nm-featured{background:var(--paper-alt);border-left:3px solid var(--blueprint-navy);font-weight:800;}
+.nav-mobile .nm-cta-wrap{padding:14px 20px;border-bottom:1px solid var(--line);}
+.nav-mobile .nm-cta-btn{display:block;text-align:center;padding:13px 20px;border-bottom:none;border-radius:3px;background:var(--blueprint-navy);color:#fff;font-weight:700;letter-spacing:.02em;}
+.nav-mobile .nm-cta-btn:hover,.nav-mobile .nm-cta-btn:focus-visible{background:#163a5c;}
+.nav-mobile .nm-group-label{padding:16px 28px 6px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);font-weight:700;border-bottom:none;}
+.nav-mobile .nm-badge{font-weight:700;font-size:.62em;padding:2px 7px;border-radius:2px;margin-left:6px;vertical-align:middle;letter-spacing:.02em;}
 }
 @media (prefers-reduced-motion: reduce){ .nav-drop{transition:none;} .nav-caret{transition:none;} }
 </style>
@@ -1849,34 +1855,55 @@ body.nav-open .nav-mobile{display:flex;}
 </div>
 </header>
 <ul class="nav-mobile" id="nav-mobile">
-<li><a href="weekly-dispatch.html" style="font-weight:800;color:#2B4FE0;">Weekly Dispatch <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">FREE · FRIDAY</span></a></li>
-<li><a href="incentive-tracker.html" style="font-weight:800;color:#2B4FE0;">Incentive Tracker <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">MON &#183; WED</span></a></li>
-<li><a href="daily-hot-sheet.html" style="font-weight:800;color:#2B4FE0;">Daily Hot Sheet <span style="font-weight:700;font-size:.68em;background:#0F2942;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">EVERY MORNING</span></a></li>
-<li><a href="report-a-deal.html" style="font-weight:800;color:#2B4FE0;">Report a Deal <span style="font-weight:700;font-size:.68em;background:#2B4FE0;color:#fff;padding:2px 6px;border-radius:2px;margin-left:6px;vertical-align:middle;">NEW</span></a></li>
-<li><a href="start-here.html">Start Here</a></li>
+<li><a href="start-here.html" class="nm-featured">Start Here</a></li>
 <li><a href="communities.html">Community Explorer</a></li>
 <li><a href="buyer-guides.html">Buyer Guides</a></li>
 <li><a href="free-tools.html">Free Tools</a></li>
 <li><a href="reports.html">Latest Reports</a></li>
-<li><a href="buyer-strategy-call.html" class="nav-mobile-cta">Get Buyer Help</a></li>
+<li class="nm-cta-wrap"><a href="book-a-strategy-call.html" class="nm-cta-btn">Get Buyer Help</a></li>
+<li class="nm-group-label">Recurring Publications</li>
+<li><a href="weekly-dispatch.html">Weekly Dispatch <span class="nm-badge" style="background:var(--blueprint);color:#fff;">FREE &middot; FRIDAY</span></a></li>
+<li><a href="incentive-tracker.html">Incentive Tracker <span class="nm-badge" style="background:var(--blueprint-light);color:#fff;">MON &#183; WED</span></a></li>
+<li><a href="daily-hot-sheet.html">Daily Hot Sheet <span class="nm-badge" style="background:var(--blueprint-navy);color:#fff;">EVERY MORNING</span></a></li>
+<li><a href="report-a-deal.html">Report a Deal <span class="nm-badge" style="background:#F7CE7C;color:#0F2942;">NEW</span></a></li>
 <li><a href="methodology.html">About &amp; Methodology</a></li>
 </ul>
 
 <main id="main-content">
-<div id="nhd-ticker" style="background:linear-gradient(180deg,#0F2942 0%,#0B2032 100%);border-top:1px solid rgba(157,187,255,0.4);position:relative;"><style>@media (max-width:680px){#nhd-ticker-row{flex-wrap:nowrap !important;white-space:nowrap !important;overflow-x:auto !important;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:14px !important;padding:11px 18px !important;}#nhd-ticker-row>*{flex:none !important;}#nhd-ticker-row::-webkit-scrollbar{display:none;}#nhd-ticker-row .tick-live-label{display:none !important;}#nhd-ticker-row .tick-dealrecord{display:none !important;}#nhd-ticker::after{content:'';position:absolute;top:0;bottom:0;right:0;width:26px;background:linear-gradient(90deg,transparent,#0B2032);pointer-events:none;}}</style>
-<a href="daily-hot-sheet.html" id="nhd-ticker-row" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;max-width:1180px;margin:0 auto;padding:13px 24px;text-decoration:none;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;">
-<span style="color:#8fa8d9;text-transform:uppercase;font-size:10px;letter-spacing:.14em;"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:6px;vertical-align:1px;"></span><span class="tick-live-label">Live</span></span>
-<span id="tick-score" style="font-weight:700;">Buyer Advantage 74</span>
-<span style="color:#3d5a7e;">&middot;</span>
-<span id="tick-idx" style="font-weight:700;">$20,000 median credit</span>
-<span style="color:#3d5a7e;">&middot;</span>
-<span id="tick-rate" style="font-weight:700;">30 yr 6.85%</span>
-<span style="color:#3d5a7e;">&middot;</span>
-<span id="tick-changes" style="font-weight:700;color:#F7CE7C;">tracking</span>
-<span id="tick-stamp" style="color:#8fa8d9;font-size:10.5px;margin-left:auto;">live from the tracker</span>
-<span style="color:#9DBBFF;font-weight:700;">Open the Hot Sheet &rarr;</span>
-<span class="tick-dealrecord" style="color:#8fa8d9;font-size:10.5px;" onclick="event.preventDefault();event.stopPropagation();location.href='report-a-deal.html';if(window.NHD) NHD.trackEvent('deal_report_cta_click', {context:'statusbar'});">Deal Record: open &rarr;</span>
-</a>
+<div id="nhd-ticker" style="background:linear-gradient(180deg,#0c2138 0%,#081524 100%);border-top:1px solid rgba(201,169,110,.4);border-bottom:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;"><style>
+#nhd-ticker-track{display:flex;width:max-content;animation:nhdTickerScroll 38s linear infinite;}
+#nhd-ticker:hover #nhd-ticker-track,#nhd-ticker.nhd-paused #nhd-ticker-track{animation-play-state:paused;}
+@keyframes nhdTickerScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.nhd-tick-set{display:flex;align-items:center;flex:none;}
+.nhd-tick-item{display:flex;align-items:center;gap:7px;padding:12px 22px;text-decoration:none;white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;border-right:1px solid rgba(255,255,255,.09);}
+a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
+.nhd-tick-eyebrow{color:#c9a96e;text-transform:uppercase;font-size:9px;letter-spacing:.13em;}
+@media (prefers-reduced-motion: reduce){#nhd-ticker-track{animation:none;}}
+@media (max-width:680px){.nhd-tick-item{padding:11px 16px;font-size:11.5px;gap:6px;}.nhd-tick-eyebrow{display:none;}}
+</style>
+<div id="nhd-ticker-track">
+<div class="nhd-tick-set">
+<span class="nhd-tick-item" style="border-left:1px solid rgba(255,255,255,.09);"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;animation:pulse 2.2s infinite;"></span><span class="tick-live-label" style="color:#8fa8d9;text-transform:uppercase;font-size:9.5px;letter-spacing:.13em;">Live</span></span>
+<a class="nhd-tick-item" href="daily-hot-sheet.html#score" style="color:#fff;"><span class="nhd-tick-eyebrow">Score</span><span id="tick-score" style="font-weight:700;">Buyer Advantage 74</span></a>
+<a class="nhd-tick-item" href="daily-hot-sheet.html#incentives" style="color:#fff;"><span class="nhd-tick-eyebrow">Credit</span><span id="tick-idx" style="font-weight:700;">$20,000 median credit</span></a>
+<a class="nhd-tick-item" href="daily-hot-sheet.html#buying-power" style="color:#fff;"><span class="nhd-tick-eyebrow">Rate</span><span id="tick-rate" style="font-weight:700;">30 yr 6.85%</span></a>
+<a class="nhd-tick-item" href="daily-hot-sheet.html#since-sweep" style="color:#F7CE7C;"><span id="tick-changes" style="font-weight:700;">tracking</span></a>
+<a class="nhd-tick-item tick-dealrecord" href="report-a-deal.html" style="color:#8fa8d9;font-size:10.5px;" onclick="if(window.NHD)NHD.trackEvent('deal_report_cta_click',{context:'statusbar'});">Deal Record: open &rarr;</a>
+<a class="nhd-tick-item" href="daily-hot-sheet.html" style="color:#9DBBFF;font-weight:700;">Open the Hot Sheet &rarr;</a>
+<span class="nhd-tick-item" style="color:#8fa8d9;font-size:10.5px;border-right:none;"><span id="tick-stamp">live from the tracker</span></span>
+</div>
+<div class="nhd-tick-set" aria-hidden="true">
+<span class="nhd-tick-item" style="border-left:1px solid rgba(255,255,255,.09);"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;"></span><span style="color:#8fa8d9;text-transform:uppercase;font-size:9.5px;letter-spacing:.13em;">Live</span></span>
+<a class="nhd-tick-item" href="daily-hot-sheet.html#score" tabindex="-1" style="color:#fff;"><span class="nhd-tick-eyebrow">Score</span><span data-tick="tick-score" style="font-weight:700;">Buyer Advantage 74</span></a>
+<a class="nhd-tick-item" href="daily-hot-sheet.html#incentives" tabindex="-1" style="color:#fff;"><span class="nhd-tick-eyebrow">Credit</span><span data-tick="tick-idx" style="font-weight:700;">$20,000 median credit</span></a>
+<a class="nhd-tick-item" href="daily-hot-sheet.html#buying-power" tabindex="-1" style="color:#fff;"><span class="nhd-tick-eyebrow">Rate</span><span data-tick="tick-rate" style="font-weight:700;">30 yr 6.85%</span></a>
+<a class="nhd-tick-item" href="daily-hot-sheet.html#since-sweep" tabindex="-1" style="color:#F7CE7C;"><span data-tick="tick-changes" style="font-weight:700;">tracking</span></a>
+<a class="nhd-tick-item" href="report-a-deal.html" tabindex="-1" style="color:#8fa8d9;font-size:10.5px;">Deal Record: open &rarr;</a>
+<a class="nhd-tick-item" href="daily-hot-sheet.html" tabindex="-1" style="color:#9DBBFF;font-weight:700;">Open the Hot Sheet &rarr;</a>
+<span class="nhd-tick-item" style="color:#8fa8d9;font-size:10.5px;border-right:none;"><span data-tick="tick-stamp">live from the tracker</span></span>
+</div>
+</div>
+<script>(function(){var el=document.getElementById('nhd-ticker');if(!el)return;var timer;el.addEventListener('touchstart',function(){el.classList.add('nhd-paused');clearTimeout(timer);},{passive:true});el.addEventListener('touchend',function(){timer=setTimeout(function(){el.classList.remove('nhd-paused');},2500);},{passive:true});})();</script>
 </div>
 
 
@@ -1933,7 +1960,7 @@ body.nav-open .nav-mobile{display:flex;}
 <g>
 <circle cx="230" cy="364" r="4" class="adot"/>
 <path d="M230,364 L230,398" class="aline"/>
-<text x="230" y="414" text-anchor="middle" class="atxt">TRUE MONTHLY COST · TAXES + HOA + ESCROW</text>
+<text x="230" y="414" text-anchor="middle" class="atxt">TRUE MONTHLY COST Â· TAXES + HOA + ESCROW</text>
 </g>
 </g>
 </svg>
@@ -2121,7 +2148,7 @@ d" href="free-tools.html">
 .nhd-tools3__card--flagship .nhd-tools3__decision{color:#B8C4D4;}
 .nhd-tools3__caps{position:relative;z-index:1;list-style:none;margin:0 0 22px;padding:0;display:flex;flex-direction:column;gap:11px;}
 .nhd-tools3__caps li{position:relative;padding-left:19px;font-size:.86rem;line-height:1.5;color:#666;}
-.nhd-tools3__caps li::before{content:"→";position:absolute;left:0;top:0;font-size:.8rem;color:#2B4FE0;}
+.nhd-tools3__caps li::before{content:"â";position:absolute;left:0;top:0;font-size:.8rem;color:#2B4FE0;}
 .nhd-tools3__card--flagship .nhd-tools3__caps li{color:#B8C4D4;}
 .nhd-tools3__card--flagship .nhd-tools3__caps li::before{color:#7E9BEC;}
 .nhd-tools3__live{position:relative;z-index:1;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:#7E9BEC;margin:0 0 18px;}
@@ -2163,7 +2190,7 @@ d" href="free-tools.html">
 <span class="nhd-tools3__bpgrid" aria-hidden="true"></span>
 <div class="nhd-tools3__cardtop">
 <span class="nhd-tools3__num">01</span>
-<span class="nhd-tools3__badge">Flagship · four times daily</span>
+<span class="nhd-tools3__badge">Flagship Â· four times daily</span>
 </div>
 <h3 class="nhd-tools3__title">The Incentive Tracker</h3>
 <p class="nhd-tools3__decision">Know what every builder is really offering today, what changed overnight, and which deadlines are real. This is the habit that pays for the house.</p>
@@ -2174,8 +2201,8 @@ d" href="free-tools.html">
 </ul>
 <p class="nhd-tools3__live"><span class="dot" aria-hidden="true"></span><span id="ttk-live">Verified live offers across tracked builders</span></p>
 <div class="nhd-tools3__ctas">
-<a class="nhd-tools3__cta" href="daily-hot-sheet.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'daily-hot-sheet',context:'homepage_toolkit'});">Open the Daily Hot Sheet <span aria-hidden="true">→</span></a>
-<a class="nhd-tools3__cta nhd-tools3__cta--secondary" href="incentive-tracker.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'incentive-tracker',context:'homepage_toolkit'});">Explore the full Tracker <span aria-hidden="true">→</span></a>
+<a class="nhd-tools3__cta" href="daily-hot-sheet.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'daily-hot-sheet',context:'homepage_toolkit'});">Open the Daily Hot Sheet <span aria-hidden="true">â</span></a>
+<a class="nhd-tools3__cta nhd-tools3__cta--secondary" href="incentive-tracker.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'incentive-tracker',context:'homepage_toolkit'});">Explore the full Tracker <span aria-hidden="true">â</span></a>
 </div>
 </div>
 
@@ -2192,8 +2219,8 @@ d" href="free-tools.html">
 <li>Field notes and photos from the ground show you exactly what to look for before you tour</li>
 </ul>
 <div class="nhd-tools3__ctas">
-<a class="nhd-tools3__cta" href="communities.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'community-explorer',context:'homepage_toolkit'});">Open the Community Explorer <span aria-hidden="true">→</span></a>
-<a class="nhd-tools3__cta nhd-tools3__cta--secondary" href="builders.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'builder-files',context:'homepage_toolkit'});">Browse the builder files <span aria-hidden="true">→</span></a>
+<a class="nhd-tools3__cta" href="communities.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'community-explorer',context:'homepage_toolkit'});">Open the Community Explorer <span aria-hidden="true">â</span></a>
+<a class="nhd-tools3__cta nhd-tools3__cta--secondary" href="builders.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'builder-files',context:'homepage_toolkit'});">Browse the builder files <span aria-hidden="true">â</span></a>
 </div>
 </div>
 
@@ -2210,8 +2237,8 @@ d" href="free-tools.html">
 <li>Every chapter, workbook, and field guide is free to download, no email required</li>
 </ul>
 <div class="nhd-tools3__ctas">
-<a class="nhd-tools3__cta" href="buyer-guides.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'buyer-playbook',context:'homepage_toolkit'});">Browse the chapters <span aria-hidden="true">→</span></a>
-<a class="nhd-tools3__cta nhd-tools3__cta--secondary" href="get-guides.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'playbook-downloads',context:'homepage_toolkit'});">Get the downloads <span aria-hidden="true">→</span></a>
+<a class="nhd-tools3__cta" href="buyer-guides.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'buyer-playbook',context:'homepage_toolkit'});">Browse the chapters <span aria-hidden="true">â</span></a>
+<a class="nhd-tools3__cta nhd-tools3__cta--secondary" href="get-guides.html" onclick="if(window.NHD) NHD.trackEvent('tool_open',{tool:'playbook-downloads',context:'homepage_toolkit'});">Get the downloads <span aria-hidden="true">â</span></a>
 </div>
 </div>
 
@@ -2238,7 +2265,7 @@ var lr=live(inc.records), lp=live(inc.promos);
 var bld={}; lr.concat(lp).forEach(function(o){if(o.builder)bld[o.builder]=1;});
 var n=lr.length+lp.length, nb=Object.keys(bld).length;
 var el=document.getElementById('ttk-live');
-if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ranAtLabel?' · verified '+sl.ranAtLabel:'');
+if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ranAtLabel?' Â· verified '+sl.ranAtLabel:'');
 });
 })();
 </script>
@@ -2250,7 +2277,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 <h2 class="section-title">What's changing around the market right now.</h2>
 <div class="v28-report">
 <a href="affordability.html" style="display:block;color:inherit;text-decoration:none" aria-label="Open the Affordability Desk report">
-<span class="b-num mono">Featured · The Affordability Desk</span>
+<span class="b-num mono">Featured Â· The Affordability Desk</span>
 <h3>Where new construction actually starts: $199,990.</h3>
 <p>We verified every sub-$300K advertised starting price in the metro, 21 entries across five builders, three of them inside Austin city limits, and three communities where builders compete head-to-head. Plus the four checks that keep a cheap sticker from becoming an expensive payment.</p>
 <div class="v28-report-take mono">Takeaway: the price floor is real, but it's a starting position, the tax rate, the collection, the commute, and the lender tie decide what you actually pay.</div>
@@ -2267,7 +2294,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 <section class="wd-strip" aria-labelledby="wd-strip-title">
 <div class="wrap wd-strip-inner">
 <div class="wd-strip-copy">
-<div class="eyebrow mono">The Weekly Dispatch · Every Friday</div>
+<div class="eyebrow mono">The Weekly Dispatch Â· Every Friday</div>
 <h2 id="wd-strip-title" class="section-title">One email a week. The whole market, read for buyers.</h2>
 <p>The scoreboard, the deal of the week, and one field note from a real site visit, four minutes, clearly sourced, and free. No builder spin.</p>
 <div class="wd-strip-ctas">
@@ -2278,7 +2305,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 <a class="wd-strip-card" href="weekly-dispatch-01.html" aria-label="Read Issue No. 01 of the Weekly Dispatch">
 <span class="wd-strip-tag mono">Issue No. 01</span>
 <span class="wd-strip-h">This Week Changed the Scoreboard</span>
-<span class="wd-strip-meta mono">Incentives · inventory · rates, tracked weekly</span>
+<span class="wd-strip-meta mono">Incentives Â· inventory Â· rates, tracked weekly</span>
 <span class="wd-strip-go mono">Read the issue &rarr;</span>
 </a>
 </div>
@@ -2301,7 +2328,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 <p class="directory-sub">Three of the eleven communities currently tracked, each evaluated using the same criteria for taxes, HOA dues, builders, and commute. Open the full Explorer to filter all of them and compare up to three side by side.</p>
 <div class="cp-grid">
 <a class="cp-card" href="communities/santa-rita-ranch.html">
-<div class="cp-region mono">Northwest · Liberty Hill</div>
+<div class="cp-region mono">Northwest Â· Liberty Hill</div>
 <h3>Santa Rita Ranch</h3>
 <div class="cp-facts">
 <div><span class="cp-label mono">From</span><span class="cp-val">$350s</span></div>
@@ -2313,7 +2340,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 <span class="read-link mono">See the profile &rarr;</span>
 </a>
 <a class="cp-card" href="communities/wolf-ranch.html">
-<div class="cp-region mono">North · Georgetown</div>
+<div class="cp-region mono">North Â· Georgetown</div>
 <h3>Wolf Ranch</h3>
 <div class="cp-facts">
 <div><span class="cp-label mono">From</span><span class="cp-val">$400s</span></div>
@@ -2325,7 +2352,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 <span class="read-link mono">See the profile &rarr;</span>
 </a>
 <a class="cp-card" href="communities/bar-w-ranch.html">
-<div class="cp-region mono">Northwest · Leander</div>
+<div class="cp-region mono">Northwest Â· Leander</div>
 <h3>Bar W Ranch</h3>
 <div class="cp-facts">
 <div><span class="cp-label mono">From</span><span class="cp-val">$440s</span></div>
@@ -2388,7 +2415,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 <div class="wrap guide-inner">
 <div class="v29c-guide-grid">
 <div>
-<div class="eyebrow mono" style="color:var(--blueprint-light)">Complete bound edition · Free, no email required</div>
+<div class="eyebrow mono" style="color:var(--blueprint-light)">Complete bound edition Â· Free, no email required</div>
 <h2 class="guide-title">Get the complete Playbook.</h2>
 <p class="guide-intro">Get all 16 chapters in one organized edition, plus the three stage volumes and future quarterly updates. Download it instantly, no email required. Add your email only if you would like the quarterly refresh sent to you. Every chapter, the workbook, and the field guides are free to download too.</p>
 <div class="v29c-guide-cta">
@@ -2425,7 +2452,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 [
 {
 "num": 1,
-"why": "You haven’t signed anything yet. This is where all the leverage is — and where it quietly disappears the moment you don’t use it.",
+"why": "You havenât signed anything yet. This is where all the leverage is â and where it quietly disappears the moment you donât use it.",
 "chapters": [
 ["ch01-is-new-construction-right", "01", "Is New Construction Right for You?"],
 ["ch04-financing-explained", "02", "Financing Explained"],
@@ -2440,7 +2467,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 },
 {
 "num": 2,
-"why": "The contract is signed. Now the job is protecting the timeline, the budget, and the inspection windows most buyers don’t know they have.",
+"why": "The contract is signed. Now the job is protecting the timeline, the budget, and the inspection windows most buyers donât know they have.",
 "chapters": [
 ["ch08-construction-timeline", "06", "Construction Timeline"],
 ["ch09-design-center-guide", "07", "The Design Center Guide"],
@@ -2453,7 +2480,7 @@ if(el && n) el.textContent = n+' live offers across '+nb+' builders'+(sl&&sl.ran
 },
 {
 "num": 3,
-"why": "Keys are close, or already in hand. The deadlines that matter most now — warranty, taxes, exemptions — expire quietly if nobody’s watching.",
+"why": "Keys are close, or already in hand. The deadlines that matter most now â warranty, taxes, exemptions â expire quietly if nobodyâs watching.",
 "chapters": [
 ["ch13-closing-process", "11", "The Closing Process"],
 ["ch14-first-year", "12", "Your First Year of Homeownership"],
@@ -2569,10 +2596,10 @@ function medianAt(i){ var v=D.records.map(function(r){return r.history[i]?r.hist
 var n=D.dates.length, cur=medianAt(n-1), prev=n>1?medianAt(n-2):cur, d=cur-prev;
 function k(v){ return '$'+(Math.round(v/100)/10).toFixed(1).replace(/\.0$/,'')+'k'; }
 var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], p=D.updated.split('-');
-var arrow=d>0?'▲':(d<0?'▼':'—');
+var arrow=d>0?'â²':(d<0?'â¼':'â');
 var meta=document.querySelector('.wd-strip-meta'); var tag=document.querySelector('.wd-strip-tag');
-if(meta) meta.textContent='Median incentive '+k(cur)+' '+arrow+' · buyer leverage '+(D.leverage||'—').toUpperCase()+' · '+D.records.length+' offers tracked';
-if(tag) tag.textContent='Issue No. 01 · data updated '+mo[(+p[1])-1]+' '+(+p[2]);
+if(meta) meta.textContent='Median incentive '+k(cur)+' '+arrow+' Â· buyer leverage '+(D.leverage||'â').toUpperCase()+' Â· '+D.records.length+' offers tracked';
+if(tag) tag.textContent='Issue No. 01 Â· data updated '+mo[(+p[1])-1]+' '+(+p[2]);
 });
 })();
 </script>
@@ -2586,7 +2613,7 @@ if(tag) tag.textContent='Issue No. 01 · data updated '+mo[(+p[1])-1]+' '+(+p[2]
 function j(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}
 Promise.all([j('/reporting/sweep-latest.json'),j('/score-history.json'),j('/reporting/rate-benchmark.json'),j('/incentives.json'),j('/entities.json')]).then(function(res){
 var sl=res[0],sh=res[1],rb=res[2],inc=res[3],reg=res[4];
-function t(id,v){var e=document.getElementById(id);if(e&&v!=null)e.textContent=v;}
+function t(id,v){if(v==null)return;var els=document.querySelectorAll('#'+id+',[data-tick="'+id+'"]');for(var i=0;i<els.length;i++)els[i].textContent=v;}
 if(sl&&sl.ranAtLabel){t('tick-stamp','verified '+sl.ranAtLabel);
 var hp=document.getElementById('hero-proof');
 if(hp&&inc){var today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
@@ -2594,7 +2621,7 @@ function dk(w){w=String(w||'');if(/^\d{4}-\d{2}-\d{2}/.test(w))return w.slice(0,
 function lv(l){return (l||[]).filter(function(o){if(!o.expires)return true;var k=dk(o.expires);return !k||k>=today;});}
 var lr=lv(inc.records),lp=lv(inc.promos);var bld={};lr.concat(lp).forEach(function(o){if(o.builder)bld[o.builder]=1;});
 var spine=(reg&&reg.builders&&reg.builders.length)||0;var cov=Object.keys(bld).length+(spine>0?' of '+spine+' tracked':'')+' builders';
-hp.innerHTML='<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:7px;vertical-align:1px;"></span>'+(lr.length+lp.length)+' offers verified live across '+cov+' · last check '+sl.ranAtLabel;}}
+hp.innerHTML='<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#39D98A;margin-right:7px;vertical-align:1px;"></span>'+(lr.length+lp.length)+' offers verified live across '+cov+' Â· last check '+sl.ranAtLabel;}}
 if(sh&&sh.points&&sh.points.length)t('tick-score','Buyer Advantage '+sh.points[sh.points.length-1].score);
 if(sl&&typeof sl.index==='number')t('tick-idx','$'+sl.index.toLocaleString('en-US')+' median credit');
 if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
@@ -2605,7 +2632,7 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
 <script>
 (function(){
   function j(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});}
-  function t(id,v){var e=document.getElementById(id);if(e&&v!=null)e.textContent=v;}
+  function t(id,v){if(v==null)return;var els=document.querySelectorAll('#'+id+',[data-tick="'+id+'"]');for(var i=0;i<els.length;i++)els[i].textContent=v;}
   Promise.all([j('/reporting/sweep-latest.json'),j('/score-history.json'),j('/reporting/rate-benchmark.json'),j('/reporting/content-packet.json'),j('/incentives.json')]).then(function(res){
     var sl=res[0],sh=res[1],rb=res[2],cp=res[3],inc=res[4];
     if(sl&&sl.ranAtLabel)t('snap-stamp','From the sweep of '+sl.ranAtLabel+' \u00b7 every figure dated and sourced');
