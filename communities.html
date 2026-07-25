@@ -1867,12 +1867,12 @@
     </div>
 
     <div class="explorer-layout" id="compare">
-      <div class="map-view-toggle" style="display:flex;gap:8px;margin-bottom:10px;">
+      <div class="explorer-map-wrap"><div class="map-view-toggle" style="display:flex;gap:8px;margin-bottom:10px;">
   <button type="button" id="map-view-btn" class="tag-btn mono">MAP VIEW</button>
   <button type="button" id="grid-view-btn" class="tag-btn mono">GRID VIEW</button>
 </div>
 <div id="nhd-leaflet-map" style="height:520px;border-radius:2px;border:1px solid #E0E0E0;margin-bottom:12px;"></div>
-<div class="explorer-map-wrap">
+
         <svg class="explorer-map" id="explorer-map" viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Austin-area new home communities">
           <defs>
             <pattern id="mapGrid" width="28" height="28" patternUnits="userSpaceOnUse">
@@ -3074,7 +3074,7 @@ const NHD_DATA = {
     });
     map.addLayer(cluster);
 
-    var svgWrap = document.querySelector('.explorer-map-wrap');
+    var svgWrap = document.querySelector('.explorer-map-wrap svg');
     if (svgWrap) {
       var syncDim = function(){
         svgWrap.querySelectorAll('g.map-pin[data-community]').forEach(function(g){
@@ -3093,7 +3093,7 @@ const NHD_DATA = {
   }
   function showMap(){
     var mapEl = document.getElementById('nhd-leaflet-map');
-    var gridEl = document.querySelector('.explorer-map-wrap');
+    var gridEl = document.querySelector('.explorer-map-wrap svg');
     var mapBtn = document.getElementById('map-view-btn');
     var gridBtn = document.getElementById('grid-view-btn');
     if (mapEl) mapEl.style.display = 'block';
@@ -3104,7 +3104,7 @@ const NHD_DATA = {
   }
   function showGrid(){
     var mapEl = document.getElementById('nhd-leaflet-map');
-    var gridEl = document.querySelector('.explorer-map-wrap');
+    var gridEl = document.querySelector('.explorer-map-wrap svg');
     var mapBtn = document.getElementById('map-view-btn');
     var gridBtn = document.getElementById('grid-view-btn');
     if (mapEl) mapEl.style.display = 'none';
