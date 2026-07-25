@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0A0B0F">
+<title>Revenue Plan & 12-Month Roadmap — Seider Realty Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0B0F;--navy2:#14161C;--ink:#1B1912;--slate:#6b6459;--line:#e6e0d3;--soft:#F7F4EC;--white:#fff;
+--srt-navy:#131A2B;--srt-blue:#1D5FB0;--srt-green:#1E8449;--gold:#B08D4F;--gold-bright:#CBA968;--warn:#9C3B2E;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',Arial,sans-serif;color:var(--ink);background:var(--soft);-webkit-font-smoothing:antialiased;line-height:1.6}
+h1,h2,h3,h4,.brand-font{font-family:'Playfair Display',Georgia,serif;font-weight:600;letter-spacing:-.01em}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:var(--srt-blue)}
+.container{max-width:920px;margin:0 auto;padding:0 22px 90px}
+header.hero{background:linear-gradient(160deg,var(--navy) 0%, var(--srt-navy) 100%);color:#fff;padding:56px 22px 46px;position:relative;overflow:hidden}
+header.hero::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(203,169,104,.06) 28px);pointer-events:none}
+.hero-inner{max-width:920px;margin:0 auto;position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-bright)}
+h1.title{font-size:clamp(28px,4.4vw,44px);margin:14px 0 12px;color:#fff}
+.hero-sub{color:#c9cad2;max-width:640px;font-size:16px}
+.backlink{display:inline-block;margin-top:22px;color:var(--gold-bright);font-size:13px;text-decoration:none;border-bottom:1px solid rgba(203,169,104,.4)}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+h2.sec{font-size:26px;margin-bottom:6px}
+.sec-num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;display:block}
+p{margin:12px 0}
+.lede{font-size:17.5px;color:#3a382e}
+.callout{background:var(--navy);color:#fff;border-radius:6px;padding:22px 26px;margin:22px 0}
+.callout b{color:var(--gold-bright)}
+.callout.warn{background:#3a1c15;border:1px solid rgba(156,59,46,.5)}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#EFE9DA;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--slate)}
+tr:nth-child(even) td{background:#FBF9F3}
+.funnel{display:flex;flex-direction:column;gap:0;margin:26px 0}
+.f-stage{background:#fff;border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:6px;padding:16px 20px;position:relative}
+.f-stage + .f-stage{margin-top:26px}
+.f-stage .n{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase}
+.f-stage h4{font-size:19px;margin:4px 0 4px}
+.f-stage .math{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--srt-blue);margin-top:6px}
+.f-arrow{text-align:center;color:var(--gold);font-size:20px;margin:-10px 0 0;position:relative;z-index:2}
+.f-arrow::before{content:"↓"}
+.quarters{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}
+@media (max-width:760px){.quarters{grid-template-columns:1fr 1fr}}
+.q-card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--srt-blue);border-radius:6px;padding:16px}
+.q-card h4{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:1px;color:var(--srt-blue);text-transform:uppercase}
+.q-card .goal{font-family:'Playfair Display',serif;font-size:22px;margin:8px 0 6px}
+.q-card ul{margin:8px 0 0 18px;font-size:13.5px;color:#3a382e}
+.q-card li{margin-bottom:5px}
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+@media (max-width:700px){.kpi-grid{grid-template-columns:1fr}}
+.kpi-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px}
+.kpi-card .cad{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase}
+.kpi-card h4{margin:6px 0 8px;font-size:18px}
+.kpi-card ul{margin-left:18px;font-size:14px}
+.foot{padding:36px 22px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);letter-spacing:1px}
+.assump{font-size:13px;color:var(--slate);border-left:3px solid var(--line);padding-left:12px;margin:14px 0}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="hero-inner">
+<span class="eyebrow">Seider Realty Team · Internal, not for public distribution</span>
+<h1 class="title">Revenue Plan &amp; 12-Month Roadmap</h1>
+<p class="hero-sub">A single number, $400,000 in GCI over the next 12 months, reverse-engineered into the exact activity it requires: how many closings, how many contracts, how many real appointments, and how many qualified conversations across Zillow, the database, social, and referral. Reviewed on a fixed cadence so the plan corrects itself before the year does.</p>
+<a class="backlink" href="flow-book.html">← Back to the Team Flow Book</a>
+</div>
+</header>
+
+<div class="container">
+
+<section>
+<span class="sec-num">01 · The target, reverse-engineered</span>
+<h2 class="sec">Working backward from $400,000</h2>
+<p class="lede">A revenue goal is not a plan. It becomes a plan the moment it is broken into the number of closings required, then the number of contracts, appointments, and leads required to produce those closings. Everything below is a model, not a forecast, built so the real numbers can be dropped in as they firm up.</p>
+
+<div class="assump"><b>Assumptions used for the worked example below</b> (adjust to your real numbers and this recalculates itself): average sale price across the deal mix $475,000 · average commission per side 2.75% ($13,063 gross) · illustrative net-to-Pete after brokerage split and team costs, 70% ($9,144 net per closing). The brokerage-split percentage is the one number in this model that should be replaced with LPT Realty / Ascend Group's actual terms; 70% is a placeholder for the shape of the math, not a claim about the real split.</div>
+
+<div class="funnel">
+<div class="f-stage" style="border-left-color:var(--gold)">
+<span class="n">Target</span>
+<h4>$400,000 GCI</h4>
+<p class="math">÷ $9,144 net per closing (illustrative) = <b>≈ 44 closings</b> in 12 months, ≈ 3.7 / month</p>
+</div>
+<div class="f-arrow"></div>
+<div class="f-stage" style="border-left-color:var(--srt-blue)">
+<span class="n">Contracts needed</span>
+<h4>Accounting for fall-through</h4>
+<p class="math">44 closings ÷ (1 − 12% typical fall-through) = <b>≈ 50 contracts</b> written over the year</p>
+</div>
+<div class="f-arrow"></div>
+<div class="f-stage" style="border-left-color:var(--srt-blue)">
+<span class="n">Real appointments needed</span>
+<h4>Buyer consultations &amp; listing appointments</h4>
+<p class="math">50 contracts ÷ 30–35% appointment-to-contract conversion = <b>≈ 150–165 real appointments</b></p>
+</div>
+<div class="f-arrow"></div>
+<div class="f-stage" style="border-left-color:var(--srt-green)">
+<span class="n">Qualified leads / contacts needed</span>
+<h4>Blended across all four sources</h4>
+<p class="math">150–165 appointments ÷ ~20% blended lead-to-appointment rate = <b>≈ 750–825 qualified conversations</b> a year, ≈ 62–69 / month, ≈ 15 / week</p>
+</div>
+</div>
+
+<p>The blended 20% conversion rate hides the real story: it is an average of four very different sources, and the entire point of the three-prong funnel in the Flow Book (New Home Dispatch → peteseider.com → Seider Realty Team) is to shift the mix toward the sources that convert far above 20%, not to try to force a cold source to perform like a warm one.</p>
+
+<table>
+<tr><th>Lead source</th><th>Typical lead → appointment rate</th><th>Why</th></tr>
+<tr><td>Database / past clients</td><td>40–60%</td><td>Highest trust source in the funnel. Under-used between transactions is the most common way this number gets left on the table.</td></tr>
+<tr><td>Referral</td><td>50–70%</td><td>Comes pre-sold on trust by the person making the introduction.</td></tr>
+<tr><td>Social / NHD-warmed</td><td>20–35%</td><td>Has usually consumed a free New Home Dispatch tool before ever saying hello, arrives partway to trust already.</td></tr>
+<tr><td>Zillow / cold portal</td><td>8–15% with a fast, disciplined response; well under 5% without one</td><td>Zero trust on first contact. See the Zillow Conversion System for the full playbook, this is the source where response speed and process discipline matter the most.</td></tr>
+</table>
+
+<p>Read against the 44-closing target: a database and referral-heavy mix needs far fewer total conversations than a Zillow-heavy one to hit the same number. The database strategy below exists because it is the cheapest, highest-converting lever in this whole model, and it is the one most agents let go cold.</p>
+</section>
+
+<section>
+<span class="sec-num">02 · Database strategy</span>
+<h2 class="sec">The highest-leverage lever in the plan</h2>
+<p>Roughly 400 past clients and contacts already exist in the database, per the Flow Book's funnel diagram. At a 40–60% lead-to-appointment rate, systematically working this list outperforms any amount of new cold-lead volume. The database is not a list to email once a quarter, it is the plan's foundation.</p>
+<table>
+<tr><th>Cadence</th><th>Action</th><th>Goal</th></tr>
+<tr><td>Every closing</td><td>Add the client back into the database and the Friday Dispatch same week, per the Flow Book's post-close stage.</td><td>Every closing compounds into future pipeline, never a dead end.</td></tr>
+<tr><td>Monthly</td><td>8–12 outbound touches per day per the existing Daily Itinerary, rotating through the database using a real reason each time, never "just checking in."</td><td>Full database touched at least once per quarter without ever feeling like a mail blast.</td></tr>
+<tr><td>Quarterly</td><td>A dedicated referral-ask campaign: "who do you know looking at new builds," soft, always last, per the existing Objections section.</td><td>Convert satisfied past clients into the referral source, the highest-converting source in the table above.</td></tr>
+<tr><td>Annually</td><td>A database health pass: confirm every contact is still reachable, flag anyone who has moved, married, had a child, or changed jobs (life events are the leading indicator of a move).</td><td>Keeps the 400+ number a working asset instead of a stale export.</td></tr>
+</table>
+</section>
+
+<section>
+<span class="sec-num">03 · The 12-month roadmap</span>
+<h2 class="sec">Four quarters, one pace</h2>
+<p>44 closings a year is not an even 3.7 a month in practice, Central Texas has real seasonality: spring and early summer carry more transaction volume than the winter months. The quarterly targets below front-load the calendar year's natural buying season rather than pretending every month is identical.</p>
+<div class="quarters">
+<div class="q-card">
+<h4>Q1 · Jan–Mar</h4>
+<div class="goal">Foundation</div>
+<ul>
+<li>Full database reactivation pass, every contact touched at least once</li>
+<li>Follow Up Boss hygiene audit, close every gap the Flow Book's Lead &amp; CRM section flags as "detail coming"</li>
+<li>Zillow response-time protocol formalized and drilled, see the Zillow Conversion System</li>
+<li>Target: 8–9 closings</li>
+</ul>
+</div>
+<div class="q-card">
+<h4>Q2 · Apr–Jun</h4>
+<div class="goal">Ramp</div>
+<ul>
+<li>Peak spring buying season, heaviest field and tour volume of the year</li>
+<li>Referral-ask campaign to Q1's closed clients</li>
+<li>Content and Dispatch cadence increased to match seasonal search volume</li>
+<li>Target: 12–13 closings</li>
+</ul>
+</div>
+<div class="q-card">
+<h4>Q3 · Jul–Sep</h4>
+<div class="goal">Correct</div>
+<ul>
+<li>Mid-year KPI review against the $400K pace, see below</li>
+<li>Rebalance lead-source mix using actual H1 conversion data, not the modeled assumptions</li>
+<li>New-construction closing wave, builder incentive and QMI season</li>
+<li>Target: 11 closings</li>
+</ul>
+</div>
+<div class="q-card">
+<h4>Q4 · Oct–Dec</h4>
+<div class="goal">Close &amp; seed</div>
+<ul>
+<li>Push every open contract to close before year-end</li>
+<li>Holiday-season story collection and referral campaign, per the Flow Book's post-close scripts</li>
+<li>Seed next year's database and set the following year's target from real, not modeled, conversion rates</li>
+<li>Target: 11–12 closings</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<span class="sec-num">04 · Review cadence</span>
+<h2 class="sec">The plan corrects itself before the year does</h2>
+<p>A model built once in January and never checked again is a guess with extra steps. Every cadence below feeds the next one up.</p>
+<div class="kpi-grid">
+<div class="kpi-card">
+<span class="cad">Daily</span>
+<h4>Activity</h4>
+<ul>
+<li>8–12 outreach touches logged</li>
+<li>Every new lead entered into Follow Up Boss same day, no exceptions</li>
+<li>Zillow response-time compliance: live answer or callback inside 5 minutes</li>
+</ul>
+</div>
+<div class="kpi-card">
+<span class="cad">Weekly</span>
+<h4>Pipeline</h4>
+<ul>
+<li>Count of leads at each Buyer Lifecycle Engine stage</li>
+<li>Appointments set vs. the ≈15/week pace needed</li>
+<li>Weekly Dispatch open and click performance, the top of the funnel</li>
+</ul>
+</div>
+<div class="kpi-card">
+<span class="cad">Monthly</span>
+<h4>Conversion</h4>
+<ul>
+<li>Closings vs. the ≈3.7/month pace</li>
+<li>Lead-source ROI: which source actually produced the appointments and closings this month</li>
+<li>CRM hygiene: no lead sitting untouched past its cadence window</li>
+</ul>
+</div>
+<div class="kpi-card">
+<span class="cad">Quarterly</span>
+<h4>Plan vs. reality</h4>
+<ul>
+<li>GCI-to-date vs. the $400K pace, with a named catch-up plan if behind</li>
+<li>Database growth rate and referral rate from the quarter's closings</li>
+<li>Recalculate the funnel with this quarter's real conversion rates, replace the modeled assumptions</li>
+</ul>
+</div>
+</div>
+<div class="callout warn"><b>If a quarter comes in under pace:</b> the fix is almost never "work harder," it is "check which stage of the funnel actually broke." A miss at the lead stage means the source mix needs to shift toward the database and referrals. A miss at the appointment stage means the nurture and follow-up discipline in stage 4 of the Buyer Lifecycle Engine needs a hard look. A miss at the contract stage is a negotiation or positioning issue, not a volume issue. Diagnose before adding activity.</div>
+</section>
+
+</div>
+
+<div class="foot">Revenue Plan &amp; 12-Month Roadmap · Seider Realty Team, powered by The Ascend Group at LPT Realty · Internal use only · Companion to the Team Flow Book</div>
+
+</body>
+</html>

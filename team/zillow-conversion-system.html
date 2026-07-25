@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0A0B0F">
+<title>The Zillow Conversion System — Seider Realty Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0B0F;--navy2:#14161C;--ink:#1B1912;--slate:#6b6459;--line:#e6e0d3;--soft:#F7F4EC;--white:#fff;
+--srt-navy:#131A2B;--srt-blue:#1D5FB0;--srt-green:#1E8449;--gold:#B08D4F;--gold-bright:#CBA968;--warn:#9C3B2E;--zblue:#006AFF;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',Arial,sans-serif;color:var(--ink);background:var(--soft);-webkit-font-smoothing:antialiased;line-height:1.6}
+h1,h2,h3,h4,.brand-font{font-family:'Playfair Display',Georgia,serif;font-weight:600;letter-spacing:-.01em}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:var(--srt-blue)}
+.container{max-width:960px;margin:0 auto;padding:0 22px 90px}
+header.hero{background:linear-gradient(160deg,var(--navy) 0%, var(--srt-navy) 100%);color:#fff;padding:56px 22px 46px;position:relative;overflow:hidden}
+header.hero::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(203,169,104,.06) 28px);pointer-events:none}
+.hero-inner{max-width:960px;margin:0 auto;position:relative}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-bright)}
+h1.title{font-size:clamp(28px,4.4vw,44px);margin:14px 0 12px;color:#fff}
+.hero-sub{color:#c9cad2;max-width:660px;font-size:16px}
+.backlink{display:inline-block;margin-top:22px;color:var(--gold-bright);font-size:13px;text-decoration:none;border-bottom:1px solid rgba(203,169,104,.4)}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+h2.sec{font-size:26px;margin-bottom:6px}
+.sec-num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;display:block}
+p{margin:12px 0}
+.lede{font-size:17.5px;color:#3a382e}
+.callout{background:var(--navy);color:#fff;border-radius:6px;padding:22px 26px;margin:22px 0}
+.callout b{color:var(--gold-bright)}
+.stat-row{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0}
+.stat{flex:1;min-width:200px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--zblue);border-radius:6px;padding:16px 18px}
+.stat .num{font-family:'Playfair Display',serif;font-size:32px;color:var(--navy)}
+.stat .lbl{font-size:12.5px;color:var(--slate);margin-top:4px}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#EFE9DA;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--slate)}
+tr:nth-child(even) td{background:#FBF9F3}
+.playbook{background:#fff;border:1px solid var(--line);border-radius:8px;padding:0;margin:30px 0;overflow:hidden}
+.pb-head{background:var(--navy);color:#fff;padding:20px 26px}
+.pb-head .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--gold-bright);text-transform:uppercase}
+.pb-head h3{font-size:24px;color:#fff;margin-top:4px}
+.pb-body{padding:24px 26px}
+.tree{margin:18px 0}
+.t-node{background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:0 0 4px;font-size:14px}
+.t-node.trigger{border-left:5px solid var(--zblue);background:#EEF5FF}
+.t-node.action{border-left:5px solid var(--srt-blue);margin-left:22px}
+.t-node.branch{border-left:5px solid var(--gold);margin-left:22px;font-weight:600}
+.t-node.leaf{border-left:5px solid var(--srt-green);margin-left:44px;font-weight:400}
+.t-node.leaf.stop{border-left:5px solid var(--warn)}
+.t-connector{margin-left:22px;color:var(--slate);font-size:12px;font-family:'IBM Plex Mono',monospace}
+h4.sub{font-size:16px;margin:22px 0 8px;font-family:'IBM Plex Mono',monospace;letter-spacing:1px;text-transform:uppercase;color:var(--slate)}
+.script{background:#FBF9F3;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:4px;padding:14px 18px;margin:10px 0;font-style:italic;font-size:14.5px}
+.foot{padding:36px 22px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);letter-spacing:1px}
+.src{font-size:11.5px;color:var(--slate);margin-top:24px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="hero-inner">
+<span class="eyebrow">Seider Realty Team · Volume Two · Internal, not for public distribution</span>
+<h1 class="title">The Zillow Conversion System</h1>
+<p class="hero-sub">Zillow is the highest-volume, lowest-trust lead source in the whole funnel. This is the deep operating system for it: how Zillow's business actually works, why response speed decides almost everything, the psychology of a buyer who has never heard of Pete, and a full decision tree, objection map, and CRM protocol for each of the three lead types Zillow sends.</p>
+<a class="backlink" href="flow-book.html">← Back to the Team Flow Book</a>
+</div>
+</header>
+
+<div class="container">
+
+<section>
+<span class="sec-num">01 · The business model</span>
+<h2 class="sec">Understand what Zillow is actually selling</h2>
+<p class="lede">Zillow is not a referral service that shares in a closing's success. It is an advertising platform. Premier Agent sells visibility and lead volume in a given zip code, paid up front or on a per-lead basis, regardless of what happens after the lead lands. That single fact explains almost every dynamic below.</p>
+<div class="stat-row">
+<div class="stat"><div class="num">Volume,<br>not outcome</div><div class="lbl">Zillow is paid whether or not a lead ever closes. It has no direct financial stake in lead quality, only in lead volume and agent activity on the platform.</div></div>
+<div class="stat"><div class="num">Often<br>shared</div><div class="lbl">Outside exclusive markets, the same buyer inquiry can be routed to more than one Premier Agent at once. The first agent to respond well usually wins the relationship.</div></div>
+<div class="stat"><div class="num">Response<br>rewarded</div><div class="lbl">Zillow's own agent-ranking and profile placement weigh response rate, review volume, and activity. Answering fast and well literally buys better future lead flow.</div></div>
+</div>
+<p>The practical read: nobody on Zillow's side is filtering these leads for how ready or serious they are. That filtering job belongs entirely to the agent, on the call. Treating every Zillow lead identically, whether it is someone months from being ready or someone ready to write an offer this week, wastes the discipline this system is built to create.</p>
+</section>
+
+<section>
+<span class="sec-num">02 · Buyer psychology on a cold, portal-driven channel</span>
+<h2 class="sec">Why the first five minutes matter more than the next five calls</h2>
+<p>A Zillow lead starts at zero trust. They do not know Pete, they are very likely looking at multiple listings and possibly multiple agents at once, and their default assumption is that whoever answers is "an agent," interchangeable with any other. Four behavioral patterns explain almost everything that works in the playbooks below.</p>
+<table>
+<tr><th>Pattern</th><th>What it means here</th></tr>
+<tr><td>Anchoring</td><td>The first agent who gives a specific, credible, useful answer becomes the reference point the buyer measures every other agent against for the rest of the search. Being first with something real beats being polished but slow.</td></tr>
+<tr><td>Reciprocity</td><td>Handing over something free and genuinely useful immediately, a New Home Dispatch tool, a real answer to their exact question, primes the buyer to reciprocate with engagement and, eventually, trust. This is the entire reason the funnel routes Zillow leads to NHD before ever pitching representation.</td></tr>
+<tr><td>Social proof</td><td>On a channel where the buyer has zero personal history with the agent, third-party proof, reviews, the Top Agent badge, does disproportionately more trust-building work than it would with a warm referral, who already trusts the person who sent them.</td></tr>
+<tr><td>Loss aversion / real urgency</td><td>In a genuinely competitive listing situation, buyers respond to real urgency, an actual second showing scheduled, an actual other offer. Manufactured urgency is detectable and destroys the trust this whole system depends on. Never fabricate it.</td></tr>
+</table>
+<div class="callout"><b>The research behind the 5-minute rule:</b> lead response management research (the widely cited MIT / InsideSales.com studies, popularized by Harvard Business Review) found that contacting a lead within 5 minutes, versus waiting 30, made a rep dramatically more likely to ever reach that person at all, commonly cited at roughly 100 times more likely, and roughly 21 times more likely to qualify the lead once reached. The exact multiple varies by study and industry, but the direction and the order of magnitude are consistent across nearly every version of this research: speed is not a nice-to-have, it is close to the entire game on a cold channel. See sources at the bottom of this page.</div>
+</section>
+
+<section>
+<span class="sec-num">03 · Three lead types, three playbooks</span>
+<h2 class="sec">Zillow does not send one kind of lead</h2>
+<p>Phone Call, Tour Request, and Request More Information are three different buyers at three different points in their decision, and treating them identically is the most common way a good lead goes cold. Each playbook below has its own decision tree, script direction, objection map, CRM protocol, and the metric that actually measures whether it is working.</p>
+</section>
+
+<div class="playbook">
+<div class="pb-head"><span class="tag">Playbook 1 of 3 · Highest intent, lowest volume</span><h3>Phone Call Leads</h3></div>
+<div class="pb-body">
+<p>Zillow routes an inbound call straight to Pete's phone the moment a buyer taps "call" on a listing. This is the highest-intent, lowest-volume Zillow lead type, and the one where speed matters in literal seconds, not minutes.</p>
+<h4 class="sub">Decision tree</h4>
+<div class="tree">
+<div class="t-node trigger">Call comes in from a Zillow listing</div>
+<div class="t-connector">↓</div>
+<div class="t-node branch">Answered live within 3 rings?</div>
+<div class="t-node action">YES → run the qualify-five-questions script (Buyer Lifecycle Engine, stage 3) live, on this call</div>
+<div class="t-connector" style="margin-left:44px">↓ branch on their answer</div>
+<div class="t-node leaf">"Actively touring, ready soon" → book a showing or strategy call before hanging up, log stage = Ready</div>
+<div class="t-node leaf">"Early research, just starting" → send one NHD tool matched to what they asked about, add to Dispatch, log stage = Nurture</div>
+<div class="t-node leaf stop">"Just browsing, no timeline" → warm exit, NHD link only, no hard pitch, log stage = Long-term nurture</div>
+<div class="t-node action" style="margin-top:14px">NO, call missed → callback attempt inside 5 minutes, every time, no exceptions</div>
+<div class="t-node branch" style="margin-left:22px">Reached on callback?</div>
+<div class="t-node leaf">YES → same qualify script as above</div>
+<div class="t-node leaf">NO → text within 5 minutes of the missed call, then enter an 8-touch-over-8-day cadence, alternating call, text, and email, before moving to long-term nurture</div>
+</div>
+<h4 class="sub">Script direction</h4>
+<div class="script">"Hi, this is Pete Seider, thanks for reaching out through Zillow. I saw you were looking at [address or community], is this still something you are actively looking at, or just starting to explore?" — full version in the Buyer Lifecycle Engine, stage 2.</div>
+<h4 class="sub">Objection map</h4>
+<table>
+<tr><th>They say</th><th>Read &amp; response</th></tr>
+<tr><td>"I'm just looking"</td><td>Believe them. Do not push. Send one NHD tool, add to the Dispatch list, close the call warmly. Pushing here burns trust that could convert months later.</td></tr>
+<tr><td>"I'm already working with an agent"</td><td>Professional, immediate, gracious exit. Log as info-only, no further pursuit. This protects both the relationship and the ethics of not working another agent's client.</td></tr>
+<tr><td>"Can I just get the listing agent's number"</td><td>They likely think Pete is the listing agent. Clarify the buyer's-agent role in one sentence, note it is typically no cost to them, then pivot to what representation actually gets them.</td></tr>
+</table>
+<h4 class="sub">CRM protocol</h4>
+<p>Log the outcome and stage in Follow Up Boss the same day, tag source = <span class="mono">Zillow-Call</span>, set the next-touch reminder per the branch reached above.</p>
+<h4 class="sub">Success metrics</h4>
+<p>% of Zillow calls answered live · average callback time on missed calls (target under 5 minutes) · call-to-appointment conversion rate, tracked monthly against the Revenue Plan's funnel targets.</p>
+</div>
+</div>
+
+<div class="playbook">
+<div class="pb-head"><span class="tag">Playbook 2 of 3 · High intent, one specific home</span><h3>Tour Request Leads</h3></div>
+<div class="pb-body">
+<p>A tour request means the buyer picked an actual home and asked to see it, the highest-intent signal Zillow sends short of a direct call. The job here is to confirm fast and immediately show them Pete knows more than the one listing they clicked.</p>
+<h4 class="sub">Decision tree</h4>
+<div class="tree">
+<div class="t-node trigger">Tour request submitted on a specific listing</div>
+<div class="t-connector">↓</div>
+<div class="t-node action">Confirm the appointment inside 1 hour</div>
+<div class="t-connector" style="margin-left:22px">↓ same message, always both</div>
+<div class="t-node action">Send 2–3 comparable or similar listings alongside the confirmation, every time</div>
+<div class="t-connector" style="margin-left:22px">↓</div>
+<div class="t-node branch">Is this an NHD-uncovered community, or one due for a refresh?</div>
+<div class="t-node leaf">YES → run the Rapid Field Capture on the same trip, per the Flow Book's Field Tools section, two birds one trip</div>
+<div class="t-node leaf">NO → proceed straight to the pre-tour text below</div>
+<div class="t-connector" style="margin-left:22px">↓</div>
+<div class="t-node action">Pre-tour text: send the Look Closer 25-point checklist the day of the tour</div>
+<div class="t-connector" style="margin-left:22px">↓</div>
+<div class="t-node action">At the tour: run the model-home script from the Buyer Lifecycle Engine, offer & negotiate stage</div>
+<div class="t-connector" style="margin-left:22px">↓</div>
+<div class="t-node branch">Same-day post-tour feedback call or text</div>
+<div class="t-node leaf">Wants to see more homes → book the next tour before ending the call, log stage = Actively touring</div>
+<div class="t-node leaf stop">Not the right fit → log feedback, keep on the comp-set nurture list, do not chase</div>
+</div>
+<h4 class="sub">Why the comp set matters more than the confirmation</h4>
+<p>The one listing they clicked may go under contract, be overpriced for the area, or simply not be the right fit once they see it. Sending 2–3 comparable homes alongside every confirmation, unprompted, is what separates a door-opener from an advisor on the very first message a Zillow tour lead receives from Pete.</p>
+<h4 class="sub">Objection map</h4>
+<table>
+<tr><th>They say</th><th>Read &amp; response</th></tr>
+<tr><td>"I just want to see this one house"</td><td>Respect it, do not push the comp set a second time. Mention it once in the confirmation and let it sit.</td></tr>
+<tr><td>"I found this myself, I don't need an agent"</td><td>Do not argue. Explain buyer's-agent value once, briefly, negotiation, inspection guidance, contract protection, then let the free tools and the tour itself do the trust-building instead of a repeated pitch.</td></tr>
+</table>
+<h4 class="sub">CRM protocol</h4>
+<p>Log the specific address and the comp set sent, tag source = <span class="mono">Zillow-Tour</span>, schedule the post-tour feedback touch automatically.</p>
+<h4 class="sub">Success metrics</h4>
+<p>Tour-confirmation speed · tour-to-second-appointment conversion (did they want to see more homes with Pete afterward) · tour-to-questionnaire conversion rate.</p>
+</div>
+</div>
+
+<div class="playbook">
+<div class="pb-head"><span class="tag">Playbook 3 of 3 · Lowest friction, highest volume</span><h3>Request More Information Leads</h3></div>
+<div class="pb-body">
+<p>This is the lowest-commitment, highest-volume Zillow lead type: someone wants more photos, school info, HOA details, or a straight answer to one question. Most are early. The discipline here is different from the other two, the real risk is under-responding, not over-pushing.</p>
+<h4 class="sub">Decision tree</h4>
+<div class="tree">
+<div class="t-node trigger">"Request more information" submitted</div>
+<div class="t-connector">↓</div>
+<div class="t-node action">Same-day reply that answers the specific question actually asked, not a generic pitch</div>
+<div class="t-connector" style="margin-left:22px">↓</div>
+<div class="t-node action">Include one NHD or true-cost tool matched to the question, per the Nurture &amp; Educate send-table</div>
+<div class="t-connector" style="margin-left:22px">↓</div>
+<div class="t-node branch">Do they reply or engage with the tool within 3 days?</div>
+<div class="t-node leaf">YES → escalate to a phone qualify call, treat as a warmed lead from here, same tree as Playbook 1</div>
+<div class="t-node leaf stop">NO → move into the Dispatch / long-term nurture list, no aggressive follow-up on a lead that showed low intent</div>
+</div>
+<h4 class="sub">Why response rate matters even on leads that never convert</h4>
+<p>Zillow's own agent-ranking weighs response rate across every lead type, not just the ones that turn into appointments. Answering every single "request more information," even ones that visibly go nowhere, protects and improves the algorithmic lead flow this entire system depends on. Under-responding here has a cost that shows up weeks later, in worse future lead volume, not in this lead specifically.</p>
+<h4 class="sub">Objection map</h4>
+<p>Almost none needed. The risk profile of this lead type is entirely different from the other two: nobody is annoyed by a fast, specific, useful answer to a question they asked. The discipline is answering every one, not being careful about how hard to push.</p>
+<h4 class="sub">CRM protocol</h4>
+<p>Log every request, including non-responsive ones, tag source = <span class="mono">Zillow-Info</span>. This protects the response-rate metric even when a lead never converts.</p>
+<h4 class="sub">Success metrics</h4>
+<p>Response rate (target near 100%, since it directly feeds Zillow's lead-routing algorithm) · response time · reply-to-your-answer rate · eventual appointment conversion (expect the lowest rate of the three playbooks, and the highest raw volume).</p>
+</div>
+</div>
+
+<section>
+<span class="sec-num">04 · How this ties back to the funnel</span>
+<h2 class="sec">Zillow is the cold start, not the whole system</h2>
+<p>Every playbook above routes toward the same place: New Home Dispatch first, to build trust with someone who has none yet, then peteseider.com to convert that trust into a named lead, then Seider Realty Team to close it. Nothing in this document replaces the Buyer Lifecycle Engine already in the Flow Book, it is the deep, source-specific version of stage 1 through 3 for the coldest, highest-volume source in the whole funnel. The response-time and CRM disciplines here feed directly into the Revenue Plan's funnel math: a Zillow lead-to-appointment rate that moves from 8% to 15% because of faster response and better routing has a larger effect on the $400,000 target than almost any other single lever in this plan.</p>
+</section>
+
+</div>
+
+<div class="foot">The Zillow Conversion System · Seider Realty Team, powered by The Ascend Group at LPT Realty · Internal use only · Companion to the Team Flow Book and the Revenue Plan &amp; 12-Month Roadmap</div>
+<p class="src container">Sources on lead response timing: <a href="https://www.engagebay.com/blog/lead-response-time" target="_blank" rel="noopener">EngageBay, Lead Response Time Study</a> · <a href="https://ainora.lt/blog/lead-response-time-statistics-every-study-2026" target="_blank" rel="noopener">Lead Response Time, Every Study (MIT, HBR, Drift)</a> · <a href="https://25649.fs1.hubspotusercontent-na2.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf" target="_blank" rel="noopener">MIT Lead Response Management Study (PDF)</a></p>
+
+</body>
+</html>
