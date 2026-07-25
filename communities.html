@@ -2656,9 +2656,9 @@ const NHD_DATA = {
 
   
   function syncMapMarkers(){
-    if (!mapInited) return;
+    if (!window.mapInited) return;
     NHD_DATA.communities.forEach(function(c){
-      var entry = NHD_GEO[c.id];
+      var entry = window.NHD_GEO && window.NHD_GEO[c.id];
       if (!entry || !entry[3]) return;
       var match = communityMatchesFilter(c);
       entry[3].setStyle({opacity: match ? 1 : 0.15, fillOpacity: match ? 1 : 0.08});
@@ -3047,6 +3047,8 @@ function renderPins(){
   function initNhdMap(){
     if (mapInited) return;
     mapInited = true;
+    window.mapInited = true;
+    window.NHD_GEO = NHD_GEO;
     var map = L.map('nhd-leaflet-map', {scrollWheelZoom:false}).setView([30.35,-97.72], 9);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors \u00a9 <a href="https://carto.com/attributions">CARTO</a>',
