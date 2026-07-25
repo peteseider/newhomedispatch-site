@@ -1768,7 +1768,7 @@
     </svg>
     <div class="eyebrow mono">The Explorer</div>
     <h2 class="section-title">Eleven communities, verified and cross-linked.</h2>
-    <p class="directory-sub">Austin-area coverage, 28 communities on the map: 11 fully verified and tracked, 17 researched with field verification pending (blue pins), expanding on a rolling basis. Filter by what matters to you, then select up to three to compare side by side. Builder rosters, pricing, school districts, and commute notes are pulled from public sources and re-checked on an ongoing basis, every page shows its own verification date, see the <a href="methodology.html" style="color:var(--ink); text-decoration:underline;">full methodology</a>.</p>
+    <p class="directory-sub">Austin-area coverage, 38 communities on the map: 11 fully verified and tracked, 27 researched with field verification pending (blue pins), expanding on a rolling basis. Filter by what matters to you, then select up to three to compare side by side. Builder rosters, pricing, school districts, and commute notes are pulled from public sources and re-checked on an ongoing basis, every page shows its own verification date, see the <a href="methodology.html" style="color:var(--ink); text-decoration:underline;">full methodology</a>.</p>
 
     <div class="explorer-toolbar explorer-toolbar-regions">
       <div class="builder-chips" id="region-chips">
@@ -1945,7 +1945,7 @@ const NHD_DATA = {
   communities: [
     {
       id: 'santa-rita-ranch', name: 'Santa Rita Ranch', area: 'Liberty Hill', region: 'Northwest',
-      x: 150, y: 90,
+      x: 275, y: 104,
       builders: ['highland', 'toll-brothers', 'coventry'],
       price: 'From the $350s', note: '3,100-acre Hill Country master plan. Multiple builder-specific villages, including a 55+ section.',
       schoolDistrict: 'Liberty Hill ISD', commute: 'Short drive to Austin, Georgetown, Round Rock, and Cedar Park \u2014 exact commute time varies by employer.',
@@ -1953,7 +1953,7 @@ const NHD_DATA = {
     },
     {
       id: 'wolf-ranch', name: 'Wolf Ranch', area: 'Georgetown', region: 'North',
-      x: 330, y: 60,
+      x: 312, y: 111,
       builders: ['lennar', 'drees', 'highland'],
       price: 'From the $400s', note: 'Nine builders on-site along the San Gabriel River. Hilltop and riverfront sections priced separately.',
       schoolDistrict: 'Georgetown ISD', commute: '~25\u201335 min to downtown Austin off-peak; ~15 min to Round Rock/Dell; ~25 min to The Domain.',
@@ -1961,7 +1961,7 @@ const NHD_DATA = {
     },
     {
       id: 'whisper-valley', name: 'Whisper Valley', area: 'Manor', region: 'East',
-      x: 430, y: 210,
+      x: 354, y: 222,
       builders: ['pacesetter'],
       price: 'From the $290s', note: 'Geothermal and solar on every home. Closest new-construction community to Tesla\u2019s Gigafactory.',
       schoolDistrict: 'Del Valle ISD', commute: '~20 min to downtown Austin; ~7 min to the Tesla Gigafactory; ~10 min to the airport.',
@@ -1969,7 +1969,7 @@ const NHD_DATA = {
     },
     {
       id: 'belterra', name: 'Belterra', area: 'Dripping Springs', region: 'Southwest',
-      x: 140, y: 340,
+      x: 232, y: 252,
       builders: ['highland', 'taylor-morrison', 'david-weekley', 'drees'],
       price: 'From the $500s', note: '1,600-acre community in Dripping Springs ISD. One of the Austin metro\u2019s largest and longest-running master plans.',
       schoolDistrict: 'Dripping Springs ISD (A-rated)', commute: '~20\u201325 min / 25 mi west of downtown Austin via US-290.',
@@ -1977,7 +1977,7 @@ const NHD_DATA = {
     },
     {
       id: 'easton-park', name: 'Easton Park', area: 'Southeast Austin', region: 'Southeast',
-      x: 370, y: 320,
+      x: 304, y: 269,
       builders: ['david-weekley', 'highland', 'pacesetter', 'perry', 'taylor-morrison'],
       price: 'From the $310s', note: '2,300+ acres just 12 miles from downtown. Seven builders on-site, the most of any community tracked here.',
       schoolDistrict: 'Del Valle ISD', commute: '~12 miles / 12 min to downtown Austin \u2014 closest tracked community to the urban core.',
@@ -1985,7 +1985,7 @@ const NHD_DATA = {
     },
     {
       id: 'sunfield', name: 'Sunfield', area: 'Buda', region: 'South',
-      x: 300, y: 382,
+      x: 281, y: 291,
       builders: ['david-weekley', 'centex', 'drb'],
       price: 'From the $330s', note: 'Signature 1,000-foot lazy river amenity center. Just 15 miles south of Austin off I-35, near SH-130 and SH-45.',
       schoolDistrict: 'Hays CISD', commute: '~15 miles south of Austin via I-35; quick access to SH-130 and SH-45 toll routes.',
@@ -1993,7 +1993,7 @@ const NHD_DATA = {
     },
     {
       id: 'kissing-tree', name: 'Kissing Tree', area: 'San Marcos \u00b7 55+', region: 'South',
-      x: 310, y: 440,
+      x: 229, y: 370,
       builders: ['brookfield', 'david-weekley'],
       price: 'From the $340s', note: 'The largest 55+ community of its kind planned in Texas \u2014 3,200 homes at build-out, with a semi-private golf course and 18 pickleball courts.',
       schoolDistrict: 'San Marcos CISD (age-restricted 55+ community)', commute: 'Between Austin and San Antonio on I-35 \u2014 roughly 35\u201345 min to either downtown.',
@@ -2001,7 +2001,7 @@ const NHD_DATA = {
     },
     {
       id: 'bryson', name: 'Bryson', area: 'Leander', region: 'Northwest',
-      x: 200, y: 130,
+      x: 269, y: 119,
       builders: ['lennar', 'perry', 'highland', 'tri-pointe'],
       price: 'From the $400s', note: 'Five-time master-planned community of the year, just east of 183A. Employs a full-time "Director of Fun."',
       schoolDistrict: 'Leander ISD', commute: 'Just east of 183A toll; near Capital Metro\u2019s Leander rail station for a downtown Austin transit option.',
@@ -2009,7 +2009,7 @@ const NHD_DATA = {
     },
     {
       id: 'headwaters', name: 'Headwaters', area: 'Dripping Springs', region: 'Southwest',
-      x: 110, y: 300,
+      x: 214, y: 252,
       builders: ['david-weekley', 'toll-brothers', 'taylor-morrison', 'drees'],
       price: 'From the $600s', note: 'Conservation-focused Hill Country master plan in a Dark Sky community, with a stargazing amphitheater and 1,000+ acres of open space.',
       schoolDistrict: 'Dripping Springs ISD (A-rated) \u2014 on-site elementary', commute: '~21 miles / ~35\u201345 min to downtown Austin via US-290.',
@@ -2017,7 +2017,7 @@ const NHD_DATA = {
     },
     {
       id: 'travisso', name: 'Travisso', area: 'Leander', region: 'Northwest',
-      x: 130, y: 170,
+      x: 253, y: 143,
       builders: ['taylor-morrison', 'toll-brothers'],
       price: 'From the mid $400s', note: 'Rare hilly terrain for a master plan \u2014 dramatic Hill Country views, with homes ranging to $2.6M+. Palazzo Clubhouse won Best Community Clubhouse in Texas.',
       schoolDistrict: 'Leander ISD', commute: '~35\u201340 min to downtown Austin via US-183 / 183A.',
@@ -2025,7 +2025,7 @@ const NHD_DATA = {
     },
     {
       id: 'bar-w-ranch', name: 'Bar W Ranch', area: 'Leander', region: 'Northwest',
-      x: 175, y: 155,
+      x: 269, y: 128,
       builders: ['dr-horton', 'gehan-homes', 'brohn-homes', 'tri-pointe'],
       price: 'From the $440s', note: '500-acre community along the South San Gabriel River, ~1,400\u20131,500 homes at build-out. Widest builder roster tracked \u2014 D.R. Horton, Gehan, Brohn, Tri Pointe \u2014 with quick move-in inventory.',
       schoolDistrict: 'Liberty Hill ISD', commute: 'Off Ronald Reagan Blvd at the Leander/Liberty Hill/Georgetown line \u2014 ~25 mi north of downtown Austin.',
@@ -2033,7 +2033,7 @@ const NHD_DATA = {
     },
     {
       id: 'waterstone', name: 'Waterstone', area: 'Kyle', region: 'South',
-      x: 185, y: 430, researched: true,
+      x: 267, y: 332, researched: true,
       collections: [['Waterstone Village','$199,990'],['Waterstone Crossing','$259,990']],
       builders: ['meritage'],
       price: 'From $199,990', note: 'The lowest advertised new-construction start in the metro (Waterstone Village). A second collection, Waterstone Crossing, starts at $259,990 \u2014 same entrance, $60,000 apart.',
@@ -2042,7 +2042,7 @@ const NHD_DATA = {
     },
     {
       id: 'sonterra', name: 'Sonterra', area: 'Jarrell', region: 'North',
-      x: 255, y: 25, researched: true,
+      x: 339, y: 54, researched: true,
       collections: [['Starlight, Sonterra','$250,990'],['LGI, Cool Water at Sonterra','$259,900']],
       builders: ['starlight-homes', 'lgi-homes'],
       price: 'From $250,990', note: 'Two entry-level spec builders head-to-head: Starlight from $250,990 and LGI (\u201cCool Water at Sonterra\u201d) from $259,900. Not the tracked Cool Water in Kyle.',
@@ -2051,7 +2051,7 @@ const NHD_DATA = {
     },
     {
       id: 'sunset-oaks', name: 'Sunset Oaks', area: 'Maxwell', region: 'South',
-      x: 430, y: 430, researched: true,
+      x: 282, y: 415, researched: true,
       collections: [['Starlight Homes','$250,990'],['LGI Homes','$272,900']],
       builders: ['starlight-homes', 'lgi-homes'],
       price: 'From $250,990', note: 'Second live head-to-head: Starlight from $250,990 vs. LGI from $272,900 \u2014 the same category of finished home, $22,000 apart at the entry point.',
@@ -2060,7 +2060,7 @@ const NHD_DATA = {
     },
     {
       id: 'eastern-wells', name: 'Eastern Wells', area: 'Jarrell', region: 'North',
-      x: 385, y: 30, researched: true,
+      x: 339, y: 49, researched: true,
       collections: [['Meritage','$239,990']],
       builders: ['meritage'],
       price: 'From $239,990', note: 'Meritage\u2019s far-north entry community \u2014 second-lowest advertised start in our research; flagged recently reduced on the pull date.',
@@ -2069,7 +2069,7 @@ const NHD_DATA = {
     },
     {
       id: 'cloverleaf', name: 'Cloverleaf', area: 'South Austin (78747)', region: 'Southeast',
-      x: 335, y: 350, researched: true,
+      x: 285, y: 270, researched: true,
       collections: [['Haven Collection','from the $300s'],['Vista Collection','from the $300s']],
       builders: ['century-communities'],
       price: 'From the $300s', note: 'One of the few sub-$400K new-construction footholds inside Austin city limits \u2014 opened June 6, 2026. In-city cheap always has a mechanism; the field visit finds it.',
@@ -2078,7 +2078,7 @@ const NHD_DATA = {
     },
     {
       id: 'evelyn', name: 'Evelyn', area: 'Northeast Austin', region: 'East',
-      x: 415, y: 150, researched: true,
+      x: 326, y: 190, researched: true,
       collections: [['Aire Collection','from the $300s'],['Vue Collection','$300s, $400s'],['Lux Collection','to the $500s']],
       builders: ['century-communities'],
       price: 'From the $300s', note: '25 floor plans across three collections spanning the $300s to the $500s \u2014 opened June 13, 2026 near the tech corridor. The spread inside this one community beats most builder-to-builder gaps.',
@@ -2087,7 +2087,7 @@ const NHD_DATA = {
     },
     {
       id: 'colony-at-cole-springs', name: 'Colony at Cole Springs', area: 'Buda', region: 'South',
-      x: 185, y: 398, researched: true,
+      x: 281, y: 289, researched: true,
       collections: [['Meritage, Arbor','$341,990'],['M/I Homes','$354,990'],['Meritage, Boulevard','$417,990']],
       builders: ['meritage', 'mi-homes'],
       price: 'From $341,990', note: 'Third live head-to-head: Meritage collections from $341,990/$417,990 and M/I from $354,990, side by side \u2014 every listing here carried a price-cut flag on our pull date.',
@@ -2096,7 +2096,7 @@ const NHD_DATA = {
     },
     {
       id: 'butler-farms', name: 'Butler Farms', area: 'Liberty Hill', region: 'Northwest',
-      x: 95, y: 62, researched: true,
+      x: 249, y: 100, researched: true,
       collections: [['Americana Collection','$283,990'],['Reserve Collection','$334,990'],['Boulevard Collection','$382,990']],
       builders: ['meritage'],
       price: 'From $283,990', note: 'Three Meritage collections priced up to $99,000 apart at the entry point \u2014 the clearest illustration of why a community-level \u201cfrom\u201d price can mislead. Minutes from tracked Santa Rita Ranch and Bar W Ranch.',
@@ -2105,7 +2105,7 @@ const NHD_DATA = {
     },
     {
       id: 'elm-park', name: 'Elm Park', area: 'East Austin (78725)', region: 'East',
-      x: 490, y: 235, researched: true,
+      x: 332, y: 245, researched: true,
       collections: [['Starlight Homes','$295,990']],
       builders: ['starlight-homes'],
       price: 'From $295,990', note: 'One of two verified sub-$300K entries inside Austin city limits \u2014 finished Starlight specs in far East Austin, recently reduced on the pull date.',
@@ -2114,7 +2114,7 @@ const NHD_DATA = {
     },
     {
       id: 'willow-springs', name: 'Willow Springs', area: 'Buda', region: 'South',
-      x: 330, y: 408, researched: true,
+      x: 268, y: 281, researched: true,
       collections: [['M/I, Smart Series','$268,990'],['Starlight Homes','$286,990']],
       builders: ['mi-homes','starlight-homes'],
       price: 'From $268,990', note: 'Two builders advertise a Buda \u201cWillow Springs\u201d $18,000 apart (M/I $268,990, Starlight $286,990) \u2014 possibly one development; field check pending. Aggregator city label was corrected per the builder&rsquo;s own site.',
@@ -2123,7 +2123,7 @@ const NHD_DATA = {
     },
     {
       id: 'marble-creek-crossing', name: 'Marble Creek Crossing', area: 'Austin (SE)', region: 'Southeast',
-      x: 430, y: 345, researched: true,
+      x: 307, y: 268, researched: true,
       collections: [['M/I Homes','$307,990']],
       builders: ['mi-homes'],
       price: 'From $307,990', note: 'M/I&rsquo;s in-city entry \u2014 just above the sub-$300K line, recently reduced on the pull date.',
@@ -2132,7 +2132,7 @@ const NHD_DATA = {
     },
     {
       id: 'cascades-at-onion-creek', name: 'Cascades at Onion Creek', area: 'South Austin', region: 'Southeast',
-      x: 280, y: 338, researched: true,
+      x: 287, y: 275, researched: true,
       collections: [['M/I Homes','$332,990']],
       builders: ['mi-homes'],
       price: 'From $332,990', note: 'In-city M/I community in the established Onion Creek corridor. Ask the flood-zone question about the specific lot \u2014 get the map, not a verbal.',
@@ -2141,7 +2141,7 @@ const NHD_DATA = {
     },
     {
       id: 'turners-crossing', name: 'Turner\u2019s Crossing', area: 'Buda', region: 'South',
-      x: 250, y: 362, researched: true,
+      x: 268, y: 297, researched: true,
       collections: [['Americana Collection','$294,990'],['Reserve Collection','$334,990'],["Turner's Village (nearby)",'$269,990']],
       builders: ['meritage'],
       price: 'From $294,990', note: 'Meritage cluster: Americana $294,990 / Reserve $334,990, with Turner\u2019s Village nearby from $269,990 \u2014 a $65K spread under one brand in one corner of Buda.',
@@ -2150,7 +2150,7 @@ const NHD_DATA = {
     },
     {
       id: 'travena', name: 'Travena', area: 'Georgetown', region: 'North',
-      x: 440, y: 55, researched: true,
+      x: 319, y: 111, researched: true,
       collections: [['Americana Collection','$299,990'],['Reserve Collection','$349,990']],
       builders: ['meritage'],
       price: 'From $299,990', note: 'Two Meritage collections $50K apart. Benchmark against fully tracked Wolf Ranch (verified 2.47%) before crediting the sticker gap.',
@@ -2159,7 +2159,7 @@ const NHD_DATA = {
     },
     {
       id: 'prairie-winds', name: 'Prairie Winds', area: 'Hutto', region: 'North',
-      x: 455, y: 110, researched: true,
+      x: 356, y: 140, researched: true,
       collections: [['Reserve Collection','$309,990'],['Boulevard Collection','$389,990'],['Executive Collection','$399,990']],
       builders: ['meritage'],
       price: 'From $309,990', note: 'Four Meritage collections spanning $90K between entry points \u2014 the Butler Farms lesson, northeast edition.',
@@ -2168,7 +2168,7 @@ const NHD_DATA = {
     },
     {
       id: 'lexington-parke', name: 'Lexington Parke', area: 'Del Valle', region: 'Southeast',
-      x: 465, y: 290, researched: true,
+      x: 338, y: 252, researched: true,
       collections: [['Meritage','$314,990']],
       builders: ['meritage'],
       price: 'From $314,990', note: 'Meritage&rsquo;s southeast entry \u2014 closest of its value communities to the airport/Tesla corridor. Benchmark against verified Easton Park and Whisper Valley.',
@@ -2177,12 +2177,92 @@ const NHD_DATA = {
     },
     {
       id: 'briarwood', name: 'Briarwood', area: 'Elgin', region: 'East',
-      x: 505, y: 195, researched: true,
+      x: 393, y: 200, researched: true,
       builders: ['chesmar-homes'],
       collections: [['Chesmar Homes','$249,990']],
       price: 'From $249,990', note: 'Chesmar\u2019s entry community \u2014 their lowest start across 19 Central Texas communities, in the competitive Elgin value cluster with Eagles Landing and Homestead Estates.',
       schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Elgin \u2014 east of Austin on US-290; east-side jobs corridor math.',
       taxRate: 'Not yet verified \u2014 entry-price areas often carry MUD/PID rates near or above 3%. We publish no rate until it comes off a rate sheet.', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: '6-creeks', name: '6 Creeks', area: 'Kyle', region: 'South',
+      x: 254, y: 316, researched: true,
+      builders: [],
+      price: 'Not yet verified \u2014 profile in progress', note: 'Actively tracked in the Incentive Tracker; no currently verified published builder offer here as of Jul 20, 2026. Full independent profile in progress.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Kyle \u2014 south Austin metro, I-35 corridor.',
+      taxRate: '~2.7% (tracker-sourced rate)', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'anthem', name: 'Anthem', area: 'Kyle', region: 'South',
+      x: 254, y: 309, researched: true,
+      builders: ['dr-horton'],
+      price: 'Not yet verified \u2014 profile in progress', note: 'D.R. Horton is active here with a $25,000 advertised flex-cash offer through Dec 31, 2026 (builder-advertised, observed Jul 20, 2026). Full independent profile in progress.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Kyle \u2014 south Austin metro, I-35 corridor.',
+      taxRate: '~2.9% (tracker-sourced rate)', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'blackhawk', name: 'Blackhawk', area: 'Pflugerville', region: 'East',
+      x: 347, y: 165, researched: true,
+      builders: [],
+      price: 'Not yet verified \u2014 profile in progress', note: 'KB Home is active here with a $5,000 advertised closing-costs offer through Jul 31, 2026 (builder-advertised, observed Jul 20, 2026). Full independent profile in progress.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Pflugerville \u2014 northeast Austin metro.',
+      taxRate: '~2.9% (tracker-sourced rate)', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'cool-water', name: 'Cool Water', area: 'Kyle', region: 'South',
+      x: 271, y: 321, researched: true,
+      builders: [],
+      price: 'Not yet verified \u2014 profile in progress', note: 'Actively tracked in the Incentive Tracker; no currently verified published builder offer here as of Jul 20, 2026. Not the same-named community at Sonterra in Jarrell. Full independent profile in progress.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Kyle \u2014 south Austin metro, I-35 corridor.',
+      taxRate: '~2.8% (tracker-sourced rate)', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'crosswinds', name: 'Crosswinds', area: 'Kyle', region: 'South',
+      x: 253, y: 321, researched: true,
+      builders: ['pacesetter', 'highland', 'perry', 'gehan-homes'],
+      price: 'Not yet verified \u2014 profile in progress', note: 'Six builders sell here at once \u2014 Pacesetter, Highland, Perry, Pulte, MileStone, and Brightland \u2014 anchored by the Windy Point amenity center, one of the widest single-community builder comparisons in the metro.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Kyle \u2014 south Austin metro, I-35 corridor.',
+      taxRate: 'Not yet verified \u2014 TCEQ/district check pending on the field route', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'larkspur', name: 'Larkspur', area: 'Leander', region: 'Northwest',
+      x: 269, y: 112, researched: true,
+      builders: ['dr-horton', 'gehan-homes'],
+      price: 'Not yet verified \u2014 profile in progress', note: 'Multi-builder community (D.R. Horton, Gehan Homes, MileStone). D.R. Horton’s section sold out as of Jul 20, 2026, no active listings; other sections not yet independently tracked.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Leander \u2014 northwest Austin metro, 183A corridor.',
+      taxRate: '~3.2% (tracker-sourced rate)', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'plum-creek-north', name: 'Plum Creek North', area: 'Kyle', region: 'South',
+      x: 261, y: 305, researched: true,
+      builders: ['lennar'],
+      price: 'Not yet verified \u2014 profile in progress', note: 'Lennar is advertising a 3.99% promotional 30-year fixed FHA rate here with a Jul 22 to 26, 2026 sign window (builder-advertised, observed Jul 23, 2026) \u2014 one of the strongest rate offers tracked in the market right now.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Kyle \u2014 south Austin metro, I-35 corridor.',
+      taxRate: 'Not yet verified \u2014 field visit pending', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'rancho-sienna', name: 'Rancho Sienna', area: 'Georgetown', region: 'North',
+      x: 280, y: 111, researched: true,
+      builders: [],
+      price: 'Not yet verified \u2014 profile in progress', note: 'Actively tracked in the Incentive Tracker; no currently verified published builder offer here as of Jul 20, 2026. Full independent profile in progress.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Georgetown \u2014 north Austin metro, I-35 corridor.',
+      taxRate: '~3.0% (tracker-sourced rate)', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'sweetwater', name: 'Sweetwater', area: 'Austin (Bee Cave)', region: 'Southwest',
+      x: 244, y: 216, researched: true,
+      builders: [],
+      price: 'Not yet verified \u2014 profile in progress', note: 'Actively tracked in the Incentive Tracker; no currently verified published builder offer here as of Jul 20, 2026. Full independent profile in progress.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Bee Cave \u2014 west Austin metro, Hwy 71 corridor.',
+      taxRate: '~2.5% (tracker-sourced rate)', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
+    },
+    {
+      id: 'the-ridge', name: 'The Ridge', area: 'Niederwald', region: 'South',
+      x: 303, y: 335, researched: true,
+      builders: [],
+      price: 'N/A \u2014 announced, pre-construction', note: 'Announced development of roughly 6,200 homes at SH 21 and SH 130; construction reported to begin late 2026. No sales office or offers yet, added here to establish the record ahead of the first slab.',
+      schoolDistrict: 'Not yet verified \u2014 field visit pending', commute: 'Niederwald \u2014 SH 21 at SH 130, southeast of Austin.',
+      taxRate: 'Not public yet \u2014 MUD/PID structure not yet filed', hoa: 'Not yet verified \u2014 field visit pending', lotSizes: 'Not yet verified \u2014 field visit pending',
     },
   ],
   builders: [
