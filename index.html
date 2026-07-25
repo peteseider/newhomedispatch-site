@@ -2694,7 +2694,7 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
         });
       }
       if(!rows.length) rows.push('<li>Builders held their positions this sweep. Stability is information too.</li>');
-      if(cp&&cp.buyerAction) rows.push('<li style="color:#2B4FE0;">Today\u2019s move: '+String(cp.buyerAction).replace(/</g,'&lt;').slice(0,110)+'</li>');
+      if(cp&&cp.buyerAction) rows.push('<li style="color:#2B4FE0;">Today\u2019s move: '+(function(s){s=String(s).replace(/</g,'&lt;');return s.length>110?s.slice(0,109)+'\u2026':s;})(cp.buyerAction)+'</li>');
       chEl.innerHTML=rows.join('');
       var n=(cp&&cp.changes)?cp.changes.length:0;
       t('tick-changes',n>0?(n+' change'+(n>1?'s':'')+' today'):'steady today');
