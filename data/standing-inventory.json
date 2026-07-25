@@ -5,43 +5,55 @@
   "createdAt": "2026-07-25",
   "totals": {
     "buildersTracked": 26,
-    "buildersWithCounts": 0,
-    "totalQmi": 0,
-    "lastChecked": null
+    "buildersWithCounts": 15,
+    "totalQmi": 1140,
+    "lastChecked": "Jul 25, 2026 AM"
   },
-  "history": [],
+  "history": [
+    {
+      "t": "2026-07-25T14:00:00Z",
+      "slot": "AM",
+      "sig": "aha-dream-homes:2|ashton-woods:41|brohn-homes:41|brookfield:67|david-weekley:105|drb:57|drees:53|highland:90|lennar:344|pacesetter:75|perry:71|starlight-homes:34|taylor-morrison:71|toll-brothers:72|tri-pointe:17",
+      "totalQmi": 1140,
+      "buildersWithCounts": 15
+    }
+  ],
   "builders": [
     {
       "slug": "aha-dream-homes",
       "name": "AHA Dream Homes",
       "profileUrl": "/builders/aha-dream-homes",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.ahadreamhomes.com/homes",
+      "qmiCount": 2,
+      "lastCounted": "2026-07-25",
+      "countMethod": "listed"
     },
     {
       "slug": "ashton-woods",
       "name": "Ashton Woods",
       "profileUrl": "/builders/ashton-woods",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.ashtonwoods.com/austin/quick-move-ins",
+      "qmiCount": 41,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "brohn-homes",
       "name": "Brohn Homes",
       "profileUrl": "/builders/brohn-homes",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://brohnhomes.com/find-your-home-austin/",
+      "qmiCount": 41,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "brookfield",
       "name": "Brookfield Residential",
       "profileUrl": "/builders/brookfield",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.brookfieldresidential.com/new-homes/texas/austin-area",
+      "qmiCount": 67,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "centex",
@@ -79,9 +91,10 @@
       "slug": "david-weekley",
       "name": "David Weekley Homes",
       "profileUrl": "/builders/david-weekley",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.davidweekleyhomes.com/new-homes/tx/austin/homes-ready-soon",
+      "qmiCount": 105,
+      "lastCounted": "2026-07-25",
+      "countMethod": "listed"
     },
     {
       "slug": "dr-horton",
@@ -95,17 +108,19 @@
       "slug": "drb",
       "name": "DRB Homes",
       "profileUrl": "/builders/drb",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.drbhomes.com/drbhomes/find-your-home/quick-move-in-homes/texas/austin",
+      "qmiCount": 57,
+      "lastCounted": "2026-07-25",
+      "countMethod": "listed"
     },
     {
       "slug": "drees",
       "name": "Drees Custom Homes",
       "profileUrl": "/builders/drees",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.dreeshomes.com/new-homes-austin/?view=quick-move-in-homes",
+      "qmiCount": 53,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "gehan-homes",
@@ -119,9 +134,10 @@
       "slug": "highland",
       "name": "Highland Homes",
       "profileUrl": "/builders/highland",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.highlandhomes.com/quick-move-in/austin",
+      "qmiCount": 90,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "kb-home",
@@ -135,9 +151,10 @@
       "slug": "lennar",
       "name": "Lennar",
       "profileUrl": "/builders/lennar",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.lennar.com/new-homes/texas/austin-central-texas",
+      "qmiCount": 344,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "lgi-homes",
@@ -167,17 +184,19 @@
       "slug": "pacesetter",
       "name": "Pacesetter Homes",
       "profileUrl": "/builders/pacesetter",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://pacesetterhomestexas.com/region/austin/#quick-move-ins",
+      "qmiCount": 75,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "perry",
       "name": "Perry Homes",
       "profileUrl": "/builders/perry",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.perryhomes.com/new-homes/move-in-ready?city=Austin",
+      "qmiCount": 71,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "pulte-homes",
@@ -191,33 +210,37 @@
       "slug": "starlight-homes",
       "name": "Starlight Homes",
       "profileUrl": "/builders/starlight-homes",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.starlighthomes.com/austin",
+      "qmiCount": 34,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "taylor-morrison",
       "name": "Taylor Morrison",
       "profileUrl": "/builders/taylor-morrison",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.taylormorrison.com/make-moves/austin",
+      "qmiCount": 71,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "toll-brothers",
       "name": "Toll Brothers",
       "profileUrl": "/builders/toll-brothers",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.tollbrothers.com/new-quick-move-in-homes/Austin-TX",
+      "qmiCount": 72,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     },
     {
       "slug": "tri-pointe",
       "name": "Tri Pointe Homes",
       "profileUrl": "/builders/tri-pointe",
-      "qmiUrl": null,
-      "qmiCount": null,
-      "lastCounted": null
+      "qmiUrl": "https://www.tripointehomes.com/find-your-home/tx/austin?type=home-plans&refinementList%5Bavailability_status%5D%5B0%5D=Move-In%20Ready",
+      "qmiCount": 17,
+      "lastCounted": "2026-07-25",
+      "countMethod": "stated"
     }
   ]
 }
