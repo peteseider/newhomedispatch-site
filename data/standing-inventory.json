@@ -1,0 +1,223 @@
+{
+  "schema": "nhd-standing-inventory-v1",
+  "label": "Per-builder quick-move-in (standing) inventory counts · Austin–Central Texas",
+  "methodology": "Counts are quick-move-in / move-in-ready homes advertised on each builder’s own Austin-area website, captured during the regular verification sweep. A count is recorded only when read directly from the builder’s site that same day; null means not yet counted. History appends only when a verified count changes. This file never contains estimated or inferred numbers — the same standard as incentives.json.",
+  "createdAt": "2026-07-25",
+  "totals": {
+    "buildersTracked": 26,
+    "buildersWithCounts": 0,
+    "totalQmi": 0,
+    "lastChecked": null
+  },
+  "history": [],
+  "builders": [
+    {
+      "slug": "aha-dream-homes",
+      "name": "AHA Dream Homes",
+      "profileUrl": "/builders/aha-dream-homes",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "ashton-woods",
+      "name": "Ashton Woods",
+      "profileUrl": "/builders/ashton-woods",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "brohn-homes",
+      "name": "Brohn Homes",
+      "profileUrl": "/builders/brohn-homes",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "brookfield",
+      "name": "Brookfield Residential",
+      "profileUrl": "/builders/brookfield",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "centex",
+      "name": "Centex",
+      "profileUrl": "/builders/centex",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "century-communities",
+      "name": "Century Communities",
+      "profileUrl": "/builders/century-communities",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "chesmar-homes",
+      "name": "Chesmar Homes",
+      "profileUrl": "/builders/chesmar-homes",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "coventry",
+      "name": "Coventry Homes",
+      "profileUrl": "/builders/coventry",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "david-weekley",
+      "name": "David Weekley Homes",
+      "profileUrl": "/builders/david-weekley",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "dr-horton",
+      "name": "D.R. Horton",
+      "profileUrl": "/builders/dr-horton",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "drb",
+      "name": "DRB Homes",
+      "profileUrl": "/builders/drb",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "drees",
+      "name": "Drees Custom Homes",
+      "profileUrl": "/builders/drees",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "gehan-homes",
+      "name": "Gehan Homes",
+      "profileUrl": "/builders/gehan-homes",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "highland",
+      "name": "Highland Homes",
+      "profileUrl": "/builders/highland",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "kb-home",
+      "name": "KB Home",
+      "profileUrl": "/builders/kb-home",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "lennar",
+      "name": "Lennar",
+      "profileUrl": "/builders/lennar",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "lgi-homes",
+      "name": "LGI Homes",
+      "profileUrl": "/builders/lgi-homes",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "meritage",
+      "name": "Meritage Homes",
+      "profileUrl": "/builders/meritage",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "mi-homes",
+      "name": "M/I Homes",
+      "profileUrl": "/builders/mi-homes",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "pacesetter",
+      "name": "Pacesetter Homes",
+      "profileUrl": "/builders/pacesetter",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "perry",
+      "name": "Perry Homes",
+      "profileUrl": "/builders/perry",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "pulte-homes",
+      "name": "Pulte Homes",
+      "profileUrl": "/builders/pulte-homes",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "starlight-homes",
+      "name": "Starlight Homes",
+      "profileUrl": "/builders/starlight-homes",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "taylor-morrison",
+      "name": "Taylor Morrison",
+      "profileUrl": "/builders/taylor-morrison",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "toll-brothers",
+      "name": "Toll Brothers",
+      "profileUrl": "/builders/toll-brothers",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    },
+    {
+      "slug": "tri-pointe",
+      "name": "Tri Pointe Homes",
+      "profileUrl": "/builders/tri-pointe",
+      "qmiUrl": null,
+      "qmiCount": null,
+      "lastCounted": null
+    }
+  ]
+}
