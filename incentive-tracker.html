@@ -77,7 +77,7 @@ letter-spacing:-0.02em;
 .mono{
 font-family:'Inter', sans-serif;
 font-weight:600;
-letter-spacing:0.08em;
+letter-spacing:0.05em;
 text-transform:uppercase;
 }
 
@@ -124,7 +124,7 @@ letter-spacing:-0.01em;
 .logo img{flex-shrink:0}
 .logo .dot{color:var(--amber);}
 .logo-tag{
-font-family:'IBM Plex Mono', monospace;
+font-family:'Inter', sans-serif;
 font-size:0.6rem;
 letter-spacing:0.12em;
 color:var(--text-muted);
@@ -148,7 +148,7 @@ nav a:hover{opacity:1;}
 display:inline-flex;
 align-items:center;
 gap:8px;
-font-family:'IBM Plex Mono', monospace;
+font-family:'Inter', sans-serif;
 font-size:0.72rem;
 font-weight:600;
 letter-spacing:0.06em;
@@ -1433,7 +1433,7 @@ gap:40px;
 flex-wrap:wrap;
 }
 .footer-col h3{
-font-family:'IBM Plex Mono', monospace;
+font-family:'Inter', sans-serif;
 font-size:0.68rem;
 letter-spacing:0.1em;
 text-transform:uppercase;
@@ -1557,11 +1557,11 @@ body.nav-open .nav-mobile{display:flex;}
 /* ===== Incentive Tracker, component styles (on top of site chrome) ===== */
 :root{ --good:#1F7A3D; --good-bg:#EAF5EE; --warn:#9A6B00; --warn-bg:#FBF3E0; --bad:#B32020; --bad-bg:#FBEBEB; }
 .trk .wrap{max-width:var(--maxw);margin:0 auto;padding-left:24px;padding-right:24px;}
-.trk .mono{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;}
+.trk .mono{font-family:'Inter', sans-serif;}
 
 /* hero */
 .trk .trk-hero{padding:40px 0 8px;}
-.trk .trk-hero .eyebrow{color:var(--blueprint);font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;}
+.trk .trk-hero .eyebrow{color:var(--blueprint);font-family:'Inter', sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;}
 .trk .trk-hero h1{font-size:clamp(2rem,4vw,2.6rem);line-height:1.06;letter-spacing:-.02em;margin:10px 0 12px;}
 .trk .trk-hero .lead{font-size:1.05rem;color:#333;max-width:70ch;line-height:1.55;margin:0;}
 .trk .trk-meta{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;margin:18px 0 0;font-size:.82rem;color:var(--text-muted);}
@@ -1573,12 +1573,12 @@ body.nav-open .nav-mobile{display:flex;}
 .trk section.blk{padding:34px 0 0;}
 .trk .blk-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:18px;flex-wrap:wrap;}
 .trk .blk-head h2{font-size:1.35rem;margin:0;letter-spacing:-.01em;}
-.trk .blk-head .n{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+.trk .blk-head .n{font-family:'Inter', sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
 
 /* stat tiles */
 .trk .tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
 .trk .tile{border:1px solid var(--line);border-top:3px solid var(--blueprint);border-radius:2px;padding:16px 16px 15px;background:var(--paper);}
-.trk .tile .k{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted);line-height:1.3;min-height:2.2em;}
+.trk .tile .k{font-family:'Inter', sans-serif;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:var(--text-muted);line-height:1.3;min-height:2.2em;}
 .trk .tile .v{font-size:1.9rem;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin-top:8px;}
 .trk .tile .s{font-size:.76rem;color:var(--text-muted);margin-top:5px;line-height:1.35;}
 .trk .tile .s .up{color:var(--good);font-weight:700;} .trk .tile .s .dn{color:var(--bad);font-weight:700;}
@@ -1593,7 +1593,7 @@ body.nav-open .nav-mobile{display:flex;}
 .trk .chart-wrap{position:relative;}
 .trk svg.trend{display:block;width:100%;height:auto;}
 .trk .trend .grid line{stroke:var(--line);stroke-width:1;}
-.trk .trend .axis text{fill:var(--text-muted);font-size:11px;font-family:'IBM Plex Mono',ui-monospace,monospace;}
+.trk .trend .axis text{fill:var(--text-muted);font-size:11px;font-family:'Inter', sans-serif;}
 .trk .trend .area{fill:rgba(43,79,224,.08);}
 .trk .trend .line{fill:none;stroke:var(--blueprint);stroke-width:2;}
 .trk .trend .dot{fill:var(--blueprint);}
@@ -1610,7 +1610,7 @@ body.nav-open .nav-mobile{display:flex;}
 .trk .best-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
 @media(max-width:900px){ .trk .best-grid{grid-template-columns:1fr;} }
 .trk .best-card{border:1px solid var(--line);border-radius:2px;padding:16px 17px;background:var(--paper);display:flex;flex-direction:column;gap:7px;position:relative;}
-.trk .best-card .rank{position:absolute;top:14px;right:15px;font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:var(--text-muted);letter-spacing:.08em;}
+.trk .best-card .rank{position:absolute;top:14px;right:15px;font-family:'Inter', sans-serif;font-size:.66rem;color:var(--text-muted);letter-spacing:.08em;}
 .trk .best-card .bc-comm{font-weight:800;font-size:1.06rem;letter-spacing:-.01em;padding-right:34px;}
 .trk .best-card .bc-builder{font-size:.82rem;color:var(--text-muted);}
 .trk .best-card .bc-val{font-size:1.55rem;font-weight:800;letter-spacing:-.02em;margin-top:2px;}
@@ -1702,12 +1702,12 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 
 /* dispatch cross-sell */
 .trk .trk-dispatch{margin:38px 0 6px;background:var(--blueprint-navy);color:#fff;border-radius:2px;padding:34px 30px;text-align:center;}
-.trk .trk-dispatch .eyebrow{color:#8FB0FF;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;}
+.trk .trk-dispatch .eyebrow{color:#8FB0FF;font-family:'Inter', sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;}
 .trk .trk-dispatch h2{color:#fff;font-size:1.5rem;margin:10px 0 10px;border:0;}
 .trk .trk-dispatch p{color:rgba(255,255,255,.8);max-width:56ch;margin:0 auto 20px;line-height:1.6;font-size:.98rem;}
 .trk .trk-dispatch .d-ctas{display:flex;gap:14px 20px;justify-content:center;flex-wrap:wrap;align-items:center;}
 .trk .trk-dispatch a.btn-w{background:#fff;color:#0A0A0A;font-weight:700;padding:12px 24px;border-radius:2px;text-decoration:none;font-size:.92rem;}
-.trk .trk-dispatch a.link-w{color:#fff;text-decoration:underline;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;}
+.trk .trk-dispatch a.link-w{color:#fff;text-decoration:underline;font-family:'Inter', sans-serif;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;}
 </style>
 
 <link rel="manifest" href="manifest.webmanifest">
@@ -1832,7 +1832,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 <section class="blk"><div class="wrap">
 <a href="daily-hot-sheet.html" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:#0F2942;border-radius:6px;padding:16px 20px;text-decoration:none;">
 <span style="color:#fff;font-size:0.98rem;line-height:1.4;"><b style="font-family:'Archivo Expanded',sans-serif;">New, the Daily Hot Sheet.</b> <span style="color:#9DB6FF;">Your five-minute morning read: one Buyer Advantage Score, builder rankings, and what changed overnight.</span></span>
-<span style="background:#2B4FE0;color:#fff;font-weight:700;font-size:0.82rem;padding:9px 16px;border-radius:5px;white-space:nowrap;font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;">Open the Terminal →</span>
+<span style="background:#2B4FE0;color:#fff;font-weight:700;font-size:0.82rem;padding:9px 16px;border-radius:5px;white-space:nowrap;font-family:'Inter', sans-serif;letter-spacing:.04em;">Open the Terminal →</span>
 </a>
 </div></section>
 
@@ -1854,14 +1854,14 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 .trk .ci-rank{font-family:'Archivo Expanded',sans-serif;font-weight:800;color:var(--blueprint,#2B4FE0);font-size:1.1rem;flex:0 0 auto;width:20px;}
 .trk .ci-board b{font-size:1rem;}
 .trk .ci-why{display:block;font-size:0.9rem;color:#555;margin-top:4px;line-height:1.5;}
-.trk .ci-tag-up{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--good,#1F7A3D);border:1px solid var(--good,#1F7A3D);border-radius:2px;padding:2px 6px;margin-left:6px;vertical-align:middle;}
+.trk .ci-tag-up{display:inline-block;font-family:'Inter', sans-serif;font-size:0.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--good,#1F7A3D);border:1px solid var(--good,#1F7A3D);border-radius:2px;padding:2px 6px;margin-left:6px;vertical-align:middle;}
 .trk .ci-foot{font-size:0.82rem;color:#666;margin-top:16px;}
 .trk .ci-share{margin-top:16px;}
-.trk .ci-share a{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:#fff;background:var(--blueprint,#2B4FE0);border-radius:2px;padding:10px 16px;text-decoration:none;}
+.trk .ci-share a{display:inline-flex;align-items:center;gap:8px;font-family:'Inter', sans-serif;font-size:0.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:#fff;background:var(--blueprint,#2B4FE0);border-radius:2px;padding:10px 16px;text-decoration:none;}
 .trk .ci-gap{background:#fff;border:1px solid var(--line,#E0E0E0);border-radius:3px;padding:22px 24px;margin:8px 0 22px;}
 .trk .ci-gap-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
 .trk .ci-gap-title{font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:1.02rem;}
-.trk .ci-gap-sub{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted,#666);}
+.trk .ci-gap-sub{font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted,#666);}
 .trk .ci-gap-row{display:grid;grid-template-columns:132px 1fr;align-items:center;gap:16px;margin-bottom:12px;}
 .trk .ci-gap-lab{font-size:.8rem;font-weight:600;color:var(--text-muted,#666);text-align:right;}
 .trk .ci-gap-track{background:#F1F1EE;border-radius:3px;height:44px;position:relative;overflow:hidden;}
@@ -1876,7 +1876,7 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 .trk .ci-uses{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:2px;}
 @media(max-width:760px){.trk .ci-uses{grid-template-columns:1fr;}}
 .trk .ci-use{border:1px solid var(--line,#E0E0E0);border-top:3px solid var(--blueprint,#2B4FE0);border-radius:3px;padding:18px 18px 20px;background:#fff;}
-.trk .ci-use-goal{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--blueprint,#2B4FE0);font-weight:600;margin-bottom:11px;}
+.trk .ci-use-goal{font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--blueprint,#2B4FE0);font-weight:600;margin-bottom:11px;}
 .trk .ci-use-amt{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:1.55rem;line-height:1;margin-bottom:11px;letter-spacing:-.5px;}
 .trk .ci-use-txt{font-size:.88rem;color:#444;line-height:1.55;}
 .trk .ci-catch{background:var(--warn-bg,#FFFBEE);border:1px solid #E7C948;border-left:3px solid #C9A400;border-radius:3px;padding:15px 18px;margin:20px 0 4px;font-size:.92rem;line-height:1.6;}
@@ -1884,9 +1884,9 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 .trk .ci-chart{border:1px solid var(--line,#E0E0E0);border-radius:2px;padding:16px 18px 12px;margin:22px 0 0;background:#fff;}
 .trk .ci-chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
 .trk .ci-chart-title{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:.98rem;}
-.trk .ci-chart-updated{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--text-muted,#666);text-transform:uppercase;}
+.trk .ci-chart-updated{font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.04em;color:var(--text-muted,#666);text-transform:uppercase;}
 .trk #ci-svg{width:100%;height:150px;display:block;}
-.trk .ci-chart-note{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;color:var(--text-muted,#666);text-transform:uppercase;margin-top:6px;}
+.trk .ci-chart-note{font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:.05em;color:var(--text-muted,#666);text-transform:uppercase;margin-top:6px;}
 </style>
 <section class="blk" id="concession-index" aria-label="Austin concession index and buyer leverage">
 <div class="wrap">
@@ -1978,7 +1978,7 @@ fetch('/concession-index.json',{cache:'no-store'}).then(function(r){return r.ok?
 <!-- THE DISPATCH RULE: the incentive never leads the decision -->
 <section class="blk"><div class="wrap">
 <div style="background:#0F2942;border-radius:10px;padding:20px 24px;color:#fff;">
-<div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:#8fa8d9;text-transform:uppercase;margin-bottom:6px;">The Dispatch rule &middot; read before you use this tracker</div>
+<div style="font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:.12em;color:#8fa8d9;text-transform:uppercase;margin-bottom:6px;">The Dispatch rule &middot; read before you use this tracker</div>
 <div style="font-size:21px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px;">The deal comes last.</div>
 <p style="font-size:13.5px;line-height:1.65;color:#c9d6ef;margin:0 0 10px;">Goals first, then area, then community, then builder, and only then the numbers. A bigger incentive can just be a bigger markup underneath. This tracker exists for trend awareness and negotiating windows on a home you already chose for the right reasons, never so a discount picks your house.</p>
 <a href="deal-comes-last.html" style="color:#9DBBFF;font-weight:700;font-size:13.5px;">The full order of operations &rarr;</a>
@@ -2224,7 +2224,7 @@ var sec=document.createElement("section");
 sec.style.cssText="max-width:1180px;margin:0 auto;padding:8px 28px 44px;";
 var html="";
 if(D.promos&&D.promos.length){
-html+="<h2 style=\"font-size:1.25rem;border-bottom:2px solid #0A0A0A;padding-bottom:8px;margin-top:10px;\">Advertised promotions watch <span style=\"font-family:IBM Plex Mono,monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#666;font-weight:400;\">&nbsp;no dollar value stated &middot; observed "+(D.promosUpdated||"")+"</span></h2>";
+html+="<h2 style=\"font-size:1.25rem;border-bottom:2px solid #0A0A0A;padding-bottom:8px;margin-top:10px;\">Advertised promotions watch <span style=\"font-family:Inter, sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#666;font-weight:400;\">&nbsp;no dollar value stated &middot; observed "+(D.promosUpdated||"")+"</span></h2>";
 D.promos.forEach(function(p){
 html+="<div style=\"border:1px solid #E0E0E0;border-left:3px solid #B7791F;border-radius:2px;padding:16px 18px;margin-top:14px;\"><div style=\"font-weight:800;\">"+p.builder+", "+p.promo+"</div><div style=\"font-size:.85rem;color:#333;margin-top:6px;line-height:1.6;\">"+p.note+"</div><div style=\"font-size:.76rem;color:#666;margin-top:6px;\">Ends "+p.expires+" &middot; "+p.source+" &middot; observed "+p.observed+"</div></div>";
 });
@@ -2236,7 +2236,7 @@ var cuts={},tot={};
 obs.entries.forEach(function(e){ tot[e.builder]=(tot[e.builder]||0)+1; if((e.flags||[]).indexOf("recently-reduced")>-1) cuts[e.builder]=(cuts[e.builder]||0)+1; });
 var rows=Object.keys(tot).map(function(b){return {b:b,c:cuts[b]||0,t:tot[b]};}).filter(function(x){return x.c>0;}).sort(function(a,b){return b.c/b.t-a.c/a.t;});
 if(rows.length){
-html+="<h2 style=\"font-size:1.25rem;border-bottom:2px solid #0A0A0A;padding-bottom:8px;margin-top:30px;\">Price-cut watch <span style=\"font-family:IBM Plex Mono,monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#666;font-weight:400;\">&nbsp;from the entry-level price-floor series &middot; "+(P.updated||"")+"</span></h2>";
+html+="<h2 style=\"font-size:1.25rem;border-bottom:2px solid #0A0A0A;padding-bottom:8px;margin-top:30px;\">Price-cut watch <span style=\"font-family:Inter, sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#666;font-weight:400;\">&nbsp;from the entry-level price-floor series &middot; "+(P.updated||"")+"</span></h2>";
 html+="<div style=\"display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:14px;\">";
 rows.forEach(function(x){ html+="<div style=\"border:1px solid #E0E0E0;border-radius:2px;padding:14px 16px;\"><div style=\"font-weight:800;\">"+x.b+"</div><div style=\"font-size:1.3rem;font-weight:800;letter-spacing:-.01em;margin-top:4px;\">"+x.c+" of "+x.t+"</div><div style=\"font-size:.74rem;color:#666;\">tracked sub-$300K listings flagged &ldquo;recently reduced&rdquo; on the pull date</div></div>"; });
 html+="</div><p style=\"font-size:.8rem;color:#666;line-height:1.6;margin-top:10px;\">Broad same-day reductions are a leverage signal, not a countdown clock, treat any advertised incentive as an opening position. Full context in the <a href=\"reports/entry-level-price-floor.html\" style=\"color:#000;text-decoration:underline;\">Price Floor Report</a>.</p>";
