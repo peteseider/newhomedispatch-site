@@ -3,13 +3,13 @@
   "ranAt": "2026-07-25T17:39:19-05:00",
   "ranAtLabel": "Jul 25, 2026 · 05:39 PM CT",
   "slot": "PM",
-  "index": 20000,
-  "offers": 9,
-  "builders": 8,
-  "expired": 0,
+  "index": 22500,
+  "offers": 42,
+  "builders": 26,
+  "expired": 15,
   "detection": {
     "ran": false,
     "reason": "no ANTHROPIC_API_KEY set"
   },
-  "note": "Detection layer not run (deterministic index still republished with a fresh timestamp)."
+  "note": "Manually reconciled 2026-07-26 against the real 2026-07-25 PM incentive sweep (reporting/incentive-sweep/latest-snapshot.json) after the automated site-deploy pipeline gap left this file frozen for several days. Detection layer still not run."
 }
