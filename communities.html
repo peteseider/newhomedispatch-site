@@ -3101,6 +3101,14 @@ function renderPins(){
     }
   }
   function restoreFromHash(){
+    const cm = location.hash.match(/community=([a-z0-9\-]+)/i);
+    if (cm && byId(NHD_DATA.communities, cm[1])) {
+      if (activeCommunity !== cm[1]) selectCommunity(cm[1]);
+      const panel = document.getElementById('panel-detail');
+      if (panel) panel.scrollIntoView({behavior:'smooth', block:'start'});
+      const geo = window.NHD_GEO && window.NHD_GEO[cm[1]];
+      if (geo && window.NHD_MAP) { window.NHD_MAP.setView([geo[0], geo[1]], 12); if (geo[3] && geo[3].openTooltip) geo[3].openTooltip(); }
+    }
     const m = location.hash.match(/compare=([a-z0-9,\-]+)/i);
     if(!m) return;
     m[1].split(',').forEach(id=>{
@@ -3184,6 +3192,7 @@ function renderPins(){
     window.mapInited = true;
     window.NHD_GEO = NHD_GEO;
     var map = L.map('nhd-leaflet-map', {scrollWheelZoom:false}).setView([30.35,-97.72], 9);
+    window.NHD_MAP = map;
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors \u00a9 <a href="https://carto.com/attributions">CARTO</a>',
       subdomains: 'abcd', maxZoom: 19
