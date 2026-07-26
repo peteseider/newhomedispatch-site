@@ -1,15 +1,15 @@
 {
-  "schema": "nhd-sweep-latest-v1",
-  "ranAt": "2026-07-25T17:39:19-05:00",
-  "ranAtLabel": "Jul 25, 2026 · 05:39 PM CT",
-  "slot": "PM",
-  "index": 22500,
-  "offers": 42,
-  "builders": 26,
-  "expired": 15,
-  "detection": {
-    "ran": false,
-    "reason": "no ANTHROPIC_API_KEY set"
-  },
-  "note": "Manually reconciled 2026-07-26 against the real 2026-07-25 PM incentive sweep (reporting/incentive-sweep/latest-snapshot.json) after the automated site-deploy pipeline gap left this file frozen for several days. Detection layer still not run."
+ "schema": "nhd-sweep-latest-v1",
+ "ranAt": "2026-07-26T06:05:00-05:00",
+ "ranAtLabel": "Jul 26, 2026 · 06:05 AM CT",
+ "slot": "AM",
+ "index": 20000,
+ "offers": 36,
+ "builders": 26,
+ "expired": 15,
+ "detection": {
+  "ran": false,
+  "reason": "no ANTHROPIC_API_KEY set"
+ },
+ "note": "Published from the 2026-07-26 AM incentive sweep (reporting/incentive-sweep/publishable-incentives-2026-07-26-AM.json). This file drives the homepage snap-stamp badge and the \"verified ...\" ticker suffix site-wide -- keep it in sync with incentives.json on every publish."
 }
