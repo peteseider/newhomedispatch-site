@@ -2633,8 +2633,8 @@ panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 /* ---------- orchestrate ---------- */
 function render() { renderHead(); renderTable(); updateCmpBar(); }
 function init() {
-if (!window.__nhdSweepStamp) $('trk-updated').textContent = fmtDateShort(DATA.updated) + ', 2026';
-if (!window.__nhdCount) $('trk-count-meta').textContent = recs.length;
+if (true) $('trk-updated').textContent = fmtDateShort(DATA.updated) + ', 2026';
+if (true) $('trk-count-meta').textContent = recs.length;
 renderTiles(); renderTrend(); renderBest(); initFilters();
 $('cmp-clear').addEventListener('click', function () { compareSet = {}; $('cmp-panel').classList.remove('on'); render(); });
 $('cmp-go').addEventListener('click', function () { if (countCompare() < 2) { cmpMsg('Select at least 2 offers to compare.'); return; } renderComparePanel(); });
