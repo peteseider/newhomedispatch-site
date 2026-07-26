@@ -288,6 +288,7 @@ footer a{color:#C7D4EA;}
 <p class="finenote">Individual reported outcomes, not builder policy. Every deal reflects its home, its timing, and its buyer. Read <a href="methodology.html">how we verify</a>.</p>
 </div>
 </form>
+<div id="benchmarkPanel" class="hidden"></div>
 </main>
 
 <footer>
@@ -350,8 +351,49 @@ document.querySelector('form').addEventListener('submit', function(e){
     return;
   }
   if(warn) warn.remove();
-  if(window.NHD) NHD.trackEvent('deal_report_submit', {});
+if(window.NHD) NHD.trackEvent('deal_report_submit', {});
+
+var form = e.target;
+var fd = new FormData(form);
+var builderName = fd.get('builder');
+var btn = form.querySelector('button.go');
+if (btn) { btn.disabled = true; btn.textContent = 'Submitting\u2026'; }
+var body = new URLSearchParams(fd).toString();
+fetch(form.getAttribute('action') || 'report-a-deal-thanks.html', {
+method: 'POST',
+headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+body: body
+}).then(function(){ return showBenchmark(builderName); }).catch(function(){ form.submit(); });
 });
+
+function showBenchmark(builderName){
+var panel = document.getElementById('benchmarkPanel');
+var formEl = document.querySelector('form');
+return fetch('incentives.json', {cache:'no-store'}).then(function(r){ return r.ok ? r.json() : null; }).then(function(inc){
+var lines = [];
+function dk(w){ w = String(w||''); if (/^\d{4}-\d{2}-\d{2}/.test(w)) return w.slice(0,10); var m = w.match(/(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?/); if (!m) return null; var y = m[3] ? (m[3].length===2?'20'+m[3]:m[3]) : '2026'; return y+'-'+('0'+m[1]).slice(-2)+'-'+('0'+m[2]).slice(-2); }
+var t = new Intl.DateTimeFormat('en-CA', {timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date());
+if (inc && builderName && builderName !== '__other__') {
+var recs = (inc.records||[]).filter(function(r){ var k = r.expires ? dk(r.expires) : null; return r.builder === builderName && (!k || k >= t); });
+var promos = (inc.promos||[]).filter(function(p){ var k = p.expires ? dk(p.expires) : null; return p.builder === builderName && (!k || k >= t); });
+var vals = recs.map(function(r){ return r.advertisedValue; }).filter(function(v){ return typeof v === 'number'; }).sort(function(a,b){ return a-b; });
+if (vals.length) {
+var med = vals.length % 2 ? vals[(vals.length-1)/2] : (vals[vals.length/2-1] + vals[vals.length/2]) / 2;
+lines.push('<b>' + builderName + '</b> is currently advertising a median incentive of <b>$' + Math.round(med).toLocaleString('en-US') + '</b> across ' + vals.length + ' live offer' + (vals.length>1?'s':'') + ' we track today (advertised, not yet field- or deal-verified).');
+}
+if (promos.length) lines.push(builderName + ' also has ' + promos.length + ' other live promotional offer' + (promos.length>1?'s':'') + ' posted right now.');
+if (!lines.length) lines.push('We are not currently tracking a live advertised offer from ' + builderName + '. Your report is the freshest data point we have on them.');
+} else {
+lines.push('Thanks for the report. As more real deals come in, we will be able to show exactly how each one compares to what is advertised.');
+}
+if (formEl) formEl.style.display = 'none';
+if (panel) {
+panel.innerHTML = '<div class="card" style="border-top-color:#1E7A46;"><span class="step" style="color:#1E7A46;">Report received &middot; thank you</span><h2>Here is what we can tell you right now</h2><p class="hint">' + lines.join(' ') + '</p><p class="hint">This is the T1 advertised anchor, the public starting point on record. As rep-confirmed, field-observed, and deal-verified reports accumulate (see <a href="methodology.html">how we verify</a>), this comparison gets sharper, and your report is one of the first entries in that record.</p><p style="margin-top:16px;"><a href="index.html" style="font-weight:700;">Back to New Home Dispatch &rarr;</a></p></div>';
+panel.classList.remove('hidden');
+panel.scrollIntoView({behavior:'smooth', block:'start'});
+}
+});
+}
 })();
 </script>
 </body>
