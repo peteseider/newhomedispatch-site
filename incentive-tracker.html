@@ -4088,7 +4088,7 @@ return '<span class="trend-flat">&#9644; flat</span>';
 }
 
 /* ---------- filters ---------- */
-var state = { search: '', city: '', builder: '', type: '', home: '', source: '', hideLender: false, sort: 'advertisedValue', dir: 'desc' };
+var state = { search: '', city: '', builder: '', type: '', home: '', source: '', hideLender: false, sort: 'advertisedValue', dir: 'desc', showAll: false };
 function uniq(key) { var s = {}; recs.forEach(function (r) { s[r[key]] = 1; }); return Object.keys(s).sort(); }
 function fillSelect(id, values, allLabel) {
 $(id).innerHTML = '<option value="">' + allLabel + '</option>' + values.map(function (v) { return '<option value="' + esc(v) + '">' + esc(v) + '</option>'; }).join('');
@@ -4140,7 +4140,6 @@ var COLS = [
 { key: 'taxRate', label: 'Eff. tax', sortable: true, num: true, sv: function (r) { return r.taxRate; } },
 { key: 'ratePromo', label: 'Rate promo', sortable: true, sv: function(r){ return (r.ratePromo||'').toLowerCase(); } },
 { key: 'expires', label: 'Expires', sortable: true, sv: function (r) { return r.expires || '9999-99-99'; } },
-{ key: 'delta', label: 'Trend', sortable: true, num: true, sv: function (r) { return r.delta; } },
 { key: '_det', label: '', sortable: false }
 ];
 function renderHead() {
@@ -4171,10 +4170,10 @@ var col = COLS.filter(function (c) { return c.key === state.sort; })[0];
 if (col && col.sv) {
 rows.sort(function (a, b) { var av = col.sv(a), bv = col.sv(b); if (av < bv) return state.dir === 'asc' ? -1 : 1; if (av > bv) return state.dir === 'asc' ? 1 : -1; return b.advertisedValue - a.advertisedValue; });
 }
-$('trk-resultcount').textContent = rows.length + (rows.length === 1 ? ' offer' : ' offers') + ' shown' + (rows.length < recs.length ? ' (of ' + recs.length + ')' : '');
+var PAGE_SIZE = 15; var pageRows = state.showAll ? rows : rows.slice(0, PAGE_SIZE); $('trk-resultcount').textContent = pageRows.length + (pageRows.length === 1 ? ' offer' : ' offers') + ' shown' + (pageRows.length < rows.length ? ' (of ' + rows.length + ' matching, ' + recs.length + ' total)' : (rows.length < recs.length ? ' (of ' + recs.length + ' total)' : ''));
 var body = $('trk-body');
 if (!rows.length) { body.innerHTML = '<tr><td colspan="' + COLS.length + '" style="padding:24px;text-align:center;color:var(--text-muted);">No offers match these filters. <button type="button" class="rowbtn" id="empty-reset">Reset filters</button></td></tr>'; var er = $('empty-reset'); if (er) er.addEventListener('click', function () { $('f-reset').click(); }); return; }
-body.innerHTML = rows.map(function (r) {
+body.innerHTML = pageRows.map(function (r) {
 return '<tr data-id="' + r.id + '">' +
 '<td class="cmpbox"><input type="checkbox" class="cmp-check" data-id="' + r.id + '" aria-label="Compare ' + esc(r.community) + '"' + (compareSet[r.id] ? ' checked' : '') + '></td>' +
 '<td><span class="dot src-' + r.confidence + '" title="' + SRC_LABEL[r.confidence] + '"></span> <span class="cell-comm">' + entLink(r.community, r.communitySlug ? 'communities/' + r.communitySlug + '.html' : null) + '</span><br><span class="cell-sub">' + entLink(r.builder, r.builderSlug ? 'builders/' + r.builderSlug + '.html' : null) + ' &middot; ' + esc(r.submarket) + '</span></td>' +
@@ -4186,10 +4185,10 @@ return '<tr data-id="' + r.id + '">' +
 '<td class="num">' + taxCell(r) + '</td>' +
 '<td>' + rateCell(r) + '</td>' +
 '<td class="num">' + (r.expires ? fmtDateShort(r.expires) : '<span style="color:var(--text-muted);">Ongoing</span>') + '</td>' +
-'<td class="num">' + trendHTML(r) + '</td>' +
 '<td><button type="button" class="rowbtn" data-det="' + r.id + '">Details</button></td>' +
 '</tr>';
-}).join('');
+}).join('') + (!state.showAll && rows.length > PAGE_SIZE ? '<tr id="trk-more-row"><td colspan="' + COLS.length + '" style="text-align:center;padding:16px;"><button type="button" class="rowbtn" id="trk-show-all">Show all ' + rows.length + ' offers</button></td></tr>' : '');
+var showAllBtn = document.getElementById('trk-show-all'); if (showAllBtn) { showAllBtn.addEventListener('click', function () { state.showAll = true; renderTable(); }); }
 Array.prototype.forEach.call(body.querySelectorAll('.cmp-check'), function (c) { c.addEventListener('change', function () { toggleCompare(this.getAttribute('data-id'), this.checked); }); });
 Array.prototype.forEach.call(body.querySelectorAll('button[data-det]'), function (b) { b.addEventListener('click', function () { toggleDetail(this.getAttribute('data-det'), this); }); });
 }
