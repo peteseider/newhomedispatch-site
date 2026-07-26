@@ -75,6 +75,7 @@
 /under-3000  /reports/under-3000-payment.html  200
 /corrections  /corrections.html  200
 /chesmar  /builders/chesmar-homes.html  200
-/scoreboard  /scoreboard.html  200
+/scoreboard  /daily-hot-sheet.html#price-cut-watch  301
+/scoreboard.html  /daily-hot-sheet.html#price-cut-watch  301
 /one-sheet  /dispatch-one-sheet.html  200
 /cards  /cards.html  200
