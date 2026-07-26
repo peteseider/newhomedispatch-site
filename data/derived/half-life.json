@@ -1,32 +1,80 @@
 {
   "schema": "nhd-incentive-half-life-v1",
   "metric": "Median days an advertised offer survives unchanged (offer persistence)",
-  "lastUpdated": "2026-07-25T22:39:33.538Z",
-  "runKey": "2026-07-25-PM",
+  "lastUpdated": "2026-07-26T07:57:19.462Z",
+  "runKey": "2026-07-26-AM",
   "mature": false,
   "maturityNote": "Event log is 2 days old; publish only after 28+ days of accumulation. Values below are provisional and right-censored.",
   "completedSpansMedianDays": null,
-  "openSpansMedianDays": 5,
+  "openSpansMedianDays": 1,
   "completedSpans": 0,
-  "openSpans": 9,
+  "openSpans": 30,
   "byBuilder": {
     "ashton-woods": {
       "completedMedian": null,
-      "open": 1
+      "open": 2
     },
-    "perry": {
+    "brohn-homes": {
       "completedMedian": null,
       "open": 2
     },
     "brookfield": {
       "completedMedian": null,
-      "open": 1
+      "open": 2
     },
-    "brohn-homes": {
+    "coventry": {
       "completedMedian": null,
       "open": 1
     },
+    "david-weekley": {
+      "completedMedian": null,
+      "open": 3
+    },
     "pacesetter": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "perry": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "tri-pointe": {
+      "completedMedian": null,
+      "open": 2
+    },
+    "starlight-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "del-webb": {
+      "completedMedian": null,
+      "open": 2
+    },
+    "empire-communities": {
+      "completedMedian": null,
+      "open": 2
+    },
+    "terrata-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "scott-felder-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "blackburn-homes": {
+      "completedMedian": null,
+      "open": 2
+    },
+    "aha-dream-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "united-built-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "drb": {
       "completedMedian": null,
       "open": 1
     },
@@ -38,7 +86,11 @@
       "completedMedian": null,
       "open": 1
     },
-    "aha-dream-homes": {
+    "lennar": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "toll-brothers": {
       "completedMedian": null,
       "open": 1
     }

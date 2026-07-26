@@ -1,34 +1,140 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-07-25T22:39:33.538Z",
-  "runKey": "2026-07-25-PM",
-  "observationRuns": 16,
-  "currentlyExpiredButDisplayed": [],
+  "lastUpdated": "2026-07-26T07:57:19.462Z",
+  "runKey": "2026-07-26-AM",
+  "observationRuns": 17,
+  "currentlyExpiredButDisplayed": [
+    {
+      "id": "inc43",
+      "builder": "brookfield",
+      "community": "",
+      "expires": "2025-11-12",
+      "daysPast": 256
+    },
+    {
+      "id": "inc44",
+      "builder": "david-weekley",
+      "community": "",
+      "expires": "2026-07-01",
+      "daysPast": 25
+    },
+    {
+      "id": "inc45",
+      "builder": "david-weekley",
+      "community": "",
+      "expires": "2026-07-01",
+      "daysPast": 25
+    },
+    {
+      "id": "inc46",
+      "builder": "dr-horton",
+      "community": "palomino",
+      "expires": "2026-06-30",
+      "daysPast": 26
+    },
+    {
+      "id": "inc47",
+      "builder": "lennar",
+      "community": "",
+      "expires": "2026-07-19",
+      "daysPast": 7
+    },
+    {
+      "id": "inc48",
+      "builder": "pulte-homes",
+      "community": "",
+      "expires": "2025-07-31",
+      "daysPast": 360
+    },
+    {
+      "id": "inc49",
+      "builder": "toll-brothers",
+      "community": "",
+      "expires": "2026-07-12",
+      "daysPast": 14
+    },
+    {
+      "id": "inc50",
+      "builder": "mi-homes",
+      "community": "",
+      "expires": "2026-05-29",
+      "daysPast": 58
+    },
+    {
+      "id": "inc51",
+      "builder": "trophy-signature-homes",
+      "community": "",
+      "expires": "2026-07-24",
+      "daysPast": 2
+    },
+    {
+      "id": "inc52",
+      "builder": "del-webb",
+      "community": "",
+      "expires": "2025-07-31",
+      "daysPast": 360
+    },
+    {
+      "id": "inc53",
+      "builder": "newmark-homes",
+      "community": "",
+      "expires": "2026-03-31",
+      "daysPast": 117
+    },
+    {
+      "id": "inc54",
+      "builder": "gfo-home",
+      "community": "",
+      "expires": "2026-04-30",
+      "daysPast": 87
+    },
+    {
+      "id": "inc55",
+      "builder": "sitterle-homes",
+      "community": "",
+      "expires": "2025-12-31",
+      "daysPast": 207
+    },
+    {
+      "id": "inc56",
+      "builder": "milestone",
+      "community": "",
+      "expires": "2026-05-15",
+      "daysPast": 72
+    },
+    {
+      "id": "inc57",
+      "builder": "toll-brothers",
+      "community": "santa-rita-ranch",
+      "expires": "2026-07-19",
+      "daysPast": 7
+    }
+  ],
   "builders": {
     "dr-horton": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
-      "offersTracked": 1
+      "offersTracked": 5
     },
     "lennar": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
-      "offersTracked": 1
+      "offersTracked": 2
     },
     "pulte-homes": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
-      "offersTracked": 1
+      "offersTracked": 2
     },
     "kb-home": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
-      "offersTracked": 1
+      "offersTracked": 2
     },
     "taylor-morrison": {
       "deadlineExtensions": 0,
@@ -40,7 +146,7 @@
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
-      "offersTracked": 1
+      "offersTracked": 2
     },
     "lgi-homes": {
       "deadlineExtensions": 0,
@@ -52,9 +158,171 @@
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
-      "offersTracked": 1
+      "offersTracked": 3
     },
     "tri-pointe": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 3
+    },
+    "ashton-woods": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 4
+    },
+    "brohn-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 3
+    },
+    "brookfield": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 4
+    },
+    "coventry": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 2
+    },
+    "david-weekley": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 4
+    },
+    "pacesetter": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "perry": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "meritage": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "starlight-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 2
+    },
+    "del-webb": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 2
+    },
+    "landsea-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "empire-communities": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 2
+    },
+    "terrata-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "chesmar-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "scott-felder-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 2
+    },
+    "wilshire-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "blackburn-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 2
+    },
+    "aha-dream-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "stylecraft-builders": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "united-built-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "drb": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "toll-brothers": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 2
+    },
+    "trophy-signature-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "newmark-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "gfo-home": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "sitterle-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "milestone": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
