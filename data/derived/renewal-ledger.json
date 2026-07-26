@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-07-26T15:42:46.475Z",
-  "runKey": "2026-07-26-AM",
-  "observationRuns": 17,
+  "lastUpdated": "2026-07-26T17:28:00.062Z",
+  "runKey": "2026-07-26-PM",
+  "observationRuns": 18,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc43",
@@ -114,19 +114,19 @@
   "builders": {
     "dr-horton": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 5
     },
     "lennar": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 2
     },
     "pulte-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 2
     },
@@ -156,7 +156,7 @@
     },
     "mi-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
@@ -180,7 +180,7 @@
     },
     "brookfield": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 4
     },
@@ -192,7 +192,7 @@
     },
     "david-weekley": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 2,
       "deadlinesSet": 0,
       "offersTracked": 4
     },
@@ -222,7 +222,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 2
     },
@@ -294,37 +294,37 @@
     },
     "toll-brothers": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 2,
       "deadlinesSet": 0,
       "offersTracked": 2
     },
     "trophy-signature-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "newmark-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "gfo-home": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "sitterle-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "milestone": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 1
     }
