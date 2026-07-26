@@ -74,7 +74,56 @@ a{color:var(--blue);}
     </div>
   </div>
 
-  <h2>The atlas</h2>
+  
+<section style="max-width:1100px;margin:32px auto;padding:0 16px;">
+  <div id="atlas-map" style="height:440px;border-radius:10px;overflow:hidden;border:1px solid #e2e6ea;"></div>
+  <p style="font-size:12px;color:#6b7280;margin-top:8px;">Map plots the districts in the table below by approximate location. Click a marker for the district name, type, combined rate, and source. Approximate coordinates; verify exact boundaries with TCEQ / the county appraisal district before relying on a specific address.</p>
+</section>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  function initAtlasMap(){
+    var el = document.getElementById('atlas-map');
+    if (!el || typeof L === 'undefined') return;
+    var map = L.map('atlas-map', {scrollWheelZoom:false}).setView([30.35, -97.75], 9);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 16,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    fetch('/atlas_districts.json', {cache:'no-store'}).then(function(r){ return r.json(); }).then(function(rows){
+      var bounds = [];
+      rows.forEach(function(d){
+        if (typeof d.approx_lat !== 'number' || typeof d.approx_lng !== 'number') return;
+        var isMud = (d.district_type||'').toUpperCase().indexOf('MUD') !== -1;
+        var color = isMud ? '#1f4e79' : '#b45309';
+        var marker = L.circleMarker([d.approx_lat, d.approx_lng], {
+          radius: 7, color: color, fillColor: color, fillOpacity: 0.75, weight: 1
+        }).addTo(map);
+        var rate = (d.rate_per_100 != null) ? (d.rate_per_100 + '%') : 'rate not verified';
+        var src = d.source_url ? ('<a href="'+d.source_url+'" target="_blank" rel="noopener">'+ (d.source||'source') +'</a>') : (d.source||'');
+        marker.bindPopup(
+          '<b>' + (d.community||d.district_name||'') + '</b><br>' +
+          (d.district_name||'') + ' (' + (d.district_type||'') + ')<br>' +
+          (d.city||'') + ', ' + (d.county||'') + ' County<br>' +
+          'Combined rate: ' + rate + '<br>' +
+          'Confidence: ' + (d.confidence||'unverified') + '<br>' +
+          src
+        );
+        bounds.push([d.approx_lat, d.approx_lng]);
+      });
+      if (bounds.length) map.fitBounds(bounds, {padding:[20,20]});
+    }).catch(function(e){ /* fail silent, table below still works */ });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAtlasMap);
+  } else {
+    initAtlasMap();
+  }
+})();
+</script>
+
+<h2>The atlas</h2>
   <p style="font-size:13px;color:var(--muted);">Tap a column to sort. Rates are the combined advertised or page verified rate we track for each community; the district column shows what our records note so far. Every community profile gets its full district picture pinned as verification reaches it.</p>
   <table id="atlas">
     <thead><tr><th data-k="name">Community</th><th data-k="city">City</th><th data-k="rate">Combined rate</th><th data-k="dist">District notes</th><th data-k="src">Source</th></tr></thead>
