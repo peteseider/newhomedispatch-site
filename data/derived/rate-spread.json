@@ -1,7 +1,7 @@
 {
   "schema": "nhd-rate-spread-v1",
   "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
-  "lastUpdated": "2026-07-26T13:02:35.531Z",
+  "lastUpdated": "2026-07-26T15:42:46.475Z",
   "runKey": "2026-07-26-AM",
   "pmms": {
     "week": "7/23/2026",
@@ -9,135 +9,107 @@
   },
   "offers": [
     {
-      "id": "inc02",
+      "id": "inc01",
       "builder": "ashton-woods",
       "community": "",
       "advertisedRate": 3.99,
       "spreadBps": -259
     },
     {
-      "id": "inc04",
-      "builder": "ashton-woods",
-      "community": "",
-      "advertisedRate": 3.25,
-      "spreadBps": -333
-    },
-    {
       "id": "inc06",
-      "builder": "brohn-homes",
-      "community": "",
-      "advertisedRate": 2.75,
-      "spreadBps": -383
-    },
-    {
-      "id": "inc09",
-      "builder": "brookfield",
-      "community": "easton-park",
-      "advertisedRate": 1.99,
-      "spreadBps": -459
-    },
-    {
-      "id": "inc11",
-      "builder": "coventry",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc13",
       "builder": "david-weekley",
       "community": "",
       "advertisedRate": 2.99,
       "spreadBps": -359
     },
     {
-      "id": "inc15",
-      "builder": "pacesetter",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc16",
-      "builder": "perry",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc18",
-      "builder": "tri-pointe",
-      "community": "turners-crossing",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc21",
-      "builder": "starlight-homes",
-      "community": "",
-      "advertisedRate": 3.25,
-      "spreadBps": -333
-    },
-    {
-      "id": "inc25",
-      "builder": "landsea-homes",
-      "community": "",
-      "advertisedRate": 2.99,
-      "spreadBps": -359
-    },
-    {
-      "id": "inc29",
-      "builder": "chesmar-homes",
-      "community": "",
-      "advertisedRate": 4.999,
-      "spreadBps": -158
-    },
-    {
-      "id": "inc30",
-      "builder": "scott-felder-homes",
-      "community": "santa-rita-ranch",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc31",
-      "builder": "scott-felder-homes",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc35",
-      "builder": "aha-dream-homes",
-      "community": "whisper-valley",
-      "advertisedRate": 3.75,
-      "spreadBps": -283
-    },
-    {
-      "id": "inc36",
-      "builder": "stylecraft-builders",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc39",
+      "id": "inc10",
       "builder": "kb-home",
       "community": "",
       "advertisedRate": 4.75,
       "spreadBps": -183
     },
     {
-      "id": "inc40",
-      "builder": "dr-horton",
+      "id": "inc11",
+      "builder": "pacesetter",
+      "community": "",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc12",
+      "builder": "perry",
+      "community": "",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc14",
+      "builder": "tri-pointe",
+      "community": "",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc19",
+      "builder": "scott-felder-homes",
+      "community": "",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc22",
+      "builder": "aha-dream-homes",
+      "community": "whisper-valley",
+      "advertisedRate": 3.75,
+      "spreadBps": -283
+    },
+    {
+      "id": "inc25",
+      "builder": "brookfield",
+      "community": "easton-park",
+      "advertisedRate": 1.99,
+      "spreadBps": -459
+    },
+    {
+      "id": "inc26",
+      "builder": "coventry",
+      "community": "",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc29",
+      "builder": "starlight-homes",
+      "community": "",
+      "advertisedRate": 3.5,
+      "spreadBps": -308
+    },
+    {
+      "id": "inc30",
+      "builder": "landsea-homes",
       "community": "",
       "advertisedRate": 2.99,
       "spreadBps": -359
     },
     {
-      "id": "inc42",
-      "builder": "dr-horton",
-      "community": "bar-w-ranch",
+      "id": "inc31",
+      "builder": "chesmar-homes",
+      "community": "",
+      "advertisedRate": 4.999,
+      "spreadBps": -158
+    },
+    {
+      "id": "inc32",
+      "builder": "scott-felder-homes",
+      "community": "",
+      "advertisedRate": 4.99,
+      "spreadBps": -159
+    },
+    {
+      "id": "inc36",
+      "builder": "stylecraft-builders",
+      "community": "",
       "advertisedRate": 4.99,
       "spreadBps": -159
     },

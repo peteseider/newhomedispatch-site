@@ -1,20 +1,16 @@
 {
   "schema": "nhd-incentive-half-life-v1",
   "metric": "Median days an advertised offer survives unchanged (offer persistence)",
-  "lastUpdated": "2026-07-26T13:02:35.531Z",
+  "lastUpdated": "2026-07-26T15:42:46.475Z",
   "runKey": "2026-07-26-AM",
   "mature": false,
   "maturityNote": "Event log is 3 days old; publish only after 28+ days of accumulation. Values below are provisional and right-censored.",
   "completedSpansMedianDays": null,
-  "openSpansMedianDays": 1,
+  "openSpansMedianDays": 0,
   "completedSpans": 0,
-  "openSpans": 30,
+  "openSpans": 27,
   "byBuilder": {
     "ashton-woods": {
-      "completedMedian": null,
-      "open": 2
-    },
-    "brohn-homes": {
       "completedMedian": null,
       "open": 2
     },
@@ -30,6 +26,18 @@
       "completedMedian": null,
       "open": 3
     },
+    "dr-horton": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "drb": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "kb-home": {
+      "completedMedian": null,
+      "open": 1
+    },
     "pacesetter": {
       "completedMedian": null,
       "open": 1
@@ -42,17 +50,13 @@
       "completedMedian": null,
       "open": 2
     },
-    "starlight-homes": {
-      "completedMedian": null,
-      "open": 1
-    },
     "del-webb": {
       "completedMedian": null,
-      "open": 2
+      "open": 3
     },
     "empire-communities": {
       "completedMedian": null,
-      "open": 2
+      "open": 1
     },
     "terrata-homes": {
       "completedMedian": null,
@@ -71,18 +75,6 @@
       "open": 1
     },
     "united-built-homes": {
-      "completedMedian": null,
-      "open": 1
-    },
-    "drb": {
-      "completedMedian": null,
-      "open": 1
-    },
-    "kb-home": {
-      "completedMedian": null,
-      "open": 1
-    },
-    "dr-horton": {
       "completedMedian": null,
       "open": 1
     },
