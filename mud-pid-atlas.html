@@ -198,7 +198,7 @@ a{color:var(--blue);}
             radius: APPROX_RADIUS_M, color: color, weight: 1.5, fillColor: color, fillOpacity: 0.16, dashArray: '4,4'
           }).addTo(map);
           activeShade.bringToBack();
-          map.setView([d.approx_lat, d.approx_lng], Math.max(map.getZoom(), 14));
+          map.setView([d.approx_lat, d.approx_lng], Math.max(map.getZoom(), 14), {animate:false});
         });
         bounds.push([d.approx_lat, d.approx_lng]);
       });
