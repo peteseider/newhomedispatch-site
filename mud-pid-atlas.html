@@ -46,6 +46,21 @@ a{color:var(--blue);}
 .edu-item{border:1px solid var(--line);border-radius:9px;background:#fff;padding:16px 18px;}
 .edu-item .edu-h{font-weight:800;font-size:14.5px;margin-bottom:6px;}
 .edu-item p{font-size:13px;margin:0;line-height:1.65;}
+.edu-details{margin:34px 0 10px;border:1px solid var(--line);border-radius:9px;background:#fff;}
+.edu-summary{list-style:none;cursor:pointer;padding:14px 18px;font-family:'Fraunces',serif;font-size:19px;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.edu-summary::-webkit-details-marker{display:none;}
+.edu-summary::after{content:'+';font-family:'Inter',sans-serif;font-size:20px;font-weight:600;color:var(--blue);flex:none;}
+.edu-details[open] .edu-summary::after{content:'\2212';}
+.edu-summary .edu-hint{font-family:'Inter',sans-serif;font-size:11.5px;color:var(--muted);font-weight:500;margin-left:10px;}
+.edu-details .edu-grid{margin:0;padding:0 18px 18px;}
+.share-card{display:flex;gap:16px;flex-wrap:wrap;align-items:center;border:1px solid var(--line);border-radius:9px;background:#fff;padding:16px 18px;margin:26px 0;}
+.share-card img{width:96px;border-radius:6px;border:1px solid var(--line);flex:none;}
+.share-card .sc-body{flex:1;min-width:200px;}
+.share-card .sc-t{font-weight:800;font-size:15px;margin-bottom:4px;}
+.share-card .sc-w{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:8px;}
+.share-card .sc-links a{font-size:12.5px;font-weight:700;margin-right:14px;}
+.atlas-more{display:block;margin:14px auto 0;padding:9px 18px;border:1px solid var(--line);border-radius:7px;background:#fff;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:var(--navy);cursor:pointer;}
+.atlas-more:hover{background:#f4f4f2;}
 .atlas-controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 12px;}
 .atlas-controls input[type="search"]{flex:1;min-width:200px;padding:9px 12px;border:1px solid var(--line);border-radius:7px;font-size:13.5px;font-family:'Inter',sans-serif;background:#fff;color:var(--ink);}
 .mobile-sort{display:none;padding:9px 10px;border:1px solid var(--line);border-radius:7px;font-size:13px;font-family:'Inter',sans-serif;background:#fff;color:var(--ink);}
@@ -100,25 +115,27 @@ a{color:var(--blue);}
     </div>
   </div>
 
-  <h2>What this actually means for your payment</h2>
-  <div class="edu-grid">
-    <div class="edu-item">
-      <div class="edu-h">Your home's value moves, and the dollar amount moves with it</div>
-      <p>A MUD rate is applied per $100 of assessed value, not as a flat dollar figure. If the home appreciates, the dollar amount you pay through the MUD portion of your tax bill rises too, even if the district's rate itself never changes. A combined rate quoted at purchase is a snapshot of today's math, not a fixed payment for the life of the loan.</p>
+  <details class="edu-details">
+    <summary class="edu-summary"><span>What this actually means for your payment<span class="edu-hint">Tap to expand &mdash; four short reads</span></span></summary>
+    <div class="edu-grid">
+      <div class="edu-item">
+        <div class="edu-h">Your home's value moves, and the dollar amount moves with it</div>
+        <p>A MUD rate is applied per $100 of assessed value, not as a flat dollar figure. If the home appreciates, the dollar amount you pay through the MUD portion of your tax bill rises too, even if the district's rate itself never changes. A combined rate quoted at purchase is a snapshot of today's math, not a fixed payment for the life of the loan.</p>
+      </div>
+      <div class="edu-item">
+        <div class="edu-h">MUD rates can fall as the district pays down debt</div>
+        <p>Most MUDs exist to repay bonds issued for water, sewer, drainage, and road infrastructure. As that debt amortizes, the district's board can lower the rate, assuming no new bonds are issued for additional infrastructure. This is not guaranteed and varies district by district; check the district's own bond schedule and rate history rather than assuming a decline.</p>
+      </div>
+      <div class="edu-item">
+        <div class="edu-h">A MUD is part of your tax rate, not a separate bill</div>
+        <p>A MUD's rate is folded into the combined ad valorem rate on your property tax statement alongside city, county, school, and other jurisdictions. It shows up as one line inside your tax rate, not as a standalone invoice. That is the core distinction from a PID.</p>
+      </div>
+      <div class="edu-item">
+        <div class="edu-h">A PID is a different legal structure: a special assessment</div>
+        <p>A PID assessment is not a tax. It is a lien secured obligation tied to the specific lot, set by an assessment plan with its own balance, annual installment, and term, often fifteen to thirty years, and it can sometimes be prepaid in a lump sum. Ask the title company for the assessment plan and prepayment terms before closing; a combined-rate quote alone will not show it.</p>
+      </div>
     </div>
-    <div class="edu-item">
-      <div class="edu-h">MUD rates can fall as the district pays down debt</div>
-      <p>Most MUDs exist to repay bonds issued for water, sewer, drainage, and road infrastructure. As that debt amortizes, the district's board can lower the rate, assuming no new bonds are issued for additional infrastructure. This is not guaranteed and varies district by district; check the district's own bond schedule and rate history rather than assuming a decline.</p>
-    </div>
-    <div class="edu-item">
-      <div class="edu-h">A MUD is part of your tax rate, not a separate bill</div>
-      <p>A MUD's rate is folded into the combined ad valorem rate on your property tax statement alongside city, county, school, and other jurisdictions. It shows up as one line inside your tax rate, not as a standalone invoice. That is the core distinction from a PID.</p>
-    </div>
-    <div class="edu-item">
-      <div class="edu-h">A PID is a different legal structure: a special assessment</div>
-      <p>A PID assessment is not a tax. It is a lien secured obligation tied to the specific lot, set by an assessment plan with its own balance, annual installment, and term, often fifteen to thirty years, and it can sometimes be prepaid in a lump sum. Ask the title company for the assessment plan and prepayment terms before closing; a combined-rate quote alone will not show it.</p>
-    </div>
-  </div>
+  </details>
   <div class="note"><b>Keep reading:</b> <a href="texas-tax-reality-guide.html">Texas Tax Reality Guide</a> &middot; <a href="true-cost-calculator.html">True Cost Calculator</a> &middot; <a href="buyer-guides.html">Buyer Playbook</a> &middot; <a href="https://www.tceq.texas.gov/waterdistricts" target="_blank" rel="noopener">TCEQ water districts database</a></div>
 
 <section style="max-width:1100px;margin:32px auto;padding:0 16px;">
@@ -127,7 +144,7 @@ a{color:var(--blue);}
     <span class="lg-item"><span class="lg-dot" style="background:#1f4e79"></span>MUD</span>
     <span class="lg-item"><span class="lg-dot" style="background:#b45309"></span>PID</span>
   </div>
-  <p style="font-size:12px;color:#6b7280;margin-top:8px;">Map plots the districts in the table below by approximate location. Click a marker to zoom in and see the district name, type, combined rate, and source. Approximate coordinates; verify exact boundaries with TCEQ / the county appraisal district before relying on a specific address.</p>
+  <p style="font-size:12px;color:#6b7280;margin-top:8px;">Map plots the districts in the table below by approximate location. Click a marker to zoom in, highlight it, and shade an approximate area around it &mdash; that shaded circle is a location aid, not a surveyed MUD/PID boundary line. No parcel-level boundary data exists publicly for most of these districts; verify exact boundaries with TCEQ / the county appraisal district before relying on a specific address.</p>
 </section>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -144,8 +161,14 @@ a{color:var(--blue);}
     fetch('/atlas_districts.json', {cache:'no-store'}).then(function(r){ return r.json(); }).then(function(rows){
       var bounds = [];
       var activeMarker = null;
+      var activeShade = null;
       var baseStyle = { radius: 7, weight: 1, fillOpacity: 0.75 };
       var activeStyleExtra = { radius: 11, weight: 3, fillOpacity: 0.9 };
+      // No parcel/district boundary (GIS/shapefile) data exists for these districts today —
+      // atlas_districts.json only carries an approximate point per district. Rather than fake
+      // a precise-looking polygon, clicking shades an approximate service-area circle around the
+      // point and is labeled as such (see the popup + caption), instead of a surveyed boundary.
+      var APPROX_RADIUS_M = 750;
       rows.forEach(function(d){
         if (typeof d.approx_lat !== 'number' || typeof d.approx_lng !== 'number') return;
         var isMud = (d.district_type||'').toUpperCase().indexOf('MUD') !== -1;
@@ -161,7 +184,8 @@ a{color:var(--blue);}
           (d.city||'') + ', ' + (d.county||'') + ' County<br>' +
           'Combined rate: ' + rate + '<br>' +
           'Confidence: ' + (d.confidence||'unverified') + '<br>' +
-          src
+          src +
+          '<br><span style="color:#888;font-size:11px;">Shaded area is an approximate location radius, not a surveyed district boundary.</span>'
         );
         marker.on('click', function(){
           if (activeMarker && activeMarker !== marker) {
@@ -169,7 +193,12 @@ a{color:var(--blue);}
           }
           marker.setStyle({ radius: activeStyleExtra.radius, weight: activeStyleExtra.weight, fillOpacity: activeStyleExtra.fillOpacity });
           activeMarker = marker;
-          map.flyTo([d.approx_lat, d.approx_lng], Math.max(map.getZoom(), 13), { duration: 0.6 });
+          if (activeShade) { map.removeLayer(activeShade); }
+          activeShade = L.circle([d.approx_lat, d.approx_lng], {
+            radius: APPROX_RADIUS_M, color: color, weight: 1.5, fillColor: color, fillOpacity: 0.16, dashArray: '4,4'
+          }).addTo(map);
+          activeShade.bringToBack();
+          map.flyTo([d.approx_lat, d.approx_lng], Math.max(map.getZoom(), 14), { duration: 0.6 });
         });
         bounds.push([d.approx_lat, d.approx_lng]);
       });
@@ -183,6 +212,19 @@ a{color:var(--blue);}
   }
 })();
 </script>
+
+<div class="share-card">
+  <img src="share/mud-pid-atlas-portrait.png" alt="MUD & PID Atlas single sheet" loading="lazy">
+  <div class="sc-body">
+    <div class="sc-t">Share the MUD vs. PID breakdown</div>
+    <div class="sc-w">One graphic explaining the difference, the quick math, and where to verify &mdash; ready to save and send.</div>
+    <div class="sc-links">
+      <a href="share/mud-pid-atlas-portrait.png" download>Download portrait</a>
+      <a href="share/mud-pid-atlas-landscape.png" download>Download landscape</a>
+      <a href="share-kit.html">More share cards</a>
+    </div>
+  </div>
+</div>
 
 <h2>The atlas</h2>
   <p style="font-size:13px;color:var(--muted);">Search to narrow the list, tap a column to sort on desktop, or use the sort menu on mobile. Rates are the combined advertised or page verified rate we track for each community; the district column shows what our records note so far. Every community profile gets its full district picture pinned as verification reaches it.</p>
@@ -201,6 +243,7 @@ a{color:var(--blue);}
       <tr><td colspan="5" style="color:var(--muted);">Loading the community registry&hellip;</td></tr>
     </tbody>
   </table>
+  <button type="button" class="atlas-more" id="atlas-more" style="display:none;">Show all communities</button>
 
   <div class="note"><b>How to verify your exact lot:</b> ask the builder, in writing, for every taxing entity on the lot; cross check the MUD on the <a href="https://www.tceq.texas.gov/waterdistricts" target="_blank" rel="noopener">TCEQ water districts database</a>; pull the PID assessment plan through the title company; then re run your payment with the true combined rate in the <a href="true-cost-calculator.html">True Cost Calculator</a>. The <a href="texas-tax-reality-guide.html">Texas Tax Reality Guide</a> walks through all of it.</p></div>
 
@@ -231,8 +274,10 @@ a{color:var(--blue);}
     var stamp = document.getElementById('atlas-stamp');
     if (stamp && reg.updated) stamp.textContent = rows.length + ' communities tracked · registry updated ' + reg.updated + ' · grows with every sweep and field visit';
     var key = 'rate', dir = -1, searchTerm = '';
+    var PAGE_SIZE = 12, showAll = false;
     var searchInput = document.getElementById('atlas-search');
     var mobileSort = document.getElementById('atlas-sort-mobile');
+    var moreBtn = document.getElementById('atlas-more');
     function visibleRows(){
       if (!searchTerm) return rows;
       return rows.filter(function(r){
@@ -249,9 +294,13 @@ a{color:var(--blue);}
       if (mobileSort && mobileSort.value !== key) mobileSort.value = key;
       if (!sorted.length) {
         document.getElementById('atlas-body').innerHTML = '<tr><td colspan="5" style="color:var(--muted);">No communities match that search.</td></tr>';
+        if (moreBtn) moreBtn.style.display = 'none';
         return;
       }
-      document.getElementById('atlas-body').innerHTML = sorted.map(function(r){
+      // Searching always shows every match, unfiltered by the collapse cap; otherwise cap to
+      // PAGE_SIZE until "Show all" is clicked so the table doesn't dump all rows at once.
+      var capped = (!searchTerm && !showAll) ? sorted.slice(0, PAGE_SIZE) : sorted;
+      document.getElementById('atlas-body').innerHTML = capped.map(function(r){
         var distTag = r.dist === 'verify' ? '<span class="tag chk">verify with TCEQ</span>'
           : r.dist === 'profiled' ? '<span class="tag ver">profiled</span>'
           : '<span class="tag mud">' + esc(r.dist) + ' noted</span>';
@@ -261,6 +310,20 @@ a{color:var(--blue);}
           '<td data-label="District notes">' + distTag + '</td>' +
           '<td data-label="Source" style="font-family:Inter, sans-serif;font-size:10.5px;color:#888;">' + esc(r.src) + '</td></tr>';
       }).join('');
+      if (moreBtn) {
+        if (!searchTerm && !showAll && sorted.length > PAGE_SIZE) {
+          moreBtn.style.display = 'block';
+          moreBtn.textContent = 'Show all ' + sorted.length + ' communities';
+        } else {
+          moreBtn.style.display = 'none';
+        }
+      }
+    }
+    if (moreBtn) {
+      moreBtn.addEventListener('click', function(){
+        showAll = true;
+        render();
+      });
     }
     document.querySelectorAll('#atlas th').forEach(function(th){
       th.addEventListener('click', function(){
