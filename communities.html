@@ -1862,24 +1862,10 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
     </div>
 
     <div class="explorer-layout" id="compare">
-      <div class="explorer-map-wrap"><div class="map-view-toggle" style="display:flex;gap:8px;margin-bottom:10px;">
-  <button type="button" id="map-view-btn" class="tag-btn mono">MAP VIEW</button>
-  <button type="button" id="grid-view-btn" class="tag-btn mono">GRID VIEW</button>
-</div>
+      <div class="explorer-map-wrap">
 <div id="nhd-leaflet-map" style="height:520px;border-radius:2px;border:1px solid #E0E0E0;margin-bottom:12px;"></div>
 
-        <svg class="explorer-map" id="explorer-map" viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Austin-area new home communities">
-          <defs>
-            <pattern id="mapGrid" width="28" height="28" patternUnits="userSpaceOnUse">
-              <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#E5E5E5" stroke-width="1"/>
-            </pattern>
-          </defs>
-          <rect width="600" height="460" fill="url(#mapGrid)"/>
-          <circle cx="300" cy="230" r="5" fill="#000000"/>
-          <text x="300" y="216" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#000000">AUSTIN</text>
-          <!-- pins injected by JS -->
-          <g id="map-pins"></g>
-        </svg>
+        
         <div class="mono" style="display:flex;gap:16px;flex-wrap:wrap;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#666;padding:8px 4px 0;">
           <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#000;border:2px solid #fff;box-shadow:0 0 0 1px #ccc;"></span> Tracked &middot; verified</span>
           <span style="display:inline-flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid #2B4FE0;"></span> Researched &middot; field visit pending</span>
