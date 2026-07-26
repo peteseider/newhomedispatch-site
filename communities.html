@@ -2807,9 +2807,9 @@ const NHD_DATA = {
       }).addTo(map);
       window.__nhdShadeCircle.bindTooltip('Approximate area, not a surveyed boundary', {direction:'top', offset:[0,-6]});
       window.__nhdShadeCircle.bringToBack();
-      map.flyTo([gc[0], gc[1]], Math.max(map.getZoom(), 13), { duration: 0.6 });
+      map.setView([gc[0], gc[1]], Math.max(map.getZoom(), 13));
     } else if (map && activeBuilder && activeBuilder !== 'all' && matchedCoords.length) {
-      map.flyToBounds(matchedCoords, { padding: [40,40], maxZoom: 12 });
+      map.fitBounds(matchedCoords, { padding: [40,40], maxZoom: 12 });
     }
   }
 function renderPins(){
