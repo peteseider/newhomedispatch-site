@@ -381,6 +381,14 @@
     </div>
 
     </details>
+
+<details class="fold"><summary class="kick" id="price-cut-watch"><span class="tw">▸</span> Price-cut watch <span class="r">entry-level series, folded in from the Scoreboard</span></summary>
+<div class="rule"></div>
+<div id="pcwBody" style="border:1px solid var(--line);border-radius:6px;padding:14px 16px;font-size:13px;line-height:1.7;">
+<div style="color:var(--muted);font-size:12.5px;">Loading&hellip;</div>
+</div>
+<p style="font-size:11px;color:#9a9a9a;margin-top:8px;line-height:1.6;">Which builders are quietly marking down sub-$300K inventory, from the same entry-level series behind the price floor above. The Friday Scoreboard folded into this page &mdash; one surface, not two.</p>
+</details>
     <details class="fold"><summary class="kick"><span class="tw">▸</span> The deadline clock, next 14 days</summary>
     <div class="rule"></div>
     <table id="dl-table">
@@ -906,7 +914,20 @@
       if (v) txt('floor-val', '$' + Number(v).toLocaleString('en-US'));
       var bits = [f.community, f.city || f.location, f.builder].filter(Boolean);
       if (bits.length) txt('floor-note', bits.join(' · '));
-    })();
+    var pcw = document.getElementById('pcwBody');
+      if (pcw && pf.observations && pf.observations.length) {
+        var o2 = pf.observations[pf.observations.length - 1];
+        var cuts2 = {}, tot2 = {};
+        (o2.entries || []).forEach(function (e) {
+          tot2[e.builder] = (tot2[e.builder] || 0) + 1;
+          if ((e.flags || []).indexOf('recently-reduced') > -1) cuts2[e.builder] = (cuts2[e.builder] || 0) + 1;
+        });
+        var cb2 = Object.keys(tot2).filter(function (b) { return cuts2[b]; });
+        pcw.innerHTML = cb2.length
+          ? cb2.map(function (b) { return '<b>' + esc(b) + '</b>: ' + cuts2[b] + ' of ' + tot2[b] + ' sub-$300K listings flagged reduced'; }).join(' · ')
+          : 'No sub-$300K listings currently flagged as reduced.';
+      }
+      })();
 
     /* ---- WHERE WE STAND trend board ---- */
     (function () {
