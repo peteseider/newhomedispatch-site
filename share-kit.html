@@ -87,6 +87,10 @@ a{color:var(--blue);}
   <p class="sub">The seven-question field workbook for comparing builders on the same terms &mdash; real price, what&rsquo;s included, lot &amp; community costs, timeline, warranty, communication, and financing. Plus the finished reel.</p>
   <div class="grid" id="dtc-cards"></div>
 
+  <h2>The Zero-Out-of-Pocket Playbook</h2>
+  <p class="sub">The three levers for a low-cash new-construction purchase, the Rate Test to run before accepting any builder credit, and the six honest tradeoffs. Reel only.</p>
+  <div class="grid" id="zoop-cards"></div>
+
   <div class="note"><b>Where else these live:</b> every file on this page is also delivered to the Drive folder <a href="https://drive.google.com/drive/folders/1I-p_shUoMhlMfbUXnCgvhG-MxV4C_mnF" target="_blank" rel="noopener">Social Media &rsaquo; Daily Hot Sheet, Social Cards</a> at 7am and 7pm daily. This page is the fastest path: it always shows the current render, with no folder digging.</div>
 
   <div class="foot">
@@ -132,6 +136,9 @@ a{color:var(--blue);}
   document.getElementById('dtc-cards').innerHTML =
     '<div class="card"><div class="b" style="padding-top:14px;"><div class="t">The finished reel (MP4)</div><div class="w">27 seconds, vertical &mdash; the model-home-is-a-showroom-car framing, the 7-category framework, and the honest conclusion.</div>' +
     '<a class="dl" href="share/dare-to-compare-reel.mp4" download>Download MP4</a></div></div>';
+  document.getElementById('zoop-cards').innerHTML =
+    '<div class="card"><div class="b" style="padding-top:14px;"><div class="t">The finished reel (MP4)</div><div class="w">28 seconds, vertical &mdash; the three levers, the Rate Test, and the six honest costs of a zero-out-of-pocket deal.</div>' +
+    '<a class="dl" href="share/zero-out-of-pocket-reel.mp4" download>Download MP4</a></div></div>';
 
   fetch('reporting/sweep-latest.json', {cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(s){
     if (s && s.ranAtLabel) document.getElementById('kit-stamp').innerHTML = '<span class="dot"></span>Live cards rendered from the sweep of ' + s.ranAtLabel + '. They regenerate automatically with every sweep.';
