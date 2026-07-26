@@ -1071,7 +1071,7 @@
   /* ---- v75 mobile compare fix: the bar was in-flow BELOW all 28 cards, so on
      phones selecting a community produced no visible feedback; tap targets were
      ~13px. Fixed bottom bar + real touch targets. ---- */
-  @media (max-width: 899px){
+  @media (max-width: 99999px){
     .compare-bar{
       position:fixed; left:0; right:0; bottom:0; z-index:80;
       margin:0; padding:14px 16px calc(14px + env(safe-area-inset-bottom));
@@ -1108,7 +1108,7 @@
 
   /* ---- Comparison matrix (sticky label col + swipeable community cols) ---- */
   .compare-table-wrap{margin-top:16px; overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--line);}
-  .compare-matrix{--cols:3; display:grid; grid-template-columns:minmax(140px,190px) repeat(var(--cols), minmax(200px,1fr)); min-width:max-content;}
+  .compare-matrix{--cols:3; display:block; min-width:max-content;}
   .cm-cell{padding:13px 16px; border-bottom:1px solid var(--line); border-right:1px solid var(--line); font-size:0.86rem; line-height:1.5; background:#fff;}
   .cm-cell:last-child{border-right:none;}
   .cm-label{position:sticky; left:0; z-index:2; background:var(--paper-alt); font-family:'Inter', sans-serif; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); display:flex; align-items:center;}
@@ -1123,9 +1123,9 @@
   .compare-legend .lg-est{color:var(--blueprint); font-weight:600;}
   .compare-matrix.diff-only .cm-row:not(.cm-row-diff):not(.cm-row-head){display:none;}
   /* keep matrix as contents so grid rows work */
-  .cm-row{display:contents;}
+  .cm-row{display:grid; grid-template-columns:minmax(140px,190px) repeat(var(--cols), minmax(200px,1fr));}
   @media (max-width:640px){
-    .compare-matrix{grid-template-columns:minmax(116px,132px) repeat(var(--cols), 78vw); scroll-snap-type:x proximity;}
+    .compare-matrix{scroll-snap-type:x proximity;} .cm-row{grid-template-columns:minmax(116px,132px) repeat(var(--cols), 78vw);}
     .cm-head:not(.cm-label){scroll-snap-align:start;}
   }
   .compare-disclaimer{
