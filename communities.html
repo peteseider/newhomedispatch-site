@@ -2809,7 +2809,9 @@ const NHD_DATA = {
       window.__nhdShadeCircle.bringToBack();
       map.setView([gc[0], gc[1]], Math.max(map.getZoom(), 13));
     } else if (map && activeBuilder && activeBuilder !== 'all' && matchedCoords.length) {
-      map.fitBounds(matchedCoords, { padding: [40,40], maxZoom: 12 });
+      var __b = L.latLngBounds(matchedCoords);
+        var __z = matchedCoords.length === 1 ? 13 : Math.min(12, map.getBoundsZoom(__b, false, [40,40]));
+        map.setView(__b.getCenter(), __z, {animate:false});
     }
   }
 function renderPins(){
