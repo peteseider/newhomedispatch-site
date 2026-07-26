@@ -2780,12 +2780,37 @@ const NHD_DATA = {
   
   function syncMapMarkers(){
     if (!window.mapInited) return;
+    var map = window.NHD_MAP;
+    var matchedCoords = [];
     NHD_DATA.communities.forEach(function(c){
       var entry = window.NHD_GEO && window.NHD_GEO[c.id];
       if (!entry || !entry[3]) return;
       var match = communityMatchesFilter(c);
-      entry[3].setStyle({opacity: match ? 1 : 0.15, fillOpacity: match ? 1 : 0.08});
+      var isActive = activeCommunity === c.id;
+      var base = entry[4] || 6;
+      entry[3].setStyle({
+        opacity: match ? 1 : 0.15,
+        fillOpacity: match ? 1 : 0.08,
+        weight: isActive ? 3 : 2,
+        radius: isActive ? base + 4 : base
+      });
+      if (match) matchedCoords.push([entry[0], entry[1]]);
     });
+    // No parcel/community boundary (GIS) data exists for these points -- the shaded
+    // circle below is a labeled approximate-location aid, not a surveyed boundary,
+    // matching the honest approach used on the MUD/PID Atlas map.
+    if (map && window.__nhdShadeCircle) { map.removeLayer(window.__nhdShadeCircle); window.__nhdShadeCircle = null; }
+    if (map && activeCommunity && window.NHD_GEO && window.NHD_GEO[activeCommunity]) {
+      var gc = window.NHD_GEO[activeCommunity];
+      window.__nhdShadeCircle = L.circle([gc[0], gc[1]], {
+        radius: 900, color: '#2B4FE0', weight: 1.5, fillColor: '#2B4FE0', fillOpacity: 0.14, dashArray: '4,4'
+      }).addTo(map);
+      window.__nhdShadeCircle.bindTooltip('Approximate area, not a surveyed boundary', {direction:'top', offset:[0,-6]});
+      window.__nhdShadeCircle.bringToBack();
+      map.flyTo([gc[0], gc[1]], Math.max(map.getZoom(), 13), { duration: 0.6 });
+    } else if (map && activeBuilder && activeBuilder !== 'all' && matchedCoords.length) {
+      map.flyToBounds(matchedCoords, { padding: [40,40], maxZoom: 12 });
+    }
   }
 function renderPins(){
     pinsG.innerHTML = '';
@@ -2870,7 +2895,9 @@ function renderPins(){
       card.addEventListener('click', ()=>{
         if(!communities.length){ location.href = 'builders/' + b.id + '.html'; return; }
         setBuilderFilter(b.id);
-        document.getElementById('communities').scrollIntoView({behavior:'smooth', block:'start'});
+        if (typeof showMap === 'function') showMap();
+        var mapTarget = document.getElementById('nhd-leaflet-map') || document.getElementById('communities');
+        mapTarget.scrollIntoView({behavior:'smooth', block:'start'});
       });
       builderGrid.appendChild(card);
     });
@@ -3217,6 +3244,7 @@ function renderPins(){
       });
       cluster.addLayer(marker);
       NHD_GEO[id].push(marker);
+      NHD_GEO[id].push(verified ? 7 : 6);
     });
     map.addLayer(cluster);
 
