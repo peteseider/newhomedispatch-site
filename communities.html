@@ -1111,7 +1111,7 @@
   .compare-matrix{--cols:3; display:block; min-width:max-content;}
   .cm-cell{padding:13px 16px; border-bottom:1px solid var(--line); border-right:1px solid var(--line); font-size:0.86rem; line-height:1.5; background:#fff;}
   .cm-cell:last-child{border-right:none;}
-  .cm-label{position:sticky; left:0; z-index:2; background:var(--paper-alt); font-family:'Inter', sans-serif; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); display:flex; align-items:center;}
+  .cm-label{position:sticky; left:0; z-index:2; isolation:isolate; transform:translateZ(0); -webkit-transform:translateZ(0); background:var(--paper-alt); font-family:'Inter', sans-serif; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); display:flex; align-items:center;}
   .cm-head{position:sticky; top:0; z-index:3; background:var(--ink); color:#fff; font-family:'Archivo Expanded',sans-serif; font-weight:700; font-size:0.92rem; border-bottom:none;}
   .cm-head.cm-label{z-index:4; background:var(--ink); color:#fff;}
   .cm-row-diff .cm-cell{background:rgba(43,79,224,0.045);}
@@ -1793,7 +1793,7 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
   <div class="wrap">
     <img class="austin-skyline" src="/assets/austin-skyline-explorer.jpg" alt="Aerial photo of the Austin, Texas skyline along Lady Bird Lake" loading="lazy">
     <div class="eyebrow mono">The Explorer</div>
-    <h2 class="section-title">Seventy-four communities tracked, eleven verified and cross-linked.</h2>
+    <h2 class="section-title">Seventy-six communities tracked, eleven verified and cross-linked.</h2>
     <p class="directory-sub">Austin-area coverage, 76 communities on the map: 11 fully verified and tracked, 65 researched with field verification pending (blue pins), expanding on a rolling basis. Filter by what matters to you, then select up to three to compare side by side. Builder rosters, pricing, school districts, and commute notes are pulled from public sources and re-checked on an ongoing basis, every page shows its own verification date, see the <a href='/methodology' style='color:var(--ink); text-decoration:underline;'>full methodology</a>.</p>
 
     <div class="explorer-toolbar explorer-toolbar-regions">
