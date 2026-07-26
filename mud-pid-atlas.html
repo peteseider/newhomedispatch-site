@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>The MUD &amp; PID Atlas | New Home Dispatch</title>
+<title>The MUD & PID Atlas | New Home Dispatch</title>
 <meta name="description" content="Special tax districts around Austin new construction, community by community: combined tax rates, MUD and PID flags, verification status, and how to confirm the district on your exact lot.">
 <link rel="canonical" href="https://newhomedispatch.com/mud-pid-atlas">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -38,19 +38,45 @@ tr:last-child td{border-bottom:none;}
 .foot{border-top:1px solid var(--line);margin-top:44px;padding-top:18px;font-size:12px;color:var(--muted);line-height:1.7;}
 a{color:var(--blue);}
 .stampline{font-family:'Inter', sans-serif;font-size:10.5px;color:var(--muted);margin:8px 0 14px;letter-spacing:.03em;}
+.hamburger{display:none;background:none;border:none;font-size:24px;line-height:1;cursor:pointer;color:var(--ink);padding:4px 6px;}
+.map-legend{display:flex;gap:18px;margin-top:10px;font-family:'Inter',sans-serif;font-size:12.5px;color:#333;flex-wrap:wrap;}
+.lg-item{display:flex;align-items:center;gap:6px;}
+.lg-dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none;}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 22px;}
+.edu-item{border:1px solid var(--line);border-radius:9px;background:#fff;padding:16px 18px;}
+.edu-item .edu-h{font-weight:800;font-size:14.5px;margin-bottom:6px;}
+.edu-item p{font-size:13px;margin:0;line-height:1.65;}
+.atlas-controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 12px;}
+.atlas-controls input[type="search"]{flex:1;min-width:200px;padding:9px 12px;border:1px solid var(--line);border-radius:7px;font-size:13.5px;font-family:'Inter',sans-serif;background:#fff;color:var(--ink);}
+.mobile-sort{display:none;padding:9px 10px;border:1px solid var(--line);border-radius:7px;font-size:13px;font-family:'Inter',sans-serif;background:#fff;color:var(--ink);}
+@media(max-width:680px){
+  .top{flex-wrap:wrap;position:relative;}
+  .hamburger{display:block;}
+  .links{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:10px;padding-top:12px;order:3;}
+  .links.open{display:flex;}
+  .links a{margin-left:0;}
+  .edu-grid{grid-template-columns:1fr;}
+}
 @media(max-width:560px){
+  .wrap{padding:24px 16px 50px;}
+  h1{font-size:clamp(26px,7vw,34px);}
+  .lead{font-size:15px;}
+  .duo{flex-direction:column;}
+  .mobile-sort{display:block;}
   table, tbody, tr{display:block;width:100%;}
   thead{display:none;}
   tr{border-bottom:1px solid var(--line);padding:10px 12px;background:#fff;}
-  td{display:block;border:none;padding:2px 0;}
-  td:first-child{font-size:14px;}
+  td{display:block;border:none;padding:3px 0;}
+  td:first-child{font-size:14px;padding-top:2px;}
+  td[data-label]::before{content:attr(data-label);display:block;font-family:'Inter',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1px;}
 }
 </style>
 </head>
 <body>
 <nav class="top">
   <a href="index.html" class="brand">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</a>
-  <div class="links">
+  <button class="hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+  <div class="links" id="nav-links">
     <a href="index.html">Home</a>
     <a href="daily-hot-sheet.html">Daily Hot Sheet</a>
     <a href="communities.html">Community Explorer</a>
@@ -74,10 +100,34 @@ a{color:var(--blue);}
     </div>
   </div>
 
-  
+  <h2>What this actually means for your payment</h2>
+  <div class="edu-grid">
+    <div class="edu-item">
+      <div class="edu-h">Your home's value moves, and the dollar amount moves with it</div>
+      <p>A MUD rate is applied per $100 of assessed value, not as a flat dollar figure. If the home appreciates, the dollar amount you pay through the MUD portion of your tax bill rises too, even if the district's rate itself never changes. A combined rate quoted at purchase is a snapshot of today's math, not a fixed payment for the life of the loan.</p>
+    </div>
+    <div class="edu-item">
+      <div class="edu-h">MUD rates can fall as the district pays down debt</div>
+      <p>Most MUDs exist to repay bonds issued for water, sewer, drainage, and road infrastructure. As that debt amortizes, the district's board can lower the rate, assuming no new bonds are issued for additional infrastructure. This is not guaranteed and varies district by district; check the district's own bond schedule and rate history rather than assuming a decline.</p>
+    </div>
+    <div class="edu-item">
+      <div class="edu-h">A MUD is part of your tax rate, not a separate bill</div>
+      <p>A MUD's rate is folded into the combined ad valorem rate on your property tax statement alongside city, county, school, and other jurisdictions. It shows up as one line inside your tax rate, not as a standalone invoice. That is the core distinction from a PID.</p>
+    </div>
+    <div class="edu-item">
+      <div class="edu-h">A PID is a different legal structure: a special assessment</div>
+      <p>A PID assessment is not a tax. It is a lien secured obligation tied to the specific lot, set by an assessment plan with its own balance, annual installment, and term, often fifteen to thirty years, and it can sometimes be prepaid in a lump sum. Ask the title company for the assessment plan and prepayment terms before closing; a combined-rate quote alone will not show it.</p>
+    </div>
+  </div>
+  <div class="note"><b>Keep reading:</b> <a href="texas-tax-reality-guide.html">Texas Tax Reality Guide</a> &middot; <a href="true-cost-calculator.html">True Cost Calculator</a> &middot; <a href="buyer-guides.html">Buyer Playbook</a> &middot; <a href="https://www.tceq.texas.gov/waterdistricts" target="_blank" rel="noopener">TCEQ water districts database</a></div>
+
 <section style="max-width:1100px;margin:32px auto;padding:0 16px;">
   <div id="atlas-map" style="height:440px;border-radius:10px;overflow:hidden;border:1px solid #e2e6ea;"></div>
-  <p style="font-size:12px;color:#6b7280;margin-top:8px;">Map plots the districts in the table below by approximate location. Click a marker for the district name, type, combined rate, and source. Approximate coordinates; verify exact boundaries with TCEQ / the county appraisal district before relying on a specific address.</p>
+  <div class="map-legend">
+    <span class="lg-item"><span class="lg-dot" style="background:#1f4e79"></span>MUD</span>
+    <span class="lg-item"><span class="lg-dot" style="background:#b45309"></span>PID</span>
+  </div>
+  <p style="font-size:12px;color:#6b7280;margin-top:8px;">Map plots the districts in the table below by approximate location. Click a marker to zoom in and see the district name, type, combined rate, and source. Approximate coordinates; verify exact boundaries with TCEQ / the county appraisal district before relying on a specific address.</p>
 </section>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -93,12 +143,15 @@ a{color:var(--blue);}
     }).addTo(map);
     fetch('/atlas_districts.json', {cache:'no-store'}).then(function(r){ return r.json(); }).then(function(rows){
       var bounds = [];
+      var activeMarker = null;
+      var baseStyle = { radius: 7, weight: 1, fillOpacity: 0.75 };
+      var activeStyleExtra = { radius: 11, weight: 3, fillOpacity: 0.9 };
       rows.forEach(function(d){
         if (typeof d.approx_lat !== 'number' || typeof d.approx_lng !== 'number') return;
         var isMud = (d.district_type||'').toUpperCase().indexOf('MUD') !== -1;
         var color = isMud ? '#1f4e79' : '#b45309';
         var marker = L.circleMarker([d.approx_lat, d.approx_lng], {
-          radius: 7, color: color, fillColor: color, fillOpacity: 0.75, weight: 1
+          radius: baseStyle.radius, color: color, fillColor: color, fillOpacity: baseStyle.fillOpacity, weight: baseStyle.weight
         }).addTo(map);
         var rate = (d.rate_per_100 != null) ? (d.rate_per_100 + '%') : 'rate not verified';
         var src = d.source_url ? ('<a href="'+d.source_url+'" target="_blank" rel="noopener">'+ (d.source||'source') +'</a>') : (d.source||'');
@@ -110,6 +163,14 @@ a{color:var(--blue);}
           'Confidence: ' + (d.confidence||'unverified') + '<br>' +
           src
         );
+        marker.on('click', function(){
+          if (activeMarker && activeMarker !== marker) {
+            activeMarker.setStyle({ radius: baseStyle.radius, weight: baseStyle.weight, fillOpacity: baseStyle.fillOpacity });
+          }
+          marker.setStyle({ radius: activeStyleExtra.radius, weight: activeStyleExtra.weight, fillOpacity: activeStyleExtra.fillOpacity });
+          activeMarker = marker;
+          map.flyTo([d.approx_lat, d.approx_lng], Math.max(map.getZoom(), 13), { duration: 0.6 });
+        });
         bounds.push([d.approx_lat, d.approx_lng]);
       });
       if (bounds.length) map.fitBounds(bounds, {padding:[20,20]});
@@ -124,7 +185,16 @@ a{color:var(--blue);}
 </script>
 
 <h2>The atlas</h2>
-  <p style="font-size:13px;color:var(--muted);">Tap a column to sort. Rates are the combined advertised or page verified rate we track for each community; the district column shows what our records note so far. Every community profile gets its full district picture pinned as verification reaches it.</p>
+  <p style="font-size:13px;color:var(--muted);">Search to narrow the list, tap a column to sort on desktop, or use the sort menu on mobile. Rates are the combined advertised or page verified rate we track for each community; the district column shows what our records note so far. Every community profile gets its full district picture pinned as verification reaches it.</p>
+  <div class="atlas-controls">
+    <input type="search" id="atlas-search" placeholder="Search by community or city&hellip;" aria-label="Search communities">
+    <select id="atlas-sort-mobile" class="mobile-sort" aria-label="Sort communities by">
+      <option value="rate">Sort: Combined rate</option>
+      <option value="name">Sort: Community name</option>
+      <option value="city">Sort: City</option>
+      <option value="dist">Sort: District notes</option>
+    </select>
+  </div>
   <table id="atlas">
     <thead><tr><th data-k="name">Community</th><th data-k="city">City</th><th data-k="rate">Combined rate</th><th data-k="dist">District notes</th><th data-k="src">Source</th></tr></thead>
     <tbody id="atlas-body">
@@ -160,32 +230,71 @@ a{color:var(--blue);}
     });
     var stamp = document.getElementById('atlas-stamp');
     if (stamp && reg.updated) stamp.textContent = rows.length + ' communities tracked · registry updated ' + reg.updated + ' · grows with every sweep and field visit';
-    var key = 'rate', dir = -1;
+    var key = 'rate', dir = -1, searchTerm = '';
+    var searchInput = document.getElementById('atlas-search');
+    var mobileSort = document.getElementById('atlas-sort-mobile');
+    function visibleRows(){
+      if (!searchTerm) return rows;
+      return rows.filter(function(r){
+        return (r.name||'').toLowerCase().indexOf(searchTerm) !== -1 || (r.city||'').toLowerCase().indexOf(searchTerm) !== -1;
+      });
+    }
     function render(){
-      var sorted = rows.slice().sort(function(a,b){
+      var list = visibleRows();
+      var sorted = list.slice().sort(function(a,b){
         var av = a[key], bv = b[key];
         if (key === 'rate') { av = av == null ? -1 : av; bv = bv == null ? -1 : bv; return (bv - av) * (dir === -1 ? 1 : -1); }
         return String(av).localeCompare(String(bv)) * (dir === -1 ? -1 : 1);
       });
+      if (mobileSort && mobileSort.value !== key) mobileSort.value = key;
+      if (!sorted.length) {
+        document.getElementById('atlas-body').innerHTML = '<tr><td colspan="5" style="color:var(--muted);">No communities match that search.</td></tr>';
+        return;
+      }
       document.getElementById('atlas-body').innerHTML = sorted.map(function(r){
         var distTag = r.dist === 'verify' ? '<span class="tag chk">verify with TCEQ</span>'
           : r.dist === 'profiled' ? '<span class="tag ver">profiled</span>'
           : '<span class="tag mud">' + esc(r.dist) + ' noted</span>';
-        return '<tr><td><a href="' + esc(r.url) + '"><b>' + esc(r.name) + '</b></a></td>' +
-          '<td>' + esc(r.city) + '</td>' +
-          '<td class="rate">' + (r.rate != null ? r.rate.toFixed(2) + '%' : '<span style="color:#9a9a9a;">pending</span>') + '</td>' +
-          '<td>' + distTag + '</td>' +
-          '<td style="font-family:Inter, sans-serif;font-size:10.5px;color:#888;">' + esc(r.src) + '</td></tr>';
+        return '<tr><td data-label="Community"><a href="' + esc(r.url) + '"><b>' + esc(r.name) + '</b></a></td>' +
+          '<td data-label="City">' + esc(r.city) + '</td>' +
+          '<td data-label="Combined rate" class="rate">' + (r.rate != null ? r.rate.toFixed(2) + '%' : '<span style="color:#9a9a9a;">pending</span>') + '</td>' +
+          '<td data-label="District notes">' + distTag + '</td>' +
+          '<td data-label="Source" style="font-family:Inter, sans-serif;font-size:10.5px;color:#888;">' + esc(r.src) + '</td></tr>';
       }).join('');
     }
     document.querySelectorAll('#atlas th').forEach(function(th){
       th.addEventListener('click', function(){
-        var k = th.getAttribute('data-k') === 'rate' ? 'rate' : th.getAttribute('data-k');
+        var k = th.getAttribute('data-k');
         if (k === key) dir = -dir; else { key = k; dir = -1; }
         render();
       });
     });
+    if (searchInput) {
+      searchInput.addEventListener('input', function(){
+        searchTerm = this.value.trim().toLowerCase();
+        render();
+      });
+    }
+    if (mobileSort) {
+      mobileSort.value = key;
+      mobileSort.addEventListener('change', function(){
+        key = this.value;
+        dir = -1;
+        render();
+      });
+    }
     render();
+  });
+})();
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (!btn || !links) return;
+  btn.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 })();
 </script>
