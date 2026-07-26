@@ -1011,6 +1011,9 @@
     color:var(--ink);
   }
   .tag-btn:hover{border-color:var(--ink);}
+  .tag-btn-extra{display:contents;}
+  .tag-btn-more{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .tag-btn-more:hover{opacity:0.85;}
 
   .explorer-grid, .builder-grid{
     display:grid;
@@ -2876,10 +2879,11 @@ function renderPins(){
     if(activeCommunity){
       const c = byId(NHD_DATA.communities, activeCommunity);
       if(window.NHD) NHD.trackEvent('community_view', {community: activeCommunity, source: 'explorer_panel'});
-      const builderTags = c.builders.map(bid=>{
-        const b = byId(NHD_DATA.builders, bid);
-        return `<button class="tag-btn mono" data-builder="${bid}">${b.name}</button>`;
-      }).join('');
+      const buildTag = (bid) => { const b = byId(NHD_DATA.builders, bid); return `<button class="tag-btn mono" data-builder="${bid}">${b.name}</button>`; };
+      const MAX_VISIBLE_BUILDERS = 3;
+      const builderTags = c.builders.length > MAX_VISIBLE_BUILDERS
+        ? c.builders.slice(0, MAX_VISIBLE_BUILDERS).map(buildTag).join('') + `<button type="button" class="tag-btn tag-btn-more mono">+${c.builders.length - MAX_VISIBLE_BUILDERS} more</button><span class="tag-btn-extra" hidden>${c.builders.slice(MAX_VISIBLE_BUILDERS).map(buildTag).join('')}</span>`
+        : c.builders.map(buildTag).join('');
       panelDetail.innerHTML = `
         <span class="mono panel-region">${c.region} \u00b7 ${c.area} \u00b7 ${c.researched ? 'Researched \u00b7 field verification pending' : 'Verified July 2026'}</span>
         <h3>${c.name}</h3>
@@ -2898,9 +2902,21 @@ function renderPins(){
         <div class="panel-disclaimer">Estimated payment is illustrative only (20% down, 30-yr fixed at 6.5%, plus tax and a blended HOA estimate) \u2014 not a lending quote. Confirm exact figures with a lender.</div>
         <a href="communities/${c.id}.html" class="btn btn-outline" style="margin-top:14px; width:100%; justify-content:center;">View Full Profile &rarr;</a>
       `;
-      panelDetail.querySelectorAll('.tag-btn').forEach(btn=>{
+      panelDetail.querySelectorAll('.tag-btn[data-builder]').forEach(btn=>{
         btn.addEventListener('click', (e)=>{ e.stopPropagation(); setBuilderFilter(btn.dataset.builder); });
       });
+      const moreBtn = panelDetail.querySelector('.tag-btn-more');
+      if(moreBtn){
+        moreBtn.addEventListener('click', (e)=>{
+          e.stopPropagation();
+          const extra = panelDetail.querySelector('.tag-btn-extra');
+          extra.hidden = false;
+          extra.querySelectorAll('.tag-btn[data-builder]').forEach(btn=>{
+            btn.addEventListener('click', (ev)=>{ ev.stopPropagation(); setBuilderFilter(btn.dataset.builder); });
+          });
+          moreBtn.remove();
+        });
+      }
       panelEmpty.style.display = 'none';
       panelDetail.style.display = 'block';
     } else {
@@ -3172,7 +3188,7 @@ function renderPins(){
       attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors \u00a9 <a href="https://carto.com/attributions">CARTO</a>',
       subdomains: 'abcd', maxZoom: 19
     }).addTo(map);
-    var cluster = L.markerClusterGroup({maxClusterRadius:42});
+    var cluster = L.markerClusterGroup({maxClusterRadius:60, spiderfyOnMaxZoom:true, showCoverageOnHover:false});
     Object.keys(NHD_GEO).forEach(function(id){
       var g = NHD_GEO[id];
       var verified = VERIFIED_IDS.indexOf(id) > -1;
