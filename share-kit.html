@@ -75,6 +75,10 @@ a{color:var(--blue);}
   <p class="sub">Four evergreen slides on reading a builder deal. Post any time; the lesson does not expire.</p>
   <div class="grid" id="edu-cards"></div>
 
+  <h2>The MUD &amp; PID Atlas</h2>
+  <p class="sub">The special-district single sheet: MUD vs PID explained in plain terms, plus the quick math on how a home's dollar tax bill still rises even when the district's rate never moves. Links back to the full atlas.</p>
+  <div class="grid" id="mudpid-cards"></div>
+
   <div class="note"><b>Where else these live:</b> every file on this page is also delivered to the Drive folder <a href="https://drive.google.com/drive/folders/1I-p_shUoMhlMfbUXnCgvhG-MxV4C_mnF" target="_blank" rel="noopener">Social Media &rsaquo; Daily Hot Sheet, Social Cards</a> at 7am and 7pm daily. This page is the fastest path: it always shows the current render, with no folder digging.</div>
 
   <div class="foot">
@@ -93,6 +97,10 @@ a{color:var(--blue);}
   ];
   var REEL = [1,2,3,4,5,6].map(function(n){ return {f:'reel-deal-'+n, t:'Reel slide '+n, w: n===6 ? 'The head and heart test closes it.' : 'The deal comes last, slide '+n+' of 6.'}; });
   var EDU  = [1,2,3,4].map(function(n){ return {f:'edu-deal-'+n, t:'Education slide '+n, w:'Reading a builder deal, part '+n+' of 4.'}; });
+  var MUDPID = [
+    {f:'mud-pid-atlas-portrait', t:'MUD vs PID, explained (portrait)', w:'The full single sheet: definitions, quick math, and where to verify.'},
+    {f:'mud-pid-atlas-landscape', t:'MUD vs PID, explained (landscape)', w:'Same breakdown, sized for X and LinkedIn.'}
+  ];
   var bust = Date.now();
   function card(item){
     var src = 'share/' + item.f + '.png?v=' + bust;
@@ -105,6 +113,7 @@ a{color:var(--blue);}
     '<div class="card"><div class="b" style="padding-top:14px;"><div class="t">The finished reel (MP4)</div><div class="w">25 seconds, vertical, ready for Instagram Reels, TikTok, and Shorts.</div>' +
     '<a class="dl" href="share/dispatch-rule-reel.mp4" download>Download MP4</a> <a class="dl alt" href="share/dispatch-rule-reel.mp4" target="_blank" rel="noopener">Preview</a></div></div>';
   document.getElementById('edu-cards').innerHTML = EDU.map(card).join('');
+  document.getElementById('mudpid-cards').innerHTML = MUDPID.map(card).join('');
 
   fetch('reporting/sweep-latest.json', {cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(s){
     if (s && s.ranAtLabel) document.getElementById('kit-stamp').innerHTML = '<span class="dot"></span>Live cards rendered from the sweep of ' + s.ranAtLabel + '. They regenerate automatically with every sweep.';
