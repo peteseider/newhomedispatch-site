@@ -79,6 +79,10 @@ a{color:var(--blue);}
   <p class="sub">The special-district single sheet: MUD vs PID explained in plain terms, plus the quick math on how a home's dollar tax bill still rises even when the district's rate never moves. Links back to the full atlas.</p>
   <div class="grid" id="mudpid-cards"></div>
 
+  <h2>The Negotiation Window</h2>
+  <p class="sub">The quarter-close calendar: verified fiscal year-end and quarter-close dates for the public builders, plus how to actually use the window without over-trusting a printed deadline.</p>
+  <div class="grid" id="negwindow-cards"></div>
+
   <div class="note"><b>Where else these live:</b> every file on this page is also delivered to the Drive folder <a href="https://drive.google.com/drive/folders/1I-p_shUoMhlMfbUXnCgvhG-MxV4C_mnF" target="_blank" rel="noopener">Social Media &rsaquo; Daily Hot Sheet, Social Cards</a> at 7am and 7pm daily. This page is the fastest path: it always shows the current render, with no folder digging.</div>
 
   <div class="foot">
@@ -101,6 +105,10 @@ a{color:var(--blue);}
     {f:'mud-pid-atlas-portrait', t:'MUD vs PID, explained (portrait)', w:'The full single sheet: definitions, quick math, and where to verify.'},
     {f:'mud-pid-atlas-landscape', t:'MUD vs PID, explained (landscape)', w:'Same breakdown, sized for X and LinkedIn.'}
   ];
+  var NEGWINDOW = [
+    {f:'negotiation-window-portrait', t:'The Negotiation Window (portrait)', w:'The verified quarter-close calendar, the honest caveat, and how to use it.'},
+    {f:'negotiation-window-landscape', t:'The Negotiation Window (landscape)', w:'Same single sheet, sized for X and LinkedIn.'}
+  ];
   var bust = Date.now();
   function card(item){
     var src = 'share/' + item.f + '.png?v=' + bust;
@@ -114,6 +122,7 @@ a{color:var(--blue);}
     '<a class="dl" href="share/dispatch-rule-reel.mp4" download>Download MP4</a> <a class="dl alt" href="share/dispatch-rule-reel.mp4" target="_blank" rel="noopener">Preview</a></div></div>';
   document.getElementById('edu-cards').innerHTML = EDU.map(card).join('');
   document.getElementById('mudpid-cards').innerHTML = MUDPID.map(card).join('');
+  document.getElementById('negwindow-cards').innerHTML = NEGWINDOW.map(card).join('');
 
   fetch('reporting/sweep-latest.json', {cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(s){
     if (s && s.ranAtLabel) document.getElementById('kit-stamp').innerHTML = '<span class="dot"></span>Live cards rendered from the sweep of ' + s.ranAtLabel + '. They regenerate automatically with every sweep.';
