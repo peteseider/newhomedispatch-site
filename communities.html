@@ -1805,7 +1805,7 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
     <div class="explorer-toolbar">
       <div class="builder-chips" id="builder-chips">
         <span class="chip-label mono">Builder</span>
-        <button class="chip is-active" data-builder="all">All Builders</button>
+        <label class="xf" style="gap:0;"><select id="builder-select" aria-label="Filter by builder"><option value="all">All Builders</option></select></label>
       </div>
       <button class="chip chip-reset" id="explorer-reset">Reset all</button>
     </div>
@@ -2690,6 +2690,7 @@ const NHD_DATA = {
   const grid = document.getElementById('explorer-grid');
   const builderGrid = document.getElementById('builder-grid');
   const chipsWrap = document.getElementById('builder-chips');
+  const builderSelect = document.getElementById('builder-select');
   const regionChipsWrap = document.getElementById('region-chips');
   const panelEmpty = document.getElementById('panel-empty');
   const panelDetail = document.getElementById('panel-detail');
@@ -2724,11 +2725,10 @@ const NHD_DATA = {
   // build builder filter chips, any builder active in at least one mapped community
   NHD_DATA.builders.forEach(b=>{
     if(!NHD_DATA.communities.some(c=>c.builders.includes(b.id))) return;
-    const btn = document.createElement('button');
-    btn.className = 'chip';
-    btn.dataset.builder = b.id;
-    btn.textContent = b.name;
-    chipsWrap.appendChild(btn);
+    const opt = document.createElement('option');
+    opt.value = b.id;
+    opt.textContent = b.name;
+    builderSelect.appendChild(opt);
   });
 
   // build region filter chips from unique regions in the data
@@ -2913,9 +2913,7 @@ function renderPins(){
 
   function setBuilderFilter(id){
     activeBuilder = id;
-    chipsWrap.querySelectorAll('.chip').forEach(c=>{
-      c.classList.toggle('is-active', c.dataset.builder === id);
-    });
+    if(builderSelect.value !== id) builderSelect.value = id;
     if(activeCommunity && !byId(NHD_DATA.communities, activeCommunity).builders.includes(id) && id !== 'all'){
       activeCommunity = null;
       panelEmpty.style.display = 'block';
@@ -2925,9 +2923,7 @@ function renderPins(){
     renderGrid();
   }
 
-  chipsWrap.addEventListener('click', (e)=>{
-    if(e.target.classList.contains('chip')) setBuilderFilter(e.target.dataset.builder);
-  });
+  builderSelect.addEventListener('change', (e)=>{ setBuilderFilter(e.target.value); });
   regionChipsWrap.addEventListener('click', (e)=>{
     if(!e.target.classList.contains('chip')) return;
     activeRegion = e.target.dataset.region;
