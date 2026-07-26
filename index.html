@@ -1982,7 +1982,7 @@ a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 </div>
 <div class="v31-proof" aria-label="Coverage in numbers">
 <div class="v31-stat"><span class="v31-num">49</span><span class="v31-lab">builders tracked</span></div>
-<div class="v31-stat"><span class="v31-num">41</span><span class="v31-lab">communities covered</span></div>
+<div class="v31-stat"><span class="v31-num">76</span><span class="v31-lab">communities covered</span></div>
 <div class="v31-stat"><span class="v31-num">4&times;</span><span class="v31-lab">verified daily</span></div>
 <div class="v31-stat"><span class="v31-num">11</span><span class="v31-lab">walked &amp; fully tracked</span></div>
 <div class="v31-stat"><span class="v31-num">100%</span><span class="v31-lab">independent &middot; no builder pays</span></div>
@@ -2700,7 +2700,7 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
       var best=null,bestWho='';
       (inc.promos||[]).forEach(function(p){
         var txt=p.promo||'';
-        if(/first[- ]?year|2-1|1-0|3\/2\/1|ARM|5\/1|7\/6|10\/6/i.test(txt))return;
+        if(/first[- ]?year|2-1|1-0|3\/2\/1|ARM|5\/1|7\/6|10\/6|temp(?:orary)?\s*buydown|year\s*(?:one|1)\b/i.test(txt))return;
         var m=txt.match(/(\d\.\d{2,3})%/);
         if(m){var r=parseFloat(m[1]);if(r>2&&r<7&&(best===null||r<best)){best=r;bestWho=p.builder;}}
       });
