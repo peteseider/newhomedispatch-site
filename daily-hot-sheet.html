@@ -348,7 +348,7 @@
       <div id="fc-rows" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
         <div style="padding:11px 14px;color:var(--muted);font-size:12px;">Loads from today's tracked offers&hellip;</div>
       </div>
-      <div style="font-size:10.5px;color:#9a9a9a;margin-top:5px;line-height:1.5;">These are <b>builder advertised promotional rates</b>, usually forward commitments through the builder's affiliated lender. They require using that lender, full qualification, and often specific inventory homes, and they can change or sell out without notice. Advertised, not a quote, and not our verification of any lender's terms. Model your own scenario in the <a href="incentive-calculator.html">Incentive Reality Calculator</a>.</div>
+      <div style="font-size:10.5px;color:#9a9a9a;margin-top:5px;line-height:1.5;">These are <b>builder advertised promotional rates</b>, usually forward commitments through the builder's affiliated lender. They require using that lender, full qualification, and often specific inventory homes, and they can change or sell out without notice. We exclude known teaser structures (2-1, 1-0, temporary buydowns, first-year-only rates) from this list where the builder's own language flags them, but marketing wording varies and we can miss one &mdash; always confirm directly whether an advertised rate is fixed for the full loan term or steps up after an introductory period before treating it as a real monthly-payment comparison. Advertised, not a quote, and not our verification of any lender's terms. Model your own scenario in the <a href="incentive-calculator.html">Incentive Reality Calculator</a>.</div>
     </div>
   </div>
 
@@ -870,7 +870,7 @@
           var k2 = p2.expires ? dkey(p2.expires) : null;
           if (k2 && k2 < t) return;
           var txt2 = String(p2.promo || '');
-          if (/first[- ]?year|2-1|1-0|3\/2\/1|ARM/i.test(txt2)) return;
+          if (/first[- ]?year|2-1|1-0|3\/2\/1|ARM|temp(?:orary)?\s*buydown|year\s*(?:one|1)\b/i.test(txt2)) return;
           var m2 = txt2.match(/(\d\.\d{2})\s*%/);
           if (!m2) return;
           var r2 = parseFloat(m2[1]);
