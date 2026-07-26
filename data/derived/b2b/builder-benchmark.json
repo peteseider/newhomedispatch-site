@@ -2,55 +2,235 @@
   "schema": "nhd-builder-benchmark-v1",
   "product": "NHD Builder Benchmark (B2B product 1)",
   "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting.",
-  "generated": "2026-07-25T15:45:20.303Z",
+  "generated": "2026-07-26T07:58:59.742Z",
   "sample": {
-    "verifiedOffers": 9,
-    "builders": 8,
-    "label": "PILOT SAMPLE: verified tracked offers only; broaden before external sale"
+    "verifiedOffers": 57,
+    "builders": 34,
+    "label": "production"
   },
   "benchmark": [
     {
-      "builder": "perry",
+      "builder": "empire-communities",
       "offers": 2,
       "communities": 2,
+      "maxAdvertisedValue": 133637,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 0.5,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 100,
+        "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "coventry",
+      "offers": 2,
+      "communities": 1,
+      "maxAdvertisedValue": 105000,
+      "bestAdvertisedRate": 4.99,
+      "lenderTiedShare": 0.5,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 97,
+        "rateAggressiveness": 35
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "toll-brothers",
+      "offers": 2,
+      "communities": 2,
+      "maxAdvertisedValue": 80000,
+      "bestAdvertisedRate": 3.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 94,
+        "rateAggressiveness": 52
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "blackburn-homes",
+      "offers": 2,
+      "communities": 1,
+      "maxAdvertisedValue": 77732,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 91,
+        "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "del-webb",
+      "offers": 2,
+      "communities": 1,
+      "maxAdvertisedValue": 64605,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 88,
+        "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "starlight-homes",
+      "offers": 2,
+      "communities": 1,
+      "maxAdvertisedValue": 59962,
+      "bestAdvertisedRate": 3.25,
+      "lenderTiedShare": 0.5,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 85,
+        "rateAggressiveness": 70
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "david-weekley",
+      "offers": 4,
+      "communities": 1,
+      "maxAdvertisedValue": 50000,
+      "bestAdvertisedRate": 2.99,
+      "lenderTiedShare": 0.5,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 82,
+        "rateAggressiveness": 83
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "brohn-homes",
+      "offers": 3,
+      "communities": 1,
+      "maxAdvertisedValue": 40000,
+      "bestAdvertisedRate": 2.75,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 79,
+        "rateAggressiveness": 87
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "perry",
+      "offers": 1,
+      "communities": 1,
       "maxAdvertisedValue": 35000,
       "bestAdvertisedRate": 4.99,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 100,
-        "rateAggressiveness": 33
+        "incentiveDepth": 76,
+        "rateAggressiveness": 35
       },
       "deadlineHonesty": "clean so far"
     },
     {
-      "builder": "ashton-woods",
+      "builder": "drb",
       "offers": 1,
       "communities": 1,
       "maxAdvertisedValue": 30000,
-      "bestAdvertisedRate": 3.25,
-      "lenderTiedShare": 0,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 86,
-        "rateAggressiveness": 67
+        "incentiveDepth": 73,
+        "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "tri-pointe",
+      "offers": 2,
+      "communities": 2,
+      "maxAdvertisedValue": 25000,
+      "bestAdvertisedRate": 4.99,
+      "lenderTiedShare": 0.5,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 64,
+        "rateAggressiveness": 35
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "terrata-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 25000,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 64,
+        "rateAggressiveness": null
       },
       "deadlineHonesty": "clean so far"
     },
     {
       "builder": "dr-horton",
-      "offers": 1,
-      "communities": 1,
+      "offers": 4,
+      "communities": 3,
       "maxAdvertisedValue": 25000,
+      "bestAdvertisedRate": 2.99,
+      "lenderTiedShare": 0.75,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 64,
+        "rateAggressiveness": 83
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "ashton-woods",
+      "offers": 4,
+      "communities": 1,
+      "maxAdvertisedValue": 20000,
+      "bestAdvertisedRate": 3.25,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 52,
+        "rateAggressiveness": 70
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "scott-felder-homes",
+      "offers": 2,
+      "communities": 2,
+      "maxAdvertisedValue": 20000,
       "bestAdvertisedRate": 4.99,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 71,
-        "rateAggressiveness": 33
+        "incentiveDepth": 52,
+        "rateAggressiveness": 35
       },
       "deadlineHonesty": "clean so far"
     },
@@ -60,42 +240,42 @@
       "communities": 1,
       "maxAdvertisedValue": 20000,
       "bestAdvertisedRate": 3.75,
-      "lenderTiedShare": 0,
+      "lenderTiedShare": 1,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 57,
-        "rateAggressiveness": 50
+        "incentiveDepth": 52,
+        "rateAggressiveness": 57
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "lennar",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 20000,
+      "bestAdvertisedRate": 3.375,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 52,
+        "rateAggressiveness": 61
       },
       "deadlineHonesty": "clean so far"
     },
     {
       "builder": "brookfield",
-      "offers": 1,
-      "communities": 1,
+      "offers": 4,
+      "communities": 2,
       "maxAdvertisedValue": 10000,
       "bestAdvertisedRate": 1.99,
-      "lenderTiedShare": 0,
+      "lenderTiedShare": 0.5,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 14,
+        "incentiveDepth": 42,
         "rateAggressiveness": 100
-      },
-      "deadlineHonesty": "clean so far"
-    },
-    {
-      "builder": "brohn-homes",
-      "offers": 1,
-      "communities": 1,
-      "maxAdvertisedValue": 10000,
-      "bestAdvertisedRate": 2.75,
-      "lenderTiedShare": 1,
-      "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
-      "percentiles": {
-        "incentiveDepth": 14,
-        "rateAggressiveness": 83
       },
       "deadlineHonesty": "clean so far"
     },
@@ -109,8 +289,23 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 14,
-        "rateAggressiveness": 33
+        "incentiveDepth": 42,
+        "rateAggressiveness": 35
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "united-built-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 10000,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 42,
+        "rateAggressiveness": null
       },
       "deadlineHonesty": "clean so far"
     },
@@ -119,6 +314,21 @@
       "offers": 1,
       "communities": 1,
       "maxAdvertisedValue": 5000,
+      "bestAdvertisedRate": 4.75,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 39,
+        "rateAggressiveness": 43
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "meritage",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
       "bestAdvertisedRate": null,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
@@ -128,7 +338,700 @@
         "rateAggressiveness": null
       },
       "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "mi-homes",
+      "offers": 2,
+      "communities": 2,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 4.875,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 39
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "century-communities",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "landsea-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 2.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 83
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "chesmar-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 4.999,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 0
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "wilshire-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "stylecraft-builders",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 4.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 35
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "pulte-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "trophy-signature-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 1.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 100
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "newmark-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 1.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 100
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "gfo-home",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 4.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 35
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "sitterle-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 4.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 35
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "milestone",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 4.5,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 48
+      },
+      "deadlineHonesty": "clean so far"
     }
   ],
-  "weeklyMoves": []
+  "weeklyMoves": [
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "value_changed",
+      "id": "inc01",
+      "builder": "ashton-woods",
+      "community": "",
+      "from": 30000,
+      "to": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "value_changed",
+      "id": "inc02",
+      "builder": "ashton-woods",
+      "community": "",
+      "from": 35000,
+      "to": 10000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc03",
+      "builder": "ashton-woods",
+      "community": "",
+      "value": 20000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "value_changed",
+      "id": "inc04",
+      "builder": "ashton-woods",
+      "community": "",
+      "from": 10000,
+      "to": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc05",
+      "builder": "brohn-homes",
+      "community": "",
+      "value": 40000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "value_changed",
+      "id": "inc06",
+      "builder": "brohn-homes",
+      "community": "",
+      "from": 10000,
+      "to": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "value_changed",
+      "id": "inc07",
+      "builder": "brohn-homes",
+      "community": "",
+      "from": 35000,
+      "to": 10000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc08",
+      "builder": "brookfield",
+      "community": "easton-park",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "value_changed",
+      "id": "inc09",
+      "builder": "brookfield",
+      "community": "easton-park",
+      "from": 10000,
+      "to": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc10",
+      "builder": "brookfield",
+      "community": "easton-park",
+      "value": 4600
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc11",
+      "builder": "coventry",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc12",
+      "builder": "coventry",
+      "community": "",
+      "value": 105000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "value_changed",
+      "id": "inc13",
+      "builder": "david-weekley",
+      "community": "",
+      "from": 5000,
+      "to": 50000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc14",
+      "builder": "david-weekley",
+      "community": "",
+      "value": 2500
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc15",
+      "builder": "pacesetter",
+      "community": "",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc16",
+      "builder": "perry",
+      "community": "",
+      "value": 35000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc18",
+      "builder": "tri-pointe",
+      "community": "turners-crossing",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "value_changed",
+      "id": "inc19",
+      "builder": "meritage",
+      "community": "",
+      "from": 20000,
+      "to": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc20",
+      "builder": "mi-homes",
+      "community": "carillon",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc21",
+      "builder": "starlight-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc22",
+      "builder": "starlight-homes",
+      "community": "",
+      "value": 59962
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc23",
+      "builder": "century-communities",
+      "community": "evelyn",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc24",
+      "builder": "del-webb",
+      "community": "",
+      "value": 64605
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc25",
+      "builder": "landsea-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc26",
+      "builder": "empire-communities",
+      "community": "",
+      "value": 50000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc27",
+      "builder": "empire-communities",
+      "community": "goodnight-ranch",
+      "value": 133637
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc28",
+      "builder": "terrata-homes",
+      "community": "whisper-valley",
+      "value": 25000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc29",
+      "builder": "chesmar-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc30",
+      "builder": "scott-felder-homes",
+      "community": "santa-rita-ranch",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc31",
+      "builder": "scott-felder-homes",
+      "community": "",
+      "value": 20000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc32",
+      "builder": "wilshire-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc33",
+      "builder": "blackburn-homes",
+      "community": "",
+      "value": 20000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc34",
+      "builder": "blackburn-homes",
+      "community": "",
+      "value": 77732
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc35",
+      "builder": "aha-dream-homes",
+      "community": "whisper-valley",
+      "value": 20000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc36",
+      "builder": "stylecraft-builders",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc37",
+      "builder": "united-built-homes",
+      "community": "",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc38",
+      "builder": "drb",
+      "community": "",
+      "value": 30000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc39",
+      "builder": "kb-home",
+      "community": "",
+      "value": 5000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc40",
+      "builder": "dr-horton",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc41",
+      "builder": "dr-horton",
+      "community": "",
+      "value": 25000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc42",
+      "builder": "dr-horton",
+      "community": "bar-w-ranch",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc43",
+      "builder": "brookfield",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc44",
+      "builder": "david-weekley",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc45",
+      "builder": "david-weekley",
+      "community": "",
+      "value": 50000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc46",
+      "builder": "dr-horton",
+      "community": "palomino",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc47",
+      "builder": "lennar",
+      "community": "",
+      "value": 20000
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc48",
+      "builder": "pulte-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc49",
+      "builder": "toll-brothers",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc50",
+      "builder": "mi-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc51",
+      "builder": "trophy-signature-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc52",
+      "builder": "del-webb",
+      "community": "",
+      "value": 8500
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc53",
+      "builder": "newmark-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc54",
+      "builder": "gfo-home",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc55",
+      "builder": "sitterle-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc56",
+      "builder": "milestone",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-26T07:57:19.462Z",
+      "runKey": "2026-07-26-AM",
+      "type": "offer_added",
+      "id": "inc57",
+      "builder": "toll-brothers",
+      "community": "santa-rita-ranch",
+      "value": 80000
+    }
+  ]
 }

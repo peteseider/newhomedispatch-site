@@ -1,7 +1,97 @@
 {
-  "generated": "2026-07-25T15:45:20.460Z",
-  "count": 12,
+  "generated": "2026-07-26T07:58:59.898Z",
+  "count": 27,
   "items": [
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc43",
+      "action": "CHECK Brookfield Residential at : offer shows expired 2025-11-12. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc44",
+      "action": "CHECK David Weekley at : offer shows expired 2026-07-01. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc45",
+      "action": "CHECK David Weekley at : offer shows expired 2026-07-01. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc46",
+      "action": "CHECK D.R. Horton at Palomino: offer shows expired 2026-06-30. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc47",
+      "action": "CHECK Lennar at : offer shows expired 2026-07-19. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc48",
+      "action": "CHECK Pulte Homes at : offer shows expired 2025-07-31. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc49",
+      "action": "CHECK Toll Brothers at : offer shows expired 2026-07-12. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc50",
+      "action": "CHECK M/I Homes at : offer shows expired 2026-05-29. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc51",
+      "action": "CHECK Trophy Signature Homes at : offer shows expired 2026-07-24. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc52",
+      "action": "CHECK Del Webb (Sun City Texas) at : offer shows expired 2025-07-31. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc53",
+      "action": "CHECK Newmark Homes at : offer shows expired 2026-03-31. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc54",
+      "action": "CHECK GFO Home at : offer shows expired 2026-04-30. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc55",
+      "action": "CHECK Sitterle Homes at : offer shows expired 2025-12-31. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc56",
+      "action": "CHECK MileStone Community Builders at : offer shows expired 2026-05-15. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
+    {
+      "score": 60,
+      "kind": "expired_displayed",
+      "ref": "inc57",
+      "action": "CHECK Regency by Toll Brothers at Santa Rita Ranch: offer shows expired 2026-07-19. Renewed, extended, or gone? (Feeds the Renewal Ledger.)"
+    },
     {
       "score": 50,
       "kind": "tax_verify",
