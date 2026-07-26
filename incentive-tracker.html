@@ -2411,6 +2411,7 @@ $('trend-table').innerHTML = '<table><thead><tr><th>Week</th>' + DATES.map(funct
 
 /* ---------- sparkline ---------- */
 function sparkline(hist, w, h) {
+if (!hist || !hist.length) return '';
 w = w || 74; h = h || 22;
 var vals = hist.map(function (p) { return p.value; });
 var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals);
@@ -2518,7 +2519,7 @@ render();
 });
 });
 }
-function fmtTax(v){ if (v===null||v===undefined) return '\u2014'; return (parseFloat(v.toFixed(2))) + '%'; }
+function fmtTax(v){ return (parseFloat(v.toFixed(2))) + '%'; }
 function taxCell(r) { return fmtTax(r.taxRate) + (r.taxNote ? ' <span class="cell-sub">' + r.taxNote + '</span>' : ''); }
 
 function renderTable() {
