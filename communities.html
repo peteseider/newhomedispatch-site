@@ -3273,6 +3273,12 @@ function renderPins(){
     if (mapBtn) mapBtn.addEventListener('click', showMap);
     if (gridBtn) gridBtn.addEventListener('click', showGrid);
     showMap();
+    var __cm = location.hash.match(/community=([a-z0-9\-]+)/i);
+    if (__cm && window.NHD_GEO && window.NHD_GEO[__cm[1]] && window.NHD_MAP) {
+      var __geo = window.NHD_GEO[__cm[1]];
+      window.NHD_MAP.setView([__geo[0], __geo[1]], 12);
+      if (__geo[3] && __geo[3].openTooltip) __geo[3].openTooltip();
+    }
   });
 })();
 </script>
