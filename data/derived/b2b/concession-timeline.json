@@ -2,146 +2,13 @@
   "schema": "nhd-concession-timeline-v1",
   "product": "NHD Concession History Lookup (B2B product 2, appraiser seed)",
   "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting. Advertised concessions are builder claims on the stated dates, captured by the sweep; they are not closed-transaction terms.",
-  "generated": "2026-07-26T07:58:59.750Z",
+  "generated": "2026-07-26T15:44:10.329Z",
   "note": "Grows from the append-only raw archive; each sweep adds dated observations. The history is unreconstructable by anyone starting later.",
   "communities": {
     "": {
       "community": "",
-      "city": "Austin",
+      "city": "Austin (Cordova Trails / Seguin)",
       "entries": [
-        {
-          "date": "2026-07-25",
-          "builder": "ashton-woods",
-          "advertisedValue": 10000,
-          "incentiveType": "Closing costs",
-          "lenderTied": "unknown"
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "ashton-woods",
-          "advertisedValue": 20000,
-          "incentiveType": "Closing costs",
-          "lenderTied": "unknown"
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "brohn-homes",
-          "advertisedValue": 40000,
-          "incentiveType": "Flex cash",
-          "lenderTied": true
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "brohn-homes",
-          "advertisedValue": 10000,
-          "incentiveType": "Closing costs",
-          "lenderTied": true
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "coventry",
-          "advertisedValue": 105000,
-          "incentiveType": "Price cut",
-          "lenderTied": false
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "david-weekley",
-          "advertisedValue": 50000,
-          "incentiveType": "Flex cash",
-          "lenderTied": "unknown"
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "david-weekley",
-          "advertisedValue": 2500,
-          "incentiveType": "Upgrades / design credit",
-          "lenderTied": false
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "pacesetter",
-          "advertisedValue": 10000,
-          "incentiveType": "Closing costs",
-          "lenderTied": true
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "perry",
-          "advertisedValue": 35000,
-          "incentiveType": "Flex cash",
-          "lenderTied": true
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "starlight-homes",
-          "advertisedValue": 59962,
-          "incentiveType": "Price cut",
-          "lenderTied": false
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "del-webb",
-          "advertisedValue": 64605,
-          "incentiveType": "Price cut",
-          "lenderTied": "unknown"
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "empire-communities",
-          "advertisedValue": 50000,
-          "incentiveType": "Upgrades / design credit",
-          "lenderTied": true
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "scott-felder-homes",
-          "advertisedValue": 20000,
-          "incentiveType": "Flex cash",
-          "lenderTied": "unknown"
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "blackburn-homes",
-          "advertisedValue": 20000,
-          "incentiveType": "Flex cash",
-          "lenderTied": "unknown"
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "blackburn-homes",
-          "advertisedValue": 77732,
-          "incentiveType": "Price cut",
-          "lenderTied": "unknown"
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "united-built-homes",
-          "advertisedValue": 10000,
-          "incentiveType": "Flex cash",
-          "lenderTied": true
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "drb",
-          "advertisedValue": 30000,
-          "incentiveType": "Flex cash",
-          "lenderTied": true
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "kb-home",
-          "advertisedValue": 5000,
-          "incentiveType": "Closing costs",
-          "lenderTied": true
-        },
-        {
-          "date": "2026-07-25",
-          "builder": "dr-horton",
-          "advertisedValue": 25000,
-          "incentiveType": "Flex cash",
-          "lenderTied": false
-        },
         {
           "date": "2026-07-25",
           "builder": "david-weekley",
@@ -162,22 +29,155 @@
           "advertisedValue": 8500,
           "incentiveType": "Price cut",
           "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "ashton-woods",
+          "advertisedValue": 10000,
+          "incentiveType": "Closing costs",
+          "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "ashton-woods",
+          "advertisedValue": 20000,
+          "incentiveType": "Closing costs",
+          "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "coventry",
+          "advertisedValue": 105000,
+          "incentiveType": "Price cut",
+          "lenderTied": false
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "david-weekley",
+          "advertisedValue": 50000,
+          "incentiveType": "Flex cash",
+          "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "david-weekley",
+          "advertisedValue": 2500,
+          "incentiveType": "Upgrades / design credit",
+          "lenderTied": false
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "drb",
+          "advertisedValue": 30000,
+          "incentiveType": "Flex cash",
+          "lenderTied": true
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "kb-home",
+          "advertisedValue": 5000,
+          "incentiveType": "Closing costs",
+          "lenderTied": true
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "pacesetter",
+          "advertisedValue": 10000,
+          "incentiveType": "Closing costs",
+          "lenderTied": true
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "perry",
+          "advertisedValue": 35000,
+          "incentiveType": "Flex cash",
+          "lenderTied": true
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "tri-pointe",
+          "advertisedValue": 25000,
+          "incentiveType": "Closing costs",
+          "lenderTied": false
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "tri-pointe",
+          "advertisedValue": 10000,
+          "incentiveType": "Closing costs",
+          "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "del-webb",
+          "advertisedValue": 64605,
+          "incentiveType": "Price cut",
+          "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "del-webb",
+          "advertisedValue": 2000,
+          "incentiveType": "Flex cash",
+          "lenderTied": false
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "empire-communities",
+          "advertisedValue": 50000,
+          "incentiveType": "Upgrades / design credit",
+          "lenderTied": true
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "terrata-homes",
+          "advertisedValue": 25000,
+          "incentiveType": "Flex cash",
+          "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "scott-felder-homes",
+          "advertisedValue": 20000,
+          "incentiveType": "Flex cash",
+          "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "blackburn-homes",
+          "advertisedValue": 20000,
+          "incentiveType": "Flex cash",
+          "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "blackburn-homes",
+          "advertisedValue": 77732,
+          "incentiveType": "Price cut",
+          "lenderTied": "unknown"
+        },
+        {
+          "date": "2026-07-26",
+          "builder": "united-built-homes",
+          "advertisedValue": 10000,
+          "incentiveType": "Flex cash",
+          "lenderTied": true
         }
       ]
     },
     "easton-park": {
-      "community": "Easton Park",
+      "community": "",
       "city": "Austin (Easton Park)",
       "entries": [
         {
-          "date": "2026-07-25",
+          "date": "2026-07-26",
           "builder": "brookfield",
           "advertisedValue": 10000,
           "incentiveType": "Upgrades / design credit",
           "lenderTied": false
         },
         {
-          "date": "2026-07-25",
+          "date": "2026-07-26",
           "builder": "brookfield",
           "advertisedValue": 4600,
           "incentiveType": "Upgrades / design credit",
@@ -185,68 +185,25 @@
         }
       ]
     },
-    "wolf-ranch": {
-      "community": "Wolf Ranch",
-      "city": "Austin / Georgetown / Buda",
+    "palomino": {
+      "community": "",
+      "city": "Austin metro (Manor - Palomino)",
       "entries": [
         {
-          "date": "2026-07-25",
-          "builder": "tri-pointe",
+          "date": "2026-07-26",
+          "builder": "dr-horton",
           "advertisedValue": 25000,
-          "incentiveType": "Closing costs",
-          "lenderTied": false
-        }
-      ]
-    },
-    "turners-crossing": {
-      "community": "Turner's Crossing",
-      "city": "Austin / Buda",
-      "entries": [
-        {
-          "date": "2026-07-25",
-          "builder": "tri-pointe",
-          "advertisedValue": 10000,
-          "incentiveType": "Closing costs",
-          "lenderTied": "unknown"
-        }
-      ]
-    },
-    "carillon": {
-      "community": "Carillon",
-      "city": "Greater Austin",
-      "entries": []
-    },
-    "evelyn": {
-      "community": "Evelyn",
-      "city": "Austin Metro",
-      "entries": []
-    },
-    "goodnight-ranch": {
-      "community": "Goodnight Ranch",
-      "city": "Austin (Goodnight Ranch)",
-      "entries": [
-        {
-          "date": "2026-07-25",
-          "builder": "empire-communities",
-          "advertisedValue": 133637,
-          "incentiveType": "Price cut",
+          "incentiveType": "Flex cash",
           "lenderTied": false
         }
       ]
     },
     "whisper-valley": {
-      "community": "Whisper Valley",
-      "city": "Austin",
+      "community": "",
+      "city": "Austin (Whisper Valley)",
       "entries": [
         {
-          "date": "2026-07-25",
-          "builder": "terrata-homes",
-          "advertisedValue": 25000,
-          "incentiveType": "Flex cash",
-          "lenderTied": true
-        },
-        {
-          "date": "2026-07-25",
+          "date": "2026-07-26",
           "builder": "aha-dream-homes",
           "advertisedValue": 20000,
           "incentiveType": "Flex cash",
@@ -256,7 +213,7 @@
     },
     "santa-rita-ranch": {
       "community": "Santa Rita Ranch",
-      "city": "Austin",
+      "city": "Austin (Santa Rita Ranch / Liberty Hill)",
       "entries": [
         {
           "date": "2026-07-25",
@@ -266,16 +223,6 @@
           "lenderTied": "unknown"
         }
       ]
-    },
-    "bar-w-ranch": {
-      "community": "Bar W Ranch",
-      "city": "Austin metro (Bar W Ranch)",
-      "entries": []
-    },
-    "palomino": {
-      "community": "Palomino",
-      "city": "Austin metro (Manor - Palomino)",
-      "entries": []
     }
   }
 }

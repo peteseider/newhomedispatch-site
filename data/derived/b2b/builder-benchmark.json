@@ -2,28 +2,13 @@
   "schema": "nhd-builder-benchmark-v1",
   "product": "NHD Builder Benchmark (B2B product 1)",
   "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting.",
-  "generated": "2026-07-26T07:58:59.742Z",
+  "generated": "2026-07-26T15:44:10.321Z",
   "sample": {
-    "verifiedOffers": 57,
-    "builders": 34,
+    "verifiedOffers": 51,
+    "builders": 33,
     "label": "production"
   },
   "benchmark": [
-    {
-      "builder": "empire-communities",
-      "offers": 2,
-      "communities": 2,
-      "maxAdvertisedValue": 133637,
-      "bestAdvertisedRate": null,
-      "lenderTiedShare": 0.5,
-      "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
-      "percentiles": {
-        "incentiveDepth": 100,
-        "rateAggressiveness": null
-      },
-      "deadlineHonesty": "clean so far"
-    },
     {
       "builder": "coventry",
       "offers": 2,
@@ -34,8 +19,8 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 97,
-        "rateAggressiveness": 35
+        "incentiveDepth": 100,
+        "rateAggressiveness": 36
       },
       "deadlineHonesty": "clean so far"
     },
@@ -49,8 +34,8 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 94,
-        "rateAggressiveness": 52
+        "incentiveDepth": 97,
+        "rateAggressiveness": 64
       },
       "deadlineHonesty": "clean so far"
     },
@@ -64,38 +49,23 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 91,
+        "incentiveDepth": 94,
         "rateAggressiveness": null
       },
       "deadlineHonesty": "clean so far"
     },
     {
       "builder": "del-webb",
-      "offers": 2,
+      "offers": 3,
       "communities": 1,
       "maxAdvertisedValue": 64605,
       "bestAdvertisedRate": null,
-      "lenderTiedShare": 1,
+      "lenderTiedShare": 0.67,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 88,
+        "incentiveDepth": 91,
         "rateAggressiveness": null
-      },
-      "deadlineHonesty": "clean so far"
-    },
-    {
-      "builder": "starlight-homes",
-      "offers": 2,
-      "communities": 1,
-      "maxAdvertisedValue": 59962,
-      "bestAdvertisedRate": 3.25,
-      "lenderTiedShare": 0.5,
-      "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
-      "percentiles": {
-        "incentiveDepth": 85,
-        "rateAggressiveness": 70
       },
       "deadlineHonesty": "clean so far"
     },
@@ -109,23 +79,23 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 82,
-        "rateAggressiveness": 83
+        "incentiveDepth": 84,
+        "rateAggressiveness": 86
       },
       "deadlineHonesty": "clean so far"
     },
     {
-      "builder": "brohn-homes",
-      "offers": 3,
+      "builder": "empire-communities",
+      "offers": 1,
       "communities": 1,
-      "maxAdvertisedValue": 40000,
-      "bestAdvertisedRate": 2.75,
+      "maxAdvertisedValue": 50000,
+      "bestAdvertisedRate": null,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 79,
-        "rateAggressiveness": 87
+        "incentiveDepth": 84,
+        "rateAggressiveness": null
       },
       "deadlineHonesty": "clean so far"
     },
@@ -139,8 +109,8 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 76,
-        "rateAggressiveness": 35
+        "incentiveDepth": 81,
+        "rateAggressiveness": 36
       },
       "deadlineHonesty": "clean so far"
     },
@@ -154,23 +124,38 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 73,
+        "incentiveDepth": 78,
         "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "dr-horton",
+      "offers": 2,
+      "communities": 1,
+      "maxAdvertisedValue": 25000,
+      "bestAdvertisedRate": 3.99,
+      "lenderTiedShare": 0.5,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 69,
+        "rateAggressiveness": 64
       },
       "deadlineHonesty": "clean so far"
     },
     {
       "builder": "tri-pointe",
       "offers": 2,
-      "communities": 2,
+      "communities": 1,
       "maxAdvertisedValue": 25000,
       "bestAdvertisedRate": 4.99,
       "lenderTiedShare": 0.5,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 64,
-        "rateAggressiveness": 35
+        "incentiveDepth": 69,
+        "rateAggressiveness": 36
       },
       "deadlineHonesty": "clean so far"
     },
@@ -184,53 +169,38 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 64,
+        "incentiveDepth": 69,
         "rateAggressiveness": null
       },
       "deadlineHonesty": "clean so far"
     },
     {
-      "builder": "dr-horton",
-      "offers": 4,
-      "communities": 3,
-      "maxAdvertisedValue": 25000,
-      "bestAdvertisedRate": 2.99,
-      "lenderTiedShare": 0.75,
-      "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
-      "percentiles": {
-        "incentiveDepth": 64,
-        "rateAggressiveness": 83
-      },
-      "deadlineHonesty": "clean so far"
-    },
-    {
       "builder": "ashton-woods",
-      "offers": 4,
+      "offers": 3,
       "communities": 1,
       "maxAdvertisedValue": 20000,
-      "bestAdvertisedRate": 3.25,
+      "bestAdvertisedRate": 3.99,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 52,
-        "rateAggressiveness": 70
+        "incentiveDepth": 56,
+        "rateAggressiveness": 64
       },
       "deadlineHonesty": "clean so far"
     },
     {
       "builder": "scott-felder-homes",
       "offers": 2,
-      "communities": 2,
+      "communities": 1,
       "maxAdvertisedValue": 20000,
       "bestAdvertisedRate": 4.99,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 52,
-        "rateAggressiveness": 35
+        "incentiveDepth": 56,
+        "rateAggressiveness": 36
       },
       "deadlineHonesty": "clean so far"
     },
@@ -244,8 +214,8 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 52,
-        "rateAggressiveness": 57
+        "incentiveDepth": 56,
+        "rateAggressiveness": 68
       },
       "deadlineHonesty": "clean so far"
     },
@@ -259,8 +229,8 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 52,
-        "rateAggressiveness": 61
+        "incentiveDepth": 56,
+        "rateAggressiveness": 77
       },
       "deadlineHonesty": "clean so far"
     },
@@ -274,7 +244,7 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 42,
+        "incentiveDepth": 47,
         "rateAggressiveness": 100
       },
       "deadlineHonesty": "clean so far"
@@ -289,8 +259,8 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 42,
-        "rateAggressiveness": 35
+        "incentiveDepth": 47,
+        "rateAggressiveness": 36
       },
       "deadlineHonesty": "clean so far"
     },
@@ -304,7 +274,7 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 42,
+        "incentiveDepth": 47,
         "rateAggressiveness": null
       },
       "deadlineHonesty": "clean so far"
@@ -319,8 +289,8 @@
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
-        "incentiveDepth": 39,
-        "rateAggressiveness": 43
+        "incentiveDepth": 44,
+        "rateAggressiveness": 45
       },
       "deadlineHonesty": "clean so far"
     },
@@ -342,7 +312,7 @@
     {
       "builder": "mi-homes",
       "offers": 2,
-      "communities": 2,
+      "communities": 1,
       "maxAdvertisedValue": 0,
       "bestAdvertisedRate": 4.875,
       "lenderTiedShare": 1,
@@ -350,22 +320,22 @@
       "expiredButDisplayed": 0,
       "percentiles": {
         "incentiveDepth": 0,
-        "rateAggressiveness": 39
+        "rateAggressiveness": 41
       },
       "deadlineHonesty": "clean so far"
     },
     {
-      "builder": "century-communities",
+      "builder": "starlight-homes",
       "offers": 1,
       "communities": 1,
       "maxAdvertisedValue": 0,
-      "bestAdvertisedRate": null,
+      "bestAdvertisedRate": 3.5,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
       "expiredButDisplayed": 0,
       "percentiles": {
         "incentiveDepth": 0,
-        "rateAggressiveness": null
+        "rateAggressiveness": 73
       },
       "deadlineHonesty": "clean so far"
     },
@@ -380,7 +350,7 @@
       "expiredButDisplayed": 0,
       "percentiles": {
         "incentiveDepth": 0,
-        "rateAggressiveness": 83
+        "rateAggressiveness": 86
       },
       "deadlineHonesty": "clean so far"
     },
@@ -400,7 +370,37 @@
       "deadlineHonesty": "clean so far"
     },
     {
+      "builder": "gfo-home",
+      "offers": 2,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": 4.99,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": 36
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
       "builder": "wilshire-homes",
+      "offers": 1,
+      "communities": 1,
+      "maxAdvertisedValue": 0,
+      "bestAdvertisedRate": null,
+      "lenderTiedShare": 1,
+      "deadlineExtensions": 0,
+      "expiredButDisplayed": 0,
+      "percentiles": {
+        "incentiveDepth": 0,
+        "rateAggressiveness": null
+      },
+      "deadlineHonesty": "clean so far"
+    },
+    {
+      "builder": "tilson-homes",
       "offers": 1,
       "communities": 1,
       "maxAdvertisedValue": 0,
@@ -425,7 +425,7 @@
       "expiredButDisplayed": 0,
       "percentiles": {
         "incentiveDepth": 0,
-        "rateAggressiveness": 35
+        "rateAggressiveness": 36
       },
       "deadlineHonesty": "clean so far"
     },
@@ -475,21 +475,6 @@
       "deadlineHonesty": "clean so far"
     },
     {
-      "builder": "gfo-home",
-      "offers": 1,
-      "communities": 1,
-      "maxAdvertisedValue": 0,
-      "bestAdvertisedRate": 4.99,
-      "lenderTiedShare": 1,
-      "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
-      "percentiles": {
-        "incentiveDepth": 0,
-        "rateAggressiveness": 35
-      },
-      "deadlineHonesty": "clean so far"
-    },
-    {
       "builder": "sitterle-homes",
       "offers": 1,
       "communities": 1,
@@ -500,7 +485,7 @@
       "expiredButDisplayed": 0,
       "percentiles": {
         "incentiveDepth": 0,
-        "rateAggressiveness": 35
+        "rateAggressiveness": 36
       },
       "deadlineHonesty": "clean so far"
     },
@@ -515,7 +500,7 @@
       "expiredButDisplayed": 0,
       "percentiles": {
         "incentiveDepth": 0,
-        "rateAggressiveness": 48
+        "rateAggressiveness": 50
       },
       "deadlineHonesty": "clean so far"
     }
