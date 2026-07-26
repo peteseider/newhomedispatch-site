@@ -351,6 +351,7 @@ document.querySelector('form').addEventListener('submit', function(e){
     return;
   }
   if(warn) warn.remove();
+e.preventDefault();
 if(window.NHD) NHD.trackEvent('deal_report_submit', {});
 
 var form = e.target;
