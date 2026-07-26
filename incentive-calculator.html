@@ -2024,6 +2024,29 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
       </div>
 
       <div class="callout">Illustrative only — not a lending quote. Rate buydowns may be temporary (a 2‑1 buydown resets after two years); confirm whether the in‑house rate is permanent, and get every incentive in writing. Verify exact figures with a lender and your contract.</div>
+
+      <div class="buydown-toggle" style="margin-top:16px;padding-top:16px;border-top:1px solid #e4e4e7;">
+        <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;">
+          <input type="checkbox" id="bd_enable">
+          <span>This in-house rate is a <strong>temporary buydown</strong> &mdash; show my rate and payment by year</span>
+        </label>
+        <div id="bd_panel" style="display:none;margin-top:12px;">
+          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px;">
+            <label style="font-size:13px;display:block;">Buydown type<br>
+              <select id="bd_type" style="margin-top:4px;">
+                <option value="2-1">2-1 (Yr1 -2%, Yr2 -1%, Yr3+ note rate)</option>
+                <option value="1-0">1-0 (Yr1 -1%, Yr2+ note rate)</option>
+                <option value="3-2-1">3-2-1 (Yr1 -3%, Yr2 -2%, Yr3 -1%, Yr4+ note rate)</option>
+              </select>
+            </label>
+            <label style="font-size:13px;display:block;">Permanent note rate it steps up to<br>
+              <input type="number" id="bd_noterate" step="0.125" style="margin-top:4px;width:100px;">
+            </label>
+          </div>
+          <table id="bd_table" style="width:100%;border-collapse:collapse;font-size:14px;"></table>
+          <p style="font-size:12px;color:#666;margin-top:8px;">Illustrative only, not a lending quote. Assumes a builder/seller-funded subsidy covers the gap between each year's shown payment and the full note-rate payment on this loan amount. Confirm the exact schedule and funding with your lender and closing disclosure.</p>
+        </div>
+      </div>
     </div>
 
     <aside class="results calc-results">
@@ -2260,5 +2283,71 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
 <!-- v73 nav fix: click-to-toggle + hover bridge (dropdowns were hover-only with dead 4px gap) -->
 <style>.nav-grp{position:relative}.nav-grp::after{content:"";position:absolute;left:0;right:0;top:100%;height:10px}.site-header,.nav-wrap{overflow:visible !important}.site-header{position:sticky;top:0;z-index:300}body>header:not(.hero){position:sticky;top:0;z-index:300}header:has(.site-nav){position:sticky;top:0;z-index:300}.nav-grp .nav-drop{z-index:400}</style>
 
+<script>
+(function(){
+  function $(id){ return document.getElementById(id); }
+  function numBD(v){ v = parseFloat(String(v).replace(/[^0-9.\-]/g,'')); return isFinite(v)?v:0; }
+  function amortBD(P, annPct, years){
+    var n = Math.max(1, Math.round(years*12));
+    var r = annPct/100/12;
+    var M = (r===0) ? P/n : P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+    return (P>0?M:0);
+  }
+  function usdBD(v){ return '$' + Math.round(v).toLocaleString('en-US'); }
+  function pctBD(v){ return (Math.round(Math.max(0,v)*1000)/1000) + '%'; }
+  function loanAmountBD(){
+    var price = numBD($('p_price') ? $('p_price').value : 0);
+    var downVal = numBD($('p_down') ? $('p_down').value : 0);
+    var unit = $('p_downpost') ? $('p_downpost').textContent.trim() : '%';
+    var downDollars = (unit === '$') ? downVal : price * downVal/100;
+    return Math.max(0, price - downDollars);
+  }
+  function scheduleBD(){
+    if (!$('bd_type') || !$('bd_noterate')) return;
+    var type = $('bd_type').value;
+    var noteRate = numBD($('bd_noterate').value) || ($('a_rate') ? numBD($('a_rate').value) : 6.5);
+    var term = ($('p_term') ? numBD($('p_term').value) : 30) || 30;
+    var P = loanAmountBD();
+    var steps;
+    if (type === '2-1') steps = [['Year 1', noteRate-2],['Year 2', noteRate-1],['Year 3+', noteRate]];
+    else if (type === '1-0') steps = [['Year 1', noteRate-1],['Year 2+', noteRate]];
+    else steps = [['Year 1', noteRate-3],['Year 2', noteRate-2],['Year 3', noteRate-1],['Year 4+', noteRate]];
+    var noteM = amortBD(P, noteRate, term);
+    var rows = steps.map(function(s){
+      var m = amortBD(P, Math.max(0,s[1]), term);
+      return '<tr><td style="padding:6px 10px;border-bottom:1px solid #eee;">'+s[0]+'</td>'+
+        '<td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:right;">'+pctBD(s[1])+'</td>'+
+        '<td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:right;">'+usdBD(m)+'/mo</td>'+
+        '<td style="padding:6px 10px;border-bottom:1px solid #eee;text-align:right;color:#1F7A3D;">'+usdBD(noteM-m)+'/mo lower</td></tr>';
+    }).join('');
+    $('bd_table').innerHTML = '<thead><tr>'+
+      '<th style="text-align:left;padding:6px 10px;border-bottom:2px solid #333;">Period</th>'+
+      '<th style="text-align:right;padding:6px 10px;border-bottom:2px solid #333;">Rate</th>'+
+      '<th style="text-align:right;padding:6px 10px;border-bottom:2px solid #333;">Est. payment</th>'+
+      '<th style="text-align:right;padding:6px 10px;border-bottom:2px solid #333;">vs. note rate</th>'+
+      '</tr></thead><tbody>'+rows+
+      '<tr><td style="padding:6px 10px;font-style:italic;color:#666;">Permanent (note rate)</td>'+
+      '<td style="padding:6px 10px;text-align:right;font-style:italic;color:#666;">'+pctBD(noteRate)+'</td>'+
+      '<td style="padding:6px 10px;text-align:right;font-style:italic;color:#666;">'+usdBD(noteM)+'/mo</td><td></td></tr></tbody>';
+  }
+  function toggleBD(){
+    var on = $('bd_enable').checked;
+    $('bd_panel').style.display = on ? 'block' : 'none';
+    if (on) scheduleBD();
+  }
+  function initBD(){
+    if (!$('bd_enable')) return;
+    if ($('bd_noterate') && !$('bd_noterate').value) $('bd_noterate').value = $('a_rate') ? $('a_rate').value : 6.5;
+    $('bd_enable').addEventListener('change', toggleBD);
+    $('bd_type').addEventListener('change', scheduleBD);
+    $('bd_noterate').addEventListener('input', scheduleBD);
+    ['p_price','p_down','p_term','a_rate'].forEach(function(id){
+      var el = $(id); if (el) el.addEventListener('input', function(){ if ($('bd_enable').checked) scheduleBD(); });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initBD);
+  else initBD();
+})();
+</script>
 </body>
 </html>
