@@ -8,13 +8,7 @@
    "slot": "AM",
    "score": 74,
    "band": "High",
-   "components": {
-    "incentive": 75,
-    "competition": 92,
-    "friction": 86,
-    "stringFree": 33,
-    "deadline": 92
-   }
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
   },
   {
    "t": "2026-07-22T21:27:34-05:00",
@@ -22,13 +16,7 @@
    "slot": "PM",
    "score": 74,
    "band": "High",
-   "components": {
-    "incentive": 75,
-    "competition": 92,
-    "friction": 86,
-    "stringFree": 33,
-    "deadline": 92
-   }
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
   },
   {
    "t": "2026-07-23T11:54:58-05:00",
@@ -36,13 +24,7 @@
    "slot": "AM",
    "score": 74,
    "band": "High",
-   "components": {
-    "incentive": 75,
-    "competition": 92,
-    "friction": 86,
-    "stringFree": 33,
-    "deadline": 92
-   }
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
   },
   {
    "t": "2026-07-23T17:48:11-05:00",
@@ -50,13 +32,7 @@
    "slot": "PM",
    "score": 74,
    "band": "High",
-   "components": {
-    "incentive": 75,
-    "competition": 92,
-    "friction": 86,
-    "stringFree": 33,
-    "deadline": 92
-   }
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
   },
   {
    "t": "2026-07-24T10:49:12-05:00",
@@ -64,13 +40,7 @@
    "slot": "AM",
    "score": 74,
    "band": "High",
-   "components": {
-    "incentive": 75,
-    "competition": 92,
-    "friction": 86,
-    "stringFree": 33,
-    "deadline": 92
-   }
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
   },
   {
    "t": "2026-07-24T17:46:21-05:00",
@@ -78,13 +48,7 @@
    "slot": "PM",
    "score": 74,
    "band": "High",
-   "components": {
-    "incentive": 75,
-    "competition": 92,
-    "friction": 86,
-    "stringFree": 33,
-    "deadline": 92
-   }
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
   },
   {
    "t": "2026-07-25T10:43:57-05:00",
@@ -92,13 +56,7 @@
    "slot": "AM",
    "score": 74,
    "band": "High",
-   "components": {
-    "incentive": 75,
-    "competition": 92,
-    "friction": 86,
-    "stringFree": 33,
-    "deadline": 92
-   }
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
   },
   {
    "t": "2026-07-25T17:39:19-05:00",
@@ -106,13 +64,7 @@
    "slot": "PM",
    "score": 74,
    "band": "High",
-   "components": {
-    "incentive": 75,
-    "competition": 92,
-    "friction": 86,
-    "stringFree": 33,
-    "deadline": 92
-   }
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
   },
   {
    "t": "2026-07-26T06:05:00-05:00",
@@ -120,15 +72,17 @@
    "slot": "AM",
    "score": 74,
    "band": "High",
-   "components": {
-    "incentive": 75,
-    "competition": 92,
-    "friction": 86,
-    "stringFree": 33,
-    "deadline": 92
-   }
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
+  },
+  {
+   "t": "2026-07-26T17:05:00-05:00",
+   "label": "Jul 26",
+   "slot": "PM",
+   "score": 74,
+   "band": "High",
+   "components": { "incentive": 75, "competition": 92, "friction": 86, "stringFree": 33, "deadline": 92 }
   }
  ],
- "lastUpdated": "2026-07-26T06:05:00-05:00",
- "lastUpdatedLabel": "Jul 26, 2026 · 06:05 AM CT"
+ "lastUpdated": "2026-07-26T17:05:00-05:00",
+ "lastUpdatedLabel": "Jul 26, 2026 · 05:05 PM CT"
 }
