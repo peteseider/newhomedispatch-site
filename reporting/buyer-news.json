@@ -1,25 +1,37 @@
 {
- "updated": "2026-07-23",
+ "updated": "2026-07-27",
  "sectionTitle": "What changed beyond the sales office",
  "primary": {
-  "headline": "6,200-home master planned community sold for development near Niederwald",
-  "publisher": "Realty News Report",
-  "publishedAt": "2026-07-17",
-  "sourceUrl": "https://realtynewsreport.com/property-sold-for-development-with-6200-homes/",
-  "geography": ["Niederwald", "Hays County", "SH 21 corridor", "SH 130 corridor"],
-  "topics": ["supply", "builder behavior", "schools"],
-  "affectedAreas": ["Niederwald", "Kyle", "Buda", "eastern Hays County"],
-  "summary": "Wilson Capital has acquired The Ridge, a 1,736 acre site near Niederwald, south of Austin and east of Kyle, from Walton Global. Plans call for more than 6,200 single family homes plus 60 acres of commercial and multifamily, 119 acres of parks, and 57 acres reserved for Hays CISD school sites. First America Homes and Hakes Brothers are the named builders, with residential construction expected to begin in late 2026.",
-  "buyerImplication": "This is long term supply, not something you can buy today. More planned rooftops along SH 21 and SH 130 tends to mean more builder competition in that corridor over the next several years, and two builders new to our coverage area are attached to it.",
-  "buyerAction": "No immediate action. We are adding The Ridge and both named builders to the development watchlist and will report when models or pricing appear.",
-  "localityScore": 28,
-  "buyerImpactScore": 15,
-  "newConstructionScore": 20,
-  "recencyScore": 11,
-  "sourceQualityScore": 7,
-  "totalScore": 81,
-  "confidence": "Reported by trade press from a Newmark press release; not yet field verified",
-  "reviewedAt": "2026-07-23",
+  "headline": "New 43-lot Glory Hill subdivision permit filed in Leander, part of a 5-permit Austin-area construction week",
+  "publisher": "Community Impact",
+  "publishedAt": "2026-07-21",
+  "sourceUrl": "https://communityimpact.com/leander-liberty-hill/development/student-housing-valvoline-check-out-5-major-austin-area-permits-filed-this-week/",
+  "geography": [
+   "Leander",
+   "Williamson County",
+   "Ronald Reagan Blvd corridor"
+  ],
+  "topics": [
+   "construction activity",
+   "permits",
+   "supply"
+  ],
+  "affectedAreas": [
+   "Leander",
+   "Georgetown",
+   "northern Central Texas corridor"
+  ],
+  "summary": "A construction permit was filed for Glory Hill Subdivision at 100 Private Road 921 in Leander: 43 single-family lots on 15.45 acres, a $3.5 million project with work scheduled March 2 through December 31, 2026. The same weekly permit roundup also included an $80 million off-campus student housing tower near UT Austin and a $1.9 million Brushy Creek MUD sewer capacity project in Round Rock, both signals of continued growth pressure across the wider Austin metro.",
+  "buyerImplication": "This is a small, ground-up subdivision, not a home you can buy today. It matters because it is new supply entering the market roughly 15 minutes from Del Webb's Sun City Georgetown community, which New Home Dispatch already tracks for incentives. More permitted lots in this sub-market typically means more builder competition on pricing and incentives over the next 12 to 18 months.",
+  "buyerAction": "No immediate action. We are adding Glory Hill Subdivision to the development watchlist and will report on it if a builder and pricing are announced.",
+  "localityScore": 20,
+  "buyerImpactScore": 14,
+  "newConstructionScore": 18,
+  "recencyScore": 14,
+  "sourceQualityScore": 9,
+  "totalScore": 75,
+  "confidence": "Reported directly by Community Impact from filed municipal permit records; not yet field verified. This was the most recent verified new-construction-relevant story available in our tracked corridor and adjacent Central Texas sub-markets as of this scrub -- no fresher item specific to South Austin, Buda, Kyle, or San Marcos proper was found dated after July 17, 2026.",
+  "reviewedAt": "2026-07-27",
   "status": "approved"
  },
  "secondary": []
