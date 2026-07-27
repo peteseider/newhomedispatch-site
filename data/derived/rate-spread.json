@@ -1,201 +1,89 @@
 {
   "schema": "nhd-rate-spread-v1",
   "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
-  "lastUpdated": "2026-07-27T13:02:40.905Z",
-  "runKey": "2026-07-27-AM",
+  "lastUpdated": "2026-07-27T17:24:15.351Z",
+  "runKey": "2026-07-27-PM",
   "pmms": {
     "week": "7/23/2026",
     "rate30": 6.58
   },
   "offers": [
     {
-      "id": "inc01",
-      "builder": "ashton-woods",
-      "community": "",
-      "advertisedRate": 3.99,
-      "spreadBps": -259
-    },
-    {
-      "id": "inc06",
-      "builder": "david-weekley",
-      "community": "",
-      "advertisedRate": 2.99,
-      "spreadBps": -359
-    },
-    {
-      "id": "inc10",
-      "builder": "kb-home",
-      "community": "",
-      "advertisedRate": 4.75,
-      "spreadBps": -183
-    },
-    {
-      "id": "inc11",
-      "builder": "pacesetter",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc12",
-      "builder": "perry",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc14",
-      "builder": "tri-pointe",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc19",
-      "builder": "scott-felder-homes",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc22",
-      "builder": "aha-dream-homes",
-      "community": "whisper-valley",
-      "advertisedRate": 3.75,
-      "spreadBps": -283
-    },
-    {
-      "id": "inc25",
+      "id": "inc228",
       "builder": "brookfield",
-      "community": "easton-park",
+      "community": "",
       "advertisedRate": 1.99,
       "spreadBps": -459
     },
     {
-      "id": "inc26",
+      "id": "inc229",
       "builder": "coventry",
       "community": "",
       "advertisedRate": 4.99,
       "spreadBps": -159
     },
     {
-      "id": "inc29",
-      "builder": "starlight-homes",
-      "community": "",
-      "advertisedRate": 3.5,
-      "spreadBps": -308
-    },
-    {
-      "id": "inc30",
-      "builder": "landsea-homes",
-      "community": "",
-      "advertisedRate": 2.99,
-      "spreadBps": -359
-    },
-    {
-      "id": "inc31",
-      "builder": "chesmar-homes",
-      "community": "",
-      "advertisedRate": 4.999,
-      "spreadBps": -158
-    },
-    {
-      "id": "inc32",
-      "builder": "scott-felder-homes",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc36",
-      "builder": "stylecraft-builders",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc43",
-      "builder": "brookfield",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -159
-    },
-    {
-      "id": "inc44",
+      "id": "inc232",
       "builder": "david-weekley",
       "community": "",
       "advertisedRate": 2.99,
       "spreadBps": -359
     },
     {
-      "id": "inc46",
-      "builder": "dr-horton",
-      "community": "palomino",
-      "advertisedRate": 3.99,
-      "spreadBps": -259
-    },
-    {
-      "id": "inc47",
-      "builder": "lennar",
+      "id": "inc235",
+      "builder": "starlight-homes",
       "community": "",
-      "advertisedRate": 3.375,
-      "spreadBps": -320
+      "advertisedRate": 3.25,
+      "spreadBps": -333
     },
     {
-      "id": "inc49",
-      "builder": "toll-brothers",
+      "id": "inc236",
+      "builder": "landsea-homes",
       "community": "",
-      "advertisedRate": 3.99,
-      "spreadBps": -259
+      "advertisedRate": 2.99,
+      "spreadBps": -359
     },
     {
-      "id": "inc50",
-      "builder": "mi-homes",
+      "id": "inc237",
+      "builder": "chesmar-homes",
       "community": "",
-      "advertisedRate": 4.875,
-      "spreadBps": -170
+      "advertisedRate": 4.999,
+      "spreadBps": -158
     },
     {
-      "id": "inc51",
-      "builder": "trophy-signature-homes",
-      "community": "",
-      "advertisedRate": 1.99,
-      "spreadBps": -459
-    },
-    {
-      "id": "inc53",
-      "builder": "newmark-homes",
-      "community": "",
-      "advertisedRate": 1.99,
-      "spreadBps": -459
-    },
-    {
-      "id": "inc54",
-      "builder": "gfo-home",
+      "id": "inc238",
+      "builder": "scott-felder-homes",
       "community": "",
       "advertisedRate": 4.99,
       "spreadBps": -159
     },
     {
-      "id": "inc55",
-      "builder": "sitterle-homes",
+      "id": "inc242",
+      "builder": "stylecraft",
       "community": "",
       "advertisedRate": 4.99,
       "spreadBps": -159
     },
     {
-      "id": "inc56",
-      "builder": "milestone",
+      "id": "inc301",
+      "builder": "brookfield",
       "community": "",
-      "advertisedRate": 4.5,
-      "spreadBps": -208
+      "advertisedRate": 1.99,
+      "spreadBps": -459
     },
     {
-      "id": "inc57",
+      "id": "inc308",
       "builder": "toll-brothers",
-      "community": "santa-rita-ranch",
-      "advertisedRate": 3.99,
-      "spreadBps": -259
+      "community": "",
+      "advertisedRate": 6.04,
+      "spreadBps": -54
+    },
+    {
+      "id": "inc317",
+      "builder": "regency-toll-brothers",
+      "community": "",
+      "advertisedRate": 6.04,
+      "spreadBps": -54
     }
   ],
   "note": "Advertised rates are builder claims parsed from offer text; PMMS is the weekly market average. Negative spread = advertised below market (the buydown teaser)."

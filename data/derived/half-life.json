@@ -1,21 +1,21 @@
 {
   "schema": "nhd-incentive-half-life-v1",
   "metric": "Median days an advertised offer survives unchanged (offer persistence)",
-  "lastUpdated": "2026-07-27T13:02:40.905Z",
-  "runKey": "2026-07-27-AM",
+  "lastUpdated": "2026-07-27T17:24:15.351Z",
+  "runKey": "2026-07-27-PM",
   "mature": false,
   "maturityNote": "Event log is 4 days old; publish only after 28+ days of accumulation. Values below are provisional and right-censored.",
-  "completedSpansMedianDays": null,
-  "openSpansMedianDays": 1,
-  "completedSpans": 0,
-  "openSpans": 27,
+  "completedSpansMedianDays": 1,
+  "openSpansMedianDays": 0,
+  "completedSpans": 3,
+  "openSpans": 32,
   "byBuilder": {
-    "ashton-woods": {
+    "brohn-homes": {
       "completedMedian": null,
       "open": 2
     },
     "brookfield": {
-      "completedMedian": null,
+      "completedMedian": 1,
       "open": 2
     },
     "coventry": {
@@ -23,12 +23,12 @@
       "open": 1
     },
     "david-weekley": {
-      "completedMedian": null,
-      "open": 3
+      "completedMedian": 1,
+      "open": 2
     },
     "dr-horton": {
       "completedMedian": null,
-      "open": 1
+      "open": 3
     },
     "drb": {
       "completedMedian": null,
@@ -47,6 +47,10 @@
       "open": 1
     },
     "tri-pointe": {
+      "completedMedian": 1,
+      "open": 2
+    },
+    "century-communities": {
       "completedMedian": null,
       "open": 2
     },
@@ -66,6 +70,10 @@
       "completedMedian": null,
       "open": 1
     },
+    "united-built-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
     "blackburn-homes": {
       "completedMedian": null,
       "open": 2
@@ -74,7 +82,7 @@
       "completedMedian": null,
       "open": 1
     },
-    "united-built-homes": {
+    "ashton-woods": {
       "completedMedian": null,
       "open": 1
     },
@@ -82,7 +90,11 @@
       "completedMedian": null,
       "open": 1
     },
-    "toll-brothers": {
+    "dream-finders-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "regency-toll-brothers": {
       "completedMedian": null,
       "open": 1
     }
