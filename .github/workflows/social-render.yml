@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name  "nhd-social-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add share/hot-sheet-read.png share/hot-sheet-move.png share/hot-sheet-explained.png share/hot-sheet-rate.png share/hot-sheet-illusion.png share/hot-sheet-board.png share/captions.txt
+          git add share/hot-sheet-read.png share/hot-sheet-move.png share/hot-sheet-explained.png share/hot-sheet-rate.png share/hot-sheet-illusion.png share/captions.txt
           if git diff --cached --quiet; then
             echo "No image changes."
           else
