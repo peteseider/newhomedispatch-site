@@ -712,45 +712,45 @@
    "kind": "builder",
    "slug": "scott-felder-homes",
    "name": "Scott Felder Homes",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://www.scottfelderhomes.com/communities/austin-area",
    "note": "Austin, Round Rock, Georgetown, Leander, Pflugerville, Dripping Springs",
-   "added": "2026-07-23"
+   "added": "2026-07-23",
+   "url": "builders/scott-felder-homes.html"
   },
   {
    "kind": "builder",
    "slug": "gfo-home",
    "name": "GFO Home",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://www.gfohome.com/division/austin/",
    "note": "Austin division live; Pflugerville, Liberty Hill",
-   "added": "2026-07-23"
+   "added": "2026-07-23",
+   "url": "builders/gfo-home.html"
   },
   {
    "kind": "builder",
    "slug": "empire-communities",
    "name": "Empire Communities",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://empirehomes.com/us/texas/austin/",
    "note": "Goodnight Ranch, Adelton (Bastrop)",
-   "added": "2026-07-23"
+   "added": "2026-07-23",
+   "url": "builders/empire-communities.html"
   },
   {
    "kind": "builder",
    "slug": "milestone",
    "name": "MileStone Community Builders",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://www.mymilestone.com/",
    "note": "Austin local volume builder, multiple communities",
-   "added": "2026-07-23"
+   "added": "2026-07-23",
+   "url": "builders/milestone.html"
   },
   {
    "kind": "builder",
@@ -767,12 +767,12 @@
    "kind": "builder",
    "slug": "sitterle-homes",
    "name": "Sitterle Homes",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://sitterlehomes.com/communities/",
    "note": "Santa Rita Ranch, Parmer Ranch Cottages, Clearwater Ranch, Belterra",
-   "added": "2026-07-23"
+   "added": "2026-07-23",
+   "url": "builders/sitterle-homes.html"
   },
   {
    "kind": "builder",
@@ -789,23 +789,23 @@
    "kind": "builder",
    "slug": "trophy-signature-homes",
    "name": "Trophy Signature Homes",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://trophysignaturehomes.com/homes/austin/hutto",
    "note": "Green Brick brand; Prairie Winds in Hutto",
-   "added": "2026-07-23"
+   "added": "2026-07-23",
+   "url": "builders/trophy-signature-homes.html"
   },
   {
    "kind": "builder",
    "slug": "landsea-homes",
    "name": "Landsea Homes",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://www.newhomesource.com/communities/tx/austin-area/builder-landsea-homes-19499",
    "note": "Avery Centre (Round Rock), Lariat (Liberty Hill), Manor Commons; confirm corporate status before publishing",
-   "added": "2026-07-23"
+   "added": "2026-07-23",
+   "url": "builders/landsea-homes.html"
   },
   {
    "kind": "builder",
@@ -833,12 +833,12 @@
    "kind": "builder",
    "slug": "terrata-homes",
    "name": "Terrata Homes",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://www.terratahomes.com/texas/austin",
    "note": "LGI premium brand; Whisper Valley and Austin area",
-   "added": "2026-07-23"
+   "added": "2026-07-23",
+   "url": "builders/terrata-homes.html"
   },
   {
    "kind": "builder",
@@ -864,25 +864,25 @@
   },
   {
    "kind": "builder",
-   "slug": "stylecraft-builders",
-   "name": "Stylecraft Builders",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "slug": "stylecraft",
+   "name": "Stylecraft Homes",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://www.stylecraft.com/new-homes/",
    "note": "North corridor (Temple, Killeen area)",
-   "added": "2026-07-23"
+   "added": "2026-07-23",
+   "url": "builders/stylecraft.html"
   },
   {
    "kind": "builder",
    "slug": "del-webb",
    "name": "Del Webb",
-   "profile": "none",
-   "tracked": false,
-   "tier": "watch",
+   "profile": "stub",
+   "tracked": true,
    "offersUrl": "https://www.delwebb.com/homes/texas/austin",
    "note": "Pulte active adult brand; Sun City Texas (Georgetown), the largest 55 plus community in the metro",
-   "added": "2026-07-24"
+   "added": "2026-07-24",
+   "url": "builders/del-webb.html"
   },
   {
    "kind": "builder",
