@@ -2717,6 +2717,8 @@ const NHD_DATA = {
   let activeRegion = 'all';
   let activeCommunity = null;
   let compareList = new Set();
+  let gridVisibleCount = 24;
+  const GRID_PAGE_SIZE = 24;
   let fPrice = 'all', fTax = 'all', fHoa = 'all', fSchool = 'all', f55 = false;
   let diffOnly = false;
 
@@ -2875,6 +2877,62 @@ function renderPins(){
       grid.appendChild(card);
     });
   }
+
+    const __origRenderGrid = renderGrid;
+  renderGrid = function(){
+    __origRenderGrid();
+    var __cards = Array.prototype.slice.call(grid.querySelectorAll('.directory-card'));
+    var __total = __cards.length;
+    __cards.forEach(function(card, i){ card.style.display = i < gridVisibleCount ? '' : 'none'; });
+    var __rc = document.getElementById('result-count');
+    if(__rc && __total > 0){
+      var __totalAll = NHD_DATA.communities.length;
+      var __shown = Math.min(gridVisibleCount, __total);
+      __rc.textContent = (__total === __totalAll) ? ('Showing ' + __shown + ' of ' + __totalAll) : ('Showing ' + __shown + ' of ' + __total + ' matching filters (' + __totalAll + ' total)');
+    }
+    var __moreWrap = document.getElementById('explorer-grid-more');
+    if(!__moreWrap){
+      __moreWrap = document.createElement('div');
+      __moreWrap.id = 'explorer-grid-more';
+      __moreWrap.style.cssText = 'text-align:center;margin:4px 0 24px;';
+      grid.parentNode.insertBefore(__moreWrap, grid.nextSibling);
+    }
+    if(__total <= gridVisibleCount){
+      __moreWrap.innerHTML = '';
+    } else {
+      var __remaining = __total - gridVisibleCount;
+      var __nextBatch = Math.min(GRID_PAGE_SIZE, __remaining);
+      __moreWrap.innerHTML = '<button class="btn" type="button" id="grid-show-more">Show ' + __nextBatch + ' more (' + gridVisibleCount + ' of ' + __total + ' shown)</button>';
+      var __btn = document.getElementById('grid-show-more');
+      if(__btn) __btn.addEventListener('click', function(){ gridVisibleCount += GRID_PAGE_SIZE; renderGrid(); });
+    }
+  };
+
+  (function(){
+    var btn = document.createElement('button');
+    btn.id = 'nhd-back-to-top';
+    btn.type = 'button';
+    btn.textContent = String.fromCharCode(8593) + ' Top';
+    btn.setAttribute('aria-label','Back to top');
+    btn.style.cssText = 'position:fixed;right:18px;bottom:18px;z-index:500;display:none;padding:10px 16px;border-radius:2px;border:1px solid #2B4FE0;background:#fff;color:#2B4FE0;font:inherit;font-size:0.78rem;font-weight:700;letter-spacing:.03em;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.16);';
+    document.body.appendChild(btn);
+    btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    window.addEventListener('scroll', function(){ btn.style.display = window.scrollY > 700 ? 'block' : 'none'; }, {passive:true});
+  })();
+
+  (function(){
+    var bar = document.querySelector('.explorer-resultbar');
+    var buildersSection = document.getElementById('builders');
+    if(!bar || !buildersSection) return;
+    var link = document.createElement('a');
+    link.id = 'nhd-jump-builders';
+    link.href = '#builders';
+    link.className = 'mono';
+    link.style.cssText = 'margin-left:auto;white-space:nowrap;color:#2B4FE0;font-weight:600;';
+    link.textContent = 'Jump to Builders section ' + String.fromCharCode(8595);
+    link.addEventListener('click', function(e){ e.preventDefault(); buildersSection.scrollIntoView({behavior:'smooth', block:'start'}); });
+    bar.appendChild(link);
+  })();
 
   function renderBuilderGrid(){
     builderGrid.innerHTML = '';
