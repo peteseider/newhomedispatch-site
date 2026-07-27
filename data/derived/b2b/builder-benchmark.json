@@ -2,7 +2,7 @@
   "schema": "nhd-builder-benchmark-v1",
   "product": "NHD Builder Benchmark (B2B product 1)",
   "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting.",
-  "generated": "2026-07-27T17:12:54.947Z",
+  "generated": "2026-07-27T17:58:47.448Z",
   "sample": {
     "verifiedOffers": 61,
     "builders": 38,
@@ -1362,6 +1362,963 @@
       "builder": "toll-brothers",
       "community": "santa-rita-ranch",
       "expires": "2026-07-19"
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc200",
+      "builder": "brohn-homes",
+      "community": "",
+      "value": 40000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc201",
+      "builder": "brohn-homes",
+      "community": "",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc202",
+      "builder": "brookfield",
+      "community": "",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc203",
+      "builder": "brookfield",
+      "community": "",
+      "value": 4600
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc204",
+      "builder": "coventry",
+      "community": "",
+      "value": 105000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc205",
+      "builder": "david-weekley",
+      "community": "",
+      "value": 70000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc206",
+      "builder": "david-weekley",
+      "community": "",
+      "value": 2500
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc207",
+      "builder": "dr-horton",
+      "community": "",
+      "value": 6518
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc208",
+      "builder": "dr-horton",
+      "community": "",
+      "value": 25000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc209",
+      "builder": "drb",
+      "community": "",
+      "value": 50000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc210",
+      "builder": "kb-home",
+      "community": "",
+      "value": 5000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc211",
+      "builder": "pacesetter",
+      "community": "",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc212",
+      "builder": "perry",
+      "community": "",
+      "value": 35000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc213",
+      "builder": "tri-pointe",
+      "community": "",
+      "value": 25000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc214",
+      "builder": "tri-pointe",
+      "community": "",
+      "value": 15000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc215",
+      "builder": "century-communities",
+      "community": "",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc216",
+      "builder": "century-communities",
+      "community": "",
+      "value": 3000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc217",
+      "builder": "del-webb",
+      "community": "",
+      "value": 64605
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc218",
+      "builder": "del-webb",
+      "community": "",
+      "value": 2000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc219",
+      "builder": "empire-communities",
+      "community": "",
+      "value": 50000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc220",
+      "builder": "terrata-homes",
+      "community": "",
+      "value": 25000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc221",
+      "builder": "scott-felder-homes",
+      "community": "",
+      "value": 20000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc222",
+      "builder": "united-built-homes",
+      "community": "",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc223",
+      "builder": "blackburn-homes",
+      "community": "",
+      "value": 20000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc224",
+      "builder": "blackburn-homes",
+      "community": "",
+      "value": 77732
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc225",
+      "builder": "aha-dream-homes",
+      "community": "",
+      "value": 20000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc226",
+      "builder": "ashton-woods",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc227",
+      "builder": "brohn-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc228",
+      "builder": "brookfield",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc229",
+      "builder": "coventry",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc230",
+      "builder": "coventry",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc231",
+      "builder": "coventry",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc232",
+      "builder": "david-weekley",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc233",
+      "builder": "meritage",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc234",
+      "builder": "mi-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc235",
+      "builder": "starlight-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc236",
+      "builder": "landsea-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc237",
+      "builder": "chesmar-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc238",
+      "builder": "scott-felder-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc239",
+      "builder": "gfo-home",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc240",
+      "builder": "wilshire-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc241",
+      "builder": "tilson-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc242",
+      "builder": "stylecraft",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc300",
+      "builder": "ashton-woods",
+      "community": "",
+      "value": 10000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc301",
+      "builder": "brookfield",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc302",
+      "builder": "centex",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc303",
+      "builder": "david-weekley",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc304",
+      "builder": "dr-horton",
+      "community": "",
+      "value": 65000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc305",
+      "builder": "dr-horton",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc306",
+      "builder": "lennar",
+      "community": "",
+      "value": 20000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc307",
+      "builder": "pulte-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc308",
+      "builder": "toll-brothers",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc309",
+      "builder": "mi-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc310",
+      "builder": "trophy-signature",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc311",
+      "builder": "del-webb",
+      "community": "",
+      "value": 8500
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc312",
+      "builder": "dream-finders-homes",
+      "community": "",
+      "value": 74242
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc313",
+      "builder": "newmark-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc314",
+      "builder": "milestone-community-builders",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc315",
+      "builder": "sitterle-homes",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc316",
+      "builder": "regency-toll-brothers",
+      "community": "",
+      "value": 80000
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_added",
+      "id": "inc317",
+      "builder": "regency-toll-brothers",
+      "community": "",
+      "value": null
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc01",
+      "builder": "ashton-woods",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc02",
+      "builder": "ashton-woods",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc03",
+      "builder": "brookfield",
+      "community": "easton-park"
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc04",
+      "builder": "brookfield",
+      "community": "easton-park"
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc05",
+      "builder": "coventry",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc06",
+      "builder": "david-weekley",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc07",
+      "builder": "david-weekley",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc08",
+      "builder": "dr-horton",
+      "community": "palomino"
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc09",
+      "builder": "drb",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc10",
+      "builder": "kb-home",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc11",
+      "builder": "pacesetter",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc12",
+      "builder": "perry",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc13",
+      "builder": "tri-pointe",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc14",
+      "builder": "tri-pointe",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc15",
+      "builder": "del-webb",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc16",
+      "builder": "del-webb",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc17",
+      "builder": "empire-communities",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc18",
+      "builder": "terrata-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc19",
+      "builder": "scott-felder-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc20",
+      "builder": "blackburn-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc21",
+      "builder": "blackburn-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc22",
+      "builder": "aha-dream-homes",
+      "community": "whisper-valley"
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc23",
+      "builder": "united-built-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc24",
+      "builder": "ashton-woods",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc25",
+      "builder": "brookfield",
+      "community": "easton-park"
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc26",
+      "builder": "coventry",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc27",
+      "builder": "meritage",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc28",
+      "builder": "mi-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc29",
+      "builder": "starlight-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc30",
+      "builder": "landsea-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc31",
+      "builder": "chesmar-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc32",
+      "builder": "scott-felder-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc33",
+      "builder": "gfo-home",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc34",
+      "builder": "wilshire-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc35",
+      "builder": "tilson-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc36",
+      "builder": "stylecraft-builders",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc43",
+      "builder": "brookfield",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc44",
+      "builder": "david-weekley",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc45",
+      "builder": "david-weekley",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc46",
+      "builder": "dr-horton",
+      "community": "palomino"
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc47",
+      "builder": "lennar",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc48",
+      "builder": "pulte-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc49",
+      "builder": "toll-brothers",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc50",
+      "builder": "mi-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc51",
+      "builder": "trophy-signature-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc52",
+      "builder": "del-webb",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc53",
+      "builder": "newmark-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc54",
+      "builder": "gfo-home",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc55",
+      "builder": "sitterle-homes",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc56",
+      "builder": "milestone",
+      "community": ""
+    },
+    {
+      "t": "2026-07-27T17:24:15.351Z",
+      "runKey": "2026-07-27-PM",
+      "type": "offer_removed",
+      "id": "inc57",
+      "builder": "toll-brothers",
+      "community": "santa-rita-ranch"
     }
   ]
 }
