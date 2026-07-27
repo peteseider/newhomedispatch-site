@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Share Kit | New Home Dispatch</title>
-<meta name="description" content="Every current New Home Dispatch social graphic in one place: the six live Hot Sheet cards, The Board single sheet, caption copy, the Dispatch Rule reel, and the education sets, refreshed automatically with every sweep.">
+<meta name="description" content="Every current New Home Dispatch social graphic in one place: the five live Hot Sheet cards, caption copy, the Dispatch Rule reel, and the education sets, refreshed automatically with every sweep.">
 <link rel="canonical" href="https://newhomedispatch.com/share-kit">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <meta name="theme-color" content="#0F2942">
@@ -53,11 +53,11 @@ a{color:var(--blue);}
 <div class="wrap">
   <div class="eyebrow">Share Kit &middot; Always Current</div>
   <h1>Every shareable, one page.</h1>
-  <p class="lead">Everything New Home Dispatch publishes for social lives here, already rendered and ready to download. The six live cards and the caption copy regenerate automatically with every sweep, so whatever you grab from this page carries the current numbers. The reel and education sets update when the campaign updates.</p>
+  <p class="lead">Everything New Home Dispatch publishes for social lives here, already rendered and ready to download. The five live cards and the caption copy regenerate automatically with every sweep, so whatever you grab from this page carries the current numbers. The reel and education sets update when the campaign updates.</p>
   <div class="stampline" id="kit-stamp"><span class="dot"></span>Cards regenerate with every sweep.</div>
 
   <h2>The live cards</h2>
-  <p class="sub">Rendered fresh after each sweep from the same data the site runs on. The Board is the single sheet: the whole market picture in one graphic.</p>
+  <p class="sub">Rendered fresh after each sweep from the same data the site runs on.</p>
   <div class="grid" id="live-cards"></div>
 
   <h2>Caption copy</h2>
@@ -105,7 +105,6 @@ a{color:var(--blue);}
     {f:'hot-sheet-explained', t:'The score, explained', w:'What Buyer Advantage measures. For new followers.'},
     {f:'hot-sheet-rate',   t:'Rate reality',       w:'Advertised promo rates against the market baseline.'},
     {f:'hot-sheet-illusion', t:'The incentive illusion', w:'Why the biggest advertised number is rarely the best deal.'},
-    {f:'hot-sheet-board',  t:'The Board (single sheet)', w:'The whole market in one graphic. Rate, index, resale, permits.'}
   ];
   var REEL = [1,2,3,4,5,6].map(function(n){ return {f:'reel-deal-'+n, t:'Reel slide '+n, w: n===6 ? 'The head and heart test closes it.' : 'The deal comes last, slide '+n+' of 6.'}; });
   var EDU  = [1,2,3,4].map(function(n){ return {f:'edu-deal-'+n, t:'Education slide '+n, w:'Reading a builder deal, part '+n+' of 4.'}; });
