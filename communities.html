@@ -3337,28 +3337,14 @@ function renderPins(){
     var mapEl = document.getElementById('nhd-leaflet-map');
     var gridEl = document.querySelector('.explorer-map-wrap svg');
     var mapBtn = document.getElementById('map-view-btn');
-    var gridBtn = document.getElementById('grid-view-btn');
     if (mapEl) mapEl.style.display = 'block';
     if (gridEl) gridEl.style.display = 'none';
     if (mapBtn) { mapBtn.style.background = '#000'; mapBtn.style.color = '#fff'; }
-    if (gridBtn) { gridBtn.style.background = ''; gridBtn.style.color = ''; }
     initNhdMap();
-  }
-  function showGrid(){
-    var mapEl = document.getElementById('nhd-leaflet-map');
-    var gridEl = document.querySelector('.explorer-map-wrap svg');
-    var mapBtn = document.getElementById('map-view-btn');
-    var gridBtn = document.getElementById('grid-view-btn');
-    if (mapEl) mapEl.style.display = 'none';
-    if (gridEl) gridEl.style.display = '';
-    if (gridBtn) { gridBtn.style.background = '#000'; gridBtn.style.color = '#fff'; }
-    if (mapBtn) { mapBtn.style.background = ''; mapBtn.style.color = ''; }
   }
   document.addEventListener('DOMContentLoaded', function(){
     var mapBtn = document.getElementById('map-view-btn');
-    var gridBtn = document.getElementById('grid-view-btn');
     if (mapBtn) mapBtn.addEventListener('click', showMap);
-    if (gridBtn) gridBtn.addEventListener('click', showGrid);
     showMap();
     var __cm = location.hash.match(/community=([a-z0-9\-]+)/i);
     if (__cm && window.NHD_GEO && window.NHD_GEO[__cm[1]] && window.NHD_MAP) {
