@@ -1,15 +1,15 @@
 {
  "schema": "nhd-sweep-latest-v1",
- "ranAt": "2026-07-26T17:05:00-05:00",
- "ranAtLabel": "Jul 26, 2026 · 05:05 PM CT",
- "slot": "PM",
+ "ranAt": "2026-07-27T06:05:00-05:00",
+ "ranAtLabel": "Jul 27, 2026 · 06:05 AM CT",
+ "slot": "AM",
  "index": 20000,
- "offers": 38,
- "builders": 27,
- "expired": 14,
+ "offers": 43,
+ "builders": 28,
+ "expired": 18,
  "detection": {
   "ran": false,
   "reason": "no ANTHROPIC_API_KEY set"
  },
- "note": "Published from the 2026-07-26 PM incentive sweep (reporting/incentive-sweep/latest-snapshot.json). Re-confirmation run vs the 2026-07-26 AM sweep -- no material dollar movement; DRB Homes moved $30K -> $50K on Hawkes Landing. This file drives the homepage snap-stamp badge and the \"verified ...\" ticker suffix site-wide -- keep it in sync with incentives.json on every publish."
+ "note": "Published from the 2026-07-27 AM incentive sweep (reporting/incentive-sweep/latest-snapshot.json). Re-confirmation run vs the 2026-07-26 PM sweep -- no material dollar movement; Wilshire Homes moved from fetch-failed/carried to fully re-confirmed live ($0 Down, Hutto Square). Manually bridged into the live site by an attended session because the scheduled sweep session has no push access to this repo. This file drives the homepage snap-stamp badge and the \"verified ...\" ticker suffix site-wide -- keep it in sync with incentives.json on every publish."
 }
