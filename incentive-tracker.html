@@ -1684,6 +1684,8 @@ a.ent:hover{color:var(--blueprint);text-decoration-color:var(--blueprint);}
 .trk .cmp-panel.on{display:block;}
 .trk table.cmp{border-collapse:collapse;width:100%;min-width:640px;font-size:.86rem;}
 .trk table.cmp th,.trk table.cmp td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top;}
+.cmp tr th:first-child,.cmp tr td:first-child{position:sticky;left:0;z-index:2;background:var(--paper);box-shadow:2px 0 4px -2px rgba(0,0,0,.2);}
+.cmp thead th:first-child{background:var(--paper-alt);z-index:3;}
 .trk table.cmp thead th{background:var(--paper-alt);font-size:.82rem;}
 .trk table.cmp tbody th{background:#fff;font-weight:700;width:180px;color:var(--text-muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;}
 .trk .cmp-close{background:none;border:1px solid var(--line);border-radius:2px;padding:8px 13px;font:inherit;font-size:.8rem;cursor:pointer;margin:14px;}
