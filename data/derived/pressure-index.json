@@ -1,7 +1,7 @@
 {
   "schema": "nhd-builder-pressure-index-v0.1",
   "metric": "Builder Pressure Index: observed motivation signals per builder (0-100)",
-  "lastUpdated": "2026-07-27T12:01:46.325Z",
+  "lastUpdated": "2026-07-27T17:12:54.899Z",
   "mature": false,
   "maturityNote": "Publish externally only when mature=true (28+ days of twice-daily event log). Until then this is an internal read.",
   "weights": "v0.1 equal-weights across live components; components with no data are excluded, never imputed.",
@@ -18,11 +18,25 @@
         "strings": 100
       },
       "liveComponents": 3,
-      "offersTracked": 2,
+      "offersTracked": 1,
       "daysToFiscalQuarterEnd": 3
     },
     {
-      "builder": "ashton-woods",
+      "builder": "david-weekley",
+      "score": 72,
+      "components": {
+        "depth": 100,
+        "urgency": 40,
+        "churn": null,
+        "fiscal": null,
+        "strings": 75
+      },
+      "liveComponents": 3,
+      "offersTracked": 4,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
+      "builder": "brohn-homes",
       "score": 67,
       "components": {
         "depth": 100,
@@ -50,49 +64,7 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "david-weekley",
-      "score": 63,
-      "components": {
-        "depth": 100,
-        "urgency": 40,
-        "churn": null,
-        "fiscal": null,
-        "strings": 50
-      },
-      "liveComponents": 3,
-      "offersTracked": 4,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
-      "builder": "del-webb",
-      "score": 62,
-      "components": {
-        "depth": 100,
-        "urgency": 20,
-        "churn": null,
-        "fiscal": null,
-        "strings": 67
-      },
-      "liveComponents": 3,
-      "offersTracked": 3,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
       "builder": "gfo-home",
-      "score": 60,
-      "components": {
-        "depth": null,
-        "urgency": 20,
-        "churn": null,
-        "fiscal": null,
-        "strings": 100
-      },
-      "liveComponents": 2,
-      "offersTracked": 2,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
-      "builder": "trophy-signature-homes",
       "score": 60,
       "components": {
         "depth": null,
@@ -134,20 +106,6 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "milestone",
-      "score": 60,
-      "components": {
-        "depth": null,
-        "urgency": 20,
-        "churn": null,
-        "fiscal": null,
-        "strings": 100
-      },
-      "liveComponents": 2,
-      "offersTracked": 1,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
       "builder": "brookfield",
       "score": 57,
       "components": {
@@ -162,17 +120,17 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "drb",
-      "score": 50,
+      "builder": "del-webb",
+      "score": 51,
       "components": {
-        "depth": null,
-        "urgency": 0,
+        "depth": 100,
+        "urgency": 20,
         "churn": null,
         "fiscal": null,
-        "strings": 100
+        "strings": 33
       },
-      "liveComponents": 2,
-      "offersTracked": 1,
+      "liveComponents": 3,
+      "offersTracked": 3,
       "daysToFiscalQuarterEnd": null
     },
     {
@@ -202,6 +160,20 @@
       "liveComponents": 2,
       "offersTracked": 1,
       "daysToFiscalQuarterEnd": null
+    },
+    {
+      "builder": "century-communities",
+      "score": 50,
+      "components": {
+        "depth": 100,
+        "urgency": 0,
+        "churn": null,
+        "fiscal": 0,
+        "strings": 100
+      },
+      "liveComponents": 4,
+      "offersTracked": 2,
+      "daysToFiscalQuarterEnd": 65
     },
     {
       "builder": "empire-communities",
@@ -246,6 +218,20 @@
       "daysToFiscalQuarterEnd": null
     },
     {
+      "builder": "united-built-homes",
+      "score": 50,
+      "components": {
+        "depth": null,
+        "urgency": 0,
+        "churn": null,
+        "fiscal": null,
+        "strings": 100
+      },
+      "liveComponents": 2,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
       "builder": "aha-dream-homes",
       "score": 50,
       "components": {
@@ -260,7 +246,7 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "united-built-homes",
+      "builder": "ashton-woods",
       "score": 50,
       "components": {
         "depth": null,
@@ -270,7 +256,7 @@
         "strings": 100
       },
       "liveComponents": 2,
-      "offersTracked": 1,
+      "offersTracked": 2,
       "daysToFiscalQuarterEnd": null
     },
     {
@@ -330,18 +316,32 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "stylecraft-builders",
+      "builder": "centex",
       "score": 50,
       "components": {
         "depth": null,
-        "urgency": 0,
+        "urgency": null,
         "churn": null,
-        "fiscal": null,
+        "fiscal": 0,
         "strings": 100
       },
       "liveComponents": 2,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": null
+      "daysToFiscalQuarterEnd": 65
+    },
+    {
+      "builder": "dr-horton",
+      "score": 49,
+      "components": {
+        "depth": 100,
+        "urgency": 20,
+        "churn": null,
+        "fiscal": 0,
+        "strings": 75
+      },
+      "liveComponents": 4,
+      "offersTracked": 4,
+      "daysToFiscalQuarterEnd": 64
     },
     {
       "builder": "lennar",
@@ -400,6 +400,20 @@
       "daysToFiscalQuarterEnd": 65
     },
     {
+      "builder": "coventry",
+      "score": 38,
+      "components": {
+        "depth": null,
+        "urgency": 0,
+        "churn": null,
+        "fiscal": null,
+        "strings": 75
+      },
+      "liveComponents": 2,
+      "offersTracked": 4,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
       "builder": "tri-pointe",
       "score": 38,
       "components": {
@@ -428,35 +442,26 @@
       "daysToFiscalQuarterEnd": 65
     },
     {
-      "builder": "coventry",
-      "score": 25,
+      "builder": "drb",
+      "score": 0,
       "components": {
         "depth": null,
         "urgency": 0,
         "churn": null,
         "fiscal": null,
-        "strings": 50
+        "strings": 0
       },
       "liveComponents": 2,
-      "offersTracked": 2,
+      "offersTracked": 1,
       "daysToFiscalQuarterEnd": null
-    },
-    {
-      "builder": "dr-horton",
-      "score": 23,
-      "components": {
-        "depth": null,
-        "urgency": 20,
-        "churn": null,
-        "fiscal": 0,
-        "strings": 50
-      },
-      "liveComponents": 3,
-      "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 64
     }
   ],
   "insufficientData": [
-    "tilson-homes"
+    "tilson-homes",
+    "stylecraft",
+    "trophy-signature",
+    "dream-finders-homes",
+    "milestone-community-builders",
+    "regency-toll-brothers"
   ]
 }
