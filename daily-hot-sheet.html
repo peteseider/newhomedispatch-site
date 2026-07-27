@@ -197,14 +197,14 @@
 
 <nav class="topnav" aria-label="Primary">
   <div class="topnav-inner">
-    <a href="index.html" class="brand">new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</a>
+    <a class='brand' href='/'>new&nbsp;<span class="h">Home</span><span class="bar">|</span>dispatch</a>
     <div class="links">
-      <a href="index.html">Home</a>
-      <a href="free-tools.html" class="hideS">Free Tools</a>
-      <a href="incentive-tracker.html">Incentive Tracker</a>
-      <a href="weekly-dispatch.html" class="hideS">Weekly Dispatch</a>
-      <a href="buyer-guides.html" class="hideS">Buyer Playbook</a>
-      <a href="buyer-strategy-call.html" class="cta">Get Buyer Help</a>
+      <a href='/'>Home</a>
+      <a class='hideS' href='/free-tools'>Free Tools</a>
+      <a href='/incentive-tracker'>Incentive Tracker</a>
+      <a class='hideS' href='/weekly-dispatch'>Weekly Dispatch</a>
+      <a class='hideS' href='/buyer-guides'>Buyer Playbook</a>
+      <a class='cta' href='/buyer-strategy-call'>Get Buyer Help</a>
     </div>
   </div>
 </nav>
@@ -253,7 +253,7 @@
       <div class="score-badge">Reads: High</div>
     </div>
     <div>
-      <div class="score-lab">Buyer Advantage Score <span class="idx">v0.1 · public-signal model · <a href="methodology-buyer-advantage-score.html" style="color:inherit;text-decoration:underline;" onclick="try{window.NHD&&NHD.trackEvent&&NHD.trackEvent('methodology_open',{from:'terminal'})}catch(e){}">how it's scored ↗</a></span></div>
+      <div class="score-lab">Buyer Advantage Score <span class="idx">v0.1 · public-signal model · <a href='/methodology-buyer-advantage-score' onclick='try{window.NHD&&NHD.trackEvent&&NHD.trackEvent(\'methodology_open\',{from:\'terminal\'})}catch(e){}' style='color:inherit;text-decoration:underline;'>how it's scored ↗</a></span></div>
       <div class="score-head">Buyers hold the stronger hand this morning.</div>
       <div class="score-sub">One number for the whole Central Texas new-home market, the housing buyer's Fear &amp; Greed Index. Today it reads high: incentives are large and widespread and builders are competing hard. The one thing holding it back: <b>most credits are tied to the builder's lender</b>, so the leverage is real only if you protect the full value.</div>
     </div>
@@ -277,7 +277,7 @@
       <div class="wl-panel" id="wlPanel"></div>
       <div class="wl-count" id="wlCount"></div>
       <div class="wl-tools"><button type="button" class="wl-clear" id="wlClear" style="display:none;">Clear watchlist</button></div>
-      <a id="wlCta" href="preference-center.html" style="display:none;margin-top:14px;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:12px 18px;border-radius:5px;text-align:center;">Get changes for these builders by email →</a>
+      <a href='/preference-center' id='wlCta' style='display:none;margin-top:14px;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:12px 18px;border-radius:5px;text-align:center;'>Get changes for these builders by email →</a>
     </div>
 
     </details>
@@ -348,8 +348,14 @@
       <div id="fc-rows" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;">
         <div style="padding:11px 14px;color:var(--muted);font-size:12px;">Loads from today's tracked offers&hellip;</div>
       </div>
-      <div style="font-size:10.5px;color:#9a9a9a;margin-top:5px;line-height:1.5;">These are <b>builder advertised promotional rates</b>, usually forward commitments through the builder's affiliated lender. They require using that lender, full qualification, and often specific inventory homes, and they can change or sell out without notice. We exclude known teaser structures (2-1, 1-0, temporary buydowns, first-year-only rates) from this list where the builder's own language flags them, but marketing wording varies and we can miss one &mdash; always confirm directly whether an advertised rate is fixed for the full loan term or steps up after an introductory period before treating it as a real monthly-payment comparison. Advertised, not a quote, and not our verification of any lender's terms. Model your own scenario in the <a href="incentive-calculator.html">Incentive Reality Calculator</a>.</div>
+      <div style="font-size:10.5px;color:#9a9a9a;margin-top:5px;line-height:1.5;">These are <b>builder advertised promotional rates</b>, usually forward commitments through the builder's affiliated lender. They require using that lender, full qualification, and often specific inventory homes, and they can change or sell out without notice. We exclude known teaser structures (2-1, 1-0, temporary buydowns, first-year-only rates) from this list where the builder's own language flags them, but marketing wording varies and we can miss one &mdash; always confirm directly whether an advertised rate is fixed for the full loan term or steps up after an introductory period before treating it as a real monthly-payment comparison. Advertised, not a quote, and not our verification of any lender's terms. Model your own scenario in the <a href='/incentive-calculator'>Incentive Reality Calculator</a>.</div>
     </div>
+  </div>
+
+  <div style="margin:14px 24px 0;padding:14px 16px;border:1px solid var(--line);border-radius:6px;background:#F7F9FF;">
+    <div style="font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">What the rate actually costs the builder, and how to use that</div>
+    <div style="font-size:13px;line-height:1.6;color:#1a1a1a;">A permanent rate buydown like this is not free to the builder. They typically pay their lender a forward commitment fee to offer it, roughly <b>4% to 6% of the loan amount</b> (illustrative; the exact figure depends on the cost of debt when the builder locked the rate). On the $400,000 loan used above, that is about <b>$16,000 to $24,000</b> of the builder's own money, comparable to or larger than most advertised cash incentives.</div>
+    <div style="font-size:13px;line-height:1.6;color:#1a1a1a;margin-top:8px;">That same cost can be <b>reallocated</b>: to the rate, to the price, or to closing costs, instead of preset as a rate buydown. Which is better for you depends on your goal (lowest monthly payment vs. least cash to close) and how long you plan to stay. A bigger down payment shrinks the loan the buydown applies to, so a price cut or closing-cost credit can win instead. Run the breakeven with a buyer's agent before choosing the rate just because it is the headline number.</div>
   </div>
 
   <div style="padding:18px 24px 0;">
@@ -366,7 +372,7 @@
 
     <details class="fold"><summary class="kick"><span class="tw">▸</span> Builder offer signals <span class="r">advertised pressure, ranked</span></summary>
     <div class="rule"></div>
-    <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">A separate read from the market index above: how much <em>advertised offer pressure</em> each builder is showing right now, from credit size, structure, deadline pressure, and today's movement. It reads advertising behavior on the builder's own site; it does not claim to know internal motivation. Higher = more room to ask. <a href="methodology-buyer-advantage-score.html#builder">How it's scored ↗</a> · our transparent read, not an endorsement.</p>
+    <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px;">A separate read from the market index above: how much <em>advertised offer pressure</em> each builder is showing right now, from credit size, structure, deadline pressure, and today's movement. It reads advertising behavior on the builder's own site; it does not claim to know internal motivation. Higher = more room to ask. <a href='/methodology-buyer-advantage-score#builder'>How it's scored ↗</a> · our transparent read, not an endorsement.</p>
     <div class="rank">
       <div class="rank-head"><span>#</span><span>Builder</span><span>Score</span><span>Today</span></div>
       <div id="rankList"></div>
@@ -400,7 +406,7 @@
       <tr><td><b>Pacesetter</b></td><td>4.99% FHA/VA/USDA or 5.5% conv. + up to $10K closing</td><td class="deadline">Aug 3</td></tr>
     </table>
     <p style="font-size:11px;color:#9a9a9a;margin-top:8px;line-height:1.6;">Every date above is the <b>builder's advertised deadline</b>, not an independently confirmed one. Some deadlines quietly roll over; we log extensions sweep by sweep, and a per-builder deadline credibility read will publish once enough history accrues to be fair. An expired offer still on display is flagged, never counted as live.</p>
-    <p style="font-size:12.5px;color:var(--muted);margin-top:10px;">Want the full detail, every offer, filters, history, builder pages? That lives in the <a href="incentive-tracker.html">Incentive Tracker</a>. This sheet is the five-minute decision; the Tracker is the database behind it.</p>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:10px;">Want the full detail, every offer, filters, history, builder pages? That lives in the <a href='/incentive-tracker'>Incentive Tracker</a>. This sheet is the five-minute decision; the Tracker is the database behind it.</p>
 
     
     </details>
@@ -420,12 +426,12 @@
       <h4>The Concession Index</h4>
       <p>The median advertised incentive across every tracked offer, re-verified against each builder's own site four times a day and adjusted for how much value actually reaches the buyer.</p>
       <h4>The Movement Log</h4>
-      <p>Every advertised change is logged with a date the moment a sweep catches it. Stability is reported too, because a market where builders hold steady is information. See it live on the <a href="incentive-tracker.html">Incentive Tracker</a>.</p>
+      <p>Every advertised change is logged with a date the moment a sweep catches it. Stability is reported too, because a market where builders hold steady is information. See it live on the <a href='/incentive-tracker'>Incentive Tracker</a>.</p>
       <h4>The Entry Level Price Floor</h4>
       <p>A running series watching the cheapest advertised new construction in the metro, so first time buyers can see the floor move before headlines do.</p>
       <h4>The rate benchmark</h4>
       <p>The daily 30 year fixed, tracked so every incentive can be judged against what your payment actually buys today.</p>
-      <p style="margin-top:10px;">The methods are published on the <a href="methodology.html">methodology page</a>. The pipeline that runs them is proprietary, it runs without days off, and it compounds: every sweep adds history no one can recreate later.</p>
+      <p style="margin-top:10px;">The methods are published on the <a href='/methodology'>methodology page</a>. The pipeline that runs them is proprietary, it runs without days off, and it compounds: every sweep adds history no one can recreate later.</p>
     </div>
 
     </details>
@@ -445,15 +451,15 @@
       <div style="font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:.1em;color:#8fa8d9;text-transform:uppercase;margin-bottom:8px;">The Dispatch rule</div>
       <div style="font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px;">The deal comes last.</div>
       <p style="font-size:13px;line-height:1.65;color:#c9d6ef;margin:0 0 10px;">Goals first. Then area, then community, then builder. The incentive is the final lever in the negotiation, never the first filter, because a bigger number on the sign can just be a bigger markup underneath it. We track deals so you can see the trend and know when your negotiating window opens, not so a discount picks your house.</p>
-      <a href="deal-comes-last.html" style="color:#9DBBFF;font-weight:700;font-size:13px;">Why the deal comes last &rarr;</a> <span style="color:#8fa8d9;font-size:12px;">&middot;</span> <a href="deal-comes-last.html#head-heart" style="color:#8fa8d9;font-weight:600;font-size:12.5px;">and when the numbers tie, the head and heart test &rarr;</a>
+      <a href='/deal-comes-last' style='color:#9DBBFF;font-weight:700;font-size:13px;'>Why the deal comes last &rarr;</a> <span style="color:#8fa8d9;font-size:12px;">&middot;</span> <a href='/deal-comes-last#head-heart' style='color:#8fa8d9;font-weight:600;font-size:12.5px;'>and when the numbers tie, the head and heart test &rarr;</a>
     </div>
 
     <div class="cta-strip">
       <h3>Get the Terminal before you tour</h3>
       <p>Open it every morning, or have the morning read sent to you, and choose exactly what you want: this Daily Hot Sheet, the Friday Weekly Dispatch, or both.</p>
-      <a href="preference-center.html">Choose your updates →</a>
+      <a href='/preference-center'>Choose your updates →</a>
     </div>
-    <p style="text-align:center;font-size:13.5px;margin:16px 0 0;"><a href="buyer-strategy-call.html" onclick="try{window.NHD&&NHD.trackEvent&&NHD.trackEvent('buyerhelp_click',{from:'terminal'})}catch(e){}">Compare the real cost of these offers with an independent buyer representative →</a></p>
+    <p style="text-align:center;font-size:13.5px;margin:16px 0 0;"><a href='/buyer-strategy-call' onclick='try{window.NHD&&NHD.trackEvent&&NHD.trackEvent(\'buyerhelp_click\',{from:\'terminal\'})}catch(e){}'>Compare the real cost of these offers with an independent buyer representative →</a></p>
   </div>
 
   <footer class="foot">
