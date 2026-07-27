@@ -1795,7 +1795,7 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
     <img class="austin-skyline" src="/assets/austin-skyline-explorer.jpg" alt="Aerial photo of the Austin, Texas skyline along Lady Bird Lake" loading="lazy">
     <div class="eyebrow mono">The Explorer</div>
     <h2 class="section-title">Seventy-six communities tracked, eleven verified and cross-linked.</h2>
-    <p class="directory-sub">Austin-area coverage, 76 communities on the map: 11 fully verified and tracked, 65 researched with field verification pending (blue pins), expanding on a rolling basis. Filter by what matters to you, then select up to three to compare side by side. Builder rosters, pricing, school districts, and commute notes are pulled from public sources and re-checked on an ongoing basis, every page shows its own verification date, see the <a href='/methodology' style='color:var(--ink); text-decoration:underline;'>full methodology</a>.</p>
+    <p class="directory-sub">Austin-area coverage, 77 communities on the map: 11 fully verified and tracked, 65 researched with field verification pending (blue pins), expanding on a rolling basis. Filter by what matters to you, then select up to three to compare side by side. Builder rosters, pricing, school districts, and commute notes are pulled from public sources and re-checked on an ongoing basis, every page shows its own verification date, see the <a href='/methodology' style='color:var(--ink); text-decoration:underline;'>full methodology</a>.</p>
 
     <div class="explorer-toolbar explorer-toolbar-regions">
       <div class="builder-chips" id="region-chips">
@@ -2452,6 +2452,15 @@ const NHD_DATA = {
       schoolDistrict: 'Hays Consolidated ISD — zoned to Science Hall Elementary (K-5), Chapa Middle School (6-8), and Lehman High School (9-12), per D.R. Horton’s own site.', commute: 'Kyle — I-35 corridor at exit 215, south of Austin and San Marcos (per builder site).',
       taxRate: 'Not yet verified — no independent source found this pass. Do not treat any figure as final until confirmed via Hays CAD or a rate sheet.', hoa: 'Not confirmed by the builder; not yet verified by an independent source.',
       lotSizes: 'Not independently confirmed; builder site lists 8 floor plans from 1,291 to 2,239 sq ft (3-4 bed, 1-2 story), but exact lot dimensions are not stated.'
+    },
+    {
+      id: 'opal-meadows', name: 'Opal Meadows', area: 'Kyle', region: 'South',
+      x: 262, y: 312, researched: true,
+      builders: ['meritage'],
+      price: 'From $369,990', note: 'Meritage Homes community in Kyle, TX 78640, advertised on oversized lots with community amenities (playground, walking trails, picnic tables, play lawn) — New Home Dispatch’s first profile of this community, added during a South Austin/Kyle/Buda/San Marcos corridor audit; not yet field-visited.',
+      schoolDistrict: 'Not named on Meritage’s own site; nearby schools listed are Jack C Hays High School, Wallace Middle School, and Kyle Elementary School, commonly associated with Hays CISD — not independently confirmed.', commute: 'Kyle, TX 78640 (per Meritage Homes’ own community page).',
+      taxRate: 'Not stated on Meritage’s own community page or in aggregator listings reviewed. Not independently confirmed — check Hays County tax records before treating any figure as final.', hoa: 'Not stated on Meritage’s own community page; not independently confirmed.',
+      lotSizes: 'Not independently confirmed; Meritage’s own site lists floor plans (including The Capital, The Heritage, and The Greenville) but does not state lot dimensions — described only as “oversized lots” in Meritage’s own marketing copy.'
     },
     {
       id: 'cotton-gateway', name: 'Cotton Gateway', area: 'Maxwell', region: 'South',
