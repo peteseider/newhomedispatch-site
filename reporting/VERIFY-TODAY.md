@@ -1,4 +1,4 @@
-# Verify Today (2026-07-26)
+# Verify Today (2026-07-27)
 Ranked worklist. Twenty minutes here grows the published tape fastest.
 
 1. [60] CHECK Brookfield Residential at : offer shows expired 2025-11-12. Renewed, extended, or gone? (Feeds the Renewal Ledger.)

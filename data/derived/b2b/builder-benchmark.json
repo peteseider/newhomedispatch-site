@@ -2,7 +2,7 @@
   "schema": "nhd-builder-benchmark-v1",
   "product": "NHD Builder Benchmark (B2B product 1)",
   "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting.",
-  "generated": "2026-07-26T15:44:10.321Z",
+  "generated": "2026-07-27T12:01:46.416Z",
   "sample": {
     "verifiedOffers": 51,
     "builders": 33,
@@ -32,12 +32,12 @@
       "bestAdvertisedRate": 3.99,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 4,
       "percentiles": {
         "incentiveDepth": 97,
         "rateAggressiveness": 64
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "blackburn-homes",
@@ -62,12 +62,12 @@
       "bestAdvertisedRate": null,
       "lenderTiedShare": 0.67,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 91,
         "rateAggressiveness": null
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "david-weekley",
@@ -77,12 +77,12 @@
       "bestAdvertisedRate": 2.99,
       "lenderTiedShare": 0.5,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 4,
       "percentiles": {
         "incentiveDepth": 84,
         "rateAggressiveness": 86
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "empire-communities",
@@ -137,12 +137,12 @@
       "bestAdvertisedRate": 3.99,
       "lenderTiedShare": 0.5,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 69,
         "rateAggressiveness": 64
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "tri-pointe",
@@ -227,12 +227,12 @@
       "bestAdvertisedRate": 3.375,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 56,
         "rateAggressiveness": 77
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "brookfield",
@@ -242,12 +242,12 @@
       "bestAdvertisedRate": 1.99,
       "lenderTiedShare": 0.5,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 47,
         "rateAggressiveness": 100
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "pacesetter",
@@ -317,12 +317,12 @@
       "bestAdvertisedRate": 4.875,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 0,
         "rateAggressiveness": 41
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "starlight-homes",
@@ -377,12 +377,12 @@
       "bestAdvertisedRate": 4.99,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 0,
         "rateAggressiveness": 36
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "wilshire-homes",
@@ -437,12 +437,12 @@
       "bestAdvertisedRate": null,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 0,
         "rateAggressiveness": null
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "trophy-signature-homes",
@@ -452,12 +452,12 @@
       "bestAdvertisedRate": 1.99,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 0,
         "rateAggressiveness": 100
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "newmark-homes",
@@ -467,12 +467,12 @@
       "bestAdvertisedRate": 1.99,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 0,
         "rateAggressiveness": 100
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "sitterle-homes",
@@ -482,12 +482,12 @@
       "bestAdvertisedRate": 4.99,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 0,
         "rateAggressiveness": 36
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     },
     {
       "builder": "milestone",
@@ -497,12 +497,12 @@
       "bestAdvertisedRate": 4.5,
       "lenderTiedShare": 1,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 0,
+      "expiredButDisplayed": 2,
       "percentiles": {
         "incentiveDepth": 0,
         "rateAggressiveness": 50
       },
-      "deadlineHonesty": "clean so far"
+      "deadlineHonesty": "extensions or post-deadline display observed"
     }
   ],
   "weeklyMoves": [
@@ -1017,6 +1017,276 @@
       "builder": "toll-brothers",
       "community": "santa-rita-ranch",
       "value": 80000
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc43",
+      "builder": "brookfield",
+      "community": "",
+      "expires": "2025-11-12"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc44",
+      "builder": "david-weekley",
+      "community": "",
+      "expires": "2026-07-01"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc45",
+      "builder": "david-weekley",
+      "community": "",
+      "expires": "2026-07-01"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc46",
+      "builder": "dr-horton",
+      "community": "palomino",
+      "expires": "2026-06-30"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc47",
+      "builder": "lennar",
+      "community": "",
+      "expires": "2026-07-19"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc48",
+      "builder": "pulte-homes",
+      "community": "",
+      "expires": "2025-07-31"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc49",
+      "builder": "toll-brothers",
+      "community": "",
+      "expires": "2026-07-12"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc50",
+      "builder": "mi-homes",
+      "community": "",
+      "expires": "2026-05-29"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc51",
+      "builder": "trophy-signature-homes",
+      "community": "",
+      "expires": "2026-07-24"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc52",
+      "builder": "del-webb",
+      "community": "",
+      "expires": "2025-07-31"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc53",
+      "builder": "newmark-homes",
+      "community": "",
+      "expires": "2026-03-31"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc54",
+      "builder": "gfo-home",
+      "community": "",
+      "expires": "2026-04-30"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc55",
+      "builder": "sitterle-homes",
+      "community": "",
+      "expires": "2025-12-31"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc56",
+      "builder": "milestone",
+      "community": "",
+      "expires": "2026-05-15"
+    },
+    {
+      "t": "2026-07-26T17:28:00.062Z",
+      "runKey": "2026-07-26-PM",
+      "type": "expired_but_displayed",
+      "id": "inc57",
+      "builder": "toll-brothers",
+      "community": "santa-rita-ranch",
+      "expires": "2026-07-19"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc43",
+      "builder": "brookfield",
+      "community": "",
+      "expires": "2025-11-12"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc44",
+      "builder": "david-weekley",
+      "community": "",
+      "expires": "2026-07-01"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc45",
+      "builder": "david-weekley",
+      "community": "",
+      "expires": "2026-07-01"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc46",
+      "builder": "dr-horton",
+      "community": "palomino",
+      "expires": "2026-06-30"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc47",
+      "builder": "lennar",
+      "community": "",
+      "expires": "2026-07-19"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc48",
+      "builder": "pulte-homes",
+      "community": "",
+      "expires": "2025-07-31"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc49",
+      "builder": "toll-brothers",
+      "community": "",
+      "expires": "2026-07-12"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc50",
+      "builder": "mi-homes",
+      "community": "",
+      "expires": "2026-05-29"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc51",
+      "builder": "trophy-signature-homes",
+      "community": "",
+      "expires": "2026-07-24"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc52",
+      "builder": "del-webb",
+      "community": "",
+      "expires": "2025-07-31"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc53",
+      "builder": "newmark-homes",
+      "community": "",
+      "expires": "2026-03-31"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc54",
+      "builder": "gfo-home",
+      "community": "",
+      "expires": "2026-04-30"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc55",
+      "builder": "sitterle-homes",
+      "community": "",
+      "expires": "2025-12-31"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc56",
+      "builder": "milestone",
+      "community": "",
+      "expires": "2026-05-15"
+    },
+    {
+      "t": "2026-07-27T11:59:41.360Z",
+      "runKey": "2026-07-27-AM",
+      "type": "expired_but_displayed",
+      "id": "inc57",
+      "builder": "toll-brothers",
+      "community": "santa-rita-ranch",
+      "expires": "2026-07-19"
     }
   ]
 }
