@@ -1793,17 +1793,23 @@ body.nav-open .nav-mobile{display:flex;}
 .v31-hero{background:#fff;border-bottom:1px solid #E4E4E7;}
 .v31-grid{display:flex;gap:64px;align-items:flex-start;padding:60px 0 40px;}
 .v31-lead{flex:1.35 1 0;min-width:0;}
-.v31-kicker{display:flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#0F2942;margin-bottom:20px;}
+.v31-kicker{display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#0F2942;margin-bottom:20px;}
 .v31-dot{width:7px;height:7px;border-radius:50%;background:var(--blueprint,#2B4FE0);flex:0 0 7px;}
-.v31-hero h1{font-family:'Inter',sans-serif;font-size:clamp(2.4rem,5vw,3.9rem);line-height:1.02;letter-spacing:-0.03em;color:#0F2942;margin:0 0 20px;font-weight:800;max-width:none;}
+.v31-hero h1{font-family:'Archivo Expanded',sans-serif;font-size:clamp(2.6rem,5.2vw,4.2rem);line-height:1.06;letter-spacing:0;color:#0F2942;margin:0 0 22px;font-weight:800;max-width:none;}
 .v31-hero h1 em{font-style:normal;color:var(--blueprint,#2B4FE0);}
-.v31-dek{font-size:1.05rem;line-height:1.65;color:#3F4753;max-width:58ch;margin:0 0 26px;}
+.v31-dek{font-size:1.13rem;line-height:1.6;color:#3F4753;max-width:56ch;margin:0 0 28px;}
 .v31-ctas{display:flex;gap:12px;flex-wrap:wrap;}
-.v31-btn{display:inline-block;padding:13px 24px;border-radius:5px;font-family:'Inter',sans-serif;font-weight:700;font-size:.92rem;text-decoration:none;}
+.v31-btn{display:inline-block;padding:13px 24px;border-radius:5px;font-family:'Inter',sans-serif;font-weight:700;font-size:.92rem;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease,background-color .15s ease,border-color .15s ease;}
 .v31-btn-primary{background:#0F2942;color:#fff;}
-.v31-btn-primary:hover{background:#163a5c;}
+.v31-btn-primary:hover{background:#163a5c;transform:translateY(-1px);box-shadow:0 6px 16px rgba(15,41,66,.28);}
 .v31-btn-ghost{border:1.5px solid #D7DBE2;color:#0F2942;background:#fff;}
-.v31-btn-ghost:hover{border-color:#0F2942;}
+.v31-btn-ghost:hover{border-color:#0F2942;transform:translateY(-1px);}
+@keyframes nhdFadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.v31-kicker{animation:nhdFadeUp .6s ease both;}
+.v31-hero h1{animation:nhdFadeUp .6s ease .08s both;}
+.v31-dek{animation:nhdFadeUp .6s ease .16s both;}
+.v31-ctas{animation:nhdFadeUp .6s ease .24s both;}
+@media (prefers-reduced-motion: reduce){.v31-kicker,.v31-hero h1,.v31-dek,.v31-ctas{animation:none;}}
 .v31-slot{flex:1 1 0;min-width:0;border:1px solid #E4E4E7;border-top:3px solid var(--blueprint,#2B4FE0);padding:20px 24px 16px;background:#fff;}
 .v31-slot-head{display:flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:4px;}
 .v31-live-dot{width:7px;height:7px;border-radius:50%;background:#1F9D55;animation:pulse 2.2s infinite;flex:0 0 7px;}
@@ -1974,7 +1980,7 @@ a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 <div class="v31-lead">
 <div class="v31-kicker"><span class="v31-dot"></span>Independent Education for New Construction &middot; Central Texas</div>
 <h1>The trusted bridge<br>between builders and buyers.</h1>
-<p class="v31-dek">New construction is a different transaction than resale &mdash; more decisions, more paperwork, usually made only once or twice in a lifetime. New Home Dispatch closes that gap: independent research and plain-English education for buyers, and a verified record builders can point to. Not a referee. A translator both sides can trust.</p>
+<p class="v31-dek">New construction is a different transaction than resale. It means more decisions, more paperwork, and it's usually made only once or twice in a lifetime. New Home Dispatch closes that gap: independent research and plain-English education for buyers, and a verified record builders can point to. Not a referee. A translator both sides can trust.</p>
 <div class="v31-ctas">
 <a class="v31-btn v31-btn-primary" href="/daily-hot-sheet">Open today&rsquo;s Hot Sheet</a>
 <a class="v31-btn v31-btn-ghost" href="/reports">Read the reporting</a>
