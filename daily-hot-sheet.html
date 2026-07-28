@@ -761,7 +761,7 @@
     (function () {
       var box = document.getElementById('since-sweep');
       if (!box) return;
-      var pts = (sh && sh.points) ? sh.points.slice().sort(function(a,b){ return String(a.t).localeCompare(String(b.t)); }) : [];
+      var pts = (ci && ci.points) ? ci.points.slice().sort(function(a,b){ return String(a.t).localeCompare(String(b.t)); }) : [];
       if (pts.length < 2) return; /* honest empty state stays */
       var cur = pts[pts.length-1], prev = pts[pts.length-2];
       var el = document.getElementById('ss-when');
@@ -776,10 +776,12 @@
         return '<span class="' + (good?'ss-up':'ss-down') + '">' + (d>0?'▲ +':'▼ −') + fmt(Math.abs(d)) + '</span>';
       }
       var html = '';
-      var dScore = cur.score - prev.score;
-      var scoreChip = dchip(dScore, function(x){return String(x);}, false);
-      if (dScore !== 0 && Math.abs(dScore) <= 2) scoreChip += ' <span class="ss-na">within model noise</span>';
-      html += row('Buyer Advantage Score', prev.score + ' → ' + cur.score, scoreChip);
+      if (cur.score !== undefined && prev.score !== undefined) {
+        var dScore = cur.score - prev.score;
+        var scoreChip = dchip(dScore, function(x){return String(x);}, false);
+        if (dScore !== 0 && Math.abs(dScore) <= 2) scoreChip += ' <span class="ss-na">within model noise</span>';
+        html += row('Buyer Advantage Score', prev.score + ' → ' + cur.score, scoreChip);
+      }
       var dIdx = null, idxVal = '';
       if (ci && ci.points && ci.points.length >= 2) {
         var iv = ci.points.map(function(p){return p.index;});
