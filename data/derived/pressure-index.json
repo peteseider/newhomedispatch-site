@@ -1,7 +1,7 @@
 {
   "schema": "nhd-builder-pressure-index-v0.1",
   "metric": "Builder Pressure Index: observed motivation signals per builder (0-100)",
-  "lastUpdated": "2026-07-27T17:58:47.402Z",
+  "lastUpdated": "2026-07-28T09:44:54.580Z",
   "mature": false,
   "maturityNote": "Publish externally only when mature=true (28+ days of twice-daily event log). Until then this is an internal read.",
   "weights": "v0.1 equal-weights across live components; components with no data are excluded, never imputed.",
@@ -121,10 +121,10 @@
     },
     {
       "builder": "del-webb",
-      "score": 51,
+      "score": 54,
       "components": {
         "depth": 100,
-        "urgency": 20,
+        "urgency": 30,
         "churn": null,
         "fiscal": null,
         "strings": 33

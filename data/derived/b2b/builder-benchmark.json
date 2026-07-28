@@ -2,7 +2,7 @@
   "schema": "nhd-builder-benchmark-v1",
   "product": "NHD Builder Benchmark (B2B product 1)",
   "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting.",
-  "generated": "2026-07-27T17:58:47.448Z",
+  "generated": "2026-07-28T09:44:54.619Z",
   "sample": {
     "verifiedOffers": 61,
     "builders": 38,
@@ -107,7 +107,7 @@
       "bestAdvertisedRate": null,
       "lenderTiedShare": 0.33,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 2,
+      "expiredButDisplayed": 3,
       "percentiles": {
         "incentiveDepth": 84,
         "rateAggressiveness": null
@@ -2319,6 +2319,15 @@
       "id": "inc57",
       "builder": "toll-brothers",
       "community": "santa-rita-ranch"
+    },
+    {
+      "t": "2026-07-28T08:08:13.912Z",
+      "runKey": "2026-07-28-AM",
+      "type": "expired_but_displayed",
+      "id": "inc311",
+      "builder": "del-webb",
+      "community": "",
+      "expires": "06/28/25-07/31/2025"
     }
   ]
 }
