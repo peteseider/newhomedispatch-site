@@ -3,21 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Weekly Dispatch, Issue Archive | New Home Dispatch</title>
-<meta name="description" content="Every issue of the Weekly Dispatch, one short, independent read on the Central Texas new-construction market, every Friday. Free.">
-<link rel="canonical" href="https://newhomedispatch.com/weekly-dispatch.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The Weekly Dispatch, Issue Archive | New Home Dispatch">
-<meta property="og:description" content="One short, independent read on the Central Texas new-construction market, every Friday. Free.">
-<meta property="og:url" content="https://newhomedispatch.com/weekly-dispatch.html">
-<meta property="og:site_name" content="New Home Dispatch">
-<meta property="og:image" content="https://newhomedispatch.com/assets/og-default.png">
+<title>Subscribe to the Weekly Dispatch, New Home Dispatch</title>
+<link rel="canonical" href="https://newhomedispatch.com/subscribe-dispatch.html">
+<meta name="description" content="The Weekly Dispatch, one independent, four-minute read on the Central Texas new-construction market, every Friday. Free.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="analytics.js" defer></script>
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
 <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png">
+<link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <style>
 
   .visually-hidden{
@@ -1502,8 +1498,46 @@
   .thanks-hero p{color:#D4D4D4; font-size:1.05rem; line-height:1.7; max-width:560px; margin-top:18px;}
   .thanks-actions{display:flex; gap:14px; flex-wrap:wrap; margin-top:32px;}
 </style>
-
-<style id="gnav-css">
+<style id="gate-css">
+  .gate-hero{background:#0A0A0A; color:#fff; position:relative; overflow:hidden; padding:70px 0 60px;}
+  .gate-hero .blueprint-grid, .gate-grid-bg{position:absolute; inset:0; background-image:linear-gradient(rgba(78,122,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(78,122,255,.09) 1px,transparent 1px); background-size:46px 46px; -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 88%); mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 30%,transparent 88%);}
+  .gate-hero .wrap{position:relative; z-index:2;}
+  .gate-hero .eyebrow{color:var(--blueprint-light);}
+  .gate-hero h1{font-size:clamp(1.9rem,4vw,2.7rem); color:#fff; margin:14px 0 12px; max-width:16ch;}
+  .gate-hero p{color:rgba(255,255,255,.78); font-size:1.05rem; line-height:1.6; max-width:52ch;}
+  .gate-body{padding:52px 0;}
+  .gate-layout{display:grid; grid-template-columns:1.05fr .95fr; gap:44px; align-items:start;}
+  .gate-form{border:1px solid var(--line); border-top:3px solid var(--blueprint); border-radius:2px; padding:28px 26px; background:var(--paper);}
+  .gate-form h2{font-size:1.2rem; margin:0 0 6px;}
+  .gate-form .sub{font-size:0.92rem; color:var(--text-muted); margin:0 0 18px; line-height:1.55;}
+  .gf-field{display:flex; flex-direction:column; gap:5px; margin-bottom:14px;}
+  .gf-field label{font-size:0.78rem; font-weight:600;}
+  .gf-opt{font-weight:400; color:var(--text-muted);}
+  .gf-field input, .gf-field select{border:1px solid var(--line); border-radius:2px; padding:11px 12px; font:inherit; font-size:0.92rem; background:#fff; color:var(--ink);}
+  .gf-field input:focus-visible, .gf-field select:focus-visible, .gate-form button:focus-visible{outline:2px solid var(--blueprint); outline-offset:2px;}
+  .gf-prefs{background:var(--paper-alt, #F4F4F4); border-left:3px solid var(--blueprint, #2B4FE0); padding:10px 12px; gap:8px;}
+  .gf-prefs-label{font-size:0.78rem; font-weight:600;}
+  .gf-check{display:flex; flex-direction:row; align-items:flex-start; gap:8px; font-size:0.85rem; font-weight:400; cursor:pointer;}
+  .gf-check input{width:16px; height:16px; margin-top:2px; flex-shrink:0;}
+  .gate-form button{width:100%; justify-content:center; margin-top:4px;}
+  .gate-form .fineprint{font-size:0.74rem; color:var(--text-muted); margin:14px 0 0; line-height:1.55;}
+  .gate-hp{position:absolute; left:-9999px;}
+  .gate-aside h3{font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin:0 0 14px;}
+  .gate-list{list-style:none; margin:0 0 24px; padding:0; display:flex; flex-direction:column; gap:2px;}
+  .gate-list li{display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--line); font-size:0.95rem;}
+  .gate-list li::before{content:""; width:7px; height:7px; margin-top:8px; background:var(--blueprint); flex:none; border-radius:1px;}
+  .gate-free{background:var(--paper-alt); border-left:3px solid var(--blueprint-light); padding:16px 18px; border-radius:2px;}
+  .gate-free p{margin:0; font-size:0.92rem; line-height:1.6;}
+  /* unlock page */
+  .dl-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px;}
+  .dl-card{display:flex; flex-direction:column; gap:4px; text-decoration:none; border:1px solid var(--line); border-radius:2px; padding:18px 20px; color:var(--ink); transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;}
+  .dl-card:hover{transform:translateY(-2px); border-color:var(--blueprint); box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+  .dl-card.primary{grid-column:1 / -1; border-top:3px solid var(--blueprint); background:var(--paper-alt);}
+  .dl-t{font-family:'Archivo Expanded',sans-serif; font-weight:700; font-size:1.02rem;}
+  .dl-card.primary .dl-t{font-size:1.25rem;}
+  .dl-s{font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted);}
+  @media (max-width:820px){ .gate-layout{grid-template-columns:1fr;} .dl-grid{grid-template-columns:1fr;} }
+</style><style id="gnav-css">
   .site-nav{display:flex; align-items:center;}
   .nav-desktop{display:flex; align-items:center; gap:4px; list-style:none; margin:0; padding:0;}
   .nav-desktop > li{position:relative;}
@@ -1554,7 +1588,6 @@
 }
 @media (prefers-reduced-motion:reduce){.nm-sec-list{transition:none;}.nm-chev{transition:none;}}
 </style>
-
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0F2942">
 <script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js").catch(function(){});</script>
@@ -1574,7 +1607,7 @@
 <ul class="nav-drop">
 <li><a href="/communities">Community Explorer</a></li>
 <li><a href="/builders">Builders</a></li>
-<li><a href="/communities#compare">Compare Tool</a></li>
+<li><a href="/communities#compare">Compare Communities</a></li>
 </ul>
 </li>
 <li class="nav-grp">
@@ -1596,7 +1629,7 @@
 </li>
 <li><a href="/free-tools">Tools</a></li>
 <li><a href="/methodology">How We Research</a></li>
-<li><a class="nav-cta btn btn-amber" href="/buyer-strategy-call">Get Buyer Help</a></li>
+<li><a class="nav-cta btn btn-amber" href="/buyer-strategy-call">Ask Pete</a></li>
 </ul>
 </nav>
   </div>
@@ -1608,7 +1641,7 @@
 <li><a href="free-tools.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>Free Tools</a></li>
 <li><a href="reports.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Latest Reports</a></li>
 <li><a href="methodology.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>About &amp; Methodology</a></li>
-<li class="nm-cta-wrap"><a href="/buyer-strategy-call" class="nm-cta-btn">Get Buyer Help &rarr;</a></li>
+<li class="nm-cta-wrap"><a href="/buyer-strategy-call" class="nm-cta-btn">Ask Pete &rarr;</a></li>
 <li class="nm-sec">
 <button type="button" class="nm-sec-btn" aria-expanded="false"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Recurring Publications<svg class="nm-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
 <ul class="nm-sec-list">
@@ -1636,7 +1669,6 @@
 </li>
 </ul>
 <script>(function(){var nm=document.getElementById("nav-mobile");if(!nm)return;nm.addEventListener("click",function(e){var b=e.target.closest(".nm-sec-btn");if(!b)return;var s=b.parentElement;var o=s.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});})();</script>
-
 <main id="main-content">
 <div id="nhd-ticker" style="background:linear-gradient(180deg,#0c2138 0%,#081524 100%);border-top:1px solid rgba(201,169,110,.4);border-bottom:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;"><style>
 #nhd-ticker-track{display:flex;width:max-content;animation:nhdTickerScroll 38s linear infinite;}
@@ -1693,29 +1725,52 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
 });
 })();
 </script>
-
-<section style="background:#0A0A0A;color:#fff;padding:60px 0 52px;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(78,122,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(78,122,255,.09) 1px,transparent 1px);background-size:46px 46px;" aria-hidden="true"></div>
-  <div class="wrap" style="position:relative;z-index:2;">
-    <div style="font-family:'Inter', sans-serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#4E7AFF;">The Weekly Dispatch · Archive</div>
-    <h1 style="font-size:clamp(2rem,4vw,2.7rem);color:#fff;margin:12px 0 12px;">Every issue. Every week. On the record.</h1>
-    <p style="color:rgba(255,255,255,.78);font-size:1.05rem;max-width:62ch;line-height:1.6;margin:0 0 24px;">One short, independent read every Friday, what changed in the Central Texas new-construction market and the one thing worth doing about it. Each issue includes the week’s Incentive Tracker read, the Monday and Wednesday updates rolled into one Friday section. Every number is logged to the <a href="incentive-tracker.html" style="color:#9FB4FF;">Incentive Tracker</a>, so issues can be compared across time. That record is the point.</p>
-    <a href="subscribe-dispatch.html" class="btn btn-amber" style="background:#fff;color:#000;">Get it every Friday, free &rarr;</a>
+<section class="gate-hero">
+  <div class="gate-grid-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow mono">The Weekly Dispatch · Free</div>
+    <h1>One email every Friday. The market, read for buyers.</h1>
+    <p>The scoreboard (rates, incentives, inventory), the deal of the week, a field note from a real site visit, and the one question to ask at the table. Four-minute read. Independent, not builder marketing.</p>
   </div>
 </section>
-<section style="padding:44px 0 40px;"><div class="wrap" style="max-width:880px;">
-  <h2 style="font-size:1.3rem;border-bottom:2px solid #000;padding-bottom:8px;margin-bottom:6px;">Issues</h2>
-  <a href="weekly-dispatch-01.html" style="display:block;text-decoration:none;color:inherit;border:1px solid #E0E0E0;border-left:3px solid #2B4FE0;border-radius:2px;padding:18px 20px;margin-top:16px;">
-    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;">
-      <span style="font-family:'Inter', sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#2B4FE0;">No. 01 · Fri Jul 24, 2026</span>
-      <span style="font-family:'Inter', sans-serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#9A6B00;background:#FBF3E0;border:1px solid #E4C77A;border-radius:2px;padding:2px 8px;">Preview · sample data</span>
+<section class="gate-body">
+  <div class="wrap gate-layout">
+    <div class="gate-form">
+      <h2>Subscribe to the Weekly Dispatch</h2>
+      <p class="sub">You'll get one email each Friday. That's it, no quarterly digest, no builder lists. Unsubscribe in one click, anytime.</p>
+      <form name="weekly-dispatch" method="POST" action="thanks-dispatch.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="weekly-dispatch">
+        <input type="hidden" name="pref_weekly" value="yes">
+        <p class="gate-hp"><label>Leave blank: <input name="bot-field"></label></p>
+        <div class="gf-field"><label for="wd-name">First name</label><input id="wd-name" name="first_name" type="text" autocomplete="given-name" required></div>
+        <div class="gf-field"><label for="wd-email">Email</label><input id="wd-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="gf-field"><label for="wd-phone">Phone <span class="gf-opt">(optional)</span></label><input id="wd-phone" name="phone" type="tel" autocomplete="tel" placeholder="Only if you'd like a heads-up on time-sensitive deals"></div>
+        <div class="gf-field"><label for="wd-area">Area you're watching <span class="gf-opt">(optional)</span></label><input id="wd-area" name="target_area" type="text" placeholder="e.g., Georgetown, Kyle, Leander"></div>
+        <div class="gf-field gf-prefs">
+          <label class="gf-prefs-label">Also send me <span class="gf-opt">(optional, pick any)</span></label>
+          <label class="gf-check"><input type="checkbox" name="pref_dailyhotsheet" value="yes"> The Daily Hot Sheet, that morning's and evening's scrubbed incentive changes</label>
+          <label class="gf-check"><input type="checkbox" name="pref_quarterly" value="yes"> Quarterly Buyer Playbook updates</label>
+        </div>
+        <button type="submit" class="btn btn-amber" onclick="if(window.NHD) NHD.trackEvent('weekly_dispatch_signup', {context:'subscribe_page'});">Get the Dispatch each Friday &rarr;</button>
+        <p class="fineprint">One email a week, every Friday. We never share your address, and there are no builder mailing lists. Unsubscribe anytime.</p>
+      </form>
+      <p class="fineprint" style="border-top:1px solid var(--line); padding-top:14px; margin-top:16px;">Form not loading? Email <a href="mailto:hello@newhomedispatch.com?subject=Subscribe%20to%20the%20Weekly%20Dispatch" style="color:var(--ink); text-decoration:underline;">hello@newhomedispatch.com</a> and we'll add you.</p>
     </div>
-    <div style="font-weight:800;font-size:1.15rem;margin-top:8px;">This Week Changed the Scoreboard</div>
-    <div style="font-size:.85rem;color:#666;margin-top:6px;">Buyer leverage: HIGH · Median tracked incentive: $20k · Best value: Perry Homes at Wolf Ranch and Bryson ($35,000)</div>
-    <div style="font-family:'Inter', sans-serif;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#2B4FE0;margin-top:10px;">Read the issue &rarr;</div>
-  </a>
-  <p style="font-size:.85rem;color:#666;line-height:1.6;margin-top:18px;">New issues appear here every Friday. The archive grows, and because every figure is logged to the tracker, you'll be able to compare any issue against any other.</p>
-</div></section>
+    <div class="gate-aside">
+      <h3>What's in every issue</h3>
+      <ul class="gate-list">
+        <li>The Scoreboard, rates, incentives, inventory, week over week</li>
+        <li>The Bottom Line, what this week means for your leverage</li>
+        <li>Deal of the Week, an editor's pick, with the catch</li>
+        <li>Field Note, what we saw on a real site visit</li>
+        <li>A community worth a weekend, and the question to ask</li>
+      </ul>
+      <div class="gate-free">
+        <p><strong>See it first.</strong> <a href="weekly-dispatch-01.html" style="color:var(--ink); text-decoration:underline;">Read Issue No. 01 &rarr;</a>, then decide if it's worth your inbox.</p>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 <footer>
   <div class="wrap">
@@ -1754,7 +1809,7 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
           <a href="reports.html">Reports</a>
           <a href="resources.html">Resource Desk</a>
           <a href="field-notes.html">Field Notes</a>
-          <a href="buyer-strategy-call.html">Get Buyer Help</a>
+          <a href="buyer-strategy-call.html">Ask Pete</a>
           <a href="buyer-story.html">Share Your Story (anonymous OK)</a>
           <a href="about.html">About</a>
           <a href="iabs.html">TREC: Info About Brokerage Services</a>
@@ -1767,12 +1822,11 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
     </div>
   </div>
 </footer>
-
 <script src="nav.js" defer></script>
 <script src="dispatch-cta.js" defer></script>
+<script src="forms.js" defer></script>
 <script src="assistant-launcher.js" defer></script>
 <!-- v73 nav fix: click-to-toggle + hover bridge (dropdowns were hover-only with dead 4px gap) -->
 <style>.nav-grp{position:relative}.nav-grp::after{content:"";position:absolute;left:0;right:0;top:100%;height:10px}.site-header,.nav-wrap{overflow:visible !important}.site-header{position:sticky;top:0;z-index:300}body>header:not(.hero){position:sticky;top:0;z-index:300}header:has(.site-nav){position:sticky;top:0;z-index:300}.nav-grp .nav-drop{z-index:400}</style>
-
 </body>
 </html>
