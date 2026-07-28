@@ -1809,7 +1809,12 @@ body.nav-open .nav-mobile{display:flex;}
 .v31-hero h1{animation:nhdFadeUp .6s ease .08s both;}
 .v31-dek{animation:nhdFadeUp .6s ease .16s both;}
 .v31-ctas{animation:nhdFadeUp .6s ease .24s both;}
-@media (prefers-reduced-motion: reduce){.v31-kicker,.v31-hero h1,.v31-dek,.v31-ctas{animation:none;}}
+@media (prefers-reduced-motion: reduce){.v31-kicker,.v31-hero h1,.v31-dek,.v31-ctas,.v31-byline{animation:none;}}
+.v31-byline{display:flex;align-items:center;gap:14px;margin-top:24px;padding-top:20px;border-top:1px solid #E4E4E7;text-decoration:none;animation:nhdFadeUp .6s ease .32s both;}
+.v31-byline-photo{width:44px;height:55px;object-fit:cover;object-position:top center;border-radius:2px;border:1px solid #D7DBE2;flex:0 0 44px;}
+.v31-byline-text{font-size:.88rem;line-height:1.45;color:#3F4753;}
+.v31-byline-text strong{color:#0F2942;}
+.v31-byline:hover .v31-byline-text strong{color:var(--blueprint,#2B4FE0);}
 .v31-slot{flex:1 1 0;min-width:0;border:1px solid #E4E4E7;border-top:3px solid var(--blueprint,#2B4FE0);padding:20px 24px 16px;background:#fff;}
 .v31-slot-head{display:flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:4px;}
 .v31-live-dot{width:7px;height:7px;border-radius:50%;background:#1F9D55;animation:pulse 2.2s infinite;flex:0 0 7px;}
@@ -1985,6 +1990,10 @@ a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 <a class="v31-btn v31-btn-primary" href="/daily-hot-sheet">Open today&rsquo;s Hot Sheet</a>
 <a class="v31-btn v31-btn-ghost" href="/reports">Read the reporting</a>
 </div>
+<a class="v31-byline" href="/about.html">
+<img src="assets/pete-seider.jpg" alt="Pete Seider, founder of New Home Dispatch" class="v31-byline-photo">
+<span class="v31-byline-text"><strong>Pete Seider</strong> &middot; in real estate since 2011, once on the builder side. Now with the Seider Realty Team, here for buyers.</span>
+</a>
 </div>
 <aside class="v31-slot" aria-label="Latest from the field">
 <div class="v31-slot-head"><span class="v31-live-dot" aria-hidden="true"></span>Latest from the field</div>
