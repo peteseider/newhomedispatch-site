@@ -1,9 +1,10 @@
 {
  "dates": [
   "2026-07-26",
-  "2026-07-27"
+  "2026-07-27",
+  "2026-07-29"
  ],
- "updated": "2026-07-27",
+ "updated": "2026-07-29",
  "sample": false,
  "leverage": "High",
  "records": [
@@ -60,16 +61,20 @@
    "expires": "Contracts must be written on or before July 31, 2026",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 10000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 10000
     }
    ],
-   "note": "RE-CONFIRMED LIVE.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29 at the same $10,000 figure. Today's builder page frames it as $10K closing + 4% flex (5% Hot Homes) rather than a standalone rate buydown; the separate 2.75% rate shown today is a temporary buydown on a 10/6 ARM, not permanent. CMG Home Loans.",
    "expired": false,
    "run": "AM"
   },
@@ -93,16 +98,20 @@
    "expires": "by July 31, 2026",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 10000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 10000
     }
    ],
-   "note": "RE-CONFIRMED LIVE via gap-fill re-fetch.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. Vacation package up to $10K, purchase by July 31, 2026.",
    "expired": false,
    "run": "AM"
   },
@@ -126,9 +135,9 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
-   "prevValue": 10000,
-   "delta": -5400,
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
    "history": [
     {
      "date": "2026-07-26",
@@ -137,9 +146,13 @@
     {
      "date": "2026-07-27",
      "value": 4600
+    },
+    {
+     "date": "2026-07-29",
+     "value": 4600
     }
    ],
-   "note": "RE-CONFIRMED LIVE.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. $4,600 Community Champions (Heroes) credit, part of the same Easton Park package as inc202.",
    "expired": false,
    "run": "AM"
   },
@@ -163,16 +176,20 @@
    "expires": "Contracts written and closed by July 31, 2026",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 105000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 105000
     }
    ],
-   "note": "top single-home QMI example.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. Per-home savings range $3K-$105K; 4.99% permanent buydown via Jet HomeLoans. Deadline: contracts written and closed by July 31, 2026.",
    "expired": false,
    "run": "AM"
   },
@@ -196,9 +213,9 @@
    "expires": "July 1-31, 2026",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
-   "prevValue": 50000,
-   "delta": 20000,
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
    "history": [
     {
      "date": "2026-07-26",
@@ -207,9 +224,13 @@
     {
      "date": "2026-07-27",
      "value": 70000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 70000
     }
    ],
-   "note": "Two tiers up to $50K/$70K.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. 50th Anniversary: 6% up to $50K flex (tier 1) / 8% up to $70K (tier 2). Priority Home Mortgage. July 1-31, 2026.",
    "expired": false,
    "run": "AM"
   },
@@ -332,16 +353,20 @@
    "expires": "close by December 31, 2026",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 50000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 50000
     }
    ],
-   "note": "RE-CONFIRMED LIVE via gap-fill. Zillow corroborated.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. Up to $30K flex generally, up to $50K on Hawkes Landing Classic. DRB approved lender + settlement agent required.",
    "expired": false,
    "run": "AM"
   },
@@ -355,7 +380,7 @@
    "builder": "KB Home",
    "homeType": "Varies (confirm on site)",
    "incentiveType": "Rate special (no dollar figure)",
-   "advertisedValue": 5000,
+   "advertisedValue": null,
    "transferability": null,
    "buyerValueScore": null,
    "lenderTied": true,
@@ -365,16 +390,20 @@
    "expires": "Sign a purchase agreement by 7/31/26",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
-   "prevValue": null,
+   "lastObserved": "2026-07-29",
+   "prevValue": 5000,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 5000
+    },
+    {
+     "date": "2026-07-29",
+     "value": null
     }
    ],
-   "note": "RE-CONFIRMED live.",
+   "note": "RE-CHECKED 2026-07-29: page now reads Below Market Rates with no specific figure shown (previously $5,000 on 2026-07-27); KBHS Home Loans implied. Not confirmed gone, just no longer quantified on the page -- treat the $5,000 prior figure as unconfirmed going forward.",
    "expired": false,
    "run": "AM"
   },
@@ -398,16 +427,20 @@
    "expires": "close by 8/15/26",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 10000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 10000
     }
    ],
-   "note": "Re-confirmed.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. Up to $10K closing + rates as low as 4.99%/5.5%. SFMC Home Lending. Contract window 7/16-8/3/2026.",
    "expired": false,
    "run": "AM"
   },
@@ -431,16 +464,20 @@
    "expires": "Homes must close by September 30, 2026",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 35000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 35000
     }
    ],
-   "note": "Re-confirmed.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. Up to $35K: choose 4.99% (TEMPORARY points buydown, not permanent) OR flex cash. Crestmark or Parkstone required.",
    "expired": false,
    "run": "AM"
   },
@@ -464,16 +501,20 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 25000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 25000
     }
    ],
-   "note": "Max Tri Pointe closing credit. Zillow corroborated.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. Live Brilliantly event: up to $15K closing + 1yr HOA, OR up to $25K closing + 3yr HOA on Paired Homes.",
    "expired": false,
    "run": "AM"
   },
@@ -497,9 +538,9 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
-   "prevValue": 10000,
-   "delta": 5000,
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
    "history": [
     {
      "date": "2026-07-26",
@@ -508,10 +549,14 @@
     {
      "date": "2026-07-27",
      "value": 15000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 15000
     }
    ],
-   "note": "Requires affiliated financing. Re-confirmed.",
-   "expired": false,
+   "note": "MARKED EXPIRED 2026-07-29: today's fetch of this same page succeeded but no longer shows the 4.99% Union Collection rate that was live 2026-07-27. Removal-guard note: page read succeeded (not a fetch failure), so this is a confirmed change, not a carry.",
+   "expired": true,
    "run": "AM"
   },
   {
@@ -633,16 +678,20 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 2000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 2000
     }
    ],
-   "note": "Heroes discount.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. $2,000 Hometown Heroes, ongoing (separate from the 10-Day Sales Event, which expired 7/28 -- see inc217 note).",
    "expired": false,
    "run": "AM"
   },
@@ -699,16 +748,20 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 25000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 25000
     }
    ],
-   "note": "Zillow corroborated. Re-confirmed.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. $25K package toward rate buydown OR closing costs; completed home under contract required.",
    "expired": false,
    "run": "AM"
   },
@@ -765,16 +818,20 @@
    "expires": "Limited number of new home starts",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 10000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 10000
     }
    ],
-   "note": "UBH in-house financing. Re-confirmed.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. $10K cash back + deferred payments (no payments 1st year, interest begins month 11). UBH financing.",
    "expired": false,
    "run": "AM"
   },
@@ -864,16 +921,20 @@
    "expires": "Select homes by 7/31",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 20000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 20000
     }
    ],
-   "note": "Re-confirmed.",
+   "note": "RE-CONFIRMED LIVE 2026-07-29. $20K flex cash OR 3.75% rate + waived homesite premium.",
    "expired": false,
    "run": "AM"
   },
@@ -1093,11 +1154,16 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
-   "history": [],
-   "note": "Below market rates.",
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "RE-CONFIRMED LIVE 2026-07-29. Swimming in Savings named event; no specific rate/dollar shown on page.",
    "expired": false,
    "run": "AM"
   },
@@ -1149,22 +1215,27 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
-   "history": [],
-   "note": "3.25% special financing.",
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "RE-CONFIRMED LIVE 2026-07-29. 3.25% note rate FHA 5/1 ARM (Velocio/Trailblazer) -- not permanent, not a temp buydown. $0 Down messaging present, terms undisclosed.",
    "expired": false,
    "run": "AM"
   },
   {
    "id": "inc236",
    "communitySlug": "",
-   "builderSlug": "landsea-homes",
+   "builderSlug": "risewell-homes",
    "community": "",
    "city": "Austin",
    "submarket": "",
-   "builder": "Landsea Homes (Risewell Homes)",
+   "builder": "Risewell Homes (formerly Landsea)",
    "homeType": "Varies (confirm on site)",
    "incentiveType": "Rate buydown (temporary)",
    "advertisedValue": null,
@@ -1177,11 +1248,16 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
-   "history": [],
-   "note": "2.99% temp buydown.",
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "RE-CONFIRMED LIVE 2026-07-29 on corridor retry, RETARGETED from Landsea to Risewell Homes per the v4.2 roster change. Year-1 buydown to 2.99% then FIXED 3.99% years 2-30 -- temporary (year-one) buydown; the 3.99% is the underlying full-term fixed. Plus undisclosed flex cash.",
    "expired": false,
    "run": "AM"
   },
@@ -1205,11 +1281,16 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
-   "history": [],
-   "note": "4.999% special financing.",
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "RE-CONFIRMED LIVE 2026-07-29. Advertised as 30-yr FIXED (permanent). No lender named, no deadline.",
    "expired": false,
    "run": "AM"
   },
@@ -1317,11 +1398,16 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
-   "history": [],
-   "note": "EasyBuy standing program.",
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "RE-CONFIRMED LIVE 2026-07-29. EasyBuy: no construction-loan origination/closing/interest during build. Standing program, not a dated promo.",
    "expired": false,
    "run": "AM"
   },
@@ -1345,11 +1431,16 @@
    "expires": "",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
-   "history": [],
-   "note": "4.99% rate.",
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "RE-CHECKED 2026-07-29: CLASSIFICATION CONFLICT. Today's fresh read classifies the 4.99% rate as a TEMPORARY buydown (Kangaroo Home Lending), vs. 2026-07-27's read of FHA fixed permanent. Excluded from the permanent-rate promo set pending manual verification -- see promo-stylecraft-499.",
    "expired": false,
    "run": "AM"
   },
@@ -1373,17 +1464,21 @@
    "expires": "November 15, 2023",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
    "history": [
     {
      "date": "2026-07-27",
      "value": 10000
+    },
+    {
+     "date": "2026-07-29",
+     "value": 10000
     }
    ],
-   "note": "EXPIRED - deadline Nov 15 2023 far predates today; stale cached content, Seguin/San Antonio-adjacent, not core Austin metro.",
-   "expired": true,
+   "note": "REACTIVATED 2026-07-29: Ashton Woods Cordova Trails (Seguin) 3.99% Fixed + $10K closing confirmed live again today (edge market, just outside core Austin).",
+   "expired": false,
    "run": "AM"
   },
   {
@@ -1790,12 +1885,17 @@
    "expires": "contract 4/16/26, close 5/15-5/30/26",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "prevValue": null,
    "delta": null,
-   "history": [],
-   "note": "EXPIRED - Apr-May 2026 windows passed. Mission Mortgage. Intro ARM (resets). Carried from PRIOR.",
-   "expired": true,
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "REACTIVATED 2026-07-29: MileStone Community Builders Blue Ribbon Sales Event 4.50% confirmed live today on the builders own homepage banner. Ambiguous permanent vs. buydown -- not in the permanent-rate promo set.",
+   "expired": false,
    "run": "AM"
   },
   {
@@ -1886,6 +1986,237 @@
    "note": "HELD/EXPIRED: no explicit deadline shown, but 6.04% APR matches the lapsed 'Extended Through July 19' National Sales Event creative on the same page.",
    "expired": true,
    "run": "AM"
+  },
+  {
+   "id": "inc243",
+   "communitySlug": "",
+   "builderSlug": "trophy-signature",
+   "community": "select homes",
+   "city": "Austin",
+   "submarket": "",
+   "builder": "Trophy Signature Homes",
+   "homeType": "Varies (confirm on site)",
+   "incentiveType": "Rate buydown (temporary)",
+   "advertisedValue": null,
+   "transferability": "Unknown",
+   "buyerValueScore": null,
+   "lenderTied": true,
+   "taxRate": null,
+   "taxNote": "",
+   "ratePromo": "1.99% FHA / 2.99% conv -- temporary 3/1 buydown, settles at 4.99% yrs 4-30",
+   "expires": "contract by 7/31; close by 8/28/26",
+   "source": "Builder-reported",
+   "confidence": "unverified",
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "NEW RECORD 2026-07-29. Summer Sanctuary event. Green Brick Mortgage. Free appliances select homes. Max credit 6% of price. No prior tracked record for this builder found in the file.",
+   "expired": false,
+   "run": "AM"
+  },
+  {
+   "id": "inc244",
+   "communitySlug": "",
+   "builderSlug": "modus-the-george",
+   "community": "George (78723)",
+   "city": "Austin",
+   "submarket": "",
+   "builder": "MODUS / The George (condos)",
+   "homeType": "Varies (confirm on site)",
+   "incentiveType": "Flex cash",
+   "advertisedValue": 20000,
+   "transferability": "Unknown",
+   "buyerValueScore": 20000,
+   "lenderTied": "unknown",
+   "taxRate": null,
+   "taxNote": "",
+   "ratePromo": "4.99% (structure not specified) -- alternative to the flex cash",
+   "expires": "",
+   "source": "Builder-reported",
+   "confidence": "unverified",
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": 20000
+    }
+   ],
+   "note": "NEW RECORD 2026-07-29. Townhomes: $20K flex cash OR 4.99% rate; page does not state whether the rate is permanent or a buydown.",
+   "expired": false,
+   "run": "AM"
+  },
+  {
+   "id": "inc245",
+   "communitySlug": "",
+   "builderSlug": "megatel-homes",
+   "community": "Austin, TX",
+   "city": "Austin",
+   "submarket": "",
+   "builder": "Megatel Homes",
+   "homeType": "Varies (confirm on site)",
+   "incentiveType": "Closing costs",
+   "advertisedValue": 5000,
+   "transferability": "Unknown",
+   "buyerValueScore": 5000,
+   "lenderTied": true,
+   "taxRate": null,
+   "taxNote": "",
+   "ratePromo": "2.99% FIXED (3.75% APR)",
+   "expires": "Through 7/31",
+   "source": "Builder-reported",
+   "confidence": "unverified",
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": 5000
+    }
+   ],
+   "note": "NEW RECORD 2026-07-29. $5,000 closing + 2.99% FIXED rate (see promo-megatel-299fixed). MCI Mortgage.",
+   "expired": false,
+   "run": "AM"
+  },
+  {
+   "id": "inc246",
+   "communitySlug": "",
+   "builderSlug": "dr-horton",
+   "community": "Palomino (Manor)",
+   "city": "Manor",
+   "submarket": "",
+   "builder": "D.R. Horton",
+   "homeType": "Varies (confirm on site)",
+   "incentiveType": "Flex cash",
+   "advertisedValue": 25000,
+   "transferability": "Unknown",
+   "buyerValueScore": 25000,
+   "lenderTied": false,
+   "taxRate": null,
+   "taxNote": "",
+   "ratePromo": "",
+   "expires": "contract by 12/31/2026; close by January 31, 2027",
+   "source": "Builder-reported",
+   "confidence": "unverified",
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": 25000
+    }
+   ],
+   "note": "NEW CAPTURE 2026-07-29 per the sweep's own note. Build Here Program pre-construction flex cash (closing/options/upgrades). Distinct community from the existing Talavera (Kyle) D.R. Horton records (inc207/inc208), which were not re-fetched this run.",
+   "expired": false,
+   "run": "AM"
+  },
+  {
+   "id": "inc247",
+   "communitySlug": "",
+   "builderSlug": "giddens-homes",
+   "community": "Clearwater Ranch, The Hollows, Burnet Hilltop, Leander Estates, Scofield Farms, Riverstone",
+   "city": "Austin",
+   "submarket": "",
+   "builder": "Giddens Homes",
+   "homeType": "Varies (confirm on site)",
+   "incentiveType": "Flex cash",
+   "advertisedValue": null,
+   "transferability": "Unknown",
+   "buyerValueScore": null,
+   "lenderTied": "unknown",
+   "taxRate": null,
+   "taxNote": "",
+   "ratePromo": "",
+   "expires": "",
+   "source": "Builder-reported",
+   "confidence": "unverified",
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "NEW RECORD 2026-07-29. Unquantified price drop + 3% flex on select quick move-in homes across six communities. See sales managers for figures.",
+   "expired": false,
+   "run": "AM"
+  },
+  {
+   "id": "inc248",
+   "communitySlug": "",
+   "builderSlug": "ash-creek-homes",
+   "community": "Drew Lane",
+   "city": "Austin",
+   "submarket": "",
+   "builder": "Ash Creek Homes",
+   "homeType": "Varies (confirm on site)",
+   "incentiveType": "Closing costs",
+   "advertisedValue": null,
+   "transferability": "Unknown",
+   "buyerValueScore": null,
+   "lenderTied": true,
+   "taxRate": null,
+   "taxNote": "",
+   "ratePromo": "",
+   "expires": "",
+   "source": "Builder-reported",
+   "confidence": "unverified",
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "NEW RECORD 2026-07-29. Builder-paid owner's title policy (~1% of loan) with preferred lender; percentage estimate, no fixed dollar figure given.",
+   "expired": false,
+   "run": "AM"
+  },
+  {
+   "id": "inc249",
+   "communitySlug": "",
+   "builderSlug": "flintrock-builders",
+   "community": "Austin / Travis Co. / Jarrell",
+   "city": "Austin",
+   "submarket": "",
+   "builder": "Flintrock Builders",
+   "homeType": "Varies (confirm on site)",
+   "incentiveType": "Rate special (no dollar figure)",
+   "advertisedValue": null,
+   "transferability": "Unknown",
+   "buyerValueScore": null,
+   "lenderTied": true,
+   "taxRate": null,
+   "taxNote": "",
+   "ratePromo": "",
+   "expires": "",
+   "source": "Builder-reported",
+   "confidence": "unverified",
+   "lastObserved": "2026-07-29",
+   "prevValue": null,
+   "delta": null,
+   "history": [
+    {
+     "date": "2026-07-29",
+     "value": null
+    }
+   ],
+   "note": "NEW RECORD 2026-07-29. Payment-based promo only (payments as low as $1,600/mo*); rate/APR/deadline not disclosed on page. Spark Mortgage.",
+   "expired": false,
+   "run": "AM"
   }
  ],
  "promos": [
@@ -1896,7 +2227,7 @@
    "promo": "4.99% permanent rate, 30yr fixed (builder-preferred lender)",
    "advertisedValue": null,
    "expires": "",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "firstObserved": "2026-07-22",
    "delta": null,
    "confidence": "unverified",
@@ -1910,7 +2241,7 @@
    "promo": "4.999% permanent rate, 30yr fixed special financing",
    "advertisedValue": null,
    "expires": "",
-   "lastObserved": "2026-07-27",
+   "lastObserved": "2026-07-29",
    "firstObserved": "2026-07-22",
    "delta": null,
    "confidence": "unverified",
@@ -1943,7 +2274,35 @@
    "delta": null,
    "confidence": "unverified",
    "source": "Builder-reported",
-   "note": ""
+   "note": " UPDATE 2026-07-29: today's fresh read classifies this 4.99% as a TEMPORARY buydown (Kangaroo Home Lending), conflicting with the permanent classification this promo was originally logged under. Flagged for manual verification; not removed under removal-guard."
+  },
+  {
+   "id": "promo-davidweekley-499fha",
+   "builder": "David Weekley Homes",
+   "community": "Austin quick move-in",
+   "promo": "FHA fixed interest rate as low as 4.99% (5.76% APR)",
+   "advertisedValue": null,
+   "expires": "July 31, 2026",
+   "lastObserved": "2026-07-29",
+   "firstObserved": "2026-07-29",
+   "delta": null,
+   "confidence": "unverified",
+   "source": "Builder-reported",
+   "note": "NEW 2026-07-29. Priority Home Mortgage, min 660 FICO / 3.5% down. Full-term FHA fixed (permanent); the separate 2.99% headline is a 7/6 ARM, excluded."
+  },
+  {
+   "id": "promo-megatel-299fixed",
+   "builder": "Megatel Homes",
+   "community": "Austin, TX",
+   "promo": "2.99% FIXED RATE (3.75% APR) + $5,000 towards closing costs",
+   "advertisedValue": 5000,
+   "expires": "Through 7/31",
+   "lastObserved": "2026-07-29",
+   "firstObserved": "2026-07-29",
+   "delta": null,
+   "confidence": "unverified",
+   "source": "Builder-reported",
+   "note": "NEW 2026-07-29. MCI Mortgage. Advertised as fixed; APR near note rate consistent with permanent. Lowest permanent-rate headline in the market this run."
   }
  ]
 }
