@@ -1,7 +1,7 @@
 {
   "schema": "nhd-builder-pressure-index-v0.1",
   "metric": "Builder Pressure Index: observed motivation signals per builder (0-100)",
-  "lastUpdated": "2026-07-28T17:08:14.777Z",
+  "lastUpdated": "2026-07-29T09:48:59.682Z",
   "mature": false,
   "maturityNote": "Publish externally only when mature=true (28+ days of twice-daily event log). Until then this is an internal read.",
   "weights": "v0.1 equal-weights across live components; components with no data are excluded, never imputed.",
@@ -78,6 +78,20 @@
       "daysToFiscalQuarterEnd": null
     },
     {
+      "builder": "del-webb",
+      "score": 61,
+      "components": {
+        "depth": 100,
+        "urgency": 50,
+        "churn": null,
+        "fiscal": null,
+        "strings": 33
+      },
+      "liveComponents": 3,
+      "offersTracked": 3,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
       "builder": "gfo-home",
       "score": 60,
       "components": {
@@ -117,20 +131,6 @@
       },
       "liveComponents": 2,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
-      "builder": "del-webb",
-      "score": 54,
-      "components": {
-        "depth": 100,
-        "urgency": 30,
-        "churn": null,
-        "fiscal": null,
-        "strings": 33
-      },
-      "liveComponents": 3,
-      "offersTracked": 3,
       "daysToFiscalQuarterEnd": null
     },
     {
