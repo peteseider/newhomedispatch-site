@@ -1,53 +1,53 @@
 {
   "schema": "nhd-incentive-half-life-v1",
   "metric": "Median days an advertised offer survives unchanged (offer persistence)",
-  "lastUpdated": "2026-07-29T13:02:58.393Z",
+  "lastUpdated": "2026-07-29T16:39:17.114Z",
   "runKey": "2026-07-29-AM",
   "mature": false,
   "maturityNote": "Event log is 6 days old; publish only after 28+ days of accumulation. Values below are provisional and right-censored.",
-  "completedSpansMedianDays": 1,
-  "openSpansMedianDays": 2,
-  "completedSpans": 3,
-  "openSpans": 32,
+  "completedSpansMedianDays": 2,
+  "openSpansMedianDays": 0,
+  "completedSpans": 19,
+  "openSpans": 46,
   "byBuilder": {
     "brohn-homes": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 2
     },
     "brookfield": {
-      "completedMedian": 1,
+      "completedMedian": 2,
       "open": 2
     },
     "coventry": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 1
     },
     "david-weekley": {
-      "completedMedian": 1,
+      "completedMedian": 1.5,
       "open": 2
     },
     "dr-horton": {
       "completedMedian": null,
-      "open": 3
+      "open": 4
     },
     "drb": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 1
     },
     "kb-home": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 1
     },
     "pacesetter": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 1
     },
     "perry": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 1
     },
     "tri-pointe": {
-      "completedMedian": 1,
+      "completedMedian": 2,
       "open": 2
     },
     "century-communities": {
@@ -55,7 +55,7 @@
       "open": 2
     },
     "del-webb": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 3
     },
     "empire-communities": {
@@ -63,7 +63,7 @@
       "open": 1
     },
     "terrata-homes": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 1
     },
     "scott-felder-homes": {
@@ -71,7 +71,7 @@
       "open": 1
     },
     "united-built-homes": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 1
     },
     "blackburn-homes": {
@@ -79,11 +79,35 @@
       "open": 2
     },
     "aha-dream-homes": {
+      "completedMedian": 2,
+      "open": 1
+    },
+    "meritage": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "starlight-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "risewell-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "chesmar-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "tilson-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "stylecraft": {
       "completedMedian": null,
       "open": 1
     },
     "ashton-woods": {
-      "completedMedian": null,
+      "completedMedian": 2,
       "open": 1
     },
     "lennar": {
@@ -94,7 +118,35 @@
       "completedMedian": null,
       "open": 1
     },
+    "milestone-community-builders": {
+      "completedMedian": null,
+      "open": 1
+    },
     "regency-toll-brothers": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "trophy-signature": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "modus-the-george": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "megatel-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "giddens-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "ash-creek-homes": {
+      "completedMedian": null,
+      "open": 1
+    },
+    "flintrock-builders": {
       "completedMedian": null,
       "open": 1
     }
