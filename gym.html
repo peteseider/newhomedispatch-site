@@ -23,13 +23,15 @@
   .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blueprint-lt)}
   .eyebrow::before{content:"— "}
   h1{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(28px,7vw,40px);line-height:1.14;margin:14px 0 14px}
-  .dek{font-size:18px;color:#c8d2e4;margin:0}
+  .dek{font-size:18px;color:#c8d2e4;margin:0 0 24px;max-width:520px}
+  .cta-btn{display:inline-block;background:#fff;color:var(--navy);font-weight:700;font-size:16.5px;padding:14px 22px;border-radius:var(--radius);text-decoration:none}
+  .cta-btn:hover{background:#e8ecf5}
   main{padding:36px 0 8px}
   .offer{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-left:3px solid var(--blueprint);border-radius:var(--radius);padding:16px 18px;margin:0 0 12px;background:#fff}
   .offer .n{flex:0 0 30px;height:30px;border-radius:50%;background:var(--blueprint);color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
   .offer b{display:block;font-size:16.5px;margin-bottom:3px}
   .offer span{font-size:15px;color:#3a3f4a;line-height:1.45}
-  form{border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin:26px 0 10px;background:var(--alt)}
+  form{border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin:26px 0 10px;background:var(--alt);scroll-margin-top:20px}
   form .ftitle{font-family:'Archivo Expanded',sans-serif;font-size:19px;margin:0 0 4px}
   form .fsub{font-size:14.5px;color:var(--muted);margin:0 0 18px}
   label{display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:var(--ink)}
@@ -59,7 +61,8 @@
   <div class="wrap hero-in">
     <div class="eyebrow">You scanned the shirt</div>
     <h1>Hey — thanks for connecting.</h1>
-    <p class="dek">You found New Home Dispatch in person, not an ad. Here's what that gets you.</p>
+    <p class="dek">You found New Home Dispatch in person, not an ad — and if you spot me around, come say hi. I'm Pete.</p>
+    <a href="#signup" class="cta-btn">Get the Free Buyer Guide →</a>
   </div>
 </div>
 
@@ -77,12 +80,13 @@
     <div><b>Early access to tours</b><span>Heads-up on community tours with the current incentives and promotions, before they're public.</span></div>
   </div>
 
+  <div id="signup" style="scroll-margin-top:16px"></div>
   <form id="gymForm" name="gym-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="gym-signup">
     <input type="hidden" name="source" value="gym-shirt-qr">
     <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
-    <p class="ftitle">Get all three</p>
-    <p class="fsub">One form. No spam — the Dispatch is one email a week.</p>
+    <p class="ftitle">Get the free guide — plus two more, no charge</p>
+    <p class="fsub">Enter your email and the guide's on its way immediately, along with the Weekly Dispatch and early tour access.</p>
     <div class="row2">
       <div><label for="fname">First name</label><input type="text" id="fname" name="first-name" required></div>
       <div><label for="lname">Last name</label><input type="text" id="lname" name="last-name"></div>
