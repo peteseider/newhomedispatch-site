@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You Found Us — New Home Dispatch</title>
+<meta name="description" content="Thanks for connecting in person. Grab the free New Homebuyer Guide, get on the Weekly Dispatch, and get early access to incentive tours in Central Texas.">
+<meta name="robots" content="noindex">
+<!-- noindex: this is a single-purpose QR landing page, not editorial content — keep it out of search results -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0A0A0A;--blueprint:#2B4FE0;--blueprint-lt:#4E7AFF;--navy:#0F2942;--paper:#fff;--alt:#F4F4F4;--line:#E0E0E0;--muted:#666;--radius:2px;--maxw:640px}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .hero{background:var(--navy);color:#fff;border-bottom:3px solid var(--blueprint);
+    background-image:linear-gradient(rgba(15,41,66,.93),rgba(15,41,66,.93)),
+    repeating-linear-gradient(0deg,transparent,transparent 23px,rgba(78,122,255,.15) 24px),
+    repeating-linear-gradient(90deg,transparent,transparent 23px,rgba(78,122,255,.15) 24px)}
+  .hero-in{padding:46px 0 40px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blueprint-lt)}
+  .eyebrow::before{content:"— "}
+  h1{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(28px,7vw,40px);line-height:1.14;margin:14px 0 14px}
+  .dek{font-size:18px;color:#c8d2e4;margin:0}
+  main{padding:36px 0 8px}
+  .offer{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-left:3px solid var(--blueprint);border-radius:var(--radius);padding:16px 18px;margin:0 0 12px;background:#fff}
+  .offer .n{flex:0 0 30px;height:30px;border-radius:50%;background:var(--blueprint);color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
+  .offer b{display:block;font-size:16.5px;margin-bottom:3px}
+  .offer span{font-size:15px;color:#3a3f4a;line-height:1.45}
+  form{border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin:26px 0 10px;background:var(--alt)}
+  form .ftitle{font-family:'Archivo Expanded',sans-serif;font-size:19px;margin:0 0 4px}
+  form .fsub{font-size:14.5px;color:var(--muted);margin:0 0 18px}
+  label{display:block;font-size:13px;font-weight:600;margin:0 0 5px;color:var(--ink)}
+  input[type=text],input[type=email],input[type=tel]{width:100%;padding:12px 13px;border:1.5px solid var(--line);border-radius:var(--radius);font-size:16px;font-family:inherit;margin-bottom:14px;background:#fff}
+  input:focus{outline:none;border-color:var(--blueprint)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:420px){.row2{grid-template-columns:1fr}}
+  button{width:100%;background:var(--blueprint);color:#fff;border:none;border-radius:var(--radius);padding:15px;font-size:16.5px;font-weight:700;font-family:inherit;cursor:pointer}
+  button:hover{background:#1f3fc4}
+  .fine{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.5}
+  .founder{display:flex;gap:16px;align-items:center;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin:24px 0}
+  .founder img{width:64px;height:80px;object-fit:cover;object-position:top center;border-radius:2px;border:1px solid var(--line);flex:0 0 64px}
+  .founder p{margin:0;font-size:14.5px;line-height:1.5;color:#3a3f4a}
+  .founder b{color:var(--ink)}
+  .signoff{padding:36px 0 34px;border-top:1px solid var(--line);margin-top:30px}
+  .signoff .lc{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:26px;margin:0 0 10px}
+  .signoff .lc .dot{color:var(--blueprint)}
+  .signoff .ind{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-top:10px}
+  footer{background:var(--navy);color:#9db4e6;font-size:12.5px;line-height:1.7;padding:20px 0 26px}
+  .thanks{display:none;background:#EFF8F2;border:1px solid #B9DEC6;border-radius:var(--radius);padding:22px;text-align:center;margin:26px 0 10px}
+  .thanks b{display:block;font-family:'Archivo Expanded',sans-serif;font-size:19px;margin-bottom:6px;color:#1E8E4E}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap hero-in">
+    <div class="eyebrow">You scanned the shirt</div>
+    <h1>Hey — thanks for connecting.</h1>
+    <p class="dek">You found New Home Dispatch in person, not an ad. Here's what that gets you.</p>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="offer">
+    <div class="n">1</div>
+    <div><b>The free New Homebuyer Guide</b><span>The Buyer Playbook — what builders don't put in the sales-office pitch, in one download.</span></div>
+  </div>
+  <div class="offer">
+    <div class="n">2</div>
+    <div><b>The Weekly Dispatch + Incentive Tracker</b><span>What changed this week across Central Texas builders — real numbers, not marketing.</span></div>
+  </div>
+  <div class="offer">
+    <div class="n">3</div>
+    <div><b>Early access to tours</b><span>Heads-up on community tours with the current incentives and promotions, before they're public.</span></div>
+  </div>
+
+  <form id="gymForm" name="gym-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="gym-signup">
+    <input type="hidden" name="source" value="gym-shirt-qr">
+    <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+    <p class="ftitle">Get all three</p>
+    <p class="fsub">One form. No spam — the Dispatch is one email a week.</p>
+    <div class="row2">
+      <div><label for="fname">First name</label><input type="text" id="fname" name="first-name" required></div>
+      <div><label for="lname">Last name</label><input type="text" id="lname" name="last-name"></div>
+    </div>
+    <label for="femail">Email</label>
+    <input type="email" id="femail" name="email" required>
+    <label for="fphone">Phone <span style="font-weight:400;color:var(--muted)">(optional — only if you want tour texts)</span></label>
+    <input type="tel" id="fphone" name="phone">
+    <button type="submit">Send me the guide →</button>
+    <p class="fine">You'll get the guide by email right away, then the Weekly Dispatch. Unsubscribe any time — one click, every email.</p>
+  </form>
+
+  <div class="thanks" id="thanksMsg">
+    <b>Check your email.</b>
+    The guide is on its way. You're also on the list for the Weekly Dispatch and tour early-access.
+  </div>
+
+  <div class="founder">
+    <img src="assets/pete-seider-byline.jpg" alt="Pete Seider">
+    <p><b>Pete Seider</b> — in real estate since 2011, once on the builder side. If a tour or a specific community comes up, I'll reach out myself, not a call center.</p>
+  </div>
+
+  <div class="signoff">
+    <p class="lc">Look Closer<span class="dot">.</span></p>
+    <p class="ind">Independent — editorial coverage is not for sale · newhomedispatch.com</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 New Home Dispatch. All rights reserved. New Home Dispatch is an independent education and research platform — buyer representation is available through the Seider Realty Team powered by The Ascend Group at LPT Realty for buyers who want hands-on help.</div>
+</footer>
+
+<script>
+document.getElementById('gymForm').addEventListener('submit', function(e){
+  // Netlify Forms handles the POST natively; this just swaps the UI for same-page confirmation
+  // instead of a redirect, since a QR visitor is on their phone and a redirect page is friction.
+  e.preventDefault();
+  var form = e.target;
+  var data = new FormData(form);
+  fetch('/', { method: 'POST', headers: {'Content-Type':'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() })
+    .then(function(){ form.style.display='none'; document.getElementById('thanksMsg').style.display='block'; })
+    .catch(function(){ form.style.display='none'; document.getElementById('thanksMsg').style.display='block'; });
+});
+</script>
+
+</body>
+</html>
