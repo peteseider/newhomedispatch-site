@@ -1,7 +1,7 @@
 {
   "schema": "nhd-builder-pressure-index-v0.1",
   "metric": "Builder Pressure Index: observed motivation signals per builder (0-100)",
-  "lastUpdated": "2026-07-29T09:48:59.682Z",
+  "lastUpdated": "2026-07-29T16:42:29.084Z",
   "mature": false,
   "maturityNote": "Publish externally only when mature=true (28+ days of twice-daily event log). Until then this is an internal read.",
   "weights": "v0.1 equal-weights across live components; components with no data are excluded, never imputed.",
@@ -14,12 +14,12 @@
         "depth": null,
         "urgency": 40,
         "churn": null,
-        "fiscal": 96,
+        "fiscal": 98,
         "strings": 100
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 2
+      "daysToFiscalQuarterEnd": 1
     },
     {
       "builder": "david-weekley",
@@ -27,7 +27,7 @@
       "components": {
         "depth": 100,
         "urgency": 40,
-        "churn": 98,
+        "churn": 97,
         "fiscal": null,
         "strings": 75
       },
@@ -37,15 +37,29 @@
     },
     {
       "builder": "brohn-homes",
-      "score": 67,
+      "score": 74,
       "components": {
         "depth": 100,
         "urgency": 0,
-        "churn": null,
+        "churn": 96,
         "fiscal": null,
         "strings": 100
       },
-      "liveComponents": 3,
+      "liveComponents": 4,
+      "offersTracked": 3,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
+      "builder": "del-webb",
+      "score": 70,
+      "components": {
+        "depth": 100,
+        "urgency": 50,
+        "churn": 96,
+        "fiscal": null,
+        "strings": 33
+      },
+      "liveComponents": 4,
       "offersTracked": 3,
       "daysToFiscalQuarterEnd": null
     },
@@ -55,7 +69,7 @@
       "components": {
         "depth": 100,
         "urgency": 20,
-        "churn": 98,
+        "churn": 96,
         "fiscal": null,
         "strings": 50
       },
@@ -78,17 +92,87 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "del-webb",
-      "score": 61,
+      "builder": "pacesetter",
+      "score": 62,
       "components": {
-        "depth": 100,
-        "urgency": 50,
-        "churn": null,
+        "depth": 50,
+        "urgency": 0,
+        "churn": 96,
         "fiscal": null,
-        "strings": 33
+        "strings": 100
       },
-      "liveComponents": 3,
-      "offersTracked": 3,
+      "liveComponents": 4,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
+      "builder": "perry",
+      "score": 62,
+      "components": {
+        "depth": 50,
+        "urgency": 0,
+        "churn": 96,
+        "fiscal": null,
+        "strings": 100
+      },
+      "liveComponents": 4,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
+      "builder": "terrata-homes",
+      "score": 62,
+      "components": {
+        "depth": 50,
+        "urgency": 0,
+        "churn": 96,
+        "fiscal": null,
+        "strings": 100
+      },
+      "liveComponents": 4,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
+      "builder": "united-built-homes",
+      "score": 62,
+      "components": {
+        "depth": 50,
+        "urgency": 0,
+        "churn": 96,
+        "fiscal": null,
+        "strings": 100
+      },
+      "liveComponents": 4,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
+      "builder": "aha-dream-homes",
+      "score": 62,
+      "components": {
+        "depth": 50,
+        "urgency": 0,
+        "churn": 96,
+        "fiscal": null,
+        "strings": 100
+      },
+      "liveComponents": 4,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": null
+    },
+    {
+      "builder": "ashton-woods",
+      "score": 62,
+      "components": {
+        "depth": 50,
+        "urgency": 0,
+        "churn": 96,
+        "fiscal": null,
+        "strings": 100
+      },
+      "liveComponents": 4,
+      "offersTracked": 2,
       "daysToFiscalQuarterEnd": null
     },
     {
@@ -134,46 +218,32 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "pacesetter",
-      "score": 50,
+      "builder": "kb-home",
+      "score": 57,
       "components": {
         "depth": null,
         "urgency": 0,
-        "churn": null,
-        "fiscal": null,
+        "churn": 96,
+        "fiscal": 31,
         "strings": 100
       },
-      "liveComponents": 2,
+      "liveComponents": 4,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": null
+      "daysToFiscalQuarterEnd": 31
     },
     {
-      "builder": "perry",
-      "score": 50,
+      "builder": "coventry",
+      "score": 55,
       "components": {
-        "depth": null,
+        "depth": 50,
         "urgency": 0,
-        "churn": null,
+        "churn": 96,
         "fiscal": null,
-        "strings": 100
+        "strings": 75
       },
-      "liveComponents": 2,
-      "offersTracked": 1,
+      "liveComponents": 4,
+      "offersTracked": 4,
       "daysToFiscalQuarterEnd": null
-    },
-    {
-      "builder": "tri-pointe",
-      "score": 50,
-      "components": {
-        "depth": 100,
-        "urgency": 0,
-        "churn": 98,
-        "fiscal": 0,
-        "strings": 50
-      },
-      "liveComponents": 5,
-      "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 64
     },
     {
       "builder": "century-communities",
@@ -187,24 +257,10 @@
       },
       "liveComponents": 4,
       "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 64
+      "daysToFiscalQuarterEnd": 63
     },
     {
       "builder": "empire-communities",
-      "score": 50,
-      "components": {
-        "depth": null,
-        "urgency": 0,
-        "churn": null,
-        "fiscal": null,
-        "strings": 100
-      },
-      "liveComponents": 2,
-      "offersTracked": 1,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
-      "builder": "terrata-homes",
       "score": 50,
       "components": {
         "depth": null,
@@ -232,63 +288,7 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "united-built-homes",
-      "score": 50,
-      "components": {
-        "depth": null,
-        "urgency": 0,
-        "churn": null,
-        "fiscal": null,
-        "strings": 100
-      },
-      "liveComponents": 2,
-      "offersTracked": 1,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
-      "builder": "aha-dream-homes",
-      "score": 50,
-      "components": {
-        "depth": null,
-        "urgency": 0,
-        "churn": null,
-        "fiscal": null,
-        "strings": 100
-      },
-      "liveComponents": 2,
-      "offersTracked": 1,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
-      "builder": "ashton-woods",
-      "score": 50,
-      "components": {
-        "depth": null,
-        "urgency": 0,
-        "churn": null,
-        "fiscal": null,
-        "strings": 100
-      },
-      "liveComponents": 2,
-      "offersTracked": 2,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
       "builder": "starlight-homes",
-      "score": 50,
-      "components": {
-        "depth": null,
-        "urgency": 0,
-        "churn": null,
-        "fiscal": null,
-        "strings": 100
-      },
-      "liveComponents": 2,
-      "offersTracked": 1,
-      "daysToFiscalQuarterEnd": null
-    },
-    {
-      "builder": "landsea-homes",
       "score": 50,
       "components": {
         "depth": null,
@@ -364,12 +364,12 @@
         "depth": null,
         "urgency": 20,
         "churn": null,
-        "fiscal": 29,
+        "fiscal": 31,
         "strings": 100
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 32
+      "daysToFiscalQuarterEnd": 31
     },
     {
       "builder": "trophy-signature",
@@ -382,7 +382,7 @@
         "strings": 100
       },
       "liveComponents": 2,
-      "offersTracked": 1,
+      "offersTracked": 2,
       "daysToFiscalQuarterEnd": null
     },
     {
@@ -428,32 +428,32 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "dr-horton",
+      "builder": "tri-pointe",
       "score": 49,
+      "components": {
+        "depth": 100,
+        "urgency": 0,
+        "churn": 96,
+        "fiscal": 0,
+        "strings": 50
+      },
+      "liveComponents": 5,
+      "offersTracked": 2,
+      "daysToFiscalQuarterEnd": 63
+    },
+    {
+      "builder": "dr-horton",
+      "score": 45,
       "components": {
         "depth": 100,
         "urgency": 20,
         "churn": null,
         "fiscal": 0,
-        "strings": 75
+        "strings": 60
       },
       "liveComponents": 4,
-      "offersTracked": 4,
-      "daysToFiscalQuarterEnd": 63
-    },
-    {
-      "builder": "kb-home",
-      "score": 43,
-      "components": {
-        "depth": null,
-        "urgency": 0,
-        "churn": null,
-        "fiscal": 29,
-        "strings": 100
-      },
-      "liveComponents": 3,
-      "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 32
+      "offersTracked": 5,
+      "daysToFiscalQuarterEnd": 62
     },
     {
       "builder": "mi-homes",
@@ -467,7 +467,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 64
+      "daysToFiscalQuarterEnd": 63
     },
     {
       "builder": "pulte-homes",
@@ -481,20 +481,20 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 64
+      "daysToFiscalQuarterEnd": 63
     },
     {
-      "builder": "coventry",
-      "score": 38,
+      "builder": "drb",
+      "score": 37,
       "components": {
-        "depth": null,
+        "depth": 50,
         "urgency": 0,
-        "churn": null,
+        "churn": 96,
         "fiscal": null,
-        "strings": 75
+        "strings": 0
       },
-      "liveComponents": 2,
-      "offersTracked": 4,
+      "liveComponents": 4,
+      "offersTracked": 1,
       "daysToFiscalQuarterEnd": null
     },
     {
@@ -509,7 +509,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 64
+      "daysToFiscalQuarterEnd": 63
     },
     {
       "builder": "centex",
@@ -523,22 +523,15 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 64
-    },
-    {
-      "builder": "drb",
-      "score": 0,
-      "components": {
-        "depth": null,
-        "urgency": 0,
-        "churn": null,
-        "fiscal": null,
-        "strings": 0
-      },
-      "liveComponents": 2,
-      "offersTracked": 1,
-      "daysToFiscalQuarterEnd": null
+      "daysToFiscalQuarterEnd": 63
     }
   ],
-  "insufficientData": []
+  "insufficientData": [
+    "risewell-homes",
+    "modus-the-george",
+    "megatel-homes",
+    "giddens-homes",
+    "ash-creek-homes",
+    "flintrock-builders"
+  ]
 }
