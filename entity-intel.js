@@ -23,7 +23,7 @@
     var footer = document.querySelector('footer');
     if (!footer) return;
 
-    var usd = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+    var usd = function (n) { return (n===null||n===undefined||isNaN(n)) ? null : '$' + Math.round(n).toLocaleString('en-US'); }; // fixed 2026-07-30: Math.round(null)===0 rendered a literal $0 badge for every no-dollar-value record (rate/financing promos) -- about half the tracked records.
     function fmtd(d){ if(!d) return 'Ongoing'; var p=d.split('-'); if(p.length!==3||!/^[0-9]{4}$/.test(p[0])) return d; var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return mo[(+p[1])-1]+' '+(+p[2]); }
     function tax(v){ return (v===null||v===undefined||isNaN(v)) ? null : parseFloat(Number(v).toFixed(2)) + '%'; } // fixed 2026-07-30: v was assumed always numeric; records with no specific taxRate (a builder-wide financing promo with no single community) pass taxRate null and crashed toFixed here, which threw inside the map callback and silently killed the entire tracked-incentives card for that page, not just the null-tax row.
     var SRC = { verified:'Verified', reported:'Sales-office confirmed', unverified:'Builder-reported' };
@@ -39,10 +39,10 @@
       return '<div style="border:1px solid #E0E0E0;border-left:3px solid #2B4FE0;border-radius:2px;padding:16px 18px;margin-top:14px;">' +
         '<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;">' +
           '<span style="font-weight:700;">' + other + ' &middot; ' + r.incentiveType + '</span>' +
-          '<span style="font-weight:800;font-size:1.15rem;letter-spacing:-.01em;">' + usd(r.advertisedValue) + ' <span style="font-size:.68rem;font-weight:600;color:#666;">advertised</span></span>' +
+          '<span style="font-weight:800;font-size:1.15rem;letter-spacing:-.01em;">' + (usd(r.advertisedValue) || 'See terms') + ' <span style="font-size:.68rem;font-weight:600;color:#666;">' + (usd(r.advertisedValue) ? 'advertised' : 'no dollar figure published') + '</span></span>' +
         '</div>' +
         '<div style="font-size:.85rem;color:#333;margin-top:8px;line-height:1.6;">' +
-          r.transferability + ' buyer value &middot; ' + (r.lenderTied ? 'builder&rsquo;s lender required' : 'no lender tie') +
+          (r.transferability || 'Unknown') + ' buyer value &middot; ' + (r.lenderTied === true ? 'builder&rsquo;s lender required' : r.lenderTied === false ? 'no lender tie' : 'lender tie unclear') +
           (tax(r.taxRate) ? (' &middot; eff. tax ' + tax(r.taxRate) + (r.taxNote ? ' (' + r.taxNote + ')' : '')) : '') +
           ' &middot; ' + (r.expires ? 'ends ' + fmtd(r.expires) : 'ongoing') + ' &middot; ' + trend +
         '</div>' +
