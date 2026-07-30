@@ -1,7 +1,7 @@
 {
   "schema": "nhd-builder-pressure-index-v0.1",
   "metric": "Builder Pressure Index: observed motivation signals per builder (0-100)",
-  "lastUpdated": "2026-07-30T07:58:24.322Z",
+  "lastUpdated": "2026-07-30T17:07:55.624Z",
   "mature": false,
   "maturityNote": "Publish externally only when mature=true (28+ days of twice-daily event log). Until then this is an internal read.",
   "weights": "v0.1 equal-weights across live components; components with no data are excluded, never imputed.",
@@ -9,17 +9,17 @@
   "ranked": [
     {
       "builder": "toll-brothers",
-      "score": 79,
+      "score": 80,
       "components": {
         "depth": null,
         "urgency": 40,
         "churn": null,
-        "fiscal": 98,
+        "fiscal": 100,
         "strings": 100
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 1
+      "daysToFiscalQuarterEnd": 0
     },
     {
       "builder": "david-weekley",
@@ -224,12 +224,12 @@
         "depth": null,
         "urgency": 0,
         "churn": 96,
-        "fiscal": 31,
+        "fiscal": 33,
         "strings": 100
       },
       "liveComponents": 4,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 31
+      "daysToFiscalQuarterEnd": 30
     },
     {
       "builder": "coventry",
@@ -246,6 +246,20 @@
       "daysToFiscalQuarterEnd": null
     },
     {
+      "builder": "lennar",
+      "score": 51,
+      "components": {
+        "depth": null,
+        "urgency": 20,
+        "churn": null,
+        "fiscal": 33,
+        "strings": 100
+      },
+      "liveComponents": 3,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": 30
+    },
+    {
       "builder": "century-communities",
       "score": 50,
       "components": {
@@ -257,7 +271,7 @@
       },
       "liveComponents": 4,
       "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 63
+      "daysToFiscalQuarterEnd": 62
     },
     {
       "builder": "empire-communities",
@@ -358,20 +372,6 @@
       "daysToFiscalQuarterEnd": null
     },
     {
-      "builder": "lennar",
-      "score": 50,
-      "components": {
-        "depth": null,
-        "urgency": 20,
-        "churn": null,
-        "fiscal": 31,
-        "strings": 100
-      },
-      "liveComponents": 3,
-      "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 31
-    },
-    {
       "builder": "trophy-signature",
       "score": 50,
       "components": {
@@ -439,7 +439,7 @@
       },
       "liveComponents": 5,
       "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 63
+      "daysToFiscalQuarterEnd": 62
     },
     {
       "builder": "dr-horton",
@@ -453,7 +453,7 @@
       },
       "liveComponents": 4,
       "offersTracked": 5,
-      "daysToFiscalQuarterEnd": 62
+      "daysToFiscalQuarterEnd": 61
     },
     {
       "builder": "mi-homes",
@@ -467,7 +467,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 63
+      "daysToFiscalQuarterEnd": 62
     },
     {
       "builder": "pulte-homes",
@@ -481,7 +481,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 63
+      "daysToFiscalQuarterEnd": 62
     },
     {
       "builder": "drb",
@@ -509,7 +509,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 63
+      "daysToFiscalQuarterEnd": 62
     },
     {
       "builder": "centex",
@@ -523,7 +523,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 63
+      "daysToFiscalQuarterEnd": 62
     }
   ],
   "insufficientData": [
