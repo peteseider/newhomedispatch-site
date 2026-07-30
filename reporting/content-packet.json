@@ -1,12 +1,12 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-07-30T09:22:46-05:00-AM",
-  "generatedAt": "2026-07-30T09:22:46-05:00",
+  "sweepId": "2026-07-30T09:26:30-05:00-AM",
+  "generatedAt": "2026-07-30T09:26:30-05:00",
   "facts": {
-    "score": 51,
-    "band": "Balanced",
+    "score": 74,
+    "band": "High",
     "scoreDelta": null,
-    "concessionIndex": 1000,
+    "concessionIndex": 20000,
     "offersLive": 69,
     "buildersLive": 41,
     "expired": 5,
