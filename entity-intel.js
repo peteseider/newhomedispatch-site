@@ -24,7 +24,7 @@
     if (!footer) return;
 
     var usd = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
-    function fmtd(d){ if(!d) return 'Ongoing'; var p=d.split('-'); var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return mo[(+p[1])-1]+' '+(+p[2]); }
+    function fmtd(d){ if(!d) return 'Ongoing'; var p=d.split('-'); if(p.length!==3||!/^[0-9]{4}$/.test(p[0])) return d; var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return mo[(+p[1])-1]+' '+(+p[2]); }
     function tax(v){ return (v===null||v===undefined||isNaN(v)) ? null : parseFloat(Number(v).toFixed(2)) + '%'; } // fixed 2026-07-30: v was assumed always numeric; records with no specific taxRate (a builder-wide financing promo with no single community) pass taxRate null and crashed toFixed here, which threw inside the map callback and silently killed the entire tracked-incentives card for that page, not just the null-tax row.
     var SRC = { verified:'Verified', reported:'Sales-office confirmed', unverified:'Builder-reported' };
     var entityName = kind === 'communities' ? recs[0].community : recs[0].builder;
