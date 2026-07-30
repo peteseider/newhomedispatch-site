@@ -86,7 +86,7 @@ function median(nums) {
 function recomputeIndex() {
   const inc = JSON.parse(readFileSync(p('incentives.json'), 'utf8'));
   const records = inc.records || [];
-  const values = records.map((r) => Number(r.advertisedValue)).filter((n) => Number.isFinite(n));
+  const values = records.filter((r) => r.advertisedValue != null).map((r) => Number(r.advertisedValue)).filter((n) => Number.isFinite(n)); // fixed 2026-07-30: Number(null) === 0, which passed Number.isFinite() -- every promo/no-dollar-value record (advertisedValue: null) was silently counting as a $0 offer and dragging the median from ~$20k down to ~$1k the moment this job ran clean for the first time in days.
   const idx = median(values);
   const builders = new Set(records.map((r) => r.builder)).size;
   const offers = records.length;
@@ -124,7 +124,7 @@ function bandFor(s) { return s >= 80 ? 'Strongly favors buyers' : s >= 60 ? 'Hig
 function recomputeScore(t) {
   const inc = JSON.parse(readFileSync(p('incentives.json'), 'utf8'));
   const records = inc.records || [];
-  const v = records.map((r) => Number(r.advertisedValue)).filter((n) => Number.isFinite(n)).sort((a, b) => a - b);
+  const v = records.filter((r) => r.advertisedValue != null).map((r) => Number(r.advertisedValue)).filter((n) => Number.isFinite(n)).sort((a, b) => a - b); // fixed 2026-07-30: same Number(null)===0 coercion bug as recomputeIndex() above -- was silently zeroing out every promo and pulling the Buyer Advantage Score down with it.
   const median = v.length ? (v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2) : 0;
   const stringFreeShare = records.length ? records.filter((r) => r.lenderTied === false).length / records.length : 0;
 
