@@ -1,16 +1,16 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-07-25T17:39:19-05:00-PM",
-  "generatedAt": "2026-07-25T17:39:19-05:00",
+  "sweepId": "2026-07-30T09:22:46-05:00-AM",
+  "generatedAt": "2026-07-30T09:22:46-05:00",
   "facts": {
-    "score": 74,
-    "band": "High",
-    "scoreDelta": 0,
-    "concessionIndex": 20000,
-    "offersLive": 34,
-    "buildersLive": 29,
-    "expired": 3,
-    "rateDaily": 6.81,
+    "score": 51,
+    "band": "Balanced",
+    "scoreDelta": null,
+    "concessionIndex": 1000,
+    "offersLive": 69,
+    "buildersLive": 41,
+    "expired": 5,
+    "rateDaily": 6.78,
     "ratePmmsWeekly": 6.58
   },
   "changes": {
@@ -20,36 +20,36 @@
     "reduced": [],
     "deadlinesNext7d": [
       {
-        "builder": "Lennar",
-        "deadline": "2026-07-26",
-        "offer": "Own Your Dream: promotional FHA FIXED 3.99% (4.785% APR) 30 year via Lennar Mortgage, exam"
-      },
-      {
-        "builder": "Brookfield Residential",
+        "builder": "KB Home",
         "deadline": "2026-07-31",
-        "offer": "Upgrades / design credit $10000"
+        "offer": "Rate special (no dollar figure) $null"
       },
       {
-        "builder": "Brohn Homes",
+        "builder": "Century Communities",
         "deadline": "2026-07-31",
         "offer": "Closing costs $10000"
       },
       {
-        "builder": "KB Home",
+        "builder": "Century Communities",
         "deadline": "2026-07-31",
-        "offer": "Closing costs $5000"
+        "offer": "Upgrades / design credit $3000"
       },
       {
         "builder": "AHA Dream Homes",
         "deadline": "2026-07-31",
         "offer": "Flex cash $20000"
+      },
+      {
+        "builder": "Trophy Signature Homes",
+        "deadline": "2026-07-31",
+        "offer": "Rate buydown (temporary) $null"
       }
     ]
   },
   "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
-  "buyerAction": "Nearest advertised deadline: Lennar (2026-07-26). If that builder is on your list, get the current terms in writing today.",
+  "buyerAction": "Nearest advertised deadline: KB Home (2026-07-31). If that builder is on your list, get the current terms in writing today.",
   "affectedSegments": [
-    "buyers considering: Lennar, Brookfield Residential, Brohn Homes, KB Home, AHA Dream Homes, Tri Pointe Homes, Pulte Homes",
+    "buyers considering: KB Home, Century Communities, AHA Dream Homes, Trophy Signature Homes, Megatel Homes",
     "buyers purchasing within 30 days"
   ],
   "confidence": "All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.",

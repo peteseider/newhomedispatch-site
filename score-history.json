@@ -1,0 +1,22 @@
+{
+  "schema": "nhd-buyer-advantage-score-history-v1",
+  "metric": "Buyer Advantage Score (v0.1 public-signal model)",
+  "points": [
+    {
+      "t": "2026-07-30T09:22:46-05:00",
+      "label": "Jul 30",
+      "slot": "AM",
+      "score": 51,
+      "band": "Balanced",
+      "components": {
+        "incentive": 0,
+        "competition": 100,
+        "friction": 88,
+        "stringFree": 15,
+        "deadline": 100
+      }
+    }
+  ],
+  "lastUpdated": "2026-07-30T09:22:46-05:00",
+  "lastUpdatedLabel": "Jul 30, 2026 · 09:22 AM CT"
+}
