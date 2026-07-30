@@ -61,8 +61,8 @@ ok('No unearned Verified rows while sample:true', !(inc.sample && verifiedRows >
 
 // 5. registry sync
 const regC = new Set(reg.communities.map(c => c.slug)), regB = new Set(reg.builders.map(b => b.slug));
-const missC = [...new Set(inc.records.map(r => r.communitySlug))].filter(s => !regC.has(s));
-const missB = [...new Set(inc.records.map(r => r.builderSlug))].filter(s => !regB.has(s));
+const missC = [...new Set(inc.records.map(r => r.communitySlug).filter(Boolean))].filter(s => !regC.has(s)); // fixed 2026-07-30: a blank communitySlug (no community claimed) isn't an untracked community -- filter it out before checking coverage.
+const missB = [...new Set(inc.records.map(r => r.builderSlug).filter(Boolean))].filter(s => !regB.has(s));
 ok('Registry covers all tracked communities', missC.length === 0, missC.join(', '));
 ok('Registry covers all tracked builders', missB.length === 0, missB.join(', '));
 // Removed 2026-07-30: sweep.mjs (the automated publish job) never touches entities.json,
