@@ -310,6 +310,21 @@ function updateStandingInventory(t) {
   }
 })();
 
+// ---- keep incentives-data.js (client-side data for builder/community pages) in sync ----
+// fixed 2026-07-30: this file was a separate, hand-maintained copy of incentives.json that had
+// drifted 10 days stale (9 records vs. 68, missing every builder added since). entity-intel.js on
+// every builder/community page reads window.NHD_INCENTIVES from THIS file, not incentives.json, so
+// the "Tracked incentives" card was silently wrong sitewide. Regenerating it from incentives.json
+// on every sweep run makes incentives.json the single source of truth and removes the possibility
+// of this file ever going stale again.
+try {
+  const incForClient = JSON.parse(readFileSync(p('incentives.json'), 'utf8'));
+  writeFileSync(p('incentives-data.js'), 'window.NHD_INCENTIVES = ' + JSON.stringify(incForClient, null, 2) + ';\n');
+  console.log('[sweep] incentives-data.js resynced: ' + (incForClient.records || []).length + ' records, updated=' + incForClient.updated);
+} catch (e) {
+  console.log('[sweep] incentives-data.js resync FAILED: ' + (e && e.message));
+}
+
 // ---- daily 30yr rate benchmark (best effort; keeps last good value on failure) ----
 async function refreshRate(t) {
   const rbPath = p('reporting/rate-benchmark.json');
