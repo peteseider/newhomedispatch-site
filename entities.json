@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-25",
+ "updated": "2026-07-30",
  "sample": false,
  "communities": [
   {
@@ -946,6 +946,54 @@
    "name": "Newmark Homes",
    "slug": "newmark-homes",
    "url": "builders/newmark-homes.html",
+   "tracked": true,
+   "profile": "stub"
+  },
+  {
+   "kind": "builder",
+   "name": "Megatel Homes",
+   "slug": "megatel-homes",
+   "url": "builders/megatel-homes.html",
+   "tracked": true,
+   "profile": "stub"
+  },
+  {
+   "kind": "builder",
+   "name": "MileStone Community Builders",
+   "slug": "milestone-community-builders",
+   "url": "builders/milestone-community-builders.html",
+   "tracked": true,
+   "profile": "stub"
+  },
+  {
+   "kind": "builder",
+   "name": "MODUS / The George (condos)",
+   "slug": "modus-the-george",
+   "url": "builders/modus-the-george.html",
+   "tracked": true,
+   "profile": "stub"
+  },
+  {
+   "kind": "builder",
+   "name": "Regency by Toll Brothers",
+   "slug": "regency-toll-brothers",
+   "url": "builders/regency-toll-brothers.html",
+   "tracked": true,
+   "profile": "stub"
+  },
+  {
+   "kind": "builder",
+   "name": "Tilson Homes",
+   "slug": "tilson-homes",
+   "url": "builders/tilson-homes.html",
+   "tracked": true,
+   "profile": "stub"
+  },
+  {
+   "kind": "builder",
+   "name": "Trophy Signature Homes",
+   "slug": "trophy-signature",
+   "url": "builders/trophy-signature.html",
    "tracked": true,
    "profile": "stub"
   }
