@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-07-30T15:07:41.724Z",
-  "runKey": "2026-07-30-AM",
-  "observationRuns": 25,
+  "lastUpdated": "2026-07-30T17:06:37.781Z",
+  "runKey": "2026-07-30-PM",
+  "observationRuns": 26,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc311",
@@ -124,7 +124,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 7,
+      "expiredButDisplayedObservations": 8,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
