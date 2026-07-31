@@ -1,26 +1,12 @@
 {
   "schema": "nhd-builder-pressure-index-v0.1",
   "metric": "Builder Pressure Index: observed motivation signals per builder (0-100)",
-  "lastUpdated": "2026-07-30T17:07:55.624Z",
+  "lastUpdated": "2026-07-31T10:01:33.091Z",
   "mature": false,
   "maturityNote": "Publish externally only when mature=true (28+ days of twice-daily event log). Until then this is an internal read.",
   "weights": "v0.1 equal-weights across live components; components with no data are excluded, never imputed.",
   "methodology": "methodology-pressure-index.md",
   "ranked": [
-    {
-      "builder": "toll-brothers",
-      "score": 80,
-      "components": {
-        "depth": null,
-        "urgency": 40,
-        "churn": null,
-        "fiscal": 100,
-        "strings": 100
-      },
-      "liveComponents": 3,
-      "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 0
-    },
     {
       "builder": "david-weekley",
       "score": 78,
@@ -440,6 +426,20 @@
       "liveComponents": 5,
       "offersTracked": 2,
       "daysToFiscalQuarterEnd": 62
+    },
+    {
+      "builder": "toll-brothers",
+      "score": 47,
+      "components": {
+        "depth": null,
+        "urgency": 40,
+        "churn": null,
+        "fiscal": 0,
+        "strings": 100
+      },
+      "liveComponents": 3,
+      "offersTracked": 1,
+      "daysToFiscalQuarterEnd": 92
     },
     {
       "builder": "dr-horton",
