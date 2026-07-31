@@ -1,7 +1,7 @@
 {
   "schema": "nhd-builder-pressure-index-v0.1",
   "metric": "Builder Pressure Index: observed motivation signals per builder (0-100)",
-  "lastUpdated": "2026-07-31T10:01:33.091Z",
+  "lastUpdated": "2026-07-31T17:12:06.274Z",
   "mature": false,
   "maturityNote": "Publish externally only when mature=true (28+ days of twice-daily event log). Until then this is an internal read.",
   "weights": "v0.1 equal-weights across live components; components with no data are excluded, never imputed.",
@@ -205,17 +205,17 @@
     },
     {
       "builder": "kb-home",
-      "score": 57,
+      "score": 58,
       "components": {
         "depth": null,
         "urgency": 0,
         "churn": 96,
-        "fiscal": 33,
+        "fiscal": 36,
         "strings": 100
       },
       "liveComponents": 4,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 30
+      "daysToFiscalQuarterEnd": 29
     },
     {
       "builder": "coventry",
@@ -233,17 +233,17 @@
     },
     {
       "builder": "lennar",
-      "score": 51,
+      "score": 52,
       "components": {
         "depth": null,
         "urgency": 20,
         "churn": null,
-        "fiscal": 33,
+        "fiscal": 36,
         "strings": 100
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 30
+      "daysToFiscalQuarterEnd": 29
     },
     {
       "builder": "century-communities",
@@ -257,7 +257,7 @@
       },
       "liveComponents": 4,
       "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 62
+      "daysToFiscalQuarterEnd": 61
     },
     {
       "builder": "empire-communities",
@@ -425,7 +425,7 @@
       },
       "liveComponents": 5,
       "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 62
+      "daysToFiscalQuarterEnd": 61
     },
     {
       "builder": "toll-brothers",
@@ -439,7 +439,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 92
+      "daysToFiscalQuarterEnd": 91
     },
     {
       "builder": "dr-horton",
@@ -453,7 +453,7 @@
       },
       "liveComponents": 4,
       "offersTracked": 5,
-      "daysToFiscalQuarterEnd": 61
+      "daysToFiscalQuarterEnd": 60
     },
     {
       "builder": "mi-homes",
@@ -467,7 +467,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 2,
-      "daysToFiscalQuarterEnd": 62
+      "daysToFiscalQuarterEnd": 61
     },
     {
       "builder": "pulte-homes",
@@ -481,7 +481,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 62
+      "daysToFiscalQuarterEnd": 61
     },
     {
       "builder": "drb",
@@ -509,7 +509,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 62
+      "daysToFiscalQuarterEnd": 61
     },
     {
       "builder": "centex",
@@ -523,7 +523,7 @@
       },
       "liveComponents": 3,
       "offersTracked": 1,
-      "daysToFiscalQuarterEnd": 62
+      "daysToFiscalQuarterEnd": 61
     }
   ],
   "insufficientData": [

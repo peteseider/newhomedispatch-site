@@ -2,7 +2,7 @@
   "schema": "nhd-earnings-tape-v1",
   "metric": "Public builder quarterly revenue, gross profit, gross margin (consolidated national, SEC XBRL)",
   "source": "https://data.sec.gov (EDGAR XBRL)",
-  "lastUpdated": "2026-07-31T10:01:24.576Z",
+  "lastUpdated": "2026-07-31T17:11:55.216Z",
   "builders": {
     "dr-horton": {
       "cik": "0000882184",
@@ -526,14 +526,6 @@
       "cik": "0000799292",
       "quarters": [
         {
-          "end": "2023-09-30",
-          "fp": "Q3",
-          "fy": 2024,
-          "revenue": 1046371000,
-          "grossProfit": null,
-          "grossMarginPct": null
-        },
-        {
           "end": "2024-03-31",
           "fp": "Q1",
           "fy": 2025,
@@ -568,7 +560,7 @@
         {
           "end": "2025-06-30",
           "fp": "Q2",
-          "fy": 2025,
+          "fy": 2026,
           "revenue": 1162592000,
           "grossProfit": null,
           "grossMarginPct": null
@@ -586,6 +578,14 @@
           "fp": "Q1",
           "fy": 2026,
           "revenue": 920707000,
+          "grossProfit": null,
+          "grossMarginPct": null
+        },
+        {
+          "end": "2026-06-30",
+          "fp": "Q2",
+          "fy": 2026,
+          "revenue": 1063258000,
           "grossProfit": null,
           "grossMarginPct": null
         }

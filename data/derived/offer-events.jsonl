@@ -231,3 +231,4 @@
 {"t":"2026-07-30T17:06:37.781Z","runKey":"2026-07-30-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-07-31T09:51:24.806Z","runKey":"2026-07-31-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-07-31T17:09:32.528Z","runKey":"2026-07-31-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-07-31T17:12:05.359Z","runKey":"2026-07-31-EARNINGS","key":"mi-homes|0000799292-26-000028","type":"earnings_filing","builder":"mi-homes","form":"10-Q","filed":"2026-07-31"}
