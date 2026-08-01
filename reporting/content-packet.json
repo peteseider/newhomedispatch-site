@@ -1,15 +1,15 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-07-31T17:44:56-05:00-PM",
-  "generatedAt": "2026-07-31T17:44:56-05:00",
+  "sweepId": "2026-08-01T02:52:43-05:00-AM",
+  "generatedAt": "2026-08-01T02:52:43-05:00",
   "facts": {
     "score": 74,
     "band": "High",
     "scoreDelta": 0,
     "concessionIndex": 20000,
-    "offersLive": 69,
-    "buildersLive": 41,
-    "expired": 5,
+    "offersLive": 62,
+    "buildersLive": 36,
+    "expired": 12,
     "rateDaily": 6.83,
     "ratePmmsWeekly": 6.66
   },
@@ -18,39 +18,12 @@
     "newOffers": [],
     "improved": [],
     "reduced": [],
-    "deadlinesNext7d": [
-      {
-        "builder": "KB Home",
-        "deadline": "2026-07-31",
-        "offer": "Rate special (no dollar figure) $null"
-      },
-      {
-        "builder": "Century Communities",
-        "deadline": "2026-07-31",
-        "offer": "Closing costs $10000"
-      },
-      {
-        "builder": "Century Communities",
-        "deadline": "2026-07-31",
-        "offer": "Upgrades / design credit $3000"
-      },
-      {
-        "builder": "AHA Dream Homes",
-        "deadline": "2026-07-31",
-        "offer": "Flex cash $20000"
-      },
-      {
-        "builder": "Trophy Signature Homes",
-        "deadline": "2026-07-31",
-        "offer": "Rate buydown (temporary) $null"
-      }
-    ]
+    "deadlinesNext7d": []
   },
   "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
-  "buyerAction": "Nearest advertised deadline: KB Home (2026-07-31). If that builder is on your list, get the current terms in writing today.",
+  "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
-    "buyers considering: KB Home, Century Communities, AHA Dream Homes, Trophy Signature Homes, Megatel Homes",
-    "buyers purchasing within 30 days"
+    "no segment needs to act on today’s sweep"
   ],
   "confidence": "All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.",
   "sources": [
