@@ -2,7 +2,7 @@
   "schema": "nhd-earnings-tape-v1",
   "metric": "Public builder quarterly revenue, gross profit, gross margin (consolidated national, SEC XBRL)",
   "source": "https://data.sec.gov (EDGAR XBRL)",
-  "lastUpdated": "2026-07-31T17:11:55.216Z",
+  "lastUpdated": "2026-08-01T15:40:21.499Z",
   "builders": {
     "dr-horton": {
       "cik": "0000882184",
