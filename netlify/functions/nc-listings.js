@@ -97,7 +97,9 @@ exports.handler = async (event) => {
                   ok: true,
                   count: listings.length,
                   attribution: upstream.attribution,
-                  listings,
+                  debugUpstreamCount: upstream.listings.length,
+                    debugUpstreamNewConstructionCount: upstream.listings.filter((l) => l && l.newConstruction === true).length,
+                    listings,
           }),
     };
 };
