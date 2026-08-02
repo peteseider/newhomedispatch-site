@@ -2,7 +2,7 @@
   "schema": "nhd-builder-benchmark-v1",
   "product": "NHD Builder Benchmark (B2B product 1)",
   "disclosure": "Independent analytics derived from publicly advertised offers. Benchmark subscribers have no influence on New Home Dispatch editorial coverage. Sample sizes are labeled; verify all figures with the builder before acting.",
-  "generated": "2026-08-01T15:40:31.383Z",
+  "generated": "2026-08-02T07:53:59.970Z",
   "sample": {
     "verifiedOffers": 68,
     "builders": 43,
@@ -107,7 +107,7 @@
       "bestAdvertisedRate": null,
       "lenderTiedShare": 0.33,
       "deadlineExtensions": 0,
-      "expiredButDisplayed": 11,
+      "expiredButDisplayed": 13,
       "percentiles": {
         "incentiveDepth": 86,
         "rateAggressiveness": null
@@ -2470,6 +2470,24 @@
     {
       "t": "2026-08-01T07:53:07.479Z",
       "runKey": "2026-08-01-AM",
+      "type": "expired_but_displayed",
+      "id": "inc311",
+      "builder": "del-webb",
+      "community": "",
+      "expires": "06/28/25-07/31/2025"
+    },
+    {
+      "t": "2026-08-01T18:47:36.921Z",
+      "runKey": "2026-08-01-PM",
+      "type": "expired_but_displayed",
+      "id": "inc311",
+      "builder": "del-webb",
+      "community": "",
+      "expires": "06/28/25-07/31/2025"
+    },
+    {
+      "t": "2026-08-02T07:52:29.012Z",
+      "runKey": "2026-08-02-AM",
       "type": "expired_but_displayed",
       "id": "inc311",
       "builder": "del-webb",
