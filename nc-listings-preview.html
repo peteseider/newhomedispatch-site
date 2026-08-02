@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Construction Listings Preview (private) | New Home Dispatch</title>
+<meta name="robots" content="noindex,nofollow">
+<!-- STAGED, NOT LINKED FROM ANY LIVE PAGE. Internal review only. Built 2026-08-02
+     to preview the nc-listings IDX proxy function before Pete confirms with his
+     MLS/IDX vendor that newhomedispatch.com is an authorized display domain under
+     the Seider Realty Team's ACTRIS/Unlock MLS IDX agreement. Do not add this URL
+     to nav.js, sitemap.xml, or link it from any indexed page until that is
+     confirmed. See production/idx-listings-architecture.md in the project. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<style>
+  :root{
+    --ink:#0B1220; --blueprint:#2B4FE0; --blueprint-navy:#0F2942;
+    --paper:#FFFFFF; --line:#E3E7EE; --muted:#5B6472; --amber:#B8860B;
+    --ok:#1B7F4C; --bg:#F5F7FB;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;}
+  .stage-banner{
+    background:#1a1a1a;color:#FFD166;text-align:center;padding:10px 16px;
+    font-family:'IBM Plex Mono',monospace;font-size:.82rem;letter-spacing:.03em;
+    position:sticky;top:0;z-index:50;
+  }
+  .stage-banner strong{color:#fff;}
+  .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 80px;}
+  header.pg{margin-bottom:28px;}
+  .kicker{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--blueprint);margin-bottom:8px;}
+  h1{font-family:'Archivo Expanded',sans-serif;font-size:1.9rem;margin:0 0 10px;color:var(--blueprint-navy);}
+  .lede{color:var(--muted);max-width:640px;line-height:1.55;font-size:.98rem;}
+  .status-row{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 8px;font-size:.85rem;}
+  .pill{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;color:var(--muted);}
+  .pill.ok{border-color:var(--ok);color:var(--ok);}
+  .pill.err{border-color:#B3261E;color:#B3261E;}
+  .filters{display:flex;gap:10px;margin:18px 0;flex-wrap:wrap;}
+  .filters input{border:1px solid var(--line);border-radius:6px;padding:8px 12px;font-size:.9rem;font-family:inherit;}
+  .filters button{border:1px solid var(--blueprint);background:var(--blueprint);color:#fff;border-radius:6px;
+    padding:8px 16px;font-size:.9rem;font-family:inherit;cursor:pointer;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-top:18px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;}
+  .card .photo{width:100%;aspect-ratio:4/3;background:#DCE2EC center/cover no-repeat;position:relative;}
+  .card .photo .badge{position:absolute;top:10px;left:10px;background:var(--blueprint-navy);color:#fff;
+    font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;
+    padding:4px 8px;border-radius:4px;}
+  .card .body{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column;}
+  .card .price{font-family:'Archivo Expanded',sans-serif;font-size:1.3rem;color:var(--blueprint-navy);}
+  .card .addr{font-size:.9rem;margin:4px 0 8px;color:var(--ink);}
+  .card .addr span{display:block;color:var(--muted);font-size:.82rem;}
+  .card .specs{display:flex;gap:12px;font-size:.82rem;color:var(--muted);margin-bottom:8px;
+    font-family:'IBM Plex Mono',monospace;}
+  .card .office{font-size:.78rem;color:var(--muted);margin-top:auto;padding-top:8px;border-top:1px dashed var(--line);}
+  .empty, .loading{padding:40px 20px;text-align:center;color:var(--muted);border:1px dashed var(--line);
+    border-radius:8px;background:#fff;}
+  .attribution{margin-top:28px;font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;}
+  .fieldnote{margin-top:36px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:8px;
+    font-size:.86rem;line-height:1.6;color:var(--muted);}
+  .fieldnote strong{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<div class="stage-banner">STAGING — <strong>not public, not linked, not indexed.</strong> Internal review only.</div>
+
+<div class="wrap">
+  <header class="pg">
+    <div class="kicker">Internal Preview &middot; New Construction Listings</div>
+    <h1>Live IDX listings, filtered to new construction</h1>
+    <p class="lede">This pulls directly from the working peteseider.com IDX feed (Unlock MLS via MLS Grid),
+      filtered to new-construction-only, for Pete to review the concept before this connects to Community or
+      Builder Profile pages. Nothing here is final — layout, copy, and filters are all placeholder.</p>
+  </header>
+
+  <div class="status-row" id="statusRow">
+    <span class="pill" id="statusPill">Loading&hellip;</span>
+  </div>
+
+  <div class="filters">
+    <input type="text" id="cityInput" placeholder="City (e.g. Georgetown)">
+    <input type="text" id="communityInput" placeholder="Community / address match">
+    <button id="applyBtn">Apply</button>
+  </div>
+
+  <div id="results" class="loading">Fetching listings&hellip;</div>
+
+  <div class="attribution" id="attributionLine"></div>
+
+  <div class="fieldnote">
+    <strong>What this is not yet:</strong> not wired to any Community or Builder Profile page, not in
+    nav.js or sitemap.xml, not confirmed as compliant for this domain. The IDX display agreement is
+    confirmed for peteseider.com; whether it also covers newhomedispatch.com as a second display domain
+    needs to be confirmed in writing with the MLS/IDX vendor before anything here goes live. See
+    <code>production/idx-listings-architecture.md</code> for the full decision log.
+  </div>
+</div>
+
+<script>
+(function(){
+  var FN = '/.netlify/functions/nc-listings';
+  var resultsEl = document.getElementById('results');
+  var statusRow = document.getElementById('statusRow');
+  var attrEl = document.getElementById('attributionLine');
+  var cityInput = document.getElementById('cityInput');
+  var communityInput = document.getElementById('communityInput');
+
+  function fmtPrice(n){
+    if(!n && n !== 0) return 'Price n/a';
+    return '$' + Number(n).toLocaleString();
+  }
+
+  function card(l){
+    var photo = l.photo ? ('background-image:url(' + l.photo + ')') : '';
+    var addr = l.address || 'Address unavailable';
+    var cityLine = [l.city, l.state, l.zip].filter(Boolean).join(', ');
+    return '' +
+      '<div class="card">' +
+        '<div class="photo" style="' + photo + '"><span class="badge">' + (l.status || 'Active') + '</span></div>' +
+        '<div class="body">' +
+          '<div class="price">' + fmtPrice(l.price) + '</div>' +
+          '<div class="addr">' + addr + '<span>' + cityLine + '</span></div>' +
+          '<div class="specs">' +
+            '<span>' + (l.beds != null ? l.beds + ' bd' : '&mdash;') + '</span>' +
+            '<span>' + (l.baths != null ? l.baths + ' ba' : '&mdash;') + '</span>' +
+            '<span>' + (l.sqft != null ? Number(l.sqft).toLocaleString() + ' sqft' : '&mdash;') + '</span>' +
+          '</div>' +
+          '<div class="office">Listed by ' + (l.office || 'Unknown office') + '</div>' +
+        '</div>' +
+      '</div>';
+  }
+
+  function render(data){
+    if(!data || data.configured !== true){
+      statusRow.innerHTML = '<span class="pill err">Not configured / upstream error' +
+        (data && data.error ? (': ' + data.error) : '') + '</span>';
+      resultsEl.className = 'empty';
+      resultsEl.textContent = 'No data returned. The upstream feed may be unreachable from this preview.';
+      return;
+    }
+    statusRow.innerHTML = '<span class="pill ok">Live feed connected</span>' +
+      '<span class="pill">' + data.count + ' new construction listing' + (data.count === 1 ? '' : 's') + '</span>';
+    if(data.attribution){
+      attrEl.textContent = data.attribution;
+    }
+    if(!data.listings || !data.listings.length){
+      resultsEl.className = 'empty';
+      resultsEl.textContent = 'No new construction listings match the current filters.';
+      return;
+    }
+    resultsEl.className = 'grid';
+    resultsEl.innerHTML = data.listings.map(card).join('');
+  }
+
+  function load(){
+    resultsEl.className = 'loading';
+    resultsEl.textContent = 'Fetching listings…';
+    var params = new URLSearchParams();
+    if(cityInput.value.trim()) params.set('city', cityInput.value.trim());
+    if(communityInput.value.trim()) params.set('community', communityInput.value.trim());
+    var url = FN + (params.toString() ? ('?' + params.toString()) : '');
+    fetch(url).then(function(r){ return r.json(); }).then(render).catch(function(err){
+      statusRow.innerHTML = '<span class="pill err">Fetch failed</span>';
+      resultsEl.className = 'empty';
+      resultsEl.textContent = 'Could not reach the listings function: ' + err.message;
+    });
+  }
+
+  document.getElementById('applyBtn').addEventListener('click', load);
+  load();
+})();
+</script>
+
+</body>
+</html>
