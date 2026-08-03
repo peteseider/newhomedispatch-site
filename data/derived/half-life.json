@@ -1,12 +1,12 @@
 {
   "schema": "nhd-incentive-half-life-v1",
   "metric": "Median days an advertised offer survives unchanged (offer persistence)",
-  "lastUpdated": "2026-08-02T22:40:56.642Z",
-  "runKey": "2026-08-02-PM",
+  "lastUpdated": "2026-08-03T12:02:45.288Z",
+  "runKey": "2026-08-03-AM",
   "mature": false,
   "maturityNote": "Event log is 10 days old; publish only after 28+ days of accumulation. Values below are provisional and right-censored.",
   "completedSpansMedianDays": 2,
-  "openSpansMedianDays": 4,
+  "openSpansMedianDays": 5,
   "completedSpans": 19,
   "openSpans": 46,
   "byBuilder": {
