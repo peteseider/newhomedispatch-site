@@ -38,7 +38,7 @@
     }
    ],
    "note": "RE-CONFIRMED LIVE.",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
@@ -75,7 +75,7 @@
     }
    ],
    "note": "RE-CONFIRMED LIVE 2026-07-29 at the same $10,000 figure. Today's builder page frames it as $10K closing + 4% flex (5% Hot Homes) rather than a standalone rate buydown; the separate 2.75% rate shown today is a temporary buydown on a 10/6 ARM, not permanent. CMG Home Loans.",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
@@ -112,7 +112,7 @@
     }
    ],
    "note": "RE-CONFIRMED LIVE 2026-07-29. Vacation package up to $10K, purchase by July 31, 2026.",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
@@ -190,7 +190,7 @@
     }
    ],
    "note": "RE-CONFIRMED LIVE 2026-07-29. Per-home savings range $3K-$105K; 4.99% permanent buydown via Jet HomeLoans. Deadline: contracts written and closed by July 31, 2026.",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
@@ -210,10 +210,10 @@
    "taxRate": null,
    "taxNote": "",
    "ratePromo": "",
-   "expires": "July 1-31, 2026",
+   "expires": "August 1-31, 2026",
    "source": "Builder-reported",
    "confidence": "unverified",
-   "lastObserved": "2026-07-29",
+   "lastObserved": "2026-08-03",
    "prevValue": null,
    "delta": null,
    "history": [
@@ -230,7 +230,7 @@
      "value": 70000
     }
    ],
-   "note": "RE-CONFIRMED LIVE 2026-07-29. 50th Anniversary: 6% up to $50K flex (tier 1) / 8% up to $70K (tier 2). Priority Home Mortgage. July 1-31, 2026.",
+   "note": "RE-CONFIRMED LIVE 2026-08-03 on davidweekleyhomes.com/promo/50th-anniversary-austin. 50th Anniversary rolled into new Program Period: 6% up to $50K flex (select communities) / 8% up to $70K flex (other Austin-area communities). Priority Home Mortgage. August 1-31, 2026.",
    "expired": false,
    "run": "AM"
   },
@@ -404,7 +404,7 @@
     }
    ],
    "note": "RE-CHECKED 2026-07-29: page now reads Below Market Rates with no specific figure shown (previously $5,000 on 2026-07-27); KBHS Home Loans implied. Not confirmed gone, just no longer quantified on the page -- treat the $5,000 prior figure as unconfirmed going forward.",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
@@ -589,7 +589,7 @@
     }
    ],
    "note": "RE-CONFIRMED LIVE. Zillow corroborated.",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
@@ -622,7 +622,7 @@
     }
    ],
    "note": "Bundled with Wish-to-Wow.",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
@@ -655,7 +655,7 @@
     }
    ],
    "note": "10-Day event ENDS 7/28 - TOMORROW.",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
@@ -1478,7 +1478,7 @@
     }
    ],
    "note": "REACTIVATED 2026-07-29: Ashton Woods Cordova Trails (Seguin) 3.99% Fixed + $10K closing confirmed live again today (edge market, just outside core Austin).",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
@@ -1895,7 +1895,7 @@
     }
    ],
    "note": "REACTIVATED 2026-07-29: MileStone Community Builders Blue Ribbon Sales Event 4.50% confirmed live today on the builders own homepage banner. Ambiguous permanent vs. buydown -- not in the permanent-rate promo set.",
-   "expired": false,
+   "expired": true,
    "run": "AM"
   },
   {
