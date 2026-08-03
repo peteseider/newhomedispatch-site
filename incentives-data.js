@@ -2,9 +2,10 @@ window.NHD_INCENTIVES = {
   "dates": [
     "2026-07-26",
     "2026-07-27",
-    "2026-07-29"
+    "2026-07-29",
+    "2026-08-03"
   ],
-  "updated": "2026-07-29",
+  "updated": "2026-08-03",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -416,7 +417,7 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Pacesetter Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Rate special (no dollar figure)",
+      "incentiveType": "closing-costs",
       "advertisedValue": 10000,
       "transferability": null,
       "buyerValueScore": null,
@@ -424,10 +425,10 @@ window.NHD_INCENTIVES = {
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "close by 8/15/26",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
+      "expires": "contract 7/16-8/3/2026; close by 8/15/2026",
+      "source": "https://info.pacesetterhomestexas.com/austin-savings",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-03",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -440,7 +441,7 @@ window.NHD_INCENTIVES = {
           "value": 10000
         }
       ],
-      "note": "RE-CONFIRMED LIVE 2026-07-29. Up to $10K closing + rates as low as 4.99%/5.5%. SFMC Home Lending. Contract window 7/16-8/3/2026.",
+      "note": "Source: https://info.pacesetterhomestexas.com/austin-savings (builder-advertised) verified 2026-08-03.",
       "expired": false,
       "run": "AM"
     },
@@ -453,20 +454,20 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Perry Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Flex cash",
-      "advertisedValue": 35000,
+      "incentiveType": "credit-flex",
+      "advertisedValue": 50000,
       "transferability": "Medium",
       "buyerValueScore": 28000,
       "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Homes must close by September 30, 2026",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
-      "prevValue": null,
-      "delta": null,
+      "expires": "close by 8/31/2026",
+      "source": "https://www.perryhomes.com/promotion/summer-sales-event-2026/austin",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-03",
+      "prevValue": 35000,
+      "delta": 15000,
       "history": [
         {
           "date": "2026-07-27",
@@ -475,9 +476,13 @@ window.NHD_INCENTIVES = {
         {
           "date": "2026-07-29",
           "value": 35000
+        },
+        {
+          "value": 35000,
+          "asOf": "2026-07-29"
         }
       ],
-      "note": "RE-CONFIRMED LIVE 2026-07-29. Up to $35K: choose 4.99% (TEMPORARY points buydown, not permanent) OR flex cash. Crestmark or Parkstone required.",
+      "note": "Source: https://www.perryhomes.com/promotion/summer-sales-event-2026/austin (builder-advertised) verified 2026-08-03.",
       "expired": false,
       "run": "AM"
     },
@@ -704,7 +709,7 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Empire Communities",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Upgrades / design credit",
+      "incentiveType": "upgrades",
       "advertisedValue": 50000,
       "transferability": "Low",
       "buyerValueScore": 27500,
@@ -712,10 +717,10 @@ window.NHD_INCENTIVES = {
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "available for a limited time",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-27",
+      "expires": "'limited time' (none stated)",
+      "source": "https://empirehomes.com/us/texas/austin",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-03",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -724,7 +729,7 @@ window.NHD_INCENTIVES = {
           "value": 50000
         }
       ],
-      "note": "CONFIRMED this run.",
+      "note": "Source: https://empirehomes.com/us/texas/austin (builder-advertised) verified 2026-08-03.",
       "expired": false,
       "run": "AM"
     },
@@ -737,18 +742,18 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Terrata Homes (by LGI)",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Flex cash",
+      "incentiveType": "credit-flex",
       "advertisedValue": 25000,
       "transferability": "Medium",
       "buyerValueScore": 20000,
-      "lenderTied": true,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
+      "expires": "'Sunsational Summer Savings' (none stated)",
+      "source": "https://www.terratahomes.com/texas/austin/whisper-valley",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-03",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -761,7 +766,7 @@ window.NHD_INCENTIVES = {
           "value": 25000
         }
       ],
-      "note": "RE-CONFIRMED LIVE 2026-07-29. $25K package toward rate buydown OR closing costs; completed home under contract required.",
+      "note": "Source: https://www.terratahomes.com/texas/austin/whisper-valley (builder-advertised) verified 2026-08-03.",
       "expired": false,
       "run": "AM"
     },
@@ -1420,27 +1425,31 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Stylecraft Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Rate special (no dollar figure)",
-      "advertisedValue": null,
+      "incentiveType": "permanent-buydown",
+      "advertisedValue": 20000,
       "transferability": null,
       "buyerValueScore": null,
-      "lenderTied": "unknown",
+      "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
+      "expires": "close by 9/28/2026",
+      "source": "https://www.stylecraft.com/incentives/",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-03",
       "prevValue": null,
-      "delta": null,
+      "delta": 20000,
       "history": [
         {
           "date": "2026-07-29",
           "value": null
+        },
+        {
+          "value": null,
+          "asOf": "2026-07-29"
         }
       ],
-      "note": "RE-CHECKED 2026-07-29: CLASSIFICATION CONFLICT. Today's fresh read classifies the 4.99% rate as a TEMPORARY buydown (Kangaroo Home Lending), vs. 2026-07-27's read of FHA fixed permanent. Excluded from the permanent-rate promo set pending manual verification -- see promo-stylecraft-499.",
+      "note": "Source: https://www.stylecraft.com/incentives/ (builder-advertised) verified 2026-08-03.",
       "expired": false,
       "run": "AM"
     },
@@ -2095,27 +2104,31 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "D.R. Horton",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Flex cash",
-      "advertisedValue": 25000,
+      "incentiveType": "temporary-buydown",
+      "advertisedValue": 6518,
       "transferability": "Unknown",
       "buyerValueScore": 25000,
-      "lenderTied": false,
+      "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "contract by 12/31/2026; close by January 31, 2027",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
-      "prevValue": null,
-      "delta": null,
+      "expires": "contract on/after 06/30/26; close by 08/31/26",
+      "source": "https://www.drhorton.com/texas/austin/manor/palomino",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-03",
+      "prevValue": 25000,
+      "delta": -18482,
       "history": [
         {
           "date": "2026-07-29",
           "value": 25000
+        },
+        {
+          "value": 25000,
+          "asOf": "2026-08-03"
         }
       ],
-      "note": "NEW CAPTURE 2026-07-29 per the sweep's own note. Build Here Program pre-construction flex cash (closing/options/upgrades). Distinct community from the existing Talavera (Kyle) D.R. Horton records (inc207/inc208), which were not re-fetched this run.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-08-03.",
       "expired": false,
       "run": "AM"
     },
@@ -2128,27 +2141,31 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Giddens Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Flex cash",
-      "advertisedValue": null,
+      "incentiveType": "upgrades",
+      "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": null,
-      "lenderTied": "unknown",
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
+      "expires": "'limited time' (none stated)",
+      "source": "https://giddenshomes.com/",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-03",
       "prevValue": null,
-      "delta": null,
+      "delta": 40000,
       "history": [
         {
           "date": "2026-07-29",
           "value": null
+        },
+        {
+          "value": null,
+          "asOf": "2026-07-29"
         }
       ],
-      "note": "NEW RECORD 2026-07-29. Unquantified price drop + 3% flex on select quick move-in homes across six communities. See sales managers for figures.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-08-03.",
       "expired": false,
       "run": "AM"
     },
@@ -2221,88 +2238,40 @@ window.NHD_INCENTIVES = {
   ],
   "promos": [
     {
-      "id": "promo-coventry-499",
-      "builder": "Coventry Homes",
-      "community": "",
-      "promo": "4.99% permanent rate, 30yr fixed (builder-preferred lender)",
-      "advertisedValue": null,
-      "expires": "",
-      "lastObserved": "2026-07-29",
-      "firstObserved": "2026-07-22",
-      "delta": null,
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "Rate-only special layered on top of Coventry's separate $105,000 single-home price cut; not additive to that figure."
-    },
-    {
-      "id": "promo-chesmar-4999",
+      "id": "chesmar-4999fha-2026-07",
       "builder": "Chesmar Homes",
-      "community": "",
-      "promo": "4.999% permanent rate, 30yr fixed special financing",
-      "advertisedValue": null,
-      "expires": "",
-      "lastObserved": "2026-07-29",
-      "firstObserved": "2026-07-22",
-      "delta": null,
+      "community": "select homes",
+      "promo": "4.999% (5.737% APR) FHA 30-yr fixed-rate special financing on select homes",
+      "expires": "none stated",
+      "lastObserved": "2026-08-03",
+      "firstObserved": "2026-07-26",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": ""
+      "note": "Permanent full-term fixed. No lender named, no deadline."
     },
     {
-      "id": "promo-scottfelder-499",
-      "builder": "Scott Felder Homes",
-      "community": "",
-      "promo": "4.99% permanent rate, 30yr fixed (alternative to the $20,000 flex-cash option)",
-      "advertisedValue": null,
-      "expires": "",
-      "lastObserved": "2026-07-27",
-      "firstObserved": "2026-07-22",
-      "delta": null,
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "Buyer's choice: this rate or $20,000 flex cash, not both."
-    },
-    {
-      "id": "promo-stylecraft-499",
-      "builder": "Stylecraft Homes",
-      "community": "",
-      "promo": "4.99% permanent rate, 30yr fixed special financing",
-      "advertisedValue": null,
-      "expires": "",
-      "lastObserved": "2026-07-27",
-      "firstObserved": "2026-07-22",
-      "delta": null,
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": " UPDATE 2026-07-29: today's fresh read classifies this 4.99% as a TEMPORARY buydown (Kangaroo Home Lending), conflicting with the permanent classification this promo was originally logged under. Flagged for manual verification; not removed under removal-guard."
-    },
-    {
-      "id": "promo-davidweekley-499fha",
-      "builder": "David Weekley Homes",
-      "community": "Austin quick move-in",
-      "promo": "FHA fixed interest rate as low as 4.99% (5.76% APR)",
-      "advertisedValue": null,
-      "expires": "July 31, 2026",
-      "lastObserved": "2026-07-29",
-      "firstObserved": "2026-07-29",
-      "delta": null,
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "NEW 2026-07-29. Priority Home Mortgage, min 660 FICO / 3.5% down. Full-term FHA fixed (permanent); the separate 2.99% headline is a 7/6 ARM, excluded."
-    },
-    {
-      "id": "promo-megatel-299fixed",
+      "id": "megatel-299fixed-2026-07",
       "builder": "Megatel Homes",
-      "community": "Austin, TX",
-      "promo": "2.99% FIXED RATE (3.75% APR) + $5,000 towards closing costs",
-      "advertisedValue": 5000,
-      "expires": "Through 7/31",
-      "lastObserved": "2026-07-29",
-      "firstObserved": "2026-07-29",
-      "delta": null,
+      "community": "Austin, TX (company-wide financing page)",
+      "promo": "2.99% FIXED RATE (3.75% APR) - Through 8/31",
+      "expires": "Through 8/31/2026",
+      "lastObserved": "2026-08-03",
+      "firstObserved": "2026-07-28",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "NEW 2026-07-29. MCI Mortgage. Advertised as fixed; APR near note rate consistent with permanent. Lowest permanent-rate headline in the market this run."
+      "note": "Advertised FIXED; Austin applicability not reconfirmed this run."
+    },
+    {
+      "id": "stylecraft-499-2026-07",
+      "builder": "Stylecraft Homes",
+      "community": "North Austin (Rancho San Gabriel/Georgetown + select)",
+      "promo": "rate as low as 4.99% (5.691% APR) 30-yr fixed FHA (builder-paid, permanent) through Kangaroo Home Lending (680+ FICO)",
+      "expires": "September 28, 2026",
+      "lastObserved": "2026-08-03",
+      "firstObserved": "2026-07-30",
+      "confidence": "unverified",
+      "source": "Builder-reported",
+      "note": "Full-term fixed, no teaser language."
     }
   ]
 };

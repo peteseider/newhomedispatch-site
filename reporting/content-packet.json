@@ -1,26 +1,32 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-08-03T15:39:58-05:00-PM",
-  "generatedAt": "2026-08-03T15:39:58-05:00",
+  "sweepId": "2026-08-03T17:43:49-05:00-PM",
+  "generatedAt": "2026-08-03T17:43:49-05:00",
   "facts": {
     "score": 74,
     "band": "High",
     "scoreDelta": 0,
     "concessionIndex": 20000,
-    "offersLive": 62,
-    "buildersLive": 36,
-    "expired": 12,
+    "offersLive": 58,
+    "buildersLive": 35,
+    "expired": 13,
     "rateDaily": 6.82,
     "ratePmmsWeekly": 6.66
   },
   "changes": {
-    "count": 0,
+    "count": 4,
     "newOffers": [],
-    "improved": [],
-    "reduced": [],
+    "improved": [
+      "Perry Homes",
+      "Stylecraft Homes",
+      "Giddens Homes"
+    ],
+    "reduced": [
+      "D.R. Horton"
+    ],
     "deadlinesNext7d": []
   },
-  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
+  "interpretation": "Movement this sweep: 3 improved, 1 reduced. Market-wide score unchanged.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
@@ -33,5 +39,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "record-internal"
+  "publishRecommendation": "publish-watchlists"
 }
