@@ -1,0 +1,50 @@
+[
+  {
+    "builderSlug": "tri-pointe",
+    "builder": "Tri Pointe Homes",
+    "community": "Live Brilliantly (Flora, Lariat, Wolf Ranch, Turner's Crossing/Buda, Park Central, Heritage, Lagos Reserve)",
+    "advertisedValue": 35000,
+    "firstFlagged": "2026-08-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry",
+    "builder": "Coventry Homes",
+    "community": "Austin QMI inventory (Wolf Ranch, Parkside on the River, Parmer Ranch)",
+    "advertisedValue": 105000,
+    "firstFlagged": "2026-08-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "del-webb",
+    "builder": "Del Webb (Sun City Texas)",
+    "community": "Sun City Texas (Georgetown, 55+)",
+    "advertisedValue": 2000,
+    "firstFlagged": "2026-08-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "del-webb",
+    "builder": "Del Webb (Sun City Texas)",
+    "community": "Sun City Texas (Georgetown, 55+) - QMI",
+    "advertisedValue": 64605,
+    "firstFlagged": "2026-08-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "brookfield",
+    "builder": "Brookfield Residential",
+    "community": "Easton Park (Austin)",
+    "advertisedValue": 4600,
+    "firstFlagged": "2026-08-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "richmond-american-homes",
+    "builder": "Richmond American Homes",
+    "community": "select homes (national campaign incl. Austin)",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-08-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  }
+]
