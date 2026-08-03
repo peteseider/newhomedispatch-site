@@ -1,7 +1,7 @@
 {
   "schema": "nhd-rate-spread-v1",
   "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
-  "lastUpdated": "2026-08-03T20:40:21.480Z",
+  "lastUpdated": "2026-08-03T22:44:03.815Z",
   "runKey": "2026-08-03-PM",
   "pmms": {
     "week": "7/30/2026",
@@ -18,20 +18,6 @@
     {
       "id": "inc204",
       "builder": "coventry",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -167
-    },
-    {
-      "id": "inc211",
-      "builder": "pacesetter",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -167
-    },
-    {
-      "id": "inc212",
-      "builder": "perry",
       "community": "",
       "advertisedRate": 4.99,
       "spreadBps": -167
@@ -88,13 +74,6 @@
     {
       "id": "inc238",
       "builder": "scott-felder-homes",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -167
-    },
-    {
-      "id": "inc242",
-      "builder": "stylecraft",
       "community": "",
       "advertisedRate": 4.99,
       "spreadBps": -167
