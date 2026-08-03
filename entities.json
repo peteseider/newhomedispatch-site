@@ -21,7 +21,7 @@
    "city": "Kyle",
    "url": "communities/anthem.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "researched",
    "taxRate": 2.9,
    "taxSource": "tracker",
    "hoaMonthly": null
@@ -141,7 +141,7 @@
    "city": "Kyle",
    "url": "communities/cool-water.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "full",
    "taxRate": 2.8,
    "taxSource": "tracker",
    "hoaMonthly": null
@@ -153,7 +153,7 @@
    "city": "Kyle",
    "url": "communities/crosswinds.html",
    "tracked": false,
-   "profile": "researched",
+   "profile": "stub",
    "taxRate": null,
    "taxSource": "unverified",
    "hoaMonthly": null
@@ -465,7 +465,7 @@
    "city": "Manor",
    "url": "communities/carillon.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "full",
    "taxRate": null,
    "taxSource": "pending-verification",
    "hoaMonthly": null
@@ -477,7 +477,7 @@
    "city": "Austin",
    "url": "communities/goodnight-ranch.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "full",
    "taxRate": null,
    "taxSource": "pending-verification",
    "hoaMonthly": null
@@ -489,7 +489,7 @@
    "city": "Manor",
    "url": "communities/palomino.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "full",
    "taxRate": null,
    "taxSource": "pending-verification",
    "hoaMonthly": null
@@ -877,7 +877,7 @@
    "kind": "builder",
    "slug": "del-webb",
    "name": "Del Webb",
-   "profile": "stub",
+   "profile": "researched",
    "tracked": true,
    "offersUrl": "https://www.delwebb.com/homes/texas/austin",
    "note": "Pulte active adult brand; Sun City Texas (Georgetown), the largest 55 plus community in the metro",
@@ -939,7 +939,7 @@
    "slug": "blackburn-homes",
    "url": "builders/blackburn-homes.html",
    "tracked": true,
-   "profile": "stub"
+   "profile": "researched"
   },
   {
    "kind": "builder",
@@ -955,7 +955,7 @@
    "slug": "megatel-homes",
    "url": "builders/megatel-homes.html",
    "tracked": true,
-   "profile": "stub"
+   "profile": "researched"
   },
   {
    "kind": "builder",
