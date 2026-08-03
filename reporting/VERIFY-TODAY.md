@@ -1,4 +1,4 @@
-# Verify Today (2026-08-02)
+# Verify Today (2026-08-03)
 Ranked worklist. Twenty minutes here grows the published tape fastest.
 
 1. [60] CHECK Del Webb (Sun City Texas) at : offer shows expired 06/28/25-07/31/2025. Renewed, extended, or gone? (Feeds the Renewal Ledger.)
