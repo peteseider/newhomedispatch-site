@@ -273,7 +273,7 @@
    "city": "Kyle",
    "url": "communities/plum-creek-north.html",
    "tracked": false,
-   "profile": "researched",
+   "profile": "stub",
    "taxRate": null,
    "taxSource": "unverified",
    "hoaMonthly": null
@@ -610,7 +610,7 @@
    "slug": "kb-home",
    "url": "builders/kb-home.html",
    "tracked": true,
-   "profile": "stub"
+   "profile": "researched"
   },
   {
    "kind": "builder",
