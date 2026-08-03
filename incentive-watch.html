@@ -96,12 +96,223 @@
   footer{background:var(--navy);color:#9db4e6;font-size:13px;line-height:1.7;padding:24px 0 34px;}
   footer img{height:22px;margin-bottom:10px;display:block;}
 </style>
+<style>
+:root{
+    --ink:#000000;
+    --ink-2:#0A0A0A;
+    --blueprint:#2B4FE0;
+    --blueprint-light:#4E7AFF;
+    --blueprint-navy:#0F2942;
+    --amber:#000000;
+    --amber-dark:#333333;
+    --paper:#FFFFFF;
+    --paper-alt:#F4F4F4;
+    --line:#E0E0E0;
+    --text-muted:#666666;
+    --radius:2px;
+    --maxw:1180px;
+  }
+.skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background:#000000;
+    color:#FFFFFF;
+    padding:12px 20px;
+    z-index:1000;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.85rem;
+    text-decoration:none;
+  }
+
+.skip-link:focus{left:12px; top:12px;}
+
+/* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+
+.header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 28px;
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+
+.logo{
+    display:flex; flex-shrink:0;
+    align-items:baseline;
+    gap:8px;
+    font-family:'Archivo Expanded', sans-serif;
+    font-weight:800;
+    font-size:1.05rem;
+    letter-spacing:-0.01em;
+  }
+
+.logo img{flex-shrink:0}
+
+.logo .dot{color:var(--amber);}
+
+.logo-tag{
+    font-family:'Inter', sans-serif;
+    font-size:0.6rem;
+    letter-spacing:0.12em;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    border-left:1px solid var(--line);
+    padding-left:8px;
+    margin-left:2px;
+  }
+
+.menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:4px;}
+
+.menu-toggle span{display:block; width:22px; height:2px; background:var(--ink); margin:5px 0; transition:transform 0.2s ease, opacity 0.15s ease;}
+
+body.nav-open .menu-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+
+body.nav-open .menu-toggle span:nth-child(2){opacity:0;}
+
+body.nav-open .menu-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+.level-header{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    color:var(--ink);
+    padding-bottom:14px;
+    border-bottom:2px solid var(--ink);
+    margin-bottom:0;
+  }
+
+.level-header .mono{
+    font-size:0.66rem;
+    color:var(--text-muted);
+    font-weight:600;
+    margin-right:10px;
+  }
+
+/* ---------- MOBILE NAV ---------- */
+  @media (max-width:760px){
+    .nav-links{
+      position:fixed;
+      top:64px; left:0; right:0;
+      background:var(--paper);
+      flex-direction:column;
+      align-items:flex-start;
+      gap:0;
+      border-bottom:1px solid var(--line);
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.3s ease;
+    }
+    .nav-links.open{max-height:280px;}
+    .nav-links a{
+      padding:16px 28px;
+      width:100%;
+      border-bottom:1px solid var(--line);
+    }
+    nav .btn{display:none;}
+    .nav-links .btn{display:inline-flex; margin:16px 28px;}
+    .menu-toggle{display:block;}
+  }
+
+.site-nav{display:flex; align-items:center;}
+
+.nav-desktop{display:flex; align-items:center; gap:4px; list-style:none; margin:0; padding:0;}
+
+.nav-desktop > li{position:relative;}
+
+.nav-grp-btn, .nav-desktop .nav-link{font:inherit; font-size:0.92rem; font-weight:500; color:var(--ink); background:none; border:none; cursor:pointer; padding:10px 12px; display:inline-flex; align-items:center; gap:7px; border-radius:2px; text-decoration:none; white-space:nowrap; min-height:40px;}
+
+.nav-grp-btn[aria-expanded="true"] .nav-caret{transform:rotate(-135deg) translateY(1px);}
+
+.nav-grp-btn:hover, .nav-desktop .nav-link:hover, .nav-grp-btn:focus-visible, .nav-desktop .nav-link:focus-visible{color:var(--blueprint);}
+
+.nav-grp-btn:focus-visible, .nav-desktop .nav-link:focus-visible{outline:2px solid var(--blueprint); outline-offset:2px;}
+
+.nav-desktop .nav-cta{margin-left:8px;}
+
+.nav-drop{position:absolute; top:100%; left:0; min-width:214px; background:var(--paper); border:1px solid var(--line); border-radius:2px; box-shadow:0 12px 32px rgba(15,41,66,.14); padding:6px; list-style:none; margin:4px 0 0; opacity:0; visibility:hidden; transform:translateY(-6px); transition:opacity .16s ease, transform .16s ease, visibility .16s; z-index:60;}
+
+.nav-grp:hover .nav-drop, .nav-grp:focus-within .nav-drop, .nav-grp-btn[aria-expanded="true"] + .nav-drop{opacity:1; visibility:visible; transform:translateY(0);}
+
+.nav-drop li{margin:0;}
+
+.nav-drop a{display:block; padding:10px 12px; font-size:0.9rem; color:var(--ink); text-decoration:none; border-radius:2px; line-height:1.3;}
+
+.nav-drop a:hover, .nav-drop a:focus-visible{background:var(--paper-alt); color:var(--blueprint); outline:none;}
+
+.nav-mobile{display:none;}
+
+@media (max-width:760px){
+    .nav-desktop{display:none;}
+    .menu-toggle{display:block;}
+    .nav-mobile{position:fixed; top:72px; left:0; right:0; bottom:0; background:var(--paper); flex-direction:column; align-items:stretch; list-style:none; margin:0; padding:0; overflow-y:auto; z-index:55; border-top:1px solid var(--line);}
+    
+    body.nav-open .nav-mobile{display:flex;}
+    .nav-mobile li{margin:0;}
+    .nav-mobile a{display:block; padding:17px 28px; font-size:1.05rem; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); min-height:44px;}
+    .nav-mobile a:hover, .nav-mobile a:focus-visible{background:var(--paper-alt);}
+    .nav-mobile .nav-mobile-cta{color:var(--blueprint); font-weight:600;}
+  }
+
+@media (prefers-reduced-motion: reduce){ .nav-drop{transition:none;} .nav-caret{transition:none;} }
+
+/* mobile nav elevation v2 */
+@media (max-width:760px){
+.nav-mobile a{display:flex;align-items:center;gap:11px;font-size:.95rem;font-weight:500;padding:13px 22px;border-bottom:1px solid #F3F4F6;}
+.nm-ico{width:17px;height:17px;flex:0 0 17px;stroke:#5B6472;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.nav-mobile .nm-featured{background:#fff;border-left:3px solid var(--blueprint,#2B4FE0);font-weight:700;}
+.nm-featured .nm-ico{stroke:var(--blueprint,#2B4FE0);}
+.nav-mobile .nm-cta-wrap{padding:12px 18px;border-bottom:1px solid #F3F4F6;}
+.nav-mobile .nm-cta-btn{display:block;text-align:center;padding:12px 18px;border-bottom:none;border-radius:6px;background:var(--blueprint-navy,#0F2942);color:#fff;font-weight:700;font-size:.9rem;letter-spacing:.01em;}
+.nav-mobile .nm-cta-btn:hover,.nav-mobile .nm-cta-btn:focus-visible{background:#163a5c;}
+.nav-mobile .nm-badge{margin-left:auto;flex:0 0 auto;font-weight:700;font-size:.58em;padding:2px 6px;border-radius:3px;letter-spacing:.02em;}
+.nm-sec{border-bottom:1px solid #F3F4F6;}
+.nm-sec-btn{display:flex;align-items:center;gap:11px;width:100%;padding:13px 22px;font-size:.95rem;font-weight:500;color:var(--ink,#111);background:none;border:none;cursor:pointer;font-family:inherit;text-align:left;min-height:44px;}
+.nm-sec-btn:hover,.nm-sec-btn:focus-visible{background:#FAFAFB;}
+.nm-chev{width:14px;height:14px;flex:0 0 14px;margin-left:auto;stroke:#9AA1AB;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease;}
+.nm-sec.open .nm-chev{transform:rotate(180deg);}
+.nm-sec-list{list-style:none;margin:0;padding:0;max-height:0;overflow:hidden;transition:max-height .3s ease;background:#FAFAFB;}
+.nm-sec.open .nm-sec-list{max-height:420px;}
+.nm-sec-list a{padding:11px 22px 11px 50px;font-size:.88rem;font-weight:400;color:#3F4753;border-bottom:1px solid #F3F4F6;}
+.nm-sec-list li:last-child a{border-bottom:none;}
+}
+
+@media (prefers-reduced-motion:reduce){.nm-sec-list{transition:none;}.nm-chev{transition:none;}}
+
+.nav-grp{position:relative}
+
+.nav-grp::after{content:"";position:absolute;left:0;right:0;top:100%;height:10px}
+
+.site-header,.nav-wrap{overflow:visible !important}
+
+.site-header{position:sticky;top:0;z-index:300}
+
+body>header:not(.hero){position:sticky;top:0;z-index:300}
+
+header:has(.site-nav){position:sticky;top:0;z-index:300}
+
+.nav-grp .nav-drop{z-index:400}
+</style>
 </head>
 <body>
 
-<header class="site">
-  <div class="wrap site-in">
-    <a href="index.html" aria-label="New Home Dispatch home"><img src="assets/wordmark-dark.png" alt="New Home Dispatch"></a>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo"><img src="assets/wordmark-dark.png" alt="New Home Dispatch" style="height:26px; width:auto;"></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile" onclick="var b=document.body;var o=b.classList.toggle('nav-open');this.setAttribute('aria-expanded',o?'true':'false');if(o){b.dataset.scrollY=window.scrollY;b.style.position='fixed';b.style.top='-'+window.scrollY+'px';b.style.width='100%';b.style.overflow='hidden';}else{b.style.position='';b.style.top='';b.style.width='';b.style.overflow='';window.scrollTo({top:parseInt(b.dataset.scrollY||'0',10),left:0,behavior:'instant'});}">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="site-nav" aria-label="Primary">
 <ul class="nav-desktop">
 <li class="nav-grp">
@@ -136,6 +347,41 @@
 </nav>
   </div>
 </header>
+<ul class="nav-mobile" id="nav-mobile">
+<li><a href="start-here.html" class="nm-featured"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>Start Here</a></li>
+<li><a href="communities.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Community Explorer</a></li>
+<li><a href="buyer-guides.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Buyer Guides</a></li>
+<li><a href="free-tools.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>Free Tools</a></li>
+<li><a href="reports.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Latest Reports</a></li>
+<li><a href="methodology.html"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>About &amp; Methodology</a></li>
+<li class="nm-cta-wrap"><a href="/buyer-strategy-call" class="nm-cta-btn">Ask Pete &rarr;</a></li>
+<li class="nm-sec">
+<button type="button" class="nm-sec-btn" aria-expanded="false"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Recurring Publications<svg class="nm-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+<ul class="nm-sec-list">
+<li><a href="weekly-dispatch.html">Weekly Dispatch <span class="nm-badge" style="background:var(--blueprint);color:#fff;">FREE &middot; FRIDAY</span></a></li>
+<li><a href="incentive-tracker.html">Incentive Tracker <span class="nm-badge" style="background:var(--blueprint-light);color:#fff;">MON &#183; WED</span></a></li>
+<li><a href="daily-hot-sheet.html">Daily Hot Sheet <span class="nm-badge" style="background:var(--blueprint-navy);color:#fff;">EVERY MORNING</span></a></li>
+<li><a href="report-a-deal.html">Report a Deal <span class="nm-badge" style="background:#F7CE7C;color:#0F2942;">NEW</span></a></li>
+</ul>
+</li>
+<li class="nm-sec">
+<button type="button" class="nm-sec-btn" aria-expanded="false"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Elsewhere in Austin<svg class="nm-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+<ul class="nm-sec-list">
+<li><a href="https://austin.urbanize.city/" target="_blank" rel="noopener">Urbanize Austin</a></li>
+<li><a href="https://communityimpact.com/austin/" target="_blank" rel="noopener">Community Impact</a></li>
+<li><a href="https://www.bizjournals.com/austin/" target="_blank" rel="noopener">Austin Business Journal</a></li>
+</ul>
+</li>
+<li class="nm-sec">
+<button type="button" class="nm-sec-btn" aria-expanded="false"><svg class="nm-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg>Follow New Home Dispatch<svg class="nm-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+<ul class="nm-sec-list">
+<li><a href="https://www.youtube.com/@NewHomeDispatch" target="_blank" rel="noopener">YouTube</a></li>
+<li><a href="https://www.instagram.com/newhomedispatch/" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="https://x.com/newhomedispatch" target="_blank" rel="noopener">X</a></li>
+</ul>
+</li>
+</ul>
+
 
 <div class="hero">
   <div class="wrap hero-in">
@@ -239,5 +485,6 @@
   <div class="wrap"><img src="assets/wordmark-light.png" alt="New Home Dispatch">© 2026 New Home Dispatch. All rights reserved. New Home Dispatch is an independent education and research platform. Incentive Watch is a free consumer service; we verify builders' publicly advertised offers and never sell your information.</div>
 </footer>
 
+<script>(function(){var nm=document.getElementById("nav-mobile");if(!nm)return;nm.addEventListener("click",function(e){var b=e.target.closest(".nm-sec-btn");if(!b)return;var s=b.parentElement;var o=s.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});})();</script>
 </body>
 </html>
