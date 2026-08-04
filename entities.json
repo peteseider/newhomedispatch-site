@@ -9,7 +9,7 @@
    "city": "Kyle",
    "url": "communities/6-creeks.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "researched",
    "taxRate": 2.7,
    "taxSource": "tracker",
    "hoaMonthly": null
@@ -57,7 +57,7 @@
    "city": "Pflugerville",
    "url": "communities/blackhawk.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "researched",
    "taxRate": 2.9,
    "taxSource": "tracker",
    "hoaMonthly": null
@@ -152,8 +152,8 @@
    "slug": "crosswinds",
    "city": "Kyle",
    "url": "communities/crosswinds.html",
-   "tracked": false,
-   "profile": "stub",
+   "tracked": true,
+   "profile": "researched",
    "taxRate": null,
    "taxSource": "unverified",
    "hoaMonthly": null
@@ -237,7 +237,7 @@
    "city": "Leander",
    "url": "communities/larkspur.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "researched",
    "taxRate": 3.2,
    "taxSource": "tracker",
    "hoaMonthly": null
@@ -272,8 +272,8 @@
    "slug": "plum-creek-north",
    "city": "Kyle",
    "url": "communities/plum-creek-north.html",
-   "tracked": false,
-   "profile": "stub",
+   "tracked": true,
+   "profile": "researched",
    "taxRate": null,
    "taxSource": "unverified",
    "hoaMonthly": null
@@ -297,7 +297,7 @@
    "city": "Georgetown",
    "url": "communities/rancho-sienna.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "researched",
    "taxRate": 3,
    "taxSource": "tracker",
    "hoaMonthly": null
@@ -357,7 +357,7 @@
    "city": "Austin (Bee Cave)",
    "url": "communities/sweetwater.html",
    "tracked": true,
-   "profile": "stub",
+   "profile": "researched",
    "taxRate": 2.5,
    "taxSource": "tracker",
    "hoaMonthly": null
@@ -666,7 +666,7 @@
    "slug": "pulte-homes",
    "url": "builders/pulte-homes.html",
    "tracked": true,
-   "profile": "stub"
+   "profile": "researched"
   },
   {
    "kind": "builder",
@@ -745,7 +745,7 @@
    "kind": "builder",
    "slug": "milestone",
    "name": "MileStone Community Builders",
-   "profile": "stub",
+   "profile": "researched",
    "tracked": true,
    "offersUrl": "https://www.mymilestone.com/",
    "note": "Austin local volume builder, multiple communities",
@@ -767,7 +767,7 @@
    "kind": "builder",
    "slug": "sitterle-homes",
    "name": "Sitterle Homes",
-   "profile": "stub",
+   "profile": "researched",
    "tracked": true,
    "offersUrl": "https://sitterlehomes.com/communities/",
    "note": "Santa Rita Ranch, Parmer Ranch Cottages, Clearwater Ranch, Belterra",
@@ -789,7 +789,7 @@
    "kind": "builder",
    "slug": "trophy-signature-homes",
    "name": "Trophy Signature Homes",
-   "profile": "stub",
+   "profile": "researched",
    "tracked": true,
    "offersUrl": "https://trophysignaturehomes.com/homes/austin/hutto",
    "note": "Green Brick brand; Prairie Winds in Hutto",
@@ -800,7 +800,7 @@
    "kind": "builder",
    "slug": "landsea-homes",
    "name": "Landsea Homes",
-   "profile": "stub",
+   "profile": "researched",
    "tracked": true,
    "offersUrl": "https://www.newhomesource.com/communities/tx/austin-area/builder-landsea-homes-19499",
    "note": "Avery Centre (Round Rock), Lariat (Liberty Hill), Manor Commons; confirm corporate status before publishing",
@@ -947,7 +947,7 @@
    "slug": "newmark-homes",
    "url": "builders/newmark-homes.html",
    "tracked": true,
-   "profile": "stub"
+   "profile": "researched"
   },
   {
    "kind": "builder",
@@ -979,7 +979,7 @@
    "slug": "regency-toll-brothers",
    "url": "builders/regency-toll-brothers.html",
    "tracked": true,
-   "profile": "stub"
+   "profile": "researched"
   },
   {
    "kind": "builder",
