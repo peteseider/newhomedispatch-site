@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Larkspur, Leander, Tracked Community | New Home Dispatch</title>
-<meta name="description" content="Larkspur in Leander is tracked weekly in the New Home Dispatch Incentive Tracker. Full independent community profile in progress.">
+<title>Larkspur, Leander -- Community Profile (Researched) | New Home Dispatch</title>
+<meta name="description" content="Larkspur in Leander is sold out of new construction, though some sites still market it as available. Researched by New Home Dispatch: what is actually left, and what is not.">
 <link rel="canonical" href="https://newhomedispatch.com/communities/larkspur.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Larkspur, Leander, Tracked Community | New Home Dispatch">
-<meta property="og:description" content="Larkspur in Leander is tracked weekly in the New Home Dispatch Incentive Tracker. Full independent community profile in progress.">
+<meta property="og:title" content="Larkspur, Leander -- Community Profile (Researched) | New Home Dispatch">
+<meta property="og:description" content="Larkspur in Leander is sold out of new construction, though some sites still market it as available. Researched by New Home Dispatch: what is actually left, and what is not.">
 <meta property="og:url" content="https://newhomedispatch.com/communities/larkspur.html">
 <meta property="og:site_name" content="New Home Dispatch">
 <meta property="og:image" content="https://newhomedispatch.com/assets/og-default.png">
@@ -1696,33 +1696,110 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
 
 <section style="background:#0A0A0A;color:#fff;padding:56px 0 48px;">
   <div class="wrap">
-    <div style="font-family:'Inter', sans-serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#4E7AFF;">Tracked Community · Profile in progress</div>
+    <div style="font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#4E7AFF;">Researched Community &middot; Sold out &mdash; resale only</div>
     <h1 style="font-size:clamp(2rem,4vw,2.7rem);color:#fff;margin:12px 0 10px;">Larkspur</h1>
     <a class="back-link mono" href="/communities.html#community=larkspur" style="color:#9DBBFF;margin:10px 0 4px;display:inline-flex;text-decoration:none;font-size:0.8rem;">See Larkspur on the map &rarr;</a>
-    <p style="color:rgba(255,255,255,.78);font-size:1.02rem;max-width:60ch;line-height:1.6;margin:0;">Leander · Northwest Austin metro. This community is actively tracked in the New Home Dispatch Incentive Tracker; the full independent profile, schools, taxes, HOA, field notes, is in progress.</p>
+    <p style="color:rgba(255,255,255,.78);font-size:1.02rem;max-width:62ch;line-height:1.6;margin:10px 0 0;">Off Highway 183 south of Highway 29, Leander, TX 78641 &mdash; a 608-acre, 1,500-home community from developer MileStone Community Builders. Our research found this community is now sold out of new construction, which we're flagging clearly rather than presenting it as an active building opportunity. Built from the developer's own site, county and district records, and third-party listing data &mdash; not a field visit yet.</p>
   </div>
 </section>
-<section style="padding:40px 0 10px;"><div class="wrap" style="max-width:820px;">
-  <h2 style="font-size:1.3rem;border-bottom:2px solid #000;padding-bottom:8px;">What we're tracking here</h2>
-  
-    <div style="border:1px solid #E0E0E0;border-top:3px solid #999;border-radius:2px;padding:20px 22px;margin-top:18px;">
-      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;">
-        <div style="font-weight:800;font-size:1.05rem;"><a href="../builders/dr-horton.html" style="color:inherit;">D.R. Horton</a> · Larkspur</div>
-        <div style="font-weight:800;font-size:1.05rem;letter-spacing:-.02em;color:#666;">Sold out</div>
+
+<section style="background:#F5F7FB;color:#0B1220;padding:44px 0 60px;">
+  <style>
+    .mp-wrap{max-width:860px;margin:0 auto;padding:0 20px;font-family:'Inter',system-ui,sans-serif;}
+    .mp-legend{font-size:.78rem;color:#5B6472;margin-bottom:28px;font-family:'IBM Plex Mono',monospace;}
+    .mp-h2{font-family:'Archivo Expanded',sans-serif;font-size:1.35rem;color:#0F2942;margin:38px 0 14px;}
+    .mp-table{width:100%;border-collapse:collapse;font-size:.92rem;}
+    .mp-table th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:#5B6472;font-weight:600;padding:8px 10px;border-bottom:1px solid #E3E7EE;}
+    .mp-table td{padding:10px;border-bottom:1px solid #E3E7EE;vertical-align:top;}
+    .mp-table td.mp-src{color:#5B6472;font-size:.8rem;white-space:nowrap;}
+    .mp-verify{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0;}
+    .mp-vx{padding:14px 16px;border-radius:6px;background:#fff;border:1px solid #E3E7EE;border-left:4px solid #999;}
+    .mp-vx.mp-yes{border-left-color:#1B7F4C;}
+    .mp-vx.mp-claim{border-left-color:#B8860B;}
+    .mp-vx.mp-no{border-left-color:#B3261E;}
+    .mp-vx strong{display:block;margin-bottom:4px;font-size:.85rem;}
+    .mp-vx p{margin:0;font-size:.88rem;line-height:1.55;color:#333;}
+    .mp-callout{background:#fff;border:1px solid #E3E7EE;border-left:4px solid #2B4FE0;border-radius:6px;padding:14px 16px;margin:16px 0;font-size:.88rem;line-height:1.6;}
+    .mp-callout strong{color:#0F2942;}
+    .mp-toolrow{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 8px;}
+    .mp-btn{display:inline-block;border:1px solid #2B4FE0;color:#2B4FE0;background:#fff;border-radius:6px;padding:9px 16px;font-size:.85rem;text-decoration:none;font-family:'Inter',sans-serif;}
+    .mp-btn:hover{background:#2B4FE0;color:#fff;}
+    .mp-bottom{background:#0B1220;color:#fff;border-radius:8px;padding:22px 24px;margin:34px 0;}
+    .mp-bottom .mp-bl-label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#8FA5FF;margin-bottom:10px;}
+    .mp-bottom p{margin:0 0 10px;font-size:.92rem;line-height:1.6;}
+    .mp-bottom p:last-child{margin-bottom:0;}
+    .mp-signoff{text-align:center;padding:24px 0 4px;border-top:1px solid #E3E7EE;margin-top:30px;}
+    .mp-signoff .mp-lc{font-family:'Archivo Expanded',sans-serif;font-size:1.1rem;color:#0F2942;}
+    .mp-signoff .mp-lc span{color:#2B4FE0;}
+    .mp-signoff p{font-size:.82rem;color:#5B6472;margin:8px 0 14px;}
+    .mp-signoff a{color:#2B4FE0;text-decoration:none;font-size:.85rem;margin:0 8px;}
+  </style>
+  <div class="mp-wrap">
+    <div class="mp-legend">Sources: (V) verified by us against a primary source &middot; (O) our direct observation &middot; (BC) builder claim or collateral, unverified by us &middot; confidence: &#128994; high &#128993; medium &#128992; low</div>
+
+    <div class="mp-h2">Snapshot</div>
+    <table class="mp-table">
+      <tr><th>Detail</th><th>What we found</th><th>Source</th></tr>
+      <tr><td>Developer</td><td>MileStone Community Builders</td><td class="mp-src">(V) &#128994;</td></tr>
+      <tr><td>Location</td><td>Off Highway 183, just south of Highway 29, Leander, TX 78641</td><td class="mp-src">(V) &#128994;</td></tr>
+      <tr><td>Size</td><td>608 acres, 1,500+ home sites, 100+ acres of parkland backing the South Fork San Gabriel River</td><td class="mp-src">(V) &#128994;</td></tr>
+      <tr><td>Build status</td><td><strong>Sold out.</strong> MileStone's own site displays a "SOLD OUT!" banner; D.R. Horton's community listing shows "no longer available"; a Gehan Homes (now Brightland) listing shows sold out since 2022</td><td class="mp-src">(V) &#128994;</td></tr>
+      <tr><td>Builders that sold here (historical)</td><td>MileStone Homes, D.R. Horton, Gehan Homes (now Brightland Homes) &mdash; none currently building new construction</td><td class="mp-src">(V) &#128994;</td></tr>
+      <tr><td>Schools</td><td>Leander ISD &mdash; Larkspur Elementary (on-site); middle and high school assignment (likely Stacy Kaye Danielson Middle, Glenn High) found only on secondary sources, not independently confirmed</td><td class="mp-src">(V)/(BC) &#128993;</td></tr>
+      <tr><td>HOA</td><td>Larkspur Master Community, Inc., managed by Goodwin &amp; Company; a ~$60+/month figure appears only on an aggregator, not the HOA's own documentation</td><td class="mp-src">(BC) &#128992;</td></tr>
+      <tr><td>Tax rate</td><td>Could not confirm against a primary source; a secondary source cites ~2.53%, below our tracker's 3.2% guess. Confirmed not in a City of Leander PID</td><td class="mp-src">could not verify</td></tr>
+    </table>
+
+    <div class="mp-h2">What we can verify &mdash; and what we haven't</div>
+    <div class="mp-verify">
+      <div class="mp-vx mp-yes">
+        <strong>&#9989; Verified by us</strong>
+        <p>The developer, location, size, and &mdash; most importantly &mdash; that new-construction sales here have ended. Confirmed directly on MileStone's own site (sold-out banner) and corroborated by D.R. Horton's and Gehan/Brightland's own listing status. Also confirmed Larkspur is not in any City of Leander Public Improvement District.</p>
       </div>
-      <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.9rem;margin-top:14px;">
-        <span style="color:#666;">Status</span><span>D.R. Horton's section of Larkspur is sold out as of Jul 20, 2026, no active listings, offer removed from tracking.</span>
-        <span style="color:#666;">Prior offer</span><span>$25,000 flex cash, tracked through Jul 20, 2026 (now retired, see the Incentive Tracker for history)</span>
-        <span style="color:#666;">Note</span><span>Larkspur is a multi-builder community (also Gehan Homes, MileStone Community Builders), this status applies to D.R. Horton's section only; not yet independently tracked for other builders here.</span>
-        <span style="color:#666;">Source</span><span>drhorton.com (0 listings, Jul 20 2026) · corroborated by third-party listing sites. Confirm directly before assuming other sections are also sold out.</span>
+      <div class="mp-vx mp-claim">
+        <strong>&#128993; Builder/developer claims, not independently confirmed</strong>
+        <p>Middle and high school assignment, HOA fee amount, and the tax-rate estimate all come from secondary/aggregator sources, not the school district's official zone finder, the HOA management company directly, or a Williamson County Appraisal District parcel record.</p>
+      </div>
+      <div class="mp-vx mp-no">
+        <strong>&#128992; Not yet checked</strong>
+        <p>A parcel-level tax-rate confirmation from WCAD. BBB standing for MileStone, D.R. Horton, or Brightland specific to this community. Construction quality firsthand.</p>
       </div>
     </div>
-  <p style="font-size:.85rem;color:#666;line-height:1.6;margin-top:16px;">Figures are field observations labeled by source, not builder-verified facts, confirm terms in writing before acting. See <a href="../incentive-tracker.html" style="color:#000;text-decoration:underline;">the full tracker</a> and <a href="../methodology.html" style="color:#000;text-decoration:underline;">how we track</a>.</p>
-  <div style="display:flex;gap:14px;flex-wrap:wrap;margin:26px 0 34px;">
-    <a href="../incentive-tracker.html" class="btn btn-amber">Compare every tracked offer &rarr;</a>
-    <a href="../communities.html" class="btn btn-outline">Open the Community Explorer</a>
+
+    <div class="mp-h2">On the record &mdash; still marketed as available on some sites, despite being sold out</div>
+    <p style="font-size:.92rem;line-height:1.65;">This is a sold-out community: MileStone's own site confirms it, and no builder we checked has active inventory here. Yet several third-party listing sites, including at least one AI-generated summary page, still display generic "beautiful homes, amazing amenities" marketing copy for Larkspur as if it were an active new-construction opportunity. A buyer relying on those sites could be misled into thinking new homes are still available here. We're publishing this profile specifically to correct that record, not to promote new construction that no longer exists.</p>
+    <div class="mp-callout"><strong>If you're interested in this community:</strong> Larkspur is resale-only now. Work with an agent for existing-home listings, and independently confirm the HOA fee and tax rate directly with Goodwin &amp; Company and Williamson County before making an offer &mdash; neither figure was independently confirmable in our research.</div>
+
+    <div class="mp-h2">Money</div>
+    <p style="font-size:.92rem;line-height:1.65;">No incentive tracking applies here &mdash; there is no active new-construction builder at Larkspur. For verified incentive data at communities that are still actively selling, use the tools below.</p>
+    <div class="mp-toolrow">
+      <a class="mp-btn" href="/leverage-report">See the Leverage Report</a>
+      <a class="mp-btn" href="/incentive-tracker">Open the Incentive Tracker</a>
+    </div>
+
+    <div class="mp-h2">Recent visits</div>
+    <table class="mp-table">
+      <tr><th>Date</th><th>Builder</th><th>Notes</th></tr>
+      <tr><td>&mdash;</td><td>&mdash;</td><td>No New Home Dispatch field visit yet. This section will populate once a visit to Larkspur is completed.</td></tr>
+    </table>
+
+    <div class="mp-h2">Coverage</div>
+    <p style="font-size:.92rem;line-height:1.65;">Larkspur sits in Leander, within New Home Dispatch's Northwest Austin / Williamson County priority coverage area. We're keeping this profile live specifically to flag the sold-out status against stale third-party marketing.</p>
+
+    <div class="mp-bottom">
+      <div class="mp-bl-label">The bottom line</div>
+      <p><strong>Advantage:</strong> a well-documented, amenity-rich community with 100+ acres of parkland and an on-site elementary school &mdash; a solid resale option if you're not set on new construction.</p>
+      <p><strong>Limitation:</strong> there is no active new-home builder here despite what some third-party sites still imply. If new construction matters to you, look elsewhere in this market.</p>
+    </div>
+
+    <div class="mp-signoff">
+      <div class="mp-lc">Look Closer<span>.</span></div>
+      <p>Independent &mdash; editorial coverage is not for sale &middot; newhomedispatch.com</p>
+      <a href="/communities">Community Explorer</a> &middot; <a href="/communities#compare">Compare Communities</a>
+    </div>
   </div>
-</div></section>
+</section>
+
 </main>
 <footer>
   <div class="wrap">
