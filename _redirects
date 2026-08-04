@@ -75,6 +75,9 @@
 /under-3000  /reports/under-3000-payment.html  200
 /corrections  /corrections.html  200
 /chesmar  /builders/chesmar-homes.html  200
+/builders/milestone-community-builders.html  /builders/milestone.html  301
+/builders/trophy-signature.html  /builders/trophy-signature-homes.html  301
+/builders/risewell-homes.html  /builders/landsea-homes.html  301
 /scoreboard  /daily-hot-sheet.html#price-cut-watch  301
 /scoreboard.html  /daily-hot-sheet.html#price-cut-watch  301!
 /one-sheet  /dispatch-one-sheet.html  200
