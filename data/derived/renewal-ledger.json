@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-08-03T22:44:03.815Z",
-  "runKey": "2026-08-03-PM",
-  "observationRuns": 35,
+  "lastUpdated": "2026-08-04T09:45:56.269Z",
+  "runKey": "2026-08-04-AM",
+  "observationRuns": 36,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc219",
@@ -145,7 +145,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 16,
+      "expiredButDisplayedObservations": 17,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -157,13 +157,13 @@
     },
     "empire-communities": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 4
     },
     "terrata-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 0,
+      "expiredButDisplayedObservations": 1,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
@@ -292,6 +292,12 @@
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 2
+    },
+    "giddens-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 1,
+      "deadlinesSet": 0,
+      "offersTracked": 1
     }
   },
   "note": "A deadline_extended event is a renewal: an advertised expiration that moved later. expired_but_displayed counts sweep observations of an offer still advertised after its stated deadline."
