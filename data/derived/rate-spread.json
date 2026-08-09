@@ -1,8 +1,8 @@
 {
   "schema": "nhd-rate-spread-v1",
   "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
-  "lastUpdated": "2026-08-09T13:59:54.067Z",
-  "runKey": "2026-08-09-AM",
+  "lastUpdated": "2026-08-09T17:07:26.587Z",
+  "runKey": "2026-08-09-PM",
   "pmms": {
     "week": "8/6/2026",
     "rate30": 6.69
