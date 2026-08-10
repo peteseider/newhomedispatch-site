@@ -309,8 +309,22 @@
         "stringFree": 15,
         "deadline": 100
       }
+    },
+    {
+      "t": "2026-08-10T00:08:29-05:00",
+      "label": "Aug 10",
+      "slot": "AM",
+      "score": 74,
+      "band": "High",
+      "components": {
+        "incentive": 75,
+        "competition": 100,
+        "friction": 88,
+        "stringFree": 15,
+        "deadline": 100
+      }
     }
   ],
-  "lastUpdated": "2026-08-09T20:07:16-05:00",
-  "lastUpdatedLabel": "Aug 9, 2026 · 08:07 PM CT"
+  "lastUpdated": "2026-08-10T00:08:29-05:00",
+  "lastUpdatedLabel": "Aug 10, 2026 · 12:08 AM CT"
 }
