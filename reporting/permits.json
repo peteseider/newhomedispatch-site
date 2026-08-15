@@ -100,14 +100,14 @@
     },
     {
       "date": "2026-08-15",
-      "count30d": 298,
+      "count30d": 309,
       "priorYear30d": 306
     }
   ],
   "current": {
     "from": "2026-07-16",
     "to": "2026-08-15",
-    "count": 298
+    "count": 309
   },
   "priorYear": {
     "from": "2025-07-16",
