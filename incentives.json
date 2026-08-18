@@ -3,9 +3,10 @@
     "2026-07-26",
     "2026-07-27",
     "2026-07-29",
-    "2026-08-03"
+    "2026-08-03",
+    "2026-08-18"
   ],
-  "updated": "2026-08-03",
+  "updated": "2026-08-18",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -380,20 +381,20 @@
       "submarket": "",
       "builder": "KB Home",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Rate special (no dollar figure)",
-      "advertisedValue": null,
+      "incentiveType": "rate-special",
+      "advertisedValue": 5000,
       "transferability": null,
       "buyerValueScore": null,
       "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Sign a purchase agreement by 7/31/26",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
-      "prevValue": 5000,
-      "delta": null,
+      "expires": "Purchase agreement by 8/31/2026",
+      "source": "https://www.kbhome.com/special-low-rates",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-18",
+      "prevValue": null,
+      "delta": 5000,
       "history": [
         {
           "date": "2026-07-27",
@@ -402,10 +403,14 @@
         {
           "date": "2026-07-29",
           "value": null
+        },
+        {
+          "value": null,
+          "asOf": "2026-07-29"
         }
       ],
-      "note": "RE-CHECKED 2026-07-29: page now reads Below Market Rates with no specific figure shown (previously $5,000 on 2026-07-27); KBHS Home Loans implied. Not confirmed gone, just no longer quantified on the page -- treat the $5,000 prior figure as unconfirmed going forward.",
-      "expired": true,
+      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-08-18.",
+      "expired": false,
       "run": "AM"
     },
     {
@@ -462,10 +467,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "close by 8/31/2026",
+      "expires": "Must close by 8/31/2026",
       "source": "https://www.perryhomes.com/promotion/summer-sales-event-2026/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-03",
+      "lastObserved": "2026-08-18",
       "prevValue": 35000,
       "delta": 15000,
       "history": [
@@ -482,7 +487,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.perryhomes.com/promotion/summer-sales-event-2026/austin (builder-advertised) verified 2026-08-03.",
+      "note": "Source: https://www.perryhomes.com/promotion/summer-sales-event-2026/austin (builder-advertised) verified 2026-08-18.",
       "expired": false,
       "run": "AM"
     },
@@ -717,10 +722,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "'limited time' (none stated)",
-      "source": "https://empirehomes.com/us/texas/austin",
+      "expires": "none stated",
+      "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-03",
+      "lastObserved": "2026-08-18",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -729,7 +734,7 @@
           "value": 50000
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin (builder-advertised) verified 2026-08-03.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-08-18.",
       "expired": false,
       "run": "AM"
     },
@@ -812,18 +817,18 @@
       "submarket": "",
       "builder": "United Built Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Flex cash",
+      "incentiveType": "credit-flex",
       "advertisedValue": 10000,
       "transferability": "Medium",
       "buyerValueScore": 8000,
-      "lenderTied": true,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Limited number of new home starts",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
+      "expires": "none stated (limited starts)",
+      "source": "https://www.ubh.com/2026-cash-back/",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-18",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -836,7 +841,7 @@
           "value": 10000
         }
       ],
-      "note": "RE-CONFIRMED LIVE 2026-07-29. $10K cash back + deferred payments (no payments 1st year, interest begins month 11). UBH financing.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-08-18.",
       "expired": false,
       "run": "AM"
     },
@@ -1425,18 +1430,18 @@
       "submarket": "",
       "builder": "Stylecraft Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "permanent-buydown",
+      "incentiveType": "credit-flex",
       "advertisedValue": 20000,
       "transferability": null,
       "buyerValueScore": null,
-      "lenderTied": true,
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "close by 9/28/2026",
+      "expires": "none stated",
       "source": "https://www.stylecraft.com/incentives/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-03",
+      "lastObserved": "2026-08-18",
       "prevValue": null,
       "delta": 20000,
       "history": [
@@ -1449,7 +1454,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.stylecraft.com/incentives/ (builder-advertised) verified 2026-08-03.",
+      "note": "Source: https://www.stylecraft.com/incentives/ (builder-advertised) verified 2026-08-18.",
       "expired": false,
       "run": "AM"
     },
@@ -2038,27 +2043,31 @@
       "submarket": "",
       "builder": "MODUS / The George (condos)",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Flex cash",
-      "advertisedValue": 20000,
+      "incentiveType": "credit-flex",
+      "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": 20000,
-      "lenderTied": "unknown",
+      "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "4.99% (structure not specified) -- alternative to the flex cash",
-      "expires": "",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
-      "prevValue": null,
-      "delta": null,
+      "expires": "none stated",
+      "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-18",
+      "prevValue": 20000,
+      "delta": 20000,
       "history": [
         {
           "date": "2026-07-29",
           "value": 20000
+        },
+        {
+          "value": 20000,
+          "asOf": "2026-07-29"
         }
       ],
-      "note": "NEW RECORD 2026-07-29. Townhomes: $20K flex cash OR 4.99% rate; page does not state whether the rate is permanent or a buydown.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-08-18.",
       "expired": false,
       "run": "AM"
     },
@@ -2071,27 +2080,31 @@
       "submarket": "",
       "builder": "Megatel Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Closing costs",
-      "advertisedValue": 5000,
+      "incentiveType": "rate-special",
+      "advertisedValue": 12000,
       "transferability": "Unknown",
       "buyerValueScore": 5000,
       "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "2.99% FIXED (3.75% APR)",
-      "expires": "Through 7/31",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
-      "prevValue": null,
-      "delta": null,
+      "expires": "Through 8/31",
+      "source": "https://www.megatelhomes.com/incentives",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-18",
+      "prevValue": 5000,
+      "delta": 7000,
       "history": [
         {
           "date": "2026-07-29",
           "value": 5000
+        },
+        {
+          "value": 5000,
+          "asOf": "2026-07-29"
         }
       ],
-      "note": "NEW RECORD 2026-07-29. $5,000 closing + 2.99% FIXED rate (see promo-megatel-299fixed). MCI Mortgage.",
+      "note": "Source: https://www.megatelhomes.com/incentives (builder-advertised) verified 2026-08-18.",
       "expired": false,
       "run": "AM"
     },
@@ -2149,10 +2162,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "'limited time' (none stated)",
+      "expires": "limited time",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-03",
+      "lastObserved": "2026-08-18",
       "prevValue": null,
       "delta": 40000,
       "history": [
@@ -2165,7 +2178,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-08-03.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-08-18.",
       "expired": false,
       "run": "AM"
     },
@@ -2238,40 +2251,59 @@
   ],
   "promos": [
     {
-      "id": "chesmar-4999fha-2026-07",
-      "builder": "Chesmar Homes",
-      "community": "select homes",
-      "promo": "4.999% (5.737% APR) FHA 30-yr fixed-rate special financing on select homes",
+      "id": "century-communities-3875-2026-08",
+      "builder": "Century Communities",
+      "community": "Austin metro",
+      "promo": "3.875% (4.855% APR) 30-year fixed-rate loan via Inspire Home Loans",
       "expires": "none stated",
-      "lastObserved": "2026-08-03",
-      "firstObserved": "2026-07-26",
+      "lastObserved": "2026-08-18",
+      "firstObserved": "2026-08-05",
       "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "Permanent full-term fixed. No lender named, no deadline."
-    },
-    {
-      "id": "megatel-299fixed-2026-07",
-      "builder": "Megatel Homes",
-      "community": "Austin, TX (company-wide financing page)",
-      "promo": "2.99% FIXED RATE (3.75% APR) - Through 8/31",
-      "expires": "Through 8/31/2026",
-      "lastObserved": "2026-08-03",
-      "firstObserved": "2026-07-28",
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "Advertised FIXED; Austin applicability not reconfirmed this run."
+      "source": "Builder-reported"
     },
     {
       "id": "stylecraft-499-2026-07",
       "builder": "Stylecraft Homes",
-      "community": "North Austin (Rancho San Gabriel/Georgetown + select)",
-      "promo": "rate as low as 4.99% (5.691% APR) 30-yr fixed FHA (builder-paid, permanent) through Kangaroo Home Lending (680+ FICO)",
-      "expires": "September 28, 2026",
-      "lastObserved": "2026-08-03",
+      "community": "select Central Texas communities",
+      "promo": "4.99% (5.691% APR) 30-yr fixed FHA via Kangaroo Home Lending",
+      "expires": "October 9, 2026",
+      "lastObserved": "2026-08-18",
       "firstObserved": "2026-07-30",
       "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "Full-term fixed, no teaser language."
+      "source": "Builder-reported"
+    },
+    {
+      "id": "risewell-399-2026-08",
+      "builder": "Risewell Homes",
+      "community": "select Austin-region neighborhoods",
+      "promo": "3.99% (4.627% APR) Fixed Rate",
+      "expires": "none stated (limited-time)",
+      "lastObserved": "2026-08-18",
+      "firstObserved": "2026-08-08",
+      "confidence": "unverified",
+      "source": "Builder-reported"
+    },
+    {
+      "id": "kb-home-599conv-2026-08",
+      "builder": "KB Home",
+      "community": "Austin-area",
+      "promo": "30-Year Fixed Conventional: 5.99% (6.002% APR), $5,000 closing-cost credit",
+      "expires": "Purchase agreement by 8/31/26",
+      "lastObserved": "2026-08-18",
+      "firstObserved": "2026-08-06",
+      "confidence": "unverified",
+      "source": "Builder-reported"
+    },
+    {
+      "id": "megatel-299-2026-08",
+      "builder": "Megatel Homes",
+      "community": "Bridges of Bear Creek; The Reserve at Southpark Meadows",
+      "promo": "2.99% FIXED RATE (3.75% APR) + $500/mo for 24 months, through 8/31",
+      "expires": "8/31 (assumed 2026)",
+      "lastObserved": "2026-08-18",
+      "firstObserved": "2026-08-12",
+      "confidence": "unverified",
+      "source": "Builder-reported"
     }
   ]
 }
