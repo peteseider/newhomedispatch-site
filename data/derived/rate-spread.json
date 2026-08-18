@@ -1,7 +1,7 @@
 {
   "schema": "nhd-rate-spread-v1",
   "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
-  "lastUpdated": "2026-08-18T13:02:45.323Z",
+  "lastUpdated": "2026-08-18T13:56:26.238Z",
   "runKey": "2026-08-18-AM",
   "pmms": {
     "week": "8/13/2026",
@@ -112,20 +112,6 @@
       "community": "",
       "advertisedRate": 6.04,
       "spreadBps": -63
-    },
-    {
-      "id": "inc244",
-      "builder": "modus-the-george",
-      "community": "",
-      "advertisedRate": 4.99,
-      "spreadBps": -168
-    },
-    {
-      "id": "inc245",
-      "builder": "megatel-homes",
-      "community": "",
-      "advertisedRate": 2.99,
-      "spreadBps": -368
     }
   ],
   "note": "Advertised rates are builder claims parsed from offer text; PMMS is the weekly market average. Negative spread = advertised below market (the buydown teaser)."
