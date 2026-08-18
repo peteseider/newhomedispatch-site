@@ -1,16 +1,16 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-08-18T08:56:07-05:00-AM",
-  "generatedAt": "2026-08-18T08:56:07-05:00",
+  "sweepId": "2026-08-18T11:58:48-05:00-AM",
+  "generatedAt": "2026-08-18T11:58:48-05:00",
   "facts": {
-    "score": 74,
+    "score": 65,
     "band": "High",
-    "scoreDelta": 0,
+    "scoreDelta": -9,
     "concessionIndex": 20000,
     "offersLive": 62,
     "buildersLive": 38,
     "expired": 11,
-    "rateDaily": 6.73,
+    "rateDaily": 6.75,
     "ratePmmsWeekly": 6.67
   },
   "changes": {
@@ -27,7 +27,7 @@
     "reduced": [],
     "deadlinesNext7d": []
   },
-  "interpretation": "Movement this sweep: 6 improved. Market-wide score unchanged.",
+  "interpretation": "Movement this sweep: 6 improved. Market-wide score down 9.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
@@ -40,5 +40,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "publish-watchlists"
+  "publishRecommendation": "publish-broadly"
 }

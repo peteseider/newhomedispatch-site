@@ -535,20 +535,20 @@
       }
     },
     {
-      "t": "2026-08-18T08:56:07-05:00",
+      "t": "2026-08-18T11:58:48-05:00",
       "label": "Aug 18",
       "slot": "AM",
-      "score": 74,
+      "score": 65,
       "band": "High",
       "components": {
         "incentive": 75,
         "competition": 100,
-        "friction": 88,
+        "friction": 46,
         "stringFree": 16,
-        "deadline": 100
+        "deadline": 83
       }
     }
   ],
-  "lastUpdated": "2026-08-18T08:56:07-05:00",
-  "lastUpdatedLabel": "Aug 18, 2026 · 08:56 AM CT"
+  "lastUpdated": "2026-08-18T11:58:48-05:00",
+  "lastUpdatedLabel": "Aug 18, 2026 · 11:58 AM CT"
 }
