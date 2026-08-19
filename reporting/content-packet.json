@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-08-18T19:00:28-05:00-PM",
-  "generatedAt": "2026-08-18T19:00:28-05:00",
+  "sweepId": "2026-08-19T07:03:36-05:00-AM",
+  "generatedAt": "2026-08-19T07:03:36-05:00",
   "facts": {
     "score": 65,
     "band": "High",
@@ -14,20 +14,13 @@
     "ratePmmsWeekly": 6.67
   },
   "changes": {
-    "count": 6,
+    "count": 0,
     "newOffers": [],
-    "improved": [
-      "KB Home",
-      "Perry Homes",
-      "Stylecraft Homes",
-      "MODUS / The George (condos)",
-      "Megatel Homes",
-      "Giddens Homes"
-    ],
+    "improved": [],
     "reduced": [],
     "deadlinesNext7d": []
   },
-  "interpretation": "Movement this sweep: 6 improved. Market-wide score unchanged.",
+  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
@@ -40,5 +33,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "publish-watchlists"
+  "publishRecommendation": "record-internal"
 }
