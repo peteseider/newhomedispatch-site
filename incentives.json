@@ -4,9 +4,10 @@
     "2026-07-27",
     "2026-07-29",
     "2026-08-03",
-    "2026-08-18"
+    "2026-08-18",
+    "2026-08-19"
   ],
-  "updated": "2026-08-18",
+  "updated": "2026-08-19",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -2251,59 +2252,64 @@
   ],
   "promos": [
     {
+      "id": "kb-home-599conv-2026-08",
+      "builder": "KB Home",
+      "community": "Austin-area",
+      "promo": "30-Year Fixed Conventional: 5.99% (6.002% APR), $5,000 closing-cost credit via KBHS Home Loans",
+      "expires": "Buyers must sign purchase agreement by 8/31/26",
+      "lastObserved": "2026-08-19",
+      "firstObserved": "2026-08-06",
+      "confidence": "unverified",
+      "source": "Builder-reported",
+      "note": "HELD vs 08-18. Rates dated 'effective as of July 29, 2026' on the page itself."
+    },
+    {
       "id": "century-communities-3875-2026-08",
       "builder": "Century Communities",
       "community": "Austin metro",
-      "promo": "3.875% (4.855% APR) 30-year fixed-rate loan via Inspire Home Loans",
+      "promo": "Say WOW to a 3.875% (4.855% APR) 30-year fixed-rate loan",
       "expires": "none stated",
-      "lastObserved": "2026-08-18",
+      "lastObserved": "2026-08-19",
       "firstObserved": "2026-08-05",
       "confidence": "unverified",
-      "source": "Builder-reported"
-    },
-    {
-      "id": "stylecraft-499-2026-07",
-      "builder": "Stylecraft Homes",
-      "community": "select Central Texas communities",
-      "promo": "4.99% (5.691% APR) 30-yr fixed FHA via Kangaroo Home Lending",
-      "expires": "October 9, 2026",
-      "lastObserved": "2026-08-18",
-      "firstObserved": "2026-07-30",
-      "confidence": "unverified",
-      "source": "Builder-reported"
+      "source": "Builder-reported",
+      "note": "HELD vs 08-18, unchanged rate."
     },
     {
       "id": "risewell-399-2026-08",
       "builder": "Risewell Homes",
       "community": "select Austin-region neighborhoods",
-      "promo": "3.99% (4.627% APR) Fixed Rate",
-      "expires": "none stated (limited-time)",
-      "lastObserved": "2026-08-18",
+      "promo": "3.99% (4.627% APR) Fixed Rate on select neighborhoods and homes.",
+      "expires": "none stated",
+      "lastObserved": "2026-08-19",
       "firstObserved": "2026-08-08",
       "confidence": "unverified",
-      "source": "Builder-reported"
-    },
-    {
-      "id": "kb-home-599conv-2026-08",
-      "builder": "KB Home",
-      "community": "Austin-area",
-      "promo": "30-Year Fixed Conventional: 5.99% (6.002% APR), $5,000 closing-cost credit",
-      "expires": "Purchase agreement by 8/31/26",
-      "lastObserved": "2026-08-18",
-      "firstObserved": "2026-08-06",
-      "confidence": "unverified",
-      "source": "Builder-reported"
+      "source": "Builder-reported",
+      "note": "11th CONSECUTIVE run reading with no step-up language on the headline offer, but footnote text still not independently retrievable. Kept in permanent set on same basis as prior 10 runs -- not a fresh guess."
     },
     {
       "id": "megatel-299-2026-08",
       "builder": "Megatel Homes",
-      "community": "Bridges of Bear Creek; The Reserve at Southpark Meadows",
-      "promo": "2.99% FIXED RATE (3.75% APR) + $500/mo for 24 months, through 8/31",
-      "expires": "8/31 (assumed 2026)",
-      "lastObserved": "2026-08-18",
+      "community": "move-in ready inventory",
+      "promo": "2.99% FIXED RATE (3.75% APR) Through 8/31 + $500/mo for 24 months via MegPrime Pay app",
+      "expires": "Through 8/31",
+      "lastObserved": "2026-08-19",
       "firstObserved": "2026-08-12",
       "confidence": "unverified",
-      "source": "Builder-reported"
+      "source": "Builder-reported",
+      "note": "HELD vs 08-18. ELEVATED CAVEAT this run: MegPrime Pay identified as a builder-affiliated fintech rewards app (not a traditional lender rate lock per Aug 2026 press coverage) -- '2.99% FIXED RATE' claim needs independent verification before being treated as a conventional permanent buydown."
+    },
+    {
+      "id": "stylecraft-499-2026-07",
+      "builder": "Stylecraft Homes",
+      "community": "select Central Texas communities",
+      "promo": "rates as low as 4.99%* (5.691% APR), 30-yr fixed FHA, via Kangaroo Home Lending",
+      "expires": "Contracts closed by October 9, 2026",
+      "lastObserved": "2026-08-19",
+      "firstObserved": "2026-07-30",
+      "confidence": "unverified",
+      "source": "Builder-reported",
+      "note": "HELD vs 08-18; deadline unchanged."
     }
   ]
 }
