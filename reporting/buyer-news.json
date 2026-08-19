@@ -1,38 +1,35 @@
 {
- "updated": "2026-07-27",
- "sectionTitle": "What changed beyond the sales office",
- "primary": {
-  "headline": "New 43-lot Glory Hill subdivision permit filed in Leander, part of a 5-permit Austin-area construction week",
-  "publisher": "Community Impact",
-  "publishedAt": "2026-07-21",
-  "sourceUrl": "https://communityimpact.com/leander-liberty-hill/development/student-housing-valvoline-check-out-5-major-austin-area-permits-filed-this-week/",
-  "geography": [
-   "Leander",
-   "Williamson County",
-   "Ronald Reagan Blvd corridor"
-  ],
-  "topics": [
-   "construction activity",
-   "permits",
-   "supply"
-  ],
-  "affectedAreas": [
-   "Leander",
-   "Georgetown",
-   "northern Central Texas corridor"
-  ],
-  "summary": "A construction permit was filed for Glory Hill Subdivision at 100 Private Road 921 in Leander: 43 single-family lots on 15.45 acres, a $3.5 million project with work scheduled March 2 through December 31, 2026. The same weekly permit roundup also included an $80 million off-campus student housing tower near UT Austin and a $1.9 million Brushy Creek MUD sewer capacity project in Round Rock, both signals of continued growth pressure across the wider Austin metro.",
-  "buyerImplication": "This is a small, ground-up subdivision, not a home you can buy today. It matters because it is new supply entering the market roughly 15 minutes from Del Webb's Sun City Georgetown community, which New Home Dispatch already tracks for incentives. More permitted lots in this sub-market typically means more builder competition on pricing and incentives over the next 12 to 18 months.",
-  "buyerAction": "No immediate action. We are adding Glory Hill Subdivision to the development watchlist and will report on it if a builder and pricing are announced.",
-  "localityScore": 20,
-  "buyerImpactScore": 14,
-  "newConstructionScore": 18,
-  "recencyScore": 14,
-  "sourceQualityScore": 9,
-  "totalScore": 75,
-  "confidence": "Reported directly by Community Impact from filed municipal permit records; not yet field verified. This was the most recent verified new-construction-relevant story available in our tracked corridor and adjacent Central Texas sub-markets as of this scrub -- no fresher item specific to South Austin, Buda, Kyle, or San Marcos proper was found dated after July 17, 2026.",
-  "reviewedAt": "2026-07-27",
-  "status": "approved"
- },
- "secondary": []
+  "updated": "2026-08-18",
+  "sectionTitle": "What changed beyond the sales office",
+  "primary": {
+    "headline": "Buyers leaning toward new construction in Texas housing market",
+    "publisher": "Spectrum News 1 (Texas)",
+    "publishedAt": "2026-08-12",
+    "sourceUrl": "https://spectrumlocalnews.com/tx/austin/news/2026/08/12/buyers-leaning-toward-new-construction-in-texas-housing-market",
+    "geography": [
+      "Austin Metro"
+    ],
+    "topics": [
+      "builder incentives",
+      "new-construction pricing",
+      "rate buydowns",
+      "resale-vs-new price gap"
+    ],
+    "affectedAreas": [
+      "Austin Metro"
+    ],
+    "summary": "Spectrum News 1 reports Austin-area buyers are increasingly choosing new construction over resale as builders lean on incentives to move inventory. The median price for newly built homes in Austin Metro was about $411,000 in July, versus $435,000 for all homes listed area-wide; some communities are advertising first-year mortgage rates as low as 3.25% against a prevailing market rate around 6.625%, plus design credits and closing-cost assistance. Austin realtor Justyn LeFebvre is quoted saying resale sellers increasingly have to price \"more in line with where the builders are building.\"",
+    "buyerImplication": "New construction is currently underpricing the broader resale market in Austin Metro by roughly $24,000 at the median, and builder rate buydowns are widening that effective gap further -- a structural condition, not a one-off promotion, that buyers should factor into a new-vs-resale comparison right now.",
+    "buyerAction": "Buyers cross-shopping new vs. resale should compare total cost (price minus incentive value, including the buydown's true cost if it's temporary) rather than list price alone, and ask each builder whether an advertised first-year rate is permanent or reverts after year one.",
+    "localityScore": 18,
+    "buyerImpactScore": 24,
+    "newConstructionScore": 20,
+    "recencyScore": 5,
+    "sourceQualityScore": 8,
+    "totalScore": 75,
+    "confidence": "High confidence -- Spectrum News 1 reporting; re-verified 2026-08-18, the 4th consecutive day this remained the most locally relevant qualifying new-construction story found in a full daily search.",
+    "reviewedAt": "2026-08-18",
+    "status": "approved"
+  },
+  "secondary": []
 }
