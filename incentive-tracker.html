@@ -2009,9 +2009,12 @@ f+='<line x1="'+xL+'" y1="'+y+'" x2="'+(W-pad)+'" y2="'+y+'" stroke="#EEEEEE"/>'
 f+='<text x="'+(xL-8)+'" y="'+(y+4)+'" text-anchor="end" font-size="11" fill="#999999" font-family="Inter,sans-serif">$'+Math.round(v/1000)+'k</text>';});
 var dp=pts.map(function(p,i){return (i?'L':'M')+X(i)+' '+Y(p.index);}).join(' ');
 f+='<path d="'+dp+'" fill="none" stroke="#2B4FE0" stroke-width="2.5"/>';
+var labelStride=Math.max(1,Math.ceil(n/10));
 pts.forEach(function(p,i){
 f+='<circle cx="'+X(i)+'" cy="'+Y(p.index)+'" r="4" fill="#2B4FE0"/>';
-f+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="10.5" fill="#666666" font-family="monospace">'+(p.label||"")+'</text>';});
+if(i%labelStride===0||i===n-1){
+f+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="10.5" fill="#666666" font-family="monospace">'+(p.label||"")+'</text>';
+}});
 svg.innerHTML=f;
 }
 var SEED={lastUpdatedLabel:"Jul 22, 2026 · 09:27 PM CT",points:[{t:"2026-07-22T06:05:00-05:00",label:"Jul 22",index:20000}]};
