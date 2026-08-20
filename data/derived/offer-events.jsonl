@@ -360,3 +360,11 @@
 {"t":"2026-08-19T12:03:53.586Z","runKey":"2026-08-19-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-08-19T20:03:46.186Z","runKey":"2026-08-19-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
 {"t":"2026-08-19T20:03:46.186Z","runKey":"2026-08-19-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-08-20T13:02:52.087Z","runKey":"2026-08-20-AM","type":"deadline_extended","id":"inc210","builder":"kb-home","community":"","from":"Purchase agreement by 8/31/2026","to":"Sign purchase agreement by 8/31/26"}
+{"t":"2026-08-20T13:02:52.087Z","runKey":"2026-08-20-AM","type":"deadline_extended","id":"inc219","builder":"empire-communities","community":"","from":"none stated","to":"none stated (limited time)"}
+{"t":"2026-08-20T13:02:52.087Z","runKey":"2026-08-20-AM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-08-20T13:02:52.087Z","runKey":"2026-08-20-AM","type":"lender_tie_changed","id":"inc222","builder":"united-built-homes","community":"","to":true}
+{"t":"2026-08-20T13:02:52.087Z","runKey":"2026-08-20-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-08-20T13:02:52.087Z","runKey":"2026-08-20-AM","type":"value_changed","id":"inc245","builder":"megatel-homes","community":"","from":12000,"to":1500}
+{"t":"2026-08-20T13:02:52.087Z","runKey":"2026-08-20-AM","type":"deadline_extended","id":"inc245","builder":"megatel-homes","community":"","from":"Through 8/31","to":"none stated"}
+{"t":"2026-08-20T13:02:52.087Z","runKey":"2026-08-20-AM","type":"lender_tie_changed","id":"inc245","builder":"megatel-homes","community":"","to":"unknown"}
