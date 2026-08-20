@@ -5,9 +5,10 @@
     "2026-07-29",
     "2026-08-03",
     "2026-08-18",
-    "2026-08-19"
+    "2026-08-19",
+    "2026-08-20"
   ],
-  "updated": "2026-08-19",
+  "updated": "2026-08-20",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -390,10 +391,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Purchase agreement by 8/31/2026",
+      "expires": "Sign purchase agreement by 8/31/26",
       "source": "https://www.kbhome.com/special-low-rates",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-18",
+      "lastObserved": "2026-08-20",
       "prevValue": null,
       "delta": 5000,
       "history": [
@@ -410,7 +411,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-08-18.",
+      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-08-20.",
       "expired": false,
       "run": "AM"
     },
@@ -723,10 +724,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated",
+      "expires": "none stated (limited time)",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-18",
+      "lastObserved": "2026-08-20",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -735,7 +736,7 @@
           "value": 50000
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-08-18.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-08-20.",
       "expired": false,
       "run": "AM"
     },
@@ -822,14 +823,14 @@
       "advertisedValue": 10000,
       "transferability": "Medium",
       "buyerValueScore": 8000,
-      "lenderTied": "unknown",
+      "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "none stated (limited starts)",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-18",
+      "lastObserved": "2026-08-20",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -842,7 +843,7 @@
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-08-18.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-08-20.",
       "expired": false,
       "run": "AM"
     },
@@ -2055,7 +2056,7 @@
       "expires": "none stated",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-18",
+      "lastObserved": "2026-08-20",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2068,7 +2069,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-08-18.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-08-20.",
       "expired": false,
       "run": "AM"
     },
@@ -2082,19 +2083,19 @@
       "builder": "Megatel Homes",
       "homeType": "Varies (confirm on site)",
       "incentiveType": "rate-special",
-      "advertisedValue": 12000,
+      "advertisedValue": 1500,
       "transferability": "Unknown",
       "buyerValueScore": 5000,
-      "lenderTied": true,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "2.99% FIXED (3.75% APR)",
-      "expires": "Through 8/31",
+      "expires": "none stated",
       "source": "https://www.megatelhomes.com/incentives",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-18",
-      "prevValue": 5000,
-      "delta": 7000,
+      "lastObserved": "2026-08-20",
+      "prevValue": 500,
+      "delta": 1000,
       "history": [
         {
           "date": "2026-07-29",
@@ -2103,9 +2104,17 @@
         {
           "value": 5000,
           "asOf": "2026-07-29"
+        },
+        {
+          "value": 12000,
+          "asOf": "2026-08-18"
+        },
+        {
+          "value": 500,
+          "asOf": "2026-08-20"
         }
       ],
-      "note": "Source: https://www.megatelhomes.com/incentives (builder-advertised) verified 2026-08-18.",
+      "note": "Source: https://www.megatelhomes.com/incentives (builder-advertised) verified 2026-08-20.",
       "expired": false,
       "run": "AM"
     },
@@ -2166,7 +2175,7 @@
       "expires": "limited time",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-18",
+      "lastObserved": "2026-08-20",
       "prevValue": null,
       "delta": 40000,
       "history": [
@@ -2179,7 +2188,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-08-18.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-08-20.",
       "expired": false,
       "run": "AM"
     },
@@ -2252,64 +2261,52 @@
   ],
   "promos": [
     {
-      "id": "kb-home-599conv-2026-08",
-      "builder": "KB Home",
-      "community": "Austin-area",
-      "promo": "30-Year Fixed Conventional: 5.99% (6.002% APR), $5,000 closing-cost credit via KBHS Home Loans",
-      "expires": "Buyers must sign purchase agreement by 8/31/26",
-      "lastObserved": "2026-08-19",
-      "firstObserved": "2026-08-06",
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "HELD vs 08-18. Rates dated 'effective as of July 29, 2026' on the page itself."
-    },
-    {
-      "id": "century-communities-3875-2026-08",
+      "id": "century-communities-3875",
       "builder": "Century Communities",
-      "community": "Austin metro",
-      "promo": "Say WOW to a 3.875% (4.855% APR) 30-year fixed-rate loan",
+      "community": null,
+      "promo": "Say WOW to a 3.875% (4.855% APR) 30-year fixed-rate loan, when financing with affiliate lender Inspire Home Loans.",
       "expires": "none stated",
-      "lastObserved": "2026-08-19",
-      "firstObserved": "2026-08-05",
+      "lastObserved": "2026-08-20",
+      "firstObserved": "unknown (recurring 15+ consecutive runs; not tracked with an exact origin date)",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "HELD vs 08-18, unchanged rate."
+      "note": "No step-up/buydown language found; footnote fine print still unreadable via fetch. Ambiguity not resolved, HELD per multi-run precedent."
     },
     {
-      "id": "risewell-399-2026-08",
+      "id": "risewell-homes-399",
       "builder": "Risewell Homes",
-      "community": "select Austin-region neighborhoods",
-      "promo": "3.99% (4.627% APR) Fixed Rate on select neighborhoods and homes.",
+      "community": null,
+      "promo": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate on select neighborhoods and homes.",
       "expires": "none stated",
-      "lastObserved": "2026-08-19",
-      "firstObserved": "2026-08-08",
+      "lastObserved": "2026-08-20",
+      "firstObserved": "unknown (12th consecutive run as of this run; not tracked with an exact origin date)",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "11th CONSECUTIVE run reading with no step-up language on the headline offer, but footnote text still not independently retrievable. Kept in permanent set on same basis as prior 10 runs -- not a fresh guess."
+      "note": "Same page also discloses an explicit, structurally-separate 1/0 step-up buydown at the identical 3.99% headline number -- real risk of reader conflation. Footnote unreadable; permanence not resolved."
     },
     {
-      "id": "megatel-299-2026-08",
-      "builder": "Megatel Homes",
-      "community": "move-in ready inventory",
-      "promo": "2.99% FIXED RATE (3.75% APR) Through 8/31 + $500/mo for 24 months via MegPrime Pay app",
-      "expires": "Through 8/31",
-      "lastObserved": "2026-08-19",
-      "firstObserved": "2026-08-12",
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "HELD vs 08-18. ELEVATED CAVEAT this run: MegPrime Pay identified as a builder-affiliated fintech rewards app (not a traditional lender rate lock per Aug 2026 press coverage) -- '2.99% FIXED RATE' claim needs independent verification before being treated as a conventional permanent buydown."
-    },
-    {
-      "id": "stylecraft-499-2026-07",
+      "id": "stylecraft-homes-499",
       "builder": "Stylecraft Homes",
       "community": "select Central Texas communities",
-      "promo": "rates as low as 4.99%* (5.691% APR), 30-yr fixed FHA, via Kangaroo Home Lending",
+      "promo": "Rates as low as 4.99% (5.691% APR), 30-year fixed FHA, via Kangaroo Home Lending.",
       "expires": "Contracts closed by October 9, 2026",
-      "lastObserved": "2026-08-19",
-      "firstObserved": "2026-07-30",
+      "lastObserved": "2026-08-20",
+      "firstObserved": "2026-07-30 (per prior-run notes)",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "HELD vs 08-18; deadline unchanged."
+      "note": "Footnote on step-up not independently re-confirmed this run; classification unchanged from prior weeks."
+    },
+    {
+      "id": "kb-home-599",
+      "builder": "KB Home",
+      "community": null,
+      "promo": "Rate as low as 5.99% (6.002% APR) Conventional 30-Year Fixed via KBHS Home Loans, LLC, plus $5,000 seller contribution.",
+      "expires": "Sign purchase agreement by 8/31/26",
+      "lastObserved": "2026-08-20",
+      "firstObserved": "2026-08-06 (per prior-run notes)",
+      "confidence": "unverified",
+      "source": "Builder-reported",
+      "note": "One of three tiered loan-program options on the same page (4.75% 5/1 ARM FHA, 5.75% Fixed FHA, 5.99% Fixed Conventional); the 5.99% conventional tier is the one classified as full-term fixed."
     }
   ]
 }
