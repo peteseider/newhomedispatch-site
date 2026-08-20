@@ -1,26 +1,31 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-08-19T19:01:27-05:00-PM",
-  "generatedAt": "2026-08-19T19:01:27-05:00",
+  "sweepId": "2026-08-20T08:02:22-05:00-AM",
+  "generatedAt": "2026-08-20T08:02:22-05:00",
   "facts": {
     "score": 65,
     "band": "High",
     "scoreDelta": 0,
     "concessionIndex": 20000,
-    "offersLive": 62,
+    "offersLive": 61,
     "buildersLive": 38,
     "expired": 11,
     "rateDaily": 6.72,
     "ratePmmsWeekly": 6.67
   },
   "changes": {
-    "count": 0,
+    "count": 4,
     "newOffers": [],
-    "improved": [],
+    "improved": [
+      "KB Home",
+      "MODUS / The George (condos)",
+      "Megatel Homes",
+      "Giddens Homes"
+    ],
     "reduced": [],
     "deadlinesNext7d": []
   },
-  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
+  "interpretation": "Movement this sweep: 4 improved. Market-wide score unchanged.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
@@ -33,5 +38,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "record-internal"
+  "publishRecommendation": "publish-watchlists"
 }
