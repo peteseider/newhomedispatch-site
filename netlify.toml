@@ -1,4 +1,14 @@
-[functions]
+# Explicit build command so Netlify actually runs npm install for
+# netlify/functions/package.json before bundling the functions. Without
+# this, zip-it-and-ship-it can ship get-incentive-feed.js /
+# ingest-incentive-feed.js (and _lib/blob-store.js, used by the Twilio
+# check-in functions) without @netlify/blobs actually installed, and they
+# crash at cold-start with "Cannot find module '@netlify/blobs'" --
+# confirmed 2026-08-20. See production/netlify-blobs-dependency-bug-2026-08-20.md.
+[build]
+  command = "npm install --prefix netlify/functions"
+  
+  [functions]
   directory = "netlify/functions"
 
 # Runs daily. Netlify scheduled-function cron is UTC — 13:00 UTC is
