@@ -6,9 +6,10 @@
     "2026-08-03",
     "2026-08-18",
     "2026-08-19",
-    "2026-08-20"
+    "2026-08-20",
+    "2026-08-21"
   ],
-  "updated": "2026-08-20",
+  "updated": "2026-08-21",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -391,10 +392,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Sign purchase agreement by 8/31/26",
+      "expires": "Purchase agreement by 8/31/26",
       "source": "https://www.kbhome.com/special-low-rates",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-20",
+      "lastObserved": "2026-08-21",
       "prevValue": null,
       "delta": 5000,
       "history": [
@@ -411,7 +412,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-08-20.",
+      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-08-21.",
       "expired": false,
       "run": "AM"
     },
@@ -716,27 +717,39 @@
       "submarket": "",
       "builder": "Empire Communities",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "upgrades",
-      "advertisedValue": 50000,
+      "incentiveType": "price-cut",
+      "advertisedValue": 72992,
       "transferability": "Low",
       "buyerValueScore": 27500,
-      "lenderTied": true,
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated (limited time)",
+      "expires": "none stated",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-20",
-      "prevValue": null,
-      "delta": null,
+      "lastObserved": "2026-08-21",
+      "prevValue": 39992,
+      "delta": 33000,
       "history": [
         {
           "date": "2026-07-27",
           "value": 50000
+        },
+        {
+          "value": 50000,
+          "asOf": "2026-08-21"
+        },
+        {
+          "value": 40531,
+          "asOf": "2026-08-21"
+        },
+        {
+          "value": 39992,
+          "asOf": "2026-08-21"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-08-20.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-08-21.",
       "expired": false,
       "run": "AM"
     },
@@ -830,7 +843,7 @@
       "expires": "none stated (limited starts)",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-20",
+      "lastObserved": "2026-08-21",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -843,7 +856,7 @@
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-08-20.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-08-21.",
       "expired": false,
       "run": "AM"
     },
@@ -1249,27 +1262,31 @@
       "submarket": "",
       "builder": "Risewell Homes (formerly Landsea)",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Rate buydown (temporary)",
-      "advertisedValue": null,
+      "incentiveType": "temporary-buydown",
+      "advertisedValue": 10000,
       "transferability": null,
       "buyerValueScore": null,
       "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
+      "expires": "none stated",
+      "source": "https://risewellhomes.com/promotions/region/austin",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-21",
       "prevValue": null,
-      "delta": null,
+      "delta": 10000,
       "history": [
         {
           "date": "2026-07-29",
           "value": null
+        },
+        {
+          "value": null,
+          "asOf": "2026-07-29"
         }
       ],
-      "note": "RE-CONFIRMED LIVE 2026-07-29 on corridor retry, RETARGETED from Landsea to Risewell Homes per the v4.2 roster change. Year-1 buydown to 2.99% then FIXED 3.99% years 2-30 -- temporary (year-one) buydown; the 3.99% is the underlying full-term fixed. Plus undisclosed flex cash.",
+      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-08-21.",
       "expired": false,
       "run": "AM"
     },
@@ -1371,22 +1388,27 @@
       "submarket": "",
       "builder": "Wilshire Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Flex cash",
-      "advertisedValue": null,
+      "incentiveType": "unspecified",
+      "advertisedValue": 0,
       "transferability": null,
       "buyerValueScore": null,
       "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-27",
+      "expires": "none stated",
+      "source": "https://www.wilshire-homes.com/austin",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-08-21",
       "prevValue": null,
-      "delta": null,
-      "history": [],
-      "note": "$0 down Hutto Square.",
+      "delta": 0,
+      "history": [
+        {
+          "value": null,
+          "asOf": "2026-07-27"
+        }
+      ],
+      "note": "Source: https://www.wilshire-homes.com/austin (builder-advertised) verified 2026-08-21.",
       "expired": false,
       "run": "AM"
     },
@@ -2056,7 +2078,7 @@
       "expires": "none stated",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-20",
+      "lastObserved": "2026-08-21",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2069,7 +2091,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-08-20.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-08-21.",
       "expired": false,
       "run": "AM"
     },
@@ -2128,19 +2150,19 @@
       "builder": "D.R. Horton",
       "homeType": "Varies (confirm on site)",
       "incentiveType": "temporary-buydown",
-      "advertisedValue": 6518,
+      "advertisedValue": 6497,
       "transferability": "Unknown",
       "buyerValueScore": 25000,
       "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "contract on/after 06/30/26; close by 08/31/26",
+      "expires": "Contract on/after 07/10/26, close on/before 09/30/26",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-03",
-      "prevValue": 25000,
-      "delta": -18482,
+      "lastObserved": "2026-08-21",
+      "prevValue": 6518,
+      "delta": -21,
       "history": [
         {
           "date": "2026-07-29",
@@ -2149,9 +2171,13 @@
         {
           "value": 25000,
           "asOf": "2026-08-03"
+        },
+        {
+          "value": 6518,
+          "asOf": "2026-08-03"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-08-03.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-08-21.",
       "expired": false,
       "run": "AM"
     },
@@ -2168,14 +2194,14 @@
       "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": null,
-      "lenderTied": false,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "limited time",
+      "expires": "none stated",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-20",
+      "lastObserved": "2026-08-21",
       "prevValue": null,
       "delta": 40000,
       "history": [
@@ -2188,7 +2214,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-08-20.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-08-21.",
       "expired": false,
       "run": "AM"
     },
@@ -2261,13 +2287,25 @@
   ],
   "promos": [
     {
+      "id": "kb-home-599",
+      "builder": "KB Home",
+      "community": null,
+      "promo": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional. $5,000 seller contribution factored into advertised APRs.",
+      "expires": "Purchase agreement by 8/31/26",
+      "lastObserved": "2026-08-21",
+      "firstObserved": "2026-08-06 (per prior-run notes)",
+      "confidence": "unverified",
+      "source": "Builder-reported",
+      "note": "One of three tiered loan-program options on the same page (4.75% 5/1 ARM FHA, 5.75% Fixed FHA, 5.99% Fixed Conventional); the 5.99% conventional tier is the one classified as full-term fixed."
+    },
+    {
       "id": "century-communities-3875",
       "builder": "Century Communities",
       "community": null,
-      "promo": "Say WOW to a 3.875% (4.855% APR) 30-year fixed-rate loan, when financing with affiliate lender Inspire Home Loans.",
+      "promo": "Say WOW to a 3.875% (4.855% APR) 30-year fixed-rate loan via affiliate lender Inspire Home Loans.",
       "expires": "none stated",
-      "lastObserved": "2026-08-20",
-      "firstObserved": "unknown (recurring 15+ consecutive runs; not tracked with an exact origin date)",
+      "lastObserved": "2026-08-21",
+      "firstObserved": "unknown (recurring 16+ consecutive runs)",
       "confidence": "unverified",
       "source": "Builder-reported",
       "note": "No step-up/buydown language found; footnote fine print still unreadable via fetch. Ambiguity not resolved, HELD per multi-run precedent."
@@ -2276,37 +2314,25 @@
       "id": "risewell-homes-399",
       "builder": "Risewell Homes",
       "community": null,
-      "promo": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate on select neighborhoods and homes.",
+      "promo": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate PLUS up to $10,000 towards closing costs on select neighborhoods and homes.",
       "expires": "none stated",
-      "lastObserved": "2026-08-20",
-      "firstObserved": "unknown (12th consecutive run as of this run; not tracked with an exact origin date)",
+      "lastObserved": "2026-08-21",
+      "firstObserved": "unknown (13th consecutive run)",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "Same page also discloses an explicit, structurally-separate 1/0 step-up buydown at the identical 3.99% headline number -- real risk of reader conflation. Footnote unreadable; permanence not resolved."
+      "note": "Same page also discloses a structurally-separate 1/0 step-up buydown at the identical 3.99% headline number -- real risk of reader conflation. Footnote unreadable; permanence not resolved. This run's fetch also surfaced a $10,000 closing-cost add-on not previously captured on this headline offer."
     },
     {
       "id": "stylecraft-homes-499",
       "builder": "Stylecraft Homes",
       "community": "select Central Texas communities",
-      "promo": "Rates as low as 4.99% (5.691% APR), 30-year fixed FHA, via Kangaroo Home Lending.",
+      "promo": "Rates as low as 4.99% (5.691% APR), 30-year fixed FHA via Kangaroo Home Lending.",
       "expires": "Contracts closed by October 9, 2026",
-      "lastObserved": "2026-08-20",
+      "lastObserved": "2026-08-21",
       "firstObserved": "2026-07-30 (per prior-run notes)",
       "confidence": "unverified",
       "source": "Builder-reported",
       "note": "Footnote on step-up not independently re-confirmed this run; classification unchanged from prior weeks."
-    },
-    {
-      "id": "kb-home-599",
-      "builder": "KB Home",
-      "community": null,
-      "promo": "Rate as low as 5.99% (6.002% APR) Conventional 30-Year Fixed via KBHS Home Loans, LLC, plus $5,000 seller contribution.",
-      "expires": "Sign purchase agreement by 8/31/26",
-      "lastObserved": "2026-08-20",
-      "firstObserved": "2026-08-06 (per prior-run notes)",
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "One of three tiered loan-program options on the same page (4.75% 5/1 ARM FHA, 5.75% Fixed FHA, 5.99% Fixed Conventional); the 5.99% conventional tier is the one classified as full-term fixed."
     }
   ]
 }
