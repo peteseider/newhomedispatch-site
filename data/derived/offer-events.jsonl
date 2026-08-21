@@ -370,3 +370,14 @@
 {"t":"2026-08-20T13:02:52.087Z","runKey":"2026-08-20-AM","type":"lender_tie_changed","id":"inc245","builder":"megatel-homes","community":"","to":"unknown"}
 {"t":"2026-08-20T17:03:55.639Z","runKey":"2026-08-20-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
 {"t":"2026-08-20T17:03:55.639Z","runKey":"2026-08-20-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"value_changed","id":"inc219","builder":"empire-communities","community":"","from":50000,"to":72992}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"lender_tie_changed","id":"inc219","builder":"empire-communities","community":"","to":false}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"value_changed","id":"inc236","builder":"risewell-homes","community":"","from":null,"to":10000}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"deadline_set","id":"inc236","builder":"risewell-homes","community":"","expires":"none stated"}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"value_changed","id":"inc240","builder":"wilshire-homes","community":"","from":null,"to":0}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"deadline_set","id":"inc240","builder":"wilshire-homes","community":"","expires":"none stated"}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"value_changed","id":"inc246","builder":"dr-horton","community":"","from":6518,"to":6497}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"deadline_extended","id":"inc247","builder":"giddens-homes","community":"","from":"limited time","to":"none stated"}
+{"t":"2026-08-21T13:02:38.130Z","runKey":"2026-08-21-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":"unknown"}

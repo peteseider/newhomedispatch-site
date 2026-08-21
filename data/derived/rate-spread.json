@@ -1,8 +1,8 @@
 {
   "schema": "nhd-rate-spread-v1",
   "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
-  "lastUpdated": "2026-08-21T00:02:13.458Z",
-  "runKey": "2026-08-20-PM",
+  "lastUpdated": "2026-08-21T13:02:38.130Z",
+  "runKey": "2026-08-21-AM",
   "pmms": {
     "week": "8/20/2026",
     "rate30": 6.65
@@ -63,13 +63,6 @@
       "community": "",
       "advertisedRate": 3.25,
       "spreadBps": -340
-    },
-    {
-      "id": "inc236",
-      "builder": "risewell-homes",
-      "community": "",
-      "advertisedRate": 2.99,
-      "spreadBps": -366
     },
     {
       "id": "inc238",

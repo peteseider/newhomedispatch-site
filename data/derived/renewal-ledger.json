@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-08-21T00:02:13.458Z",
-  "runKey": "2026-08-20-PM",
-  "observationRuns": 69,
+  "lastUpdated": "2026-08-21T13:02:38.130Z",
+  "runKey": "2026-08-21-AM",
+  "observationRuns": 70,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc220",
@@ -25,7 +25,7 @@
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 2,
       "deadlinesSet": 0,
-      "offersTracked": 10
+      "offersTracked": 11
     },
     "lennar": {
       "deadlineExtensions": 0,
@@ -131,7 +131,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 50,
+      "expiredButDisplayedObservations": 51,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -149,7 +149,7 @@
     },
     "terrata-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 34,
+      "expiredButDisplayedObservations": 35,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
@@ -168,7 +168,7 @@
     "wilshire-homes": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
-      "deadlinesSet": 0,
+      "deadlinesSet": 1,
       "offersTracked": 3
     },
     "blackburn-homes": {
@@ -280,7 +280,7 @@
       "offersTracked": 2
     },
     "giddens-homes": {
-      "deadlineExtensions": 0,
+      "deadlineExtensions": 1,
       "expiredButDisplayedObservations": 29,
       "deadlinesSet": 0,
       "offersTracked": 1
@@ -289,6 +289,12 @@
       "deadlineExtensions": 1,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "risewell-homes": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 1,
       "offersTracked": 1
     }
   },
