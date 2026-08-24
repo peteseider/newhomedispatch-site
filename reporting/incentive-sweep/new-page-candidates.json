@@ -1486,5 +1486,85 @@
     "advertisedValue": 10000,
     "firstFlagged": "2026-08-21",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": "50th Anniversary tier A (select communities)",
+    "advertisedValue": 50000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": "50th Anniversary tier B (other communities)",
+    "advertisedValue": 70000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "pacesetter-homes",
+    "builder": "Pacesetter Homes",
+    "community": null,
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Lariat (Capitol Collection)",
+    "advertisedValue": 35000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Park Central (Union Collection)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Infinity Square (Premier)",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Briarwood (Premier)",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Briarwood (Enclave)",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Heritage Mill",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Oaks at San Gabriel (Premier)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-24",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
