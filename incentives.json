@@ -8,9 +8,10 @@
     "2026-08-19",
     "2026-08-20",
     "2026-08-21",
-    "2026-08-24"
+    "2026-08-24",
+    "2026-08-25"
   ],
-  "updated": "2026-08-24",
+  "updated": "2026-08-25",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -385,7 +386,7 @@
       "submarket": "",
       "builder": "KB Home",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "rate-special",
+      "incentiveType": "permanent-buydown",
       "advertisedValue": 5000,
       "transferability": null,
       "buyerValueScore": null,
@@ -393,10 +394,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Purchase agreements must be signed by 8/31/26",
+      "expires": "Purchase agreement must be signed by 8/31/26",
       "source": "https://www.kbhome.com/special-low-rates",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-24",
+      "lastObserved": "2026-08-25",
       "prevValue": null,
       "delta": 5000,
       "history": [
@@ -413,7 +414,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-08-24.",
+      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-08-25.",
       "expired": false,
       "run": "AM"
     },
@@ -719,7 +720,7 @@
       "builder": "Empire Communities",
       "homeType": "Varies (confirm on site)",
       "incentiveType": "price-cut",
-      "advertisedValue": 39992,
+      "advertisedValue": 69000,
       "transferability": "Low",
       "buyerValueScore": 27500,
       "lenderTied": "unknown",
@@ -729,9 +730,9 @@
       "expires": "none stated",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-24",
-      "prevValue": 40531,
-      "delta": -539,
+      "lastObserved": "2026-08-25",
+      "prevValue": 50000,
+      "delta": 19000,
       "history": [
         {
           "date": "2026-07-27",
@@ -764,9 +765,17 @@
         {
           "value": 40531,
           "asOf": "2026-08-24"
+        },
+        {
+          "value": 39992,
+          "asOf": "2026-08-24"
+        },
+        {
+          "value": 50000,
+          "asOf": "2026-08-25"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-08-24.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-08-25.",
       "expired": false,
       "run": "AM"
     },
@@ -860,7 +869,7 @@
       "expires": "none stated (limited number of new home starts)",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-24",
+      "lastObserved": "2026-08-25",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -873,7 +882,7 @@
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-08-24.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-08-25.",
       "expired": false,
       "run": "AM"
     },
@@ -886,8 +895,8 @@
       "submarket": "",
       "builder": "Blackburn Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "price-cut",
-      "advertisedValue": 77732,
+      "incentiveType": "credit-flex",
+      "advertisedValue": 20000,
       "transferability": "Medium",
       "buyerValueScore": 16000,
       "lenderTied": "unknown",
@@ -897,9 +906,9 @@
       "expires": "none stated",
       "source": "https://blackburnhomes.com/available-homes/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-24",
-      "prevValue": 71351,
-      "delta": 6381,
+      "lastObserved": "2026-08-25",
+      "prevValue": 77732,
+      "delta": -57732,
       "history": [
         {
           "date": "2026-07-27",
@@ -928,9 +937,13 @@
         {
           "value": 71351,
           "asOf": "2026-08-24"
+        },
+        {
+          "value": 77732,
+          "asOf": "2026-08-24"
         }
       ],
-      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-08-24.",
+      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-08-25.",
       "expired": false,
       "run": "AM"
     },
@@ -1314,7 +1327,7 @@
       "expires": "none stated",
       "source": "https://risewellhomes.com/promotions/region/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-24",
+      "lastObserved": "2026-08-25",
       "prevValue": null,
       "delta": 10000,
       "history": [
@@ -1327,7 +1340,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-08-24.",
+      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-08-25.",
       "expired": false,
       "run": "AM"
     },
@@ -2116,10 +2129,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "4.99% (structure not specified) -- alternative to the flex cash",
-      "expires": "none stated",
+      "expires": "August (limited time)",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-24",
+      "lastObserved": "2026-08-25",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2132,7 +2145,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-08-24.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-08-25.",
       "expired": false,
       "run": "AM"
     },
@@ -2198,10 +2211,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Must contract on or after 07/10/26; close on or before 09/30/26",
+      "expires": "Contract on or after 07/10/26; close on or before 09/30/2026",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-24",
+      "lastObserved": "2026-08-25",
       "prevValue": 6518,
       "delta": -21,
       "history": [
@@ -2218,7 +2231,7 @@
           "asOf": "2026-08-03"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-08-24.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-08-25.",
       "expired": false,
       "run": "AM"
     },
@@ -2235,14 +2248,14 @@
       "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": null,
-      "lenderTied": false,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Limited time (no specific date stated)",
+      "expires": "FOR A LIMITED TIME",
       "source": "https://giddenshomes.com/blog/2026/07/22/build-more-save-more-limited-time-incentives-on-to-be-built-homes-by-giddens-homes/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-24",
+      "lastObserved": "2026-08-25",
       "prevValue": null,
       "delta": 40000,
       "history": [
@@ -2255,7 +2268,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://giddenshomes.com/blog/2026/07/22/build-more-save-more-limited-time-incentives-on-to-be-built-homes-by-giddens-homes/ (builder-advertised) verified 2026-08-24.",
+      "note": "Source: https://giddenshomes.com/blog/2026/07/22/build-more-save-more-limited-time-incentives-on-to-be-built-homes-by-giddens-homes/ (builder-advertised) verified 2026-08-25.",
       "expired": false,
       "run": "AM"
     },
@@ -2333,11 +2346,11 @@
       "community": null,
       "promo": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional. $5,000 seller contribution factored into advertised APRs.",
       "expires": "Purchase agreement by 8/31/26",
-      "lastObserved": "2026-08-24",
+      "lastObserved": "2026-08-25",
       "firstObserved": "2026-08-06 (per prior-run notes)",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "One of three tiered loan-program options on the same page. The 5.99% conventional tier is the one classified as full-term fixed. Unchanged 17th+ consecutive run."
+      "note": "One of three tiered loan-program options on the same page. Only the 5.99% conventional tier is full-term fixed. Unchanged 18th+ consecutive run."
     },
     {
       "id": "risewell-homes-399",
@@ -2345,8 +2358,8 @@
       "community": null,
       "promo": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate PLUS up to $10,000 towards closing costs on select neighborhoods and homes.",
       "expires": "none stated",
-      "lastObserved": "2026-08-24",
-      "firstObserved": "unknown (16th consecutive run)",
+      "lastObserved": "2026-08-25",
+      "firstObserved": "unknown (17th consecutive run)",
       "confidence": "unverified",
       "source": "Builder-reported",
       "note": "Same page also discloses a structurally-separate 1/0 step-up buydown at the identical 3.99% headline number -- real risk of reader conflation. Footnote on permanence still not independently re-confirmed."
@@ -2357,8 +2370,8 @@
       "community": "select Central Texas communities",
       "promo": "Rates as low as 4.99% (5.691% APR), 30-year fixed FHA via Kangaroo Home Lending.",
       "expires": "Contracts closed by October 9, 2026",
-      "lastObserved": "2026-08-24",
-      "firstObserved": "2026-07-30 (per prior-run notes)",
+      "lastObserved": "2026-08-25",
+      "firstObserved": "2026-07-30",
       "confidence": "unverified",
       "source": "Builder-reported",
       "note": "Footnote continues to confirm full 30-year fixed-rate FHA term, not a temporary buydown or ARM. Unchanged."

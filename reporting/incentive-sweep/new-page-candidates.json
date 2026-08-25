@@ -1566,5 +1566,69 @@
     "advertisedValue": 20000,
     "firstFlagged": "2026-08-24",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": null,
+    "advertisedValue": 70000,
+    "firstFlagged": "2026-08-25",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": null,
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-08-25",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "The Capitol Collection at Lariat",
+    "advertisedValue": 35000,
+    "firstFlagged": "2026-08-25",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Flora, Lariat, Wolf Ranch, Heritage, Lagos",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-08-25",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Turner's Crossing area",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-08-25",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Park Central - The Union Collection",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-08-25",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Wolf Ranch, Heritage, Lagos",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-08-25",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Edgewood (Grand Opening)",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-08-25",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
