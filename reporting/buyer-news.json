@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24",
+  "updated": "2026-08-25",
   "sectionTitle": "What changed beyond the sales office",
   "primary": {
     "headline": "Buyers leaning toward new construction in Texas housing market",
@@ -13,8 +13,8 @@
     "buyerImplication": "New construction is currently underpricing the broader resale market in Austin Metro by roughly $24,000 at the median, and builder rate buydowns are widening that effective gap further -- a structural condition, not a one-off promotion, that buyers should factor into a new-vs-resale comparison right now.",
     "buyerAction": "Buyers cross-shopping new vs. resale should compare total cost (price minus incentive value, including the buydown's true cost if it's temporary) rather than list price alone, and ask each builder whether an advertised first-year rate is permanent or reverts after year one.",
     "localityScore": 18, "buyerImpactScore": 24, "newConstructionScore": 20, "recencyScore": 0, "sourceQualityScore": 8, "totalScore": 70,
-    "confidence": "High confidence -- Spectrum News 1 reporting; re-verified 2026-08-24, the 11th consecutive daily hold after a full fresh search pass found no fresher qualifying story. Score now sits exactly at the 70-point publish floor with zero margin. Pete flagged for a decision: widen sourcing to paywalled/non-indexed local outlets, or commission original NHD reporting (the Megatel Homes / MegPrime Pay crypto-payment finding remains the strongest candidate, still unclaimed by any other outlet).",
-    "reviewedAt": "2026-08-24",
+    "confidence": "High confidence -- Spectrum News 1 reporting; re-verified 2026-08-25, the 12th consecutive daily hold after a full fresh search pass found no fresher qualifying story. Score sits exactly at the 70-point publish floor. Pete flagged for a decision: widen sourcing to paywalled/non-indexed local outlets, or commission original NHD reporting (the Megatel Homes / MegPrime Pay crypto-payment finding remains the strongest candidate).",
+    "reviewedAt": "2026-08-25",
     "status": "approved"
   },
   "secondary": []
