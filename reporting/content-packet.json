@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-08-25T06:49:58-05:00-AM",
-  "generatedAt": "2026-08-25T06:49:58-05:00",
+  "sweepId": "2026-08-25T09:57:30-05:00-AM",
+  "generatedAt": "2026-08-25T09:57:30-05:00",
   "facts": {
     "score": 65,
     "band": "High",
@@ -14,10 +14,19 @@
     "ratePmmsWeekly": 6.65
   },
   "changes": {
-    "count": 0,
+    "count": 7,
     "newOffers": [],
-    "improved": [],
-    "reduced": [],
+    "improved": [
+      "KB Home",
+      "Empire Communities",
+      "Risewell Homes (formerly Landsea)",
+      "MODUS / The George (condos)",
+      "Giddens Homes"
+    ],
+    "reduced": [
+      "Blackburn Homes",
+      "D.R. Horton"
+    ],
     "deadlinesNext7d": [
       {
         "builder": "D.R. Horton",
@@ -27,7 +36,7 @@
       {
         "builder": "KB Home",
         "deadline": "2026-08-31",
-        "offer": "rate-special $5000"
+        "offer": "permanent-buydown $5000"
       },
       {
         "builder": "Perry Homes",
@@ -41,7 +50,7 @@
       }
     ]
   },
-  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
+  "interpretation": "Movement this sweep: 5 improved, 2 reduced. Market-wide score unchanged.",
   "buyerAction": "Nearest advertised deadline: D.R. Horton (2026-08-31). If that builder is on your list, get the current terms in writing today.",
   "affectedSegments": [
     "buyers considering: D.R. Horton, KB Home, Perry Homes",
@@ -55,5 +64,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "record-internal"
+  "publishRecommendation": "publish-watchlists"
 }
