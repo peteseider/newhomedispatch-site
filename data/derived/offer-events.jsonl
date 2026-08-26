@@ -399,3 +399,11 @@
 {"t":"2026-08-25T11:50:14.180Z","runKey":"2026-08-25-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-08-25T19:56:19.593Z","runKey":"2026-08-25-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
 {"t":"2026-08-25T19:56:19.593Z","runKey":"2026-08-25-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-08-26T11:52:23.110Z","runKey":"2026-08-26-AM","type":"value_changed","id":"inc219","builder":"empire-communities","community":"","from":69000,"to":40531}
+{"t":"2026-08-26T11:52:23.110Z","runKey":"2026-08-26-AM","type":"lender_tie_changed","id":"inc219","builder":"empire-communities","community":"","to":false}
+{"t":"2026-08-26T11:52:23.110Z","runKey":"2026-08-26-AM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-08-26T11:52:23.110Z","runKey":"2026-08-26-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-08-26T11:52:23.110Z","runKey":"2026-08-26-AM","type":"deadline_extended","id":"inc244","builder":"modus-the-george","community":"","from":"August (limited time)","to":"August promotion, \"limited time\" (no specific end date)"}
+{"t":"2026-08-26T11:52:23.110Z","runKey":"2026-08-26-AM","type":"value_changed","id":"inc245","builder":"megatel-homes","community":"","from":1500,"to":12000}
+{"t":"2026-08-26T11:52:23.110Z","runKey":"2026-08-26-AM","type":"lender_tie_changed","id":"inc245","builder":"megatel-homes","community":"","to":true}
+{"t":"2026-08-26T11:52:23.110Z","runKey":"2026-08-26-AM","type":"deadline_extended","id":"inc247","builder":"giddens-homes","community":"","from":"FOR A LIMITED TIME","to":"none stated"}
