@@ -1630,5 +1630,61 @@
     "advertisedValue": 40000,
     "firstFlagged": "2026-08-25",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Holly (Corral Cv), Sycamore (Brooks Ranch and other Kyle plans), Juniper II (Lasso Cv)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-26",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Iris, Jasmine, Poppy, Bluebonnet, Rose (spec homes, Blue Oasis Ln and other Georgetown/Leander sites)",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-08-26",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": "Other Austin-area communities (South Brook excluded)",
+    "advertisedValue": 70000,
+    "firstFlagged": "2026-08-26",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Multiple (Hawkes Landing – Leander; Infinity Square – Kyle; Briarwood – Elgin; and others)",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-08-26",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "pacesetter-homes",
+    "builder": "Pacesetter Homes",
+    "community": "Austin Division communities (excludes Center 45)",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-08-26",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "perry-homes",
+    "builder": "Perry Homes",
+    "community": "Select Austin-area inventory homes",
+    "advertisedValue": 50000,
+    "firstFlagged": "2026-08-26",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "stylecraft-homes",
+    "builder": "Stylecraft Homes",
+    "community": "Qualifying homes",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-26",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
