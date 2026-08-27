@@ -1,8 +1,8 @@
 {
   "schema": "nhd-sweep-latest-v1",
-  "ranAt": "2026-08-26T23:36:27-05:00",
-  "ranAtLabel": "Aug 26, 2026 · 11:36 PM CT",
-  "slot": "PM",
+  "ranAt": "2026-08-27T06:56:01-05:00",
+  "ranAtLabel": "Aug 27, 2026 · 06:56 AM CT",
+  "slot": "AM",
   "index": 20000,
   "offers": 68,
   "builders": 43,
