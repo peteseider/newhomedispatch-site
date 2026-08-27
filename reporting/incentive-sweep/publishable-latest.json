@@ -1,13 +1,13 @@
 {
  "schema": "nhd-publishable-incentives-v2",
- "asOf": "2026-08-26",
+ "asOf": "2026-08-27",
  "run": "AM",
  "benchmarkRate": {
   "value": 6.65,
   "type": "30-yr fixed",
   "source": "Freddie Mac PMMS (Primary Mortgage Market Survey)",
   "asOf": "2026-08-20",
-  "note": "HELD unchanged since 08-20 print (6.65%). Next PMMS release is 2026-08-27 (tomorrow). Optimal Blue OBMMI live dashboard remains JS-rendered/unreachable via fetch; PMMS remains the verified fallback."
+  "note": "HELD unchanged since 08-20 print (6.65%), 7th consecutive hold. Today (2026-08-27, Thursday) is PMMS's usual weekly release day; the fresh print had not posted yet at the time of this AM sweep (checked ~6:20am Central) -- next PM run should re-check for an updated value. Optimal Blue OBMMI live dashboard remains JS-rendered/unreachable via fetch; PMMS remains the verified fallback."
  },
  "disclaimer": "Advertised, builder-confirmed, verified live on the builder's own site TODAY; not field-verified; expired offers and unconfirmed leads excluded.",
  "incentives": [
@@ -19,14 +19,31 @@
    "offerText": "3.25%* Flexible Rate + $12K in Closing Costs!**",
    "incentiveType": "closing-costs",
    "advertisedValue": 12000,
-   "rate": "3.25% \"Flexible Rate\" — term/permanence not stated, do not classify as permanent buydown",
+   "rate": null,
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.ashtonwoods.com/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Seguin is outside Austin metro proper but within Central Texas coverage area."
+   "notes": "Closing-cost component of combined offer."
+  },
+  {
+   "builderSlug": "ashton-woods",
+   "builder": "Ashton Woods",
+   "city": "New Braunfels",
+   "community": "Waldsanger",
+   "offerText": "1/2 Off Options up to $100K + up to $15K in Closing Costs*",
+   "incentiveType": "upgrades",
+   "advertisedValue": 100000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.ashtonwoods.com/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "Options-discount ceiling."
   },
   {
    "builderSlug": "ashton-woods",
@@ -41,15 +58,15 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.ashtonwoods.com/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Also includes design-center options discount valued up to $100K. New Braunfels is outside Austin metro proper but within Central Texas coverage area."
+   "notes": "Closing-cost component."
   },
   {
    "builderSlug": "blackburn-homes",
    "builder": "Blackburn Homes",
    "city": "Kyle",
-   "community": "Holly (Corral Cv), Sycamore (Brooks Ranch and other Kyle plans), Juniper II (Lasso Cv)",
+   "community": "Kyle (Holly, Sycamore models)",
    "offerText": "20k in Flex Cash!!",
    "incentiveType": "credit-flex",
    "advertisedValue": 20000,
@@ -58,16 +75,16 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://blackburnhomes.com/available-homes/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "No lender named for Flex Cash; usage restrictions not specified on this page."
+   "notes": "No lender named."
   },
   {
    "builderSlug": "blackburn-homes",
    "builder": "Blackburn Homes",
-   "city": "Leander / Georgetown",
-   "community": "Iris, Jasmine, Poppy, Bluebonnet, Rose (spec homes, Blue Oasis Ln and other Georgetown/Leander sites)",
-   "offerText": "Strikethrough price reductions on spec inventory, e.g.: Iris $401,495 → $329,950; Jasmine $437,682 → $359,950; Poppy $411,301 → $339,950",
+   "city": "Leander",
+   "community": "Blue Oasis (Leander)",
+   "offerText": "Iris $401,495->$329,950; Jasmine $437,682->$359,950; Poppy $411,301->$339,950",
    "incentiveType": "price-cut",
    "advertisedValue": 77732,
    "rate": null,
@@ -75,16 +92,33 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://blackburnhomes.com/available-homes/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "advertisedValue reflects the largest single-unit reduction observed (Jasmine, $77,732); reductions across listed units ranged roughly $71K-$78K. No Heroes discount, rate buydown, or closing-cost credit found on this page."
+   "notes": "advertisedValue reflects largest single-unit reduction (Jasmine)."
+  },
+  {
+   "builderSlug": "blackburn-homes",
+   "builder": "Blackburn Homes",
+   "city": "Georgetown",
+   "community": "Georgetown (Bluebonnet, Poppy, Rose models)",
+   "offerText": "Reduced Pricing! Poppy 5900 Whisper Crk Dr Unit 224: $424,950->$349,950",
+   "incentiveType": "price-cut",
+   "advertisedValue": 75000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://blackburnhomes.com/available-homes/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "Priced example; additional units tagged 'Reduced Pricing!' with no figure."
   },
   {
    "builderSlug": "brookfield-residential",
    "builder": "Brookfield Residential",
    "city": "Austin",
    "community": "Easton Park",
-   "offerText": "Community Champions Program: FREE appliance and blinds package with new home purchase, a $4,600 value (Veterans, active military, first responders, nurses, and teachers)",
+   "offerText": "Community Champions Program: free appliance+blinds package, $4,600 value (veterans/military/first responders/nurses/teachers)",
    "incentiveType": "upgrades",
    "advertisedValue": 4600,
    "rate": null,
@@ -92,9 +126,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://austin.brookfieldresidential.com/easton-park-savings",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Heroes-style discount targeting veterans/military/first responders/nurses/teachers."
+   "notes": "Heroes-style discount."
   },
   {
    "builderSlug": "coventry-homes",
@@ -109,9 +143,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -126,9 +160,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -143,9 +177,26 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
+  },
+  {
+   "builderSlug": "coventry-homes",
+   "builder": "Coventry Homes",
+   "city": "Georgetown",
+   "community": "Parkside on the River 70'",
+   "offerText": "QMI $919,900, Savings $13K",
+   "incentiveType": "price-cut",
+   "advertisedValue": 13000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -160,9 +211,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -177,9 +228,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -194,9 +245,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -211,9 +262,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -228,9 +279,26 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
+  },
+  {
+   "builderSlug": "coventry-homes",
+   "builder": "Coventry Homes",
+   "city": "Liberty Hill",
+   "community": "Lariat 60'",
+   "offerText": "QMI $679,900, Savings $15K",
+   "incentiveType": "price-cut",
+   "advertisedValue": 15000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -245,9 +313,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -262,9 +330,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -279,9 +347,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -296,9 +364,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -313,9 +381,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -330,9 +398,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -347,9 +415,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -364,9 +432,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -381,9 +449,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -398,9 +466,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -415,9 +483,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -432,9 +500,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -449,9 +517,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -466,9 +534,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -483,9 +551,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -500,9 +568,26 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
+  },
+  {
+   "builderSlug": "coventry-homes",
+   "builder": "Coventry Homes",
+   "city": "Georgetown",
+   "community": "Parkside on the River 60'",
+   "offerText": "QMI $789,900, Savings $32K",
+   "incentiveType": "price-cut",
+   "advertisedValue": 32000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -517,9 +602,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -534,9 +619,26 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
+  },
+  {
+   "builderSlug": "coventry-homes",
+   "builder": "Coventry Homes",
+   "city": "Elgin",
+   "community": "Briarwood 45'",
+   "offerText": "QMI $294,900, Savings $3K",
+   "incentiveType": "price-cut",
+   "advertisedValue": 3000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -551,9 +653,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -568,9 +670,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -585,9 +687,26 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
+  },
+  {
+   "builderSlug": "coventry-homes",
+   "builder": "Coventry Homes",
+   "city": "Georgetown",
+   "community": "Parmer Ranch 50'",
+   "offerText": "QMI $399,990, Savings $62K",
+   "incentiveType": "price-cut",
+   "advertisedValue": 62000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -602,9 +721,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -619,9 +738,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -636,9 +755,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -653,9 +772,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -670,9 +789,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -687,9 +806,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -704,9 +823,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI, corridor"
   },
   {
    "builderSlug": "coventry-homes",
@@ -721,9 +840,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -738,9 +857,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -755,9 +874,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -772,9 +891,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -789,77 +908,26 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
    "builder": "Coventry Homes",
-   "city": "Kyle",
-   "community": "6 Creeks 70'",
-   "offerText": "QMI $629,900, Savings $85K",
+   "city": "Taylor",
+   "community": "Castlewood Paired Cottages",
+   "offerText": "QMI $254,900, Savings $500",
    "incentiveType": "price-cut",
-   "advertisedValue": 85000,
+   "advertisedValue": 500,
    "rate": null,
    "deadline": "none stated",
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
-  },
-  {
-   "builderSlug": "coventry-homes",
-   "builder": "Coventry Homes",
-   "city": "Kyle",
-   "community": "6 Creeks 70'",
-   "offerText": "QMI $599,900, Savings $88K",
-   "incentiveType": "price-cut",
-   "advertisedValue": 88000,
-   "rate": null,
-   "deadline": "none stated",
-   "expired": false,
-   "lenderTied": false,
-   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
-   "confidence": "builder-advertised",
-   "notes": "QMI listing."
-  },
-  {
-   "builderSlug": "coventry-homes",
-   "builder": "Coventry Homes",
-   "city": "Kyle",
-   "community": "6 Creeks 70'",
-   "offerText": "QMI $639,900, Savings $88K",
-   "incentiveType": "price-cut",
-   "advertisedValue": 88000,
-   "rate": null,
-   "deadline": "none stated",
-   "expired": false,
-   "lenderTied": false,
-   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
-   "confidence": "builder-advertised",
-   "notes": "QMI listing."
-  },
-  {
-   "builderSlug": "coventry-homes",
-   "builder": "Coventry Homes",
-   "city": "Georgetown",
-   "community": "Wolf Ranch West Bend 51'",
-   "offerText": "QMI $549,900, Savings $58K",
-   "incentiveType": "price-cut",
-   "advertisedValue": 58000,
-   "rate": null,
-   "deadline": "none stated",
-   "expired": false,
-   "lenderTied": false,
-   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
-   "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -874,9 +942,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -891,9 +959,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -908,9 +976,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -925,9 +993,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
   },
   {
    "builderSlug": "coventry-homes",
@@ -942,16 +1010,84 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "QMI listing."
+   "notes": "QMI"
+  },
+  {
+   "builderSlug": "coventry-homes",
+   "builder": "Coventry Homes",
+   "city": "Kyle",
+   "community": "6 Creeks 70'",
+   "offerText": "QMI $629,900, Savings $85K",
+   "incentiveType": "price-cut",
+   "advertisedValue": 85000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "QMI, corridor"
+  },
+  {
+   "builderSlug": "coventry-homes",
+   "builder": "Coventry Homes",
+   "city": "Kyle",
+   "community": "6 Creeks 70'",
+   "offerText": "QMI $599,900, Savings $88K",
+   "incentiveType": "price-cut",
+   "advertisedValue": 88000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "QMI, corridor"
+  },
+  {
+   "builderSlug": "coventry-homes",
+   "builder": "Coventry Homes",
+   "city": "Kyle",
+   "community": "6 Creeks 70'",
+   "offerText": "QMI $639,900, Savings $88K",
+   "incentiveType": "price-cut",
+   "advertisedValue": 88000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "QMI, corridor"
+  },
+  {
+   "builderSlug": "coventry-homes",
+   "builder": "Coventry Homes",
+   "city": "Georgetown",
+   "community": "Wolf Ranch West Bend 51'",
+   "offerText": "QMI $549,900, Savings $58K",
+   "incentiveType": "price-cut",
+   "advertisedValue": 58000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "QMI"
   },
   {
    "builderSlug": "david-weekley-homes",
    "builder": "David Weekley Homes",
    "city": "Austin",
-   "community": "The Colony, Easton Park - Nelson Village, Double Creek Crossing Townhomes, Flora",
-   "offerText": "Flex Dollars: 6% of base price up to $50,000 toward Design Center selections or closing costs, with Priority Home Mortgage. Promotion period Aug 1-31, 2026.",
+   "community": "The Colony, Easton Park-Nelson Village, Double Creek Crossing Townhomes, Flora",
+   "offerText": "Flex Dollars: up to $50,000 toward Design Center or closing costs via Priority Home Mortgage",
    "incentiveType": "credit-flex",
    "advertisedValue": 50000,
    "rate": null,
@@ -959,16 +1095,16 @@
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.davidweekleyhomes.com/promo/50th-anniversary-austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Applies only when financing through Priority Home Mortgage."
+   "notes": "50th Anniversary promo."
   },
   {
    "builderSlug": "david-weekley-homes",
    "builder": "David Weekley Homes",
    "city": "Austin",
-   "community": "Other Austin-area communities (South Brook excluded)",
-   "offerText": "Flex Dollars: 8% of base price up to $70,000 toward Design Center selections or closing costs, with Priority Home Mortgage. Promotion period Aug 1-31, 2026.",
+   "community": "Other Austin communities (excl. South Brook)",
+   "offerText": "Flex Dollars: up to $70,000 toward Design Center or closing costs via Priority Home Mortgage",
    "incentiveType": "credit-flex",
    "advertisedValue": 70000,
    "rate": null,
@@ -976,16 +1112,16 @@
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.davidweekleyhomes.com/promo/50th-anniversary-austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "South Brook excluded from this tier."
+   "notes": "Higher tier for other Austin communities."
   },
   {
    "builderSlug": "del-webb",
    "builder": "Del Webb",
    "city": "Georgetown",
    "community": "Sun City Texas",
-   "offerText": "Hometown Heroes Incentive: $2,000 incentive when you purchase a new Del Webb home",
+   "offerText": "Hometown Heroes: $2,000 incentive",
    "incentiveType": "credit-flex",
    "advertisedValue": 2000,
    "rate": null,
@@ -993,33 +1129,16 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.delwebb.com/homes/texas/austin/georgetown/sun-city-texas-16369",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "No deadline or lender restriction stated."
+   "notes": "Heroes discount."
   },
   {
    "builderSlug": "del-webb",
    "builder": "Del Webb",
    "city": "Georgetown",
    "community": "Sun City Texas",
-   "offerText": "QMI $513,430 (was $548,430)",
-   "incentiveType": "price-cut",
-   "advertisedValue": 35000,
-   "rate": null,
-   "deadline": "none stated",
-   "expired": false,
-   "lenderTied": false,
-   "sourceUrl": "https://www.delwebb.com/homes/texas/austin/georgetown/sun-city-texas-16369",
-   "observedDate": "2026-08-26",
-   "confidence": "builder-advertised",
-   "notes": "One of several QMI price-cut examples."
-  },
-  {
-   "builderSlug": "del-webb",
-   "builder": "Del Webb",
-   "city": "Georgetown",
-   "community": "Sun City Texas",
-   "offerText": "QMI $350,990 (was $404,950)",
+   "offerText": "QMI reductions up to $53,960 (examples $35,000-$41,920)",
    "incentiveType": "price-cut",
    "advertisedValue": 53960,
    "rate": null,
@@ -1027,50 +1146,84 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.delwebb.com/homes/texas/austin/georgetown/sun-city-texas-16369",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Largest of several QMI price-cut examples."
+   "notes": "Top-line QMI savings figure."
   },
   {
    "builderSlug": "dr-horton",
    "builder": "D.R. Horton",
    "city": "Manor",
    "community": "Palomino",
-   "offerText": "2/1 Temporary Buydown: contracting 07/10/26+, closing by 09/30/26. Year 1: 2.99%, Year 2: 3.99%, Years 3-30: 4.99% (5.879% APR). $6,497.01 in incentive funds; 0.375% discount point required.",
+   "offerText": "2/1 Temporary Buydown: $6,497.01 incentive funds; Yr1 2.99%, Yr2 3.99%, Yr3-30 4.99% (5.879% APR)",
    "incentiveType": "temporary-buydown",
    "advertisedValue": 6497,
-   "rate": "2/1 buydown: Yr1 2.99%, Yr2 3.99%, Yr3-30 4.99% (5.879% APR)",
-   "deadline": "Close on or before 09/30/26",
+   "rate": "2/1 temporary step-up (FHA/VA/USDA), NOT permanent",
+   "deadline": "Close by 09/30/26",
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.drhorton.com/texas/austin/manor/palomino",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Tied to DHI Mortgage; FHA/VA/USDA only. Unchanged structure from prior sweeps."
+   "notes": "DHI Mortgage. Corridor, single fetch succeeded."
   },
   {
    "builderSlug": "drb-homes",
    "builder": "DRB Homes",
    "city": "Austin",
-   "community": "Multiple (Hawkes Landing – Leander; Infinity Square – Kyle; Briarwood – Elgin; and others)",
-   "offerText": "Up to $30K in Flex Cash Savings on Your New Home. Usable for closing costs, design selections, rate buydowns, temporary payment reduction, price reduction, or combination. Requires DRB Homes approved lender.",
+   "community": null,
+   "offerText": "Up to $30K in Flex Cash Savings",
    "incentiveType": "credit-flex",
    "advertisedValue": 30000,
    "rate": null,
-   "deadline": "New contracts signed June 1 – August 31, 2026; settlement must close by December 31, 2026",
+   "deadline": "Contracts 6/1/26-8/31/26; settlement by 12/31/26",
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Per-community caps range up to $50,000 at Hawkes Landing (Leander), $40,000 at Infinity Square (Kyle, in-corridor), $30,000 at Briarwood (Elgin)."
+   "notes": "Program-wide headline."
+  },
+  {
+   "builderSlug": "drb-homes",
+   "builder": "DRB Homes",
+   "city": "Austin",
+   "community": "Hawkes Landing Classic",
+   "offerText": "Flex Cash up to $50,000",
+   "incentiveType": "credit-flex",
+   "advertisedValue": 50000,
+   "rate": null,
+   "deadline": "Contracts 6/1/26-8/31/26; settlement by 12/31/26",
+   "expired": false,
+   "lenderTied": true,
+   "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "Community-specific max, Leander."
+  },
+  {
+   "builderSlug": "drb-homes",
+   "builder": "DRB Homes",
+   "city": "Austin",
+   "community": "Sky Ridge",
+   "offerText": "Flex Cash up to $10,000",
+   "incentiveType": "credit-flex",
+   "advertisedValue": 10000,
+   "rate": null,
+   "deadline": "Contracts 6/1/26-8/31/26; settlement by 12/31/26",
+   "expired": false,
+   "lenderTied": true,
+   "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "Community-specific min tier."
   },
   {
    "builderSlug": "empire-communities",
    "builder": "Empire Communities",
    "city": "Austin",
-   "community": "Multiple Austin communities",
-   "offerText": "Enjoy $50,000 worth of standard features without increasing your monthly payment.",
+   "community": null,
+   "offerText": "$50,000 worth of standard features without increasing monthly payment",
    "incentiveType": "upgrades",
    "advertisedValue": 50000,
    "rate": null,
@@ -1078,194 +1231,313 @@
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://empirehomes.com/us/texas/austin/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Page also references 'low rates and closing cost incentives available on select homes' without specifics."
+   "notes": "Preferred-lender contingent."
   },
   {
    "builderSlug": "empire-communities",
    "builder": "Empire Communities",
    "city": "Austin",
-   "community": "Adelton, Trace",
-   "offerText": "August Low Pricing: $297,998 (reduced from $338,529)",
+   "community": "Trace",
+   "offerText": "August Low Pricing: $289,998 (from $329,990)",
    "incentiveType": "price-cut",
-   "advertisedValue": 40531,
+   "advertisedValue": 39992,
    "rate": null,
    "deadline": "none stated",
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://empirehomes.com/us/texas/austin/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Specific to one example home; actual cut varies by home."
+   "notes": "QMI example."
   },
   {
    "builderSlug": "giddens-homes",
    "builder": "Giddens Homes",
    "city": "Austin",
-   "community": "Custom/build-to-order homes",
-   "offerText": "RECEIVE OVER $40,000 IN SELECT FREE UPGRADES & 40% OFF UP TO $100,000 in Customizations and Design Studio Upgrades",
+   "community": null,
+   "offerText": "Over $40,000 in free upgrades & 40% off up to $100,000 in customizations",
    "incentiveType": "upgrades",
    "advertisedValue": 40000,
    "rate": null,
-   "deadline": "none stated",
+   "deadline": "FOR A LIMITED TIME",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://giddenshomes.com/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Applies to customizable/build homes generally."
+   "notes": "To-be-built homes."
+  },
+  {
+   "builderSlug": "kb-home",
+   "builder": "KB Home",
+   "city": "Austin",
+   "community": null,
+   "offerText": "5.99% (6.002% APR) 30-yr fixed conventional; 5.75% (6.410% APR) 30-yr fixed FHA; 4.75% (5.386% APR) 5/1 ARM FHA; $5,000 closing credit",
+   "incentiveType": "rate-special",
+   "advertisedValue": 5000,
+   "rate": "5.99% and 5.75% presented as 30-yr fixed (permanent); 4.75% is 5/1 ARM (NOT permanent)",
+   "deadline": "Purchase agreement by 8/31/26",
+   "expired": false,
+   "lenderTied": true,
+   "sourceUrl": "https://www.kbhome.com/special-low-rates",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "KBHS Home Loans. Corridor, confirmed."
   },
   {
    "builderSlug": "pacesetter-homes",
    "builder": "Pacesetter Homes",
    "city": "Austin",
-   "community": "Austin Division communities (excludes Center 45)",
+   "community": "Austin Division (excl. Center 45)",
    "offerText": "Up to $10,000 Closing Cost Credit",
    "incentiveType": "closing-costs",
    "advertisedValue": 10000,
    "rate": null,
-   "deadline": "Contract execution window Aug 18 - Sept 1, 2026; must close by Sept 16, 2026",
+   "deadline": "Contract 8/18-9/1/26; close by 9/16/26",
    "expired": false,
-   "lenderTied": "unknown",
+   "lenderTied": true,
    "sourceUrl": "https://info.pacesetterhomestexas.com/austin-savings",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Amount varies by community and buyer qualification."
+   "notes": "Same offer bundle as rate."
   },
   {
    "builderSlug": "perry-homes",
    "builder": "Perry Homes",
    "city": "Austin",
-   "community": "Select Austin-area inventory homes",
-   "offerText": "Up to $50,000 in total incentives... Low interest rate of 5.49% (5.555% APR) via interest rate buydown",
+   "community": null,
+   "offerText": "5.49% (5.555% APR), 30-yr fixed conventional, straight full-term (NO step-up), up to $50,000 total via rate buydown OR flex cash",
    "incentiveType": "permanent-buydown",
    "advertisedValue": 50000,
-   "rate": "5.49% (5.555% APR), 30-year fixed-rate conventional loan",
+   "rate": "5.49% confirmed straight 30-year fixed, no year1/year2 step-up language, no ARM",
    "deadline": "Home must close by 8/31/2026",
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.perryhomes.com/promotion/summer-sales-event-2026/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "URL confirmed live, current 8/31/2026 deadline. Requires Crestmark Mortgage or Parkstone Mortgage; 30-year fixed loan, no step-up language."
+   "notes": "CORRIDOR, confirmed. Crestmark Mortgage or Parkstone Mortgage. Buyer elects ONE of rate-buydown or flex-cash."
   },
   {
    "builderSlug": "perry-homes",
    "builder": "Perry Homes",
    "city": "Austin",
-   "community": "Select Austin-area inventory homes",
-   "offerText": "Up to $50,000 in total incentives... OR Flex cash",
-   "incentiveType": "credit-flex",
+   "community": null,
+   "offerText": "Flex Cash: up to $50,000 seller-paid closing costs, max 6% of price",
+   "incentiveType": "closing-costs",
    "advertisedValue": 50000,
    "rate": null,
    "deadline": "Home must close by 8/31/2026",
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.perryhomes.com/promotion/summer-sales-event-2026/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Alternative to rate buydown, capped at 6% of contract sales price."
+   "notes": "Alternate election to rate-buydown."
   },
   {
    "builderSlug": "stylecraft-homes",
    "builder": "Stylecraft Homes",
    "city": "Austin",
-   "community": "Qualifying homes",
-   "offerText": "Up to $20,000 in builder credits on qualifying homes for customization",
+   "community": null,
+   "offerText": "Up to $20,000 Your Way builder credits",
    "incentiveType": "credit-flex",
    "advertisedValue": 20000,
    "rate": null,
    "deadline": "none stated",
    "expired": false,
-   "lenderTied": "unknown",
+   "lenderTied": true,
    "sourceUrl": "https://www.stylecraft.com/incentives/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Alternative to rate buydown offer on same page."
+   "notes": "Alternative to rate offer."
+  },
+  {
+   "builderSlug": "tri-pointe-homes",
+   "builder": "Tri Pointe Homes",
+   "city": "Austin",
+   "community": "The Capitol Collection at Lariat",
+   "offerText": "up to $35k in Closing Credit",
+   "incentiveType": "closing-costs",
+   "advertisedValue": 35000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "Live Brilliantly Sales Event."
   },
   {
    "builderSlug": "tri-pointe-homes",
    "builder": "Tri Pointe Homes",
    "city": "Austin",
    "community": "Flora",
-   "offerText": "Interest rates as low as 4.99% (5.375% APR)* PLUS up to $10k Closing Cost Credit — OR — up to $30k in Closing Credit",
-   "incentiveType": "closing-costs",
-   "advertisedValue": 30000,
-   "rate": "as low as 4.99% (5.375% APR)* — buydown permanence not stated",
+   "offerText": "rates as low as 4.99% (5.375% APR)* + up to $10k Closing Cost Credit",
+   "incentiveType": "rate-special",
+   "advertisedValue": 10000,
+   "rate": "4.99%, buydown permanence not disclosed",
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Two alternative offer structures."
+   "notes": null
   },
   {
    "builderSlug": "tri-pointe-homes",
    "builder": "Tri Pointe Homes",
    "city": "Austin",
-   "community": "Lariat",
-   "offerText": "Up to $35k in Closing Credit — OR — interest rates as low as 4.99% (5.344% APR) PLUS $10k Closing Cost Credit — OR — up to $30k in Closing Credit",
+   "community": "Flora",
+   "offerText": "up to $30k in Closing Credit",
    "incentiveType": "closing-costs",
-   "advertisedValue": 35000,
-   "rate": "as low as 4.99% (5.344% APR) — buydown permanence not stated",
+   "advertisedValue": 30000,
+   "rate": null,
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Highest closing credit captured."
+   "notes": "Alt offer same community."
   },
   {
    "builderSlug": "tri-pointe-homes",
    "builder": "Tri Pointe Homes",
    "city": "Buda",
    "community": "Turner's Crossing",
-   "offerText": "Interest rates as low as 5.125% (5.438% APR)* PLUS up to $10k Closing Cost Credit — OR — 4.99% (5.375% APR)* PLUS $10k — OR — up to $30k in Closing Credit",
-   "incentiveType": "closing-costs",
-   "advertisedValue": 30000,
-   "rate": "as low as 4.99%-5.125% — buydown permanence not stated",
+   "offerText": "rates as low as 5.125% (5.438% APR)* + up to $10k Closing Cost Credit",
+   "incentiveType": "rate-special",
+   "advertisedValue": 10000,
+   "rate": "5.125%, buydown permanence not disclosed",
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Buda corridor community."
+   "notes": "Buda corridor."
   },
   {
    "builderSlug": "tri-pointe-homes",
    "builder": "Tri Pointe Homes",
-   "city": "Austin",
-   "community": "Park Central",
-   "offerText": "Up to $20k Closing Credit (Union Collection) — OR — up to $30k Closing Credit — OR — rates as low as 4.99% (5.432% APR) PLUS $10k Flex Cash",
-   "incentiveType": "closing-costs",
-   "advertisedValue": 30000,
-   "rate": "as low as 4.99% (5.432% APR) — buydown permanence not stated",
+   "city": "Buda",
+   "community": "Turner's Crossing",
+   "offerText": "rates as low as 4.99% (5.375% APR)* + up to $10k Closing Cost Credit",
+   "incentiveType": "rate-special",
+   "advertisedValue": 10000,
+   "rate": "4.99%, buydown permanence not disclosed",
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Union Collection sub-plan carries lower $20k credit."
+   "notes": "Distinct tier from 5.125%, same community."
+  },
+  {
+   "builderSlug": "tri-pointe-homes",
+   "builder": "Tri Pointe Homes",
+   "city": "Buda",
+   "community": "Turner's Crossing",
+   "offerText": "up to $30k in Closing Credit",
+   "incentiveType": "closing-costs",
+   "advertisedValue": 30000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": null
+  },
+  {
+   "builderSlug": "tri-pointe-homes",
+   "builder": "Tri Pointe Homes",
+   "city": "Georgetown",
+   "community": "Park Central (Union Collection)",
+   "offerText": "up to $20k Closing Credit",
+   "incentiveType": "closing-costs",
+   "advertisedValue": 20000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "Union Collection sub-plan, lower tier."
+  },
+  {
+   "builderSlug": "tri-pointe-homes",
+   "builder": "Tri Pointe Homes",
+   "city": "Georgetown",
+   "community": "Park Central",
+   "offerText": "up to $30k in Closing Credit",
+   "incentiveType": "closing-costs",
+   "advertisedValue": 30000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": null
+  },
+  {
+   "builderSlug": "tri-pointe-homes",
+   "builder": "Tri Pointe Homes",
+   "city": "Georgetown",
+   "community": "Park Central",
+   "offerText": "rates as low as 4.99% (5.432% APR) + $10k Flex Cash",
+   "incentiveType": "rate-special",
+   "advertisedValue": 10000,
+   "rate": "4.99%, buydown permanence not disclosed",
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": null
   },
   {
    "builderSlug": "tri-pointe-homes",
    "builder": "Tri Pointe Homes",
    "city": "Georgetown",
    "community": "Wolf Ranch",
-   "offerText": "Interest rates as low as 4.99% (5.607% APR) PLUS $10k Closing Cost Credit — OR — up to $25k Closing Credit",
-   "incentiveType": "closing-costs",
-   "advertisedValue": 25000,
-   "rate": "as low as 4.99% (5.607% APR) — buydown permanence not stated",
+   "offerText": "rates as low as 4.99% (5.607% APR) + $10k Closing Cost Credit",
+   "incentiveType": "rate-special",
+   "advertisedValue": 10000,
+   "rate": "4.99%, buydown permanence not disclosed",
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": null
+  },
+  {
+   "builderSlug": "tri-pointe-homes",
+   "builder": "Tri Pointe Homes",
+   "city": "Georgetown",
+   "community": "Wolf Ranch",
+   "offerText": "up to $25k in Closing Credit",
+   "incentiveType": "closing-costs",
+   "advertisedValue": 25000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
    "notes": null
   },
@@ -1274,15 +1546,32 @@
    "builder": "Tri Pointe Homes",
    "city": "Austin",
    "community": "Heritage",
-   "offerText": "Interest rates as low as 4.99% (5.607% APR)* PLUS up to $10k Closing Credit — OR — up to $25k Closing Credit",
-   "incentiveType": "closing-costs",
-   "advertisedValue": 25000,
-   "rate": "as low as 4.99% (5.607% APR) — buydown permanence not stated",
+   "offerText": "rates as low as 4.99% (5.607% APR)* + up to $10k Closing Credit",
+   "incentiveType": "rate-special",
+   "advertisedValue": 10000,
+   "rate": "4.99%, buydown permanence not disclosed",
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": null
+  },
+  {
+   "builderSlug": "tri-pointe-homes",
+   "builder": "Tri Pointe Homes",
+   "city": "Austin",
+   "community": "Heritage",
+   "offerText": "up to $25k in Closing Credit",
+   "incentiveType": "closing-costs",
+   "advertisedValue": 25000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
    "notes": null
   },
@@ -1291,119 +1580,170 @@
    "builder": "Tri Pointe Homes",
    "city": "Austin",
    "community": "Lagos",
-   "offerText": "Interest rates as low as 4.99% (5.344% APR)* PLUS up to $10k Closing Credit — OR — up to $25k Closing Credit (Lagos Reserve)",
-   "incentiveType": "closing-costs",
-   "advertisedValue": 25000,
-   "rate": "as low as 4.99% (5.344% APR) — buydown permanence not stated",
+   "offerText": "rates as low as 4.99% (5.344% APR)* + up to $10k Closing Credit",
+   "incentiveType": "rate-special",
+   "advertisedValue": 10000,
+   "rate": "4.99%, buydown permanence not disclosed",
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Lagos Reserve sub-plan."
+   "notes": null
+  },
+  {
+   "builderSlug": "tri-pointe-homes",
+   "builder": "Tri Pointe Homes",
+   "city": "Austin",
+   "community": "Lagos Reserve",
+   "offerText": "up to $25k in Closing Credit",
+   "incentiveType": "closing-costs",
+   "advertisedValue": 25000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": null
   },
   {
    "builderSlug": "tri-pointe-homes",
    "builder": "Tri Pointe Homes",
    "city": "Austin",
    "community": "Edgewood",
-   "offerText": "Up to $40k in Closing Credit — grand opening promotional event",
+   "offerText": "up to $40k in Closing Credit (Grand Opening)",
    "incentiveType": "closing-costs",
    "advertisedValue": 40000,
    "rate": null,
-   "deadline": "limited-time (no specific date stated)",
+   "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Grand-opening event; largest closing-credit figure among Austin-area Tri Pointe communities this run."
+   "notes": "Grand-opening, largest credit."
+  },
+  {
+   "builderSlug": "tri-pointe-homes",
+   "builder": "Tri Pointe Homes",
+   "city": "Liberty Hill",
+   "community": "Lariat",
+   "offerText": "up to $30k in Closing Credit",
+   "incentiveType": "closing-costs",
+   "advertisedValue": 30000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": "unknown",
+   "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": null
   },
   {
    "builderSlug": "united-built-homes",
    "builder": "United Built Homes",
    "city": "Austin",
    "community": null,
-   "offerText": "$10,000 cash back on new home starts. No mortgage payments for 12 months. No interest during construction (interest accrual begins month 11). Locked-in pricing from day one.",
+   "offerText": "$10,000 Cash Back; No mortgage payments 12 months; no interest during construction",
    "incentiveType": "credit-flex",
    "advertisedValue": 10000,
    "rate": null,
-   "deadline": "none stated (limited number of new home starts)",
+   "deadline": "Limited new home starts, no end date",
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.ubh.com/2026-cash-back/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Tied to UBH's in-house lending (NMLS #39943)."
+   "notes": "In-house lending NMLS #39943."
   },
   {
    "builderSlug": "risewell-homes",
    "builder": "Risewell Homes",
    "city": "Austin",
-   "community": "Select neighborhoods and homes",
-   "offerText": "Move before this rate does. 3.99% fixed rate (4.627% APR) + up to $10,000 towards closing costs.",
+   "community": null,
+   "offerText": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate + up to $10,000 closing costs",
    "incentiveType": "permanent-buydown",
    "advertisedValue": 10000,
-   "rate": "3.99% fixed for full term (4.627% APR)",
+   "rate": "3.99% (4.627% APR) full-term FIXED, permanent, distinct from companion temp buydown",
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://risewellhomes.com/promotions/region/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "CORRIDOR: confirmed both distinct 3.99%-headline offers still live and correctly distinguished. PERMANENT offer, distinct from the 1/0 step-up companion below."
+   "notes": "CORRIDOR, confirmed. PERMANENT offer."
   },
   {
    "builderSlug": "risewell-homes",
    "builder": "Risewell Homes",
    "city": "Austin",
-   "community": "Select neighborhoods and homes",
-   "offerText": "1/0 buydown: Year 1 3.99%, Years 2-30 4.99%, + up to $10,000 towards closing costs.",
+   "community": null,
+   "offerText": "1/0 Buydown: 3.99% (5.639% APR) Yr1, 4.99% Yr2-30 + up to $10,000 closing costs",
    "incentiveType": "temporary-buydown",
    "advertisedValue": 10000,
-   "rate": "3.99% year 1, stepping up to 4.99% years 2-30 (1/0 buydown; APR shown as 5.639%)",
+   "rate": "1/0 TEMPORARY step-up, Yr1 3.99%, Yr2-30 4.99% -- NOT permanent, same 3.99% headline as permanent offer above but distinct structure",
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://risewellhomes.com/promotions/region/austin",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "TEMPORARY companion to the permanent 3.99% offer above; same headline number, must not be conflated."
+   "notes": "CORRIDOR. Companion temporary offer, correctly distinguished."
   },
   {
    "builderSlug": "megatel-homes",
    "builder": "Megatel Homes",
    "city": "Austin",
-   "community": "Austin, TX (portfolio-wide)",
-   "offerText": "Savings Event: 2.99% FIXED RATE (3.75% APR) + $500/MO for 24 months after closing via MegPrime Pay app. Through 8/31.",
+   "community": null,
+   "offerText": "2.99% FIXED RATE (3.75% APR) + $500/mo x24mo via MegPrime Pay app",
    "incentiveType": "rate-special",
-   "advertisedValue": 12000,
-   "rate": "2.99% labeled \"FIXED RATE\" (3.75% APR)",
+   "advertisedValue": 500,
+   "rate": "Labeled FIXED RATE but delivered via MegPrime Pay (reported as crypto-payment platform, not conventional lender) -- NOT classified permanent",
    "deadline": "Through 8/31",
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.megatelhomes.com/incentives",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "CAVEAT: NOT classified permanent-buydown despite 'FIXED RATE' label — MegPrime Pay reported by outside media as a crypto-payment platform, not a conventional lender."
+   "notes": "CORRIDOR, confirmed. MegPrime Pay caveat maintained."
+  },
+  {
+   "builderSlug": "megatel-homes",
+   "builder": "Megatel Homes",
+   "city": "Austin",
+   "community": null,
+   "offerText": "3.99% FIXED RATE (4.99% APR) + $1,500/mo during construction via MegPrime Pay app",
+   "incentiveType": "rate-special",
+   "advertisedValue": 1500,
+   "rate": "Same MegPrime Pay caveat, NOT classified permanent",
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": true,
+   "sourceUrl": "https://www.megatelhomes.com/incentives",
+   "observedDate": "2026-08-27",
+   "confidence": "builder-advertised",
+   "notes": "Second Megatel tier."
   },
   {
    "builderSlug": "modus-the-george",
    "builder": "MODUS / The George",
    "city": "Austin",
-   "community": "The George (downtown condos)",
-   "offerText": "Buyer's Choice — Option B: Flex Cash. Preferred Lender: up to $40,000 (2-bed) / $30,000 (1-bed). Other Lender: up to $30,000 (2-bed) / $20,000 (1-bed).",
+   "community": "The George",
+   "offerText": "Buyer's Choice Option B: 2BR up to $40,000 (pref lender)/$30,000 (other); 1BR up to $30,000 (pref)/$20,000 (other)",
    "incentiveType": "credit-flex",
    "advertisedValue": 40000,
    "rate": null,
-   "deadline": "August promotion, \"limited time\" (no specific end date)",
+   "deadline": "August promotion, limited time",
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.liveatgeorgeatx.com/buyers-choice/",
-   "observedDate": "2026-08-26",
+   "observedDate": "2026-08-27",
    "confidence": "builder-advertised",
-   "notes": "Top-tier $40,000 figure (2-bed, preferred lender); range $20K-$40K."
+   "notes": "Top tier 2BR/preferred lender figure."
   }
  ],
  "promos": [
@@ -1414,12 +1754,12 @@
    "promo": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional. Purchase agreement must be signed by 8/31/26.",
    "advertisedValue": null,
    "expires": "Purchase agreement by 8/31/26",
-   "lastObserved": "2026-08-26",
+   "lastObserved": "2026-08-27",
    "firstObserved": "2026-08-06 (per prior-run notes)",
    "delta": null,
    "confidence": "unverified",
    "source": "Builder-reported",
-   "note": "Standing permanent-buydown tier on the same three-tier rate-sheet page. Unchanged 19th+ consecutive run."
+   "note": "Standing permanent-buydown tier on the three-tier rate-sheet page. Unchanged 20th+ consecutive run. Deadline is within the next 4 days -- flag for buyers."
   },
   {
    "id": "risewell-homes-399",
@@ -1428,12 +1768,12 @@
    "promo": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate PLUS up to $10,000 towards closing costs on select neighborhoods and homes.",
    "advertisedValue": null,
    "expires": "none stated",
-   "lastObserved": "2026-08-26",
-   "firstObserved": "unknown (18th+ consecutive run)",
+   "lastObserved": "2026-08-27",
+   "firstObserved": "unknown (19th+ consecutive run)",
    "delta": null,
    "confidence": "unverified",
    "source": "Builder-reported",
-   "note": "Same page also discloses a structurally-separate 1/0 step-up buydown at the identical 3.99% headline number -- real risk of reader conflation. Both offers reconfirmed present and correctly distinguished this run."
+   "note": "Same page also discloses a structurally separate 1/0 step-up buydown at the identical 3.99% headline -- real risk of reader conflation. Both offers reconfirmed present and correctly distinguished this run."
   },
   {
    "id": "stylecraft-homes-499",
@@ -1442,7 +1782,7 @@
    "promo": "Rates as low as 4.99% (5.691% APR), 30-year fixed FHA/VA/USDA via Kangaroo Home Lending.",
    "advertisedValue": null,
    "expires": "Contracts closed by October 9, 2026",
-   "lastObserved": "2026-08-26",
+   "lastObserved": "2026-08-27",
    "firstObserved": "2026-07-30",
    "delta": null,
    "confidence": "unverified",
@@ -1456,12 +1796,12 @@
    "promo": "Up to $50,000 in total incentives -- Low interest rate of 5.49% (5.555% APR) via interest rate buydown, OR flex cash, on a 30-year fixed-rate conventional loan. Requires Crestmark Mortgage or Parkstone Mortgage. Home must close by 8/31/2026.",
    "advertisedValue": 50000,
    "expires": "Home must close by 8/31/2026",
-   "lastObserved": "2026-08-26",
+   "lastObserved": "2026-08-27",
    "firstObserved": "2026-08-26",
    "delta": null,
    "confidence": "unverified",
    "source": "Builder-reported",
-   "note": "NEW TO THE PERMANENT-RATE SET this run. Page describes the loan as a 30-year fixed-rate conventional loan with no year-1/year-2 step-up language, so classified permanent-buydown per methodology. However Perry's own page calls this an 'interest rate buydown' without an explicit full-term-fixed disclosure statement (unlike KB Home and Stylecraft, which use unambiguous '30-Year Fixed' framing) -- flagged for one more manual confirmation before treating as fully equivalent to the other three standing permanent promos. Same $50,000/5.49% terms have appeared in recent prior runs classified as temporary-buydown; this is a reclassification based on today's page language, not a newly announced offer."
+   "note": "Re-confirmed permanent-buydown classification for a second consecutive run -- page again shows straight 30-year fixed framing with no step-up language. Deadline is within the next 4 days."
   }
  ]
 }
