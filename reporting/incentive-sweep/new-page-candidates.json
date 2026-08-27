@@ -1686,5 +1686,61 @@
     "advertisedValue": 20000,
     "firstFlagged": "2026-08-26",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Kyle (Holly, Sycamore models)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-27",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Blue Oasis (Leander)",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-08-27",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Georgetown (Bluebonnet, Poppy, Rose models)",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-08-27",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": "The Colony, Easton Park-Nelson Village, Double Creek Crossing Townhomes, Flora",
+    "advertisedValue": 50000,
+    "firstFlagged": "2026-08-27",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": "Other Austin communities (excl. South Brook)",
+    "advertisedValue": 70000,
+    "firstFlagged": "2026-08-27",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Sky Ridge",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-08-27",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "pacesetter-homes",
+    "builder": "Pacesetter Homes",
+    "community": "Austin Division (excl. Center 45)",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-08-27",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]

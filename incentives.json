@@ -10,9 +10,10 @@
     "2026-08-21",
     "2026-08-24",
     "2026-08-25",
-    "2026-08-26"
+    "2026-08-26",
+    "2026-08-27"
   ],
-  "updated": "2026-08-26",
+  "updated": "2026-08-27",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -387,7 +388,7 @@
       "submarket": "",
       "builder": "KB Home",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "permanent-buydown",
+      "incentiveType": "rate-special",
       "advertisedValue": 5000,
       "transferability": null,
       "buyerValueScore": null,
@@ -395,10 +396,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Purchase agreement must be signed by 8/31/26",
+      "expires": "Purchase agreement by 8/31/26",
       "source": "https://www.kbhome.com/special-low-rates",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-25",
+      "lastObserved": "2026-08-27",
       "prevValue": null,
       "delta": 5000,
       "history": [
@@ -415,7 +416,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-08-25.",
+      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-08-27.",
       "expired": false,
       "run": "AM"
     },
@@ -721,7 +722,7 @@
       "builder": "Empire Communities",
       "homeType": "Varies (confirm on site)",
       "incentiveType": "price-cut",
-      "advertisedValue": 40531,
+      "advertisedValue": 39992,
       "transferability": "Low",
       "buyerValueScore": 27500,
       "lenderTied": false,
@@ -731,9 +732,9 @@
       "expires": "none stated",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-26",
+      "lastObserved": "2026-08-27",
       "prevValue": 50000,
-      "delta": -9469,
+      "delta": -10008,
       "history": [
         {
           "date": "2026-07-27",
@@ -782,9 +783,17 @@
         {
           "value": 50000,
           "asOf": "2026-08-26"
+        },
+        {
+          "value": 40531,
+          "asOf": "2026-08-26"
+        },
+        {
+          "value": 50000,
+          "asOf": "2026-08-27"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-08-26.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-08-27.",
       "expired": false,
       "run": "AM"
     },
@@ -875,10 +884,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated (limited number of new home starts)",
+      "expires": "Limited new home starts, no end date",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-26",
+      "lastObserved": "2026-08-27",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -891,7 +900,7 @@
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-08-26.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-08-27.",
       "expired": false,
       "run": "AM"
     },
@@ -1336,7 +1345,7 @@
       "expires": "none stated",
       "source": "https://risewellhomes.com/promotions/region/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-26",
+      "lastObserved": "2026-08-27",
       "prevValue": null,
       "delta": 10000,
       "history": [
@@ -1349,7 +1358,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-08-26.",
+      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-08-27.",
       "expired": false,
       "run": "AM"
     },
@@ -2138,10 +2147,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "4.99% (structure not specified) -- alternative to the flex cash",
-      "expires": "August promotion, \"limited time\" (no specific end date)",
+      "expires": "August promotion, limited time",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-26",
+      "lastObserved": "2026-08-27",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2154,7 +2163,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-08-26.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-08-27.",
       "expired": false,
       "run": "AM"
     },
@@ -2168,19 +2177,19 @@
       "builder": "Megatel Homes",
       "homeType": "Varies (confirm on site)",
       "incentiveType": "rate-special",
-      "advertisedValue": 12000,
+      "advertisedValue": 1500,
       "transferability": "Unknown",
       "buyerValueScore": 5000,
       "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "2.99% FIXED (3.75% APR)",
-      "expires": "Through 8/31",
+      "expires": "none stated",
       "source": "https://www.megatelhomes.com/incentives",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-26",
-      "prevValue": 1500,
-      "delta": 10500,
+      "lastObserved": "2026-08-27",
+      "prevValue": 500,
+      "delta": 1000,
       "history": [
         {
           "date": "2026-07-29",
@@ -2201,9 +2210,17 @@
         {
           "value": 1500,
           "asOf": "2026-08-20"
+        },
+        {
+          "value": 12000,
+          "asOf": "2026-08-26"
+        },
+        {
+          "value": 500,
+          "asOf": "2026-08-27"
         }
       ],
-      "note": "Source: https://www.megatelhomes.com/incentives (builder-advertised) verified 2026-08-26.",
+      "note": "Source: https://www.megatelhomes.com/incentives (builder-advertised) verified 2026-08-27.",
       "expired": false,
       "run": "AM"
     },
@@ -2224,10 +2241,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Close on or before 09/30/26",
+      "expires": "Close by 09/30/26",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-26",
+      "lastObserved": "2026-08-27",
       "prevValue": 6518,
       "delta": -21,
       "history": [
@@ -2244,7 +2261,7 @@
           "asOf": "2026-08-03"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-08-26.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-08-27.",
       "expired": false,
       "run": "AM"
     },
@@ -2265,10 +2282,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated",
+      "expires": "FOR A LIMITED TIME",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-26",
+      "lastObserved": "2026-08-27",
       "prevValue": null,
       "delta": 40000,
       "history": [
@@ -2281,7 +2298,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-08-26.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-08-27.",
       "expired": false,
       "run": "AM"
     },
@@ -2359,11 +2376,11 @@
       "community": null,
       "promo": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional. Purchase agreement must be signed by 8/31/26.",
       "expires": "Purchase agreement by 8/31/26",
-      "lastObserved": "2026-08-26",
+      "lastObserved": "2026-08-27",
       "firstObserved": "2026-08-06 (per prior-run notes)",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "Standing permanent-buydown tier on the same three-tier rate-sheet page. Unchanged 19th+ consecutive run."
+      "note": "Standing permanent-buydown tier on the three-tier rate-sheet page. Unchanged 20th+ consecutive run. Deadline is within the next 4 days -- flag for buyers."
     },
     {
       "id": "risewell-homes-399",
@@ -2371,11 +2388,11 @@
       "community": null,
       "promo": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate PLUS up to $10,000 towards closing costs on select neighborhoods and homes.",
       "expires": "none stated",
-      "lastObserved": "2026-08-26",
-      "firstObserved": "unknown (18th+ consecutive run)",
+      "lastObserved": "2026-08-27",
+      "firstObserved": "unknown (19th+ consecutive run)",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "Same page also discloses a structurally-separate 1/0 step-up buydown at the identical 3.99% headline number -- real risk of reader conflation. Both offers reconfirmed present and correctly distinguished this run."
+      "note": "Same page also discloses a structurally separate 1/0 step-up buydown at the identical 3.99% headline -- real risk of reader conflation. Both offers reconfirmed present and correctly distinguished this run."
     },
     {
       "id": "stylecraft-homes-499",
@@ -2383,7 +2400,7 @@
       "community": "select Central Texas communities",
       "promo": "Rates as low as 4.99% (5.691% APR), 30-year fixed FHA/VA/USDA via Kangaroo Home Lending.",
       "expires": "Contracts closed by October 9, 2026",
-      "lastObserved": "2026-08-26",
+      "lastObserved": "2026-08-27",
       "firstObserved": "2026-07-30",
       "confidence": "unverified",
       "source": "Builder-reported",
@@ -2395,11 +2412,11 @@
       "community": "Select Austin-area inventory homes",
       "promo": "Up to $50,000 in total incentives -- Low interest rate of 5.49% (5.555% APR) via interest rate buydown, OR flex cash, on a 30-year fixed-rate conventional loan. Requires Crestmark Mortgage or Parkstone Mortgage. Home must close by 8/31/2026.",
       "expires": "Home must close by 8/31/2026",
-      "lastObserved": "2026-08-26",
+      "lastObserved": "2026-08-27",
       "firstObserved": "2026-08-26",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "NEW TO THE PERMANENT-RATE SET this run. Page describes the loan as a 30-year fixed-rate conventional loan with no year-1/year-2 step-up language, so classified permanent-buydown per methodology. However Perry's own page calls this an 'interest rate buydown' without an explicit full-term-fixed disclosure statement (unlike KB Home and Stylecraft, which use unambiguous '30-Year Fixed' framing) -- flagged for one more manual confirmation before treating as fully equivalent to the other three standing permanent promos. Same $50,000/5.49% terms have appeared in recent prior runs classified as temporary-buydown; this is a reclassification based on today's page language, not a newly announced offer."
+      "note": "Re-confirmed permanent-buydown classification for a second consecutive run -- page again shows straight 30-year fixed framing with no step-up language. Deadline is within the next 4 days."
     }
   ]
 }
