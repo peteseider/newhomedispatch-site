@@ -1742,5 +1742,101 @@
     "advertisedValue": 10000,
     "firstFlagged": "2026-08-27",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Sycamore / Juniper II models",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "364 Blue Oasis Ln (Iris model)",
+    "advertisedValue": 71545,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "5900 Whisper Crk Dr Unit 224 (Poppy model)",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Jasmine model (multiple listings)",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "356 Blue Oasis Ln (Poppy model)",
+    "advertisedValue": 71351,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": "Other Austin-area communities (ex. South Brook)",
+    "advertisedValue": 70000,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "del-webb",
+    "builder": "Del Webb",
+    "community": "Sun City Texas (QMI, model not specified)",
+    "advertisedValue": 53960,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Briarwood Enclave & Lakeside Meadows Premier Executive",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Carillion, Creeks Crossing, Devine Landing, Flora, Newhaven, Oaks at San Gabriel, Sunfield, Opal Ranch, Spring Creek",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "pacesetter-homes",
+    "builder": "Pacesetter Homes",
+    "community": "Multiple Austin-area communities (16+, excludes Center 45)",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "stylecraft-homes",
+    "builder": "Stylecraft Homes",
+    "community": "Multiple move-in-ready homes",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Heritage / Lagos",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-08-28",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
