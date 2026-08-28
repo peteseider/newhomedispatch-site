@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-08-28T01:59:23-05:00-AM",
-  "generatedAt": "2026-08-28T01:59:23-05:00",
+  "sweepId": "2026-08-28T06:54:36-05:00-AM",
+  "generatedAt": "2026-08-28T06:54:36-05:00",
   "facts": {
     "score": 65,
     "band": "High",
@@ -14,10 +14,17 @@
     "ratePmmsWeekly": 6.66
   },
   "changes": {
-    "count": 0,
+    "count": 5,
     "newOffers": [],
-    "improved": [],
-    "reduced": [],
+    "improved": [
+      "Empire Communities",
+      "Risewell Homes (formerly Landsea)",
+      "MODUS / The George (condos)",
+      "Giddens Homes"
+    ],
+    "reduced": [
+      "D.R. Horton"
+    ],
     "deadlinesNext7d": [
       {
         "builder": "D.R. Horton",
@@ -37,16 +44,16 @@
       {
         "builder": "KB Home",
         "deadline": "2026-08-31",
-        "offer": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional. Purchase agreement must be "
+        "offer": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional, requires KBHS Home Loans an"
       },
       {
         "builder": "Perry Homes",
         "deadline": "2026-08-31",
-        "offer": "Up to $50,000 in total incentives -- Low interest rate of 5.49% (5.555% APR) via interest "
+        "offer": "Up to $50,000 in total incentives -- Low interest rate of 5.49% (5.178%-5.555% APR) via in"
       }
     ]
   },
-  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
+  "interpretation": "Movement this sweep: 4 improved, 1 reduced. Market-wide score unchanged.",
   "buyerAction": "Nearest advertised deadline: D.R. Horton (2026-08-31). If that builder is on your list, get the current terms in writing today.",
   "affectedSegments": [
     "buyers considering: D.R. Horton, KB Home, Perry Homes",
@@ -60,5 +67,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "record-internal"
+  "publishRecommendation": "publish-watchlists"
 }
