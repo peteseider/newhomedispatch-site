@@ -421,3 +421,6 @@
 {"t":"2026-08-28T06:59:38.288Z","runKey":"2026-08-28-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-08-28T17:26:46.907Z","runKey":"2026-08-28-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
 {"t":"2026-08-28T17:26:46.907Z","runKey":"2026-08-28-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-08-29T12:04:15.384Z","runKey":"2026-08-29-AM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-08-29T12:04:15.384Z","runKey":"2026-08-29-AM","type":"lender_tie_changed","id":"inc223","builder":"blackburn-homes","community":"","to":false}
+{"t":"2026-08-29T12:04:15.384Z","runKey":"2026-08-29-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
