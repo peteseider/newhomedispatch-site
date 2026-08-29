@@ -1838,5 +1838,53 @@
     "advertisedValue": 10000,
     "firstFlagged": "2026-08-28",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Blue Oasis Lane",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-08-29",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Whisper Creek Drive",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-08-29",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": "Other Austin-area communities (excl. South Brook)",
+    "advertisedValue": 70000,
+    "firstFlagged": "2026-08-29",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Briarwood Enclave / Lakeside Meadows Premier Executive",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-08-29",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Carillion Premier, Devine Landing, Flora Artistry, Newhaven Premier, Oaks at San Gabriel Premier, Sunfield Premier, Opal Ranch Landmark, Spring Creek Premier (60')",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-29",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Calumet Landmark, Hunters Glen Landmark, Infinity Square Landmark, Opal Ranch Enclave",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-08-29",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
