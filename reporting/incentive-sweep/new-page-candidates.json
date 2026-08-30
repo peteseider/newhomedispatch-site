@@ -1886,5 +1886,21 @@
     "advertisedValue": 15000,
     "firstFlagged": "2026-08-29",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Carillon, Devine Landing, Flora, Newhaven, Oaks at San Gabriel, Sunfield, Opal Ranch, Spring Creek (60')",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-08-30",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Calumet, Hunters Glen, Infinity Square Landmark, Opal Ranch Enclave",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-08-30",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
