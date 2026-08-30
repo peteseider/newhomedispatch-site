@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-08-29T20:25:28-05:00-PM",
-  "generatedAt": "2026-08-29T20:25:28-05:00",
+  "sweepId": "2026-08-30T06:52:01-05:00-AM",
+  "generatedAt": "2026-08-30T06:52:01-05:00",
   "facts": {
     "score": 65,
     "band": "High",
@@ -21,10 +21,10 @@
       "Empire Communities",
       "Risewell Homes (formerly Landsea)",
       "MODUS / The George (condos)",
+      "Megatel Homes",
       "Giddens Homes"
     ],
     "reduced": [
-      "Blackburn Homes",
       "D.R. Horton"
     ],
     "deadlinesNext7d": [
@@ -44,21 +44,21 @@
         "offer": "credit-flex $50000"
       },
       {
+        "builder": "Megatel Homes",
+        "deadline": "2026-08-31",
+        "offer": "rate-special $12000"
+      },
+      {
         "builder": "KB Home",
         "deadline": "2026-08-31",
         "offer": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional, requires KBHS Home Loans an"
-      },
-      {
-        "builder": "Perry Homes",
-        "deadline": "2026-08-31",
-        "offer": "Up to $50,000 in total incentives -- Low interest rate of 5.49% (5.178%-5.555% APR) via in"
       }
     ]
   },
-  "interpretation": "Movement this sweep: 5 improved, 2 reduced. Market-wide score unchanged.",
+  "interpretation": "Movement this sweep: 6 improved, 1 reduced. Market-wide score unchanged.",
   "buyerAction": "Nearest advertised deadline: D.R. Horton (2026-08-31). If that builder is on your list, get the current terms in writing today.",
   "affectedSegments": [
-    "buyers considering: D.R. Horton, KB Home, Perry Homes",
+    "buyers considering: D.R. Horton, KB Home, Perry Homes, Megatel Homes",
     "buyers purchasing within 30 days"
   ],
   "confidence": "All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.",
