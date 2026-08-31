@@ -435,3 +435,5 @@
 {"t":"2026-08-31T11:52:06.244Z","runKey":"2026-08-31-AM","type":"deadline_extended","id":"inc219","builder":"empire-communities","community":"","from":"available for a limited time","to":"none stated"}
 {"t":"2026-08-31T11:52:06.244Z","runKey":"2026-08-31-AM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
 {"t":"2026-08-31T11:52:06.244Z","runKey":"2026-08-31-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-08-31T17:26:48.188Z","runKey":"2026-08-31-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-08-31T17:26:48.188Z","runKey":"2026-08-31-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
