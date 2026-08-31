@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-08-31T01:26:42.904Z",
-  "runKey": "2026-08-30-PM",
-  "observationRuns": 89,
+  "lastUpdated": "2026-08-31T11:52:06.244Z",
+  "runKey": "2026-08-31-AM",
+  "observationRuns": 90,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc220",
@@ -131,7 +131,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 70,
+      "expiredButDisplayedObservations": 71,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -142,14 +142,14 @@
       "offersTracked": 3
     },
     "empire-communities": {
-      "deadlineExtensions": 1,
+      "deadlineExtensions": 2,
       "expiredButDisplayedObservations": 29,
       "deadlinesSet": 0,
       "offersTracked": 4
     },
     "terrata-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 54,
+      "expiredButDisplayedObservations": 55,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
