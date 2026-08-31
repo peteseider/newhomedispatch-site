@@ -1902,5 +1902,53 @@
     "advertisedValue": 15000,
     "firstFlagged": "2026-08-30",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Blue Oasis Lane (Jasmine, 328)",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-08-31",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Whisper Creek Drive (Poppy, Unit 224)",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-08-31",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Blue Oasis Lane (Iris, 364)",
+    "advertisedValue": 71545,
+    "firstFlagged": "2026-08-31",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Wolf Ranch (71')",
+    "advertisedValue": 105000,
+    "firstFlagged": "2026-08-31",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Briarwood Enclave",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-08-31",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Lakeside Meadows Premier Executive",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-08-31",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
