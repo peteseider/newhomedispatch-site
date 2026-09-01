@@ -1950,5 +1950,37 @@
     "advertisedValue": 25000,
     "firstFlagged": "2026-08-31",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Kyle, TX (Holly and Sycamore plans)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-01",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Whisper Creek Drive (Georgetown); Blue Oasis Lane (Leander)",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-09-01",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": "Austin-area (site-wide)",
+    "advertisedValue": 2500,
+    "firstFlagged": "2026-09-01",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "stylecraft-homes",
+    "builder": "Stylecraft Homes",
+    "community": "Adaline Crossing (McGregor), Eastern Wells (Jarrell), Spring Lake (Huntsville)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-01",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
