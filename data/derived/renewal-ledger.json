@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-09-01T01:56:41.059Z",
-  "runKey": "2026-08-31-PM",
-  "observationRuns": 91,
+  "lastUpdated": "2026-09-01T13:01:17.873Z",
+  "runKey": "2026-09-01-AM",
+  "observationRuns": 92,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc220",
@@ -40,7 +40,7 @@
       "offersTracked": 3
     },
     "kb-home": {
-      "deadlineExtensions": 1,
+      "deadlineExtensions": 2,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 4
@@ -131,7 +131,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 72,
+      "expiredButDisplayedObservations": 73,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -142,14 +142,14 @@
       "offersTracked": 3
     },
     "empire-communities": {
-      "deadlineExtensions": 2,
+      "deadlineExtensions": 3,
       "expiredButDisplayedObservations": 29,
       "deadlinesSet": 0,
       "offersTracked": 4
     },
     "terrata-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 56,
+      "expiredButDisplayedObservations": 57,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
@@ -280,13 +280,13 @@
       "offersTracked": 2
     },
     "giddens-homes": {
-      "deadlineExtensions": 3,
+      "deadlineExtensions": 4,
       "expiredButDisplayedObservations": 29,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "megatel-homes": {
-      "deadlineExtensions": 2,
+      "deadlineExtensions": 3,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 1
