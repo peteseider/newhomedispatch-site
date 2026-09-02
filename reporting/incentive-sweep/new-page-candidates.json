@@ -1982,5 +1982,53 @@
     "advertisedValue": 20000,
     "firstFlagged": "2026-09-01",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Holly / Sycamore / Juniper II (select homes)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-02",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Iris (model)",
+    "advertisedValue": 71545,
+    "firstFlagged": "2026-09-02",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Jasmine (model)",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-09-02",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Parkside on the River (70')",
+    "advertisedValue": 60000,
+    "firstFlagged": "2026-09-02",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Lariat (60')",
+    "advertisedValue": 74000,
+    "firstFlagged": "2026-09-02",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "6 Creeks (70')",
+    "advertisedValue": 88000,
+    "firstFlagged": "2026-09-02",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
