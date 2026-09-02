@@ -450,3 +450,5 @@
 {"t":"2026-09-02T11:54:05.331Z","runKey":"2026-09-02-AM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
 {"t":"2026-09-02T11:54:05.331Z","runKey":"2026-09-02-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-09-02T11:54:05.331Z","runKey":"2026-09-02-AM","type":"lender_tie_changed","id":"inc245","builder":"megatel-homes","community":"","to":true}
+{"t":"2026-09-02T18:52:13.786Z","runKey":"2026-09-02-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-09-02T18:52:13.786Z","runKey":"2026-09-02-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
