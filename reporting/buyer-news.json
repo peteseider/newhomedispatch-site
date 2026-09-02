@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01",
+  "updated": "2026-09-02",
   "sectionTitle": "What changed beyond the sales office",
   "primary": {
     "headline": "Hays County Secures Over $39 Million for Railroad Overpass at Centerpoint Road",
@@ -9,12 +9,12 @@
     "geography": ["Kyle", "Hays County", "South Austin I-35 corridor"],
     "topics": ["infrastructure", "transportation", "grade-separated crossing", "rail safety", "growth corridor"],
     "affectedAreas": ["Kyle", "Hays County", "South Austin I-35 corridor"],
-    "summary": "The Federal Railroad Administration's Federal-State Partnership for Intercity Passenger Rail Program awarded Hays County a $39.23 million grant (80% of project cost) to build a grade-separated overpass over the Union Pacific Railroad crossing at Centerpoint Road, extending from I-35 to FM 2439/Hunter Road. Hays County and Union Pacific will fund the remaining 20% (about $9.81 million). Preliminary engineering and schematic design are complete; right-of-way acquisition and final design are underway. County officials cited faster, safer emergency-response routing as a key driver.",
-    "buyerImplication": "This is new, corridor-specific infrastructure investment in one of the fastest-growing residential submarkets in Central Texas (Kyle/Hays County, home to active communities from Blackburn Homes, DRB Homes, Century Communities, and others). A grade-separated crossing removing train-vehicle conflicts on a road connecting I-35 to FM 2439 signals continued public investment in the corridor's road capacity and emergency-response times, though the article does not give a construction start or completion date -- the project is still in the right-of-way/design phase, so it won't resolve current at-grade crossing delays anytime soon.",
-    "buyerAction": "Buyers evaluating new-construction communities near Centerpoint Road, I-35, or FM 2439 in the Kyle/Hays County area should ask their builder or the county for the project's expected construction timeline before assuming near-term relief from rail-crossing delays, and should factor current at-grade crossing wait times into daily-commute expectations until construction begins.",
+    "summary": "The Federal Railroad Administration's Federal-State Partnership for Intercity Passenger Rail Program awarded Hays County a $39.23 million grant (80% of project cost) to build a grade-separated overpass over the Union Pacific Railroad crossing at Centerpoint Road, extending from I-35 to FM 2439/Hunter Road. Hays County and Union Pacific will fund the remaining 20% (about $9.81 million). Preliminary engineering and schematic design are complete; right-of-way acquisition and final design are underway.",
+    "buyerImplication": "New, corridor-specific infrastructure investment in one of the fastest-growing residential submarkets in Central Texas (Kyle/Hays County). Still in the right-of-way/design phase, so it won't resolve current at-grade crossing delays anytime soon.",
+    "buyerAction": "Buyers evaluating new-construction communities near Centerpoint Road, I-35, or FM 2439 in the Kyle/Hays County area should ask their builder or the county for the project's expected construction timeline before assuming near-term relief from rail-crossing delays.",
     "localityScore": 27, "buyerImpactScore": 14, "newConstructionScore": 10, "recencyScore": 15, "sourceQualityScore": 9, "totalScore": 75,
-    "confidence": "High confidence -- Community Impact reporting, published 2026-09-01 (same-day). Replaces the Spectrum News 1 incentives-trend piece after a 20-run hold. Note: the source article does not itself discuss home buying or named residential developments -- the new-construction connection is NHD's editorial framing of corridor growth plus infrastructure investment, and the article gives no construction timeline.",
-    "reviewedAt": "2026-09-01",
+    "confidence": "High confidence -- Community Impact reporting, published 2026-09-01; re-verified 2026-09-02 on the mandatory refresh check, held for a 2nd run after a fresh search pass found no fresher qualifying story (the closest candidate was a stale January builder press release). The new-construction connection is NHD's editorial framing of corridor growth plus infrastructure investment; the article gives no construction timeline.",
+    "reviewedAt": "2026-09-02",
     "status": "approved"
   },
   "secondary": []
