@@ -1,11 +1,11 @@
 {
   "schema": "nhd-rate-spread-v1",
   "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
-  "lastUpdated": "2026-09-03T15:03:51.434Z",
-  "runKey": "2026-09-03-AM",
+  "lastUpdated": "2026-09-03T18:50:11.738Z",
+  "runKey": "2026-09-03-PM",
   "pmms": {
-    "week": "8/27/2026",
-    "rate30": 6.66
+    "week": "9/3/2026",
+    "rate30": 6.71
   },
   "offers": [
     {
@@ -13,98 +13,98 @@
       "builder": "brohn-homes",
       "community": "",
       "advertisedRate": 2.75,
-      "spreadBps": -391
+      "spreadBps": -396
     },
     {
       "id": "inc204",
       "builder": "coventry",
       "community": "",
       "advertisedRate": 4.99,
-      "spreadBps": -167
+      "spreadBps": -172
     },
     {
       "id": "inc214",
       "builder": "tri-pointe",
       "community": "",
       "advertisedRate": 4.99,
-      "spreadBps": -167
+      "spreadBps": -172
     },
     {
       "id": "inc225",
       "builder": "aha-dream-homes",
       "community": "",
       "advertisedRate": 3.75,
-      "spreadBps": -291
+      "spreadBps": -296
     },
     {
       "id": "inc228",
       "builder": "brookfield",
       "community": "",
       "advertisedRate": 1.99,
-      "spreadBps": -467
+      "spreadBps": -472
     },
     {
       "id": "inc229",
       "builder": "coventry",
       "community": "",
       "advertisedRate": 4.99,
-      "spreadBps": -167
+      "spreadBps": -172
     },
     {
       "id": "inc232",
       "builder": "david-weekley",
       "community": "",
       "advertisedRate": 2.99,
-      "spreadBps": -367
+      "spreadBps": -372
     },
     {
       "id": "inc235",
       "builder": "starlight-homes",
       "community": "",
       "advertisedRate": 3.25,
-      "spreadBps": -341
+      "spreadBps": -346
     },
     {
       "id": "inc238",
       "builder": "scott-felder-homes",
       "community": "",
       "advertisedRate": 4.99,
-      "spreadBps": -167
+      "spreadBps": -172
     },
     {
       "id": "inc300",
       "builder": "ashton-woods",
       "community": "",
       "advertisedRate": 3.99,
-      "spreadBps": -267
+      "spreadBps": -272
     },
     {
       "id": "inc301",
       "builder": "brookfield",
       "community": "",
       "advertisedRate": 1.99,
-      "spreadBps": -467
+      "spreadBps": -472
     },
     {
       "id": "inc308",
       "builder": "toll-brothers",
       "community": "",
       "advertisedRate": 6.04,
-      "spreadBps": -62
+      "spreadBps": -67
     },
     {
       "id": "inc314",
       "builder": "milestone-community-builders",
       "community": "",
       "advertisedRate": 4.5,
-      "spreadBps": -216
+      "spreadBps": -221
     },
     {
       "id": "inc317",
       "builder": "regency-toll-brothers",
       "community": "",
       "advertisedRate": 6.04,
-      "spreadBps": -62
+      "spreadBps": -67
     }
   ],
   "note": "Advertised rates are builder claims parsed from offer text; PMMS is the weekly market average. Negative spread = advertised below market (the buydown teaser)."
