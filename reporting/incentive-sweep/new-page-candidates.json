@@ -2030,5 +2030,141 @@
     "advertisedValue": 88000,
     "firstFlagged": "2026-09-02",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Holly/Sycamore/Juniper II",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Iris",
+    "advertisedValue": 71545,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Poppy",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Jasmine",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Poppy (2nd listing)",
+    "advertisedValue": 71351,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Parkside on the River",
+    "advertisedValue": 82000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Lariat",
+    "advertisedValue": 84000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Wolf Ranch",
+    "advertisedValue": 105000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "6 Creeks",
+    "advertisedValue": 88000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Castlewood",
+    "advertisedValue": 47000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Parmer Ranch",
+    "advertisedValue": 73000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Briarwood",
+    "advertisedValue": 6000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Palmera Ridge",
+    "advertisedValue": 61000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "The Grove at Blackhawk",
+    "advertisedValue": 80000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "meritage-homes",
+    "builder": "Meritage Homes",
+    "community": null,
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Turner's Crossing, Flora, Lariat",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Park Central Paired Homes",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-03",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
