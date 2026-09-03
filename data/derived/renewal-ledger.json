@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-09-03T01:17:07.795Z",
-  "runKey": "2026-09-02-PM",
-  "observationRuns": 95,
+  "lastUpdated": "2026-09-03T11:57:47.074Z",
+  "runKey": "2026-09-03-AM",
+  "observationRuns": 96,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc220",
@@ -22,7 +22,7 @@
   ],
   "builders": {
     "dr-horton": {
-      "deadlineExtensions": 0,
+      "deadlineExtensions": 1,
       "expiredButDisplayedObservations": 2,
       "deadlinesSet": 0,
       "offersTracked": 11
@@ -40,7 +40,7 @@
       "offersTracked": 3
     },
     "kb-home": {
-      "deadlineExtensions": 2,
+      "deadlineExtensions": 3,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 4
@@ -131,7 +131,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 76,
+      "expiredButDisplayedObservations": 77,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -142,14 +142,14 @@
       "offersTracked": 3
     },
     "empire-communities": {
-      "deadlineExtensions": 3,
+      "deadlineExtensions": 4,
       "expiredButDisplayedObservations": 29,
       "deadlinesSet": 0,
       "offersTracked": 4
     },
     "terrata-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 60,
+      "expiredButDisplayedObservations": 61,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
@@ -190,7 +190,7 @@
       "offersTracked": 1
     },
     "united-built-homes": {
-      "deadlineExtensions": 0,
+      "deadlineExtensions": 1,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 3
@@ -298,7 +298,7 @@
       "offersTracked": 1
     },
     "modus-the-george": {
-      "deadlineExtensions": 2,
+      "deadlineExtensions": 3,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 1

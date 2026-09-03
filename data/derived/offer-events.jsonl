@@ -452,3 +452,10 @@
 {"t":"2026-09-02T11:54:05.331Z","runKey":"2026-09-02-AM","type":"lender_tie_changed","id":"inc245","builder":"megatel-homes","community":"","to":true}
 {"t":"2026-09-02T18:52:13.786Z","runKey":"2026-09-02-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
 {"t":"2026-09-02T18:52:13.786Z","runKey":"2026-09-02-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-09-03T11:57:47.074Z","runKey":"2026-09-03-AM","type":"deadline_extended","id":"inc210","builder":"kb-home","community":"","from":"Purchase agreement by 9/30/26","to":"sign purchase agreement by 9/30/26"}
+{"t":"2026-09-03T11:57:47.074Z","runKey":"2026-09-03-AM","type":"deadline_extended","id":"inc219","builder":"empire-communities","community":"","from":"available for a limited time","to":"none stated"}
+{"t":"2026-09-03T11:57:47.074Z","runKey":"2026-09-03-AM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-09-03T11:57:47.074Z","runKey":"2026-09-03-AM","type":"deadline_extended","id":"inc222","builder":"united-built-homes","community":"","from":"limited number of new home starts, no end date given","to":"none stated (limited number of new home starts)"}
+{"t":"2026-09-03T11:57:47.074Z","runKey":"2026-09-03-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-09-03T11:57:47.074Z","runKey":"2026-09-03-AM","type":"deadline_extended","id":"inc244","builder":"modus-the-george","community":"","from":"limited time offer","to":"none stated"}
+{"t":"2026-09-03T11:57:47.074Z","runKey":"2026-09-03-AM","type":"deadline_extended","id":"inc246","builder":"dr-horton","community":"","from":"Contract on/after 07/10/26; close by 09/30/26","to":"contract on or after 07/10/26, close by 09/30/26"}
