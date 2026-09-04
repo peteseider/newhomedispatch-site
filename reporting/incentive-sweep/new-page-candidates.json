@@ -2166,5 +2166,13 @@
     "advertisedValue": 20000,
     "firstFlagged": "2026-09-03",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "meritage-homes",
+    "builder": "Meritage Homes",
+    "community": "Multiple Austin-area communities",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-09-04",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
