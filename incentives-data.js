@@ -18,9 +18,10 @@ window.NHD_INCENTIVES = {
     "2026-08-31",
     "2026-09-01",
     "2026-09-02",
-    "2026-09-03"
+    "2026-09-03",
+    "2026-09-04"
   ],
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -395,7 +396,7 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "KB Home",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "permanent-buydown",
+      "incentiveType": "closing-costs",
       "advertisedValue": 5000,
       "transferability": null,
       "buyerValueScore": null,
@@ -403,10 +404,10 @@ window.NHD_INCENTIVES = {
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "sign purchase agreement by 9/30/26",
+      "expires": "9/30/26",
       "source": "https://www.kbhome.com/special-low-rates",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-03",
+      "lastObserved": "2026-09-04",
       "prevValue": null,
       "delta": 5000,
       "history": [
@@ -423,7 +424,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-09-03.",
+      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-09-04.",
       "expired": false,
       "run": "AM"
     },
@@ -728,20 +729,20 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Empire Communities",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "upgrades",
-      "advertisedValue": 50000,
+      "incentiveType": "credit-flex",
+      "advertisedValue": 30000,
       "transferability": "Low",
       "buyerValueScore": 27500,
       "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated",
+      "expires": "Contract Period August 31 - September 30 (closing by October 31)",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-03",
-      "prevValue": 39992,
-      "delta": 10008,
+      "lastObserved": "2026-09-04",
+      "prevValue": 50000,
+      "delta": -20000,
       "history": [
         {
           "date": "2026-07-27",
@@ -802,9 +803,13 @@ window.NHD_INCENTIVES = {
         {
           "value": 39992,
           "asOf": "2026-08-27"
+        },
+        {
+          "value": 50000,
+          "asOf": "2026-09-04"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-09-03.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-09-04.",
       "expired": false,
       "run": "AM"
     },
@@ -898,7 +903,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated (limited number of new home starts)",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-03",
+      "lastObserved": "2026-09-04",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -911,7 +916,7 @@ window.NHD_INCENTIVES = {
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-09-03.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-09-04.",
       "expired": false,
       "run": "AM"
     },
@@ -1356,7 +1361,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://risewellhomes.com/promotions/region/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-03",
+      "lastObserved": "2026-09-04",
       "prevValue": null,
       "delta": 10000,
       "history": [
@@ -1369,7 +1374,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-09-03.",
+      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-09-04.",
       "expired": false,
       "run": "AM"
     },
@@ -2161,7 +2166,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-03",
+      "lastObserved": "2026-09-04",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2174,7 +2179,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-09-03.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-09-04.",
       "expired": false,
       "run": "AM"
     },
@@ -2198,7 +2203,7 @@ window.NHD_INCENTIVES = {
       "expires": "9/30",
       "source": "https://www.megatelhomes.com/incentives",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-03",
+      "lastObserved": "2026-09-04",
       "prevValue": 1500,
       "delta": 10500,
       "history": [
@@ -2235,7 +2240,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-08-27"
         }
       ],
-      "note": "Source: https://www.megatelhomes.com/incentives (builder-advertised) verified 2026-09-03.",
+      "note": "Source: https://www.megatelhomes.com/incentives (builder-advertised) verified 2026-09-04.",
       "expired": false,
       "run": "AM"
     },
@@ -2259,7 +2264,7 @@ window.NHD_INCENTIVES = {
       "expires": "contract on or after 07/10/26, close by 09/30/26",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-03",
+      "lastObserved": "2026-09-04",
       "prevValue": 6518,
       "delta": -21,
       "history": [
@@ -2276,7 +2281,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-08-03"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-09-03.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-09-04.",
       "expired": false,
       "run": "AM"
     },
@@ -2300,7 +2305,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-03",
+      "lastObserved": "2026-09-04",
       "prevValue": null,
       "delta": 40000,
       "history": [
@@ -2313,7 +2318,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-09-03.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-09-04.",
       "expired": false,
       "run": "AM"
     },
@@ -2391,11 +2396,11 @@ window.NHD_INCENTIVES = {
       "community": null,
       "promo": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional, requires KBHS Home Loans and 20% down. Purchase agreement must be signed by 9/30/26.",
       "expires": "Purchase agreement by 9/30/26",
-      "lastObserved": "2026-09-03",
+      "lastObserved": "2026-09-04",
       "firstObserved": "2026-08-06 (per prior-run notes)",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "Standing permanent-buydown tier, unchanged 27th+ consecutive run."
+      "note": "Standing permanent-buydown tier, unchanged 28th+ consecutive run. NEW this run: a separate $5,000 closing-cost credit now bundled with this rate on the same page (see incentives table)."
     },
     {
       "id": "risewell-homes-399",
@@ -2403,8 +2408,8 @@ window.NHD_INCENTIVES = {
       "community": null,
       "promo": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate PLUS up to $10,000 towards closing costs on select neighborhoods and homes.",
       "expires": "none stated",
-      "lastObserved": "2026-09-03",
-      "firstObserved": "unknown (26th+ consecutive run)",
+      "lastObserved": "2026-09-04",
+      "firstObserved": "unknown (27th+ consecutive run)",
       "confidence": "unverified",
       "source": "Builder-reported",
       "note": "Unchanged. Same page also discloses a structurally separate 1/0 step-up buydown at the identical 3.99% headline, correctly distinguished this run."

@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-09-03T20:08:22-05:00-PM",
-  "generatedAt": "2026-09-03T20:08:22-05:00",
+  "sweepId": "2026-09-04T06:57:09-05:00-AM",
+  "generatedAt": "2026-09-04T06:57:09-05:00",
   "facts": {
     "score": 65,
     "band": "High",
@@ -18,18 +18,18 @@
     "newOffers": [],
     "improved": [
       "KB Home",
-      "Empire Communities",
       "Risewell Homes (formerly Landsea)",
       "MODUS / The George (condos)",
       "Megatel Homes",
       "Giddens Homes"
     ],
     "reduced": [
+      "Empire Communities",
       "D.R. Horton"
     ],
     "deadlinesNext7d": []
   },
-  "interpretation": "Movement this sweep: 6 improved, 1 reduced. Market-wide score unchanged.",
+  "interpretation": "Movement this sweep: 5 improved, 2 reduced. Market-wide score unchanged.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
