@@ -2174,5 +2174,61 @@
     "advertisedValue": 10000,
     "firstFlagged": "2026-09-04",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Multiple quick move-ins (Holly, Sycamore, Juniper II)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-08",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Iris (quick move-in, 364 Blue Oasis Ln)",
+    "advertisedValue": 71545,
+    "firstFlagged": "2026-09-08",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "david-weekley-homes",
+    "builder": "David Weekley Homes",
+    "community": "Headwaters (referenced)",
+    "advertisedValue": 2500,
+    "firstFlagged": "2026-09-08",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "del-webb",
+    "builder": "Del Webb",
+    "community": "Sun City Texas - Palmary Series",
+    "advertisedValue": 41920,
+    "firstFlagged": "2026-09-08",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Multiple Austin-area communities (highest caps: Hawkes Landing Classic, Leander)",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-09-08",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "various Austin-area DRB communities",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-09-08",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "highland-homes",
+    "builder": "Highland Homes",
+    "community": "6 Creeks at Waterridge",
+    "advertisedValue": 50000,
+    "firstFlagged": "2026-09-08",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
