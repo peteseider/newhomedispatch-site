@@ -2230,5 +2230,61 @@
     "advertisedValue": 50000,
     "firstFlagged": "2026-09-08",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": null,
+    "advertisedValue": 105000,
+    "firstFlagged": "2026-09-09",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Oaks at San Gabriel Premier",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-09-09",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Sunfield Premier",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-09-09",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Devine Landing",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-09-09",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Calumet, Carillon, Flora, Hunters Glen, and others",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-09",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Briarwood, Opal Ranch, Whisper South",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-09-09",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "stylecraft-homes",
+    "builder": "Stylecraft Homes",
+    "community": "308 Boatright Boulevard",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-09-09",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
