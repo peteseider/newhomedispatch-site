@@ -492,3 +492,5 @@
 {"t":"2026-09-09T11:56:10.127Z","runKey":"2026-09-09-AM","type":"deadline_set","id":"inc226","builder":"ashton-woods","community":"","expires":"For a limited time (no specific end date stated)"}
 {"t":"2026-09-09T11:56:10.127Z","runKey":"2026-09-09-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-09-09T11:56:10.127Z","runKey":"2026-09-09-AM","type":"deadline_extended","id":"inc246","builder":"dr-horton","community":"","from":"Contract on or after 07/10/26, close by 09/30/26","to":"Contracts on or after 07/10/26; must close by 09/30/26"}
+{"t":"2026-09-09T18:47:55.325Z","runKey":"2026-09-09-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-09-09T18:47:55.325Z","runKey":"2026-09-09-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
