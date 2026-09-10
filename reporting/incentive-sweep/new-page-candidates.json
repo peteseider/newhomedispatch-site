@@ -2286,5 +2286,125 @@
     "advertisedValue": 25000,
     "firstFlagged": "2026-09-09",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "ashton-woods",
+    "builder": "Ashton Woods",
+    "community": "Multiple Austin-area communities",
+    "advertisedValue": 70000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Iris (364 Blue Oasis Ln)",
+    "advertisedValue": 71545,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Poppy (5900 Whisper Crk Dr, Unit 224)",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Holly (141 Corral Cv)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Jasmine (328 Blue Oasis Ln)",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Poppy (356 Blue Oasis Ln)",
+    "advertisedValue": 71351,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Jasmine (352 Blue Oasis Ln)",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Bluebonnet (5900 Whisper Crk Dr, Unit 222)",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Poppy (5900 Whisper Crk Dr, Unit 410)",
+    "advertisedValue": 26290,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Rose (5900 Whisper Crk Dr, Unit 413)",
+    "advertisedValue": 54000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Sycamore (131 Buckle Cove & 105 Donn Brooks Dr)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Sycamore (158 Brooks Ranch Dr)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Juniper II (149 Lasso Cv)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Hawkes Landing Classic (Leander) / Oaks San Gabriel Premier (Georgetown) / Sunfield Premier (Buda) / Devine Landing (Leander) / Lakeside Meadows Premier Exec (Pflugerville) / others",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "pacesetter-homes",
+    "builder": "Pacesetter Homes",
+    "community": "All Austin Division except Center 45",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-09-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
