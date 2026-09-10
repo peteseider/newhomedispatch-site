@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-09-10T10:03:12-05:00-AM",
-  "generatedAt": "2026-09-10T10:03:12-05:00",
+  "sweepId": "2026-09-10T13:37:44-05:00-PM",
+  "generatedAt": "2026-09-10T13:37:44-05:00",
   "facts": {
     "score": 65,
     "band": "High",
@@ -10,8 +10,8 @@
     "offersLive": 59,
     "buildersLive": 37,
     "expired": 13,
-    "rateDaily": 6.97,
-    "ratePmmsWeekly": 6.71
+    "rateDaily": 7.07,
+    "ratePmmsWeekly": 6.76
   },
   "changes": {
     "count": 6,
