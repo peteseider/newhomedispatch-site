@@ -128,6 +128,26 @@
   .cta-strip p{color:var(--on-navy);font-size:13.5px;max-width:56ch;margin:0 auto 14px;}
   .cta-strip a{display:inline-block;background:var(--blueprint);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:11px 20px;border-radius:5px;}
 
+  /* email capture */
+  .capture{border:1.5px solid var(--blueprint);border-radius:8px;background:#F5F7FE;padding:18px 20px;margin:22px 0 4px;}
+  .capture .cap-kick{font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blueprint);font-weight:700;margin-bottom:6px;}
+  .capture .cap-head{font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:-.01em;margin-bottom:4px;}
+  .capture .cap-sub{font-size:13px;color:#5c6672;line-height:1.55;margin:0 0 12px;max-width:62ch;}
+  .cap-form{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch;}
+  .cap-form input[type=email]{flex:1 1 220px;min-width:0;border:1px solid #c6cede;border-radius:5px;padding:11px 12px;font-size:14px;font-family:'Inter',sans-serif;background:#fff;}
+  .cap-form input[type=email]:focus{outline:2px solid var(--blueprint);outline-offset:0;border-color:var(--blueprint);}
+  .cap-form button{flex:0 0 auto;background:var(--blueprint);color:#fff;border:0;border-radius:5px;font-weight:700;font-size:13.5px;padding:11px 18px;cursor:pointer;font-family:'Inter',sans-serif;}
+  .cap-form button:hover{background:var(--blueprint-light);}
+  .capture .cap-fine{font-family:'Inter',sans-serif;font-size:10.5px;color:#7d7d7d;margin:9px 0 0;line-height:1.5;}
+  .capture .cap-fine a{color:#5c6672;text-decoration:underline;}
+  .cap-done{font-size:14px;font-weight:700;color:var(--good,#0f7a4d);padding:10px 0 2px;}
+  .cap-hp{position:absolute;left:-9999px;height:0;overflow:hidden;}
+  .cta-strip .cap-form{justify-content:center;max-width:520px;margin:0 auto;}
+  .cta-strip .cap-fine{font-family:'Inter',sans-serif;font-size:10.5px;color:#8fa8d9;margin:10px 0 0;}
+  .cta-strip .cap-alt{font-size:12.5px;margin-top:12px;}
+  .cta-strip .cap-alt a{background:none;padding:0;color:#9DBBFF;font-weight:600;font-size:12.5px;}
+  .cta-strip .cap-done{color:#7fd6a9;}
+
   footer.foot{margin-top:38px;background:var(--navy);padding:26px 24px;border-top:2px solid var(--blueprint);text-align:center;}
   footer.foot .wm{justify-content:center;font-size:19px;margin-bottom:8px;}
   .foot-legal{color:var(--on-navy);font-size:11.5px;max-width:680px;margin:10px auto 0;line-height:1.6;}
@@ -557,6 +577,21 @@ header:has(.site-nav){position:sticky;top:0;z-index:300}
       <p id="one-move"><span class="hl">Trophy Signature's 1.99% first-year buydown ends Friday, July 24</span>, the single offer forcing a decision in the next seven days. If a Trophy home is on your list, get written terms today. Everything else runs to July 31 or later.</p>
     </div>
 
+    <div class="capture" id="capture-inline">
+      <div class="cap-kick">Free · every morning it changes</div>
+      <div class="cap-head">Get this sheet in your inbox.</div>
+      <p class="cap-sub">The morning's verified incentive changes, the day's one move, and the Friday Weekly Dispatch. One email, no builder mailing lists, unsubscribe anytime.</p>
+      <form name="weekly-dispatch" method="POST" action="/thanks-dispatch.html" data-netlify="true" netlify-honeypot="bot-field" class="cap-form" data-capctx="hot_sheet_inline">
+        <input type="hidden" name="form-name" value="weekly-dispatch">
+        <input type="hidden" name="pref_weekly" value="yes">
+        <input type="hidden" name="pref_dailyhotsheet" value="yes">
+        <p class="cap-hp" aria-hidden="true"><label>Leave blank: <input name="bot-field" tabindex="-1"></label></p>
+        <input type="email" name="email" required placeholder="you@email.com" autocomplete="email" aria-label="Email address">
+        <button type="submit">Send me the morning read &rarr;</button>
+      </form>
+      <p class="cap-fine">Want to pick exactly what you get, or add deal alerts by area? <a href="/preference-center">Choose your updates &rarr;</a></p>
+    </div>
+
   </div>
 
   <div style="padding:18px 24px 0;" id="buying-power">
@@ -725,8 +760,17 @@ header:has(.site-nav){position:sticky;top:0;z-index:300}
 
     <div class="cta-strip">
       <h3>Get the Terminal before you tour</h3>
-      <p>Open it every morning, or have the morning read sent to you, and choose exactly what you want: this Daily Hot Sheet, the Friday Weekly Dispatch, or both.</p>
-      <a href='/preference-center'>Choose your updates →</a>
+      <p>Have the morning read sent to you: this Daily Hot Sheet's verified changes plus the Friday Weekly Dispatch. One email, never a builder mailing list.</p>
+      <form name="weekly-dispatch" method="POST" action="/thanks-dispatch.html" data-netlify="true" netlify-honeypot="bot-field" class="cap-form" data-capctx="hot_sheet_bottom">
+        <input type="hidden" name="form-name" value="weekly-dispatch">
+        <input type="hidden" name="pref_weekly" value="yes">
+        <input type="hidden" name="pref_dailyhotsheet" value="yes">
+        <p class="cap-hp" aria-hidden="true"><label>Leave blank: <input name="bot-field" tabindex="-1"></label></p>
+        <input type="email" name="email" required placeholder="you@email.com" autocomplete="email" aria-label="Email address">
+        <button type="submit">Send me the morning read &rarr;</button>
+      </form>
+      <p class="cap-fine">We never share your address. Unsubscribe anytime.</p>
+      <p class="cap-alt"><a href='/preference-center'>Or choose exactly which updates you get →</a></p>
     </div>
     <p style="text-align:center;font-size:13.5px;margin:16px 0 0;"><a href='/buyer-strategy-call' onclick='try{window.NHD&&NHD.trackEvent&&NHD.trackEvent(\'buyerhelp_click\',{from:\'terminal\'})}catch(e){}'>Compare the real cost of these offers with an independent buyer representative →</a></p>
   </div>
@@ -772,6 +816,24 @@ header:has(.site-nav){position:sticky;top:0;z-index:300}
   var extra = [];        // canon names beyond the curated six, added once live data lands
   function el(id){return document.getElementById(id);}
   function track(n,p){try{window.NHD&&NHD.trackEvent&&NHD.trackEvent(n,p||{});}catch(e){}}
+
+  // Email capture: submit the registered Netlify "weekly-dispatch" form in place,
+  // swap in a confirmation on success, fall back to the normal POST if fetch fails.
+  document.querySelectorAll('form.cap-form').forEach(function(f){
+    f.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var btn=f.querySelector('button'); if(btn){btn.disabled=true;btn.textContent='Signing you up…';}
+      var body=new URLSearchParams(new FormData(f)).toString();
+      fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body})
+        .then(function(r){ if(!r.ok) throw new Error(r.status);
+          track('weekly_dispatch_signup',{context:f.getAttribute('data-capctx')||'hot_sheet'});
+          var d=document.createElement('div'); d.className='cap-done';
+          d.textContent='You’re in. The next morning read is on its way to your inbox.';
+          f.parentNode.replaceChild(d,f);
+        })
+        .catch(function(){ if(btn){btn.disabled=false;btn.textContent='Send me the morning read →';} f.submit(); }); // f.submit() bypasses this listener, falling back to the normal page POST
+    });
+  });
   function save(){ try { localStorage.setItem(LS, JSON.stringify(watch)); } catch(e){} }
   function escA(x){ return String(x==null?'':x).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
