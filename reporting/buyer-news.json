@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-10",
+  "updated": "2026-09-11",
   "sectionTitle": "What changed beyond the sales office",
   "primary": {
     "headline": "From New Construction to Road Closures: 3 Hays County Transportation Updates",
@@ -13,8 +13,8 @@
     "buyerImplication": "Buyers evaluating new-construction communities in the Kyle/San Marcos corridor should expect construction-related traffic and access disruptions into 2027 on and near Center Street and Canyon Road, but the road-bond-funded investment signals continued public infrastructure support for growth in those areas.",
     "buyerAction": "Ask a builder or agent about construction timelines and access routes for any community near Center Street, Canyon Road, or Sessom Creek in Kyle/San Marcos before purchasing.",
     "localityScore": 28, "buyerImpactScore": 18, "newConstructionScore": 14, "recencyScore": 12, "sourceQualityScore": 9, "totalScore": 81,
-    "confidence": "High confidence -- Community Impact reporting, published 2026-08-27; re-verified 2026-09-10, held for a 7th day. This run's scrub checked outlet index pages directly (a Kyle budget story, a Georgetown M/I Homes groundbreaking known only from a sponsored-content mention, and other non-housing items were reviewed and none qualified); a fuller search-based scrub is owed once a search-tool issue clears. Construction timelines are as stated in the source article.",
-    "reviewedAt": "2026-09-10",
+    "confidence": "High confidence -- Community Impact reporting, published 2026-08-27; re-verified 2026-09-11, held for an 8th day after a full search pass (search tooling back to normal this run) found no fresher qualifying story -- the closest candidates, an Aug 4 Hays County development roundup and an unverified Georgetown builder groundbreaking, were older or unconfirmable. Construction timelines are as stated in the source article.",
+    "reviewedAt": "2026-09-11",
     "status": "approved"
   },
   "secondary": []
