@@ -22,9 +22,10 @@ window.NHD_INCENTIVES = {
     "2026-09-04",
     "2026-09-08",
     "2026-09-09",
-    "2026-09-10"
+    "2026-09-10",
+    "2026-09-11"
   ],
-  "updated": "2026-09-10",
+  "updated": "2026-09-11",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -407,10 +408,10 @@ window.NHD_INCENTIVES = {
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Purchase agreement signed by 9/30/26",
+      "expires": "Purchase agreements must be signed by September 30, 2026",
       "source": "https://www.kbhome.com/special-low-rates",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-09",
+      "lastObserved": "2026-09-11",
       "prevValue": null,
       "delta": 5000,
       "history": [
@@ -427,7 +428,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-09-09.",
+      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-09-11.",
       "expired": false,
       "run": "AM"
     },
@@ -740,10 +741,10 @@ window.NHD_INCENTIVES = {
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Contracts dated Aug 31-Sept 30, 2026; close Oct 31, 2026",
+      "expires": "Contracts dated August 31-September 30, closing October 31",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-10",
+      "lastObserved": "2026-09-11",
       "prevValue": 50000,
       "delta": -20000,
       "history": [
@@ -834,9 +835,17 @@ window.NHD_INCENTIVES = {
         {
           "value": 50000,
           "asOf": "2026-09-10"
+        },
+        {
+          "value": 30000,
+          "asOf": "2026-09-10"
+        },
+        {
+          "value": 50000,
+          "asOf": "2026-09-11"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-09-10.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-09-11.",
       "expired": false,
       "run": "AM"
     },
@@ -930,7 +939,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-10",
+      "lastObserved": "2026-09-11",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -943,7 +952,7 @@ window.NHD_INCENTIVES = {
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-09-10.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-09-11.",
       "expired": false,
       "run": "AM"
     },
@@ -1103,27 +1112,31 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Ashton Woods",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "closing-costs",
-      "advertisedValue": 5000,
+      "incentiveType": "price-cut",
+      "advertisedValue": 70000,
       "transferability": null,
       "buyerValueScore": null,
       "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "For a limited time (no specific end date stated)",
-      "source": "https://www.ashtonwoods.com/lp/special-offers",
+      "expires": "October 31, 2026",
+      "source": "https://www.ashtonwoods.com/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-09",
-      "prevValue": null,
-      "delta": 5000,
+      "lastObserved": "2026-09-11",
+      "prevValue": 5000,
+      "delta": 65000,
       "history": [
         {
           "value": null,
           "asOf": "2026-07-27"
+        },
+        {
+          "value": 5000,
+          "asOf": "2026-09-09"
         }
       ],
-      "note": "Source: https://www.ashtonwoods.com/lp/special-offers (builder-advertised) verified 2026-09-09.",
+      "note": "Source: https://www.ashtonwoods.com/austin (builder-advertised) verified 2026-09-11.",
       "expired": false,
       "run": "AM"
     },
@@ -1409,7 +1422,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://risewellhomes.com/promotions/region/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-10",
+      "lastObserved": "2026-09-11",
       "prevValue": null,
       "delta": 10000,
       "history": [
@@ -1422,7 +1435,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-09-10.",
+      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-09-11.",
       "expired": false,
       "run": "AM"
     },
@@ -2214,7 +2227,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-10",
+      "lastObserved": "2026-09-11",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2227,7 +2240,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-09-10.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-09-11.",
       "expired": false,
       "run": "AM"
     },
@@ -2305,14 +2318,14 @@ window.NHD_INCENTIVES = {
       "advertisedValue": 6497,
       "transferability": "Unknown",
       "buyerValueScore": 25000,
-      "lenderTied": "unknown",
+      "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Contracts on/after 07/10/26; close by 09/30/26",
+      "expires": "Contracts on or after 07/10/26; close by 09/30/26",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-10",
+      "lastObserved": "2026-09-11",
       "prevValue": 6518,
       "delta": -21,
       "history": [
@@ -2329,7 +2342,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-08-03"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-09-10.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-09-11.",
       "expired": false,
       "run": "AM"
     },
@@ -2350,10 +2363,10 @@ window.NHD_INCENTIVES = {
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "FOR A LIMITED TIME",
+      "expires": "none stated (limited time)",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-10",
+      "lastObserved": "2026-09-11",
       "prevValue": null,
       "delta": 40000,
       "history": [
@@ -2366,7 +2379,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-09-10.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-09-11.",
       "expired": false,
       "run": "AM"
     },
@@ -2444,8 +2457,8 @@ window.NHD_INCENTIVES = {
       "community": null,
       "promo": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional, requires KBHS Home Loans and 20% down. Purchase agreement must be signed by 9/30/26.",
       "expires": "Purchase agreement by 9/30/26",
-      "lastObserved": "2026-09-10",
-      "firstObserved": "unknown (12th+ consecutive run)",
+      "lastObserved": "2026-09-11",
+      "firstObserved": "unknown (13th+ consecutive run)",
       "confidence": "unverified",
       "source": "Builder-reported",
       "note": "Standing permanent-buydown tier, unchanged."
@@ -2456,11 +2469,11 @@ window.NHD_INCENTIVES = {
       "community": null,
       "promo": "Rate as low as 5.75% (6.410% APR), 30-Year Fixed FHA, requires KBHS Home Loans and 3.5% down. Purchase agreement must be signed by 9/30/26.",
       "expires": "Purchase agreement by 9/30/26",
-      "lastObserved": "2026-09-10",
+      "lastObserved": "2026-09-11",
       "firstObserved": "2026-09-07",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "Unchanged, confirmed for a 4th consecutive run."
+      "note": "Unchanged, confirmed for a 5th consecutive run."
     },
     {
       "id": "risewell-homes-399",
@@ -2468,23 +2481,11 @@ window.NHD_INCENTIVES = {
       "community": null,
       "promo": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate PLUS up to $10,000 towards closing costs on select neighborhoods and homes.",
       "expires": "none stated",
-      "lastObserved": "2026-09-10",
-      "firstObserved": "unknown (33rd+ consecutive run)",
+      "lastObserved": "2026-09-11",
+      "firstObserved": "unknown (34th+ consecutive run)",
       "confidence": "unverified",
       "source": "Builder-reported",
       "note": "Unchanged. Same page also discloses a structurally separate 1/0 step-up buydown at the identical 3.99% headline, correctly distinguished."
-    },
-    {
-      "id": "milestone-shocktober-5875",
-      "builder": "MileStone Community Builders",
-      "community": null,
-      "promo": "Shocktober Sales Event: a remarkable locked interest rate of 5.875% for 30 years, available to qualified buyers.",
-      "expires": "none stated (limited-time/last-chance framing)",
-      "lastObserved": "2026-09-10",
-      "firstObserved": "2026-09-10",
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "NEW this run. Found via search on MileStone's own blog (mymilestone.com), not the standing austinUrl (blue-ribbon-sales-event), which still shows two now-expired ARM specials (Blue Ribbon 7/6 ARM, Yellow Ribbon 5/1 ARM). Explicitly described as locked for the full 30-year term -- meets the permanent-rate bar. Permanent-rate promo set grows 3->4."
     }
   ]
 };
