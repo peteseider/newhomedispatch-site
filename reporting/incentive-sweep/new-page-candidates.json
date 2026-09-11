@@ -2406,5 +2406,69 @@
     "advertisedValue": 10000,
     "firstFlagged": "2026-09-10",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Iris plan, 364 Blue Oasis Ln",
+    "advertisedValue": 71545,
+    "firstFlagged": "2026-09-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Poppy plan, 5900 Whisper Crk Dr Unit 224",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-09-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Holly plan, 141 Corral Cv",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Jasmine plan, 328 Blue Oasis Ln",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-09-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Poppy plan, 356 Blue Oasis Ln",
+    "advertisedValue": 71351,
+    "firstFlagged": "2026-09-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Jasmine plan, 352 Blue Oasis Ln",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-09-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Multiple communities, tiered (see notes)",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-09-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "stylecraft-homes",
+    "builder": "Stylecraft Homes",
+    "community": "Adaline Crossing / Eastern Wells / Spring Lake",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
