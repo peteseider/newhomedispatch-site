@@ -1,13 +1,13 @@
 {
   "schema": "nhd-incentive-half-life-v1",
   "metric": "Median days an advertised offer survives unchanged (offer persistence)",
-  "lastUpdated": "2026-09-11T01:18:28.130Z",
-  "runKey": "2026-09-10-PM",
+  "lastUpdated": "2026-09-11T11:52:59.044Z",
+  "runKey": "2026-09-11-AM",
   "mature": true,
   "maturityNote": null,
   "completedSpansMedianDays": null,
-  "openSpansMedianDays": 45,
-  "completedSpans": 66,
+  "openSpansMedianDays": 46,
+  "completedSpans": 69,
   "openSpans": 48,
   "byBuilder": {
     "brohn-homes": {
@@ -83,7 +83,7 @@
       "open": 1
     },
     "ashton-woods": {
-      "completedMedian": 2,
+      "completedMedian": null,
       "open": 2
     },
     "meritage": {
