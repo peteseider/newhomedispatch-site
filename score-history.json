@@ -1303,8 +1303,22 @@
         "stringFree": 18,
         "deadline": 83
       }
+    },
+    {
+      "t": "2026-09-14T14:54:39-05:00",
+      "label": "Sep 14",
+      "slot": "PM",
+      "score": 65,
+      "band": "High",
+      "components": {
+        "incentive": 75,
+        "competition": 100,
+        "friction": 46,
+        "stringFree": 18,
+        "deadline": 83
+      }
     }
   ],
-  "lastUpdated": "2026-09-14T11:59:00-05:00",
-  "lastUpdatedLabel": "Sep 14, 2026 · 11:59 AM CT"
+  "lastUpdated": "2026-09-14T14:54:39-05:00",
+  "lastUpdatedLabel": "Sep 14, 2026 · 02:54 PM CT"
 }
