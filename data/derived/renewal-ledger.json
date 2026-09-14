@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-09-14T01:20:15.883Z",
-  "runKey": "2026-09-13-PM",
-  "observationRuns": 117,
+  "lastUpdated": "2026-09-14T11:50:32.026Z",
+  "runKey": "2026-09-14-AM",
+  "observationRuns": 118,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc220",
@@ -22,7 +22,7 @@
   ],
   "builders": {
     "dr-horton": {
-      "deadlineExtensions": 3,
+      "deadlineExtensions": 4,
       "expiredButDisplayedObservations": 2,
       "deadlinesSet": 0,
       "offersTracked": 11
@@ -131,7 +131,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 98,
+      "expiredButDisplayedObservations": 99,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -149,7 +149,7 @@
     },
     "terrata-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 82,
+      "expiredButDisplayedObservations": 83,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
@@ -286,7 +286,7 @@
       "offersTracked": 1
     },
     "megatel-homes": {
-      "deadlineExtensions": 3,
+      "deadlineExtensions": 4,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 1
