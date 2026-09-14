@@ -2470,5 +2470,45 @@
     "advertisedValue": 20000,
     "firstFlagged": "2026-09-11",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Holly & Sycamore models",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Iris/Poppy/Jasmine plans",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-09-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Multiple, tiered",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-09-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "pacesetter-homes",
+    "builder": "Pacesetter Homes",
+    "community": "Division-wide (excludes Center 45)",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-09-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "stylecraft-homes",
+    "builder": "Stylecraft Homes",
+    "community": "Adaline Crossing/Eastern Wells/Spring Lake",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
