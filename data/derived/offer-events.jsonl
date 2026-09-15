@@ -528,3 +528,10 @@
 {"t":"2026-09-14T11:50:32.026Z","runKey":"2026-09-14-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":"unknown"}
 {"t":"2026-09-14T19:54:57.510Z","runKey":"2026-09-14-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
 {"t":"2026-09-14T19:54:57.510Z","runKey":"2026-09-14-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-09-15T11:51:27.568Z","runKey":"2026-09-15-AM","type":"deadline_extended","id":"inc210","builder":"kb-home","community":"","from":"Purchase agreement by 9/30/26","to":"Sign purchase agreement by 9/30/26"}
+{"t":"2026-09-15T11:51:27.568Z","runKey":"2026-09-15-AM","type":"value_changed","id":"inc219","builder":"empire-communities","community":"","from":30000,"to":50000}
+{"t":"2026-09-15T11:51:27.568Z","runKey":"2026-09-15-AM","type":"deadline_extended","id":"inc219","builder":"empire-communities","community":"","from":"Contracts Aug 31-Sept 30, closing Oct 31","to":"none stated"}
+{"t":"2026-09-15T11:51:27.568Z","runKey":"2026-09-15-AM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-09-15T11:51:27.568Z","runKey":"2026-09-15-AM","type":"lender_tie_changed","id":"inc226","builder":"ashton-woods","community":"","to":true}
+{"t":"2026-09-15T11:51:27.568Z","runKey":"2026-09-15-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-09-15T11:51:27.568Z","runKey":"2026-09-15-AM","type":"value_changed","id":"inc314","builder":"milestone-community-builders","community":"","from":null,"to":20000}

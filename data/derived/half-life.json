@@ -1,13 +1,13 @@
 {
   "schema": "nhd-incentive-half-life-v1",
   "metric": "Median days an advertised offer survives unchanged (offer persistence)",
-  "lastUpdated": "2026-09-15T01:39:43.041Z",
-  "runKey": "2026-09-14-PM",
+  "lastUpdated": "2026-09-15T11:51:27.568Z",
+  "runKey": "2026-09-15-AM",
   "mature": true,
   "maturityNote": null,
   "completedSpansMedianDays": null,
-  "openSpansMedianDays": 49,
-  "completedSpans": 71,
+  "openSpansMedianDays": null,
+  "completedSpans": 73,
   "openSpans": 48,
   "byBuilder": {
     "brohn-homes": {

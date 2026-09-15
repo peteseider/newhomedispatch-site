@@ -1,8 +1,8 @@
 {
   "schema": "nhd-rate-spread-v1",
   "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
-  "lastUpdated": "2026-09-15T01:39:43.041Z",
-  "runKey": "2026-09-14-PM",
+  "lastUpdated": "2026-09-15T11:51:27.568Z",
+  "runKey": "2026-09-15-AM",
   "pmms": {
     "week": "9/10/2026",
     "rate30": 6.76
@@ -91,13 +91,6 @@
       "community": "",
       "advertisedRate": 6.04,
       "spreadBps": -72
-    },
-    {
-      "id": "inc314",
-      "builder": "milestone-community-builders",
-      "community": "",
-      "advertisedRate": 4.5,
-      "spreadBps": -226
     },
     {
       "id": "inc317",
