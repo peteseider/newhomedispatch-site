@@ -1,24 +1,23 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-09-15T20:30:48-05:00-PM",
-  "generatedAt": "2026-09-15T20:30:48-05:00",
+  "sweepId": "2026-09-16T07:00:52-05:00-AM",
+  "generatedAt": "2026-09-16T07:00:52-05:00",
   "facts": {
     "score": 65,
     "band": "High",
     "scoreDelta": 0,
     "concessionIndex": 20000,
-    "offersLive": 59,
+    "offersLive": 60,
     "buildersLive": 37,
-    "expired": 12,
+    "expired": 11,
     "rateDaily": 7.22,
     "ratePmmsWeekly": 6.76
   },
   "changes": {
-    "count": 9,
+    "count": 10,
     "newOffers": [],
     "improved": [
       "KB Home",
-      "Empire Communities",
       "Ashton Woods",
       "Risewell Homes (formerly Landsea)",
       "MileStone Community Builders",
@@ -27,11 +26,13 @@
       "Giddens Homes"
     ],
     "reduced": [
+      "Empire Communities",
+      "Blackburn Homes",
       "D.R. Horton"
     ],
     "deadlinesNext7d": []
   },
-  "interpretation": "Movement this sweep: 8 improved, 1 reduced. Market-wide score unchanged.",
+  "interpretation": "Movement this sweep: 7 improved, 3 reduced. Market-wide score unchanged.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
