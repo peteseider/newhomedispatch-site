@@ -25,9 +25,10 @@
     "2026-09-10",
     "2026-09-11",
     "2026-09-14",
-    "2026-09-15"
+    "2026-09-15",
+    "2026-09-16"
   ],
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -40,18 +41,18 @@
       "submarket": "",
       "builder": "Brohn Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Price cut",
+      "incentiveType": "price-cut",
       "advertisedValue": 40000,
       "transferability": "High",
       "buyerValueScore": 40000,
-      "lenderTied": true,
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "July 31, 2026",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-27",
+      "expires": "October 31, 2026",
+      "source": "https://www.brohnhomes.com/lending-incentive/",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-09-16",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -60,8 +61,8 @@
           "value": 40000
         }
       ],
-      "note": "RE-CONFIRMED LIVE.",
-      "expired": true,
+      "note": "Source: https://www.brohnhomes.com/lending-incentive/ (builder-advertised) verified 2026-09-16.",
+      "expired": false,
       "run": "AM"
     },
     {
@@ -413,7 +414,7 @@
       "expires": "Sign purchase agreement by 9/30/26",
       "source": "https://www.kbhome.com/special-low-rates",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "prevValue": null,
       "delta": 5000,
       "history": [
@@ -430,7 +431,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://www.kbhome.com/special-low-rates (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -735,20 +736,20 @@
       "submarket": "",
       "builder": "Empire Communities",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "upgrades",
-      "advertisedValue": 50000,
+      "incentiveType": "rate-special",
+      "advertisedValue": 30000,
       "transferability": "Low",
       "buyerValueScore": 27500,
       "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated",
+      "expires": "Contracts dated Aug 31-Sep 30, 2026; closing by Oct 31, 2026",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
-      "prevValue": 30000,
-      "delta": 20000,
+      "lastObserved": "2026-09-16",
+      "prevValue": 50000,
+      "delta": -20000,
       "history": [
         {
           "date": "2026-07-27",
@@ -857,9 +858,13 @@
         {
           "value": 30000,
           "asOf": "2026-09-15"
+        },
+        {
+          "value": 50000,
+          "asOf": "2026-09-16"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -953,7 +958,7 @@
       "expires": "none stated",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -966,7 +971,7 @@
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -979,20 +984,20 @@
       "submarket": "",
       "builder": "Blackburn Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "price-cut",
-      "advertisedValue": 71351,
+      "incentiveType": "credit-flex",
+      "advertisedValue": 20000,
       "transferability": "Medium",
       "buyerValueScore": 16000,
-      "lenderTied": false,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "none stated",
       "source": "https://blackburnhomes.com/available-homes/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-09",
-      "prevValue": 77732,
-      "delta": -6381,
+      "lastObserved": "2026-09-16",
+      "prevValue": 71351,
+      "delta": -51351,
       "history": [
         {
           "date": "2026-07-27",
@@ -1041,9 +1046,13 @@
         {
           "value": 77732,
           "asOf": "2026-09-09"
+        },
+        {
+          "value": 71351,
+          "asOf": "2026-09-09"
         }
       ],
-      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-09-09.",
+      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -1126,7 +1135,7 @@
       "submarket": "",
       "builder": "Ashton Woods",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "rate-special",
+      "incentiveType": "temporary-buydown",
       "advertisedValue": 70000,
       "transferability": null,
       "buyerValueScore": null,
@@ -1137,7 +1146,7 @@
       "expires": "October 31, 2026",
       "source": "https://www.ashtonwoods.com/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "prevValue": 5000,
       "delta": 65000,
       "history": [
@@ -1150,7 +1159,7 @@
           "asOf": "2026-09-09"
         }
       ],
-      "note": "Source: https://www.ashtonwoods.com/austin (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://www.ashtonwoods.com/austin (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -1436,7 +1445,7 @@
       "expires": "none stated",
       "source": "https://risewellhomes.com/promotions/region/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "prevValue": null,
       "delta": 10000,
       "history": [
@@ -1449,7 +1458,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -2075,7 +2084,7 @@
       "submarket": "",
       "builder": "MileStone Community Builders",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "credit-flex",
+      "incentiveType": "rate-special",
       "advertisedValue": 20000,
       "transferability": null,
       "buyerValueScore": null,
@@ -2083,10 +2092,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "4.50% (7/6 ARM / 5/1 ARM)",
-      "expires": "September 30 (year not stated; page live as of 2026-09-15)",
+      "expires": "September 30",
       "source": "https://www.mymilestone.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "prevValue": null,
       "delta": 20000,
       "history": [
@@ -2099,7 +2108,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.mymilestone.com/ (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://www.mymilestone.com/ (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -2234,7 +2243,7 @@
       "submarket": "",
       "builder": "MODUS / The George (condos)",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "closing-costs",
+      "incentiveType": "credit-flex",
       "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": 20000,
@@ -2245,7 +2254,7 @@
       "expires": "September purchases",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2258,7 +2267,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -2280,9 +2289,9 @@
       "taxNote": "",
       "ratePromo": "2.99% FIXED (3.75% APR)",
       "expires": "Through 9/30",
-      "source": "https://www.megatelhomes.com/special-offers",
+      "source": "https://www.megatelhomes.com/communities/austin-tx/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "prevValue": 1500,
       "delta": 10500,
       "history": [
@@ -2319,7 +2328,7 @@
           "asOf": "2026-08-27"
         }
       ],
-      "note": "Source: https://www.megatelhomes.com/special-offers (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -2340,10 +2349,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Contract on/after 07/10/26; close by 09/30/26",
+      "expires": "close on or before 09/30/26",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "prevValue": 6518,
       "delta": -21,
       "history": [
@@ -2360,7 +2369,7 @@
           "asOf": "2026-08-03"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -2381,10 +2390,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated (limited time)",
+      "expires": "none stated",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "prevValue": null,
       "delta": 40000,
       "history": [
@@ -2397,7 +2406,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-09-15.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-09-16.",
       "expired": false,
       "run": "AM"
     },
@@ -2475,8 +2484,8 @@
       "community": null,
       "promo": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional, requires KBHS Home Loans and 20% down. Purchase agreement must be signed by 9/30/26.",
       "expires": "Purchase agreement by 9/30/26",
-      "lastObserved": "2026-09-15",
-      "firstObserved": "unknown (17th+ consecutive run)",
+      "lastObserved": "2026-09-16",
+      "firstObserved": "unknown (18th+ consecutive run)",
       "confidence": "unverified",
       "source": "Builder-reported",
       "note": "Standing permanent-buydown tier, unchanged."
@@ -2487,11 +2496,11 @@
       "community": null,
       "promo": "Rate as low as 5.75% (6.410% APR), 30-Year Fixed FHA, requires KBHS Home Loans and 3.5% down. Purchase agreement must be signed by 9/30/26.",
       "expires": "Purchase agreement by 9/30/26",
-      "lastObserved": "2026-09-15",
+      "lastObserved": "2026-09-16",
       "firstObserved": "2026-09-07",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "Unchanged, confirmed for a 9th consecutive run."
+      "note": "Unchanged, confirmed for a 10th consecutive run."
     },
     {
       "id": "risewell-homes-399",
@@ -2499,8 +2508,8 @@
       "community": null,
       "promo": "Move before this rate does. 3.99% (4.627% APR) Fixed Rate PLUS up to $10,000 towards closing costs on select neighborhoods and homes.",
       "expires": "none stated",
-      "lastObserved": "2026-09-15",
-      "firstObserved": "unknown (38th+ consecutive run)",
+      "lastObserved": "2026-09-16",
+      "firstObserved": "unknown (39th+ consecutive run)",
       "confidence": "unverified",
       "source": "Builder-reported",
       "note": "Unchanged. Same page also discloses a structurally separate 1/0 step-up buydown at the identical 3.99% headline, correctly distinguished as temporary."

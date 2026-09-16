@@ -2526,5 +2526,37 @@
     "advertisedValue": 77732,
     "firstFlagged": "2026-09-15",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Poppy, Jasmine models",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-09-16",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Multiple, tiered (top tier: Hawkes Landing Classic)",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-09-16",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "pacesetter-homes",
+    "builder": "Pacesetter Homes",
+    "community": "all communities except Center 45",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-09-16",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "stylecraft-homes",
+    "builder": "Stylecraft Homes",
+    "community": "Same list as above",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-16",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
