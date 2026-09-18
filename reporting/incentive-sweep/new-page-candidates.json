@@ -2558,5 +2558,45 @@
     "advertisedValue": 20000,
     "firstFlagged": "2026-09-16",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Iris, Poppy, Jasmine, Bluebonnet, Rose models",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-09-18",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "lgi-homes",
+    "builder": "LGI Homes",
+    "community": null,
+    "advertisedValue": 50000,
+    "firstFlagged": "2026-09-18",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "perry-homes",
+    "builder": "Perry Homes",
+    "community": "select inventory homes",
+    "advertisedValue": 50000,
+    "firstFlagged": "2026-09-18",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "stylecraft-homes",
+    "builder": "Stylecraft Homes",
+    "community": "Multiple qualifying communities",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-09-18",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Lagos Reserve, Heritage, Wolf Ranch, Turner's Crossing, Flora",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-09-18",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
