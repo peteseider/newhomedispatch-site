@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-09-18T01:21:46.123Z",
-  "runKey": "2026-09-17-PM",
-  "observationRuns": 125,
+  "lastUpdated": "2026-09-18T11:50:44.663Z",
+  "runKey": "2026-09-18-AM",
+  "observationRuns": 126,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc220",
@@ -17,6 +17,13 @@
       "builder": "del-webb",
       "community": "",
       "expires": "06/28/25-07/31/2025",
+      "daysPast": null
+    },
+    {
+      "id": "inc247",
+      "builder": "giddens-homes",
+      "community": "",
+      "expires": "'For a limited time' (no specific end date)",
       "daysPast": null
     }
   ],
@@ -40,7 +47,7 @@
       "offersTracked": 3
     },
     "kb-home": {
-      "deadlineExtensions": 6,
+      "deadlineExtensions": 7,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 4
@@ -76,13 +83,13 @@
       "offersTracked": 7
     },
     "ashton-woods": {
-      "deadlineExtensions": 1,
+      "deadlineExtensions": 2,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 1,
       "offersTracked": 7
     },
     "brohn-homes": {
-      "deadlineExtensions": 1,
+      "deadlineExtensions": 2,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 6
@@ -131,7 +138,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 106,
+      "expiredButDisplayedObservations": 107,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -149,7 +156,7 @@
     },
     "terrata-homes": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 90,
+      "expiredButDisplayedObservations": 91,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
@@ -281,12 +288,12 @@
     },
     "giddens-homes": {
       "deadlineExtensions": 5,
-      "expiredButDisplayedObservations": 29,
+      "expiredButDisplayedObservations": 30,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "megatel-homes": {
-      "deadlineExtensions": 4,
+      "deadlineExtensions": 5,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 1
@@ -298,7 +305,7 @@
       "offersTracked": 1
     },
     "modus-the-george": {
-      "deadlineExtensions": 4,
+      "deadlineExtensions": 5,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 1
