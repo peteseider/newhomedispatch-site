@@ -561,3 +561,6 @@
 {"t":"2026-09-18T11:50:44.663Z","runKey":"2026-09-18-AM","type":"value_changed","id":"inc245","builder":"megatel-homes","community":"","from":12000,"to":17000}
 {"t":"2026-09-18T11:50:44.663Z","runKey":"2026-09-18-AM","type":"deadline_extended","id":"inc245","builder":"megatel-homes","community":"","from":"Through 9/30","to":"none stated"}
 {"t":"2026-09-18T11:50:44.663Z","runKey":"2026-09-18-AM","type":"expired_but_displayed","id":"inc247","builder":"giddens-homes","community":"","expires":"'For a limited time' (no specific end date)"}
+{"t":"2026-09-18T18:36:24.994Z","runKey":"2026-09-18-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"'Sunsational Summer Savings' (none stated)"}
+{"t":"2026-09-18T18:36:24.994Z","runKey":"2026-09-18-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-09-18T18:36:24.994Z","runKey":"2026-09-18-PM","type":"expired_but_displayed","id":"inc247","builder":"giddens-homes","community":"","expires":"'For a limited time' (no specific end date)"}
