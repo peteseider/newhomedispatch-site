@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-09-18T20:22:12-05:00-PM",
-  "generatedAt": "2026-09-18T20:22:12-05:00",
+  "sweepId": "2026-09-19T08:02:27-05:00-AM",
+  "generatedAt": "2026-09-19T08:02:27-05:00",
   "facts": {
     "score": 65,
     "band": "High",
@@ -14,27 +14,13 @@
     "ratePmmsWeekly": 6.95
   },
   "changes": {
-    "count": 11,
-    "newOffers": [
-      "Perry Homes"
-    ],
-    "improved": [
-      "KB Home",
-      "Ashton Woods",
-      "Risewell Homes (formerly Landsea)",
-      "MileStone Community Builders",
-      "MODUS / The George (condos)",
-      "Megatel Homes",
-      "Giddens Homes"
-    ],
-    "reduced": [
-      "Empire Communities",
-      "Blackburn Homes",
-      "D.R. Horton"
-    ],
+    "count": 0,
+    "newOffers": [],
+    "improved": [],
+    "reduced": [],
     "deadlinesNext7d": []
   },
-  "interpretation": "Movement this sweep: 1 new offer (Perry Homes), 7 improved, 3 reduced. Market-wide score unchanged.",
+  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
@@ -47,5 +33,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "publish-watchlists"
+  "publishRecommendation": "record-internal"
 }
