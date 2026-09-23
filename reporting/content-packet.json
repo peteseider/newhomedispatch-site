@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-09-22T20:37:15-05:00-PM",
-  "generatedAt": "2026-09-22T20:37:15-05:00",
+  "sweepId": "2026-09-23T08:02:24-05:00-AM",
+  "generatedAt": "2026-09-23T08:02:24-05:00",
   "facts": {
     "score": 65,
     "band": "High",
@@ -18,12 +18,34 @@
     "newOffers": [],
     "improved": [],
     "reduced": [],
-    "deadlinesNext7d": []
+    "deadlinesNext7d": [
+      {
+        "builder": "KB Home",
+        "deadline": "2026-09-30",
+        "offer": "permanent-buydown $5000"
+      },
+      {
+        "builder": "D.R. Horton",
+        "deadline": "2026-09-30",
+        "offer": "temporary-buydown $6497"
+      },
+      {
+        "builder": "KB Home",
+        "deadline": "2026-09-30",
+        "offer": "Rate as low as 5.75% (6.410% APR), 30-Year Fixed FHA, requires KBHS Home Loans and 3.5% do"
+      },
+      {
+        "builder": "KB Home",
+        "deadline": "2026-09-30",
+        "offer": "Rate as low as 5.99% (6.002% APR), 30-Year Fixed Conventional, requires KBHS Home Loans an"
+      }
+    ]
   },
   "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
-  "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
+  "buyerAction": "Nearest advertised deadline: KB Home (2026-09-30). If that builder is on your list, get the current terms in writing today.",
   "affectedSegments": [
-    "no segment needs to act on today’s sweep"
+    "buyers considering: KB Home, D.R. Horton",
+    "buyers purchasing within 30 days"
   ],
   "confidence": "All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.",
   "sources": [
