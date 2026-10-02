@@ -2,8 +2,8 @@
   "schema": "nhd-rate-benchmark-v1",
   "note": "Daily 30 year fixed benchmark. Refreshed automatically by scripts/sweep.mjs each sweep; falls back to the last good reading if the source cannot be parsed.",
   "rate30yr": 7.54,
-  "asOf": "2026-10-01",
-  "asOfLabel": "Oct 1, 2026",
+  "asOf": "2026-10-02",
+  "asOfLabel": "Oct 2, 2026",
   "source": "Mortgage News Daily",
   "history": [
     {
@@ -276,6 +276,10 @@
     },
     {
       "date": "2026-10-01",
+      "rate": 7.54
+    },
+    {
+      "date": "2026-10-02",
       "rate": 7.54
     }
   ]
