@@ -345,14 +345,14 @@
     },
     {
       "date": "2026-10-03",
-      "count30d": 245,
+      "count30d": 254,
       "priorYear30d": 215
     }
   ],
   "current": {
     "from": "2026-09-03",
     "to": "2026-10-03",
-    "count": 245
+    "count": 254
   },
   "priorYear": {
     "from": "2025-09-03",
