@@ -1,26 +1,35 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-10-09T08:02:26-05:00-AM",
-  "generatedAt": "2026-10-09T08:02:26-05:00",
+  "sweepId": "2026-10-09T10:37:17-05:00-AM",
+  "generatedAt": "2026-10-09T10:37:17-05:00",
   "facts": {
-    "score": 65,
+    "score": 66,
     "band": "High",
-    "scoreDelta": 0,
+    "scoreDelta": 1,
     "concessionIndex": 20000,
-    "offersLive": 57,
-    "buildersLive": 37,
-    "expired": 15,
+    "offersLive": 55,
+    "buildersLive": 34,
+    "expired": 13,
     "rateDaily": 7.5,
     "ratePmmsWeekly": 7.4
   },
   "changes": {
-    "count": 0,
+    "count": 7,
     "newOffers": [],
-    "improved": [],
-    "reduced": [],
+    "improved": [
+      "Ashton Woods",
+      "Risewell Homes (formerly Landsea)",
+      "MODUS / The George (condos)",
+      "D.R. Horton",
+      "Giddens Homes"
+    ],
+    "reduced": [
+      "Empire Communities",
+      "Megatel Homes"
+    ],
     "deadlinesNext7d": []
   },
-  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
+  "interpretation": "Movement this sweep: 5 improved, 2 reduced. Market-wide score up 1 (within model noise).",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
@@ -33,5 +42,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "record-internal"
+  "publishRecommendation": "publish-broadly"
 }
