@@ -380,14 +380,14 @@
     },
     {
       "date": "2026-10-10",
-      "count30d": 265,
+      "count30d": 271,
       "priorYear30d": 206
     }
   ],
   "current": {
     "from": "2026-09-10",
     "to": "2026-10-10",
-    "count": 265
+    "count": 271
   },
   "priorYear": {
     "from": "2025-09-10",
