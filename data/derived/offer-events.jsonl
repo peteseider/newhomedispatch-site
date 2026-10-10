@@ -695,3 +695,7 @@
 {"t":"2026-10-10T13:02:37.747Z","runKey":"2026-10-10-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-10-10T13:02:37.747Z","runKey":"2026-10-10-AM","type":"expired_but_displayed","id":"inc245","builder":"megatel-homes","community":"","expires":"'For a Limited Time'"}
 {"t":"2026-10-10T13:02:37.747Z","runKey":"2026-10-10-AM","type":"expired_but_displayed","id":"inc247","builder":"giddens-homes","community":"","expires":"'Limited time', no end date"}
+{"t":"2026-10-10T19:26:47.198Z","runKey":"2026-10-10-PM","type":"expired_but_displayed","id":"inc222","builder":"united-built-homes","community":"","expires":"'available for a limited number of new home starts'"}
+{"t":"2026-10-10T19:26:47.198Z","runKey":"2026-10-10-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-10T19:26:47.198Z","runKey":"2026-10-10-PM","type":"expired_but_displayed","id":"inc245","builder":"megatel-homes","community":"","expires":"'For a Limited Time'"}
+{"t":"2026-10-10T19:26:47.198Z","runKey":"2026-10-10-PM","type":"expired_but_displayed","id":"inc247","builder":"giddens-homes","community":"","expires":"'Limited time', no end date"}
