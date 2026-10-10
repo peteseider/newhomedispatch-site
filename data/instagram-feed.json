@@ -1,0 +1,7 @@
+{
+  "feedUrl": "",
+  "profileUrl": "https://www.instagram.com/newhomedispatch/",
+  "handle": "@newhomedispatch",
+  "limit": 6,
+  "note": "Set feedUrl to the Behold.so JSON feed URL for @newhomedispatch. Empty = fallback to today's auto-rendered share cards."
+}
