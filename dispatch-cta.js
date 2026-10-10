@@ -50,7 +50,7 @@
       '<div style="max-width:760px;margin:0 auto;text-align:center;">' +
         '<div style="font-family:\'IBM Plex Mono\',ui-monospace,Menlo,monospace;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:#8FB0FF;">The Weekly Dispatch &middot; Every Friday</div>' +
         '<h2 id="wd-cta-inject-title" style="font-family:\'Archivo Expanded\',Arial,sans-serif;font-weight:700;font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.18;color:#fff;margin:12px 0 12px;">One email a week. The whole market, read for buyers.</h2>' +
-        '<p style="font-size:1rem;line-height:1.6;color:rgba(255,255,255,.80);max-width:56ch;margin:0 auto 24px;">The scoreboard, the deal of the week, and one field note from a real site visit &mdash; four minutes, clearly sourced, and free. No builder spin, no mailing lists.</p>' +
+        '<p style="font-size:1rem;line-height:1.6;color:rgba(255,255,255,.80);max-width:56ch;margin:0 auto 24px;">The week&rsquo;s incentive moves, the deal of the week, and what to do about it. Four minutes, clearly sourced, free. No builder spin.</p>' +
         '<div style="display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;justify-content:center;">' +
           '<a href="' + subscribe + '" style="display:inline-block;background:#fff;color:#0A0A0A;font-weight:700;font-size:0.95rem;padding:13px 26px;border-radius:2px;text-decoration:none;">Subscribe free &rarr;</a>' +
           '<a href="' + latest + '" style="font-family:\'IBM Plex Mono\',ui-monospace,Menlo,monospace;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-decoration:underline;">Read the latest issue &rarr;</a>' +

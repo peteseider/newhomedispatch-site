@@ -253,11 +253,6 @@
 <url><loc>https://newhomedispatch.com/dare-to-compare.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://newhomedispatch.com/subscribe-dispatch.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
-    <loc>https://newhomedispatch.com/weekly-dispatch.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://newhomedispatch.com/communities/6-creeks.html</loc>
     <lastmod>2026-07-19</lastmod>
   </url>
@@ -470,4 +465,62 @@
   </url>
   <url><loc>https://newhomedispatch.com/reports/month-end-deadline-watch.html</loc><lastmod>2026-09-01</lastmod></url>
   <url><loc>https://newhomedispatch.com/reports/when-the-builder-doesnt-finish.html</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/aha-dream-homes.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/ash-creek-homes.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/dream-finders-homes.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/empire-homes.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/flintrock-builders.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/giddens-homes.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/megatel-homes.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/modus-the-george.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/regency-toll-brothers.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/builders/wilshire-homes.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/adelton.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/avery-centre.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/bertram-oaks.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/blanco-vista.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/carillon.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/cotton-brook.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/cotton-gateway.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/creekside-at-estancia.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/crosswinds.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/double-eagle-ranch.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/durango.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/elm-creek.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/firefly-pointe.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/flora.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/frontier.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/goodnight-ranch.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/hidden-trails.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/meadowlark-preserve.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/monarch-ranch.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/mustang-valley.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/opal-meadows.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/overlook-ranch.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/palomino.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/parmer-ranch.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/plum-creek-north.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/pradera.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/prairie-lakes.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/river-bluff.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/river-bridge-ranch.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/salerno.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/southgrove.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/stoney-chase.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/talavera.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/the-ridge.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/thunder-rock.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/trace.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/trails-at-wildhorse.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/triada.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/villas-at-rowe.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/watermill.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/winfield-park.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/communities/woodfield-preserve.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/deal-comes-last.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/for-agents.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/methodology-buyer-advantage-score.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/preference-center.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/report-a-deal.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://newhomedispatch.com/who-owns-the-neighborhood.html</loc><lastmod>2026-10-10</lastmod></url>
 </urlset>

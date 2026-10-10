@@ -77,7 +77,7 @@
 
 /* v118: single-source publication-schedule badges. Change the cadence HERE once
    and every page's nav badges update at load (static HTML remains the fallback).
-   Current model: Hot Sheet daily each morning; Incentive Tracker data four times daily
+   Current model: Hot Sheet daily each morning; Incentive Tracker data once daily (every morning)
    with a new issue every Monday; key moves roll into Friday's Weekly Dispatch. */
 (function () {
   var SCHEDULE = {

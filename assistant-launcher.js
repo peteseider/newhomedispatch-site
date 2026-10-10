@@ -19,7 +19,7 @@
     var seen=false; try{ seen=!!localStorage.getItem(KEY); }catch(e){}
     var teaser=document.createElement('div');
     teaser.style.cssText='display:none;max-width:230px;background:#fff;border:1px solid #E0E0E0;border-left:3px solid #2B4FE0;border-radius:2px;box-shadow:0 6px 24px rgba(0,0,0,.14);padding:12px 14px;font-size:.82rem;line-height:1.5;color:#0A0A0A;';
-    teaser.innerHTML='<b>Questions?</b> Ask Dot — our data assistant: prices, taxes, incentives, payments. Free, instant, nothing leaves your device. <a href="'+href+'" style="color:#2B4FE0;font-weight:700;">Open the Assistant &rarr;</a><button type="button" aria-label="Dismiss" style="float:right;margin:-6px -8px 0 6px;background:none;border:none;color:#666;font-size:1rem;cursor:pointer;">&times;</button>';
+    teaser.innerHTML='<b>Questions?</b> Ask Dot, our data assistant: prices, taxes, incentives, payments. Free, instant, nothing leaves your device. <a href="'+href+'" style="color:#2B4FE0;font-weight:700;">Open the Assistant &rarr;</a><button type="button" aria-label="Dismiss" style="float:right;margin:-6px -8px 0 6px;background:none;border:none;color:#666;font-size:1rem;cursor:pointer;">&times;</button>';
     teaser.querySelector('button').addEventListener('click',function(ev){ ev.stopPropagation(); teaser.style.display='none'; try{localStorage.setItem(KEY,'1');}catch(e){} });
     var btn=document.createElement('a');
     btn.href=href; btn.setAttribute('aria-label','Open the Dispatch Assistant');

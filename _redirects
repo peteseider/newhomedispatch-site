@@ -9,7 +9,8 @@
 /true-cost-calculator   /true-cost-calculator.html   200
 /incentive-calculator   /incentive-calculator.html   200
 /incentive-tracker   /incentive-tracker.html   200
-/weekly-dispatch   /weekly-dispatch.html   200
+/weekly-dispatch   /subscribe-dispatch.html   200
+/weekly-dispatch.html   /subscribe-dispatch.html   301!
 /zero-out-of-pocket   /zero-out-of-pocket.html   200
 /tax-reality-guide   /texas-tax-reality-guide.html   200
 /share   /share-your-story.html   200
