@@ -2019,7 +2019,7 @@
       }
     },
     {
-      "t": "2026-10-10T08:02:23-05:00",
+      "t": "2026-10-10T09:04:30-05:00",
       "label": "Oct 10",
       "slot": "AM",
       "score": 66,
@@ -2028,11 +2028,11 @@
         "incentive": 75,
         "competition": 100,
         "friction": 46,
-        "stringFree": 22,
+        "stringFree": 21,
         "deadline": 83
       }
     }
   ],
-  "lastUpdated": "2026-10-10T08:02:23-05:00",
-  "lastUpdatedLabel": "Oct 10, 2026 · 08:02 AM CT"
+  "lastUpdated": "2026-10-10T09:04:30-05:00",
+  "lastUpdatedLabel": "Oct 10, 2026 · 09:04 AM CT"
 }

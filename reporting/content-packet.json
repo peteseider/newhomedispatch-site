@@ -1,29 +1,46 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-10-10T08:02:23-05:00-AM",
-  "generatedAt": "2026-10-10T08:02:23-05:00",
+  "sweepId": "2026-10-10T09:04:30-05:00-AM",
+  "generatedAt": "2026-10-10T09:04:30-05:00",
   "facts": {
     "score": 66,
     "band": "High",
     "scoreDelta": 0,
     "concessionIndex": 20000,
-    "offersLive": 55,
-    "buildersLive": 34,
-    "expired": 13,
+    "offersLive": 57,
+    "buildersLive": 35,
+    "expired": 12,
     "rateDaily": 7.48,
     "ratePmmsWeekly": 7.4
   },
   "changes": {
-    "count": 0,
-    "newOffers": [],
-    "improved": [],
-    "reduced": [],
-    "deadlinesNext7d": []
+    "count": 7,
+    "newOffers": [
+      "Regency by Toll Brothers"
+    ],
+    "improved": [
+      "Risewell Homes (formerly Landsea)",
+      "MODUS / The George (condos)",
+      "D.R. Horton",
+      "Giddens Homes"
+    ],
+    "reduced": [
+      "Empire Communities",
+      "Megatel Homes"
+    ],
+    "deadlinesNext7d": [
+      {
+        "builder": "Lennar",
+        "deadline": "2026-10-11",
+        "offer": "price-cut $20000"
+      }
+    ]
   },
-  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
-  "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
+  "interpretation": "Movement this sweep: 1 new offer (Regency by Toll Brothers), 4 improved, 2 reduced. Market-wide score unchanged.",
+  "buyerAction": "Nearest advertised deadline: Lennar (2026-10-11). If that builder is on your list, get the current terms in writing today.",
   "affectedSegments": [
-    "no segment needs to act on today’s sweep"
+    "buyers considering: Lennar",
+    "buyers purchasing within 30 days"
   ],
   "confidence": "All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.",
   "sources": [
@@ -33,5 +50,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "record-internal"
+  "publishRecommendation": "publish-watchlists"
 }
