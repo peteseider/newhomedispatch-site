@@ -2726,5 +2726,53 @@
     "advertisedValue": 50000,
     "firstFlagged": "2026-10-09",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "ashton-woods",
+    "builder": "Ashton Woods",
+    "community": "Sitewide (multiple Austin-area communities)",
+    "advertisedValue": 70000,
+    "firstFlagged": "2026-10-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Holly",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Whisper Creek",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-10-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Castlewood (standard)",
+    "advertisedValue": 43000,
+    "firstFlagged": "2026-10-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Lakeside Meadows (Premier Executive)",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-10-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Lagos Reserve, Heritage, Turner's Crossing, Flora (general grouped)",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-10-10",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
