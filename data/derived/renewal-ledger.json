@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-10-10T02:31:37.679Z",
-  "runKey": "2026-10-09-PM",
-  "observationRuns": 169,
+  "lastUpdated": "2026-10-10T13:02:37.747Z",
+  "runKey": "2026-10-10-AM",
+  "observationRuns": 170,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc222",
@@ -145,7 +145,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 150,
+      "expiredButDisplayedObservations": 151,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -205,7 +205,7 @@
     },
     "united-built-homes": {
       "deadlineExtensions": 1,
-      "expiredButDisplayedObservations": 1,
+      "expiredButDisplayedObservations": 2,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
@@ -295,13 +295,13 @@
     },
     "giddens-homes": {
       "deadlineExtensions": 5,
-      "expiredButDisplayedObservations": 73,
+      "expiredButDisplayedObservations": 74,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "megatel-homes": {
       "deadlineExtensions": 5,
-      "expiredButDisplayedObservations": 1,
+      "expiredButDisplayedObservations": 2,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
