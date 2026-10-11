@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-10-11T02:02:17.787Z",
-  "runKey": "2026-10-10-PM",
-  "observationRuns": 171,
+  "lastUpdated": "2026-10-11T11:49:46.203Z",
+  "runKey": "2026-10-11-AM",
+  "observationRuns": 172,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc222",
@@ -30,7 +30,7 @@
       "id": "inc247",
       "builder": "giddens-homes",
       "community": "",
-      "expires": "'Limited time', no end date",
+      "expires": "'limited time', no end date",
       "daysPast": null
     }
   ],
@@ -145,7 +145,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 152,
+      "expiredButDisplayedObservations": 153,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -205,7 +205,7 @@
     },
     "united-built-homes": {
       "deadlineExtensions": 1,
-      "expiredButDisplayedObservations": 3,
+      "expiredButDisplayedObservations": 4,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
@@ -294,19 +294,19 @@
       "offersTracked": 2
     },
     "giddens-homes": {
-      "deadlineExtensions": 5,
-      "expiredButDisplayedObservations": 75,
+      "deadlineExtensions": 6,
+      "expiredButDisplayedObservations": 76,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "megatel-homes": {
       "deadlineExtensions": 5,
-      "expiredButDisplayedObservations": 3,
+      "expiredButDisplayedObservations": 4,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "risewell-homes": {
-      "deadlineExtensions": 0,
+      "deadlineExtensions": 1,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 1,
       "offersTracked": 1
