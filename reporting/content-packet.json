@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-10-10T21:02:04-05:00-PM",
-  "generatedAt": "2026-10-10T21:02:04-05:00",
+  "sweepId": "2026-10-11T06:49:33-05:00-AM",
+  "generatedAt": "2026-10-11T06:49:33-05:00",
   "facts": {
     "score": 66,
     "band": "High",
@@ -14,19 +14,17 @@
     "ratePmmsWeekly": 7.4
   },
   "changes": {
-    "count": 7,
-    "newOffers": [
-      "Regency by Toll Brothers"
-    ],
+    "count": 6,
+    "newOffers": [],
     "improved": [
       "Risewell Homes (formerly Landsea)",
       "MODUS / The George (condos)",
-      "D.R. Horton",
-      "Giddens Homes"
+      "D.R. Horton"
     ],
     "reduced": [
       "Empire Communities",
-      "Megatel Homes"
+      "Megatel Homes",
+      "Giddens Homes"
     ],
     "deadlinesNext7d": [
       {
@@ -36,7 +34,7 @@
       }
     ]
   },
-  "interpretation": "Movement this sweep: 1 new offer (Regency by Toll Brothers), 4 improved, 2 reduced. Market-wide score unchanged.",
+  "interpretation": "Movement this sweep: 3 improved, 3 reduced. Market-wide score unchanged.",
   "buyerAction": "Nearest advertised deadline: Lennar (2026-10-11). If that builder is on your list, get the current terms in writing today.",
   "affectedSegments": [
     "buyers considering: Lennar",
