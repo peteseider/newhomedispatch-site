@@ -1,6 +1,6 @@
 {
  "schema": "nhd-publishable-incentives-v2",
- "asOf": "2026-10-10",
+ "asOf": "2026-10-11",
  "run": "AM",
  "benchmarkRate": {
   "value": 7.4,
@@ -14,25 +14,42 @@
   {
    "builderSlug": "ashton-woods",
    "builder": "Ashton Woods",
-   "city": "Austin (sitewide)",
-   "community": "Sitewide (multiple Austin-area communities)",
-   "offerText": "Up to $70,000* in discounts.",
+   "city": "Austin",
+   "community": "Austin (sitewide)",
+   "offerText": "Make Your Move Today! Up to $70,000* in discounts. Rate as low as 4.99% (APR 5.425%)**.",
    "incentiveType": "price-cut",
    "advertisedValue": 70000,
+   "rate": "4.99% (APR 5.425%)",
+   "deadline": "none stated (banner itself gives no date; linked footnote references outdated Nov 15, 2023 and Dec 31, 2023 dates)",
+   "expired": false,
+   "lenderTied": true,
+   "sourceUrl": "https://www.ashtonwoods.com/austin",
+   "observedDate": "2026-10-11",
+   "confidence": "builder-advertised",
+   "notes": "Footnote names Velocio Mortgage and Trailblazer Mortgage as affiliated lenders but says their use is not required. Footnote contains unfilled template placeholders and 2023 dates, suggesting the disclaimer is stale. NOTE: prior run flagged the 4.99% as a STEPPED structure (Yr1 3.99/Yr2 4.99/Yr3+ 5.99), not flat/permanent - excluded from promos[]."
+  },
+  {
+   "builderSlug": "ashton-woods",
+   "builder": "Ashton Woods",
+   "city": "New Braunfels",
+   "community": "Waldsanger",
+   "offerText": "1/2 Off Options up to $120K + up to $40K Closing Costs*",
+   "incentiveType": "closing-costs",
+   "advertisedValue": 40000,
    "rate": null,
    "deadline": "none stated",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.ashtonwoods.com/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Matches 10-08/10-09 $70K sitewide finding."
+   "notes": "Outside Central Austin market (New Braunfels/San Antonio) but listed on Ashton Woods Austin page."
   },
   {
    "builderSlug": "blackburn-homes",
    "builder": "Blackburn Homes",
    "city": "Kyle",
-   "community": "Holly",
+   "community": "Holly (141 Corral Cv)",
    "offerText": "20k in Flex Cash!!",
    "incentiveType": "credit-flex",
    "advertisedValue": 20000,
@@ -41,33 +58,16 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://blackburnhomes.com/available-homes/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "CORRIDOR (Kyle). Matches prior."
   },
   {
    "builderSlug": "blackburn-homes",
    "builder": "Blackburn Homes",
-   "city": "Leander",
-   "community": "Jasmine",
-   "offerText": "$359,950, was $437,682 (328 Blue Oasis Ln)",
-   "incentiveType": "price-cut",
-   "advertisedValue": 77732,
-   "rate": null,
-   "deadline": "none stated",
-   "expired": false,
-   "lenderTied": "unknown",
-   "sourceUrl": "https://blackburnhomes.com/available-homes/",
-   "observedDate": "2026-10-10",
-   "confidence": "builder-advertised",
-   "notes": "Matches prior exactly."
-  },
-  {
-   "builderSlug": "blackburn-homes",
-   "builder": "Blackburn Homes",
    "city": "Georgetown",
-   "community": "Whisper Creek",
-   "offerText": "Reduced Pricing, e.g. Poppy 5900 Whisper Crk Dr Unit 224: $349,950 (down from $424,950)",
+   "community": "Whisper Creek (5900 Whisper Crk Dr Unit 224)",
+   "offerText": "Reduced Pricing! $349,950 (was $424,950)",
    "incentiveType": "price-cut",
    "advertisedValue": 75000,
    "rate": null,
@@ -75,26 +75,26 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://blackburnhomes.com/available-homes/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "NEW ROW not previously itemized -- Whisper Creek/Georgetown price cuts."
+   "notes": "Matches prior ($75,000)."
   },
   {
    "builderSlug": "brohn-homes",
    "builder": "Brohn Homes",
    "city": "Austin",
-   "community": null,
-   "offerText": "Stack the Savings! Up To $40K Off + Flex Cash*",
-   "incentiveType": "credit-flex",
+   "community": "Multiple Austin-area communities",
+   "offerText": "Up To $40K Off + Flex Cash* \u2014 Stack the Savings! New Homes From $170s.",
+   "incentiveType": "price-cut",
    "advertisedValue": 40000,
    "rate": null,
    "deadline": "October 31, 2026",
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.brohnhomes.com/lending-incentive/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Lender CMG Home Loans. Matches prior exactly."
+   "notes": "Lender CMG Home Loans (CMG Mortgage, Inc.). Matches prior."
   },
   {
    "builderSlug": "brookfield-residential",
@@ -109,7 +109,7 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://austin.brookfieldresidential.com/easton-park-savings",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Heroes-type. Matches prior."
   },
@@ -117,18 +117,18 @@
    "builderSlug": "coventry-homes",
    "builder": "Coventry Homes",
    "city": "Austin",
-   "community": null,
-   "offerText": "Save up to $105K on select homes! Rates starting at 5.49% (6.247% APR)",
+   "community": "Multiple (Highland Village-Georgetown, Lariat-Liberty Hill, Sauls Ranch-Round Rock, Parkside on the River-Georgetown, Castlewood-Taylor)",
+   "offerText": "Save up to $105K on select homes!",
    "incentiveType": "price-cut",
    "advertisedValue": 105000,
-   "rate": "starting 5.49% (6.247% APR)",
+   "rate": null,
    "deadline": "none stated",
    "expired": false,
-   "lenderTied": "unknown",
+   "lenderTied": false,
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Sitewide headline, matches prior."
+   "notes": "Sitewide headline. Per-listing cuts $500-$98,000 across communities."
   },
   {
    "builderSlug": "coventry-homes",
@@ -143,7 +143,7 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior exactly."
   },
@@ -160,7 +160,7 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior exactly."
   },
@@ -177,9 +177,9 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Matches 10-09's reduced $49K max (down from $92K high-water on 10-08, confirmed inventory turnover not a removal)."
+   "notes": "Matches prior."
   },
   {
    "builderSlug": "coventry-homes",
@@ -194,7 +194,7 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior exactly."
   },
@@ -211,26 +211,9 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Matches prior batch2 context, itemized today."
-  },
-  {
-   "builderSlug": "coventry-homes",
-   "builder": "Coventry Homes",
-   "city": "Taylor",
-   "community": "Castlewood Paired Cottages",
-   "offerText": "2 homes $500 off each",
-   "incentiveType": "price-cut",
-   "advertisedValue": 500,
-   "rate": null,
-   "deadline": "none stated",
-   "expired": false,
-   "lenderTied": "unknown",
-   "sourceUrl": "https://www.coventryhomes.com/austin/sales-event-listing/",
-   "observedDate": "2026-10-10",
-   "confidence": "builder-advertised",
-   "notes": "Matches prior exactly."
+   "notes": "Matches prior."
   },
   {
    "builderSlug": "david-weekley-homes",
@@ -238,16 +221,16 @@
    "city": "Austin",
    "community": null,
    "offerText": "$2,500 in Design Center selections (Hometown Heroes)",
-   "incentiveType": "credit-flex",
+   "incentiveType": "upgrades",
    "advertisedValue": 2500,
    "rate": null,
    "deadline": "Program Period Jan 1-Dec 31, 2026",
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.davidweekleyhomes.com/promo/salute-to-hometown-heroes-austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "CORRIDOR. Carried forward unchanged (not re-fetched this specific URL this run, primary austinUrl loaded fine so no fallback fetch triggered); consistent with established practice."
+   "notes": "CORRIDOR. Restricted to medical/fire/police/teachers/military. Matches prior."
   },
   {
    "builderSlug": "del-webb",
@@ -262,7 +245,7 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.delwebb.com/homes/texas/austin/georgetown/sun-city-texas-16369",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior."
   },
@@ -270,8 +253,8 @@
    "builderSlug": "del-webb",
    "builder": "Del Webb",
    "city": "Georgetown",
-   "community": "Sun City Texas QMI (718 Peaceful Psalms Pl)",
-   "offerText": "$699,433, was $762,663",
+   "community": "Sun City Texas / Echelon QMI inventory",
+   "offerText": "Per-listing price cuts, e.g. 115 Centerfire Ln $548,430->$494,430 (save $54,000); 718 Peaceful Psalms Pl $762,663->$699,433 (save $63,230)",
    "incentiveType": "price-cut",
    "advertisedValue": 63230,
    "rate": null,
@@ -279,9 +262,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.delwebb.com/homes/texas/austin/georgetown/sun-city-texas-16369",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Matches prior exactly ($63,230). 12 other QMI price cuts also found ranging $29,988-$54,000, not individually itemized in spine to avoid row explosion -- largest additional cut $54,000 (115 Centerfire Ln)."
+   "notes": "Matches prior exactly ($63,230). Range $29,988-$63,230 across 12 QMI listings."
   },
   {
    "builderSlug": "dr-horton",
@@ -296,9 +279,9 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.drhorton.com/texas/austin/manor/palomino",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Matches prior exactly ($25,000). 2 additional smaller Palomino QMI cuts found (~$12,500 each), not separately itemized."
+   "notes": "Matches prior exactly ($25,000). 2 additional smaller cuts ($12,500 each) also found."
   },
   {
    "builderSlug": "dr-horton",
@@ -313,26 +296,26 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.drhorton.com/texas/austin/kyle/marigold",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "CORRIDOR (Kyle). Matches prior exactly. A second Marigold unit at $3,000 off also found."
+   "notes": "CORRIDOR (Kyle). Matches prior exactly. Additional cuts $3,000-$6,000 range across 3 listings."
   },
   {
    "builderSlug": "drb-homes",
    "builder": "DRB Homes",
    "city": "Austin area",
    "community": "varies (Oct Flex Cash & Move-In Package)",
-   "offerText": "Up to $40,000 Flex Cash and Move-In Package",
+   "offerText": "Up to $40,000 Flex Cash and Move-In Package (Hawkes Landing max; most communities $10K-$30K)",
    "incentiveType": "credit-flex",
    "advertisedValue": 40000,
    "rate": null,
    "deadline": "Contracts 10/01-10/31/2026; settle by 12/31/2026",
    "expired": false,
-   "lenderTied": true,
+   "lenderTied": "unknown",
    "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Lender Alta Home Lending. Matches prior (highest tier, Hawkes Landing/Leander)."
+   "notes": "Fine print conflicts on lender requirement (Alta Home Lending named, but also 'no obligation' stated) - lenderTied unknown. Not combinable w/ other offers except bundled appliance package. Matches prior highest tier."
   },
   {
    "builderSlug": "drb-homes",
@@ -345,9 +328,9 @@
    "rate": null,
    "deadline": "Contracts 10/01-10/31/2026; settle by 12/31/2026",
    "expired": false,
-   "lenderTied": true,
+   "lenderTied": "unknown",
    "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "CORRIDOR (Buda). Matches prior."
   },
@@ -356,32 +339,15 @@
    "builder": "DRB Homes",
    "city": "Kyle",
    "community": "Infinity Square",
-   "offerText": "Up to $20,000 (Landmark/Premier); $12,000 (Artistry III)",
+   "offerText": "Up to $20,000 Flex Cash",
    "incentiveType": "credit-flex",
    "advertisedValue": 20000,
    "rate": null,
    "deadline": "Contracts 10/01-10/31/2026; settle by 12/31/2026",
    "expired": false,
-   "lenderTied": true,
+   "lenderTied": "unknown",
    "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
-   "observedDate": "2026-10-10",
-   "confidence": "builder-advertised",
-   "notes": "CORRIDOR (Kyle). Matches prior."
-  },
-  {
-   "builderSlug": "drb-homes",
-   "builder": "DRB Homes",
-   "city": "Kyle",
-   "community": "Opal Ranch",
-   "offerText": "Up to $15,000 Flex Cash",
-   "incentiveType": "credit-flex",
-   "advertisedValue": 15000,
-   "rate": null,
-   "deadline": "Contracts 10/01-10/31/2026; settle by 12/31/2026",
-   "expired": false,
-   "lenderTied": true,
-   "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "CORRIDOR (Kyle). Matches prior."
   },
@@ -396,9 +362,9 @@
    "rate": null,
    "deadline": "Contracts 10/01-10/31/2026; settle by 12/31/2026",
    "expired": false,
-   "lenderTied": true,
+   "lenderTied": "unknown",
    "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior."
   },
@@ -406,16 +372,16 @@
    "builderSlug": "drb-homes",
    "builder": "DRB Homes",
    "city": "Pflugerville",
-   "community": "Lakeside Meadows (Premier Executive)",
+   "community": "Preserve at Lakeside Meadows (Premier Executive)",
    "offerText": "Up to $25,000 Flex Cash",
    "incentiveType": "credit-flex",
    "advertisedValue": 25000,
    "rate": null,
    "deadline": "Contracts 10/01-10/31/2026; settle by 12/31/2026",
    "expired": false,
-   "lenderTied": true,
+   "lenderTied": "unknown",
    "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior."
   },
@@ -424,34 +390,68 @@
    "builder": "DRB Homes",
    "city": "Georgetown",
    "community": "Parkside on River Premier",
-   "offerText": "Up to $25,000 (Premier); $20,000 (Enclave)",
+   "offerText": "Up to $25,000 Flex Cash",
    "incentiveType": "credit-flex",
    "advertisedValue": 25000,
    "rate": null,
    "deadline": "Contracts 10/01-10/31/2026; settle by 12/31/2026",
    "expired": false,
-   "lenderTied": true,
+   "lenderTied": "unknown",
    "sourceUrl": "https://www.drbhomes.com/drbhomes/find-your-home/communities/texas/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Matches prior. Full roster also includes new/confirmed smaller tiers ($10K-$15K) across Jarrell, Taylor, Elgin, Hutto, San Marcos not separately itemized here (28 total community tiers confirmed on page, all sharing identical Flex Cash terms)."
+   "notes": "Matches prior. Full roster includes 28 total community tiers $10K-$40K, not all itemized."
   },
   {
    "builderSlug": "empire-communities",
    "builder": "Empire Communities",
-   "city": "Austin",
-   "community": "Goodnight Ranch (9027 Cattle Baron Path)",
-   "offerText": "'September Low Pricing' $499,998, was $514,990",
+   "city": "Austin (Goodnight Ranch)",
+   "community": "The Ramble at Goodnight Ranch",
+   "offerText": "'September Low Pricing' 9027 Cattle Baron Path: $499,998 was $514,990; 9029 Cattle Baron Path: $489,998 was $513,990",
    "incentiveType": "price-cut",
-   "advertisedValue": 14992,
+   "advertisedValue": 23992,
    "rate": null,
    "deadline": "none stated",
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://empirehomes.com/us/texas/austin/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Matches prior exactly. 3 new price-cut rows also found (Goodnight Ranch $23,992; San Marcos Trace $49,992; Pflugerville Villas at Rowe $26,992) -- largest additional cut noted as a new find."
+   "notes": "Two cuts found $14,992/$23,992; matches prior pattern."
+  },
+  {
+   "builderSlug": "empire-communities",
+   "builder": "Empire Communities",
+   "city": "Austin (Trace, San Marcos)",
+   "community": "Trace",
+   "offerText": "645 Salamander St: $279,998 vs list $329,990",
+   "incentiveType": "price-cut",
+   "advertisedValue": 49992,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://empirehomes.com/us/texas/austin/",
+   "observedDate": "2026-10-11",
+   "confidence": "builder-advertised",
+   "notes": "Matches prior exactly ($49,992)."
+  },
+  {
+   "builderSlug": "empire-communities",
+   "builder": "Empire Communities",
+   "city": "Pflugerville",
+   "community": "Villas at Rowe",
+   "offerText": "2208A Cornfield Dr: $282,998 vs list $309,990",
+   "incentiveType": "price-cut",
+   "advertisedValue": 26992,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://empirehomes.com/us/texas/austin/",
+   "observedDate": "2026-10-11",
+   "confidence": "builder-advertised",
+   "notes": "Matches prior exactly ($26,992)."
   },
   {
    "builderSlug": "giddens-homes",
@@ -460,13 +460,13 @@
    "community": "Build-on-your-lot",
    "offerText": "OVER $40,000 IN SELECT FREE UPGRADES & 40% OFF UP TO $100,000",
    "incentiveType": "upgrades",
-   "advertisedValue": 100000,
+   "advertisedValue": 40000,
    "rate": null,
-   "deadline": "'Limited time', no end date",
+   "deadline": "'limited time', no end date",
    "expired": false,
-   "lenderTied": "unknown",
+   "lenderTied": false,
    "sourceUrl": "https://giddenshomes.com/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior; possibly stale flyer, unconfirmed."
   },
@@ -483,9 +483,9 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.highlandhomes.com/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "CORRIDOR (Kyle - 6 Creeks). Stable at $60K/4.99% today (unchanged from 10-09's change up from $50K/4.49%) -- no structure (fixed/ARM) stated for the rate, ambiguous, excluded from promos[]."
+   "notes": "CORRIDOR (6 Creeks, Kyle). Stable at $60K/4.99%, unchanged from prior. No rate structure stated - excluded from promos[]."
   },
   {
    "builderSlug": "highland-homes",
@@ -500,9 +500,9 @@
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.highlandhomes.com/buyer",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Requires Highland LoanSource + Trinity Title. Carried forward unchanged (not re-fetched this specific URL this run)."
+   "notes": "Requires Highland LoanSource + Trinity Title. Matches prior."
   },
   {
    "builderSlug": "lennar",
@@ -517,26 +517,26 @@
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.lennar.com/new-homes/texas/austin-central-texas/promo/sanlen_aus_fss26",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "CORRIDOR. STILL LIVE -- signing window closes TOMORROW 10/11/26, 1 day remaining. Matches prior exactly."
+   "notes": "CORRIDOR. Signing window closes TODAY 10/11/26 (last day). Matches prior exactly."
   },
   {
    "builderSlug": "meritage-homes",
    "builder": "Meritage Homes",
    "city": "Austin",
    "community": null,
-   "offerText": "Turn Over a New Leaf: below market rates and up to $10,000 in closing costs",
+   "offerText": "Turn Over a New Leaf Sales Event: below market rates and up to $10,000 in closing costs. Now through October 15.",
    "incentiveType": "closing-costs",
    "advertisedValue": 10000,
    "rate": "below market rates (no specific number stated)",
    "deadline": "October 15, 2026",
    "expired": false,
-   "lenderTied": "unknown",
+   "lenderTied": false,
    "sourceUrl": "https://www.meritagehomes.com/state/tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "CORRIDOR. Matches prior. Deadline Oct 15 is 5 days out, not yet expired."
+   "notes": "CORRIDOR. Matches prior. Deadline 4 days out, not yet expired."
   },
   {
    "builderSlug": "perry-homes",
@@ -551,9 +551,9 @@
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.perryhomes.com/promotion/year-end-sales-event-2026/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "CORRIDOR. Lenders Crestmark/Parkstone Mortgage. Matches prior. NOT a permanent-rate promo (no permanence language) -- excluded from promos[]."
+   "notes": "CORRIDOR. summer-sales-event URL fetch-failed, confirmed via year-end-sales-event-2026 fallback. Lenders Crestmark/Parkstone Mortgage. Buyer picks ONE incentive (Flex Cash OR a rate). NOT a permanent-rate promo - excluded from promos[]. Matches prior."
   },
   {
    "builderSlug": "perry-homes",
@@ -568,9 +568,26 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.perryhomes.com/promotion/year-end-sales-event-2026/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "CORRIDOR. Matches prior exactly."
+  },
+  {
+   "builderSlug": "saratoga-homes",
+   "builder": "Saratoga Homes",
+   "city": "Pflugerville",
+   "community": "19136 Kleingrass Lane",
+   "offerText": "$538,950, down from $558,950",
+   "incentiveType": "price-cut",
+   "advertisedValue": 20000,
+   "rate": null,
+   "deadline": "none stated",
+   "expired": false,
+   "lenderTied": false,
+   "sourceUrl": "https://www.saratogahomestexas.com/",
+   "observedDate": "2026-10-11",
+   "confidence": "builder-advertised",
+   "notes": "New individual spec-home price cut captured."
   },
   {
    "builderSlug": "scott-felder-homes",
@@ -585,7 +602,7 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.scottfelderhomes.com/communities/austin-area",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Edge of corridor. Matches prior."
   },
@@ -602,7 +619,7 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.scottfelderhomes.com/communities/austin-area",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior."
   },
@@ -611,7 +628,7 @@
    "builder": "Stylecraft Homes",
    "city": "Austin",
    "community": null,
-   "offerText": "Build Your Dream Home and get Up To $20,000 to spend exactly how you want.",
+   "offerText": "Build Your Dream Home and get Up To $20,000 to spend exactly how you want (Kangaroo required)",
    "incentiveType": "credit-flex",
    "advertisedValue": 20000,
    "rate": null,
@@ -619,7 +636,7 @@
    "expired": false,
    "lenderTied": true,
    "sourceUrl": "https://www.stylecraft.com/incentives/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior exactly."
   },
@@ -629,16 +646,16 @@
    "city": "Bastrop",
    "community": "The Colony",
    "offerText": "$25,000 Financial Package toward rate buydown or closing costs",
-   "incentiveType": "closing-costs",
+   "incentiveType": "credit-flex",
    "advertisedValue": 25000,
    "rate": null,
    "deadline": "sold and under contract by 12/31/2026",
    "expired": false,
-   "lenderTied": false,
+   "lenderTied": true,
    "sourceUrl": "https://www.terratahomes.com/texas/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "CORRIDOR. Matches prior exactly."
+   "notes": "CORRIDOR. Lenders LGI Mortgage Solutions / CalCon Mutual Mortgage dba One Trust Home Loans. Matches prior exactly."
   },
   {
    "builderSlug": "tri-pointe-homes",
@@ -653,7 +670,7 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior."
   },
@@ -661,7 +678,7 @@
    "builderSlug": "tri-pointe-homes",
    "builder": "Tri Pointe Homes",
    "city": "Austin",
-   "community": "Park Central",
+   "community": "Park Central (plain)",
    "offerText": "$30K Closing Cost Credit or 5.25% (5.807% APR)",
    "incentiveType": "credit-flex",
    "advertisedValue": 30000,
@@ -670,9 +687,9 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Plain Park Central distinct from Paired Homes sub-product; today's page separates the two more clearly than before."
+   "notes": "Distinct from Paired Homes sub-product. Matches prior."
   },
   {
    "builderSlug": "tri-pointe-homes",
@@ -687,7 +704,7 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior."
   },
@@ -704,7 +721,7 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior."
   },
@@ -712,7 +729,7 @@
    "builderSlug": "tri-pointe-homes",
    "builder": "Tri Pointe Homes",
    "city": "Austin",
-   "community": "Lagos Reserve, Heritage, Turner's Crossing, Flora (general grouped)",
+   "community": "Lagos Reserve, Heritage, Turner's Crossing, Flora (grouped)",
    "offerText": "$30K Closing Cost Credit or 5.25% (5.807% APR)",
    "incentiveType": "credit-flex",
    "advertisedValue": 30000,
@@ -721,7 +738,7 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Grouped row. Matches prior."
   },
@@ -738,9 +755,9 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Confirmed still 5.75% today, stable 2nd day after rising from 5.49%."
+   "notes": "Confirmed still 5.75% today, stable since rising from 5.49%."
   },
   {
    "builderSlug": "tri-pointe-homes",
@@ -755,7 +772,7 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior."
   },
@@ -772,7 +789,7 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.tripointehomes.com/promotion/tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "Matches prior."
   },
@@ -789,26 +806,26 @@
    "expired": false,
    "lenderTied": false,
    "sourceUrl": "https://www.ubh.com/2026-cash-back/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Austin-metro presence still unconfirmed; page does not mention Austin specifically. Matches prior."
+   "notes": "Austin-metro presence still unconfirmed. Matches prior."
   },
   {
    "builderSlug": "risewell-homes",
    "builder": "Risewell Homes",
    "city": "Austin",
    "community": null,
-   "offerText": "Plus, up to $10,000 Flex Cash.**",
-   "incentiveType": "credit-flex",
+   "offerText": "Low rate now + no-cost refinance later. 3.99%* (6.086% APR) fixed for first 5 years, payments as low as $2,236/mo*. Plus up to $10,000 Flex Cash.**",
+   "incentiveType": "temporary-buydown",
    "advertisedValue": 10000,
-   "rate": null,
-   "deadline": "none stated",
+   "rate": "3.99% fixed first 5 years (6.086% APR)",
+   "deadline": "none stated ('limited-time')",
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://risewellhomes.com/promotions/region/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "CORRIDOR. Bundled with rate offer. Matches prior."
+   "notes": "CORRIDOR. Matches prior exactly."
   },
   {
    "builderSlug": "megatel-homes",
@@ -821,9 +838,9 @@
    "rate": "2.99% (5.80% APR)",
    "deadline": "'For a Limited Time'",
    "expired": false,
-   "lenderTied": "unknown",
+   "lenderTied": false,
    "sourceUrl": "https://www.megatelhomes.com/communities/austin-tx/austin",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
    "notes": "CORRIDOR. Matches prior exactly."
   },
@@ -840,9 +857,9 @@
    "expired": false,
    "lenderTied": "unknown",
    "sourceUrl": "https://www.liveatgeorgeatx.com/buyers-choice/",
-   "observedDate": "2026-10-10",
+   "observedDate": "2026-10-11",
    "confidence": "builder-advertised",
-   "notes": "Matches prior. Partially lender-tied (full amount needs preferred lender)."
+   "notes": "Matches prior."
   }
  ],
  "promos": [
@@ -853,12 +870,12 @@
    "promo": "5.49% (5.76% APR) 30-Year Fixed -- Limited Time Only on Select Homes",
    "advertisedValue": null,
    "expires": "Oct 18, 2026 (signing window; opened Oct 3, 2026)",
-   "lastObserved": "2026-10-10",
+   "lastObserved": "2026-10-11",
    "firstObserved": "2026-10-10",
    "delta": null,
    "confidence": "unverified",
    "source": "Builder-reported",
-   "note": "FIRST permanent-rate promo captured in 5+ consecutive AM runs (promos[] held at 0 since at least 2026-10-06). Yesterday's page showed only a no-detail 'Exceptional Savings' teaser; today discloses an explicit, unambiguous 30-Year Fixed rate with no step-up/ARM language -- the signing window limits when a buyer can lock the offer, not the duration of the discounted rate itself, so it clears the permanent-rate bar. Lender not named on page. Not yet independently corroborated (confidence: unverified, not corroborated)."
+   "note": "Second consecutive run with this disclosure, unchanged from 10-10 (5.49%/5.76% APR, labeled '30-Year Fixed'). The dagger-footnote with full permanent-vs-temporary terms has still not been captured in either run's fetch -- the page's own text never uses the word 'permanent', and frames the rate as 'Limited Time Only,' which could describe a time-limited WINDOW to lock an otherwise-permanent rate, or could describe a temporary rate itself. Carried forward as a tentative candidate consistent with 10-10's treatment, but this ambiguity should be resolved with a direct call before this is treated as a confirmed permanent-rate promo. Lender not named on page."
   }
  ]
 }
