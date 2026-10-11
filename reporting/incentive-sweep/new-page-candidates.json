@@ -2774,5 +2774,77 @@
     "advertisedValue": 30000,
     "firstFlagged": "2026-10-10",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "ashton-woods",
+    "builder": "Ashton Woods",
+    "community": "Austin (sitewide)",
+    "advertisedValue": 70000,
+    "firstFlagged": "2026-10-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Whisper Creek (5900 Whisper Crk Dr Unit 224)",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-10-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "brohn-homes",
+    "builder": "Brohn Homes",
+    "community": "Multiple Austin-area communities",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-10-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "coventry-homes",
+    "builder": "Coventry Homes",
+    "community": "Multiple (Highland Village-Georgetown, Lariat-Liberty Hill, Sauls Ranch-Round Rock, Parkside on the River-Georgetown, Castlewood-Taylor)",
+    "advertisedValue": 105000,
+    "firstFlagged": "2026-10-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "del-webb",
+    "builder": "Del Webb",
+    "community": "Sun City Texas / Echelon QMI inventory",
+    "advertisedValue": 63230,
+    "firstFlagged": "2026-10-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Preserve at Lakeside Meadows (Premier Executive)",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-10-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "saratoga-homes",
+    "builder": "Saratoga Homes",
+    "community": "19136 Kleingrass Lane",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Park Central (plain)",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-10-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Lagos Reserve, Heritage, Turner's Crossing, Flora (grouped)",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-10-11",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]

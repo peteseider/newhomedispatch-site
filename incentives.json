@@ -29,9 +29,10 @@
     "2026-09-16",
     "2026-09-18",
     "2026-10-09",
-    "2026-10-10"
+    "2026-10-10",
+    "2026-10-11"
   ],
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -740,7 +741,7 @@
       "builder": "Empire Communities",
       "homeType": "Varies (confirm on site)",
       "incentiveType": "price-cut",
-      "advertisedValue": 14992,
+      "advertisedValue": 26992,
       "transferability": "Low",
       "buyerValueScore": 27500,
       "lenderTied": false,
@@ -750,9 +751,9 @@
       "expires": "none stated",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-10",
-      "prevValue": 30000,
-      "delta": -15008,
+      "lastObserved": "2026-10-11",
+      "prevValue": 49992,
+      "delta": -23000,
       "history": [
         {
           "date": "2026-07-27",
@@ -877,9 +878,21 @@
         {
           "value": 30000,
           "asOf": "2026-09-18"
+        },
+        {
+          "value": 14992,
+          "asOf": "2026-10-10"
+        },
+        {
+          "value": 23992,
+          "asOf": "2026-10-11"
+        },
+        {
+          "value": 49992,
+          "asOf": "2026-10-11"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-10-10.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-10-11.",
       "expired": false,
       "run": "AM"
     },
@@ -892,18 +905,18 @@
       "submarket": "",
       "builder": "Terrata Homes (by LGI)",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "closing-costs",
+      "incentiveType": "credit-flex",
       "advertisedValue": 25000,
       "transferability": "Medium",
       "buyerValueScore": 20000,
-      "lenderTied": false,
+      "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "sold and under contract by 12/31/2026",
       "source": "https://www.terratahomes.com/texas/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-10",
+      "lastObserved": "2026-10-11",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -916,7 +929,7 @@
           "value": 25000
         }
       ],
-      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-10.",
+      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-11.",
       "expired": false,
       "run": "AM"
     },
@@ -973,7 +986,7 @@
       "expires": "'available for a limited number of new home starts'",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-10",
+      "lastObserved": "2026-10-11",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -986,7 +999,7 @@
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-10.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-11.",
       "expired": false,
       "run": "AM"
     },
@@ -1449,7 +1462,7 @@
       "submarket": "",
       "builder": "Risewell Homes (formerly Landsea)",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "credit-flex",
+      "incentiveType": "temporary-buydown",
       "advertisedValue": 10000,
       "transferability": null,
       "buyerValueScore": null,
@@ -1457,10 +1470,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated",
+      "expires": "none stated ('limited-time')",
       "source": "https://risewellhomes.com/promotions/region/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-10",
+      "lastObserved": "2026-10-11",
       "prevValue": null,
       "delta": 10000,
       "history": [
@@ -1473,7 +1486,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-10-10.",
+      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-10-11.",
       "expired": false,
       "run": "AM"
     },
@@ -1871,7 +1884,7 @@
       "expires": "Sign by 10/11/26; close by 11/30/26",
       "source": "https://www.lennar.com/new-homes/texas/austin-central-texas/promo/sanlen_aus_fss26",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-10",
+      "lastObserved": "2026-10-11",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -1880,7 +1893,7 @@
           "value": 20000
         }
       ],
-      "note": "Source: https://www.lennar.com/new-homes/texas/austin-central-texas/promo/sanlen_aus_fss26 (builder-advertised) verified 2026-10-10.",
+      "note": "Source: https://www.lennar.com/new-homes/texas/austin-central-texas/promo/sanlen_aus_fss26 (builder-advertised) verified 2026-10-11.",
       "expired": false,
       "run": "AM"
     },
@@ -2269,7 +2282,7 @@
       "expires": "none stated explicitly; page copy still says 'September'",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-10",
+      "lastObserved": "2026-10-11",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2282,7 +2295,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-10-10.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-10-11.",
       "expired": false,
       "run": "AM"
     },
@@ -2299,14 +2312,14 @@
       "advertisedValue": 10000,
       "transferability": "Unknown",
       "buyerValueScore": 5000,
-      "lenderTied": "unknown",
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "2.99% FIXED (3.75% APR)",
       "expires": "'For a Limited Time'",
       "source": "https://www.megatelhomes.com/communities/austin-tx/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-10",
+      "lastObserved": "2026-10-11",
       "prevValue": 17000,
       "delta": -7000,
       "history": [
@@ -2351,7 +2364,7 @@
           "asOf": "2026-09-18"
         }
       ],
-      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-10.",
+      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-11.",
       "expired": false,
       "run": "AM"
     },
@@ -2375,7 +2388,7 @@
       "expires": "none stated",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-10",
+      "lastObserved": "2026-10-11",
       "prevValue": 6497,
       "delta": 18503,
       "history": [
@@ -2396,7 +2409,7 @@
           "asOf": "2026-09-18"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-10-10.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-10-11.",
       "expired": false,
       "run": "AM"
     },
@@ -2410,19 +2423,19 @@
       "builder": "Giddens Homes",
       "homeType": "Varies (confirm on site)",
       "incentiveType": "upgrades",
-      "advertisedValue": 100000,
+      "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": null,
-      "lenderTied": "unknown",
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "'Limited time', no end date",
+      "expires": "'limited time', no end date",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-10",
-      "prevValue": 40000,
-      "delta": 60000,
+      "lastObserved": "2026-10-11",
+      "prevValue": 100000,
+      "delta": -60000,
       "history": [
         {
           "date": "2026-07-29",
@@ -2435,9 +2448,13 @@
         {
           "value": 40000,
           "asOf": "2026-09-18"
+        },
+        {
+          "value": 100000,
+          "asOf": "2026-10-10"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-10.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-11.",
       "expired": false,
       "run": "AM"
     },
@@ -2515,11 +2532,11 @@
       "community": "Regency at Santa Rita Ranch (Liberty Hill)",
       "promo": "5.49% (5.76% APR) 30-Year Fixed -- Limited Time Only on Select Homes",
       "expires": "Oct 18, 2026 (signing window; opened Oct 3, 2026)",
-      "lastObserved": "2026-10-10",
+      "lastObserved": "2026-10-11",
       "firstObserved": "2026-10-10",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "FIRST permanent-rate promo captured in 5+ consecutive AM runs (promos[] held at 0 since at least 2026-10-06). Yesterday's page showed only a no-detail 'Exceptional Savings' teaser; today discloses an explicit, unambiguous 30-Year Fixed rate with no step-up/ARM language -- the signing window limits when a buyer can lock the offer, not the duration of the discounted rate itself, so it clears the permanent-rate bar. Lender not named on page. Not yet independently corroborated (confidence: unverified, not corroborated)."
+      "note": "Second consecutive run with this disclosure, unchanged from 10-10 (5.49%/5.76% APR, labeled '30-Year Fixed'). The dagger-footnote with full permanent-vs-temporary terms has still not been captured in either run's fetch -- the page's own text never uses the word 'permanent', and frames the rate as 'Limited Time Only,' which could describe a time-limited WINDOW to lock an otherwise-permanent rate, or could describe a temporary rate itself. Carried forward as a tentative candidate consistent with 10-10's treatment, but this ambiguity should be resolved with a direct call before this is treated as a confirmed permanent-rate promo. Lender not named on page."
     }
   ]
 }
