@@ -2846,5 +2846,69 @@
     "advertisedValue": 30000,
     "firstFlagged": "2026-10-11",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "brookfield-residential",
+    "builder": "Brookfield Residential",
+    "community": null,
+    "advertisedValue": 4600,
+    "firstFlagged": "2026-10-12",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Devine Landing (Leander), Lakeside Meadows Premier Executive (Pflugerville), Parkside on the River Premier (Georgetown)",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-10-12",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Infinity Square Landmark/Premier (Kyle), Carillon Premier (Manor), Flora Artistry (Hutto), Heritage Mill Premier (Hutto), Spring Creek Premier 60' (Taylor), Calumet Landmark (Jarrell), Hunters Glen Landmark (Jarrell), Newhaven Premier (Manor), Parkside on the River Enclave (Georgetown)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-12",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Briarwood Enclave/Premier (Elgin), Carillon Landmark (Manor), Creeks Crossing Landmark (Elgin), Flora Artistry III (Hutto), Opal Ranch Enclave/Landmark (Kyle), Whisper South Premier (San Marcos), Spring Creek Premier 50' (Taylor)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-12",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Heritage Mill Journey (Hutto), Infinity Square Artistry III (Kyle), Spring Creek Landmark 50' (Taylor)",
+    "advertisedValue": 12000,
+    "firstFlagged": "2026-10-12",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Creeks Crossing Artistry III (Elgin), Sky Ridge (San Marcos), Spring Creek Spring Series (Taylor)",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-10-12",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Mayfair",
+    "advertisedValue": 5000,
+    "firstFlagged": "2026-10-12",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "stylecraft-homes",
+    "builder": "Stylecraft Homes",
+    "community": "Rancho San Gabriel",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-12",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
