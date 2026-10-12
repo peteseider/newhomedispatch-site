@@ -1,36 +1,15 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-10-12T02:33:18.090Z",
-  "runKey": "2026-10-11-PM",
-  "observationRuns": 173,
+  "lastUpdated": "2026-10-12T11:53:19.990Z",
+  "runKey": "2026-10-12-AM",
+  "observationRuns": 174,
   "currentlyExpiredButDisplayed": [
-    {
-      "id": "inc222",
-      "builder": "united-built-homes",
-      "community": "",
-      "expires": "'available for a limited number of new home starts'",
-      "daysPast": null
-    },
     {
       "id": "inc311",
       "builder": "del-webb",
       "community": "",
       "expires": "06/28/25-07/31/2025",
-      "daysPast": null
-    },
-    {
-      "id": "inc245",
-      "builder": "megatel-homes",
-      "community": "",
-      "expires": "'For a Limited Time'",
-      "daysPast": null
-    },
-    {
-      "id": "inc247",
-      "builder": "giddens-homes",
-      "community": "",
-      "expires": "'limited time', no end date",
       "daysPast": null
     }
   ],
@@ -96,7 +75,7 @@
       "offersTracked": 7
     },
     "brohn-homes": {
-      "deadlineExtensions": 2,
+      "deadlineExtensions": 3,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 6
@@ -145,7 +124,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 154,
+      "expiredButDisplayedObservations": 155,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -204,7 +183,7 @@
       "offersTracked": 1
     },
     "united-built-homes": {
-      "deadlineExtensions": 1,
+      "deadlineExtensions": 2,
       "expiredButDisplayedObservations": 5,
       "deadlinesSet": 0,
       "offersTracked": 3
@@ -294,13 +273,13 @@
       "offersTracked": 2
     },
     "giddens-homes": {
-      "deadlineExtensions": 6,
+      "deadlineExtensions": 7,
       "expiredButDisplayedObservations": 77,
       "deadlinesSet": 0,
       "offersTracked": 1
     },
     "megatel-homes": {
-      "deadlineExtensions": 5,
+      "deadlineExtensions": 6,
       "expiredButDisplayedObservations": 5,
       "deadlinesSet": 0,
       "offersTracked": 1
