@@ -1,44 +1,38 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-10-11T21:33:04-05:00-PM",
-  "generatedAt": "2026-10-11T21:33:04-05:00",
+  "sweepId": "2026-10-12T06:53:03-05:00-AM",
+  "generatedAt": "2026-10-12T06:53:03-05:00",
   "facts": {
     "score": 66,
     "band": "High",
     "scoreDelta": 0,
     "concessionIndex": 20000,
-    "offersLive": 57,
-    "buildersLive": 35,
-    "expired": 12,
+    "offersLive": 56,
+    "buildersLive": 34,
+    "expired": 13,
     "rateDaily": 7.48,
     "ratePmmsWeekly": 7.4
   },
   "changes": {
-    "count": 6,
+    "count": 7,
     "newOffers": [],
     "improved": [
+      "Empire Communities",
       "Risewell Homes (formerly Landsea)",
       "MODUS / The George (condos)",
       "D.R. Horton"
     ],
     "reduced": [
-      "Empire Communities",
+      "Blackburn Homes",
       "Megatel Homes",
       "Giddens Homes"
     ],
-    "deadlinesNext7d": [
-      {
-        "builder": "Lennar",
-        "deadline": "2026-10-11",
-        "offer": "price-cut $20000"
-      }
-    ]
+    "deadlinesNext7d": []
   },
-  "interpretation": "Movement this sweep: 3 improved, 3 reduced. Market-wide score unchanged.",
-  "buyerAction": "Nearest advertised deadline: Lennar (2026-10-11). If that builder is on your list, get the current terms in writing today.",
+  "interpretation": "Movement this sweep: 4 improved, 3 reduced. Market-wide score unchanged.",
+  "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
-    "buyers considering: Lennar",
-    "buyers purchasing within 30 days"
+    "no segment needs to act on today’s sweep"
   ],
   "confidence": "All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.",
   "sources": [
