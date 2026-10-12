@@ -2212,19 +2212,19 @@ a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 <section class="wd-strip" aria-labelledby="wd-strip-title">
 <div class="wrap wd-strip-inner">
 <div class="wd-strip-copy">
-<div class="eyebrow mono">The Weekly Dispatch · Every Friday</div>
-<h2 id="wd-strip-title" class="section-title">One email a week. The whole market, read for buyers.</h2>
-<p>The week's incentive moves, the deal of the week, and what to do about it. Four minutes, clearly sourced, free. No builder spin.</p>
+<div class="eyebrow mono">The Daily Hot Sheet · By email, every morning</div>
+<h2 id="wd-strip-title" class="section-title">One email a morning. Every builder incentive in Austin, verified before you read it.</h2>
+<p>What moved overnight, the deadlines that are real, the one permanent rate worth knowing about, and the expired offers still sitting on builder websites. Five minutes, sourced to the builder's own page, free.</p>
 <div class="wd-strip-ctas">
-<a href="subscribe-dispatch.html" class="btn btn-amber">Subscribe free &rarr;</a>
-<a href="weekly-dispatch-01.html" class="read-link mono">Read the latest issue &rarr;</a>
+<a href="subscribe-dispatch.html" class="btn btn-amber">Get the morning Hot Sheet &rarr;</a>
+<a href="daily-hot-sheet.html" class="read-link mono" style="opacity:1;transform:none;color:#fff;text-decoration:underline;">Read today's first &rarr;</a>
 </div>
 </div>
-<a class="wd-strip-card" href="weekly-dispatch-01.html" aria-label="Read Issue No. 01 of the Weekly Dispatch">
-<span class="wd-strip-tag mono">Issue No. 01</span>
-<span class="wd-strip-h">This Week Changed the Scoreboard</span>
-<span class="wd-strip-meta mono">Incentives · inventory · rates, tracked weekly</span>
-<span class="wd-strip-go mono">Read the issue &rarr;</span>
+<a class="wd-strip-card" href="daily-hot-sheet.html" aria-label="Read today's Daily Hot Sheet">
+<span class="wd-strip-tag mono">Today's edition</span>
+<span class="wd-strip-h">The Daily Builder Incentive Hot Sheet</span>
+<span class="wd-strip-meta mono">49 builders · verified every morning · expired offers flagged</span>
+<span class="wd-strip-go mono">Read today's &rarr;</span>
 </a>
 </div>
 </section>
@@ -2300,13 +2300,6 @@ a.nhd-tick-item:hover{background:rgba(255,255,255,.06);}
 <a href="https://www.instagram.com/newhomedispatch/" target="_blank" rel="noopener" class="btn btn-amber" onclick="if(window.NHD) NHD.trackEvent('instagram_follow_click',{from:'home_strip'});">Follow on Instagram &rarr;</a>
 </div>
 <div class="ig-grid" id="ig-grid"></div>
-</div>
-</section>
-<section style="background:#0A0A0A;color:#fff;">
-<div style="max-width:1180px;margin:0 auto;padding:44px 24px;">
-<div style="font-family:'Inter', sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#F7CE7C;">Field reporting</div>
-<p style="font-family:'Archivo Expanded','Inter',sans-serif;font-weight:800;font-size:clamp(1.2rem,2.4vw,1.7rem);margin:8px 0 8px;">We go look.</p>
-<p style="font-size:.95rem;line-height:1.65;color:#C9CDD6;max-width:70ch;margin:0;">Not everything is on a website. <span style="color:#fff;font-weight:600;">Field Route 01: Kyle and Buda, ten stops, in progress.</span> Verified pricing, tax district checks, incentive signage, and original photos will land on the community pages the same day they are captured. No posts are published yet -- check Field Notes for the first ones.</p>
 </div>
 </section>
 <section class="about" id="about">
@@ -2555,10 +2548,9 @@ function medianAt(i){ var v=D.records.map(function(r){return r.history[i]?r.hist
 var n=D.dates.length, cur=medianAt(n-1), prev=n>1?medianAt(n-2):cur, d=cur-prev;
 function k(v){ return '$'+(Math.round(v/100)/10).toFixed(1).replace(/\.0$/,'')+'k'; }
 var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], p=D.updated.split('-');
-var arrow=d>0?'▲':(d<0?'▼':'—');
 var meta=document.querySelector('.wd-strip-meta'); var tag=document.querySelector('.wd-strip-tag');
-if(meta) meta.textContent='Median incentive '+k(cur)+' '+arrow+' · buyer leverage '+(D.leverage||'—').toUpperCase()+' · '+D.records.length+' offers tracked';
-if(tag) tag.textContent='Issue No. 01 · data updated '+mo[(+p[1])-1]+' '+(+p[2]);
+if(meta) meta.textContent=D.records.length+' tracked offers · buyer leverage '+(D.leverage||'steady').toUpperCase()+' · expired offers flagged';
+if(tag) tag.textContent='Today\u2019s edition · verified '+mo[(+p[1])-1]+' '+(+p[2]);
 });
 })();
 </script>

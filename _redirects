@@ -11,6 +11,11 @@
 /incentive-tracker   /incentive-tracker.html   200
 /weekly-dispatch   /subscribe-dispatch.html   200
 /weekly-dispatch.html   /subscribe-dispatch.html   301!
+/preference-center.html   /subscribe-dispatch.html   301!
+/preference-center   /subscribe-dispatch.html   301
+/incentive-watch.html   /subscribe-dispatch.html   301!
+/incentive-watch   /subscribe-dispatch.html   301
+/dashboard.html   /   301!
 /zero-out-of-pocket   /zero-out-of-pocket.html   200
 /tax-reality-guide   /texas-tax-reality-guide.html   200
 /share   /share-your-story.html   200

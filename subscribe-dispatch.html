@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subscribe to the Weekly Dispatch, New Home Dispatch</title>
+<title>Get the Daily Hot Sheet by email, New Home Dispatch</title>
 <link rel="canonical" href="https://newhomedispatch.com/subscribe-dispatch.html">
-<meta name="description" content="The Weekly Dispatch, one independent, four-minute read on the Central Texas new-construction market, every Friday. Free.">
+<meta name="description" content="The Daily Hot Sheet by email: every Austin-area builder incentive, verified on the builder's own site each morning, with expired offers flagged. Free.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Expanded:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="analytics.js" defer></script>
@@ -1728,19 +1728,19 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
 <section class="gate-hero">
   <div class="gate-grid-bg" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="eyebrow mono">The Weekly Dispatch · Free</div>
-    <h1>One email every Friday. The market, read for buyers.</h1>
-    <p>The scoreboard (rates, incentives, inventory), the deal of the week, a field note from a real site visit, and the one question to ask at the table. Four-minute read. Independent, not builder marketing.</p>
+    <div class="eyebrow mono">The Daily Hot Sheet · Free</div>
+    <h1>One email a morning. Every builder incentive in Austin, verified before you read it.</h1>
+    <p>What moved overnight across 49 builders, the deadlines that are real, the one permanent rate worth knowing about, and the expired offers still sitting on builder websites. Five-minute read, sourced to the builder's own page. Independent, not builder marketing.</p>
   </div>
 </section>
 <section class="gate-body">
   <div class="wrap gate-layout">
     <div class="gate-form">
-      <h2>Subscribe to the Weekly Dispatch</h2>
-      <p class="sub">You'll get one email each Friday. That's it, no quarterly digest, no builder lists. Unsubscribe in one click, anytime.</p>
+      <h2>Get the morning Hot Sheet</h2>
+      <p class="sub">One email each morning, after the sweep. No builder lists, no sales sequence. Unsubscribe in one click, anytime.</p>
       <form name="weekly-dispatch" method="POST" action="thanks-dispatch.html" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="weekly-dispatch">
-        <input type="hidden" name="pref_weekly" value="yes">
+        <input type="hidden" name="pref_dailyhotsheet" value="yes">
         <p class="gate-hp"><label>Leave blank: <input name="bot-field"></label></p>
         <div class="gf-field"><label for="wd-name">First name</label><input id="wd-name" name="first_name" type="text" autocomplete="given-name" required></div>
         <div class="gf-field"><label for="wd-email">Email</label><input id="wd-email" name="email" type="email" autocomplete="email" required></div>
@@ -1748,25 +1748,25 @@ if(rb&&rb.rate30yr)t('tick-rate','30 yr '+rb.rate30yr.toFixed(2)+'%');
         <div class="gf-field"><label for="wd-area">Area you're watching <span class="gf-opt">(optional)</span></label><input id="wd-area" name="target_area" type="text" placeholder="e.g., Georgetown, Kyle, Leander"></div>
         <div class="gf-field gf-prefs">
           <label class="gf-prefs-label">Also send me <span class="gf-opt">(optional, pick any)</span></label>
-          <label class="gf-check"><input type="checkbox" name="pref_dailyhotsheet" value="yes"> The Daily Hot Sheet, each morning's verified incentive changes</label>
+          <label class="gf-check"><input type="checkbox" name="pref_weekly" value="yes"> The Friday recap, the week's moves in one read</label>
           <label class="gf-check"><input type="checkbox" name="pref_quarterly" value="yes"> Quarterly Buyer Playbook updates</label>
         </div>
-        <button type="submit" class="btn btn-amber" onclick="if(window.NHD) NHD.trackEvent('weekly_dispatch_signup', {context:'subscribe_page'});">Get the Dispatch each Friday &rarr;</button>
-        <p class="fineprint">One email a week, every Friday. We never share your address, and there are no builder mailing lists. Unsubscribe anytime.</p>
+        <button type="submit" class="btn btn-amber" onclick="if(window.NHD) NHD.trackEvent('weekly_dispatch_signup', {context:'subscribe_page'});">Send me the morning Hot Sheet &rarr;</button>
+        <p class="fineprint">One email each morning. We never share your address, and there are no builder mailing lists. Unsubscribe anytime.</p>
       </form>
       <p class="fineprint" style="border-top:1px solid var(--line); padding-top:14px; margin-top:16px;">Form not loading? Email <a href="mailto:hello@newhomedispatch.com?subject=Subscribe%20to%20the%20Weekly%20Dispatch" style="color:var(--ink); text-decoration:underline;">hello@newhomedispatch.com</a> and we'll add you.</p>
     </div>
     <div class="gate-aside">
-      <h3>What's in every issue</h3>
+      <h3>What's in every morning's email</h3>
       <ul class="gate-list">
-        <li>The Scoreboard, rates, incentives, inventory, week over week</li>
-        <li>The Bottom Line, what this week means for your leverage</li>
-        <li>Deal of the Week, an editor's pick, with the catch</li>
-        <li>Field Note, what we saw on a real site visit</li>
-        <li>A community worth a weekend, and the question to ask</li>
+        <li>What moved overnight, builder by builder</li>
+        <li>Deadlines inside two weeks, with the fine print</li>
+        <li>Permanent rate promotions against today's benchmark</li>
+        <li>The biggest live dollar offers, sourced to the builder's page</li>
+        <li>Expired offers still displayed on builder websites</li>
       </ul>
       <div class="gate-free">
-        <p><strong>See it first.</strong> <a href="weekly-dispatch-01.html" style="color:var(--ink); text-decoration:underline;">Read Issue No. 01 &rarr;</a>, then decide if it's worth your inbox.</p>
+        <p><strong>See it first.</strong> <a href="daily-hot-sheet.html" style="color:var(--ink); text-decoration:underline;">Read today's Hot Sheet &rarr;</a>, then decide if it's worth your inbox.</p>
       </div>
     </div>
   </div>

@@ -19,3 +19,13 @@
 # dispatch/twilio-autonomous-checkin-integration.md.
 [functions."twilio-checkin-send"]
   schedule = "0 13 * * *"
+
+# Daily Hot Sheet email. Runs every morning after the bridge publishes
+# team/hot-sheet-digest.html (~12:00 UTC), emails it to the MailerLite "Daily
+# Hot Sheet" group. DRY-RUN (logs only) unless HOTSHEET_EMAIL_LIVE=true in the
+# Netlify env. See netlify/functions/send-hot-sheet-email.js.
+[functions."send-hot-sheet-email"]
+  schedule = "30 12 * * *"
+
+[functions."send-hot-sheet-email-retry"]
+  schedule = "30 13 * * *"

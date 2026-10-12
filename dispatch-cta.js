@@ -39,7 +39,7 @@
     if (self) { prefix = (self.getAttribute('src') || '').replace(/dispatch-cta\.js.*$/, ''); }
 
     var subscribe = prefix + 'subscribe-dispatch.html';
-    var latest = prefix + 'weekly-dispatch-01.html';
+    var latest = prefix + 'daily-hot-sheet.html';
 
     var sec = document.createElement('section');
     sec.className = 'wd-cta-inject';
@@ -48,12 +48,12 @@
 
     sec.innerHTML =
       '<div style="max-width:760px;margin:0 auto;text-align:center;">' +
-        '<div style="font-family:\'IBM Plex Mono\',ui-monospace,Menlo,monospace;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:#8FB0FF;">The Weekly Dispatch &middot; Every Friday</div>' +
-        '<h2 id="wd-cta-inject-title" style="font-family:\'Archivo Expanded\',Arial,sans-serif;font-weight:700;font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.18;color:#fff;margin:12px 0 12px;">One email a week. The whole market, read for buyers.</h2>' +
-        '<p style="font-size:1rem;line-height:1.6;color:rgba(255,255,255,.80);max-width:56ch;margin:0 auto 24px;">The week&rsquo;s incentive moves, the deal of the week, and what to do about it. Four minutes, clearly sourced, free. No builder spin.</p>' +
+        '<div style="font-family:\'IBM Plex Mono\',ui-monospace,Menlo,monospace;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:#8FB0FF;">The Daily Hot Sheet &middot; By email, every morning</div>' +
+        '<h2 id="wd-cta-inject-title" style="font-family:\'Archivo Expanded\',Arial,sans-serif;font-weight:700;font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.18;color:#fff;margin:12px 0 12px;">One email a morning. Every Austin builder incentive, verified before you read it.</h2>' +
+        '<p style="font-size:1rem;line-height:1.6;color:rgba(255,255,255,.80);max-width:56ch;margin:0 auto 24px;">What moved overnight, the deadlines that are real, and the expired offers still on builder websites. Five minutes, sourced to the builder&rsquo;s own page, free.</p>' +
         '<div style="display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;justify-content:center;">' +
-          '<a href="' + subscribe + '" style="display:inline-block;background:#fff;color:#0A0A0A;font-weight:700;font-size:0.95rem;padding:13px 26px;border-radius:2px;text-decoration:none;">Subscribe free &rarr;</a>' +
-          '<a href="' + latest + '" style="font-family:\'IBM Plex Mono\',ui-monospace,Menlo,monospace;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-decoration:underline;">Read the latest issue &rarr;</a>' +
+          '<a href="' + subscribe + '" style="display:inline-block;background:#fff;color:#0A0A0A;font-weight:700;font-size:0.95rem;padding:13px 26px;border-radius:2px;text-decoration:none;">Get the morning Hot Sheet &rarr;</a>' +
+          '<a href="' + latest + '" style="font-family:\'IBM Plex Mono\',ui-monospace,Menlo,monospace;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#fff;text-decoration:underline;">Read today&rsquo;s first &rarr;</a>' +
         '</div>' +
       '</div>';
 

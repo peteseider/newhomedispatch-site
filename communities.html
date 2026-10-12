@@ -2977,7 +2977,7 @@ function renderPins(){
     activeCommunity = (activeCommunity === id) ? null : id;
     if(activeCommunity){
       const c = byId(NHD_DATA.communities, activeCommunity);
-      if(window.NHD) NHD.trackEvent('community_view', {community: activeCommunity, source: 'explorer_panel'});
+      if(window.NHD) NHD.trackEvent('community_view', {community: activeCommunity, panel: 'explorer'});
       const buildTag = (bid) => { const b = byId(NHD_DATA.builders, bid); return `<button class="tag-btn mono" data-builder="${bid}">${b.name}</button>`; };
       const MAX_VISIBLE_BUILDERS = 3;
       const builderTags = c.builders.length > MAX_VISIBLE_BUILDERS

@@ -103,3 +103,31 @@
   else { document.addEventListener('DOMContentLoaded', apply); }
   window.NHD_SCHEDULE = SCHEDULE;
 })();
+
+/* v74: "Talk to Pete" block above the footer on data-heavy pages (hot sheet, tracker,
+   builder/community/report pages, calculators). One edit here changes it everywhere.
+   Skipped on conversion-owning pages and internal/team pages. */
+(function(){
+  function ready(fn){ if(document.readyState!=='loading'){fn();} else {document.addEventListener('DOMContentLoaded',fn);} }
+  ready(function(){
+    var path=(location.pathname||'').toLowerCase();
+    var allow=['/daily-hot-sheet','/incentive-tracker','/builders','/communities','/reports','/true-cost-calculator','/incentive-calculator','/free-tools','/affordability','/down-payment-assistance','/mud-pid-atlas','/texas-tax-reality-guide','/tax-reality-guide','/library/','/buyer-guides','/leverage-report','/dare-to-compare','/zero-out-of-pocket','/kyle','/buda','/san-marcos','/south-austin','/areas','/negotiation-window','/deal-comes-last'];
+    var skip=['/buyer-strategy-call','/thanks','/team/','/subscribe','/get-guides','/playbook-unlock','/first-time-buyers','/iabs','/share'];
+    var ok=false; for(var i=0;i<allow.length;i++){ if(path.indexOf(allow[i])===0){ok=true;break;} }
+    if(!ok) return;
+    for(var j=0;j<skip.length;j++){ if(path.indexOf(skip[j])!==-1) return; }
+    if(document.querySelector('.pete-cta-inject')) return;
+    var footer=document.querySelector('footer'); if(!footer) return;
+    var prefix=''; var self=document.querySelector('script[src$="nav.js"]'); if(self){ prefix=(self.getAttribute('src')||'').replace(/nav\.js.*$/,''); }
+    var sec=document.createElement('section'); sec.className='pete-cta-inject'; sec.setAttribute('aria-label','Talk to Pete');
+    sec.style.cssText='background:#fff;border-top:1px solid #E0E0E0;padding:34px 20px;margin:0;';
+    sec.innerHTML='<div style="max-width:860px;margin:0 auto;display:flex;align-items:center;gap:18px 24px;flex-wrap:wrap;">'+
+      '<img src="'+prefix+'assets/pete-seider-byline.jpg" alt="Pete Seider" style="width:56px;height:70px;object-fit:cover;object-position:top center;border-radius:3px;border:1px solid #D7DBE2;flex:0 0 56px;">'+
+      '<div style="flex:1 1 320px;font-family:Inter,-apple-system,sans-serif;font-size:.97rem;line-height:1.55;color:#2B3542;"><strong style="color:#0F2942;">Looking at one of these builders?</strong> I’m Pete Seider. I publish this data every morning and I represent buyers in new construction. Fifteen minutes is enough to tell you what an offer is really worth before you sign. Free, no obligation.</div>'+
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;"><a href="https://calendly.com/pete-seider/phone-call" target="_blank" rel="noopener" style="display:inline-block;background:#2B4FE0;color:#fff;font-weight:700;font-size:.9rem;padding:11px 18px;border-radius:2px;text-decoration:none;">Book 15 minutes &rarr;</a>'+
+      '<a href="'+prefix+'buyer-strategy-call.html" style="display:inline-block;color:#2B4FE0;font-weight:600;font-size:.9rem;padding:11px 6px;text-decoration:underline;">Send me what you’re comparing</a></div></div>';
+    if(window.NHD&&NHD.trackEvent){ Array.prototype.forEach.call(sec.querySelectorAll('a'),function(a){ a.addEventListener('click',function(){ try{ NHD.trackEvent('buyerhelp_click',{from:'pete_block',page:path,target:/calendly/.test(a.href)?'calendly':'form'}); }catch(e){} }); }); }
+    var band=document.querySelector('.wd-cta-inject');
+    (band||footer).parentNode.insertBefore(sec, band||footer);
+  });
+})();
