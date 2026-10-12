@@ -724,3 +724,4 @@
 {"t":"2026-10-12T11:53:19.990Z","runKey":"2026-10-12-AM","type":"lender_tie_changed","id":"inc245","builder":"megatel-homes","community":"","to":"unknown"}
 {"t":"2026-10-12T11:53:19.990Z","runKey":"2026-10-12-AM","type":"deadline_extended","id":"inc247","builder":"giddens-homes","community":"","from":"'limited time', no end date","to":"FOR A LIMITED TIME"}
 {"t":"2026-10-12T11:53:19.990Z","runKey":"2026-10-12-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":"unknown"}
+{"t":"2026-10-12T17:26:48.442Z","runKey":"2026-10-12-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
