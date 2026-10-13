@@ -725,3 +725,19 @@
 {"t":"2026-10-12T11:53:19.990Z","runKey":"2026-10-12-AM","type":"deadline_extended","id":"inc247","builder":"giddens-homes","community":"","from":"'limited time', no end date","to":"FOR A LIMITED TIME"}
 {"t":"2026-10-12T11:53:19.990Z","runKey":"2026-10-12-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":"unknown"}
 {"t":"2026-10-12T17:26:48.442Z","runKey":"2026-10-12-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"deadline_extended","id":"inc200","builder":"brohn-homes","community":"","from":"Offer applies to qualifying contracts written on or before October 31, 2026.","to":"qualifying contracts written on or before October 31, 2026"}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"value_changed","id":"inc219","builder":"empire-communities","community":"","from":49992,"to":26992}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc220","builder":"terrata-homes","community":"","to":false}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"deadline_extended","id":"inc222","builder":"united-built-homes","community":"","from":"none stated","to":"none stated (limited new home starts)"}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc222","builder":"united-built-homes","community":"","to":false}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc223","builder":"blackburn-homes","community":"","to":false}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"value_changed","id":"inc235","builder":"starlight-homes","community":"","from":null,"to":0}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"deadline_set","id":"inc235","builder":"starlight-homes","community":"","expires":"none stated"}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc235","builder":"starlight-homes","community":"","to":false}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"deadline_extended","id":"inc236","builder":"risewell-homes","community":"","from":"limited-time, no end date given","to":"none stated, 'limited-time'"}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"deadline_extended","id":"inc306","builder":"lennar","community":"","from":"Sign by 10/11/26; close by 11/30/26","to":"none stated"}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc306","builder":"lennar","community":"","to":false}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc244","builder":"modus-the-george","community":"","to":true}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"deadline_extended","id":"inc247","builder":"giddens-homes","community":"","from":"FOR A LIMITED TIME","to":"none stated on page (linked PDF filename references June 2026)"}
+{"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":false}

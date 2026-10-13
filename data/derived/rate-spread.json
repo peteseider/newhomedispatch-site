@@ -1,8 +1,8 @@
 {
   "schema": "nhd-rate-spread-v1",
   "metric": "Advertised builder rates vs Freddie Mac PMMS 30-year average",
-  "lastUpdated": "2026-10-13T03:43:04.616Z",
-  "runKey": "2026-10-12-PM",
+  "lastUpdated": "2026-10-13T11:52:08.320Z",
+  "runKey": "2026-10-13-AM",
   "pmms": {
     "week": "10/8/2026",
     "rate30": 7.4
@@ -56,13 +56,6 @@
       "community": "",
       "advertisedRate": 2.99,
       "spreadBps": -441
-    },
-    {
-      "id": "inc235",
-      "builder": "starlight-homes",
-      "community": "",
-      "advertisedRate": 3.25,
-      "spreadBps": -415
     },
     {
       "id": "inc238",

@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-10-13T03:43:04.616Z",
-  "runKey": "2026-10-12-PM",
-  "observationRuns": 175,
+  "lastUpdated": "2026-10-13T11:52:08.320Z",
+  "runKey": "2026-10-13-AM",
+  "observationRuns": 176,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc311",
@@ -21,7 +21,7 @@
       "offersTracked": 11
     },
     "lennar": {
-      "deadlineExtensions": 0,
+      "deadlineExtensions": 1,
       "expiredButDisplayedObservations": 2,
       "deadlinesSet": 0,
       "offersTracked": 3
@@ -75,7 +75,7 @@
       "offersTracked": 7
     },
     "brohn-homes": {
-      "deadlineExtensions": 3,
+      "deadlineExtensions": 4,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 6
@@ -119,12 +119,12 @@
     "starlight-homes": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
-      "deadlinesSet": 0,
+      "deadlinesSet": 1,
       "offersTracked": 4
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 156,
+      "expiredButDisplayedObservations": 157,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -183,7 +183,7 @@
       "offersTracked": 1
     },
     "united-built-homes": {
-      "deadlineExtensions": 2,
+      "deadlineExtensions": 3,
       "expiredButDisplayedObservations": 5,
       "deadlinesSet": 0,
       "offersTracked": 3
@@ -273,7 +273,7 @@
       "offersTracked": 2
     },
     "giddens-homes": {
-      "deadlineExtensions": 7,
+      "deadlineExtensions": 8,
       "expiredButDisplayedObservations": 77,
       "deadlinesSet": 0,
       "offersTracked": 1
@@ -285,7 +285,7 @@
       "offersTracked": 1
     },
     "risewell-homes": {
-      "deadlineExtensions": 1,
+      "deadlineExtensions": 2,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 1,
       "offersTracked": 1
