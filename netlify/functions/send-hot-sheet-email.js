@@ -127,6 +127,13 @@ exports.handler = async function () {
   let store = null, lastSent = null;
   try { store = getStore('hot-sheet-email'); lastSent = await store.get('last-sent', { type: 'json' }); } catch (e) { say('blobs unavailable (' + e.message + '); proceeding without dedupe'); }
   if (lastSent && lastSent.date === today) { say('SKIP: already sent today (campaign ' + lastSent.campaignId + ')'); return { statusCode: 200, body: log.join('\n') }; }
+  // Blobs is not reliably available to this function type, so MailerLite itself is the source of truth:
+  // if a campaign named for today already exists (any status), never create another.
+  const recent = await ml(token, '/campaigns?limit=25');
+  if (recent.ok && recent.body && Array.isArray(recent.body.data)) {
+    const dupe = recent.body.data.find((c) => c && c.name === 'Daily Hot Sheet ' + today);
+    if (dupe) { say('SKIP: campaign already exists for today (id ' + dupe.id + ', status ' + dupe.status + ')'); return { statusCode: 200, body: log.join('\n') }; }
+  } else if (live) { say('ABORT: could not check existing campaigns (' + recent.status + '); not sending without a duplicate check'); return { statusCode: 200, body: log.join('\n') }; }
 
   // 4. Sender + group checks.
   const grp = await ml(token, '/groups/' + DAILY_GROUP_ID);
