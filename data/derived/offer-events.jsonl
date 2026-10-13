@@ -741,3 +741,4 @@
 {"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc244","builder":"modus-the-george","community":"","to":true}
 {"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"deadline_extended","id":"inc247","builder":"giddens-homes","community":"","from":"FOR A LIMITED TIME","to":"none stated on page (linked PDF filename references June 2026)"}
 {"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":false}
+{"t":"2026-10-13T17:26:52.850Z","runKey":"2026-10-13-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
