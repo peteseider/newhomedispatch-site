@@ -2910,5 +2910,213 @@
     "advertisedValue": 20000,
     "firstFlagged": "2026-10-12",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Hawkes Landing (Classic)",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Sunfield (Premier)",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Parkside on the River (Premier)",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Calumet (Landmark)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Carillon (Premier)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Flora (Artistry)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Heritage Mill (Premier)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Hunters Glen (Landmark)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Infinity Square (Landmark)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Newhaven (Premier)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Parkside on the River (Enclave)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Spring Creek (60' Premier)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Carillion (Landmark)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Creeks Crossing (Landmark)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Flora (Artistry III)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Opal Ranch (Enclave)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Opal Ranch (Landmark)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Whisper South (Premier)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Spring Creek (50' Premier)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Heritage Mill (Journey)",
+    "advertisedValue": 12000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Infinity Square (Artistry III)",
+    "advertisedValue": 12000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Spring Creek (50' Landmark)",
+    "advertisedValue": 12000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Creeks Crossing (Artistry III)",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Spring Creek (Spring Series)",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Blue Oasis",
+    "advertisedValue": 77732,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Mayfair (New Braunfels), The Colony (Bastrop), Willowbrook",
+    "advertisedValue": 5000,
+    "firstFlagged": "2026-10-13",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]

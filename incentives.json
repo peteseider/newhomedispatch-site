@@ -31,9 +31,10 @@
     "2026-10-09",
     "2026-10-10",
     "2026-10-11",
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-13"
   ],
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -54,10 +55,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Offer applies to qualifying contracts written on or before October 31, 2026.",
+      "expires": "qualifying contracts written on or before October 31, 2026",
       "source": "https://www.brohnhomes.com/lending-incentive/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
+      "lastObserved": "2026-10-13",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -66,7 +67,7 @@
           "value": 40000
         }
       ],
-      "note": "Source: https://www.brohnhomes.com/lending-incentive/ (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://www.brohnhomes.com/lending-incentive/ (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -742,7 +743,7 @@
       "builder": "Empire Communities",
       "homeType": "Varies (confirm on site)",
       "incentiveType": "price-cut",
-      "advertisedValue": 49992,
+      "advertisedValue": 26992,
       "transferability": "Low",
       "buyerValueScore": 27500,
       "lenderTied": false,
@@ -752,9 +753,9 @@
       "expires": "none stated",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
-      "prevValue": 26992,
-      "delta": 23000,
+      "lastObserved": "2026-10-13",
+      "prevValue": 49992,
+      "delta": -23000,
       "history": [
         {
           "date": "2026-07-27",
@@ -895,9 +896,21 @@
         {
           "value": 26992,
           "asOf": "2026-10-11"
+        },
+        {
+          "value": 49992,
+          "asOf": "2026-10-12"
+        },
+        {
+          "value": 23992,
+          "asOf": "2026-10-13"
+        },
+        {
+          "value": 49992,
+          "asOf": "2026-10-13"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -914,14 +927,14 @@
       "advertisedValue": 25000,
       "transferability": "Medium",
       "buyerValueScore": 20000,
-      "lenderTied": true,
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "sold and under contract by 12/31/2026",
       "source": "https://www.terratahomes.com/texas/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
+      "lastObserved": "2026-10-13",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -934,7 +947,7 @@
           "value": 25000
         }
       ],
-      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -984,14 +997,14 @@
       "advertisedValue": 10000,
       "transferability": "Medium",
       "buyerValueScore": 8000,
-      "lenderTied": "unknown",
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated",
+      "expires": "none stated (limited new home starts)",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
+      "lastObserved": "2026-10-13",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -1004,7 +1017,7 @@
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -1021,14 +1034,14 @@
       "advertisedValue": 20000,
       "transferability": "Medium",
       "buyerValueScore": 16000,
-      "lenderTied": "unknown",
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "none stated",
       "source": "https://blackburnhomes.com/available-homes/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
+      "lastObserved": "2026-10-13",
       "prevValue": 75000,
       "delta": -55000,
       "history": [
@@ -1093,7 +1106,7 @@
           "asOf": "2026-10-12"
         }
       ],
-      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -1442,27 +1455,31 @@
       "submarket": "",
       "builder": "Starlight Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "Rate special (no dollar figure)",
-      "advertisedValue": null,
+      "incentiveType": "unspecified",
+      "advertisedValue": 0,
       "transferability": null,
       "buyerValueScore": null,
-      "lenderTied": "unknown",
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "",
-      "source": "Builder-reported",
-      "confidence": "unverified",
-      "lastObserved": "2026-07-29",
+      "expires": "none stated",
+      "source": "https://www.starlighthomes.com/austin",
+      "confidence": "builder-advertised",
+      "lastObserved": "2026-10-13",
       "prevValue": null,
-      "delta": null,
+      "delta": 0,
       "history": [
         {
           "date": "2026-07-29",
           "value": null
+        },
+        {
+          "value": null,
+          "asOf": "2026-07-29"
         }
       ],
-      "note": "RE-CONFIRMED LIVE 2026-07-29. 3.25% note rate FHA 5/1 ARM (Velocio/Trailblazer) -- not permanent, not a temp buydown. $0 Down messaging present, terms undisclosed.",
+      "note": "Source: https://www.starlighthomes.com/austin (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -1483,10 +1500,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "limited-time, no end date given",
+      "expires": "none stated, 'limited-time'",
       "source": "https://risewellhomes.com/promotions/region/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
+      "lastObserved": "2026-10-13",
       "prevValue": null,
       "delta": 10000,
       "history": [
@@ -1499,7 +1516,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -1890,14 +1907,14 @@
       "advertisedValue": 20000,
       "transferability": null,
       "buyerValueScore": null,
-      "lenderTied": true,
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "3.375% (6.611% APR) FHA 5/1 ARM",
-      "expires": "Sign by 10/11/26; close by 11/30/26",
-      "source": "https://www.lennar.com/new-homes/texas/austin-central-texas/promo/sanlen_aus_fss26",
+      "expires": "none stated",
+      "source": "https://www.lennar.com/new-homes/texas/austin-central-texas/promo/sanlen_aus_svd26",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-11",
+      "lastObserved": "2026-10-13",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -1906,7 +1923,7 @@
           "value": 20000
         }
       ],
-      "note": "Source: https://www.lennar.com/new-homes/texas/austin-central-texas/promo/sanlen_aus_fss26 (builder-advertised) verified 2026-10-11.",
+      "note": "Source: https://www.lennar.com/new-homes/texas/austin-central-texas/promo/sanlen_aus_svd26 (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -2288,14 +2305,14 @@
       "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": 20000,
-      "lenderTied": false,
+      "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "4.99% (structure not specified) -- alternative to the flex cash",
-      "expires": "For a limited time (no end date stated)",
+      "expires": "For a limited time",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
+      "lastObserved": "2026-10-13",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2308,7 +2325,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -2332,7 +2349,7 @@
       "expires": "For a Limited Time",
       "source": "https://www.megatelhomes.com/communities/austin-tx/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
+      "lastObserved": "2026-10-13",
       "prevValue": 17000,
       "delta": -7000,
       "history": [
@@ -2377,7 +2394,7 @@
           "asOf": "2026-09-18"
         }
       ],
-      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -2398,10 +2415,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated",
+      "expires": "Big home savings end November 1 (year not stated)",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
+      "lastObserved": "2026-10-13",
       "prevValue": 6497,
       "delta": 18503,
       "history": [
@@ -2422,7 +2439,7 @@
           "asOf": "2026-09-18"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -2439,14 +2456,14 @@
       "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": null,
-      "lenderTied": "unknown",
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "FOR A LIMITED TIME",
+      "expires": "none stated on page (linked PDF filename references June 2026)",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-12",
+      "lastObserved": "2026-10-13",
       "prevValue": 100000,
       "delta": -60000,
       "history": [
@@ -2467,7 +2484,7 @@
           "asOf": "2026-10-10"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-12.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-13.",
       "expired": false,
       "run": "AM"
     },
@@ -2544,12 +2561,12 @@
       "builder": "Regency by Toll Brothers",
       "community": "Regency at Santa Rita Ranch (Liberty Hill)",
       "promo": "5.49% (5.76% APR) 30-Year Fixed -- Limited Time Only on Select Homes",
-      "expires": "Oct 18, 2026 (signing window; opened Oct 3, 2026)",
-      "lastObserved": "2026-10-12",
+      "expires": "Dec 18, 2026 (signing/close window Oct 8 to Dec 18, 2026; previously reported as Oct 3 to Oct 18)",
+      "lastObserved": "2026-10-13",
       "firstObserved": "2026-10-10",
       "confidence": "unverified",
       "source": "Builder-reported",
-      "note": "Third consecutive run with this disclosure, unchanged (5.49%/5.76% APR, labeled '30-Year Fixed'). The dagger-footnote with full permanent-vs-temporary terms has still not been captured in any of the three fetches -- the page's own text never uses the word 'permanent', and frames the rate as 'Limited Time Only,' which could describe a time-limited WINDOW to lock an otherwise-permanent rate, or could describe a temporary rate itself. Carried forward as a tentative candidate consistent with prior treatment, but this is now a 3-run-running unresolved flag -- recommend an actual phone verification call (833-405-8655) rather than a 4th consecutive carry-forward. Lender not named on page."
+      "note": "Fourth consecutive run. The dagger-footnote was found for the first time today on a linked /event/5.49 subpage: standard fixed-rate mortgage via Toll Brothers Mortgage Company (NMLS #18154), 740 minimum credit score, 10% minimum down, loan amount $250K to $832,750, FHA/VA ineligible, primary residence only. The footnote never uses the word 'permanent' and frames the rate as 'Limited Time Only', so permanence is unconfirmed. Recommend a phone verification call (833-405-8655) rather than another carry-forward."
     }
   ]
 }
