@@ -1,37 +1,37 @@
 {
-  "updated": "2026-10-12",
-  "sectionTitle": "What changed beyond the sales office",
-  "primary": {
-    "headline": "Why Buying a New Home Is Now Cheaper Than an Existing One in Many Markets",
-    "publisher": "FOX 7 Austin",
-    "publishedAt": "2026-10-04",
-    "sourceUrl": "https://fox7austin.com/news/why-buying-new-home-is-now-cheaper-than-existing-one-many-markets",
-    "geography": [
-      "Austin metro",
-      "Central Texas new-construction corridor"
-    ],
-    "topics": [
-      "builder incentives",
-      "price history",
-      "new-vs-resale comparison",
-      "market data"
-    ],
-    "affectedAreas": [
-      "Austin metro",
-      "Central Texas new-construction corridor"
-    ],
-    "summary": "Reporting cites recent market data showing the long-standing new-construction price premium over resale homes has narrowed or inverted in a number of U.S. metros, driven by builders' sustained use of rate buydowns, price cuts, and closing-cost credits to move inventory -- the same mechanism this sweep tracks daily in Austin. The piece frames this as a structural shift in buyer leverage rather than a one-off sale.",
-    "buyerImplication": "Directly validates what this sweep's own data has shown for months: Austin-area builders are carrying median advertised incentives around $25,000-$32,000 across 30+ active builders, with several offers exceeding $85,000-$105,000 on specific communities. Buyers comparing a new build to a comparable resale listing should run the full cost comparison (price, incentive value, HOA, warranty, and lender-tied rate terms) rather than assuming resale is cheaper by default.",
-    "buyerAction": "Before ruling out new construction as the pricier option, get the builder's current incentive-adjusted price in writing and compare it against a comparable resale listing's true closing cost -- not just list price. Use this sweep's Biggest Live Dollar Offers table as a starting point for which Austin-area builders are currently most aggressive.",
-    "localityScore": 18,
-    "buyerImpactScore": 24,
-    "newConstructionScore": 20,
-    "recencyScore": 5,
-    "sourceQualityScore": 9,
-    "totalScore": 76,
-    "confidence": "High confidence -- FOX 7 Austin reporting, published 2026-10-04; re-verified 2026-10-12 (9th consecutive day in rotation) after a fresh search pass checked two candidates: a Community Impact piece on a Georgetown builder that is paid sponsored content credited to the builder (rejected on source quality), and an independent but 14-month-old Georgetown community story (rejected on recency). Recency score stepped down to 5; total 76 remains above the 70-point publish bar. Market figures are as characterized in the source reporting.",
-    "reviewedAt": "2026-10-12",
-    "status": "approved"
-  },
-  "secondary": []
+ "updated": "2026-10-13",
+ "sectionTitle": "What changed beyond the sales office",
+ "primary": {
+  "headline": "Why Buying a New Home Is Now Cheaper Than an Existing One in Many Markets",
+  "publisher": "FOX 7 Austin",
+  "publishedAt": "2026-10-04",
+  "sourceUrl": "https://fox7austin.com/news/why-buying-new-home-is-now-cheaper-than-existing-one-many-markets",
+  "geography": [
+   "Austin metro",
+   "Central Texas new-construction corridor"
+  ],
+  "topics": [
+   "builder incentives",
+   "price history",
+   "new-vs-resale comparison",
+   "market data"
+  ],
+  "affectedAreas": [
+   "Austin metro",
+   "Central Texas new-construction corridor"
+  ],
+  "summary": "Reporting cites recent market data showing the long-standing new-construction price premium over resale homes has narrowed or inverted in a number of U.S. metros, driven by builders' sustained use of rate buydowns, price cuts, and closing-cost credits to move inventory -- the same mechanism this sweep tracks daily in Austin. The piece frames this as a structural shift in buyer leverage rather than a one-off sale.",
+  "buyerImplication": "Directly validates what this sweep's own data has shown for months: Austin-area builders are carrying median advertised incentives around $25,000-$32,000 across 30+ active builders, with several offers exceeding $85,000-$105,000 on specific communities. Buyers comparing a new build to a comparable resale listing should run the full cost comparison (price, incentive value, HOA, warranty, and lender-tied rate terms) rather than assuming resale is cheaper by default.",
+  "buyerAction": "Before ruling out new construction as the pricier option, get the builder's current incentive-adjusted price in writing and compare it against a comparable resale listing's true closing cost -- not just list price. Use this sweep's Biggest Live Dollar Offers table as a starting point for which Austin-area builders are currently most aggressive.",
+  "localityScore": 18,
+  "buyerImpactScore": 24,
+  "newConstructionScore": 20,
+  "recencyScore": 4,
+  "sourceQualityScore": 9,
+  "totalScore": 75,
+  "confidence": "High confidence -- FOX 7 Austin reporting, published 2026-10-04; re-verified 2026-10-13 (10th consecutive day in rotation). A fresher qualifying Austin/corridor story was searched for again and none cleared the bar; one candidate (Community Impact, GFO Home) was confirmed to be dated 2023 and rejected. Recency score 4 (9 days old); total 75, above the 70-point bar.",
+  "reviewedAt": "2026-10-13",
+  "status": "approved"
+ },
+ "secondary": []
 }
