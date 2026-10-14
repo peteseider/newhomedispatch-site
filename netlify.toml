@@ -29,3 +29,12 @@
 
 [functions."send-hot-sheet-email-retry"]
   schedule = "30 13 * * *"
+
+# Weekly Dispatch email. Fridays after the daily bridge publishes (~12:00 UTC).
+# Built automatically from the published feed; sends only if HOTSHEET_EMAIL_LIVE=true.
+# See netlify/functions/send-weekly-dispatch.js and _lib/weekly-dispatch.js.
+[functions."send-weekly-dispatch"]
+  schedule = "30 12 * * 5"
+
+[functions."send-weekly-dispatch-retry"]
+  schedule = "30 13 * * 5"
