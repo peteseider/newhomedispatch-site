@@ -400,14 +400,14 @@
     },
     {
       "date": "2026-10-14",
-      "count30d": 263,
+      "count30d": 282,
       "priorYear30d": 187
     }
   ],
   "current": {
     "from": "2026-09-14",
     "to": "2026-10-14",
-    "count": 263
+    "count": 282
   },
   "priorYear": {
     "from": "2025-09-14",
