@@ -3118,5 +3118,61 @@
     "advertisedValue": 5000,
     "firstFlagged": "2026-10-13",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Carillon / Carillion (Landmark)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Infinity Square (Landmark & Premier)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Briarwood (Enclave & Premier)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Opal Ranch (Enclave & Landmark)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Paired Homes at Park Central (Union)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "perry-homes",
+    "builder": "Perry Homes",
+    "community": "Easton Park",
+    "advertisedValue": 50000,
+    "firstFlagged": "2026-10-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Mayfair, Willowbrook, The Colony",
+    "advertisedValue": 5000,
+    "firstFlagged": "2026-10-14",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
