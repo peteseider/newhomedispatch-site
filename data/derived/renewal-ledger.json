@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-10-14T02:03:08.925Z",
-  "runKey": "2026-10-13-PM",
-  "observationRuns": 177,
+  "lastUpdated": "2026-10-14T11:58:04.184Z",
+  "runKey": "2026-10-14-AM",
+  "observationRuns": 178,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc311",
@@ -69,7 +69,7 @@
       "offersTracked": 7
     },
     "ashton-woods": {
-      "deadlineExtensions": 2,
+      "deadlineExtensions": 3,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 1,
       "offersTracked": 7
@@ -124,7 +124,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 158,
+      "expiredButDisplayedObservations": 159,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -183,7 +183,7 @@
       "offersTracked": 1
     },
     "united-built-homes": {
-      "deadlineExtensions": 3,
+      "deadlineExtensions": 4,
       "expiredButDisplayedObservations": 5,
       "deadlinesSet": 0,
       "offersTracked": 3

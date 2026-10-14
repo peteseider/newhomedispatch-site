@@ -742,3 +742,10 @@
 {"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"deadline_extended","id":"inc247","builder":"giddens-homes","community":"","from":"FOR A LIMITED TIME","to":"none stated on page (linked PDF filename references June 2026)"}
 {"t":"2026-10-13T11:52:08.320Z","runKey":"2026-10-13-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":false}
 {"t":"2026-10-13T17:26:52.850Z","runKey":"2026-10-13-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-14T11:58:04.184Z","runKey":"2026-10-14-AM","type":"lender_tie_changed","id":"inc200","builder":"brohn-homes","community":"","to":false}
+{"t":"2026-10-14T11:58:04.184Z","runKey":"2026-10-14-AM","type":"lender_tie_changed","id":"inc220","builder":"terrata-homes","community":"","to":"unknown"}
+{"t":"2026-10-14T11:58:04.184Z","runKey":"2026-10-14-AM","type":"deadline_extended","id":"inc222","builder":"united-built-homes","community":"","from":"none stated (limited new home starts)","to":"none stated, limited new home starts"}
+{"t":"2026-10-14T11:58:04.184Z","runKey":"2026-10-14-AM","type":"lender_tie_changed","id":"inc222","builder":"united-built-homes","community":"","to":true}
+{"t":"2026-10-14T11:58:04.184Z","runKey":"2026-10-14-AM","type":"lender_tie_changed","id":"inc223","builder":"blackburn-homes","community":"","to":"unknown"}
+{"t":"2026-10-14T11:58:04.184Z","runKey":"2026-10-14-AM","type":"deadline_extended","id":"inc226","builder":"ashton-woods","community":"","from":"none stated","to":"none stated on banner; URL path references a 2026-11-30 move-in date not labeled as a deadline"}
+{"t":"2026-10-14T11:58:04.184Z","runKey":"2026-10-14-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
