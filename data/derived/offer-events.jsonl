@@ -750,3 +750,8 @@
 {"t":"2026-10-14T11:58:04.184Z","runKey":"2026-10-14-AM","type":"deadline_extended","id":"inc226","builder":"ashton-woods","community":"","from":"none stated","to":"none stated on banner; URL path references a 2026-11-30 move-in date not labeled as a deadline"}
 {"t":"2026-10-14T11:58:04.184Z","runKey":"2026-10-14-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-10-14T19:36:35.591Z","runKey":"2026-10-14-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-15T12:24:07.491Z","runKey":"2026-10-15-AM","type":"deadline_extended","id":"inc200","builder":"brohn-homes","community":"","from":"contracts written on or before October 31, 2026","to":"qualifying contracts written on or before October 31, 2026"}
+{"t":"2026-10-15T12:24:07.491Z","runKey":"2026-10-15-AM","type":"lender_tie_changed","id":"inc200","builder":"brohn-homes","community":"","to":true}
+{"t":"2026-10-15T12:24:07.491Z","runKey":"2026-10-15-AM","type":"lender_tie_changed","id":"inc220","builder":"terrata-homes","community":"","to":false}
+{"t":"2026-10-15T12:24:07.491Z","runKey":"2026-10-15-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-15T12:24:07.491Z","runKey":"2026-10-15-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":"unknown"}
