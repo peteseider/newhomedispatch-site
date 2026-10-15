@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14",
+ "updated": "2026-10-15",
  "sectionTitle": "What changed beyond the sales office",
  "primary": {
   "headline": "Why Buying a New Home Is Now Cheaper Than an Existing One in Many Markets",
@@ -26,11 +26,11 @@
   "localityScore": 18,
   "buyerImpactScore": 24,
   "newConstructionScore": 20,
-  "recencyScore": 3,
+  "recencyScore": 2,
   "sourceQualityScore": 9,
-  "totalScore": 74,
-  "confidence": "High confidence -- FOX 7 Austin reporting, published 2026-10-04; re-verified 2026-10-14 (11th consecutive day in rotation). A fresher qualifying Austin/corridor story was searched for again and none cleared the bar; one candidate (Community Impact, central Austin home sales) was confirmed to be dated November 2023 and rejected. Recency score 3 (10 days old); total 74, above the 70-point bar.",
-  "reviewedAt": "2026-10-14",
+  "totalScore": 73,
+  "confidence": "High confidence -- FOX 7 Austin reporting, published 2026-10-04; re-verified 2026-10-15 (12th consecutive day in rotation). A fresher qualifying Austin/corridor story was searched for again and none cleared the bar; one candidate (Community Impact, SH 45 road dispute) was confirmed to be dated November 2022 and rejected. Recency score 2 (11 days old); total 73, above the 70-point bar.",
+  "reviewedAt": "2026-10-15",
   "status": "approved"
  },
  "secondary": []
