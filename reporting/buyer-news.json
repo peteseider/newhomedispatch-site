@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15",
+ "updated": "2026-10-16",
  "sectionTitle": "What changed beyond the sales office",
  "primary": {
   "headline": "Why Buying a New Home Is Now Cheaper Than an Existing One in Many Markets",
@@ -21,16 +21,16 @@
    "Central Texas new-construction corridor"
   ],
   "summary": "Reporting cites recent market data showing the long-standing new-construction price premium over resale homes has narrowed or inverted in a number of U.S. metros, driven by builders' sustained use of rate buydowns, price cuts, and closing-cost credits to move inventory -- the same mechanism this sweep tracks daily in Austin. The piece frames this as a structural shift in buyer leverage rather than a one-off sale.",
-  "buyerImplication": "Directly validates what this sweep's own data has shown for months: Austin-area builders are carrying median advertised incentives in the low $20,000s across 30+ active builders, with several offers exceeding $85,000-$105,000 on specific communities. Buyers comparing a new build to a comparable resale listing should run the full cost comparison (price, incentive value, HOA, warranty, and lender-tied rate terms) rather than assuming resale is cheaper by default.",
+  "buyerImplication": "Directly validates what this sweep's own data has shown for months: Austin-area builders are carrying median advertised incentives around $25,000 across 30+ active builders, with several offers exceeding $75,000-$105,000 on specific communities. Buyers comparing a new build to a comparable resale listing should run the full cost comparison (price, incentive value, HOA, warranty, and lender-tied rate terms) rather than assuming resale is cheaper by default.",
   "buyerAction": "Before ruling out new construction as the pricier option, get the builder's current incentive-adjusted price in writing and compare it against a comparable resale listing's true closing cost -- not just list price. Use this sweep's Biggest Live Dollar Offers table as a starting point for which Austin-area builders are currently most aggressive.",
   "localityScore": 18,
   "buyerImpactScore": 24,
   "newConstructionScore": 20,
-  "recencyScore": 2,
+  "recencyScore": 1,
   "sourceQualityScore": 9,
-  "totalScore": 73,
-  "confidence": "High confidence -- FOX 7 Austin reporting, published 2026-10-04; re-verified 2026-10-15 (12th consecutive day in rotation). A fresher qualifying Austin/corridor story was searched for again and none cleared the bar; one candidate (Community Impact, SH 45 road dispute) was confirmed to be dated November 2022 and rejected. Recency score 2 (11 days old); total 73, above the 70-point bar.",
-  "reviewedAt": "2026-10-15",
+  "totalScore": 72,
+  "confidence": "High confidence -- FOX 7 Austin reporting, published 2026-10-04; re-verified 2026-10-16 (13th consecutive day in rotation). A fresher qualifying Austin/corridor story was searched for again and none cleared the bar. Recency score 1 (13 days old); total 72, above the 70-point bar.",
+  "reviewedAt": "2026-10-16",
   "status": "approved"
  },
  "secondary": []
