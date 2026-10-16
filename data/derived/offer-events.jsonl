@@ -756,3 +756,9 @@
 {"t":"2026-10-15T12:24:07.491Z","runKey":"2026-10-15-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-10-15T12:24:07.491Z","runKey":"2026-10-15-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":"unknown"}
 {"t":"2026-10-15T19:19:15.100Z","runKey":"2026-10-15-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-16T11:48:26.250Z","runKey":"2026-10-16-AM","type":"lender_tie_changed","id":"inc219","builder":"empire-communities","community":"","to":"unknown"}
+{"t":"2026-10-16T11:48:26.250Z","runKey":"2026-10-16-AM","type":"lender_tie_changed","id":"inc220","builder":"terrata-homes","community":"","to":"unknown"}
+{"t":"2026-10-16T11:48:26.250Z","runKey":"2026-10-16-AM","type":"lender_tie_changed","id":"inc222","builder":"united-built-homes","community":"","to":"unknown"}
+{"t":"2026-10-16T11:48:26.250Z","runKey":"2026-10-16-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-16T11:48:26.250Z","runKey":"2026-10-16-AM","type":"deadline_extended","id":"inc244","builder":"modus-the-george","community":"","from":"For a limited time","to":"For a limited time (October promotion)"}
+{"t":"2026-10-16T11:48:26.250Z","runKey":"2026-10-16-AM","type":"lender_tie_changed","id":"inc244","builder":"modus-the-george","community":"","to":false}
