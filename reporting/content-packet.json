@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-10-16T20:23:44-05:00-PM",
-  "generatedAt": "2026-10-16T20:23:44-05:00",
+  "sweepId": "2026-10-17T08:02:25-05:00-AM",
+  "generatedAt": "2026-10-17T08:02:25-05:00",
   "facts": {
     "score": 66,
     "band": "High",
@@ -14,22 +14,13 @@
     "ratePmmsWeekly": 7.4
   },
   "changes": {
-    "count": 7,
+    "count": 0,
     "newOffers": [],
-    "improved": [
-      "Empire Communities",
-      "MODUS / The George (condos)",
-      "D.R. Horton"
-    ],
-    "reduced": [
-      "Blackburn Homes",
-      "Risewell Homes (formerly Landsea)",
-      "Megatel Homes",
-      "Giddens Homes"
-    ],
+    "improved": [],
+    "reduced": [],
     "deadlinesNext7d": []
   },
-  "interpretation": "Movement this sweep: 3 improved, 4 reduced. Market-wide score unchanged.",
+  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
@@ -42,5 +33,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "publish-watchlists"
+  "publishRecommendation": "record-internal"
 }
