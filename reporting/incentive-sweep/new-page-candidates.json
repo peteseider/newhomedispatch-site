@@ -3174,5 +3174,101 @@
     "advertisedValue": 5000,
     "firstFlagged": "2026-10-14",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Hawkes Landing \"Classic\"",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Oaks at San Gabriel \"Premier\"; Sunfield \"Premier\"",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Devine Landing; Lakeside Meadows; Parkside on the River \"Premier\"",
+    "advertisedValue": 25000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "multiple ($20,000 tier)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "multiple ($15,000 tier)",
+    "advertisedValue": 15000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "multiple ($12,000 tier)",
+    "advertisedValue": 12000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "multiple ($10,000 tier)",
+    "advertisedValue": 10000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Park Central (\"Paired Homes\")",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Park Central (second listing)",
+    "advertisedValue": 30000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Whisper Creek (Unit 224, Poppy plan)",
+    "advertisedValue": 75000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Corral Cove (141 Corral Cv, Holly plan)",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "saratoga-homes",
+    "builder": "Saratoga Homes",
+    "community": "19132 Ariel Elena Way",
+    "advertisedValue": 13000,
+    "firstFlagged": "2026-10-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
