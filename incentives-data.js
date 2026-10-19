@@ -35,9 +35,10 @@ window.NHD_INCENTIVES = {
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-19"
   ],
-  "updated": "2026-10-16",
+  "updated": "2026-10-19",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -756,7 +757,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-16",
+      "lastObserved": "2026-10-19",
       "prevValue": 23992,
       "delta": 3000,
       "history": [
@@ -947,9 +948,21 @@ window.NHD_INCENTIVES = {
         {
           "value": 23992,
           "asOf": "2026-10-16"
+        },
+        {
+          "value": 26992,
+          "asOf": "2026-10-16"
+        },
+        {
+          "value": 14992,
+          "asOf": "2026-10-19"
+        },
+        {
+          "value": 23992,
+          "asOf": "2026-10-19"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-10-16.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -970,10 +983,10 @@ window.NHD_INCENTIVES = {
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "sold and under contract by 12/31/2026",
+      "expires": "Sold and under contract by 12/31/2026",
       "source": "https://www.terratahomes.com/texas/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-16",
+      "lastObserved": "2026-10-19",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -986,7 +999,7 @@ window.NHD_INCENTIVES = {
           "value": 25000
         }
       ],
-      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-16.",
+      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -1043,7 +1056,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-16",
+      "lastObserved": "2026-10-19",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -1056,7 +1069,7 @@ window.NHD_INCENTIVES = {
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-16.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -1232,14 +1245,14 @@ window.NHD_INCENTIVES = {
       "advertisedValue": 70000,
       "transferability": null,
       "buyerValueScore": null,
-      "lenderTied": "unknown",
+      "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "none stated on banner; URL path references a 2026-11-30 move-in date not labeled as a deadline",
+      "expires": "November 15, 2023 (per shared asterisk footnote: 'rate is only available until pool of funds is depleted or the rate expires on November 15, 2023'; contracts stated as due Oct 31–Nov 15, 2023, close by Dec 31, 2023)",
       "source": "https://www.ashtonwoods.com/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-14",
+      "lastObserved": "2026-10-19",
       "prevValue": 5000,
       "delta": 65000,
       "history": [
@@ -1252,7 +1265,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-09-09"
         }
       ],
-      "note": "Source: https://www.ashtonwoods.com/austin (builder-advertised) verified 2026-10-14.",
+      "note": "Source: https://www.ashtonwoods.com/austin (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -1542,9 +1555,9 @@ window.NHD_INCENTIVES = {
       "expires": "available for a limited time (no specific date)",
       "source": "https://risewellhomes.com/promotions/region/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-16",
-      "prevValue": 41700,
-      "delta": -31700,
+      "lastObserved": "2026-10-19",
+      "prevValue": 25000,
+      "delta": -15000,
       "history": [
         {
           "date": "2026-07-29",
@@ -1561,9 +1574,37 @@ window.NHD_INCENTIVES = {
         {
           "value": 41700,
           "asOf": "2026-10-16"
+        },
+        {
+          "value": 10000,
+          "asOf": "2026-10-16"
+        },
+        {
+          "value": 32900,
+          "asOf": "2026-10-19"
+        },
+        {
+          "value": 30020,
+          "asOf": "2026-10-19"
+        },
+        {
+          "value": 12100,
+          "asOf": "2026-10-19"
+        },
+        {
+          "value": 23600,
+          "asOf": "2026-10-19"
+        },
+        {
+          "value": 41700,
+          "asOf": "2026-10-19"
+        },
+        {
+          "value": 25000,
+          "asOf": "2026-10-19"
         }
       ],
-      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-10-16.",
+      "note": "Source: https://risewellhomes.com/promotions/region/austin (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -1665,7 +1706,7 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Wilshire Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "credit-flex",
+      "incentiveType": "unspecified",
       "advertisedValue": 0,
       "transferability": null,
       "buyerValueScore": null,
@@ -1676,7 +1717,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://www.wilshire-homes.com/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-08-29",
+      "lastObserved": "2026-10-19",
       "prevValue": null,
       "delta": 0,
       "history": [
@@ -1685,7 +1726,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-27"
         }
       ],
-      "note": "Source: https://www.wilshire-homes.com/austin (builder-advertised) verified 2026-08-29.",
+      "note": "Source: https://www.wilshire-homes.com/austin (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -2359,7 +2400,7 @@ window.NHD_INCENTIVES = {
       "expires": "For a limited time (October promotion)",
       "source": "https://www.liveatgeorgeatx.com/buyers-choice/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-16",
+      "lastObserved": "2026-10-19",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2372,7 +2413,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-10-16.",
+      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice/ (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -2385,7 +2426,7 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Megatel Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "closing-costs",
+      "incentiveType": "temporary-buydown",
       "advertisedValue": 10000,
       "transferability": "Unknown",
       "buyerValueScore": 5000,
@@ -2396,7 +2437,7 @@ window.NHD_INCENTIVES = {
       "expires": "For a Limited Time",
       "source": "https://www.megatelhomes.com/communities/austin-tx/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-16",
+      "lastObserved": "2026-10-19",
       "prevValue": 17000,
       "delta": -7000,
       "history": [
@@ -2441,7 +2482,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-09-18"
         }
       ],
-      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-16.",
+      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -2462,10 +2503,10 @@ window.NHD_INCENTIVES = {
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "Big home savings end November 1 (year assumed 2026)",
+      "expires": "2026-11-01",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-16",
+      "lastObserved": "2026-10-19",
       "prevValue": 6497,
       "delta": 18503,
       "history": [
@@ -2486,7 +2527,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-09-18"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-10-16.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -2510,7 +2551,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-16",
+      "lastObserved": "2026-10-19",
       "prevValue": 100000,
       "delta": -60000,
       "history": [
@@ -2531,7 +2572,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-10-10"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-16.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-19.",
       "expired": false,
       "run": "AM"
     },
@@ -2602,18 +2643,5 @@ window.NHD_INCENTIVES = {
       "run": "AM"
     }
   ],
-  "promos": [
-    {
-      "id": "regency-toll-brothers-santa-rita-ranch-30yr-fixed",
-      "builder": "Regency by Toll Brothers",
-      "community": "Regency at Santa Rita Ranch (Liberty Hill)",
-      "promo": "5.49% (5.76% APR) 30-Year Fixed -- Limited Time Only on Select Homes",
-      "expires": "Dec 18, 2026 (sign Agreement of Sale on/after 10/8/26, close by 12/18/26)",
-      "lastObserved": "2026-10-16",
-      "firstObserved": "2026-10-10",
-      "confidence": "unverified",
-      "source": "Builder-reported",
-      "note": "HELD live for a 7th consecutive run (now a full week unverified). Checked both the community page and the linked /event/5.49 footnote subpage directly again this run: the words 'permanent' and 'life of the loan' still do not appear anywhere; the offer is described only as a time-boxed 30-Year Fixed promotional rate tied to a contract-signing window, with standard underwriting conditions (loan-amount band, 740 credit score assumption, primary-residence-only, FHA/VA excluded), lender-tied to Toll Brothers Mortgage Company (NMLS #18154). Carried in promos[] because the stated loan type is explicitly '30-Year Fixed' (not an ARM, not a declared 2-1/3-2-1/introductory buydown), which meets this sweep's inclusion test -- but a full week without the word 'permanent' appearing anywhere is long enough that we are no longer comfortable carrying this forward on text-matching alone. RECOMMENDATION: call the sales office (833-405-8655) before the next run to confirm in plain language whether this rate resets after any period, or drop it from promos[] if unconfirmed by the next publish."
-    }
-  ]
+  "promos": []
 };
