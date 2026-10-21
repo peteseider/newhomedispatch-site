@@ -779,3 +779,5 @@
 {"t":"2026-10-21T12:22:12.721Z","runKey":"2026-10-21-AM","type":"lender_tie_changed","id":"inc244","builder":"modus-the-george","community":"","to":"unknown"}
 {"t":"2026-10-21T12:22:12.721Z","runKey":"2026-10-21-AM","type":"deadline_extended","id":"inc245","builder":"megatel-homes","community":"","from":"For a Limited Time","to":"For a Limited Time (no end date stated)"}
 {"t":"2026-10-21T12:22:12.721Z","runKey":"2026-10-21-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":false}
+{"t":"2026-10-21T19:29:10.794Z","runKey":"2026-10-21-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"12/31/2026"}
+{"t":"2026-10-21T19:29:10.794Z","runKey":"2026-10-21-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
