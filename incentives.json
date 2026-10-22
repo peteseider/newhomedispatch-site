@@ -37,9 +37,10 @@
     "2026-10-15",
     "2026-10-16",
     "2026-10-19",
-    "2026-10-21"
+    "2026-10-21",
+    "2026-10-22"
   ],
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -992,14 +993,14 @@
       "advertisedValue": 25000,
       "transferability": "Medium",
       "buyerValueScore": 20000,
-      "lenderTied": "unknown",
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "12/31/2026",
+      "expires": "sold and under contract by 12/31/2026",
       "source": "https://www.terratahomes.com/texas/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-21",
+      "lastObserved": "2026-10-22",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -1012,7 +1013,7 @@
           "value": 25000
         }
       ],
-      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-21.",
+      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-22.",
       "expired": false,
       "run": "AM"
     },
@@ -1062,14 +1063,14 @@
       "advertisedValue": 10000,
       "transferability": "Medium",
       "buyerValueScore": 8000,
-      "lenderTied": true,
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "none stated",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-21",
+      "lastObserved": "2026-10-22",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -1082,7 +1083,7 @@
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-21.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-22.",
       "expired": false,
       "run": "AM"
     },
@@ -1106,7 +1107,7 @@
       "expires": "none stated",
       "source": "https://blackburnhomes.com/available-homes/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-21",
+      "lastObserved": "2026-10-22",
       "prevValue": 54000,
       "delta": -34000,
       "history": [
@@ -1207,7 +1208,7 @@
           "asOf": "2026-10-21"
         }
       ],
-      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-10-21.",
+      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-10-22.",
       "expired": false,
       "run": "AM"
     },
@@ -1301,7 +1302,7 @@
       "expires": "November 15, 2023 (per shared asterisk footnote: 'rate is only available until pool of funds is depleted or the rate expires on November 15, 2023'; contracts stated as due Oct 31–Nov 15, 2023, close by Dec 31, 2023)",
       "source": "https://www.ashtonwoods.com/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-21",
+      "lastObserved": "2026-10-22",
       "prevValue": 5000,
       "delta": 65000,
       "history": [
@@ -1314,7 +1315,7 @@
           "asOf": "2026-09-09"
         }
       ],
-      "note": "Source: https://www.ashtonwoods.com/austin (builder-advertised) verified 2026-10-21.",
+      "note": "Source: https://www.ashtonwoods.com/austin (builder-advertised) verified 2026-10-22.",
       "expired": false,
       "run": "AM"
     },
@@ -2449,7 +2450,7 @@
       "expires": "For a limited time (October promotion)",
       "source": "https://www.liveatgeorgeatx.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-21",
+      "lastObserved": "2026-10-22",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2462,7 +2463,7 @@
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/ (builder-advertised) verified 2026-10-21.",
+      "note": "Source: https://www.liveatgeorgeatx.com/ (builder-advertised) verified 2026-10-22.",
       "expired": false,
       "run": "AM"
     },
@@ -2483,10 +2484,10 @@
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "2.99% FIXED (3.75% APR)",
-      "expires": "For a Limited Time (no end date stated)",
+      "expires": "For a Limited Time",
       "source": "https://www.megatelhomes.com/communities/austin-tx/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-21",
+      "lastObserved": "2026-10-22",
       "prevValue": 17000,
       "delta": -7000,
       "history": [
@@ -2531,7 +2532,7 @@
           "asOf": "2026-09-18"
         }
       ],
-      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-21.",
+      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-22.",
       "expired": false,
       "run": "AM"
     },
@@ -2593,14 +2594,14 @@
       "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": null,
-      "lenderTied": false,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "none stated",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-21",
+      "lastObserved": "2026-10-22",
       "prevValue": 100000,
       "delta": -60000,
       "history": [
@@ -2621,7 +2622,7 @@
           "asOf": "2026-10-10"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-21.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-22.",
       "expired": false,
       "run": "AM"
     },

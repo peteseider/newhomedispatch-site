@@ -3494,5 +3494,21 @@
     "advertisedValue": 10000,
     "firstFlagged": "2026-10-21",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Hawkes Landing; also Preserve at Lakeside Meadows, Oaks at San Gabriel, Devine Landing, Sunfield, Newhaven, Heritage Mill, Briarwood, Carillon, Flora, Opal Ranch, Whisper South, Calumet, Infinity Square, Hunters Glen, Creeks Crossing, Sky Ridge, Spring Creek",
+    "advertisedValue": 41000,
+    "firstFlagged": "2026-10-22",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Lariat (second offer, link labeled \"capitol\")",
+    "advertisedValue": 35000,
+    "firstFlagged": "2026-10-22",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
