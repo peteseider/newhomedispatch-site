@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-10-21T20:40:21-05:00-PM",
-  "generatedAt": "2026-10-21T20:40:21-05:00",
+  "sweepId": "2026-10-22T06:51:17-05:00-AM",
+  "generatedAt": "2026-10-22T06:51:17-05:00",
   "facts": {
     "score": 66,
     "band": "High",
@@ -14,13 +14,11 @@
     "ratePmmsWeekly": 7.4
   },
   "changes": {
-    "count": 7,
+    "count": 5,
     "newOffers": [],
     "improved": [
-      "Empire Communities",
       "Ashton Woods",
-      "MODUS / The George (condos)",
-      "D.R. Horton"
+      "MODUS / The George (condos)"
     ],
     "reduced": [
       "Blackburn Homes",
@@ -29,7 +27,7 @@
     ],
     "deadlinesNext7d": []
   },
-  "interpretation": "Movement this sweep: 4 improved, 3 reduced. Market-wide score unchanged.",
+  "interpretation": "Movement this sweep: 2 improved, 3 reduced. Market-wide score unchanged.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
