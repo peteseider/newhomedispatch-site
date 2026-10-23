@@ -787,3 +787,12 @@
 {"t":"2026-10-22T11:51:34.184Z","runKey":"2026-10-22-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-10-22T11:51:34.184Z","runKey":"2026-10-22-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":"unknown"}
 {"t":"2026-10-22T19:21:52.745Z","runKey":"2026-10-22-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-23T11:50:37.353Z","runKey":"2026-10-23-AM","type":"lender_tie_changed","id":"inc222","builder":"united-built-homes","community":"","to":"unknown"}
+{"t":"2026-10-23T11:50:37.353Z","runKey":"2026-10-23-AM","type":"value_changed","id":"inc236","builder":"risewell-homes","community":"","from":10000,"to":41700}
+{"t":"2026-10-23T11:50:37.353Z","runKey":"2026-10-23-AM","type":"lender_tie_changed","id":"inc236","builder":"risewell-homes","community":"","to":false}
+{"t":"2026-10-23T11:50:37.353Z","runKey":"2026-10-23-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-23T11:50:37.353Z","runKey":"2026-10-23-AM","type":"value_changed","id":"inc315","builder":"sitterle-homes","community":"","from":null,"to":146000}
+{"t":"2026-10-23T11:50:37.353Z","runKey":"2026-10-23-AM","type":"lender_tie_changed","id":"inc315","builder":"sitterle-homes","community":"","to":false}
+{"t":"2026-10-23T11:50:37.353Z","runKey":"2026-10-23-AM","type":"expired_but_displayed","id":"inc244","builder":"modus-the-george","community":"","expires":"'October at George' / limited time, no exact end date stated"}
+{"t":"2026-10-23T11:50:37.353Z","runKey":"2026-10-23-AM","type":"lender_tie_changed","id":"inc244","builder":"modus-the-george","community":"","to":true}
+{"t":"2026-10-23T11:50:37.353Z","runKey":"2026-10-23-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":false}
