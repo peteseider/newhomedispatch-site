@@ -3510,5 +3510,21 @@
     "advertisedValue": 35000,
     "firstFlagged": "2026-10-22",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "drb-homes",
+    "builder": "DRB Homes",
+    "community": "Multiple Austin-area communities (18 communities)",
+    "advertisedValue": 41000,
+    "firstFlagged": "2026-10-23",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Lariat (linked as Capitol)",
+    "advertisedValue": 35000,
+    "firstFlagged": "2026-10-23",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
