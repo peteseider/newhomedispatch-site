@@ -1,7 +1,7 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-10-25T18:31:30.728Z",
+  "lastUpdated": "2026-10-25T21:59:07.745Z",
   "runKey": "2026-10-25-PM",
   "observationRuns": 201,
   "currentlyExpiredButDisplayed": [
