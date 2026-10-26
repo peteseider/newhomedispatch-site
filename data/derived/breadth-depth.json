@@ -1505,7 +1505,15 @@
       "verifiedOffers": 105,
       "depthMedianUSD": 20000,
       "lenderTiedShare": 0.75
+    },
+    {
+      "t": "2026-10-26T11:51:21.055Z",
+      "runKey": "2026-10-26-AM",
+      "breadthBuilders": 34,
+      "verifiedOffers": 105,
+      "depthMedianUSD": 20000,
+      "lenderTiedShare": 0.76
     }
   ],
-  "lastUpdated": "2026-10-26T01:27:29.833Z"
+  "lastUpdated": "2026-10-26T11:51:21.055Z"
 }

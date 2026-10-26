@@ -1,22 +1,15 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-10-26T01:27:29.833Z",
-  "runKey": "2026-10-25-PM",
-  "observationRuns": 201,
+  "lastUpdated": "2026-10-26T11:51:21.055Z",
+  "runKey": "2026-10-26-AM",
+  "observationRuns": 202,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc311",
       "builder": "del-webb",
       "community": "",
       "expires": "06/28/25-07/31/2025",
-      "daysPast": null
-    },
-    {
-      "id": "inc244",
-      "builder": "modus-the-george",
-      "community": "",
-      "expires": "'October at George' / limited time, no exact end date stated",
       "daysPast": null
     }
   ],
@@ -131,7 +124,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 182,
+      "expiredButDisplayedObservations": 183,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -298,7 +291,7 @@
       "offersTracked": 1
     },
     "modus-the-george": {
-      "deadlineExtensions": 6,
+      "deadlineExtensions": 7,
       "expiredButDisplayedObservations": 6,
       "deadlinesSet": 0,
       "offersTracked": 1
