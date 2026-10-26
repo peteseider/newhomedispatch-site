@@ -1,12 +1,12 @@
 {
   "schema": "nhd-sweep-latest-v1",
-  "ranAt": "2026-10-25T20:27:13-05:00",
-  "ranAtLabel": "Oct 25, 2026 · 08:27 PM CT",
-  "slot": "PM",
+  "ranAt": "2026-10-26T06:51:07-05:00",
+  "ranAtLabel": "Oct 26, 2026 · 06:51 AM CT",
+  "slot": "AM",
   "index": 20000,
   "offers": 68,
   "builders": 43,
-  "expired": 2,
+  "expired": 1,
   "detection": {
     "ran": false,
     "reason": "no ANTHROPIC_API_KEY set"

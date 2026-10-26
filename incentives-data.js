@@ -39,9 +39,10 @@ window.NHD_INCENTIVES = {
     "2026-10-19",
     "2026-10-21",
     "2026-10-22",
-    "2026-10-23"
+    "2026-10-23",
+    "2026-10-26"
   ],
-  "updated": "2026-10-23",
+  "updated": "2026-10-26",
   "sample": false,
   "leverage": "High",
   "records": [
@@ -750,19 +751,19 @@ window.NHD_INCENTIVES = {
       "builder": "Empire Communities",
       "homeType": "Varies (confirm on site)",
       "incentiveType": "price-cut",
-      "advertisedValue": 26992,
+      "advertisedValue": 34992,
       "transferability": "Low",
       "buyerValueScore": 27500,
-      "lenderTied": "unknown",
+      "lenderTied": false,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "none stated",
       "source": "https://empirehomes.com/us/texas/austin/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-21",
+      "lastObserved": "2026-10-26",
       "prevValue": 23992,
-      "delta": 3000,
+      "delta": 11000,
       "history": [
         {
           "date": "2026-07-27",
@@ -975,9 +976,21 @@ window.NHD_INCENTIVES = {
         {
           "value": 23992,
           "asOf": "2026-10-21"
+        },
+        {
+          "value": 26992,
+          "asOf": "2026-10-21"
+        },
+        {
+          "value": 14992,
+          "asOf": "2026-10-26"
+        },
+        {
+          "value": 23992,
+          "asOf": "2026-10-26"
         }
       ],
-      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-10-21.",
+      "note": "Source: https://empirehomes.com/us/texas/austin/ (builder-advertised) verified 2026-10-26.",
       "expired": false,
       "run": "AM"
     },
@@ -994,14 +1007,14 @@ window.NHD_INCENTIVES = {
       "advertisedValue": 25000,
       "transferability": "Medium",
       "buyerValueScore": 20000,
-      "lenderTied": false,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
-      "expires": "sold and under contract by 12/31/2026",
+      "expires": "Sold and under contract by 12/31/2026",
       "source": "https://www.terratahomes.com/texas/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-22",
+      "lastObserved": "2026-10-26",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -1014,7 +1027,7 @@ window.NHD_INCENTIVES = {
           "value": 25000
         }
       ],
-      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-22.",
+      "note": "Source: https://www.terratahomes.com/texas/austin (builder-advertised) verified 2026-10-26.",
       "expired": false,
       "run": "AM"
     },
@@ -1064,14 +1077,14 @@ window.NHD_INCENTIVES = {
       "advertisedValue": 10000,
       "transferability": "Medium",
       "buyerValueScore": 8000,
-      "lenderTied": "unknown",
+      "lenderTied": true,
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "none stated",
       "source": "https://www.ubh.com/2026-cash-back/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-23",
+      "lastObserved": "2026-10-26",
       "prevValue": null,
       "delta": null,
       "history": [
@@ -1084,7 +1097,7 @@ window.NHD_INCENTIVES = {
           "value": 10000
         }
       ],
-      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-23.",
+      "note": "Source: https://www.ubh.com/2026-cash-back/ (builder-advertised) verified 2026-10-26.",
       "expired": false,
       "run": "AM"
     },
@@ -1108,7 +1121,7 @@ window.NHD_INCENTIVES = {
       "expires": "none stated",
       "source": "https://blackburnhomes.com/available-homes/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-23",
+      "lastObserved": "2026-10-26",
       "prevValue": 54000,
       "delta": -34000,
       "history": [
@@ -1209,7 +1222,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-10-21"
         }
       ],
-      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-10-23.",
+      "note": "Source: https://blackburnhomes.com/available-homes/ (builder-advertised) verified 2026-10-26.",
       "expired": false,
       "run": "AM"
     },
@@ -2333,7 +2346,7 @@ window.NHD_INCENTIVES = {
       "expires": "Must contract by 12/31/2025",
       "source": "https://sitterlehomes.com/limited-time-opportunity/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-23",
+      "lastObserved": "2026-10-26",
       "prevValue": 150000,
       "delta": -4000,
       "history": [
@@ -2356,9 +2369,29 @@ window.NHD_INCENTIVES = {
         {
           "value": 150000,
           "asOf": "2026-10-23"
+        },
+        {
+          "value": 146000,
+          "asOf": "2026-10-23"
+        },
+        {
+          "value": 20000,
+          "asOf": "2026-10-26"
+        },
+        {
+          "value": 126000,
+          "asOf": "2026-10-26"
+        },
+        {
+          "value": 28000,
+          "asOf": "2026-10-26"
+        },
+        {
+          "value": 150000,
+          "asOf": "2026-10-26"
         }
       ],
-      "note": "Source: https://sitterlehomes.com/limited-time-opportunity/ (builder-advertised) verified 2026-10-23.",
+      "note": "Source: https://sitterlehomes.com/limited-time-opportunity/ (builder-advertised) verified 2026-10-26.",
       "expired": false,
       "run": "AM"
     },
@@ -2465,18 +2498,18 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "MODUS / The George (condos)",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "temporary-buydown",
+      "incentiveType": "credit-flex",
       "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": 20000,
-      "lenderTied": true,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "4.99% (structure not specified) -- alternative to the flex cash",
-      "expires": "'October at George' / limited time, no exact end date stated",
-      "source": "https://www.liveatgeorgeatx.com/buyers-choice",
+      "expires": "October",
+      "source": "https://www.liveatgeorgeatx.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-23",
+      "lastObserved": "2026-10-26",
       "prevValue": 20000,
       "delta": 20000,
       "history": [
@@ -2489,7 +2522,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-07-29"
         }
       ],
-      "note": "Source: https://www.liveatgeorgeatx.com/buyers-choice (builder-advertised) verified 2026-10-23.",
+      "note": "Source: https://www.liveatgeorgeatx.com/ (builder-advertised) verified 2026-10-26.",
       "expired": false,
       "run": "AM"
     },
@@ -2502,7 +2535,7 @@ window.NHD_INCENTIVES = {
       "submarket": "",
       "builder": "Megatel Homes",
       "homeType": "Varies (confirm on site)",
-      "incentiveType": "rate-special",
+      "incentiveType": "closing-costs",
       "advertisedValue": 10000,
       "transferability": "Unknown",
       "buyerValueScore": 5000,
@@ -2513,7 +2546,7 @@ window.NHD_INCENTIVES = {
       "expires": "For a Limited Time",
       "source": "https://www.megatelhomes.com/communities/austin-tx/austin",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-23",
+      "lastObserved": "2026-10-26",
       "prevValue": 17000,
       "delta": -7000,
       "history": [
@@ -2558,7 +2591,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-09-18"
         }
       ],
-      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-23.",
+      "note": "Source: https://www.megatelhomes.com/communities/austin-tx/austin (builder-advertised) verified 2026-10-26.",
       "expired": false,
       "run": "AM"
     },
@@ -2582,9 +2615,9 @@ window.NHD_INCENTIVES = {
       "expires": "2026-11-01",
       "source": "https://www.drhorton.com/texas/austin/manor/palomino",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-23",
-      "prevValue": 6497,
-      "delta": 18503,
+      "lastObserved": "2026-10-26",
+      "prevValue": 12500,
+      "delta": 12500,
       "history": [
         {
           "date": "2026-07-29",
@@ -2601,9 +2634,17 @@ window.NHD_INCENTIVES = {
         {
           "value": 6497,
           "asOf": "2026-09-18"
+        },
+        {
+          "value": 25000,
+          "asOf": "2026-10-23"
+        },
+        {
+          "value": 12500,
+          "asOf": "2026-10-26"
         }
       ],
-      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-10-23.",
+      "note": "Source: https://www.drhorton.com/texas/austin/manor/palomino (builder-advertised) verified 2026-10-26.",
       "expired": false,
       "run": "AM"
     },
@@ -2620,14 +2661,14 @@ window.NHD_INCENTIVES = {
       "advertisedValue": 40000,
       "transferability": "Unknown",
       "buyerValueScore": null,
-      "lenderTied": false,
+      "lenderTied": "unknown",
       "taxRate": null,
       "taxNote": "",
       "ratePromo": "",
       "expires": "none stated",
       "source": "https://giddenshomes.com/",
       "confidence": "builder-advertised",
-      "lastObserved": "2026-10-23",
+      "lastObserved": "2026-10-26",
       "prevValue": 100000,
       "delta": -60000,
       "history": [
@@ -2648,7 +2689,7 @@ window.NHD_INCENTIVES = {
           "asOf": "2026-10-10"
         }
       ],
-      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-23.",
+      "note": "Source: https://giddenshomes.com/ (builder-advertised) verified 2026-10-26.",
       "expired": false,
       "run": "AM"
     },
