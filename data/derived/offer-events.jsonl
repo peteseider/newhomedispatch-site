@@ -814,3 +814,4 @@
 {"t":"2026-10-26T11:51:21.055Z","runKey":"2026-10-26-AM","type":"deadline_extended","id":"inc244","builder":"modus-the-george","community":"","from":"'October at George' / limited time, no exact end date stated","to":"October"}
 {"t":"2026-10-26T11:51:21.055Z","runKey":"2026-10-26-AM","type":"lender_tie_changed","id":"inc244","builder":"modus-the-george","community":"","to":"unknown"}
 {"t":"2026-10-26T11:51:21.055Z","runKey":"2026-10-26-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":"unknown"}
+{"t":"2026-10-26T17:26:49.930Z","runKey":"2026-10-26-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
