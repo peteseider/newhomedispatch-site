@@ -815,3 +815,11 @@
 {"t":"2026-10-26T11:51:21.055Z","runKey":"2026-10-26-AM","type":"lender_tie_changed","id":"inc244","builder":"modus-the-george","community":"","to":"unknown"}
 {"t":"2026-10-26T11:51:21.055Z","runKey":"2026-10-26-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":"unknown"}
 {"t":"2026-10-26T17:26:49.930Z","runKey":"2026-10-26-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-27T12:26:06.897Z","runKey":"2026-10-27-AM","type":"lender_tie_changed","id":"inc220","builder":"terrata-homes","community":"","to":false}
+{"t":"2026-10-27T12:26:06.897Z","runKey":"2026-10-27-AM","type":"lender_tie_changed","id":"inc222","builder":"united-built-homes","community":"","to":"unknown"}
+{"t":"2026-10-27T12:26:06.897Z","runKey":"2026-10-27-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-10-27T12:26:06.897Z","runKey":"2026-10-27-AM","type":"value_changed","id":"inc314","builder":"milestone-community-builders","community":"","from":20000,"to":25000}
+{"t":"2026-10-27T12:26:06.897Z","runKey":"2026-10-27-AM","type":"value_changed","id":"inc315","builder":"sitterle-homes","community":"","from":146000,"to":20000}
+{"t":"2026-10-27T12:26:06.897Z","runKey":"2026-10-27-AM","type":"lender_tie_changed","id":"inc315","builder":"sitterle-homes","community":"","to":"unknown"}
+{"t":"2026-10-27T12:26:06.897Z","runKey":"2026-10-27-AM","type":"deadline_extended","id":"inc245","builder":"megatel-homes","community":"","from":"For a Limited Time","to":"For a Limited Time (no specific date)"}
+{"t":"2026-10-27T12:26:06.897Z","runKey":"2026-10-27-AM","type":"lender_tie_changed","id":"inc247","builder":"giddens-homes","community":"","to":false}

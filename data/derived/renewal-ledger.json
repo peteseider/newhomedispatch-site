@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-10-27T02:15:33.827Z",
-  "runKey": "2026-10-26-PM",
-  "observationRuns": 203,
+  "lastUpdated": "2026-10-27T12:26:06.897Z",
+  "runKey": "2026-10-27-AM",
+  "observationRuns": 204,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc311",
@@ -124,7 +124,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 184,
+      "expiredButDisplayedObservations": 185,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -279,7 +279,7 @@
       "offersTracked": 1
     },
     "megatel-homes": {
-      "deadlineExtensions": 7,
+      "deadlineExtensions": 8,
       "expiredButDisplayedObservations": 5,
       "deadlinesSet": 0,
       "offersTracked": 1
