@@ -3654,5 +3654,13 @@
     "advertisedValue": 80000,
     "firstFlagged": "2026-10-26",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Lariat (select homes)",
+    "advertisedValue": 35000,
+    "firstFlagged": "2026-10-27",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
