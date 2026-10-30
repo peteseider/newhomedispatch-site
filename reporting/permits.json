@@ -480,19 +480,19 @@
     },
     {
       "date": "2026-10-30",
-      "count30d": 0,
-      "priorYear30d": 0
+      "count30d": 316,
+      "priorYear30d": 235
     }
   ],
   "current": {
     "from": "2026-09-30",
     "to": "2026-10-30",
-    "count": 0
+    "count": 316
   },
   "priorYear": {
     "from": "2025-09-30",
     "to": "2025-10-30",
-    "count": 0
+    "count": 235
   },
   "updated": "2026-10-30"
 }
