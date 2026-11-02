@@ -1,15 +1,15 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-11-01T20:39:25-06:00-PM",
-  "generatedAt": "2026-11-01T20:39:25-06:00",
+  "sweepId": "2026-11-02T08:02:24-06:00-AM",
+  "generatedAt": "2026-11-02T08:02:24-06:00",
   "facts": {
     "score": 67,
     "band": "High",
     "scoreDelta": 0,
     "concessionIndex": 20000,
-    "offersLive": 57,
+    "offersLive": 56,
     "buildersLive": 36,
-    "expired": 11,
+    "expired": 12,
     "rateDaily": 7.27,
     "ratePmmsWeekly": 7.24
   },
@@ -18,19 +18,12 @@
     "newOffers": [],
     "improved": [],
     "reduced": [],
-    "deadlinesNext7d": [
-      {
-        "builder": "D.R. Horton",
-        "deadline": "2026-11-01",
-        "offer": "price-cut $25000"
-      }
-    ]
+    "deadlinesNext7d": []
   },
   "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
-  "buyerAction": "Nearest advertised deadline: D.R. Horton (2026-11-01). If that builder is on your list, get the current terms in writing today.",
+  "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
-    "buyers considering: D.R. Horton",
-    "buyers purchasing within 30 days"
+    "no segment needs to act on today’s sweep"
   ],
   "confidence": "All figures builder-advertised and re-verified on builder sites this sweep; nothing field-verified is claimed.",
   "sources": [
