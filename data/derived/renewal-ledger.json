@@ -1,9 +1,9 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-11-03T03:58:33.827Z",
-  "runKey": "2026-11-02-PM",
-  "observationRuns": 217,
+  "lastUpdated": "2026-11-03T14:02:54.241Z",
+  "runKey": "2026-11-03-AM",
+  "observationRuns": 218,
   "currentlyExpiredButDisplayed": [
     {
       "id": "inc311",
@@ -17,13 +17,13 @@
       "builder": "dr-horton",
       "community": "",
       "expires": "2026-11-01",
-      "daysPast": 1
+      "daysPast": 2
     }
   ],
   "builders": {
     "dr-horton": {
       "deadlineExtensions": 5,
-      "expiredButDisplayedObservations": 4,
+      "expiredButDisplayedObservations": 5,
       "deadlinesSet": 0,
       "offersTracked": 11
     },
@@ -131,7 +131,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 198,
+      "expiredButDisplayedObservations": 199,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
