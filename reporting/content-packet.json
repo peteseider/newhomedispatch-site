@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-11-08T08:02:20-06:00-AM",
-  "generatedAt": "2026-11-08T08:02:20-06:00",
+  "sweepId": "2026-11-08T11:08:15-06:00-AM",
+  "generatedAt": "2026-11-08T11:08:15-06:00",
   "facts": {
     "score": 67,
     "band": "High",
