@@ -870,3 +870,5 @@
 {"t":"2026-11-10T14:02:38.767Z","runKey":"2026-11-10-AM","type":"expired_but_displayed","id":"inc246","builder":"dr-horton","community":"","expires":"2026-11-01"}
 {"t":"2026-11-10T18:26:46.394Z","runKey":"2026-11-10-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-11-10T18:26:46.394Z","runKey":"2026-11-10-PM","type":"expired_but_displayed","id":"inc246","builder":"dr-horton","community":"","expires":"2026-11-01"}
+{"t":"2026-11-11T14:02:42.621Z","runKey":"2026-11-11-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-11-11T14:02:42.621Z","runKey":"2026-11-11-AM","type":"expired_but_displayed","id":"inc246","builder":"dr-horton","community":"","expires":"2026-11-01"}
