@@ -555,14 +555,14 @@
     },
     {
       "date": "2026-11-14",
-      "count30d": 267,
+      "count30d": 276,
       "priorYear30d": 263
     }
   ],
   "current": {
     "from": "2026-10-15",
     "to": "2026-11-14",
-    "count": 267
+    "count": 276
   },
   "priorYear": {
     "from": "2025-10-15",
