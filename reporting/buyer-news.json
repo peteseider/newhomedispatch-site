@@ -1,36 +1,38 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-11-18",
  "sectionTitle": "What changed beyond the sales office",
  "primary": {
-  "headline": "Why Buying a New Home Is Now Cheaper Than an Existing One in Many Markets",
-  "publisher": "FOX 7 Austin",
-  "publishedAt": "2026-10-04",
-  "sourceUrl": "https://fox7austin.com/news/why-buying-new-home-is-now-cheaper-than-existing-one-many-markets",
+  "headline": "Foreclosure Looms for Georgetown Housing Project With Unfinished Homes (Rocking Wilco / Onx Homes)",
+  "publisher": "Austin American-Statesman",
+  "publishedAt": "2026-11-14",
+  "sourceUrl": "https://www.statesman.com/business/real-estate/article/georgetown-housing-project-foreclosure-22281464.php",
   "geography": [
-   "Austin metro",
-   "Central Texas new-construction corridor"
+   "Georgetown, TX",
+   "Williamson County",
+   "North Austin / Central Texas corridor"
   ],
   "topics": [
-   "builder incentives",
-   "price history",
-   "new-vs-resale comparison",
-   "market data"
+   "builder failure",
+   "construction halt",
+   "buyer trust",
+   "foreclosure",
+   "new-construction risk"
   ],
   "affectedAreas": [
-   "Austin metro",
-   "Central Texas new-construction corridor"
+   "Georgetown",
+   "Williamson County new-construction corridor"
   ],
-  "summary": "Reporting cites recent market data showing the long-standing new-construction price premium over resale homes has narrowed or inverted in a number of U.S. metros, driven by builders' sustained use of rate buydowns, price cuts, and closing-cost credits to move inventory -- the same mechanism this sweep tracks daily in Austin. The piece frames this as a structural shift in buyer leverage rather than a one-off sale.",
-  "buyerImplication": "Directly validates what this sweep's own data has shown for months: Austin-area builders are carrying median advertised incentives in the $20,000-$35,000 range across 39+ active builders, with several offers exceeding $100,000-$150,000 on specific communities.",
-  "buyerAction": "Before ruling out new construction as the pricier option, get the builder's current incentive-adjusted price in writing and compare it against a comparable resale listing's true closing cost -- not just list price. Use this sweep's Biggest Live Dollar Offers table as a starting point for which Austin-area builders are currently most aggressive.",
-  "localityScore": 18,
+  "summary": "The planned 921-home Rocking Wilco subdivision in Georgetown, built by Onx Homes using a modular/tech-forward construction method, has sat with dozens of unfinished, abandoned homes since construction halted roughly nine months ago. The project is now headed to a foreclosure auction after no buyer stepped in to take over the site, per reporting corroborated by KXAN and KVUE.",
+  "buyerImplication": "A builder abandoning a subdivision mid-construction is one of the clearest new-construction buyer-trust failures this market has seen in 2026: buyers under contract or already closed in Rocking Wilco are now dealing with an unfinished, foreclosure-bound neighborhood, and the builder (Onx Homes) is not positioned to complete the work. It is a concrete illustration of why builder financial stability and track record matter as much as price or incentives.",
+  "buyerAction": "Before contracting with any builder -- especially a newer, smaller, or tech-forward entrant -- check how long they have operated in the Austin market, whether they have completed prior subdivisions start-to-finish, and whether their earnest money/deposit structure protects you if construction stalls. Ask directly about the builder's financial backing and request to see other completed communities in person, not just renderings.",
+  "localityScore": 28,
   "buyerImpactScore": 24,
   "newConstructionScore": 20,
-  "recencyScore": 0,
+  "recencyScore": 11,
   "sourceQualityScore": 9,
-  "totalScore": 71,
-  "confidence": "High confidence -- FOX 7 Austin reporting, published 2026-10-04; re-checked 2026-10-27 (24th consecutive day in rotation). A fresher qualifying Austin/corridor story was searched for again and none cleared the bar. Recency score 0 (23 days old); total 71, above the 70-point bar by one point.",
-  "reviewedAt": "2026-10-27",
+  "totalScore": 92,
+  "confidence": "High on the underlying story (Austin American-Statesman, corroborated by KXAN and KVUE). Exact publication date is approximate, placed in the week of 2026-11-10 to 2026-11-15; recommend a human spot-check.",
+  "reviewedAt": "2026-11-18",
   "status": "approved"
  },
  "secondary": []
