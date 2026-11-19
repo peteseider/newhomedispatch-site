@@ -10,7 +10,7 @@ Every number verified on the builder’s own site, four times a day. Full breakd
 #austinrealestate #newconstruction #centraltexas #homebuying #austintx
 
 === FACEBOOK ===
-Movement this sweep: 1 improved, 13 reduced. Market-wide score down 1 (within model noise).
+Movement this sweep: 1 improved, 13 reduced. Market-wide score unchanged.
 
 No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.
 
@@ -20,4 +20,4 @@ The full picture, re-verified four times a day: newhomedispatch.com/daily-hot-sh
 14 incentive changes in Austin new construction since the last sweep. Rate 7.46%, median credit $20,000. Verified on builder sites, four times daily. newhomedispatch.com/daily-hot-sheet
 
 === PUBLISH RECOMMENDATION ===
-publish-broadly · sweep 2026-11-19T06:49:19-06:00-AM
+publish-watchlists · sweep 2026-11-19T12:26:31-06:00-PM
