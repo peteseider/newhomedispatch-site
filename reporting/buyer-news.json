@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-19",
  "sectionTitle": "What changed beyond the sales office",
  "primary": {
   "headline": "Foreclosure Looms for Georgetown Housing Project With Unfinished Homes (Rocking Wilco / Onx Homes)",
@@ -28,11 +28,11 @@
   "localityScore": 28,
   "buyerImpactScore": 24,
   "newConstructionScore": 20,
-  "recencyScore": 11,
+  "recencyScore": 10,
   "sourceQualityScore": 9,
-  "totalScore": 92,
+  "totalScore": 91,
   "confidence": "High on the underlying story (Austin American-Statesman, corroborated by KXAN and KVUE). Exact publication date is approximate, placed in the week of 2026-11-10 to 2026-11-15; recommend a human spot-check.",
-  "reviewedAt": "2026-11-18",
+  "reviewedAt": "2026-11-19",
   "status": "approved"
  },
  "secondary": []
