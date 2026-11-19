@@ -1,17 +1,17 @@
 {
   "schema": "nhd-incentive-half-life-v1",
   "metric": "Median days an advertised offer survives unchanged (offer persistence)",
-  "lastUpdated": "2026-11-19T04:20:05.814Z",
-  "runKey": "2026-11-18-PM",
+  "lastUpdated": "2026-11-19T12:49:39.258Z",
+  "runKey": "2026-11-19-AM",
   "mature": true,
   "maturityNote": null,
-  "completedSpansMedianDays": 2,
-  "openSpansMedianDays": null,
-  "completedSpans": 152,
+  "completedSpansMedianDays": null,
+  "openSpansMedianDays": 115,
+  "completedSpans": 184,
   "openSpans": 49,
   "byBuilder": {
     "brohn-homes": {
-      "completedMedian": 2,
+      "completedMedian": null,
       "open": 2
     },
     "brookfield": {
@@ -63,7 +63,7 @@
       "open": 1
     },
     "terrata-homes": {
-      "completedMedian": 2,
+      "completedMedian": null,
       "open": 1
     },
     "scott-felder-homes": {
@@ -71,7 +71,7 @@
       "open": 1
     },
     "united-built-homes": {
-      "completedMedian": 2,
+      "completedMedian": null,
       "open": 1
     },
     "blackburn-homes": {

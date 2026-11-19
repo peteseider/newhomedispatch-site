@@ -1,28 +1,28 @@
 {
   "schema": "nhd-renewal-ledger-v1",
   "metric": "Deadline offers that renew, persist past expiry, or extend (observed behavior, not intent)",
-  "lastUpdated": "2026-11-19T04:20:05.814Z",
-  "runKey": "2026-11-18-PM",
-  "observationRuns": 249,
+  "lastUpdated": "2026-11-19T12:49:39.258Z",
+  "runKey": "2026-11-19-AM",
+  "observationRuns": 250,
   "currentlyExpiredButDisplayed": [
+    {
+      "id": "inc220",
+      "builder": "terrata-homes",
+      "community": "",
+      "expires": "12/20/26",
+      "daysPast": -31
+    },
     {
       "id": "inc311",
       "builder": "del-webb",
       "community": "",
       "expires": "06/28/25-07/31/2025",
       "daysPast": null
-    },
-    {
-      "id": "inc246",
-      "builder": "dr-horton",
-      "community": "",
-      "expires": "2026-11-01",
-      "daysPast": 17
     }
   ],
   "builders": {
     "dr-horton": {
-      "deadlineExtensions": 5,
+      "deadlineExtensions": 6,
       "expiredButDisplayedObservations": 36,
       "deadlinesSet": 0,
       "offersTracked": 11
@@ -66,7 +66,7 @@
     "mi-homes": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 2,
-      "deadlinesSet": 0,
+      "deadlinesSet": 1,
       "offersTracked": 6
     },
     "tri-pointe": {
@@ -82,7 +82,7 @@
       "offersTracked": 7
     },
     "brohn-homes": {
-      "deadlineExtensions": 5,
+      "deadlineExtensions": 6,
       "expiredButDisplayedObservations": 0,
       "deadlinesSet": 0,
       "offersTracked": 6
@@ -131,7 +131,7 @@
     },
     "del-webb": {
       "deadlineExtensions": 0,
-      "expiredButDisplayedObservations": 230,
+      "expiredButDisplayedObservations": 231,
       "deadlinesSet": 0,
       "offersTracked": 7
     },
@@ -149,14 +149,14 @@
     },
     "terrata-homes": {
       "deadlineExtensions": 1,
-      "expiredButDisplayedObservations": 135,
+      "expiredButDisplayedObservations": 136,
       "deadlinesSet": 0,
       "offersTracked": 3
     },
     "chesmar-homes": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 0,
-      "deadlinesSet": 0,
+      "deadlinesSet": 1,
       "offersTracked": 3
     },
     "scott-felder-homes": {
@@ -204,7 +204,7 @@
     "toll-brothers": {
       "deadlineExtensions": 0,
       "expiredButDisplayedObservations": 4,
-      "deadlinesSet": 0,
+      "deadlinesSet": 1,
       "offersTracked": 3
     },
     "trophy-signature-homes": {
@@ -301,6 +301,12 @@
       "deadlineExtensions": 7,
       "expiredButDisplayedObservations": 6,
       "deadlinesSet": 0,
+      "offersTracked": 1
+    },
+    "flintrock-builders": {
+      "deadlineExtensions": 0,
+      "expiredButDisplayedObservations": 0,
+      "deadlinesSet": 1,
       "offersTracked": 1
     }
   },
