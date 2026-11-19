@@ -3662,5 +3662,141 @@
     "advertisedValue": 35000,
     "firstFlagged": "2026-10-27",
     "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "ashton-woods",
+    "builder": "Ashton Woods",
+    "community": "Lagos Reserve (Manor), Berry Creek Highlands (Georgetown), Cannon Ranch (Dripping Springs), La Cima (San Marcos), Lariat (Liberty Hill), Patterson Ranch (Georgetown), Rolling Glen (Hutto), The Trails at Carmel (Pflugerville), Willow Springs (Buda)",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "ashton-woods",
+    "builder": "Ashton Woods",
+    "community": "Lariat (Liberty Hill), Rolling Glen (Hutto), Willow Springs (Buda)",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "blackburn-homes",
+    "builder": "Blackburn Homes",
+    "community": "Holly (141 Corral Cv) and several Sycamore / Juniper II listings",
+    "advertisedValue": 20000,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "perry-homes",
+    "builder": "Perry Homes",
+    "community": "Palmera Ridge 70'",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "regency-toll-brothers",
+    "builder": "Regency by Toll Brothers",
+    "community": "Regency at Santa Rita Ranch",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Blackhawk",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Double Eagle Ranch",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "East View Farms",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Flora",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Santa Rita Ranch",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "University Heights",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Willowbrook",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Leander Estates",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "scott-felder-homes",
+    "builder": "Scott Felder Homes",
+    "community": "Riverstone",
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": null,
+    "advertisedValue": null,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "tri-pointe-homes",
+    "builder": "Tri Pointe Homes",
+    "community": "Easton Park / Paley Park",
+    "advertisedValue": 40000,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
+  },
+  {
+    "builderSlug": "trophy-signature-homes",
+    "builder": "Trophy Signature Homes",
+    "community": null,
+    "advertisedValue": 4880,
+    "firstFlagged": "2026-11-19",
+    "note": "No matching record in incentives.json -- needs a profile page or a manual match before it can publish."
   }
 ]
