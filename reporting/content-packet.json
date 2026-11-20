@@ -1,7 +1,7 @@
 {
   "schema": "nhd-content-packet-v1",
-  "sweepId": "2026-11-19T22:08:00-06:00-PM",
-  "generatedAt": "2026-11-19T22:08:00-06:00",
+  "sweepId": "2026-11-20T08:02:22-06:00-AM",
+  "generatedAt": "2026-11-20T08:02:22-06:00",
   "facts": {
     "score": 66,
     "band": "High",
@@ -14,29 +14,13 @@
     "ratePmmsWeekly": 7.28
   },
   "changes": {
-    "count": 14,
+    "count": 0,
     "newOffers": [],
-    "improved": [
-      "Megatel Homes"
-    ],
-    "reduced": [
-      "Brohn Homes",
-      "KB Home",
-      "Century Communities",
-      "Empire Communities",
-      "Terrata Homes (by LGI)",
-      "United Built Homes",
-      "Ashton Woods",
-      "Risewell Homes (formerly Landsea)",
-      "Sitterle Homes",
-      "MODUS / The George (condos)",
-      "D.R. Horton",
-      "Giddens Homes",
-      "Flintrock Builders"
-    ],
+    "improved": [],
+    "reduced": [],
     "deadlinesNext7d": []
   },
-  "interpretation": "Movement this sweep: 1 improved, 13 reduced. Market-wide score unchanged.",
+  "interpretation": "No material change since the prior sweep. Builders are holding their advertised positions; stability is information, not a gap.",
   "buyerAction": "No hard deadline inside seven days. Use the window to compare delivered prices, not headline credits.",
   "affectedSegments": [
     "no segment needs to act on today’s sweep"
@@ -49,5 +33,5 @@
     "reporting/rate-benchmark.json",
     "reporting/pmms.json"
   ],
-  "publishRecommendation": "publish-watchlists"
+  "publishRecommendation": "record-internal"
 }
