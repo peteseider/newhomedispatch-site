@@ -585,14 +585,14 @@
     },
     {
       "date": "2026-11-20",
-      "count30d": 263,
+      "count30d": 282,
       "priorYear30d": 243
     }
   ],
   "current": {
     "from": "2026-10-21",
     "to": "2026-11-20",
-    "count": 263
+    "count": 282
   },
   "priorYear": {
     "from": "2025-10-21",
