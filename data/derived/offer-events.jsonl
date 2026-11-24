@@ -951,3 +951,5 @@
 {"t":"2026-11-23T14:02:42.619Z","runKey":"2026-11-23-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
 {"t":"2026-11-23T18:26:56.658Z","runKey":"2026-11-23-PM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"12/20/26"}
 {"t":"2026-11-23T18:26:56.658Z","runKey":"2026-11-23-PM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
+{"t":"2026-11-24T07:01:16.682Z","runKey":"2026-11-24-AM","type":"expired_but_displayed","id":"inc220","builder":"terrata-homes","community":"","expires":"12/20/26"}
+{"t":"2026-11-24T07:01:16.682Z","runKey":"2026-11-24-AM","type":"expired_but_displayed","id":"inc311","builder":"del-webb","community":"","expires":"06/28/25-07/31/2025"}
