@@ -2,15 +2,15 @@
   "schema": "nhd-pmms-v1",
   "label": "30 yr fixed weekly national survey",
   "source": "Freddie Mac PMMS (via FRED)",
-  "rate": 7.28,
-  "asOf": "2026-11-19",
+  "rate": 7.21,
+  "asOf": "2026-11-25",
   "prior": {
-    "rate": 7.11,
-    "date": "2026-11-12"
+    "rate": 7.28,
+    "date": "2026-11-19"
   },
   "yearAgo": {
-    "rate": 6.26,
-    "date": "2025-11-20"
+    "rate": 6.23,
+    "date": "2025-11-26"
   },
   "note": "Seeded 2026-07-23 from freddiemac.com/pmms (verified quote: 'averaged 6.58% as of July 23, 2026, up from last week when it averaged 6.55%... A year ago... 6.74%'). Maintained by sweep refreshPmms() via FRED MORTGAGE30US.",
   "history": [
@@ -89,6 +89,10 @@
     {
       "date": "2026-11-19",
       "rate": 7.28
+    },
+    {
+      "date": "2026-11-25",
+      "rate": 7.21
     }
   ]
 }
